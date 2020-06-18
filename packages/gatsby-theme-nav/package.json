@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-nav",
   "description": "Handles navigation menus for Reflex.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -29,10 +29,10 @@
     "react-dom": "^16.13.1"
   },
   "dependencies": {
-    "@reflexjs/components": "^0.0.1",
-    "@reflexjs/gatsby-helpers": "^0.0.1",
-    "@reflexjs/gatsby-theme-core": "^0.0.1",
-    "@reflexjs/utils": "^0.0.1",
+    "@reflexjs/components": "^0.1.0",
+    "@reflexjs/gatsby-helpers": "^0.1.0",
+    "@reflexjs/gatsby-theme-core": "^0.1.0",
+    "@reflexjs/utils": "^0.1.0",
     "gatsby-source-filesystem": "^2.3.8"
   }
 }

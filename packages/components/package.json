@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/components",
   "description": "React components that can be styled using style props and Theme UI.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
