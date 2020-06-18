@@ -4,16 +4,17 @@
   "workspaces": [
     "packages/*",
     "starters/*",
-    "www"
+    "sites/*"
   ],
   "scripts": {
     "test": "jest",
     "format": "prettier --write \"**/*.js{,on}\"  \"**/*.mdx\"",
     "start": "lerna run start --parallel",
     "lint": "eslint --cache --ext .js,.jsx .",
-    "sync": "npm run sync:starters",
+    "sync": "npm run sync:starters && npm run sync:sites",
     "release": "lerna publish && npm run sync",
-    "sync:starters": "./scripts/sync.sh \"starters/*\""
+    "sync:starters": "./scripts/sync.sh \"starters/*\"",
+    "sync:sites": "./scripts/sync.sh \"sites/*\""
   },
   "husky": {
     "hooks": {

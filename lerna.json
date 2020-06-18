@@ -1,6 +1,6 @@
 {
   "version": "independent",
-  "packages": ["packages/*", "starters/*", "www"],
+  "packages": ["packages/*", "starters/*", "sites/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
   "loglevel": "success",
