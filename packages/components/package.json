@@ -2,12 +2,14 @@
   "name": "@reflexjs/components",
   "description": "React components that can be styled using style props and Theme UI.",
   "version": "0.1.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
+    "prepare": "microbundle --no-compress --jsx React.createElement",
     "test": "jest"
   },
   "bugs": {
