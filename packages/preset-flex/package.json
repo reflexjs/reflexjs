@@ -1,0 +1,24 @@
+{
+  "name": "@reflexjs/preset-flex",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/preset-flex"
+  },
+  "dependencies": {
+    "@reflexjs/preset-base": "^0.0.1",
+    "typeface-open-sans": "^0.0.75",
+    "typeface-prata": "^0.0.72"
+  }
+}

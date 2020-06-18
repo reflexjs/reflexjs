@@ -1,0 +1,21 @@
+export const BlockLink = ({ heading, text, url, ...props }) => (
+  <A
+    href={url}
+    borderWidth="1px"
+    rounded="xl"
+    p="4"
+    hoverBorderColor="borderHover"
+    d="flex"
+    flexDirection="column"
+    alignItems="flex-start"
+    {...props}
+  >
+    <H4 my="0" d="flex" alignItems="center">
+      {heading}
+      <Icon name="arrow-right" ml="2" />
+    </H4>
+    <P mt="2" mb="0" color="text" fontSize="md">
+      {text}
+    </P>
+  </A>
+)

@@ -1,0 +1,99 @@
+export const Pricing = ({ ...props }) => (
+  <Section py="8|12|16|24" {...props}>
+    <Container>
+      <Flexbox flexDirection="column" textAlign="center">
+        <H2 m="0">Our Pricing</H2>
+        <P fontSize="xl|2xl" mt="2" textAlign="center">
+          We have the best plan for you to start your business
+        </P>
+      </Flexbox>
+      <Grid col="1|2|3" mt="4|6|8" gap="4|6|0">
+        <PricingItem
+          heading="Basic"
+          description="For small and medium-sized businesses"
+          price="5"
+          list={[
+            "Lorem ipsum dolor sit amet",
+            "Consectetur adipiscing",
+            "Accumsan tincidunt",
+          ]}
+          roundedRight="null|null|none"
+          borderRight="null|null|none"
+        />
+        <PricingItem
+          heading="Plus"
+          description="For larger businesses with advanced administration tools"
+          price="30"
+          list={[
+            "Lorem ipsum dolor sit amet",
+            "Consectetur adipiscing",
+            "Nulla porttitor",
+            "Accumsan tincidunt",
+          ]}
+          isSelected
+        />
+        <PricingItem
+          heading="Custom"
+          description="For very large businesses or those in highly regulated industries"
+          price="50"
+          list={[
+            "Lorem ipsum dolor sit amet",
+            "Consectetur adipiscing",
+            "Nulla porttitor",
+            "Accumsan tincidunt",
+          ]}
+          roundedLeft="null|null|none"
+          borderLeft="null|null|none"
+        />
+      </Grid>
+    </Container>
+  </Section>
+)
+
+export const PricingItem = ({
+  heading,
+  price,
+  description,
+  list,
+  isSelected,
+  ...props
+}) => (
+  <Flexbox
+    flexDirection="column"
+    borderWidth={isSelected ? 4 : 1}
+    borderColor={isSelected ? "primary" : "border"}
+    rounded="lg"
+    px="4|6|8"
+    py={isSelected ? "4|6|16" : "4|6|8"}
+    my={isSelected ? 0 : "0|0|8"}
+    {...props}
+  >
+    <H3 m="0">{heading}</H3>
+    <Flexbox alignItems="flex-end" mt="6">
+      <P fontSize="6xl" fontWeight="semibold" lineHeight="none" m="0">
+        ${price}
+      </P>
+      <P m="0">/ month</P>
+    </Flexbox>
+    <P fontSize="md" textAlign="center" mt="6">
+      {description}
+    </P>
+    <Ul listStyle="none" p="0" mt="4" flex="1">
+      {list.map((listItem, index) => (
+        <Li
+          key={index}
+          fontWeight="semibold"
+          d="inline-flex"
+          alignItems="center"
+          mb="2"
+        >
+          <Icon name="check" mr="2" color="primary" />
+          {listItem}
+        </Li>
+      ))}
+    </Ul>
+    <Button variant={isSelected ? "primary" : "outlinePrimary"} mt="8" w="full">
+      Select Plan
+    </Button>
+  </Flexbox>
+)

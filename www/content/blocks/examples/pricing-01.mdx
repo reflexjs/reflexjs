@@ -1,0 +1,70 @@
+export const Pricing = ({ ...props }) => (
+  <Section py="8|12|16|24" {...props}>
+    <Container>
+      <Flexbox flexDirection="column" textAlign="center">
+        <H2 m="0">Pricing Options</H2>
+        <P fontSize="2xl" mt="4">
+          Choose the plan that’s right for your team
+        </P>
+      </Flexbox>
+      <Grid
+        col="null|2|2|3"
+        mt="6|10"
+        borderTop="5px solid"
+        borderTopColor="primary"
+      >
+        <PricingItem
+          name="Basic"
+          price="49"
+          description="For small and medium-sized businesses"
+        />
+        <PricingItem
+          name="Plus"
+          price="99"
+          description="For larger businesses with advanced administration tools"
+          isSelected
+        />
+        <PricingItem
+          name="Custom"
+          price="199"
+          description="For very large businesses in highly regulated industries"
+        />
+      </Grid>
+    </Container>
+  </Section>
+)
+
+export const PricingItem = ({
+  name,
+  description,
+  price,
+  isSelected,
+  ...props
+}) => (
+  <Div
+    bg={isSelected ? "muted" : "background"}
+    textAlign="center"
+    borderWidth="1px"
+    px="4|4|8|10"
+    py="8|8|12"
+    {...props}
+  >
+    <H4 m="0">{name}</H4>
+    <P>{description}</P>
+    <Flexbox mt="6|8" justifyContent="center">
+      <P m="0" fontSize="6xl" fontWeight="semibold">
+        ${price}
+      </P>
+      <P fontSize="xs" m="0" ml="4">
+        per user <Br /> per month
+      </P>
+    </Flexbox>
+    <Button
+      variant={isSelected ? "primary" : "outlinePrimary"}
+      mt="6|8"
+      w="100%"
+    >
+      Select Plan
+    </Button>
+  </Div>
+)

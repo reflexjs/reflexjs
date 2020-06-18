@@ -1,0 +1,57 @@
+<Grid
+  row="auto 1fr"
+  p="4"
+  gap="4"
+  w="500px"
+  sx={{
+    h4: {
+      fontSize: "xl",
+      svg: {
+        size: "4",
+      },
+    },
+    p: {
+      fontSize: "md",
+    },
+    a: {
+      p: 4,
+    },
+  }}
+>
+  <Block
+    src="block-link"
+    heading="Get Started"
+    text="Learn how to install and use Reflex."
+    url="/docs"
+  />
+  <Grid
+    col={[1, 1, 2]}
+    gap="4"
+  >
+    <Block
+      src="block-link"
+      heading="Components"
+      text="Learn how to use components."
+      url="/docs/components"
+    />
+    <Block
+      src="block-link"
+      heading="Blocks"
+      text="Build blocks and use them on pages."
+      url="/docs/blocks"
+    />
+    <Block
+      src="block-link"
+      heading="Navs"
+      text="Build responsive navs using Markdown."
+      url="/docs/navs"
+    />
+    <Block
+      src="block-link"
+      heading="Theming"
+      text="Use style props to theme your site."
+      url="/docs/theming"
+    />
+
+  </Grid>
+</Grid>

@@ -1,0 +1,35 @@
+{
+  "name": "@reflexjs/gatsby-theme-tutorial",
+  "description": "Adds a tutorial section to the Reflex site.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme"
+  ],
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/gatsby-theme-tutorial"
+  },
+  "dependencies": {
+    "@reflexjs/components": "^0.0.1",
+    "@reflexjs/gatsby-helpers": "^0.0.1",
+    "@reflexjs/gatsby-theme-block": "^0.0.1",
+    "@reflexjs/gatsby-theme-core": "^0.0.1",
+    "@reflexjs/icons-feather": "^0.0.1",
+    "gatsby": "^2.23.3",
+    "gatsby-source-filesystem": "^2.3.8",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "name": "@reflexjs/gatsby-theme-core",
+  "description": "The core theme for Reflex. This adds a Page type.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "page",
+    "mdx"
+  ],
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/gatsby-theme-core"
+  },
+  "devDependencies": {
+    "gatsby": "^2.22.9",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "dependencies": {
+    "@emotion/core": "^10.0.28",
+    "@mdx-js/mdx": "^1.6.4",
+    "@mdx-js/react": "^1.6.5",
+    "@reflexjs/components": "^0.0.1",
+    "@reflexjs/gatsby-helpers": "^0.0.1",
+    "@reflexjs/utils": "^0.0.1",
+    "copy-to-clipboard": "^3.3.1",
+    "gatsby-image": "^2.4.5",
+    "gatsby-plugin-catch-links": "^2.3.2",
+    "gatsby-plugin-mdx": "^1.2.15",
+    "gatsby-plugin-react-helmet": "^3.3.2",
+    "gatsby-plugin-sharp": "^2.6.9",
+    "gatsby-plugin-theme-ui": "^0.3.0",
+    "gatsby-source-filesystem": "^2.3.8",
+    "gatsby-transformer-remark": "^2.8.13",
+    "gatsby-transformer-sharp": "^2.5.3",
+    "prism-react-renderer": "^1.1.1",
+    "react-helmet": "^6.0.0",
+    "theme-ui": "^0.3.1"
+  }
+}

@@ -1,0 +1,60 @@
+export const Features = ({ ...props }) => (
+  <Section py="8|12|16|24" position="relative" {...props}>
+    <Container>
+      <Grid col="1|1|420px 1fr" gap="6|6|10">
+        <Div>
+          <H2 m="0" lineHeight="tight" textAlign="center|left">
+            Why choose us
+          </H2>
+          <P fontSize="xl|2xl" mt="2" textAlign="center|left">
+            We provide the best solutions to help you grow your business
+          </P>
+          <Grid gap="4|6|8" mt="8|10|12">
+            <Feature
+              number="01"
+              heading="Certified contractors"
+              description="Vestibulum ante ipsum primis in faucibus orci luctus et
+                  ultrices posuere cubilia Curae."
+            />
+            <Feature
+              number="02"
+              heading="Quality and Standards"
+              description="Vestibulum ante ipsum primis in faucibus orci luctus et
+                  ultrices posuere cubilia Curae. Donec velit neque."
+            />
+            <Feature
+              number="03"
+              heading="Lifetime Support"
+              description="Vestibulum ante ipsum primis in faucibus orci luctus et
+                  ultrices posuere."
+            />
+          </Grid>
+        </Div>
+        <Image
+          src="placeholder.jpg"
+          position="relative|relative|absolute"
+          top="0"
+          right="0"
+          w="full|full|half"
+          h="auto|auto|full"
+        />
+      </Grid>
+    </Container>
+  </Section>
+)
+
+export const Feature = ({ number, heading, description, ...props }) => (
+  <Flexbox alignItems="flex-start" {...props}>
+    <Flexbox justifyContent="center" bg="primary" size="14" rounded="full">
+      <P m="0" fontSize="xl" color="white">
+        {number}
+      </P>
+    </Flexbox>
+    <Div flex="1" ml="6">
+      <H5 m="0">{heading}</H5>
+      <P fontSize="md" mt="2">
+        {description}
+      </P>
+    </Div>
+  </Flexbox>
+)

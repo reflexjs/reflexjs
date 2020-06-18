@@ -1,0 +1,38 @@
+{
+  "name": "@reflexjs/gatsby-theme-base",
+  "description": "A base theme that bundles other themes.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "mdx"
+  ],
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/gatsby-theme-base"
+  },
+  "devDependencies": {
+    "gatsby": "^2.23.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "dependencies": {
+    "@reflexjs/components": "^0.0.1",
+    "@reflexjs/gatsby-theme-block": "^0.0.1",
+    "@reflexjs/gatsby-theme-core": "^0.0.1",
+    "@reflexjs/gatsby-theme-nav": "^0.0.1",
+    "@reflexjs/icons-feather": "^0.0.1",
+    "@reflexjs/preset-base": "^0.0.1"
+  }
+}

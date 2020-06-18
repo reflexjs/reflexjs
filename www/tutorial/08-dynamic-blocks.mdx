@@ -1,0 +1,44 @@
+---
+title: Dynamic blocks
+excerpt: Using props in blocks.
+---
+
+<Div>
+
+#### Dynamic blocks
+
+Blocks can accept props and this makes blocks really powerful.
+
+Wrap the `card` block we created in a named export.
+
+```jsx
+export const Card = ({ heading, text, image }) => (
+  <Div borderWidth="1px" rounded="5px">
+    <Image src={image} />
+    <Div p="6">
+      <H4 my="0">{heading}</H4>
+      <P mb="0">{text}</P>
+    </Div>
+  </Div>
+)
+```
+
+##### Using props with blocks
+
+```jsx
+<Grid col="2" gap="4">
+  <Block src="card" heading="Heading One" text="This is the card one." />
+  <Block src="card" heading="Heading One" text="This is the card two." />
+</Grid>
+```
+
+</Div>
+
+<Div>
+
+<Grid col="2" gap="4">
+  <Block src="card" heading="Heading One" text="This is the card one." />
+  <Block src="card" heading="Heading One" text="This is the card two." />
+</Grid>
+
+</Div>

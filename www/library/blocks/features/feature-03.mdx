@@ -1,0 +1,66 @@
+export const Features = ({ ...props }) => (
+  <Section py="8|12|16" {...props}>
+    <Container>
+      <H2 m="0" lineHeight="tight" textAlign="center">
+        Our Features
+      </H2>
+      <P fontSize="xl|2xl" mt="2" textAlign="center">
+        We connect you to top artists around the world.
+      </P>
+      <Grid col="1|2|3" mt="8|10|12" gap="4|6|8">
+        <Feature
+          icon="smartphone"
+          heading="Mobile ready"
+          description="Vivamus magna just, lacinia eget consect sed."
+        />
+        <Feature
+          icon="layout"
+          heading="Unique Design"
+          description="Vivamus magna just, lacinia eget consect sed."
+        />
+        <Feature
+          icon="settings"
+          heading="Customizable"
+          description="Vivamus magna just, lacinia eget consect sed."
+        />
+        <Feature
+          icon="link"
+          heading="Multi-purpose"
+          description="Vivamus magna just, lacinia eget consect sed."
+        />
+        <Feature
+          icon="maximize-2"
+          heading="Extensible"
+          description="Vivamus magna just, lacinia eget consect sed."
+        />
+        <Feature
+          icon="lock"
+          heading="Secured"
+          description="Vivamus magna just, lacinia eget consect sed."
+        />
+      </Grid>
+    </Container>
+  </Section>
+)
+
+export const Feature = ({ icon, heading, description, ...props }) => (
+  <Flexbox
+    alignItems="center|flex-start"
+    flexDirection="column|row"
+    textAlign="center|left"
+    p="4"
+    {...props}
+  >
+    <Flexbox justifyContent="center" bg="muted" rounded="full" size="18">
+      <Icon name={icon} size="8" />
+    </Flexbox>
+    <Div flex="1" mt="6|0" ml="0|6">
+      <H3 fontSize="2xl" m="0">
+        {heading}
+      </H3>
+      <P fontSize="md" mt="2">
+        {description}
+      </P>
+    </Div>
+  </Flexbox>
+)

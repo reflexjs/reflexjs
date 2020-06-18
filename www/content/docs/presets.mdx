@@ -1,0 +1,50 @@
+---
+title: Presets
+excerpt: Using presets in Reflex.
+---
+
+Reflex includes a few presets you can use as starting point for your themes.
+
+You can see the presets in action in the [Blocks library](/library).
+
+## Base
+
+```sh
+npm i @reflexjs/preset-base
+```
+
+```js
+// src/@reflexjs/gatsby-theme-base/theme.js
+
+import base from "@reflexjs/preset-base"
+
+export default {
+  preset: base,
+  // Overrides.
+  colors: {
+    primary: `purple`,
+  },
+}
+```
+
+## Flex
+
+```sh
+npm i @reflexjs/preset-flex
+```
+
+```js
+// src/@reflexjs/gatsby-theme-base/theme.js
+
+import flex from "@reflexjs/preset-flex"
+
+export default {
+  preset: flex,
+  // Overrides.
+  colors: {
+    primary: `#09f`,
+  },
+}
+```
+
+You can also use any [Theme UI presets](https://theme-ui.com/packages/presets).

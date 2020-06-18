@@ -1,0 +1,50 @@
+export const Cards = ({ ...props }) => (
+  <Section py="8|12|16|24" {...props}>
+    <Container>
+      <Grid col="1|3" gap="4|6|8">
+        <Card
+          icon="calendar"
+          title="Schedule meetings without the back-and-forth"
+          link="#"
+        />
+        <Card
+          icon="cpu"
+          title="High Performance not an afterthought"
+          link="#"
+        />
+        <Card
+          icon="layers"
+          title="Integrates with your current tech stack"
+          link="#"
+        />
+      </Grid>
+    </Container>
+  </Section>
+)
+
+export const Card = ({ icon, title, link, ...props }) => (
+  <A
+    href={link}
+    d="flex"
+    flexDirection="column"
+    textAlign="center"
+    rounded="lg"
+    borderWidth="2px"
+    p="8"
+    bg="background"
+    color="text"
+    hoverColor="text"
+    hoverTransform="translateY(-10px)"
+    hoverBoxShadow="3xl"
+    transition="all .15s ease-in"
+    {...props}
+  >
+    <Icon name={icon} size="10" />
+    <P fontWeight="semibold" fontSize="xl" flex="1">
+      {title}
+    </P>
+    <Flexbox>
+      Learn more <Icon name="arrow-right" ml="2" />
+    </Flexbox>
+  </A>
+)

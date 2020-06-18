@@ -1,0 +1,39 @@
+{
+  "name": "@reflexjs/gatsby-theme-library",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme"
+  ],
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/gatsby-theme-library"
+  },
+  "dependencies": {
+    "@reflexjs/components": "^0.0.1",
+    "@reflexjs/gatsby-helpers": "^0.0.1",
+    "@reflexjs/gatsby-theme-block": "^0.0.1",
+    "@reflexjs/gatsby-theme-core": "^0.0.1",
+    "@reflexjs/icons-feather": "^0.0.1",
+    "@reflexjs/preset-base": "^0.0.1",
+    "@reflexjs/preset-merry": "^0.0.1",
+    "@reflexjs/preset-flex": "^0.0.1",
+    "copy-to-clipboard": "^3.3.1",
+    "gatsby": "^2.23.3",
+    "gatsby-source-filesystem": "^2.3.8",
+    "lodash.omit": "^4.5.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

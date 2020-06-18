@@ -1,0 +1,9 @@
+export const Card = ({ heading, text, image = "placeholder.jpg" }) => (
+  <Div borderWidth="1px" rounded="5px">
+    <Image src={image} />
+    <Div p="6">
+      <H4 my="0">{heading}</H4>
+      <P mb="0">{text}</P>
+    </Div>
+  </Div>
+)

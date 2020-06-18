@@ -1,0 +1,44 @@
+<Div>
+
+#### How to use this block
+
+##### On a page
+
+Copy the source code and paste it into an `.mdx` file under `content/pages/NAME-OF-PAGE.mdx`.
+
+##### In a block
+
+1. Copy the source code and paste it into an `.mdx` file under `content/blocks/NAME-OF-BLOCK.mdx`.
+1. Include it in your page using the following code:
+
+```md
+<Block src="NAME-OF-BLOCK" />
+```
+
+##### Using props
+
+You can make this block's content dynamic by using props.
+
+1. Wrap the content of this block in a named export. Example:
+
+```jsx
+// content/blocks/NAME-OF-BLOCK.mdx
+export const NameOfBlock = ({heading}) => (
+  // Add the source code here.
+)
+```
+
+2. Then use props in the block content by replacing the static text with props. Example: `<H1>{heading}</H1>`.
+3. Include it on your page using the following code:
+
+```md
+<Block src="NAME-OF-BLOCK" heading="A Heading" />
+```
+
+You can pass as many props as you need.
+
+##### Docs
+
+Read more on blocks in the [docs](/docs/blocks).
+
+</Div>

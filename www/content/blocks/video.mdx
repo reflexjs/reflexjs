@@ -1,0 +1,68 @@
+export const VideoBlock = ({ url, play = true }) => {
+  const videoRef = React.useRef()
+  const [isPlaying, setIsPlaying] = React.useState(play)
+  React.useEffect(() => {
+    if (typeof window === `undefined` || !("IntersectionObserver" in window)) {
+      return
+    }
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            isPlaying && videoRef.current.play()
+          }
+        })
+      },
+      { rootMargin: `0% 0% -50% 0%` }
+    )
+    observer.observe(videoRef.current)
+    return () => {
+      isPlaying && observer.unobserve(videoRef.current)
+    }
+  })
+  return (
+    <Div
+      position="relative"
+      w="100%"
+      boxShadow="3xl"
+      mt="10|20"
+      rounded="xl"
+      overflow="hidden"
+      borderWidth="4px"
+      borderColor="#000"
+      bg="#000"
+    >
+      {!isPlaying && (
+        <Flexbox
+          background="#000 url(thumbnail.png) no-repeat"
+          backgroundSize="cover"
+          position="absolute"
+          top="0"
+          left="0"
+          right="0"
+          bottom="0"
+          justifyContent="center"
+        >
+          <Button
+            variant="primary"
+            rounded="full"
+            size="22"
+            transition="transform .15s ease-in"
+            hoverTransform="scale(1.1)"
+            hoverBoxShadow="xl"
+            zIndex="1000"
+            aria-label="Play video"
+            onClick={() => {
+              setIsPlaying(true)
+            }}
+          >
+            <Icon name="play" size="8" ml="1" />
+          </Button>
+        </Flexbox>
+      )}
+      <Video muted playsinline ref={videoRef} w="full" loop={isPlaying}>
+        <Source src={url} type="video/mp4" />
+      </Video>
+    </Div>
+  )
+}

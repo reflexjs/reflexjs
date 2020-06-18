@@ -1,0 +1,31 @@
+---
+title: Images
+excerpt: Handling local and remote images in Reflex.
+---
+
+## Local images
+
+To use and reference images in your content, place your images in the `content/images` directory.
+
+Then reference the image using its path.
+
+```jsx
+<Image src="name-of-image.png" alt="An image" />
+```
+
+The `Image` component is a wrapper around Gatsby Image. You can learn more about Gatsby image [here](https://www.gatsbyjs.org/packages/gatsby-image/).
+
+## Remote images
+
+Remote images can be used the same way.
+
+```jsx
+<Image src="https://example.com/image.png" alt="External image" />
+```
+
+<Callout level="secondary">
+
+**Note**: Due to a [bug](https://github.com/gatsbyjs/gatsby/issues/19785) with gatsby-remark-images
+and mdx, we are using a workaround for images. We'll fix this once the bug is resolved.
+
+</Callout>

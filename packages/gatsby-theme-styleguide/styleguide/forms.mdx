@@ -1,0 +1,70 @@
+---
+title: Forms
+---
+
+<Form d="grid" gap="6">
+  <Grid col="1fr 1fr" gap="8">
+    <Grid row="auto 1fr" gap="2">
+      <Label htmlFor="fname">First name</Label>
+      <Input type="text" placeholder="First name" id="fname" />
+    </Grid>
+    <Grid row="auto 1fr" gap="2">
+      <Label htmlFor="lname">Last name</Label>
+      <Input type="text" placeholder="Last name" id="lname" />
+    </Grid>
+  </Grid>
+  <Grid row="auto 1fr" gap="2">
+    <Label htmlFor="select-one">Select one</Label>
+    <Select name="select-one" id="select-one">
+      <Option value="one">Option one</Option>
+      <Option value="two">Option two</Option>
+      <Option value="three">Option three</Option>
+    </Select>
+  </Grid>
+  <Grid col="1fr 1fr" gap="6">
+    <Grid row="auto 1fr" gap="2">
+      <Fieldset>
+        <Legend>Radios</Legend>
+        <Div>
+          <Input
+            type="radio"
+            name="options"
+            id="option-one"
+            value="one"
+            defaultChecked
+          />
+          <Label htmlFor="option-one">Radio one</Label>
+        </Div>
+        <Div mt="2">
+          <Input type="radio" name="options" id="option-two" value="two" />
+          <Label htmlFor="option-two">Radio two</Label>
+        </Div>
+      </Fieldset>
+    </Grid>
+    <Grid row="auto 1fr" gap="2">
+      <Fieldset>
+        <Legend>Checkboxes</Legend>
+        <Div>
+          <Input type="checkbox" id="checkbox-one" value="one" defaultChecked />
+          <Label htmlFor="checkbox-one">Option one</Label>
+        </Div>
+        <Div mt="2">
+          <Input type="checkbox" id="checkbox-two" value="two" />
+          <Label htmlFor="checkbox-two">Option two</Label>
+        </Div>
+      </Fieldset>
+    </Grid>
+  </Grid>
+  <Grid row="auto 1fr" gap="2">
+    <Label htmlFor="message">Message</Label>
+    <Textarea name="message" id="message" placeholder="Your message" rows="5" />
+  </Grid>
+  <Flexbox>
+    <Button type="submit" variant="primary">
+      Submit
+    </Button>
+    <Button variant="link" ml="4">
+      Cancel
+    </Button>
+  </Flexbox>
+</Form>

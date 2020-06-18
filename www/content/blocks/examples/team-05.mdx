@@ -1,0 +1,49 @@
+export const Team = ({ ...props }) => (
+  <Section py="8|12|16|24" {...props}>
+    <Container variant="md">
+      <Flexbox flexDirection="column" textAlign="center">
+        <H2 m="0">Our Awesome Team</H2>
+        <P fontSize="xl|2xl" mt="2" textAlign="center">
+          Grow your business with the help of our experts
+        </P>
+      </Flexbox>
+      <Grid gap="4|6|8" mt="4|6|8">
+        <Member
+          picture="placeholder.jpg"
+          name="Joshua Matthews"
+          position="Founder - CEO"
+          bio="Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit."
+        />
+        <Member
+          picture="placeholder.jpg"
+          name="Tátrai Titanilla"
+          position="Business Consultant"
+          bio="Donec sollicitudin molestie malesua. Cras ultricies ligula sed magna dictum porta."
+        />
+        <Member
+          picture="placeholder.jpg"
+          name="Carolyn Mendez"
+          position="Sales Manager"
+          bio="Curabitur aliquet quam id dui posuere blandit. Vivamus suscipit tortor felis tincidunt."
+        />
+      </Grid>
+    </Container>
+  </Section>
+)
+
+export const Member = ({ picture, name, position, bio, ...props }) => (
+  <Flexbox flexDirection="column|row" {...props}>
+    <Image src={picture} size="40" rounded="full" overflow="hidden" />
+    <Div flex="1" textAlign="center|left" p="6">
+      <P m="0" fontSize="xl" fontWeight="semibold">
+        {name}
+      </P>
+      <P m="0" fontSize="md">
+        {position}
+      </P>
+      <P mt="4" mb="0">
+        {bio}
+      </P>
+    </Div>
+  </Flexbox>
+)

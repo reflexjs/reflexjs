@@ -1,0 +1,58 @@
+export const Testimonials = ({ ...props }) => (
+  <Section py="8|12|16|24" {...props}>
+    <Container>
+      <H2 m="0" textAlign="center">
+        They place their trust in us
+      </H2>
+      <P fontSize="xl|2xl" mt="2" textAlign="center">
+        Aut facilis asperiores aliquam odit aliquam optio.
+      </P>
+      <Grid col="1|3" gap="16|6|8" mt="8">
+        <Testimonial
+          avatar="placeholder.jpg"
+          author="Luca Henderson"
+          description="New York"
+          message="Donec rutrum congue leo eget malesuada. Vestibulum ac diam sit amet quam vehicula."
+        />
+        <Testimonial
+          avatar="placeholder.jpg"
+          author="Jeffrey Boyer"
+          description="San Francisco"
+          message="Elementum sed sit amet dui. Curabitur non nulla sit amet nisl tempus convallis."
+        />
+        <Testimonial
+          avatar="placeholder.jpg"
+          author="Lilliana Ford"
+          description="Los Angeles"
+          message="Praesent sapien massa, convallis a pellentesque nec, egestas non nisi lectus."
+        />
+      </Grid>
+    </Container>
+  </Section>
+)
+
+export const Testimonial = ({
+  avatar,
+  author,
+  description,
+  message,
+  ...props
+}) => (
+  <Div
+    borderWidth="1px"
+    rounded="lg"
+    p="6"
+    fontStyle="italic"
+    textAlign="center"
+    {...props}
+  >
+    <Image src={avatar} size="30" rounded="full" overflow="hidden" mx="auto" />
+    <P>{message}</P>
+    <P mb="0" fontSize="xl" fontWeight="semibold">
+      {author}
+    </P>
+    <P m="0" fontSize="md">
+      {description}
+    </P>
+  </Div>
+)

@@ -1,0 +1,29 @@
+{
+  "name": "@reflexjs/icons-feather",
+  "description": "Packages feather icons for Reflex.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./scripts/build.js"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "reflex",
+    "icons"
+  ],
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/icons-feather"
+  },
+  "devDependencies": {
+    "feather-icons": "^4.28.0"
+  }
+}

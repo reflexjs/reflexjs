@@ -1,0 +1,24 @@
+import { useLibraryBlock } from "@reflexjs/gatsby-theme-library"
+
+export const HeaderBlocks = () => {
+  const blocks = useLibraryBlock()
+  return (
+    <Section>
+      <H1 m="0" fontWeight="extrabold">
+        Blocks Library
+      </H1>
+      <P fontSize="xl|2xl" mt="2" mb="0">
+        We have built {Math.floor(blocks.length / 10) * 10}+ blocks that you can
+        copy and paste into your site.{" "}
+        <A
+          href="https://twitter.com/arshadcn"
+          target="_blank"
+          fontWeight="semibold"
+        >
+          Get notified when we add more blocks
+        </A>
+        .
+      </P>
+    </Section>
+  )
+}

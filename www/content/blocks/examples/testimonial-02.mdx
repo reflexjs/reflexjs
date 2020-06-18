@@ -1,0 +1,37 @@
+export const Testimonials = ({ ...props }) => (
+  <Section py="8|12|16|24" {...props}>
+    <Container>
+      <H2 m="0" textAlign="center">
+        They place their trust in us
+      </H2>
+      <P fontSize="xl|2xl" mt="2" textAlign="center">
+        Aut facilis asperiores aliquam odit aliquam optio.
+      </P>
+      <Grid col="1|2" gap="8" mt="8">
+        <Testimonial
+          author="Luca Henderson"
+          description="New York"
+          message="Praesent sapien massa, convallis a pellentesque nec, egestas non
+                nisi. Curabitur arcu erat, accumsan id imperdiet porttitor sem."
+        />
+        <Testimonial
+          author="Jeffrey Boyer"
+          description="San Francisco"
+          message="Donec sollicitudin molestie malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Lorem ipsum dolor sit amet."
+        />
+      </Grid>
+    </Container>
+  </Section>
+)
+
+export const Testimonial = ({ author, description, message, ...props }) => (
+  <Div position="relative" bg="muted" rounded="lg" p="6" {...props}>
+    <P m="0">{message}</P>
+    <P m="0" mt="4" fontSize="xl" fontWeight="semibold">
+      {author}
+    </P>
+    <P m="0" fontSize="md">
+      {description}
+    </P>
+  </Div>
+)

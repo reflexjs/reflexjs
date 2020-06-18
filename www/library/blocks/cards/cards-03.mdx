@@ -1,0 +1,37 @@
+export const Cards = ({ ...props }) => (
+  <Section py="8|12|16|24" {...props}>
+    <Container>
+      <Grid col="1|2" gap="6|8|10">
+        <Card
+          image="placeholder.jpg"
+          title="Integrates with your current tech stack"
+          description="Curabitur non nulla sit amet nisl tempus. Commodi enim accusantium
+              doloremque option."
+          link="#"
+        />
+        <Card
+          image="placeholder.jpg"
+          title="High Performance not an afterthought"
+          description="A eaque id quia nobis quod. Commodi enim accusantium doloremque
+              option."
+          link="#"
+        />
+      </Grid>
+    </Container>
+  </Section>
+)
+
+export const Card = ({ image, title, description, link, ...props }) => (
+  <Div {...props}>
+    <Image src={image} w="full" />
+    <Div py="4|6|8">
+      <H2 m="0" fontSize="3xl">
+        {title}
+      </H2>
+      <P fontSize="xl">{description}</P>
+      <ButtonLink href={link} variant="primary">
+        Learn more <Icon name="arrow-right" ml="2" />
+      </ButtonLink>
+    </Div>
+  </Div>
+)

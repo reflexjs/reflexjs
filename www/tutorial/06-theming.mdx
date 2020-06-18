@@ -1,0 +1,63 @@
+---
+title: Theming
+excerpt: Styling components using a theme.
+---
+
+<Div>
+
+#### Create a theme
+
+<Block src="callout" mt="4">
+
+A `theme` is a file with values that you can reference when styling components.
+
+</Block>
+
+Create the following file: `/src/@reflexjs/gatsby-theme-core/theme.js`.
+
+This is where you are going to define your theme values.
+
+Let's add some `colors` and `fonts`.
+
+```js
+export default {
+  colors: {
+    text: "#000",
+    background: "#fff",
+    primary: "#07c",
+  },
+  fonts: {
+    body: '"Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+    heading: "Georgia, serif",
+    monospace: "Menlo, monospace",
+  },
+}
+```
+
+Now you can reference these values when styling components.
+
+```jsx
+<H2 color="primary" fontFamily="heading">
+  This is a heading
+</H2>
+```
+
+##### Responsive
+
+Use a pipe `|` to separate mobile-first responsive values.
+
+```jsx
+<Button fontSize="2|4|6" color="primary|secondary">
+  Button
+</Button>
+```
+
+</Div>
+
+<Div>
+
+<H2 color="primary" fontFamily="heading">
+  This is a heading
+</H2>
+
+</Div>

@@ -1,0 +1,42 @@
+<Section py="8|12|16|24">
+  <Container>
+    <Grid col="1|2" gap="8|12|16">
+      <Div>
+        <H3 mt="0" mb="6">
+          Our Office
+        </H3>
+        <Image src="placeholder.jpg" />
+        <P>
+          Are you ready to grow your Business? <Br /> Get in touch with us, we
+          are here ready to help you.
+        </P>
+      </Div>
+      <Div>
+        <H3 mt="0" mb="6">
+          Get in touch
+        </H3>
+        <Form d="grid" col="1|repeat(2, auto)" gap="4" mt="4" w="full|auto">
+          <Input type="text" placeholder="Name" />
+          <Input type="email" placeholder="Email" />
+          <Input type="tel" placeholder="Phone" />
+          <Select>
+            <Option value="">Select</Option>
+            <Option value="one">Option One</Option>
+            <Option value="two">Option Two</Option>
+          </Select>
+          <Textarea placeholder="Message" rows="5" colStart="span 2" />
+          <Button type="submit" variant="primary" colStart="span 2">
+            Send message
+          </Button>
+        </Form>
+        <Flexbox mt="4" fontSize="md" justifyContent="center">
+          <Icon name="help-circle" mr="2" size="5" /> Are you an existing
+          client?{" "}
+          <A href="#" ml="1">
+            Talk to us.
+          </A>
+        </Flexbox>
+      </Div>
+    </Grid>
+  </Container>
+</Section>

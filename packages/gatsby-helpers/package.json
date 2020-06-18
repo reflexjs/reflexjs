@@ -1,0 +1,25 @@
+{
+  "name": "@reflexjs/gatsby-helpers",
+  "description": "Utility helpers for Gatsby used by other packages.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/gatsby-helpers"
+  },
+  "devDependencies": {
+    "@sindresorhus/slugify": "^1.0.0"
+  }
+}

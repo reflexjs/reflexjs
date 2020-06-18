@@ -1,0 +1,10 @@
+import { useSiteMetadata } from "@reflexjs/gatsby-theme-core"
+
+export const Copyright = ({ ...props }) => {
+  const { title } = useSiteMetadata()
+  return (
+    <P fontSize="sm" {...props}>
+      © {new Date().getFullYear()} {title}
+    </P>
+  )
+}

@@ -1,0 +1,43 @@
+export const Cards = ({ ...props }) => (
+  <Section py="8|12|16|24" {...props}>
+    <Container>
+      <Grid col="1|3" gap="6|8">
+        <Card
+          image="placeholder.jpg"
+          title="Schedule meetings without the back-and-forth"
+          link="#"
+        />
+        <Card
+          image="placeholder.jpg"
+          title="High Performance not an afterthought"
+          link="#"
+        />
+        <Card
+          image="placeholder.jpg"
+          title="Integrates with your current tech stack"
+          link="#"
+        />
+      </Grid>
+    </Container>
+  </Section>
+)
+
+export const Card = ({ image, title, link, ...props }) => (
+  <Flexbox
+    flexDirection="column"
+    boxShadow="xl"
+    rounded="xl"
+    overflow="hidden"
+    {...props}
+  >
+    <Image src={image} w="full" h="32|40|64" />
+    <Flexbox flexDirection="column" flex="1" textAlign="center" p="6|8">
+      <P fontSize="xl" fontWeight="semibold" m="0" flex="1">
+        {title}
+      </P>
+      <ButtonLink href={link} variant="primary sm" mt="6">
+        Learn more <Icon name="arrow-right" ml="2" />
+      </ButtonLink>
+    </Flexbox>
+  </Flexbox>
+)

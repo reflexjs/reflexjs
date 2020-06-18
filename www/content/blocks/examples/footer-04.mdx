@@ -1,0 +1,43 @@
+import { useSiteMetadata } from "@reflexjs/gatsby-theme-core"
+
+export const FooterBlock = () => {
+  const { title } = useSiteMetadata()
+  return (
+    <Section py={[8, 10, 12]}>
+      <Container>
+        <Flexbox
+          flexDirection={["column", "row"]}
+          alignItems={["flex-start", "center"]}
+          justifyContent="space-between"
+        >
+          <H4 m="0">{title}</H4>
+          <NavMenu
+            name="footer-example"
+            dropdown={false}
+            expand={false}
+            my="6|0"
+            gap="4|8"
+          />
+          <Grid col="2" gap="4" mt={[4, 0]}>
+            <A href="#" color="text">
+              <Icon name="twitter" size={5} />
+            </A>
+            <A href="#" color="text">
+              <Icon name="instagram" size={5} />
+            </A>
+          </Grid>
+        </Flexbox>
+        <Div
+          borderTopWidth={1}
+          textAlign="center"
+          pt={[4, 5, 6]}
+          mt={[4, 5, 6]}
+        >
+          <P fontSize="sm" mt="0">
+            © {new Date().getFullYear()} {title}
+          </P>
+        </Div>
+      </Container>
+    </Section>
+  )
+}
