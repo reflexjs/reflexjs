@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-doc",
   "description": "Use this theme to build documentation pages.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -30,10 +30,10 @@
   },
   "dependencies": {
     "@reflexjs/components": "^0.1.0",
-    "@reflexjs/gatsby-helpers": "^0.1.0",
-    "@reflexjs/gatsby-theme-block": "^0.1.0",
-    "@reflexjs/gatsby-theme-core": "^0.1.0",
-    "@reflexjs/gatsby-theme-nav": "^0.1.0",
+    "@reflexjs/gatsby-helpers": "^0.1.1",
+    "@reflexjs/gatsby-theme-block": "^0.1.1",
+    "@reflexjs/gatsby-theme-core": "^0.1.1",
+    "@reflexjs/gatsby-theme-nav": "^0.1.1",
     "gatsby-source-filesystem": "^2.3.8",
     "github-slugger": "^1.3.0"
   }
