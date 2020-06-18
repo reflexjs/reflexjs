@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/components",
   "description": "React components that can be styled using style props and Theme UI.",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "source": "index.js",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
@@ -31,5 +31,5 @@
     "react": "^16.13.1",
     "theme-ui": "^0.3.1"
   },
-  "gitHead": "87f70de668c54f134046406b1bcd928fa81da0f1"
+  "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52"
 }
