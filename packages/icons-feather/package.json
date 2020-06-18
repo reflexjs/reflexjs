@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/icons-feather",
   "description": "Packages feather icons for Reflex.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "scripts": {
     "build": "node ./scripts/build.js"
