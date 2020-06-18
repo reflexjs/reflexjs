@@ -19,7 +19,7 @@
     "url": "https://github.com/reflexjs/reflex.git",
     "directory": "packages/gatsby-helpers"
   },
-  "devDependencies": {
+  "dependencies": {
     "@sindresorhus/slugify": "^1.0.0"
   }
 }
