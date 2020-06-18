@@ -1,7 +1,7 @@
 {
   "name": "www",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -12,11 +12,11 @@
     "screenshot:pages": "node ./scripts/generate-screenshot-pages.js"
   },
   "dependencies": {
-    "@reflexjs/gatsby-theme-base": "^0.1.1",
-    "@reflexjs/gatsby-theme-doc": "^0.1.1",
-    "@reflexjs/gatsby-theme-library": "^0.1.1",
-    "@reflexjs/gatsby-theme-styleguide": "^0.1.1",
-    "@reflexjs/gatsby-theme-tutorial": "^0.1.1",
+    "@reflexjs/gatsby-theme-base": "^0.1.2",
+    "@reflexjs/gatsby-theme-doc": "^0.1.2",
+    "@reflexjs/gatsby-theme-library": "^0.1.2",
+    "@reflexjs/gatsby-theme-styleguide": "^0.1.2",
+    "@reflexjs/gatsby-theme-tutorial": "^0.1.2",
     "gatsby": "^2.22.11",
     "gatsby-plugin-manifest": "^2.4.11",
     "react": "^16.13.1",

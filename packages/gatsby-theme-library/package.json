@@ -1,6 +1,6 @@
 {
   "name": "@reflexjs/gatsby-theme-library",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -21,10 +21,10 @@
     "directory": "packages/gatsby-theme-library"
   },
   "dependencies": {
-    "@reflexjs/components": "^0.1.0",
+    "@reflexjs/components": "^0.1.1",
     "@reflexjs/gatsby-helpers": "^0.1.1",
-    "@reflexjs/gatsby-theme-block": "^0.1.1",
-    "@reflexjs/gatsby-theme-core": "^0.1.1",
+    "@reflexjs/gatsby-theme-block": "^0.1.2",
+    "@reflexjs/gatsby-theme-core": "^0.1.2",
     "@reflexjs/icons-feather": "^0.1.0",
     "@reflexjs/preset-base": "^0.1.0",
     "@reflexjs/preset-flex": "^0.1.0",
