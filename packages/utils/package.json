@@ -1,6 +1,6 @@
 {
   "name": "@reflexjs/utils",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -24,5 +24,6 @@
   },
   "dependencies": {
     "lodash.filter": "^4.6.0"
-  }
+  },
+  "gitHead": "87f70de668c54f134046406b1bcd928fa81da0f1"
 }

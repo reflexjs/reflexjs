@@ -1,6 +1,6 @@
 {
   "name": "@reflexjs/preset-merry",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -17,8 +17,9 @@
     "directory": "packages/preset-merry"
   },
   "dependencies": {
-    "@reflexjs/preset-base": "^0.1.1",
+    "@reflexjs/preset-base": "^0.1.2",
     "typeface-lora": "^0.0.72",
     "typeface-merriweather": "^0.0.72"
-  }
+  },
+  "gitHead": "87f70de668c54f134046406b1bcd928fa81da0f1"
 }
