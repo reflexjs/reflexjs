@@ -12,7 +12,7 @@ export default {
     maxWidth: 1100,
   },
   h2: {
-    strong: {
+    a: {
       color: "primary",
       textDecoration: "underline",
     },
