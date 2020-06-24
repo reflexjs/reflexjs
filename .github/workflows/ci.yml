@@ -13,3 +13,4 @@ jobs:
           node-version: 12.x
       - run: yarn
       - run: yarn test
+      - run: yarn yarn test:e2e:ci
