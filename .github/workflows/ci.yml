@@ -13,4 +13,5 @@ jobs:
           node-version: 12.x
       - run: yarn
       - run: yarn test
-      - run: yarn test:e2e:ci
+      - run: yarn workspace e2e-tests-gatsby-theme-core test:e2e:ci
+      - run: yarn workspace e2e-tests-gatsby-theme-block test:e2e:ci

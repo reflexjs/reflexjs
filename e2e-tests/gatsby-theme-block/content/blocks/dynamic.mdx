@@ -1,0 +1,8 @@
+export const MainBlock = ({ ...props }) => (
+  <Div data-cy="dynamic-block" {...props}>
+    <ChildBlock text="Heading One" />
+    <ChildBlock text="Heading Two" />
+  </Div>
+)
+
+export const ChildBlock = ({ text }) => <H2>{text}</H2>
