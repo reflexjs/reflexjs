@@ -60,7 +60,7 @@ export const Image = ({ src, alt, title, caption, ...props }) => {
   if (!isRelativeUrl(src)) {
     return (
       <Figure {...props}>
-        <Img src={src} {...props} />
+        <Img src={src} alt={alt} title={title} {...props} />
         <Caption />
       </Figure>
     )

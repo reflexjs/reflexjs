@@ -4,6 +4,7 @@ import theme from "../theme.js"
 // Temp preset handling.
 // TODO: Remove when theme-ui 0.4.0 is released.
 const mergeTheme = (theme) => {
+  if (!("preset" in theme)) return theme
   const { preset, ...rest } = theme
   let baseTheme = preset.preset ? {} : preset
   if (preset.preset) {

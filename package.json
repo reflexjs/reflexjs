@@ -4,10 +4,13 @@
   "workspaces": [
     "packages/*",
     "starters/*",
-    "sites/*"
+    "sites/*",
+    "e2e-tests/*"
   ],
   "scripts": {
     "test": "jest",
+    "test:e2e": "lerna run test:e2e",
+    "test:e2e:ci": "lerna run test:e2e:ci",
     "format": "prettier --write \"**/*.js{,on}\"  \"**/*.mdx\"",
     "start": "lerna run start --parallel",
     "prepare": "lerna run prepare",
@@ -46,6 +49,7 @@
     "@babel/preset-react": "^7.9.4",
     "@babel/runtime": "^7.9.6",
     "babel-eslint": "^10.1.0",
+    "cypress": "^4.9.0",
     "eslint": "^7.0.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-mdx": "^1.7.0",
@@ -58,7 +62,8 @@
     "microbundle": "^0.12.1",
     "prettier": "^2.0.4",
     "pretty-quick": "^2.0.1",
-    "react-test-renderer": "^16.13.1"
+    "react-test-renderer": "^16.13.1",
+    "start-server-and-test": "^1.11.0"
   },
   "dependencies": {
     "@commitlint/cli": "^8.3.5",
