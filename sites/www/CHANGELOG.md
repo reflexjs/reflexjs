@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/reflexjs/reflex/compare/www@0.1.6...www@0.1.7) (2020-06-24)
+
+
+### Bug Fixes
+
+* **www:** fix button alignment for mobile ([fea369b](https://github.com/reflexjs/reflex/commit/fea369b940e6d2bad3b81ca5396a03a299692432))
+* **www:** replace strong tags with links ([4f588f2](https://github.com/reflexjs/reflex/commit/4f588f22f98e59c2eab62b48ed6dfa4a4fd7ed5d))
+* **www:** update color for twitter button ([e953855](https://github.com/reflexjs/reflex/commit/e95385576030a93ead72d28f7b8df61e01c394d2))
+* **www:** update library path ([330ec61](https://github.com/reflexjs/reflex/commit/330ec617c0767ddfb4d3c9420b852d90d9c2ac0d))
+
+
+
+
+
 ## [0.1.6](https://github.com/reflexjs/reflex/compare/www@0.1.5...www@0.1.6) (2020-06-18)
 
 **Note:** Version bump only for package www
