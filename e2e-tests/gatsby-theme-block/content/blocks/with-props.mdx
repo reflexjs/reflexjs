@@ -1,0 +1,5 @@
+export const WithProps = ({ text, ...props }) => (
+  <Div data-cy="with-props-block" {...props}>
+    <H1>{text}</H1>
+  </Div>
+)

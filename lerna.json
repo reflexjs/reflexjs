@@ -1,6 +1,6 @@
 {
   "version": "independent",
-  "packages": ["packages/*", "starters/*", "sites/*"],
+  "packages": ["packages/*", "starters/*", "sites/*", "e2e-tests/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
   "loglevel": "success",
@@ -9,6 +9,9 @@
   "command": {
     "create": {
       "license": "MIT"
+    },
+    "run": {
+      "loglevel": "verbose"
     },
     "publish": {
       "allowBranch": "master",
