@@ -8,10 +8,45 @@
         We are here ready to help you.
       </P>
       <Form d="grid" col="1|repeat(2, auto)" gap="4" mt="4" w="full|auto">
-        <Input type="text" placeholder="Username" />
-        <Input type="email" placeholder="Email" />
-        <Input type="tel" placeholder="Phone" colStart="span 2" />
-        <Textarea placeholder="Message" rows="5" colStart="span 2" />
+        <Div>
+          <VisuallyHidden>
+            <Label htmlFor="form-03-name">Name</Label>
+          </VisuallyHidden>
+          <Input type="text" id="form-03-name" name="name" placeholder="Name" />
+        </Div>
+        <Div>
+          <VisuallyHidden>
+            <Label htmlFor="form-03-email">Email</Label>
+          </VisuallyHidden>
+          <Input
+            type="email"
+            id="form-03-email"
+            name="email"
+            placeholder="Email"
+          />
+        </Div>
+        <Div colStart="span 2">
+          <VisuallyHidden>
+            <Label htmlFor="form-03-phone">Phone</Label>
+          </VisuallyHidden>
+          <Input
+            type="tel"
+            id="form-03-phone"
+            name="phone"
+            placeholder="Phone"
+          />
+        </Div>
+        <Div colStart="span 2">
+          <VisuallyHidden>
+            <Label htmlFor="form-03-message">Message</Label>
+          </VisuallyHidden>
+          <Textarea
+            placeholder="Message"
+            id="form-03-message"
+            name="message"
+            rows="5"
+          />
+        </Div>
         <Button type="submit" variant="primary" colStart="span 2">
           Send message
         </Button>

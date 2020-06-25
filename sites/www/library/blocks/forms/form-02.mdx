@@ -16,15 +16,60 @@
           Get in touch
         </H3>
         <Form d="grid" col="1|repeat(2, auto)" gap="4" mt="4" w="full|auto">
-          <Input type="text" placeholder="Name" />
-          <Input type="email" placeholder="Email" />
-          <Input type="tel" placeholder="Phone" />
-          <Select>
-            <Option value="">Select</Option>
-            <Option value="one">Option One</Option>
-            <Option value="two">Option Two</Option>
-          </Select>
-          <Textarea placeholder="Message" rows="5" colStart="span 2" />
+          <Div>
+            <VisuallyHidden>
+              <Label htmlFor="form-02-name">Name</Label>
+            </VisuallyHidden>
+            <Input
+              type="text"
+              id="form-02-name"
+              name="name"
+              placeholder="Name"
+            />
+          </Div>
+          <Div>
+            <VisuallyHidden>
+              <Label htmlFor="form-02-email">Email</Label>
+            </VisuallyHidden>
+            <Input
+              type="email"
+              id="form-02-email"
+              name="email"
+              placeholder="Email"
+            />
+          </Div>
+          <Div>
+            <VisuallyHidden>
+              <Label htmlFor="form-02-phone">Phone</Label>
+            </VisuallyHidden>
+            <Input
+              type="tel"
+              id="form-02-phone"
+              name="phone"
+              placeholder="Phone"
+            />
+          </Div>
+          <Div>
+            <VisuallyHidden>
+              <Label htmlFor="form-02-subject">Subject</Label>
+            </VisuallyHidden>
+            <Select id="form-02-subject" name="subject">
+              <Option value="">Select</Option>
+              <Option value="one">Option One</Option>
+              <Option value="two">Option Two</Option>
+            </Select>
+          </Div>
+          <Div colStart="span 2">
+            <VisuallyHidden>
+              <Label htmlFor="form-02-message">Message</Label>
+            </VisuallyHidden>
+            <Textarea
+              placeholder="Message"
+              id="form-02-message"
+              name="message"
+              rows="5"
+            />
+          </Div>
           <Button type="submit" variant="primary" colStart="span 2">
             Send message
           </Button>

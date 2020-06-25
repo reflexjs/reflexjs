@@ -9,8 +9,19 @@
       </P>
     </Flexbox>
     <Form d="grid" col="1|repeat(3, auto)" gap="4" w="full|auto">
-      <Input type="email" placeholder="Type your email" />
-      <Input type="text" placeholder="Username" />
+      <VisuallyHidden>
+        <Label htmlFor="hero-03-email">Email</Label>
+      </VisuallyHidden>
+      <Input
+        type="email"
+        id="hero-03-email"
+        name="email"
+        placeholder="Type your email"
+      />
+      <VisuallyHidden>
+        <Label htmlFor="hero-03-name">Name</Label>
+      </VisuallyHidden>
+      <Input type="text" id="hero-03-name" name="name" placeholder="Name" />
       <Button type="submit" variant="primary">
         Join the community
       </Button>
