@@ -26,9 +26,10 @@ export const Progress = ({ current }) => {
               rounded="md"
               color="text"
               hoverBg="muted"
+              hoverColor="text"
               activeStyle={{
                 bg: "text",
-                color: "white",
+                color: "background",
                 opacity: 1,
               }}
             >
