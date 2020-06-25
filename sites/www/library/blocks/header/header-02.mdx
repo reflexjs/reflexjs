@@ -6,6 +6,7 @@ import { useSiteMetadata, useColorMode } from "@reflexjs/gatsby-theme-core"
 
 export const HeaderBlock = ({ ...props }) => {
   const [showMenu, setShowMenu] = React.useState(false)
+  const navName = "header"
   return (
     <Header
       position={["sticky", "relative"]}
@@ -18,7 +19,7 @@ export const HeaderBlock = ({ ...props }) => {
         <Flexbox d={["none", "flex"]} justifyContent="space-between" py="1">
           <Branding />
           <NavMenu
-            name="header"
+            name={navName}
             gap={[0, 8, 14]}
             ml={["auto", "auto"]}
             mr="null|10"
@@ -74,7 +75,7 @@ export const HeaderBlock = ({ ...props }) => {
               <Icon name="x" size="6" />
             </Button>
           </Flexbox>
-          <NavMenu name="header" gap={[0, 8]} borderTopWidth="1px" />
+          <NavMenu name={navName} gap={[0, 8]} borderTopWidth="1px" />
           <Flexbox py="4" justifyContent="space-between">
             <ModeToggle ml="auto" />
           </Flexbox>
@@ -97,7 +98,6 @@ export const ModeToggle = ({ ...props }) => {
   const [colorMode, setColorMode] = useColorMode()
   return (
     <Button
-      id="mode-toggle"
       variant="icon"
       onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
       ml={[2, 4]}
@@ -106,6 +106,7 @@ export const ModeToggle = ({ ...props }) => {
       {...props}
     >
       <Icon name={colorMode === "default" ? "sun" : "moon"} size="5" />
+      <VisuallyHidden>Toggle mode</VisuallyHidden>
     </Button>
   )
 }

@@ -23,7 +23,16 @@
           wherever they are in the world.
         </P>
         <Form d="grid" col="1|auto auto" gap="2" w="full|auto">
-          <Input type="email" placeholder="Type your email" variant="lg" />
+          <VisuallyHidden>
+            <Label htmlFor="hero-05-email">Email</Label>
+          </VisuallyHidden>
+          <Input
+            type="email"
+            id="hero-05-email"
+            name="email"
+            placeholder="Type your email"
+            variant="lg"
+          />
           <Button type="submit" variant="primary lg">
             Join now
           </Button>

@@ -15,3 +15,4 @@ jobs:
       - run: yarn test
       - run: yarn workspace e2e-tests-gatsby-theme-core test:e2e:ci
       - run: yarn workspace e2e-tests-gatsby-theme-block test:e2e:ci
+      - run: yarn workspace e2e-tests-blocks test:e2e:ci

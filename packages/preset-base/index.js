@@ -68,7 +68,7 @@ export default {
         text: "#fff",
         background: "#191924",
         heading: "#fff",
-        primary: "#3385ff",
+        primary: "#0050C7",
         primaryHover: "#005ae0",
         secondary: "#07070a",
         secondaryHover: "#191924",
@@ -459,12 +459,12 @@ export default {
 
     accent: {
       bg: "accent",
-      color: "white",
+      color: "text",
       borderColor: "accent",
 
       "&:hover, &:focus": {
         bg: "accentHover",
-        color: "white",
+        color: "text",
         borderColor: "accentHover",
       },
     },
@@ -578,6 +578,7 @@ export default {
     py: 3,
     appearance: "none",
     cursor: "pointer",
+    width: "100%",
     background:
       'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItY2hldnJvbi1kb3duIj48cG9seWxpbmUgcG9pbnRzPSI2IDkgMTIgMTUgMTggOSI+PC9wb2x5bGluZT48L3N2Zz4=") no-repeat right 12px center',
 

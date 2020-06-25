@@ -174,3 +174,13 @@ export const Grid = getTag(
   },
   "grid"
 )
+
+export const VisuallyHidden = getTag("span", {
+  position: "absolute",
+  top: "auto",
+  overflow: "hidden",
+  clip: "rect(1px, 1px, 1px, 1px)",
+  width: "1px",
+  height: "1px",
+  whiteSpace: "nowrap",
+})
