@@ -37,16 +37,17 @@ Or you can use the `useNav` hook to retrieve navs and render them manually.
 
 ```jsx
 // blocks/example-nav.mdx
+import { useNav } from "@reflexjs/gatsby-theme-nav"
 
 export const ExampleNav = () => {
   const [nav] = useNav('example')
   return nav.items ? (
     <Ul d="grid" col={`repeat(auto, ${nav.items.length})`} gap="4">
-      {nav.items.map({value, url, items}, index) => (
+      {nav.items.map(({value, url, items}, index) => (
         <Li key={index}>
           <Link href={url}>{value}</Link>
         </Li>
-      )}
+      ))}
       </Ul>
   ) : null
 }
