@@ -34,16 +34,17 @@ Once your nav has been created, you can use the `useNav` hook to retrieve and re
 
 ```jsx
 // blocks/main-nav.mdx
+import { useNav } from "@reflexjs/gatsby-theme-nav"
 
 export const MainNav = () => {
   const [main] = useNav('main')
   return main.items ? (
     <Ul>
-      {main.items.map({value, url, items}, index) => (
+      {main.items.map(({value, url, items}, index) => (
         <Li key={index}>
           <Link href={url}>{value}</Link>
         </Li>
-      )}
+      ))}
       </Ul>
   ) : null
 }
