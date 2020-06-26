@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/reflexjs/reflex/compare/@reflexjs/components@0.1.6...@reflexjs/components@0.1.7) (2020-06-26)
+
+**Note:** Version bump only for package @reflexjs/components
+
+
+
+
+
 ## [0.1.6](https://github.com/reflexjs/reflex/compare/@reflexjs/components@0.1.5...@reflexjs/components@0.1.6) (2020-06-24)
 
 

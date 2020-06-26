@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.8](https://github.com/reflexjs/reflex/compare/www@0.1.7...www@0.1.8) (2020-06-26)
+
+
+### Bug Fixes
+
+* **www:** add github link on mobile ([2d51ad0](https://github.com/reflexjs/reflex/commit/2d51ad04e1ce82979021625839092808d4b790b8))
+* **www:** update codeblock and add title ([c6f9313](https://github.com/reflexjs/reflex/commit/c6f93138337bf4dbec57d5f1d1131538c90ec303))
+* format code ([4387b23](https://github.com/reflexjs/reflex/commit/4387b23b2e3e6bcba5922ac5a31176af5e56dc0f))
+
+
+
+
+
 ## [0.1.7](https://github.com/reflexjs/reflex/compare/www@0.1.6...www@0.1.7) (2020-06-24)
 
 

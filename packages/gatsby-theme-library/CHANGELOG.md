@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-library@0.1.7...@reflexjs/gatsby-theme-library@0.2.0) (2020-06-26)
+
+
+### Features
+
+* **core:** replace prism-react-renderer with theme-ui/prism ([9ec4419](https://github.com/reflexjs/reflex/commit/9ec44192678175f00d760d9a93dc89dc86be5daf))
+
+
+
+
+
 ## [0.1.7](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-library@0.1.6...@reflexjs/gatsby-theme-library@0.1.7) (2020-06-24)
 
 **Note:** Version bump only for package @reflexjs/gatsby-theme-library

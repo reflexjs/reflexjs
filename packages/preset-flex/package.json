@@ -1,6 +1,6 @@
 {
   "name": "@reflexjs/preset-flex",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "sideEffects": false,
   "source": "index.js",
   "main": "dist/index.js",
@@ -23,7 +23,7 @@
     "directory": "packages/preset-flex"
   },
   "dependencies": {
-    "@reflexjs/preset-base": "^0.1.4",
+    "@reflexjs/preset-base": "^0.2.0",
     "typeface-open-sans": "^0.0.75",
     "typeface-prata": "^0.0.72"
   },
