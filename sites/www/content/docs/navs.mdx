@@ -15,9 +15,7 @@ To add a nav, simply create an `.mdx` file in the `/content/navs` directory.
 
 Navs uses using simple lists of links.
 
-```jsx
-// content/navs/main.mdx
-
+```md title=content/navs/main.mdx
 - [Home](/home)
 - [Blocks](/blocks)
   - [Headers](/blocks/headers)
@@ -32,8 +30,7 @@ Navs uses using simple lists of links.
 
 Once your nav has been created, you can use the `useNav` hook to retrieve and render the nav.
 
-```jsx
-// blocks/main-nav.mdx
+```jsx title=blocks/main-nav.mdx
 import { useNav } from "@reflexjs/gatsby-theme-nav"
 
 export const MainNav = () => {

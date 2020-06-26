@@ -8,5 +8,10 @@ export default {
     pt: 6,
     mt: 6,
     fontSize: "4xl",
+
+    a: {
+      color: "text",
+      textDecoration: "none",
+    },
   },
 }

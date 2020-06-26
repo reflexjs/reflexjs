@@ -76,9 +76,7 @@ npm i @reflexjs/gatsby-theme-core
 
 Create a `gatsby-config.js` file and configure `@reflexjs/gatsby-theme-core`.
 
-```js
-// gatsby-config.js
-
+```js title=gatsby-config.js
 require(`dotenv`).config()
 
 module.exports = {
@@ -87,7 +85,7 @@ module.exports = {
     description: "Description for your site.",
     siteUrl: process.env.SITE_URL || "http://localhost:8000",
   },
-  plugins: [`@reflexjs/gatsby-theme-core`],
+  plugins: [`@reflexjs/gatsby-theme-core`], // highlight-line
 }
 ```
 

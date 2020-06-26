@@ -17,12 +17,10 @@ To add a block, simply create an `.mdx` file in the `/content/blocks` directory.
 mysite
   └── content
     └── blocks
-      └── card.mdx
+      └── card.mdx // highlight-line
 ```
 
-```mdx
-// content/blocks/card.mdx
-
+```md title=content/blocks/card.mdx
 <Div borderWidth="1px" rounded="5px">
   <Image src="placeholder.jpg" />
   <Div p="6">
@@ -42,11 +40,15 @@ To use a block on a page, add the block using the block name.
 <Block src="card" />
 ```
 
+<Callout>
+  Note: You do not need to prefix the src with "content/blocks".
+</Callout>
+
 ## Styling blocks
 
 Blocks can be styled like any other component. Simply pass the style as props.
 
-```mdx
+```jsx
 <Block src="card" bg="primary" color="white" />
 ```
 
