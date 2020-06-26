@@ -8,7 +8,7 @@ import { ButtonLink } from "./button-link"
 
 export const MDXComponents = {
   ...ReflexComponents,
-  code: CodeBlock,
+  pre: CodeBlock,
   h1: ReflexComponents.H1,
   h2: ReflexComponents.H2,
   h3: ReflexComponents.H3,

@@ -1,39 +1,58 @@
 import * as React from "react"
-import Highlight, { defaultProps } from "prism-react-renderer"
+import PrismCodeBlock from "@theme-ui/prism"
 import { Div } from "@reflexjs/components"
 import { CopyButton } from "./copy-button"
 
-export const CodeBlock = React.memo(
-  ({ children, className, WrapperComponent = Div, ...props }) => {
-    if (!children) {
-      return null
-    }
+export const preToCodeBlock = (preProps) => {
+  const isMdxPre =
+    preProps.children &&
+    preProps.children.props &&
+    preProps.children.props.mdxType === "code"
 
-    const code = children.trim()
-    const language = className?.replace(/language-/, "")
+  const { children: codeString, className = "", ...props } = isMdxPre
+    ? preProps.children.props
+    : preProps
+
+  const match = className.match(/language-([\0-\uFFFF]*)/)
+
+  return {
+    codeString: codeString.trim(),
+    className,
+    language: match != null ? match[1] : "",
+    ...props,
+  }
+}
+
+export const CodeBlock = (preProps) => {
+  const props = preToCodeBlock(preProps)
+  if (props) {
+    const { codeString, title, ...restProps } = props
 
     return (
-      <Div position="relative" {...props}>
-        <Highlight
-          {...defaultProps}
-          theme={null}
-          code={code}
-          language={language}
-        >
-          {({ className, tokens, getLineProps, getTokenProps }) => (
-            <WrapperComponent className={className} p="4">
-              {tokens.map((line, i) => (
-                <div key={i} {...getLineProps({ line, key: i })}>
-                  {line.map((token, key) => (
-                    <span key={key} {...getTokenProps({ token, key })} />
-                  ))}
-                </div>
-              ))}
-            </WrapperComponent>
-          )}
-        </Highlight>
-        <CopyButton value={code} position="absolute" top="4" right="4" />
+      <Div position="relative" {...preProps}>
+        {title && (
+          <Div
+            bg="prism.background"
+            color="prism.file"
+            borderBottomWidth="1px"
+            borderBottomColor="prism.highlight"
+            fontSize="sm"
+            roundedTop="md"
+            p="4"
+            sx={{
+              "+ pre": {
+                mt: 0,
+                borderTopLeftRadius: 0,
+                borderTopRightRadius: 0,
+              },
+            }}
+          >
+            {title}
+          </Div>
+        )}
+        <PrismCodeBlock {...restProps}>{codeString}</PrismCodeBlock>
+        <CopyButton value={codeString} position="absolute" top="4" right="4" />
       </Div>
     )
   }
-)
+}

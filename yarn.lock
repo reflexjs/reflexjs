@@ -4136,6 +4136,13 @@
     "@emotion/styled" "^10.0.0"
     "@mdx-js/react" "^1.0.0"
 
+"@theme-ui/prism@^0.4.0-rc.1":
+  version "0.4.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@theme-ui/prism/-/prism-0.4.0-rc.1.tgz#79913008cf4272e4fbc226bb0f025957198e5257"
+  integrity sha512-FiUM2YlHmf60xFmY6Y72el76q/ayy3FWyaEnfki5uW7a/lMGf0Ev1gOc2yUpGpzh3XxNbk2R0XdReQuqDcKm5Q==
+  dependencies:
+    prism-react-renderer "^1.0.2"
+
 "@theme-ui/theme-provider@^0.3.1":
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/@theme-ui/theme-provider/-/theme-provider-0.3.1.tgz#910bc43454fd61b1047d7bb0dce05e36ffb6b44b"
@@ -17160,7 +17167,7 @@ pretty-quick@^2.0.1:
     mri "^1.1.4"
     multimatch "^4.0.0"
 
-prism-react-renderer@^1.1.1:
+prism-react-renderer@^1.0.2:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/prism-react-renderer/-/prism-react-renderer-1.1.1.tgz#1c1be61b1eb9446a146ca7a50b7bcf36f2a70a44"
   integrity sha512-MgMhSdHuHymNRqD6KM3eGS0PNqgK9q4QF5P0yoQQvpB6jNjeSAi3jcSAz0Sua/t9fa4xDOMar9HJbLa08gl9ug==

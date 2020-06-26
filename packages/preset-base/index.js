@@ -61,7 +61,8 @@ export default {
       boolean: "#ff5874",
       property: "#80cbc4",
       namespace: "#b2ccd6",
-      highlight: "#002552",
+      highlight: "#243E73",
+      file: "#92B5B2",
     },
     modes: {
       dark: {
@@ -241,9 +242,13 @@ export default {
       tabSize: 2,
       hyphens: "none",
       my: 8,
+      py: 4,
       overflow: "auto",
       borderRadius: "md",
       whiteSpace: "pre-wrap",
+      "> .token-line": {
+        px: 4,
+      },
       ".plain": {
         minHeight: "1ch",
         display: "inline-block",
@@ -283,6 +288,9 @@ export default {
       },
       ".namespace": {
         color: "prism.namespace",
+      },
+      ".highlight": {
+        bg: "prism.highlight",
       },
     },
     code: {

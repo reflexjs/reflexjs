@@ -15,7 +15,6 @@ import {
   Div,
   Flexbox,
   Section,
-  Pre,
   Span,
 } from "@reflexjs/components"
 import presets from "./presets"
@@ -176,7 +175,6 @@ export const Preview = ({
           <Container>
             <CodeBlock
               className="language-jsx"
-              WrapperComponent={Pre}
               sx={{
                 pre: {
                   mt: 0,
