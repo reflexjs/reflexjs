@@ -12,7 +12,8 @@
     "test:e2e:ci": "yarn cy:setup && start-server-and-test dev http://localhost:8000 cy:run"
   },
   "dependencies": {
-    "@reflexjs/gatsby-theme-base": "^0.1.8"
+    "@reflexjs/gatsby-theme-base": "^0.1.8",
+    "@reflexjs/gatsby-theme-post": "^0.1.8"
   },
   "devDependencies": {
     "fs-extra": "^9.0.1",
