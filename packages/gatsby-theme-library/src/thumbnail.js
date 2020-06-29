@@ -16,6 +16,7 @@ export const Thumbnail = ({ screenshots, slug, mode, ...props }) => (
     transition="all .15s ease-in"
     hoverTransform="translateY(-5px)"
     hoverBoxShadow="xl"
+    minH="10"
     {...props}
   >
     {screenshots[mode] && <Image src={screenshots[mode]} w="100%" />}

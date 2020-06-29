@@ -4,6 +4,7 @@ const {
   mdxResolverPassthrough,
   toSlug,
   stripFrontmater,
+  stripPreviewCode,
 } = require("@reflexjs/gatsby-helpers")
 
 exports.onPreBootstrap = ({ reporter }, themeOptions) => {
@@ -71,7 +72,7 @@ exports.sourceNodes = (
     actions.createNode({
       id: createNodeId(`LibraryBlockCategory-${name}`),
       name: name,
-      display,
+      display: display || "full",
       slug: toSlug(name),
       weight: index,
       internal: {
@@ -94,6 +95,8 @@ exports.onCreateNode = async (
   const { name } = parent
 
   if (parent.sourceInstanceName === "LibraryBlock") {
+    const code = stripPreviewCode(stripFrontmater(node.rawBody))
+
     const nodeType = `LibraryBlock`
     const { blockBasePath } = withDefaults(themeOptions)
     const slug = `/${blockBasePath}/${name}`
@@ -101,7 +104,7 @@ exports.onCreateNode = async (
       id: createNodeId(`${nodeType}-${parent.id}`),
       parent: node.id,
       name,
-      code: stripFrontmater(node.rawBody),
+      code,
       slug,
       doc: node.frontmatter.doc || "default",
       category: parent.relativeDirectory,

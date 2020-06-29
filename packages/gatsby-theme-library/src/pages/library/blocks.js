@@ -67,7 +67,7 @@ export default () => {
           </Aside>
           <Div mt="10|0" pt="8">
             <Block src="library/header-blocks" />
-            {categories.map(({ name, slug, blocks }, index) => {
+            {categories.map(({ name, slug, display, blocks }, index) => {
               return (
                 <React.Fragment key={index}>
                   <H2
@@ -80,9 +80,47 @@ export default () => {
                   >
                     {name}
                   </H2>
-                  {blocks.map((block, index) => (
-                    <Thumbnail key={index} mb="4" mode={colorMode} {...block} />
-                  ))}
+                  {display === "grid" ? (
+                    <Grid
+                      col={display === "grid" && "1|1|2"}
+                      gap="8"
+                      alignItems="flex-start"
+                    >
+                      <Grid gap="8">
+                        {blocks
+                          .slice(0, 1 + blocks.length / 2)
+                          .map((block, index) => (
+                            <Thumbnail
+                              key={index}
+                              mb={display !== "grid" && 4}
+                              mode={colorMode}
+                              {...block}
+                            />
+                          ))}
+                      </Grid>
+                      <Grid gap="8">
+                        {blocks
+                          .slice(blocks.length / 2 + 1, blocks.length)
+                          .map((block, index) => (
+                            <Thumbnail
+                              key={index}
+                              mb={display !== "grid" && 4}
+                              mode={colorMode}
+                              {...block}
+                            />
+                          ))}
+                      </Grid>
+                    </Grid>
+                  ) : (
+                    blocks.map((block, index) => (
+                      <Thumbnail
+                        key={index}
+                        mb={display !== "grid" && 4}
+                        mode={colorMode}
+                        {...block}
+                      />
+                    ))
+                  )}
                 </React.Fragment>
               )
             })}
