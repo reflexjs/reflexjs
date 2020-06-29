@@ -1,32 +1,16 @@
----
-doc: "posts"
----
-
 import * as React from "react"
 import { Article, H2, P, Div, Grid } from "@reflexjs/components"
 import { Link, Image } from "@reflexjs/gatsby-theme-core"
 import { PostMeta } from "@reflexjs/gatsby-theme-post"
 
-<!-- preview start -->
-
-import { usePost } from "@reflexjs/gatsby-theme-post"
-export const Preview = () => {
-  const posts = usePost({ tags: [{ name: "Example" }] })
-  return (
-    <Div p="10">
-      <Posts posts={posts.slice(0, 6)} />
-    </Div>
-  )
-}
-
-<!-- preview end -->
-
 export const Posts = ({ posts }) => {
+  // Filter out example posts.
+  posts = posts.filter((post) => post.tags?.indexOf("Example") !== -1)
   return posts.length ? (
-    <Grid col="1|1|2|3" gap="6|8|10">
+    <Grid col="1" gap="10|20" maxW="800px" mx="auto">
       {posts &&
         posts.map((post, index) => (
-          <Div key={index} mb="8">
+          <Div key={index}>
             <PostTeaser {...post} />
           </Div>
         ))}
@@ -51,20 +35,22 @@ export const PostTeaser = ({
         <Image src={image} title={title} alt={title} />
       </Link>
     )}
-    {title && (
-      <Link href={slug}>
-        <H2 my="4" fontSize="2xl" hoverColor="primary">
-          {title}
-        </H2>
-      </Link>
-    )}
-    {excerpt && <P mt="1">{excerpt}</P>}
-    <PostMeta
-      author={author}
-      timeToRead={timeToRead}
-      date={date}
-      datetime={datetime}
-      fontSize="md"
-    />
+    <Div mt="4">
+      {title && (
+        <Link href={slug}>
+          <H2 mt="0" mb="4" fontSize="2xl|2xl|3xl|4xl" hoverColor="primary">
+            {title}
+          </H2>
+        </Link>
+      )}
+      <PostMeta
+        author={author}
+        timeToRead={timeToRead}
+        date={date}
+        datetime={datetime}
+        fontSize="md"
+      />
+      {excerpt && <P mt="4">{excerpt}</P>}
+    </Div>
   </Article>
 )

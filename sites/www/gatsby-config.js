@@ -12,7 +12,28 @@ module.exports = {
     `@reflexjs/gatsby-theme-doc`,
     `@reflexjs/gatsby-theme-tutorial`,
     `@reflexjs/gatsby-theme-styleguide`,
-    `@reflexjs/gatsby-theme-post`,
+    {
+      resolve: `@reflexjs/gatsby-theme-post`,
+      options: {
+        pageQuery: `
+          query {
+            allPost(sort: {fields: date, order: DESC}, filter: {tags: {elemMatch: {name: {nin: "Example"}}}}) {
+              nodes {
+                id
+                slug
+              }
+            }
+            allPostTag(sort: {fields: name, order: ASC}) {
+              nodes {
+                id
+                name
+                slug
+              }
+            }
+          }
+        `,
+      },
+    },
     {
       resolve: `@reflexjs/gatsby-theme-library`,
       options: {

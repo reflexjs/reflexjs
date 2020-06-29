@@ -102,24 +102,33 @@ exports.createResolvers = async ({ createResolvers }) => {
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
   const options = withDefaults(themeOptions)
-  const { basePath, postsPerPage } = options
+  const { basePath, postsPerPage, pageQuery } = options
 
-  const result = await graphql(`
-    query {
-      allPost(sort: { fields: date, order: DESC }) {
-        posts: nodes {
-          id
-          slug
+  const result = await graphql(
+    pageQuery ||
+      `query {
+        allPost(sort: { fields: date, order: DESC }) {
+          nodes {
+            id
+            slug
+          }
         }
-      }
-    }
-  `)
+        allPostTag(sort: { fields: name, order: ASC }) {
+          nodes {
+            id
+            name
+            slug
+          }
+        }
+      }`
+  )
 
   if (result.errors) {
     reporter.error("There was an error fetching blog posts.", result.errors)
   }
 
-  const { posts } = result.data.allPost
+  const posts = result.data.allPost.nodes
+  const tags = result.data.allPostTag.nodes
 
   if (posts.length) {
     // Create paginated posts pages.
@@ -149,25 +158,6 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
         },
       })
     })
-
-    // Create tag pages.
-    const tagsResult = await graphql(`
-      query {
-        allPostTag(sort: { fields: name, order: ASC }) {
-          tags: nodes {
-            id
-            name
-            slug
-          }
-        }
-      }
-    `)
-
-    if (tagsResult.errors) {
-      reporter.error("There was an error fetching tags.", result.errors)
-    }
-
-    const { tags } = tagsResult.data.allPostTag
 
     if (tags.length) {
       tags.forEach((tag) => {
