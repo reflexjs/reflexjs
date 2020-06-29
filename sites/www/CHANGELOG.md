@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/reflexjs/reflex/compare/www@0.1.8...www@0.2.0) (2020-06-29)
+
+
+### Bug Fixes
+
+* **www:** update create-react-app image ([132aee0](https://github.com/reflexjs/reflex/commit/132aee0fbb56151ffd8428027cd0d171bd01ccc4))
+
+
+### Features
+
+* **www:** add blog ([29bc5c1](https://github.com/reflexjs/reflex/commit/29bc5c11148d4496a39e11591915328bc900fda4))
+* **www:** add posts blocks ([f882c08](https://github.com/reflexjs/reflex/commit/f882c081b47da2e2ad325336ebb5fae45aeead49))
+
+
+
+
+
 ## [0.1.8](https://github.com/reflexjs/reflex/compare/www@0.1.7...www@0.1.8) (2020-06-26)
 
 

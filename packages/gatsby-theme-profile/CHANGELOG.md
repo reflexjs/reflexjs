@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-profile@0.1.8...@reflexjs/gatsby-theme-profile@0.2.0) (2020-06-29)
+
+
+### Features
+
+* **post:** refactor post to work with blocks ([7ab5de2](https://github.com/reflexjs/reflex/commit/7ab5de295b9a2a6a1bfa516464bc0a6f28e2e281))
+
+
+
+
+
 ## [0.1.8](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-profile@0.1.7...@reflexjs/gatsby-theme-profile@0.1.8) (2020-06-26)
 
 **Note:** Version bump only for package @reflexjs/gatsby-theme-profile

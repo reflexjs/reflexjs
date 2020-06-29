@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-core@0.2.0...@reflexjs/gatsby-theme-core@0.2.1) (2020-06-29)
+
+
+### Bug Fixes
+
+* **core:** update image and refactor page template ([2c12578](https://github.com/reflexjs/reflex/commit/2c125781b8898ef5e6615bb5acce57fc06d55031))
+
+
+
+
+
 # [0.2.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-core@0.1.7...@reflexjs/gatsby-theme-core@0.2.0) (2020-06-26)
 
 

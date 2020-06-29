@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-helpers@0.1.4...@reflexjs/gatsby-helpers@0.2.0) (2020-06-29)
+
+
+### Features
+
+* **www:** add blog ([29bc5c1](https://github.com/reflexjs/reflex/commit/29bc5c11148d4496a39e11591915328bc900fda4))
+* **www:** add posts blocks ([f882c08](https://github.com/reflexjs/reflex/commit/f882c081b47da2e2ad325336ebb5fae45aeead49))
+
+
+
+
+
 ## [0.1.4](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-helpers@0.1.3...@reflexjs/gatsby-helpers@0.1.4) (2020-06-18)
 
 **Note:** Version bump only for package @reflexjs/gatsby-helpers
