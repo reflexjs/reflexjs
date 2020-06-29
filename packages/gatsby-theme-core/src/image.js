@@ -40,7 +40,7 @@ export const Image = ({ src, alt, title, caption, ...props }) => {
         dangerouslySetInnerHTML={{ __html: caption }}
         mt="2"
         textAlign="center"
-        fontSize="2"
+        fontSize="md"
       />
     ) : null
 

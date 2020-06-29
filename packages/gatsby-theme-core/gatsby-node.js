@@ -18,7 +18,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       id: ID!
       title: String
       excerpt: String
-      image: File @fileByRelativePath
+      image: String
       slug: String
       body: String
     }

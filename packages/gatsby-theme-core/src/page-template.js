@@ -1,5 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { Seo } from "./seo"
+import { Layout } from "./layout"
 import { Page } from "./page"
 
 export const query = graphql`
@@ -10,8 +12,22 @@ export const query = graphql`
       slug
       excerpt
       body
+      image
     }
   }
 `
 
-export default ({ data }) => <Page {...data.page} />
+export default ({ data }) => {
+  const page = data.page
+  return (
+    <Layout>
+      <Seo
+        title={page.title}
+        description={page.excerpt}
+        pathname={page.slug}
+        image={page.image}
+      />
+      <Page {...page} />
+    </Layout>
+  )
+}
