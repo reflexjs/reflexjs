@@ -12,6 +12,7 @@ module.exports = {
     `@reflexjs/gatsby-theme-doc`,
     `@reflexjs/gatsby-theme-tutorial`,
     `@reflexjs/gatsby-theme-styleguide`,
+    `@reflexjs/gatsby-theme-post`,
     {
       resolve: `@reflexjs/gatsby-theme-library`,
       options: {
@@ -51,12 +52,6 @@ module.exports = {
             display: "grid",
           },
         ],
-      },
-    },
-    {
-      resolve: `@reflexjs/gatsby-theme-post`,
-      options: {
-        basePath: `/blog`,
       },
     },
     {
