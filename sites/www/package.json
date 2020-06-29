@@ -5,9 +5,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "gatsby develop -H 0.0.0.0 -p 8000 -o",
-    "dev": "gatsby clean && gatsby develop -p 8000 -o",
-    "preview": "gatsby build && gatsby serve -p 9000 -o",
+    "start": "gatsby develop -H 0.0.0.0 -p 8080 -o",
+    "dev": "gatsby clean && gatsby develop -p 8080 -o",
+    "preview": "gatsby build && gatsby serve -p 9090 -o",
     "screenshot:blocks": "node ./scripts/generate-screenshot-blocks.js",
     "screenshot:pages": "node ./scripts/generate-screenshot-pages.js"
   },
@@ -15,6 +15,7 @@
     "@reflexjs/gatsby-theme-base": "^0.1.8",
     "@reflexjs/gatsby-theme-doc": "^0.1.8",
     "@reflexjs/gatsby-theme-library": "^0.2.0",
+    "@reflexjs/gatsby-theme-post": "^0.1.8",
     "@reflexjs/gatsby-theme-styleguide": "^0.1.8",
     "@reflexjs/gatsby-theme-tutorial": "^0.1.8",
     "gatsby": "^2.22.11",

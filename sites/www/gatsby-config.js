@@ -10,9 +10,55 @@ module.exports = {
   plugins: [
     `@reflexjs/gatsby-theme-base`,
     `@reflexjs/gatsby-theme-doc`,
-    `@reflexjs/gatsby-theme-library`,
     `@reflexjs/gatsby-theme-tutorial`,
     `@reflexjs/gatsby-theme-styleguide`,
+    {
+      resolve: `@reflexjs/gatsby-theme-library`,
+      options: {
+        blockCategories: [
+          {
+            name: "Header",
+          },
+          {
+            name: "Hero",
+          },
+          {
+            name: "Features",
+          },
+          {
+            name: "Call To Action",
+          },
+          {
+            name: "Forms",
+          },
+          {
+            name: "Pricing",
+          },
+          {
+            name: "Team",
+          },
+          {
+            name: "Testimonials",
+          },
+          {
+            name: "Cards",
+          },
+          {
+            name: "Footer",
+          },
+          {
+            name: "Posts",
+            display: "grid",
+          },
+        ],
+      },
+    },
+    {
+      resolve: `@reflexjs/gatsby-theme-post`,
+      options: {
+        basePath: `/blog`,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

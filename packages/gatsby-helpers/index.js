@@ -135,3 +135,6 @@ exports.stripFrontmater = (body) =>
     /^(---(?:\r?\n(?!--|\s*$).*)*)\s*((?:\r?\n(?!---).*)*\r?\n---)$/m,
     ""
   )
+
+exports.stripPreviewCode = (body) =>
+  body.replace(/\n<!-- preview start -->.*<!-- preview end -->\n/gms, "")
