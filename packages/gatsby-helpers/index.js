@@ -81,8 +81,8 @@ exports.generateNodeFromMdx = (
   if (withSlug) {
     let slug =
       (node.frontmatter && node.frontmatter.slug) ||
-      exports.toSlug(relativeDirectory !== "" ? relativeDirectory : name)
-    if (slug === "index") slug = ""
+      exports.toSlug(relativeDirectory) + "/" + exports.toSlug(name)
+    slug = slug.replace(/^\//, "").replace(/index$/, "")
 
     // Allow theme consumers to customize the slug.
     if (themeOptions.slugResolver) {

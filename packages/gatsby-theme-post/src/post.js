@@ -33,8 +33,16 @@ export const Post = ({
               {tags[0].name}
             </Link>
           )}
-          {title && <H1 my="0">{title}</H1>}
-          {excerpt && <P fontSize="2xl">{excerpt}</P>}
+          {title && (
+            <H1 my="0" fontWeight="extrabold">
+              {title}
+            </H1>
+          )}
+          {excerpt && (
+            <P fontSize="2xl" maxW="700px" mx="auto">
+              {excerpt}
+            </P>
+          )}
 
           <PostMeta
             author={author}
@@ -57,6 +65,8 @@ export const Post = ({
             caption={caption}
             mx="auto"
             my="4|8|10"
+            rounded="md"
+            overflow="hidden"
           />
         </Container>
       )}

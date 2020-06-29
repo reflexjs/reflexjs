@@ -11,7 +11,7 @@ import { PostMeta } from "@reflexjs/gatsby-theme-post"
 
 import { usePost } from "@reflexjs/gatsby-theme-post"
 export const Preview = () => {
-  const posts = usePost()
+  const posts = usePost({ tags: [{ name: "Example" }] })
   return (
     <Div p="10">
       <Posts posts={posts.slice(0, 2)} />
