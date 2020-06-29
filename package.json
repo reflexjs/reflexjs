@@ -5,7 +5,8 @@
     "packages/*",
     "starters/*",
     "sites/*",
-    "e2e-tests/*"
+    "e2e-tests/*",
+    "examples/*"
   ],
   "scripts": {
     "test": "jest",
