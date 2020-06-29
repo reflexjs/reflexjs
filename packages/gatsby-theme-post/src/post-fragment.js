@@ -10,7 +10,7 @@ export const fragment = graphql`
     body
     slug
     featured
-    status
+    published
     tags {
       name
       slug

@@ -8,5 +8,9 @@ export const fragment = graphql`
     slug
     body
     picture
+    links {
+      title
+      url
+    }
   }
 `

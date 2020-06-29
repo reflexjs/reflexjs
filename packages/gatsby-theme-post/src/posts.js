@@ -1,31 +1,55 @@
 import * as React from "react"
-import { Layout } from "@reflexjs/gatsby-theme-core"
-import { Container, Div, Section, Grid } from "@reflexjs/components"
-import { Pager } from "@reflexjs/gatsby-theme-core"
-import { PostTeaser } from "./post-teaser"
+import { Article, H2, P, Div, Grid } from "@reflexjs/components"
+import { Link, Image } from "@reflexjs/gatsby-theme-core"
+import { PostMeta } from "./post-meta"
 
-export const Posts = ({ posts, pageContext }) => {
-  const { previousPagePath, nextPagePath } = pageContext
-
-  return (
-    <Layout>
-      <Section py="8|12|14">
-        <Container>
-          <Grid col="1|2" gap="10|14">
-            {posts &&
-              posts.map((post, index) => (
-                <Div key={index} mb="8">
-                  <PostTeaser {...post} />
-                </Div>
-              ))}
-          </Grid>
-
-          <Pager
-            previousPagePath={previousPagePath}
-            nextPagePath={nextPagePath}
-          />
-        </Container>
-      </Section>
-    </Layout>
-  )
+export const Posts = ({ posts }) => {
+  return posts.length ? (
+    <Grid col="1|2" gap="10|14">
+      {posts &&
+        posts.map((post, index) => (
+          <Div key={index} mb="8">
+            <PostTeaser {...post} />
+          </Div>
+        ))}
+    </Grid>
+  ) : null
 }
+
+export const PostTeaser = ({
+  title,
+  excerpt,
+  slug,
+  image,
+  date,
+  datetime,
+  author,
+  timeToRead,
+  ...props
+}) => (
+  <Article {...props}>
+    <Grid>
+      {image && (
+        <Link href={slug} d="block">
+          <Image src={image} title={title} alt={title} />
+        </Link>
+      )}
+      {title && (
+        <Link href={slug}>
+          <H2 my="4" fontSize="3xl" hoverColor="primary">
+            {title}
+          </H2>
+        </Link>
+      )}
+      {excerpt && <P mt="1">{excerpt}</P>}
+
+      <PostMeta
+        author={author}
+        timeToRead={timeToRead}
+        date={date}
+        datetime={datetime}
+        fontSize="md"
+      />
+    </Grid>
+  </Article>
+)

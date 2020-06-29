@@ -20,6 +20,12 @@ exports.createSchemaCustomization = async ({ actions }) => {
       slug: String
       body: String
       picture: String
+      links: [ProfileLink]
+    }
+
+    type ProfileLink implements Node @dontInfer {
+      title: String
+      url: String
     }
   `)
 }

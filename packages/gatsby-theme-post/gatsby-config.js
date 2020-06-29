@@ -6,6 +6,7 @@ module.exports = (themeOptions) => {
   return {
     plugins: [
       "@reflexjs/gatsby-theme-profile",
+      "@reflexjs/gatsby-theme-block",
       {
         resolve: `gatsby-source-filesystem`,
         options: {

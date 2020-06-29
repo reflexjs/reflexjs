@@ -16,6 +16,11 @@ export const query = graphql`
   }
 `
 
-export default ({ data }) => (
-  <Post {...data.post} previousPost={data.prev} nextPost={data.next} />
+export default ({ data, ...props }) => (
+  <Post
+    {...data.post}
+    previousPost={data.prev}
+    nextPost={data.next}
+    {...props}
+  />
 )

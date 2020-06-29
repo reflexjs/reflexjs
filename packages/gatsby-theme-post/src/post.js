@@ -1,15 +1,8 @@
 import * as React from "react"
 import { Layout, Seo, MDXRenderer } from "@reflexjs/gatsby-theme-core"
-import {
-  Article,
-  Container,
-  H1,
-  Div,
-  P,
-  Span,
-  Flexbox,
-} from "@reflexjs/components"
+import { Article, Container, H1, Div, P, Flexbox } from "@reflexjs/components"
 import { Link, Image } from "@reflexjs/gatsby-theme-core"
+import { PostMeta } from "./post-meta"
 
 export const Post = ({
   title,
@@ -25,9 +18,15 @@ export const Post = ({
   tags,
 }) => (
   <Layout>
-    <Seo title={title} description={excerpt} pathname={slug} />
+    <Seo
+      title={title}
+      description={excerpt}
+      pathname={slug}
+      image={image}
+      type="article"
+    />
     <Article py="8|12|14">
-      <Container maxW="null|null|50%">
+      <Container maxW="null|null|null|900px">
         <Div textAlign="center">
           {tags && (
             <Link to={tags[0].slug} textDecoration="none" color="text">
@@ -37,27 +36,15 @@ export const Post = ({
           {title && <H1 my="0">{title}</H1>}
           {excerpt && <P fontSize="2xl">{excerpt}</P>}
 
-          <Flexbox
+          <PostMeta
+            author={author}
+            timeToRead={timeToRead}
+            date={date}
+            datetime={datetime}
             alignItems="center"
             justifyContent="center"
             my="8"
-            variant="small"
-          >
-            {author && (
-              <Flexbox alignItems="center" mr="2">
-                <Image
-                  src={author.picture}
-                  w="40px"
-                  d="inline-block"
-                  m="0"
-                  mr="2"
-                />
-                <Span fontWeight="semi">{author.name}</Span>
-              </Flexbox>
-            )}
-            {date && <time dateTime={datetime}> - {date}</time>}
-            {timeToRead && <Span ml="2"> - {timeToRead} min read</Span>}
-          </Flexbox>
+          />
         </Div>
       </Container>
 
@@ -69,16 +56,16 @@ export const Post = ({
             alt={caption || title}
             caption={caption}
             mx="auto"
-            my="4"
+            my="4|8|10"
           />
         </Container>
       )}
 
-      <Container maxW="null|null|50%">
+      <Container maxW="null|null|null|900px">
         <MDXRenderer>{body}</MDXRenderer>
 
         {tags && (
-          <Flexbox alignItems="center" justifyContent="center" my="6" mx="auto">
+          <Flexbox alignItems="center" my="6" mx="auto">
             {tags.map(({ name, slug }, index) => (
               <Link
                 key={name}
@@ -90,7 +77,7 @@ export const Post = ({
                 rounded="md"
                 color="text"
                 textDecoration="none"
-                fontSize="1"
+                fontSize="sm"
                 ml={index !== 0 && 2}
                 hoverBg="secondary"
                 hoverColor="white"

@@ -26,7 +26,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
       caption: String
       timeToRead: Int
       featured: Boolean
-      status: Boolean
+      published: Boolean
       author: Profile @link(by: "name")
       tags: [PostTag] @link(by: "name")
     }
@@ -40,7 +40,7 @@ exports.createSchemaCustomization = async ({ actions }) => {
 }
 
 exports.onCreateNode = async (
-  { node, actions, getNode, createNodeId, createContentDigest },
+  { node, actions, getNode, createNodeId, createContentDigest, getNodesByType },
   themeOptions
 ) => {
   const { basePath } = withDefaults(themeOptions)
@@ -55,6 +55,7 @@ exports.onCreateNode = async (
   )
 
   if (postNode) {
+    // Create tags.
     const { tags } = postNode
 
     if (tags) {
@@ -70,6 +71,13 @@ exports.onCreateNode = async (
           },
         })
       })
+    }
+
+    // If no author is set and only one profile is available,
+    // set it as the default author.
+    const profiles = getNodesByType("Profile")
+    if (!postNode.author && profiles.length === 1) {
+      postNode.author = profiles[0].name
     }
 
     actions.createNode({
@@ -93,7 +101,8 @@ exports.createResolvers = async ({ createResolvers }) => {
 
 exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { createPage } = actions
-  const { basePath, postsPerPage } = withDefaults(themeOptions)
+  const options = withDefaults(themeOptions)
+  const { basePath, postsPerPage } = options
 
   const result = await graphql(`
     query {
@@ -123,6 +132,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
       component: require.resolve(`./src/posts-template.js`),
       context: {
         total: posts.length,
+        themeOptions: options,
       },
     })
 
@@ -135,6 +145,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
           id: node.id,
           prev: index === 0 ? null : posts[index - 1].id,
           next: index === posts.length - 1 ? null : posts[index + 1].id,
+          themeOptions: options,
         },
       })
     })
@@ -165,6 +176,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
           component: require.resolve(`./src/tag-template.js`),
           context: {
             name: tag.name,
+            themeOptions: options,
           },
         })
       })
