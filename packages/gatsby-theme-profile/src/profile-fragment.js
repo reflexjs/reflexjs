@@ -12,5 +12,8 @@ export const fragment = graphql`
       title
       url
     }
+    metatags {
+      ...MetatagsFragment
+    }
   }
 `
