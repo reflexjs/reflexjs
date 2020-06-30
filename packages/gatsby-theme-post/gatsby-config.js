@@ -5,6 +5,7 @@ module.exports = (themeOptions) => {
 
   return {
     plugins: [
+      "@reflexjs/gatsby-plugin-metatags",
       "@reflexjs/gatsby-theme-profile",
       "@reflexjs/gatsby-theme-block",
       {

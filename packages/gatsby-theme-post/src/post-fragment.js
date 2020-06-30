@@ -20,5 +20,8 @@ export const fragment = graphql`
     }
     image
     timeToRead
+    metatags {
+      ...MetatagsFragment
+    }
   }
 `

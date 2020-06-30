@@ -9,6 +9,9 @@ export const query = graphql`
     postTag(name: { eq: $name }) {
       name
       slug
+      metatags {
+        ...MetatagsFragment
+      }
     }
     allPost(
       filter: { tags: { elemMatch: { name: { eq: $name } } } }
@@ -23,10 +26,10 @@ export const query = graphql`
 
 export default ({ data, pageContext, ...props }) => {
   const { themeOptions } = pageContext
-  const { name } = data.postTag
+  const { name, metatags } = data.postTag
   return (
     <Layout>
-      <Seo title={name} description={`Posts tagged with ${name}`} />
+      <Seo {...metatags} description={`Posts tagged with ${name}`} />
       <Section py="8|12|14">
         <Container>
           <Flexbox alignItems="center" mb="6|8|10">

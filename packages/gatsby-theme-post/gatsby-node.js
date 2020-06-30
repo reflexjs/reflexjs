@@ -6,6 +6,7 @@ const {
   mdxResolverPassthrough,
   toSlug,
 } = require("@reflexjs/gatsby-helpers")
+const { generateMetatags } = require("@reflexjs/gatsby-plugin-metatags")
 
 exports.onPreBootstrap = ({ reporter }, themeOptions) => {
   const { contentPath } = withDefaults(themeOptions)
@@ -29,12 +30,14 @@ exports.createSchemaCustomization = async ({ actions }) => {
       published: Boolean
       author: Profile @link(by: "name")
       tags: [PostTag] @link(by: "name")
+      metatags: Metatags
     }
 
     type PostTag implements Node @dontInfer {
       id: ID!
       name: String
       slug: String
+      metatags: Metatags
     }
   `)
 }
@@ -61,10 +64,15 @@ exports.onCreateNode = async (
     if (tags) {
       const nodeType = "PostTag"
       tags.forEach((name) => {
+        const tagNode = {
+          name,
+          slug: `${basePath}/tags/${toSlug(name)}`,
+        }
+
         actions.createNode({
           id: createNodeId(`${nodeType}-${name}`),
-          slug: `${basePath}/tags/${toSlug(name)}`,
-          name,
+          ...tagNode,
+          metatags: generateMetatags(tagNode),
           internal: {
             type: nodeType,
             contentDigest: createContentDigest(`${nodeType}-${name}`),
@@ -82,6 +90,7 @@ exports.onCreateNode = async (
 
     actions.createNode({
       ...postNode,
+      metatags: generateMetatags(postNode),
     })
   }
 }

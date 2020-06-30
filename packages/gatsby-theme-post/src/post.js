@@ -7,7 +7,6 @@ import { PostMeta } from "./post-meta"
 export const Post = ({
   title,
   excerpt,
-  slug,
   body,
   image,
   caption,
@@ -16,15 +15,10 @@ export const Post = ({
   author,
   timeToRead,
   tags,
+  metatags,
 }) => (
   <Layout>
-    <Seo
-      title={title}
-      description={excerpt}
-      pathname={slug}
-      image={image}
-      type="article"
-    />
+    <Seo {...metatags} />
     <Article py="8|12|14">
       <Container maxW="null|null|null|900px">
         <Div textAlign="center">
