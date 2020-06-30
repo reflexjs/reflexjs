@@ -7,27 +7,19 @@ import { Page } from "./page"
 export const query = graphql`
   query($id: String) {
     page(id: { eq: $id }) {
-      id
-      title
-      slug
-      excerpt
-      body
-      image
+      ...PageFragment
     }
   }
 `
 
 export default ({ data }) => {
-  const page = data.page
+  const page = data?.page
   return (
-    <Layout>
-      <Seo
-        title={page.title}
-        description={page.excerpt}
-        pathname={page.slug}
-        image={page.image}
-      />
-      <Page {...page} />
-    </Layout>
+    page && (
+      <Layout>
+        <Seo {...page.metatags} />
+        <Page {...page} />
+      </Layout>
+    )
   )
 }

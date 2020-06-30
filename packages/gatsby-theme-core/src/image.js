@@ -1,33 +1,11 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import GatsbyImg from "gatsby-image"
 import { isRelativeUrl } from "@reflexjs/utils"
 import { Img, Figure, Figcaption } from "@reflexjs/components"
+import { useImage } from "./use-image"
 
 export const Image = ({ src, alt, title, caption, ...props }) => {
-  const data = useStaticQuery(graphql`
-    {
-      allFile(
-        filter: {
-          sourceInstanceName: { eq: "Image" }
-          extension: { ne: "svg" }
-        }
-      ) {
-        images: nodes {
-          relativePath
-          childImageSharp {
-            fluid(cropFocus: CENTER, quality: 100) {
-              base64
-              aspectRatio
-              src
-              srcSet
-              sizes
-            }
-          }
-        }
-      }
-    }
-  `)
+  const [image] = useImage(src)
 
   props = {
     m: 0,
@@ -65,10 +43,6 @@ export const Image = ({ src, alt, title, caption, ...props }) => {
       </Figure>
     )
   }
-
-  const { images } = data.allFile
-  const path = src.replace(/^.?\//, "")
-  const image = images.find(({ relativePath }) => relativePath === path)
 
   return image ? (
     <Figure {...props}>

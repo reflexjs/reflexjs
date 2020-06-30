@@ -17,6 +17,7 @@ module.exports = (themeOptions) => {
       `gatsby-plugin-sharp`,
       `gatsby-transformer-sharp`,
       `gatsby-image`,
+      "@reflexjs/gatsby-plugin-metatags",
       {
         resolve: `gatsby-plugin-mdx`,
         options: {
