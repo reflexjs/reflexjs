@@ -1,6 +1,5 @@
 import * as React from "react"
 import { graphql } from "gatsby"
-import { Seo } from "./seo"
 import { Layout } from "./layout"
 import { Page } from "./page"
 
@@ -12,14 +11,8 @@ export const query = graphql`
   }
 `
 
-export default ({ data }) => {
-  const page = data?.page
-  return (
-    page && (
-      <Layout>
-        <Seo {...page.metatags} />
-        <Page {...page} />
-      </Layout>
-    )
-  )
-}
+export default ({ data }) => (
+  <Layout pathname={data.page.slug}>
+    {data.page ? <Page {...data.page} /> : null}
+  </Layout>
+)

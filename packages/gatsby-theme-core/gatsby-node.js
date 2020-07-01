@@ -4,13 +4,11 @@ const {
   generateNodeFromMdx,
   mdxResolverPassthrough,
 } = require("@reflexjs/gatsby-helpers")
-const { generateMetatags } = require("@reflexjs/gatsby-plugin-metatags")
 
 exports.onPreBootstrap = ({ reporter }, themeOptions) => {
-  const { contentPath, imagesPath } = withDefaults(themeOptions)
+  const { contentPath } = withDefaults(themeOptions)
 
   ensureContentPath(contentPath, reporter)
-  ensureContentPath(imagesPath, reporter)
 }
 
 exports.createSchemaCustomization = async ({ actions }) => {
@@ -22,7 +20,6 @@ exports.createSchemaCustomization = async ({ actions }) => {
       image: String
       slug: String
       body: String
-      metatags: Metatags
     }
   `)
 }
@@ -43,7 +40,6 @@ exports.onCreateNode = async (
   if (pageNode) {
     actions.createNode({
       ...pageNode,
-      metatags: generateMetatags(pageNode),
     })
   }
 }

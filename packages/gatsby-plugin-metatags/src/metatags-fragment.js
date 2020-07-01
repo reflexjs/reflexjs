@@ -9,7 +9,10 @@ export const fragment = graphql`
   }
 
   fragment MetatagsFragment on Metatags {
-    ...MetatagFragment
+    title
+    description
+    pathname
+    image
     og {
       ...MetatagFragment
       type

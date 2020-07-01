@@ -14,19 +14,21 @@ export const query = graphql`
   }
 `
 
-export default ({ data, pageContext, ...props }) => {
-  const { previousPagePath, nextPagePath } = pageContext
+export default ({ data, ...props }) => {
+  const { previousPagePath, nextPagePath } = props.pageContext
   return (
-    <Layout>
-      <Section py="8|12|14">
-        <Container>
-          <Posts {...data.allPost} {...props} />
-          <Pager
-            previousPagePath={previousPagePath}
-            nextPagePath={nextPagePath}
-          />
-        </Container>
-      </Section>
+    <Layout pathname={props.location.pathname}>
+      {data.allPost ? (
+        <Section py="8|12|14">
+          <Container>
+            <Posts {...data.allPost} {...props} />
+            <Pager
+              previousPagePath={previousPagePath}
+              nextPagePath={nextPagePath}
+            />
+          </Container>
+        </Section>
+      ) : null}
     </Layout>
   )
 }

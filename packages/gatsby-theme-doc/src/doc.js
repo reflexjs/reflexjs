@@ -1,6 +1,5 @@
 import * as React from "react"
 import {
-  Seo,
   MDXRenderer,
   MDXProvider,
   ThemeProvider,
@@ -25,7 +24,6 @@ export const Doc = ({ title, excerpt, body }) => {
   const [showMenu, setShowMenu] = React.useState(false)
   return (
     <Layout footer={false}>
-      <Seo title={title} description={excerpt} />
       <ThemeProvider theme={docTheme}>
         <MDXProvider components={MDXComponents}>
           <Container pb="8">

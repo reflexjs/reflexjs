@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Button, Svg } from "@reflexjs/components"
+import { Button, Svg, VisuallyHidden } from "@reflexjs/components"
 import copy from "copy-to-clipboard"
 
 export const CopyIcon = ({ size, ...props }) => (
@@ -65,6 +65,7 @@ export const CopyButton = ({ value, iconSize = 5, children, ...props }) => {
       ) : (
         <CopyIcon size={iconSize} />
       )}
+      <VisuallyHidden>Copy</VisuallyHidden>
     </Button>
   )
 }

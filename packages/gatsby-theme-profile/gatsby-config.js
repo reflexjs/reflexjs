@@ -5,7 +5,6 @@ module.exports = (themeOptions) => {
 
   return {
     plugins: [
-      "@reflexjs/gatsby-plugin-metatags",
       {
         resolve: `gatsby-source-filesystem`,
         options: {

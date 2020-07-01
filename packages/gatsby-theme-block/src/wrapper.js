@@ -9,8 +9,11 @@ export const Wrapper = ({ children, ...props }) => {
     return <DynamicBlock {...props}>{children}</DynamicBlock>
   }
   if (children) {
-    const _child = Array.isArray(children) ? children[0] : children
-    const _children = React.cloneElement(_child, { ...props })
-    return <React.Fragment>{_children}</React.Fragment>
+    const [_child, ...rest] = Array.isArray(children) ? children : [children]
+    children = [
+      React.cloneElement(_child, { ...props }),
+      ...rest,
+    ].map((child, index) => React.cloneElement(child, { key: index }))
+    return <React.Fragment>{children}</React.Fragment>
   }
 }

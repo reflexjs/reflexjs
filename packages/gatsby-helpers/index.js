@@ -16,7 +16,6 @@ exports.humanize = (value) =>
 // If not, the directory is created.
 exports.ensureContentPath = (contentPath, reporter) => {
   if (fs.existsSync(contentPath)) {
-    reporter.info(`${contentPath} directory validated.`)
     return
   }
 

@@ -1,17 +1,16 @@
 const withDefaults = require("./theme-options")
 
 module.exports = (themeOptions) => {
-  const { contentPath } = withDefaults(themeOptions)
+  const { imagesPath } = withDefaults(themeOptions)
 
   return {
     plugins: [
-      "@reflexjs/gatsby-theme-profile",
-      "@reflexjs/gatsby-theme-block",
+      `gatsby-image`,
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          name: `Post`,
-          path: contentPath,
+          name: `Image`,
+          path: imagesPath,
         },
       },
     ],

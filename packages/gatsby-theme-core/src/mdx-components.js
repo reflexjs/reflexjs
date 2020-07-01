@@ -1,7 +1,6 @@
 import * as ReflexComponents from "@reflexjs/components"
 import { CodeBlock } from "./code-block"
 import { Link } from "./link"
-import { Image } from "./image"
 import { Pager } from "./pager"
 import { Icon } from "./icon"
 import { ButtonLink } from "./button-link"
@@ -22,7 +21,6 @@ export const MDXComponents = {
   blockquote: ReflexComponents.Blockquote,
   Link,
   ButtonLink,
-  Image,
   Pager,
   Icon,
 }

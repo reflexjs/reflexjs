@@ -8,8 +8,5 @@ export const fragment = graphql`
     excerpt
     body
     image
-    metatags {
-      ...MetatagsFragment
-    }
   }
 `

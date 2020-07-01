@@ -4,7 +4,6 @@ const {
   generateNodeFromMdx,
   mdxResolverPassthrough,
 } = require("@reflexjs/gatsby-helpers")
-const { generateMetatags } = require("@reflexjs/gatsby-plugin-metatags")
 
 exports.onPreBootstrap = ({ reporter }, themeOptions) => {
   const { contentPath } = withDefaults(themeOptions)
@@ -22,7 +21,6 @@ exports.createSchemaCustomization = async ({ actions }) => {
       body: String
       picture: String
       links: [ProfileLink]
-      metatags: Metatags
     }
 
     type ProfileLink implements Node @dontInfer {
@@ -50,7 +48,6 @@ exports.onCreateNode = async (
 
     actions.createNode({
       ...profileNode,
-      metatags: generateMetatags(profileNode, { type: "profile" }),
     })
   }
 }

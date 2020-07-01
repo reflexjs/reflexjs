@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Article, H2, P, Div, Grid } from "@reflexjs/components"
-import { Link, Image } from "@reflexjs/gatsby-theme-core"
+import { Link } from "@reflexjs/gatsby-theme-core"
+import { Image } from "@reflexjs/gatsby-plugin-image"
 import { PostMeta } from "./post-meta"
 
 export const Posts = ({ posts }) => {

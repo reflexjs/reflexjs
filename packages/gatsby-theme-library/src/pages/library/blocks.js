@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Layout, Seo, useColorMode, Icon } from "@reflexjs/gatsby-theme-core"
+import { Layout, useColorMode, Icon } from "@reflexjs/gatsby-theme-core"
 import { Container, Div, H2, Aside, Grid, Button } from "@reflexjs/components"
 import { Block } from "@reflexjs/gatsby-theme-block"
 import { Thumbnail } from "../../thumbnail"
@@ -13,7 +13,6 @@ export default () => {
 
   return (
     <Layout footer={false}>
-      <Seo title="Blocks library" />
       <Container pb="8">
         <Button
           d="inline-flex|none"

@@ -1,10 +1,11 @@
-import { generateMetatags } from ".."
+import { generateMetatags } from "../generate-metatags"
 
 test("set default metatags from node", () => {
   const node = {
     title: "Itaque quaerat hic fugit repellendus.",
     excerpt: "Dolore voluptatum vitae dolor.",
     image: "placeholder.jpg",
+    slug: "/foo/bar-baz",
   }
 
   expect(generateMetatags(node)).toMatchObject({
@@ -18,10 +19,10 @@ test("set default metatags from node", () => {
       type: "article",
     },
     twitter: {
+      card: "summary_large_image",
       title: "Itaque quaerat hic fugit repellendus.",
       description: "Dolore voluptatum vitae dolor.",
       image: "placeholder.jpg",
-      card: "summary_large_image",
     },
   })
 })
@@ -62,6 +63,7 @@ test("allows default metatags to be overridden", () => {
     },
   })
 })
+
 test("use default from aliases if fields are not provided", () => {
   const node = {
     name: "atque occaecati",
@@ -96,7 +98,10 @@ test("allows default to be overridden", () => {
   }
 
   expect(
-    generateMetatags(node, { type: "website" }, { card: "summary" })
+    generateMetatags(node, {
+      og: { type: "website" },
+      twitter: { card: "summary" },
+    })
   ).toMatchObject({
     title: "Itaque quaerat hic fugit repellendus.",
     description: "Dolore voluptatum vitae dolor.",

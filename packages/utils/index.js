@@ -32,3 +32,6 @@ export const isAbsoluteUrl = (url) => {
 }
 
 export const isRelativeUrl = (url) => !isAbsoluteUrl(url)
+
+export const absoluteUrl = (path, url) =>
+  path ? `${url}/${path.replace(/^\/+/, "")}` : url

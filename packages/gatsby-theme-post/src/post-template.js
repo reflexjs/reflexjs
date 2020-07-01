@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { Layout } from "@reflexjs/gatsby-theme-core"
 import { Post } from "./post"
 
 export const query = graphql`
@@ -17,10 +18,14 @@ export const query = graphql`
 `
 
 export default ({ data, ...props }) => (
-  <Post
-    {...data.post}
-    previousPost={data.prev}
-    nextPost={data.next}
-    {...props}
-  />
+  <Layout pathname={data.post.slug}>
+    {data.post ? (
+      <Post
+        {...data.post}
+        previousPost={data.prev}
+        nextPost={data.next}
+        {...props}
+      />
+    ) : null}
+  </Layout>
 )

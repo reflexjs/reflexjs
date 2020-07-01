@@ -1,5 +1,5 @@
 import * as React from "react"
-import { MDXRenderer, Layout, Seo, Icon } from "@reflexjs/gatsby-theme-core"
+import { MDXRenderer, Layout, Icon } from "@reflexjs/gatsby-theme-core"
 import {
   Container,
   H1,
@@ -23,7 +23,6 @@ export const Tutorial = ({
   nextTutorial,
 }) => (
   <Layout>
-    <Seo title={title} description={excerpt} pathname={slug} />
     <Section pt="8|12|16">
       <Container>
         <Flexbox

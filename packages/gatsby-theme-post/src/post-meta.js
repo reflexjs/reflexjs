@@ -1,6 +1,6 @@
 import * as React from "react"
 import { Flexbox, Span } from "@reflexjs/components"
-import { Image } from "@reflexjs/gatsby-theme-core"
+import { Image } from "@reflexjs/gatsby-plugin-image"
 
 export const PostMeta = ({ author, datetime, date, timeToRead, ...props }) => (
   <Flexbox {...props}>
