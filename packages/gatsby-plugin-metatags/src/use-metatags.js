@@ -1,7 +1,7 @@
 import { useStaticQuery, graphql } from "gatsby"
-import { filterNodes } from "@reflexjs/utils"
+import minimatch from "minimatch"
 
-export const useMetatags = (filters) => {
+export const useMetatags = (pathname) => {
   const data = useStaticQuery(graphql`
     query {
       allMetatags {
@@ -12,5 +12,10 @@ export const useMetatags = (filters) => {
     }
   `)
 
-  return filterNodes(data, filters, "pathname")
+  const { nodes } = data.allMetatags
+  const matches = nodes.filter(({ pathname: glob }) => {
+    return minimatch(pathname, glob)
+  })
+
+  return matches.length && matches.slice(-1)
 }

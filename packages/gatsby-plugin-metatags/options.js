@@ -1,4 +1,6 @@
 module.exports = (options) => ({
-  types: {},
+  global: {},
+  types: [],
+  paths: [],
   ...options,
 })

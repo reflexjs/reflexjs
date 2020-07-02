@@ -39,11 +39,34 @@ exports.createSchemaCustomization = async ({ actions }) => {
   `)
 }
 
+exports.sourceNodes = (
+  { actions, createNodeId, createContentDigest },
+  options
+) => {
+  const { global, paths } = withDefaults(options)
+  const nodeType = "Metatags"
+
+  paths.map((path) => {
+    const metatags = generateMetatags(
+      { ...path.defaults, pathname: path.pathname },
+      global
+    )
+    actions.createNode({
+      id: createNodeId(`${nodeType}-${path.pathname}`),
+      ...metatags,
+      internal: {
+        type: nodeType,
+        contentDigest: createContentDigest(path),
+      },
+    })
+  })
+}
+
 exports.onCreateNode = async (
   { node, actions, getNode, createNodeId, createContentDigest },
   options
 ) => {
-  const { types } = withDefaults(options)
+  const { global, types } = withDefaults(options)
   const nodeTypes = types.map((type) =>
     typeof type === "string" ? type : type.type
   )
@@ -52,7 +75,7 @@ exports.onCreateNode = async (
     return
   }
 
-  let defaults = {}
+  let defaults = { ...global }
 
   const [typeOptions] = types.filter(
     (type) => typeof type === "object" && type.type === node.internal.type
@@ -100,9 +123,3 @@ const applyDefaults = (node, defaults) => {
 
   return defaults
 }
-
-// exports.onCreatePage = ({ page, actions }, themeOptions) => {
-//   const { metatags } = withDefaults(themeOptions)
-//   console.log(page)
-//   // console.log(page.path)
-// }
