@@ -1,24 +1,13 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet"
 import { absoluteUrl } from "@reflexjs/utils"
 import { useMetatags } from "./use-metatags"
 import { MetatagImage } from "./metatag-image"
+import { useSiteMetadata } from "./use-sitemetadata"
 
 export const Metatags = ({ pathname = "/" }) => {
   const [metatags] = useMetatags(pathname)
-
-  const data = useStaticQuery(graphql`
-    query {
-      site {
-        siteMetadata {
-          ...SiteMetadataFragment
-        }
-      }
-    }
-  `)
-
-  const site = data.site.siteMetadata
+  const site = useSiteMetadata()
 
   const helmetProps = {
     defer: false,
