@@ -5,12 +5,12 @@ import { Block } from "@reflexjs/gatsby-theme-block"
 import { Thumbnail } from "../../thumbnail"
 import { useLibraryPage } from "../../use-library-page"
 
-export default () => {
+export default ({ location }) => {
   const [colorMode] = useColorMode()
   const pages = useLibraryPage()
 
   return (
-    <Layout footer={false}>
+    <Layout pathname={location && location.pathname}>
       <Section pt="8|12|16">
         <Container>
           <Block src="library/header-pages" />

@@ -90,7 +90,21 @@ module.exports = {
     {
       resolve: `@reflexjs/gatsby-plugin-metatags`,
       options: {
+        global: {
+          title: `Reflex`,
+          description: `A collection of themes and plugins to help you build Gatsby sites faster.`,
+          image: `reflex-blocks.jpg`,
+        },
         types: [`Page`, `Post`, `Doc`, `Tutorial`, `Styleguide`],
+        paths: [
+          {
+            pathname: `/library{,/**}`,
+            defaults: {
+              title: `Blocks library`,
+              description: `Accessible components and blocks to build Gatsby sites.`,
+            },
+          },
+        ],
       },
     },
   ],

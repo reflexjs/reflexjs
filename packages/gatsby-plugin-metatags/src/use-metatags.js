@@ -12,6 +12,8 @@ export const useMetatags = (pathname) => {
     }
   `)
 
+  if (!pathname) return null
+
   const { nodes } = data.allMetatags
   const matches = nodes.filter(({ pathname: glob }) => {
     return minimatch(pathname, glob)

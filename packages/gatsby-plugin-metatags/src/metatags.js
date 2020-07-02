@@ -5,7 +5,7 @@ import { absoluteUrl } from "@reflexjs/utils"
 import { useMetatags } from "./use-metatags"
 import { MetatagImage } from "./metatag-image"
 
-export const Metatags = ({ pathname }) => {
+export const Metatags = ({ pathname = "/" }) => {
   const [metatags] = useMetatags(pathname)
 
   const data = useStaticQuery(graphql`

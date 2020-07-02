@@ -6,13 +6,13 @@ import { Thumbnail } from "../../thumbnail"
 import { useLibraryBlockCategories } from "../../use-library-block-categories"
 import { BlockCategoriesNav } from "../../block-categories-nav"
 
-export default () => {
+export default ({ location }) => {
   const [colorMode] = useColorMode()
   const [showMenu, setShowMenu] = React.useState(false)
   const categories = useLibraryBlockCategories()
 
   return (
-    <Layout footer={false}>
+    <Layout pathname={location && location.pathname}>
       <Container pb="8">
         <Button
           d="inline-flex|none"
