@@ -1,0 +1,21 @@
+{
+  "name": "e2e-tests-gatsby-plugin-image",
+  "private": true,
+  "version": "0.1.8",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gatsby clean && gatsby develop",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test dev http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test dev http://localhost:8000 cy:run"
+  },
+  "dependencies": {
+    "@reflexjs/gatsby-plugin-image": "^0.0.1"
+  },
+  "devDependencies": {
+    "gatsby": "^2.23.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

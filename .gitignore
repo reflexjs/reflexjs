@@ -81,6 +81,9 @@ yarn-error.log
 # NPM lock files
 package-lock.json
 
+# Cypress
+cypress/screenshots
+
 # Other
 *__clone*
 dist
