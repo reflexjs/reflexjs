@@ -56,8 +56,12 @@ export const Post = ({
           caption={caption}
           mx="auto"
           my="4|8|10"
-          rounded="md"
           overflow="hidden"
+          sx={{
+            img: {
+              borderRadius: "md",
+            },
+          }}
         />
       </Container>
     )}
