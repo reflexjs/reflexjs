@@ -23,6 +23,7 @@
   "dependencies": {
     "@reflexjs/components": "^0.1.7",
     "@reflexjs/gatsby-helpers": "^0.2.0",
+    "@reflexjs/gatsby-plugin-image": "^0.0.1",
     "@reflexjs/gatsby-theme-block": "^0.1.9",
     "@reflexjs/gatsby-theme-core": "^0.2.1",
     "@reflexjs/icons-feather": "^0.1.3",

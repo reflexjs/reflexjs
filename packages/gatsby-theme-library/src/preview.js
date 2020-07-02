@@ -30,7 +30,7 @@ export const Preview = ({
   withWrapper = true,
   children,
 }) => {
-  const { body, code, ...props } = component
+  const { body, code, slug, ...props } = component
   const [preview, togglePreview] = React.useState(true)
   const [preset, setPreset] = React.useState(0)
   const [colorMode] = useColorMode()
@@ -62,7 +62,7 @@ export const Preview = ({
     : null
 
   return (
-    <Layout>
+    <Layout pathname={slug}>
       <Section py="2|6">
         <Container>
           <Flexbox

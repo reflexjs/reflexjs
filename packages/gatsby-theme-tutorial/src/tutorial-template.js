@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql } from "gatsby"
+import { Layout } from "@reflexjs/gatsby-theme-core"
 import { Tutorial } from "./tutorial"
 
 export const query = graphql`
@@ -16,13 +17,13 @@ export const query = graphql`
   }
 `
 
-export default ({ data, ...props }) => {
-  return (
+export default ({ data, ...props }) => (
+  <Layout pathname={data.tutorial.slug}>
     <Tutorial
       {...data.tutorial}
       previousTutorial={data.prev}
       nextTutorial={data.next}
       {...props}
     />
-  )
-}
+  </Layout>
+)

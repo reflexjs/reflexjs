@@ -9,7 +9,6 @@ exports.onPreBootstrap = ({ reporter }, themeOptions) => {
   const { contentPath } = withDefaults(themeOptions)
 
   if (fs.existsSync(contentPath)) {
-    reporter.info(`${contentPath} directory validated.`)
     return
   }
 

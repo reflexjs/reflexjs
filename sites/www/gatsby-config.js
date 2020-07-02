@@ -87,5 +87,11 @@ module.exports = {
         icon: `content/images/favicon.png`,
       },
     },
+    {
+      resolve: `@reflexjs/gatsby-plugin-metatags`,
+      options: {
+        types: [`Page`, `Post`, `Doc`, `Tutorial`, `Styleguide`],
+      },
+    },
   ],
 }

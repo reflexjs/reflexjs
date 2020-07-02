@@ -1,7 +1,9 @@
 const merge = require("deepmerge")
 
 exports.generateMetatags = (node, defaults = {}) => {
-  const { id, internal, ..._node } = node
+  const _node = { ...node }
+
+  delete _node.id
 
   // TODO: Make this configurable.
   const aliases = {

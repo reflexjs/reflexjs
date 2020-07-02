@@ -1,5 +1,6 @@
 import * as React from "react"
-import { Image, Link } from "@reflexjs/gatsby-theme-core"
+import { Link } from "@reflexjs/gatsby-theme-core"
+import { Image } from "@reflexjs/gatsby-plugin-image"
 
 export const Thumbnail = ({ screenshots, slug, mode, ...props }) => (
   <Link
