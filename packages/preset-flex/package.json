@@ -10,7 +10,7 @@
     "access": "public"
   },
   "scripts": {
-    "prepare": "microbundle --no-compress --jsx React.createElement"
+    "prepare": "microbundle --no-compress"
   },
   "keywords": [],
   "bugs": {
