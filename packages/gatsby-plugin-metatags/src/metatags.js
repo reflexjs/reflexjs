@@ -44,24 +44,21 @@ export const Metatags = ({ pathname }) => {
           content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover"
         />
         {site.title && <meta property="og:site_name" content={site.title} />}
+
         {og.title && <meta property="og:title" content={og.title} />}
-        {og.pathname && (
-          <meta
-            property="og:url"
-            content={absoluteUrl(og.pathname, site.siteUrl)}
-          />
-        )}
+        <meta property="og:url" content={absoluteUrl(pathname, site.siteUrl)} />
         {og.type && <meta property="og:type" content={og.type} />}
         {og.description && (
           <meta property="og:description" content={og.description} />
         )}
+
         {twitter.title && (
           <meta property="twitter:title" content={twitter.title} />
         )}
-        {twitter.pathname && (
+        {pathname && (
           <meta
             property="twitter:url"
-            content={absoluteUrl(twitter.pathname, site.siteUrl)}
+            content={absoluteUrl(pathname, site.siteUrl)}
           />
         )}
         {twitter.description && (

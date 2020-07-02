@@ -90,7 +90,7 @@ test("use default from aliases if fields are not provided", () => {
   })
 })
 
-test("allows default to be overridden", () => {
+test("allows defaults to be set", () => {
   const node = {
     title: "Itaque quaerat hic fugit repellendus.",
     excerpt: "Dolore voluptatum vitae dolor.",
@@ -116,6 +116,51 @@ test("allows default to be overridden", () => {
       title: "Itaque quaerat hic fugit repellendus.",
       description: "Dolore voluptatum vitae dolor.",
       image: "placeholder.jpg",
+      card: "summary",
+    },
+  })
+})
+
+test("allows defaults to be overridden", () => {
+  const node = {
+    title: "Itaque quaerat hic fugit repellendus.",
+    excerpt: "Dolore voluptatum vitae dolor.",
+    image: "placeholder.jpg",
+  }
+
+  expect(
+    generateMetatags(
+      node,
+      {
+        title: "Default title",
+        og: { type: "website" },
+        twitter: { card: "summary" },
+      },
+      {
+        title: "Overriden title",
+        pathname: "/foo",
+        og: {
+          type: "book",
+        },
+      }
+    )
+  ).toMatchObject({
+    title: "Overriden title",
+    description: "Dolore voluptatum vitae dolor.",
+    image: "placeholder.jpg",
+    pathname: "/foo",
+    og: {
+      title: "Overriden title",
+      description: "Dolore voluptatum vitae dolor.",
+      pathname: "/foo",
+      image: "placeholder.jpg",
+      type: "book",
+    },
+    twitter: {
+      title: "Overriden title",
+      description: "Dolore voluptatum vitae dolor.",
+      image: "placeholder.jpg",
+      pathname: "/foo",
       card: "summary",
     },
   })

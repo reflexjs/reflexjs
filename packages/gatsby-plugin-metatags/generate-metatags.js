@@ -1,6 +1,6 @@
 const merge = require("deepmerge")
 
-exports.generateMetatags = (node, defaults = {}) => {
+exports.generateMetatags = (node, defaults = {}, overrides = {}) => {
   const _node = { ...node }
 
   delete _node.id
@@ -20,6 +20,11 @@ exports.generateMetatags = (node, defaults = {}) => {
   const { metatags, ...restNode } = _node
   const { og, twitter, ...restMetatags } = metatags || {}
   const { og: defaultsOg, twitter: defaultsTwitter, ...restDefaults } = defaults
+  const {
+    og: overriddesOg,
+    twitter: overriddesTwitter,
+    ...restOverrides
+  } = overrides
 
   defaults = merge.all([restDefaults, restNode, restMetatags])
 
@@ -34,15 +39,20 @@ exports.generateMetatags = (node, defaults = {}) => {
     },
     {
       ...defaults,
+      ...restOverrides,
       og: {
         ...defaultsOg,
         ...defaults,
         ...og,
+        ...overrides,
+        ...overriddesOg,
       },
       twitter: {
         ...defaultsTwitter,
         ...defaults,
         ...twitter,
+        ...overrides,
+        ...overriddesTwitter,
       },
     }
   )
