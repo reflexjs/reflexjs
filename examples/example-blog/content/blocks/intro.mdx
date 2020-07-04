@@ -1,0 +1,27 @@
+import { useProfile } from "@reflexjs/gatsby-theme-profile"
+
+export const IntroBlock = () => {
+  const [profile] = useProfile()
+  return (
+    <Section py="20">
+      <Container>
+        <Grid col="1fr 350px" alignItems="center" gap="20">
+          <Div>
+            <H1 my="0" fontWeight="black">
+              {profile.name}
+            </H1>
+            <P fontSize="4xl" mt="2">
+              {profile.excerpt}
+            </P>
+          </Div>
+          <Image
+            src={profile.picture}
+            size="350px"
+            rounded="full"
+            overflow="hidden"
+          />
+        </Grid>
+      </Container>
+    </Section>
+  )
+}

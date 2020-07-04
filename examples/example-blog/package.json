@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "example-blog",
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
@@ -12,6 +12,7 @@
     "preview": "gatsby build && gatsby serve"
   },
   "dependencies": {
+    "@reflexjs/gatsby-plugin-metatags": "^0.0.1",
     "@reflexjs/gatsby-theme-base": "^0.1.9",
     "@reflexjs/gatsby-theme-post": "^0.2.0",
     "gatsby": "^2.22.11",
