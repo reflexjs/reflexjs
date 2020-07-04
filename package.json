@@ -19,6 +19,7 @@
     "sync": "npm run sync:starters && npm run sync:sites",
     "release": "lerna publish && npm run sync",
     "sync:starters": "./scripts/sync.sh \"starters/*\"",
+    "sync:examples": "./scripts/sync.sh \"examples/*\"",
     "sync:sites": "./scripts/sync.sh \"sites/*\""
   },
   "husky": {
