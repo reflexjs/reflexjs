@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-base@0.1.9...@reflexjs/gatsby-theme-base@0.2.0) (2020-07-04)
+
+
+### Bug Fixes
+
+* update packaging ([60da840](https://github.com/reflexjs/reflex/commit/60da84066db689ffd9732bcb1a91438458d131b8))
+* **metatags:** update path matching ([0f27e30](https://github.com/reflexjs/reflex/commit/0f27e30bf605c51c255183a39155340fa044269e))
+
+
+### Features
+
+* **metatags:** add gatsby-plugin-metatags and gatsby-plugin-image ([7dd35ca](https://github.com/reflexjs/reflex/commit/7dd35ca5a88f686f11a0f3772d4eaaa640842ba9))
+
+
+
+
+
 ## [0.1.9](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-base@0.1.8...@reflexjs/gatsby-theme-base@0.1.9) (2020-06-29)
 
 **Note:** Version bump only for package @reflexjs/gatsby-theme-base

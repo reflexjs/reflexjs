@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-library@0.2.1...@reflexjs/gatsby-theme-library@0.3.0) (2020-07-04)
+
+
+### Bug Fixes
+
+* **www:** add gatsby-plugin-metatags ([e04b375](https://github.com/reflexjs/reflex/commit/e04b3752dcae505d6c25628a54d503bfc7c4ae18))
+* **www:** update metatags for library pages ([6401cfa](https://github.com/reflexjs/reflex/commit/6401cfa24c6476b709b09dc8f72e25ca93d8e922))
+
+
+### Features
+
+* **metatags:** add gatsby-plugin-metatags and gatsby-plugin-image ([7dd35ca](https://github.com/reflexjs/reflex/commit/7dd35ca5a88f686f11a0f3772d4eaaa640842ba9))
+
+
+
+
+
 ## [0.2.1](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-library@0.2.0...@reflexjs/gatsby-theme-library@0.2.1) (2020-06-29)
 
 

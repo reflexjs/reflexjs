@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-post@0.2.0...@reflexjs/gatsby-theme-post@0.3.0) (2020-07-04)
+
+
+### Bug Fixes
+
+* **post:** update border radius for post image ([26cf00c](https://github.com/reflexjs/reflex/commit/26cf00cb20b1ad6ff88ed050641733c429bf7feb))
+
+
+### Features
+
+* **metatags:** add gatsby-plugin-metatags and gatsby-plugin-image ([7dd35ca](https://github.com/reflexjs/reflex/commit/7dd35ca5a88f686f11a0f3772d4eaaa640842ba9))
+* add metatags to post ([eecbad0](https://github.com/reflexjs/reflex/commit/eecbad029a91a29629a863189752006dc1ed2bce))
+
+
+
+
+
 # [0.2.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-post@0.1.8...@reflexjs/gatsby-theme-post@0.2.0) (2020-06-29)
 
 

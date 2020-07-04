@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/reflexjs/reflex/compare/@reflexjs/preset-base@0.2.0...@reflexjs/preset-base@0.2.1) (2020-07-04)
+
+
+### Bug Fixes
+
+* update packaging ([60da840](https://github.com/reflexjs/reflex/commit/60da84066db689ffd9732bcb1a91438458d131b8))
+
+
+
+
+
 # [0.2.0](https://github.com/reflexjs/reflex/compare/@reflexjs/preset-base@0.1.4...@reflexjs/preset-base@0.2.0) (2020-06-26)
 
 

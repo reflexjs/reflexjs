@@ -1,6 +1,6 @@
 {
   "name": "@reflexjs/preset-merry",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "sideEffects": false,
   "source": "index.js",
   "main": "dist/index.js",
@@ -23,7 +23,7 @@
     "directory": "packages/preset-merry"
   },
   "dependencies": {
-    "@reflexjs/preset-base": "^0.2.0",
+    "@reflexjs/preset-base": "^0.2.1",
     "typeface-lora": "^0.0.72",
     "typeface-merriweather": "^0.0.72"
   },
