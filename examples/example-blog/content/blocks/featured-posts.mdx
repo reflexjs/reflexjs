@@ -1,9 +1,9 @@
-import { usePost } from "@reflexjs/gatsby-theme-post"
+import { usePost, PostMeta } from "@reflexjs/gatsby-theme-post"
 
 export const FeaturedPosts = () => {
   const posts = usePost({ featured: true })
   return posts.length ? (
-    <Grid col="1|1|2|3" gap="6|8|10">
+    <Grid col="1|1|2|3" gap="6|8">
       {posts &&
         posts.slice(0, 3).map((post, index) => (
           <Div key={index} mb="8">
@@ -39,12 +39,5 @@ export const PostTeaser = ({
       </Link>
     )}
     {excerpt && <P mt="1">{excerpt}</P>}
-    <PostMeta
-      author={author}
-      timeToRead={timeToRead}
-      date={date}
-      datetime={datetime}
-      fontSize="md"
-    />
   </Article>
 )
