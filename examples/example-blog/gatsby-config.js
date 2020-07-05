@@ -12,7 +12,7 @@ module.exports = {
     {
       resolve: `@reflexjs/gatsby-plugin-metatags`,
       options: {
-        debug: true,
+        debug: process.env.METATAGS_DEBUG,
         types: [
           `Page`,
           `Post`,
