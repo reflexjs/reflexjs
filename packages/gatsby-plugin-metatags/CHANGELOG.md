@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-metatags@0.1.0...@reflexjs/gatsby-plugin-metatags@0.1.1) (2020-07-05)
+
+
+### Bug Fixes
+
+* **metatags:** ensure options are set ([68eb928](https://github.com/reflexjs/reflex/commit/68eb9289fe965b0f047bc8e64dd1599628cd66dc))
+
+
+
+
+
 # 0.1.0 (2020-07-04)
 
 

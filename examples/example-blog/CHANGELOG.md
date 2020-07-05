@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/reflexjs/reflex/compare/example-blog@0.2.0...example-blog@0.2.1) (2020-07-05)
+
+
+### Bug Fixes
+
+* **example-blog:** make metatags debug configurable ([117967e](https://github.com/reflexjs/reflex/commit/117967ee0af16dc2ec6082da48dbcdb6dafb10a1))
+
+
+
+
+
 # 0.2.0 (2020-07-04)
 
 
