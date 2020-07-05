@@ -53,7 +53,9 @@ export const Metatags = ({ pathname = "/" }) => {
         {twitter.description && (
           <meta property="twitter:description" content={twitter.description} />
         )}
-        {twitter.card && <meta name="twitter:card" content={twitter.card} />}
+        {twitter.card && (
+          <meta property="twitter:card" content={twitter.card} />
+        )}
       </Helmet>
 
       {/* Workaround for JSX inside Helmet. See https://github.com/nfl/react-helmet/issues/342 */}

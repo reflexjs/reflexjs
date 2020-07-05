@@ -1,0 +1,22 @@
+{
+  "name": "e2e-tests-gatsby-plugin-metatags",
+  "private": true,
+  "version": "0.0.1",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gatsby clean && gatsby develop",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test dev http://localhost:8000 cy:open",
+    "test:e2e:ci": "start-server-and-test dev http://localhost:8000 cy:run"
+  },
+  "dependencies": {
+    "@reflexjs/gatsby-plugin-metatags": "^0.1.1",
+    "@reflexjs/gatsby-theme-core": "^0.3.0"
+  },
+  "devDependencies": {
+    "gatsby": "^2.23.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
