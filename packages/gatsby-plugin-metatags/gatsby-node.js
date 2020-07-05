@@ -66,7 +66,11 @@ exports.onCreateNode = async (
   { node, actions, getNode, createNodeId, createContentDigest },
   options
 ) => {
-  const { global, types } = withDefaults(options)
+  const { global, types, paths } = withDefaults(options)
+
+  // Do nothing if options is not set.
+  if (!global || !types || !paths) return
+
   const nodeTypes = types.map((type) =>
     typeof type === "string" ? type : type.type
   )

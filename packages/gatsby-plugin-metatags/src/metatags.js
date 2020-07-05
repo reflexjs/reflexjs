@@ -6,7 +6,7 @@ import { MetatagImage } from "./metatag-image"
 import { useSiteMetadata } from "./use-sitemetadata"
 
 export const Metatags = ({ pathname = "/" }) => {
-  const [metatags] = useMetatags(pathname)
+  const metatags = useMetatags(pathname)
   const site = useSiteMetadata()
 
   const helmetProps = {
@@ -20,7 +20,7 @@ export const Metatags = ({ pathname = "/" }) => {
 
   if (!metatags) return <Helmet {...helmetProps} />
 
-  const { title, description, og, twitter } = metatags
+  const [{ title, description, og, twitter }] = metatags
 
   return (
     <React.Fragment>
