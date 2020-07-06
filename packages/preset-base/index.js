@@ -50,7 +50,7 @@ export default {
     prism: {
       text: "#d6deeb",
       background: "#212130",
-      comment: "#637777",
+      comment: "#93b4b4",
       string: "#addb67",
       var: "#d6deeb",
       number: "#f78c6c",
@@ -298,7 +298,7 @@ export default {
     },
     inlineCode: {
       fontFamily: "monospace",
-      color: "accent",
+      color: "primary",
     },
   },
   heading: {

@@ -10,7 +10,9 @@ export const FooterBlock = () => {
           alignItems={["flex-start", "center"]}
           justifyContent="space-between"
         >
-          <H4 m="0">{title}</H4>
+          <H2 m="0" fontSize="xl|2xl|3xl">
+            {title}
+          </H2>
           <NavMenu
             name="footer-example"
             dropdown={false}
@@ -21,9 +23,11 @@ export const FooterBlock = () => {
           <Grid col="2" gap="4" mt={[4, 0]}>
             <A href="#" color="text">
               <Icon name="twitter" size={5} />
+              <VisuallyHidden>Follow on Twitter</VisuallyHidden>
             </A>
             <A href="#" color="text">
               <Icon name="instagram" size={5} />
+              <VisuallyHidden>Follow on Instagram</VisuallyHidden>
             </A>
           </Grid>
         </Flexbox>

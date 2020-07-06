@@ -21,14 +21,15 @@
         hoverBoxShadow="xl"
       >
         <Icon name="play" size="8" ml="1" />
+        <VisuallyHidden>Play video</VisuallyHidden>
       </Button>
     </Flexbox>
   </Container>
 </Section>
 
-<Block src="examples/cards-04" />
+<Block src="examples/cards-04" bg="muted" />
 
-<Section py="8|12|16|24" bg="muted">
+<Section py="8|12|16|24">
   <Container>
     <Div textAlign="center">
       <H2 fontSize="4xl|5xl" m="0">
@@ -44,7 +45,7 @@
   </Container>
 </Section>
 
-<Section py="8|12|16|24">
+<Section py="8|12|16|24" bg="muted">
   <Container>
     <Grid col="1|2" gap="8|12|16" alignItems="center">
       <Div>
@@ -63,15 +64,55 @@
         </Grid>
       </Div>
       <Form d="grid" col="1|repeat(2, auto)" gap="4" mt="4" w="full|auto">
-        <Input type="text" placeholder="Name" />
-        <Input type="email" placeholder="Email" />
-        <Input type="tel" placeholder="Phone" />
-        <Select>
-          <Option value="">Select</Option>
-          <Option value="one">Option One</Option>
-          <Option value="two">Option Two</Option>
-        </Select>
-        <Textarea placeholder="Message" rows="5" colStart="span 2" />
+        <Div>
+          <VisuallyHidden>
+            <Label htmlFor="form-01-name">Name</Label>
+          </VisuallyHidden>
+          <Input type="text" id="form-01-name" name="name" placeholder="Name" />
+        </Div>
+        <Div>
+          <VisuallyHidden>
+            <Label htmlFor="form-01-email">Email</Label>
+          </VisuallyHidden>
+          <Input
+            type="email"
+            id="form-01-email"
+            name="email"
+            placeholder="Email"
+          />
+        </Div>
+        <Div>
+          <VisuallyHidden>
+            <Label htmlFor="form-01-phone">Phone</Label>
+          </VisuallyHidden>
+          <Input
+            type="tel"
+            id="form-01-phone"
+            name="phone"
+            placeholder="Phone"
+          />
+        </Div>
+        <Div>
+          <VisuallyHidden>
+            <Label htmlFor="form-01-subject">Subject</Label>
+          </VisuallyHidden>
+          <Select id="form-01-subject" name="subject">
+            <Option value="">Select</Option>
+            <Option value="one">Option One</Option>
+            <Option value="two">Option Two</Option>
+          </Select>
+        </Div>
+        <Div colStart="span 2">
+          <VisuallyHidden>
+            <Label htmlFor="form-01-message">Message</Label>
+          </VisuallyHidden>
+          <Textarea
+            placeholder="Message"
+            id="form-01-message"
+            name="message"
+            rows="5"
+          />
+        </Div>
         <Button type="submit" variant="primary" colStart="span 2">
           Send message
         </Button>
@@ -80,6 +121,6 @@
   </Container>
 </Section>
 
-<Block src="examples/testimonial-04" bg="muted" />
+<Block src="examples/testimonial-04" />
 
 <Block src="examples/footer-04" />

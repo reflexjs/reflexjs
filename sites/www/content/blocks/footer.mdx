@@ -3,7 +3,7 @@ import { useSiteMetadata } from "@reflexjs/gatsby-theme-core"
 export const FooterBlock = () => {
   const { title } = useSiteMetadata()
   return (
-    <Section py="10">
+    <Footer py="10">
       <Container>
         <Flexbox
           flexDirection="row"
@@ -25,6 +25,6 @@ export const FooterBlock = () => {
           />
         </Flexbox>
       </Container>
-    </Section>
+    </Footer>
   )
 }

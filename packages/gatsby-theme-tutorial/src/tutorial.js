@@ -59,8 +59,14 @@ export const Tutorial = ({
                 },
               },
 
-              "> h4:first-of-type": {
+              "> h2:first-of-type": {
                 my: 0,
+                fontSize: ["xl", "2xl", "3xl"],
+              },
+
+              h3: {
+                my: 0,
+                fontSize: ["lg", "xl", "2xl"],
               },
 
               h5: {

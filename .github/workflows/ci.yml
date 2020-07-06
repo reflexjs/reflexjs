@@ -16,3 +16,4 @@ jobs:
       - run: yarn workspace e2e-tests-gatsby-theme-core test:e2e:ci
       - run: yarn workspace e2e-tests-gatsby-theme-block test:e2e:ci
       - run: yarn workspace e2e-tests-blocks test:e2e:ci
+      - run: yarn workspace www test:e2e:ci

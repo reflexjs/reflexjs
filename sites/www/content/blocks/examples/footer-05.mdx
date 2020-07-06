@@ -1,9 +1,9 @@
 import { useSiteMetadata } from "@reflexjs/gatsby-theme-core"
 
-export const FooterBlock = ({ ...props }) => {
+export const FooterBlock = () => {
   const { title } = useSiteMetadata()
   return (
-    <Section py={[8, 10, 12]} {...props}>
+    <Section py={[8, 10, 12]}>
       <Container>
         <Flexbox
           flexDirection={["column", "row"]}
@@ -11,7 +11,9 @@ export const FooterBlock = ({ ...props }) => {
           justifyContent="space-between"
         >
           <Div maxW="300px">
-            <H4 m="0">{title}</H4>
+            <H2 m="0" fontSize="xl|2xl|3xl">
+              {title}
+            </H2>
             <P fontSize="md">
               Perspiciatis doloribus dignissimos delectus exercitationem ipsum
               voluptates.
@@ -40,9 +42,11 @@ export const FooterBlock = ({ ...props }) => {
           <Grid col="2" gap="4" mt={[4, 0]}>
             <A href="#" color="text">
               <Icon name="twitter" size={5} />
+              <VisuallyHidden>Follow on Twitter</VisuallyHidden>
             </A>
             <A href="#" color="text">
               <Icon name="instagram" size={5} />
+              <VisuallyHidden>Follow on Instagram</VisuallyHidden>
             </A>
           </Grid>
         </Flexbox>

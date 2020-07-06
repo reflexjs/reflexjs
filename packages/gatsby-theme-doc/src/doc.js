@@ -5,15 +5,7 @@ import {
   ThemeProvider,
   Icon,
 } from "@reflexjs/gatsby-theme-core"
-import {
-  H1,
-  Container,
-  Grid,
-  Div,
-  Aside,
-  Button,
-  P,
-} from "@reflexjs/components"
+import { H1, Container, Grid, Div, Button, P } from "@reflexjs/components"
 import { Block } from "@reflexjs/gatsby-theme-block"
 import { MDXComponents } from "./mdx-components"
 import { DocNav } from "./doc-nav"
@@ -55,7 +47,7 @@ export const Doc = ({ title, excerpt, body }) => {
             gap="null|6|6|20"
             alignItems="flex-start"
           >
-            <Aside
+            <Div
               position={["fixed", "sticky"]}
               top={[showMenu ? "116px" : "-100vh", 0]}
               transition="all .15s ease-in"
@@ -71,7 +63,7 @@ export const Doc = ({ title, excerpt, body }) => {
               pb="32"
             >
               <DocNav onClick={() => setShowMenu(false)} />
-            </Aside>
+            </Div>
             <Div mt={[10, 0]} pt="8">
               <Block src="docs-header" my="6" />
 

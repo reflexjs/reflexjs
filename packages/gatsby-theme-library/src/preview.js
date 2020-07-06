@@ -16,6 +16,7 @@ import {
   Flexbox,
   Section,
   Span,
+  VisuallyHidden,
 } from "@reflexjs/components"
 import presets from "./presets"
 import { PresetSelector } from "./preset-selector"
@@ -129,6 +130,7 @@ export const Preview = ({
                   onClick={() => copy(code)}
                 >
                   <Icon name="clipboard" />
+                  <VisuallyHidden>Copy code</VisuallyHidden>
                 </Button>
               </Flexbox>
             </Flexbox>

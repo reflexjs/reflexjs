@@ -9,7 +9,11 @@
     "dev": "gatsby clean && gatsby develop -p 8080 -o",
     "preview": "gatsby build && gatsby serve -p 9090 -o",
     "screenshot:blocks": "node ./scripts/generate-screenshot-blocks.js",
-    "screenshot:pages": "node ./scripts/generate-screenshot-pages.js"
+    "screenshot:pages": "node ./scripts/generate-screenshot-pages.js",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test:e2e": "start-server-and-test dev http://localhost:8080 cy:open",
+    "test:e2e:ci": "start-server-and-test dev http://localhost:8080 cy:run"
   },
   "dependencies": {
     "@reflexjs/gatsby-plugin-metatags": "^0.1.2",

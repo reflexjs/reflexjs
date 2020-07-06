@@ -1,8 +1,9 @@
 import * as React from "react"
 import { Link } from "@reflexjs/gatsby-theme-core"
 import { Image } from "@reflexjs/gatsby-plugin-image"
+import { VisuallyHidden } from "@reflexjs/components"
 
-export const Thumbnail = ({ screenshots, slug, mode, ...props }) => (
+export const Thumbnail = ({ screenshots, slug, mode, name, ...props }) => (
   <Link
     to={slug}
     d="inline-flex"
@@ -21,5 +22,6 @@ export const Thumbnail = ({ screenshots, slug, mode, ...props }) => (
     {...props}
   >
     {screenshots[mode] && <Image src={screenshots[mode]} w="100%" />}
+    <VisuallyHidden>View {name}</VisuallyHidden>
   </Link>
 )
