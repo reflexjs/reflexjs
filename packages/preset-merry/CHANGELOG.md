@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.7](https://github.com/reflexjs/reflex/compare/@reflexjs/preset-merry@0.1.6...@reflexjs/preset-merry@0.1.7) (2020-07-06)
+
+**Note:** Version bump only for package @reflexjs/preset-merry
+
+
+
+
+
 ## [0.1.6](https://github.com/reflexjs/reflex/compare/@reflexjs/preset-merry@0.1.5...@reflexjs/preset-merry@0.1.6) (2020-07-04)
 
 

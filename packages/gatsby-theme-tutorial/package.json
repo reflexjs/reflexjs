@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-tutorial",
   "description": "Adds a tutorial section to the Reflex site.",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
