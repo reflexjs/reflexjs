@@ -110,7 +110,7 @@ export const ModeToggle = ({ ...props }) => {
 
 export const SocialLinks = ({ ...props }) => (
   <Grid col="repeat(2, auto)" gap="5" {...props}>
-    <A href="https://twitter.com/arshadcn" target="_blank">
+    <A href="https://twitter.com/arshadcn" target="_blank" rel="noreferrer">
       <Icon name="twitter" size="5" />
       <VisuallyHidden>Follow on Twitter</VisuallyHidden>
     </A>
@@ -119,6 +119,7 @@ export const SocialLinks = ({ ...props }) => (
       target="_blank"
       color="text"
       hoverColor="primary"
+      rel="noreferrer"
     >
       <Icon name="instagram" size="5" />
       <VisuallyHidden>Follow on Instagram</VisuallyHidden>

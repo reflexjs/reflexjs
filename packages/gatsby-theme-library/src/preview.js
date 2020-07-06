@@ -159,7 +159,9 @@ export const Preview = ({
                 rounded="full"
                 to={libraryUrl}
                 hoverBg="red"
-              />
+              >
+                <VisuallyHidden>Go back</VisuallyHidden>
+              </Link>
               <Span bg="border" size="4" rounded="full" ml="2" />
               <Span bg="border" size="4" rounded="full" ml="2" />
             </Flexbox>
