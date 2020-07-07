@@ -203,6 +203,8 @@ export const NavMenu = ({
     ...style,
   }
 
+  console.log(props)
+
   return (
     <Ul {...style} {...props}>
       {nav.items.map((item, index) => (

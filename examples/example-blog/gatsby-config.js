@@ -10,6 +10,18 @@ module.exports = {
     `@reflexjs/gatsby-theme-base`,
     `@reflexjs/gatsby-theme-post`,
     {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Megan Morales`,
+        short_name: `Megan Morales`,
+        start_url: `/`,
+        background_color: `#191924`,
+        theme_color: `#fee440`,
+        display: `standalone`,
+        icon: `content/images/favicon.png`,
+      },
+    },
+    {
       resolve: `@reflexjs/gatsby-plugin-metatags`,
       options: {
         debug: process.env.METATAGS_DEBUG,

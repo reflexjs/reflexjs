@@ -16,7 +16,10 @@
     "@reflexjs/gatsby-theme-base": "^0.2.3",
     "@reflexjs/gatsby-theme-post": "^0.3.1",
     "gatsby": "^2.22.11",
+    "gatsby-plugin-manifest": "^2.4.17",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "typeface-berkshire-swash": "^0.0.72",
+    "typeface-open-sans": "^0.0.75"
   }
 }

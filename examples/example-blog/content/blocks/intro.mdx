@@ -3,22 +3,25 @@ import { useProfile } from "@reflexjs/gatsby-theme-profile"
 export const IntroBlock = () => {
   const [profile] = useProfile()
   return (
-    <Section py="20">
+    <Section pt="14|20" bg="primary" color="black">
       <Container>
-        <Grid col="1fr 350px" alignItems="center" gap="20">
+        <Grid
+          col="1fr|1fr|1fr 350px"
+          alignItems="flex-start"
+          textAlign="center|center|left"
+          gap="10|20"
+        >
           <Div>
-            <H1 my="0" fontWeight="black">
-              {profile.name}
-            </H1>
-            <P fontSize="4xl" mt="2">
+            <H1 my="0" color="black">
               {profile.excerpt}
-            </P>
+            </H1>
           </Div>
           <Image
             src={profile.picture}
-            size="350px"
-            rounded="full"
+            size="250px|350px|400px"
             overflow="hidden"
+            mx="auto"
+            opacity="0.65"
           />
         </Grid>
       </Container>

@@ -9,9 +9,16 @@ image: erik-brolin-8WnxVCXboKg-unsplash.jpg
 
 ## Featured Posts
 
-<Block src="featured-posts" />
+<Block src="posts-grid" filters={{ featured: true }} />
 
-<ButtonLink to="/blog" variant="primary lg">
-  More posts <Icon name="arrow-right" ml="2"/>
+<Hr />
+
+## Stories
+
+<Block src="posts-grid" filters={{ tags: [{ name: "Stories" }] }} />
+
+<ButtonLink to="/blog" variant="primary lg" mx="auto">
+  More posts <Icon name="arrow-right" ml="2" />
 </ButtonLink>
+
 </Container>

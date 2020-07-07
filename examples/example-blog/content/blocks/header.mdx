@@ -7,7 +7,7 @@ export const HeaderBlock = ({ ...props }) => {
     <Header
       position={["sticky", "relative"]}
       top="0"
-      bg="background"
+      bg="primary"
       zIndex="1000"
       py="4"
       {...props}
@@ -17,9 +17,16 @@ export const HeaderBlock = ({ ...props }) => {
           <Branding />
           <NavMenu
             name={navName}
-            gap={[0, 8, 10]}
+            gap={[0, 8]}
             ml={["auto", "auto"]}
             mr="null|10"
+            sx={{
+              color: "black",
+              "a, a:hover, a[aria-current=page]": {
+                color: "black",
+                fontWeight: "semibold",
+              },
+            }}
           />
           <ModeToggle ml="0" />
         </Flexbox>
@@ -43,7 +50,7 @@ export const HeaderBlock = ({ ...props }) => {
             outline="none"
             onClick={() => setShowMenu(true)}
           >
-            <Icon name="menu" size="7" />
+            <Icon name="menu" size="7" color="black" />
           </Button>
         </Flexbox>
         <Div
@@ -67,14 +74,25 @@ export const HeaderBlock = ({ ...props }) => {
           maxHeight="95vh"
         >
           <Flexbox justifyContent="space-between" w="full" py="2" px="0">
-            <Branding />
+            <Branding color="text" />
             <Button variant="link" onClick={() => setShowMenu(false)} mr={-3}>
               <Icon name="x" size="6" />
             </Button>
           </Flexbox>
-          <NavMenu name={navName} gap={[0, 8]} borderTopWidth="1px" />
+          <NavMenu
+            name={navName}
+            gap={[0, 8]}
+            borderTopWidth="1px"
+            sx={{
+              color: "text",
+              "a, a:hover, a[aria-current=page]": {
+                color: "text",
+                fontWeight: "semibold",
+              },
+            }}
+          />
           <Flexbox py="4" justifyContent="space-between">
-            <ModeToggle ml="auto" />
+            <ModeToggle ml="auto" color="text" />
           </Flexbox>
         </Div>
       </Flexbox>
@@ -82,10 +100,17 @@ export const HeaderBlock = ({ ...props }) => {
   )
 }
 
-export const Branding = () => {
+export const Branding = ({ ...props }) => {
   const { title } = useSiteMetadata()
   return (
-    <A href="/" fontSize="3xl" fontWeight="semibold" color="text">
+    <A
+      href="/"
+      fontSize="xl"
+      fontFamily="heading"
+      color="black"
+      hoverColor="black"
+      {...props}
+    >
       {title}
     </A>
   )
@@ -98,8 +123,9 @@ export const ModeToggle = ({ ...props }) => {
       variant="icon"
       onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
       ml={[2, 4]}
-      hoverColor="primary"
-      focusColor="text"
+      color="black"
+      hoverColor="black"
+      focusColor="black"
       {...props}
     >
       <Icon name={colorMode === "default" ? "sun" : "moon"} size="5" />
