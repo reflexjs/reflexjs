@@ -1,59 +1,46 @@
 import { usePost, PostMeta } from "@reflexjs/gatsby-theme-post"
 
 export const FeaturedPosts = ({ filters }) => {
+  // Retrieve and filter posts.
   const posts = usePost(filters)
   return posts.length ? (
     <Grid col="1|1|2|3" gap="6|8">
       {posts &&
         posts.slice(0, 3).map((post, index) => (
           <Div key={index} mb="8">
-            <PostTeaser {...post} />
+            <Article>
+              {post.image && (
+                <Link href={post.slug} d="block">
+                  <Image
+                    src={post.image}
+                    title={post.title}
+                    alt={post.title}
+                    rounded="md"
+                    overflow="hidden"
+                  />
+                </Link>
+              )}
+              {post.title && (
+                <Link href={post.slug}>
+                  <H2
+                    my="4"
+                    fontFamily="body"
+                    lineHeight="normal"
+                    fontWeight="semibold"
+                    fontSize="xl"
+                  >
+                    {post.title}
+                  </H2>
+                </Link>
+              )}
+              {post.excerpt && (
+                <P mt="1" fontSize="lg">
+                  {post.excerpt}
+                </P>
+              )}
+            </Article>
           </Div>
         ))}
     </Grid>
   ) : null
 }
-
-export const PostTeaser = ({
-  title,
-  excerpt,
-  slug,
-  image,
-  date,
-  datetime,
-  author,
-  timeToRead,
-  ...props
-}) => (
-  <Article {...props}>
-    {image && (
-      <Link href={slug} d="block">
-        <Image
-          src={image}
-          title={title}
-          alt={title}
-          rounded="md"
-          overflow="hidden"
-        />
-      </Link>
-    )}
-    {title && (
-      <Link href={slug}>
-        <H2
-          my="4"
-          fontFamily="body"
-          lineHeight="normal"
-          fontWeight="semibold"
-          fontSize="xl"
-        >
-          {title}
-        </H2>
-      </Link>
-    )}
-    {excerpt && (
-      <P mt="1" fontSize="lg">
-        {excerpt}
-      </P>
-    )}
-  </Article>
-)

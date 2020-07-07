@@ -19,7 +19,7 @@
     "gatsby-plugin-manifest": "^2.4.17",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "typeface-berkshire-swash": "^0.0.72",
-    "typeface-open-sans": "^0.0.75"
+    "typeface-open-sans": "^0.0.75",
+    "typeface-prata": "^0.0.72"
   }
 }

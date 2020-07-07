@@ -1,6 +1,6 @@
 import base from "@reflexjs/preset-base"
-import "typeface-berkshire-swash"
 import "typeface-open-sans"
+import "typeface-prata"
 
 export default {
   preset: base,
@@ -42,7 +42,7 @@ export default {
 
   fonts: {
     body: "Open Sans, sans-serif",
-    heading: "'Berkshire Swash', cursive",
+    heading: "Prata, serif",
     monospace:
       "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
   },

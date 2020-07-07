@@ -1,0 +1,30 @@
+import { useProfile } from "@reflexjs/gatsby-theme-profile"
+
+export const IntroBlock = () => {
+  // Retrieve the one profile from ./content/profiles.
+  // And display the excerpt and picture in the hero.
+  const [profile] = useProfile()
+  return (
+    <Section pt="4|4|4|10" bg="primary" color="black">
+      <Container>
+        <H1
+          my="0"
+          color="black"
+          textAlign="center"
+          mx="auto"
+          maxW="null|null|80%"
+        >
+          {profile.excerpt}
+        </H1>
+        <Image
+          src={profile.picture}
+          size="250px|300px|300px|400px"
+          overflow="hidden"
+          mx="auto"
+          mt="10"
+          opacity="0.5"
+        />
+      </Container>
+    </Section>
+  )
+}

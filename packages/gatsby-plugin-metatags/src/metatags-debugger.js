@@ -65,7 +65,9 @@ export const MetatagsPreviewFacebook = ({
       }}
       w="400px"
     >
-      <Image fluid={thumbnail.childImageSharp.fluid} w="100%" h="200px" />
+      {thumbnail && (
+        <Image fluid={thumbnail.childImageSharp.fluid} w="100%" h="200px" />
+      )}
       <Div borderTop="1px solid #dadde1" p="10px 12px" bg="#f2f3f5">
         <Span fontSize="12px" color="#606770" textTransform="uppercase">
           {host}
@@ -109,7 +111,9 @@ export const MetatagsPreviewTwitter = ({
       }}
       w="400px"
     >
-      <Image fluid={thumbnail.childImageSharp.fluid} w="100%" h="200px" />
+      {thumbnail && (
+        <Image fluid={thumbnail.childImageSharp.fluid} w="100%" h="200px" />
+      )}
       <Div borderTop="1px solid #dadde1" p="10px 12px">
         <H4
           fontSize="14px"

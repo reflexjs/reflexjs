@@ -25,6 +25,11 @@ module.exports = {
       resolve: `@reflexjs/gatsby-plugin-metatags`,
       options: {
         debug: process.env.METATAGS_DEBUG,
+        global: {
+          title: "Megan Morales",
+          description: "Wildlife Photographer and Storyteller.",
+          image: "default.jpg",
+        },
         types: [
           `Page`,
           `Post`,
@@ -36,11 +41,6 @@ module.exports = {
             },
           },
         ],
-        global: {
-          title: "Megan",
-          description: "Wildlife Photographer and Storyteller.",
-          image: "logo.png",
-        },
         paths: [
           {
             pathname: `/blog{,/**}`,
