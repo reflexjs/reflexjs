@@ -1,0 +1,182 @@
+---
+title: Metatags
+excerpt: Add Open Graph and Twitter meta tags to your site.
+---
+
+## Installation
+
+<P fontSize="xl" fontWeight="bold">
+  Step 1: Add the metatags package
+</P>
+
+Add the `@reflexjs/gatsby-plugin-metatags` package.
+
+```sh
+npm i @reflexjs/gatsby-plugin-metatags
+```
+
+<P fontSize="xl" fontWeight="bold" pt="10">
+  Step 2: Enable meta tags for the Page type
+</P>
+
+```js title=gatsby-config.js
+require(`dotenv`).config()
+
+module.exports = {
+  siteMetadata: {
+    title: "Reflex",
+    description: "Starter for Reflex.",
+    siteUrl: process.env.SITE_URL || "http://localhost:8000",
+  },
+  plugins: [
+    "@reflexjs/gatsby-theme-base"
+    "@reflexjs/gatsby-theme-post",
+    // highlight-start
+    {
+      resolve: "@reflexjs/gatsby-plugin-metatags",
+      options: {
+        types: [
+          `Page`
+        ]
+      }
+    }
+    // highlight-end
+  ],
+}
+```
+
+<P fontSize="xl" fontWeight="bold" pt="10">
+  Step 3: Add meta tags to a page
+</P>
+
+Edit your page and add `metatags`.
+
+<Callout mb="10">
+
+**Note**: If you do not provide the `metatags` values, it will automatically be generated from the page title, description and image.
+
+</Callout >
+
+```md title=content/profiles/2020-07-08-slug-of-post.mdx
+---
+title: Title of the page
+excerpt: A short description for this post.
+image: image.jpg
+// highlight-start
+metatags:
+  title: Title of the page
+  description: A description for meta description
+  og:
+    title: A custom title for open graph.
+    description: Custom description for open graph.
+    image: Image for open graph.
+    type: article
+  twitter:
+    title: A custom title for Twitter cards.
+    description: Description for Twitter cards.
+    image: Custom image for Twitter cards.
+    card: summary or summary_large_image
+// highlight-end
+---
+
+Page content goes here.
+```
+
+## Options
+
+Meta tags can be configured globally, per types and using path matching.
+
+### global
+
+Global meta tags are used on all pages where specific meta tags are not set. This is your default meta tags.
+
+```js
+{
+  resolve: `@reflexjs/gatsby-plugin-metatags`,
+  options: {
+    // highlight-start
+    global: {
+      title: "Megan Morales",
+      description: "Wildlife Photographer and Storyteller.",
+      image: "default.jpg",
+    },
+    // highlight-end
+  },
+},
+```
+
+### types
+
+You can also enable and configure meta tags based on the node type. Example: a `Page` and a `Profile` can have different tags.
+
+```js
+{
+  resolve: `@reflexjs/gatsby-plugin-metatags`,
+  options: {
+    // highlight-start
+    types: [
+      // Enable meta tags for Page type.
+      `Page`,
+      {
+        // Enable meta tags for PostTag with defaults.
+        type: `PostTag`,
+        defaults: {
+          title: (tag) => tag.name,
+          description: (tag) => `Posts tagged under ${tag.name}.`,
+        },
+      },
+    ],
+    // highlight-end
+  },
+},
+```
+
+### paths
+
+You can also set custom tags using path matching.
+
+```js
+{
+  resolve: `@reflexjs/gatsby-plugin-metatags`,
+  options: {
+    // highlight-start
+    paths: [
+      {
+        pathname: `/blog{,/**}`,
+        defaults: {
+          title: `The Wildlife Blog`,
+        },
+      },
+    ],
+    // highlight-end
+  },
+},
+```
+
+The above config will set a default/fallback title for all pages starting with the `/blog` path.
+
+## Debug mode
+
+Turn on debug mode during development to preview social cards.
+
+```js
+{
+  resolve: `@reflexjs/gatsby-plugin-metatags`,
+  options: {
+    // highlight-start
+    debug: true,
+    // highlight-end
+  },
+},
+```
+
+This will add a <Button mx="2" fontSize="14px" p="10px 12px">Metatags</Button> button that you can click to toggle the preview.
+
+<Image
+  src="metatags-debug.jpg"
+  caption="Debugging metatags"
+  borderWidth="1px"
+  rounded="md"
+/>
+
+Note: this is only available during development.

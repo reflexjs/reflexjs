@@ -13,7 +13,7 @@ these values to build your site.
 
 Here's a simple theme:
 
-```js
+```js title=src/gatsby-theme-base/theme.js
 export default {
   colors: {
     text: "#000",
@@ -70,7 +70,7 @@ to define your theme values.
 
 Let's add some `colors`, `fontSizes` and `lineHeights`.
 
-```js
+```js title=src/gatsby-theme-base/theme.js
 export default {
   colors: {
     text: "#000",
@@ -115,7 +115,7 @@ Theme UI includes a shorthand syntax for writing mobile-first responsive styles.
 
 Define your breakpoints in your theme file:
 
-```js
+```js title=src/gatsby-theme-base/theme.js
 export default {
   ...
   breakpoints: [`768px`, `1024px`, `1280px`],
@@ -152,12 +152,12 @@ Button
 
 </Callout >
 
-## Hover
+## Hover and focus
 
 Hover, focus and other CSS pseudo-classes have equivalent style props by using a prefix. Examples: `hoverBg`, `hoverColor`, and `hoverBorderColor`.
 
 ```jsx
-<Button bg="primary" hoverBg="secondary">
+<Button bg="primary" hoverBg="secondary" focusBorderWidth="1px">
   Button
 </Button>
 ```
@@ -168,8 +168,7 @@ If you find yourself repeating common styles for the same components, you can ab
 
 Every component has support for variants. See example below:
 
-```js
-// theme.js
+```js title=src/gatsby-theme-base/theme.js
 export default {
   ...
   colors: {
