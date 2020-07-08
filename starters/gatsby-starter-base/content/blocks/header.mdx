@@ -1,0 +1,108 @@
+import { useSiteMetadata, useColorMode } from "@reflexjs/gatsby-theme-core"
+
+export const HeaderBlock = ({ ...props }) => {
+  const [showMenu, setShowMenu] = React.useState(false)
+  const navName = "header"
+  return (
+    <Header
+      position={["sticky", "relative"]}
+      top="0"
+      bg="background"
+      zIndex="1000"
+      {...props}
+    >
+      <Container>
+        <Flexbox d={["none", "flex"]} justifyContent="space-between" py="1">
+          <Branding />
+          <NavMenu
+            name={navName}
+            gap={[0, 8, 14]}
+            ml={["auto", "auto"]}
+            mr="null|10"
+          />
+          <ModeToggle ml="0" />
+        </Flexbox>
+      </Container>
+      <Flexbox
+        d={["flex", "none"]}
+        flexDirection="column"
+        justifyContent="center"
+      >
+        <Flexbox
+          justifyContent="space-between"
+          w="full"
+          pl="4"
+          pr="1"
+          visibility={showMenu ? "hidden" : "visible"}
+          transition="all .15s ease-in"
+        >
+          <Branding />
+          <Button
+            variant="link"
+            outline="none"
+            onClick={() => setShowMenu(true)}
+          >
+            <Icon name="menu" size="7" />
+          </Button>
+        </Flexbox>
+        <Div
+          position="absolute"
+          zIndex="1000"
+          bg="background"
+          top="4"
+          left="4"
+          right="4"
+          px="4"
+          rounded="xl"
+          overflow="scroll"
+          boxShadow="3xl"
+          border="1px solid"
+          borderColor="border"
+          transform={`scale(${showMenu ? 1 : 0.95})`}
+          visibility={showMenu ? "visible" : "hidden"}
+          opacity={showMenu ? 1 : 0}
+          transition="all .25s ease-in"
+          transformOrigin="100% 0"
+          maxHeight="95vh"
+        >
+          <Flexbox justifyContent="space-between" w="full" py="2" px="0">
+            <Branding />
+            <Button variant="link" onClick={() => setShowMenu(false)} mr={-3}>
+              <Icon name="x" size="6" />
+            </Button>
+          </Flexbox>
+          <NavMenu name={navName} gap={[0, 8]} borderTopWidth="1px" />
+          <Flexbox py="4" justifyContent="space-between">
+            <ModeToggle ml="auto" />
+          </Flexbox>
+        </Div>
+      </Flexbox>
+    </Header>
+  )
+}
+
+export const Branding = () => {
+  const { title } = useSiteMetadata()
+  return (
+    <A href="/" fontSize="3xl" fontWeight="semibold" color="text">
+      {title}
+    </A>
+  )
+}
+
+export const ModeToggle = ({ ...props }) => {
+  const [colorMode, setColorMode] = useColorMode()
+  return (
+    <Button
+      variant="icon"
+      onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
+      ml={[2, 4]}
+      hoverColor="primary"
+      focusColor="text"
+      {...props}
+    >
+      <Icon name={colorMode === "default" ? "sun" : "moon"} size="5" />
+      <VisuallyHidden>Toggle mode</VisuallyHidden>
+    </Button>
+  )
+}
