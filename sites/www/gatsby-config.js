@@ -78,7 +78,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Reflex`,
+        name: `Reflex - Supercharge your Gatsby sites.`,
         short_name: `Reflex`,
         start_url: `/`,
         background_color: `#fff`,
@@ -91,7 +91,7 @@ module.exports = {
       resolve: `@reflexjs/gatsby-plugin-metatags`,
       options: {
         global: {
-          title: `Reflex`,
+          title: `Reflex - Supercharge your Gatsby sites.`,
           description: `A collection of themes and plugins to help you build Gatsby sites faster.`,
           image: `reflex-blocks.jpg`,
         },
