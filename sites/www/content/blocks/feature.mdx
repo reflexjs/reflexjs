@@ -1,6 +1,12 @@
-export const Feature = ({ title, text }) => (
+export const Feature = ({
+  title,
+  text,
+  icon = "check-circle",
+  iconColor = "#27ae60",
+}) => (
   <Div borderWidth="1px" p="4" rounded="xl">
-    <H3 fontSize="2xl" m="0">
+    <H3 fontSize="xl" m="0" d="flex" alignItems="center">
+      <Icon name={icon} mr="2" size="5" color={iconColor} />
       {title}
     </H3>
     <P fontSize="md" mb="0" mt="2">

@@ -11,14 +11,15 @@ export const Thumbnail = ({ screenshots, slug, mode, name, ...props }) => (
     justifyContent="center"
     w="100%"
     overflow="hidden"
-    borderWidth="2px"
+    borderWidth="1px"
     borderColor="border"
-    rounded="md"
+    rounded="xl"
     mt="5px"
     transition="all .15s ease-in"
+    boxShadow="xl"
     hoverTransform="translateY(-5px)"
-    hoverBoxShadow="xl"
-    minH="10"
+    hoverBoxShadow="2xl"
+    minH="60px"
     {...props}
   >
     {screenshots[mode] && <Image src={screenshots[mode]} w="100%" />}

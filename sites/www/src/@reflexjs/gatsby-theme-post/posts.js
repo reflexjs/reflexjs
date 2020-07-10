@@ -33,7 +33,13 @@ export const PostTeaser = ({
   <Article {...props}>
     {image && (
       <Link href={slug} d="block">
-        <Image src={image} title={title} alt={title} />
+        <Image
+          src={image}
+          title={title}
+          alt={title}
+          rounded="xl"
+          overflow="hidden"
+        />
       </Link>
     )}
     <Div mt="4">

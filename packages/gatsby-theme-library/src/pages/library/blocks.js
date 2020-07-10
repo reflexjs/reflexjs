@@ -72,10 +72,9 @@ export default ({ location }) => {
                   <H2
                     id={slug}
                     pt="8"
-                    mt="8"
-                    borderTopWidth="1px"
+                    mt="8|8|14|20"
                     scrollMarginTop="130px|40px"
-                    fontSize="2xl"
+                    fontSize="3xl"
                   >
                     {name}
                   </H2>
