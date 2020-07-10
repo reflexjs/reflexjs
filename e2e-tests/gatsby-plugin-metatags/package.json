@@ -1,7 +1,7 @@
 {
   "name": "e2e-tests-gatsby-plugin-metatags",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby clean && gatsby develop",
@@ -11,7 +11,7 @@
     "test:e2e:ci": "start-server-and-test dev http://localhost:8000 cy:run"
   },
   "dependencies": {
-    "@reflexjs/gatsby-plugin-metatags": "^0.1.2",
+    "@reflexjs/gatsby-plugin-metatags": "^0.1.3",
     "@reflexjs/gatsby-theme-core": "^0.3.0"
   },
   "devDependencies": {

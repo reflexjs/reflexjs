@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflex/compare/example-blog@0.2.3...example-blog@0.3.0) (2020-07-10)
+
+
+### Bug Fixes
+
+* **examples:** update the example blog ([403c5b1](https://github.com/reflexjs/reflex/commit/403c5b183e045de5a7f9ef021fb1ed3e4748fdb9))
+
+
+### Features
+
+* **examples:** update example blog ([184d925](https://github.com/reflexjs/reflex/commit/184d925c88c704a77b8fe229a0a29e5270b02b95))
+
+
+
+
+
 ## [0.2.3](https://github.com/reflexjs/reflex/compare/example-blog@0.2.2...example-blog@0.2.3) (2020-07-06)
 
 **Note:** Version bump only for package example-blog

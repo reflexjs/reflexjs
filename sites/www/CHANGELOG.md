@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/reflexjs/reflex/compare/www@0.3.4...www@0.4.0) (2020-07-10)
+
+
+### Bug Fixes
+
+* **www:** small theme improvement ([183d8d5](https://github.com/reflexjs/reflex/commit/183d8d5a4a81096c9371731ae209598e942f7e7d))
+* **www:** update home page ([d0a4862](https://github.com/reflexjs/reflex/commit/d0a48627021c40b268f67012ea5595c24853af9e))
+* **www:** update the site name ([5b0bc6b](https://github.com/reflexjs/reflex/commit/5b0bc6bb032030448f6ab0b0ef69b62c2b73d066))
+
+
+### Features
+
+* **www:** add theme reference page ([f5756cb](https://github.com/reflexjs/reflex/commit/f5756cb091237648ec3ed0a204d2bbab78623557))
+
+
+
+
+
 ## [0.3.4](https://github.com/reflexjs/reflex/compare/www@0.3.3...www@0.3.4) (2020-07-06)
 
 
