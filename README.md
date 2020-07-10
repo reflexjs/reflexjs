@@ -1,5 +1,5 @@
 <h1 align="center">
-Reflex
+Reflex - Supercharge your Gatsby sites 🚀
 </h1>
 
 <p align="center">
