@@ -1,0 +1,58 @@
+import theme from "@reflexjs/preset-base"
+import { CopyButton } from "@reflexjs/gatsby-theme-core"
+
+export const ColorReference = ({
+  heading,
+  id,
+  reference,
+  children,
+  ...props
+}) => {
+  return (
+    <Div {...props}>
+      <H2
+        id={id}
+        pt="8"
+        mt="8|8|14|20"
+        borderTopWidth="1px"
+        scrollMarginTop="130px|40px"
+        fontSize="3xl"
+      >
+        {heading}
+      </H2>
+      {children}
+      <Palette colors={theme.colors} />
+    </Div>
+  )
+}
+
+export const Palette = ({ colors }) => (
+  <Grid col="2|2|3" gap="8">
+    {Object.keys(colors).map(
+      (name, index) =>
+        typeof colors[name] === "string" && (
+          <Div key={index}>
+            <Div
+              h="150px"
+              w="100%"
+              rounded="md"
+              bg={colors[name]}
+              border="1px solid"
+              borderColor="border"
+            />
+            <Flexbox
+              justifyContent="space-between"
+              alignItems="flex-start"
+              mt="2"
+              fontSize="sm"
+            >
+              <Span>
+                {name} ({colors[name]})
+              </Span>
+              <CopyButton variant="icon" color="text" value={name} />
+            </Flexbox>
+          </Div>
+        )
+    )}
+  </Grid>
+)

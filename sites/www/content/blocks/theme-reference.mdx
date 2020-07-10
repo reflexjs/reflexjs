@@ -1,0 +1,56 @@
+import theme from "@reflexjs/preset-base"
+import { CopyButton } from "@reflexjs/gatsby-theme-core"
+
+export const ThemeReference = ({
+  heading,
+  id,
+  reference,
+  children,
+  ...props
+}) => {
+  return (
+    <Div {...props}>
+      <H2
+        id={id}
+        pt="8"
+        mt="8|8|14|20"
+        borderTopWidth="1px"
+        scrollMarginTop="130px|40px"
+        fontSize="3xl"
+      >
+        {heading}
+      </H2>
+      {children}
+      <Table w="full" rounded="md">
+        <Thead bg="muted">
+          <Tr>
+            <Th textAlign="left" p="2" fontWeight="semibold" w="40">
+              Key
+            </Th>
+            <Th textAlign="left" p="2" fontWeight="semibold">
+              Value
+            </Th>
+            <Th></Th>
+          </Tr>
+        </Thead>
+        <Tbody>
+          {Object.entries(theme[reference]).map(([key, value]) => (
+            <Tr key={key}>
+              <Td textAlign="left" p="2" borderTopWidth="1px">
+                <Code fontSize="xl" bg="muted" p="1" rounded="sm">
+                  {key}
+                </Code>
+              </Td>
+              <Td textAlign="left" p="2" borderTopWidth="1px" fontSize="md">
+                {value}
+              </Td>
+              <Td textAlign="right" p="2" borderTopWidth="1px">
+                <CopyButton variant="icon" color="text" value={key} />
+              </Td>
+            </Tr>
+          ))}
+        </Tbody>
+      </Table>
+    </Div>
+  )
+}

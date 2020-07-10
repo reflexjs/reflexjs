@@ -1,0 +1,196 @@
+---
+title: Theme reference
+excerpt: Design tokens and theme reference for the base preset.
+---
+
+import { Palette } from "@reflexjs/gatsby-theme-styleguide"
+
+<Container>
+
+<Grid
+  col="1|180px 1fr|180px 1fr|250px 1fr"
+  gap="null|6|6|20"
+  alignItems="flex-start"
+>
+  <Div
+    d="none|none|block"
+    position="sticky"
+    top="0"
+    left="0"
+    h="100vh"
+    borderRightWidth="1"
+    overflow="scroll"
+    bg="background"
+    zIndex="90"
+    pt="4|8"
+    pb="32"
+  >
+    <Block src="theme-reference-nav" />
+  </Div>
+  <Div mt="0" pt="8">
+
+<H1 m="0" fontWeight="extrabold">
+  Theme reference
+</H1>
+
+<P fontSize="xl|2xl" mt="2" mb="0">
+  The base starter includes a set of pre-defined design tokens that you can use
+  to style your components.
+</P>
+
+Use [style props](/docs/theming#style-props) to theme your components.
+
+```jsx
+<P fontSize="md" />
+```
+
+For responsive styles, separate your values using a pipe: `|`.
+
+```jsx
+<P fontSize="sm|md|lg|2xl" />
+```
+
+<Block src="callout" rounded="lg">
+
+**Note:** Any props not listed below such as `textDecoration` or `transition` or `opacity`) can use default CSS values.
+
+```jsx
+<P textShadow="underline" />
+```
+
+</Block>
+
+<Grid d="inline-grid" col="1|1|auto auto" alignItems="center" mt="4|6|8">
+  <ButtonLink variant="link primary" to="/docs/theming#create-a-theme">
+    Create a custom theme <Icon name="arrow-right" ml="2" />
+  </ButtonLink>
+  <ButtonLink variant="link secondary" to="/docs/presets#base" ml="4">
+    Extend base <Icon name="arrow-right" ml="2" />
+  </ButtonLink>
+</Grid>
+
+<Block
+  src="color-reference"
+  heading="Colors"
+  id="colors"
+>
+
+`color, backgroundColor (bg), borderColor, borderTopColor, borderBottomColor, border-LeftColor, borderRightColor, outlineColor, fill, stroke`
+
+</Block>
+
+<Block
+  src="theme-reference"
+  heading="Font family"
+  id="font-family"
+  reference="fonts"
+>
+
+`fontFamily`
+
+</Block>
+
+<Block
+  src="theme-reference"
+  heading="Font size"
+  id="font-size"
+  reference="fontSizes"
+>
+
+`fontSize`
+
+</Block>
+
+<Block
+  src="theme-reference"
+  heading="Font weight"
+  id="font-weight"
+  reference="fontWeights"
+>
+
+`fontWeight`
+
+</Block>
+
+<Block
+  src="theme-reference"
+  heading="Line height"
+  id="line-height"
+  reference="lineHeights"
+>
+
+`lineHeight`
+
+</Block>
+
+<Block
+  src="theme-reference"
+  heading="Margin"
+  id="margin"
+  reference="space"
+>
+
+`margin (m), marginTop (mt), marginRight (mr), marginBottom (mb), marginLeft (ml), top, right, bottom, left, gridGap, gridColumnGap, gridRowGap, gap, columnGap, rowGap`
+
+</Block>
+
+<Block
+  src="theme-reference"
+  heading="Padding"
+  id="padding"
+  reference="space"
+>
+
+`padding (p), paddingTop (pt), paddingRight (pr), paddingBottom (pb), paddingLeft (pl), top, right, bottom, left, gridGap, gridColumnGap, gridRowGap, gap, columnGap, rowGap`
+
+</Block>
+
+<Block
+  src="theme-reference"
+  heading="Border"
+  id="border"
+  reference="borders"
+>
+
+`borderWidth, borderTopWidth, borderRightWidth, borderBottomWidth, borderLeftWidth`
+
+</Block>
+
+<Block
+  src="theme-reference"
+  heading="Border radius"
+  id="border-radius"
+  reference="radii"
+>
+
+`borderRadius (rounded), borderTopRightRadius, borderTopLeftRadius, borderBottomRightRadius, borderBottomLeftRadius`
+
+</Block>
+
+<Block
+  src="theme-reference"
+  heading="Box shadow"
+  id="box-shadow"
+  reference="shadows"
+>
+
+`boxShadow, textShadow`
+
+</Block>
+
+<Block
+  src="theme-reference"
+  heading="Grid"
+  id="box-shadow"
+  reference="gridTemplateColumns"
+>
+
+`col, row`
+
+</Block>
+
+</Div>
+
+</Grid>
+
+</Container>
