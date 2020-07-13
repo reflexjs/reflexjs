@@ -123,11 +123,13 @@ exports.onCreateNode = async (
     const nodeType = `LibraryPage`
     const { pageBasePath } = withDefaults(themeOptions)
     const slug = `/${pageBasePath}/${name}`
+    const code = stripPreviewCode(stripFrontmater(node.rawBody))
+
     actions.createNode({
       id: createNodeId(`${nodeType}-${parent.id}`),
       parent: node.id,
       name,
-      code: stripFrontmater(node.rawBody),
+      code,
       slug,
       screenshots: {
         default: `${slug}.png`,
