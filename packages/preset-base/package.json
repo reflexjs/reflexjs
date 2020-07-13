@@ -1,6 +1,6 @@
 {
   "name": "@reflexjs/preset-base",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "sideEffects": false,
   "source": "index.js",
   "main": "dist/index.js",

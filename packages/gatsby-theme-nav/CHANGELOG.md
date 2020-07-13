@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-nav@0.1.10...@reflexjs/gatsby-theme-nav@0.2.0) (2020-07-13)
+
+
+### Features
+
+* **examples:** update example blog ([184d925](https://github.com/reflexjs/reflex/commit/184d925c88c704a77b8fe229a0a29e5270b02b95))
+* **www:** add theme reference page ([f5756cb](https://github.com/reflexjs/reflex/commit/f5756cb091237648ec3ed0a204d2bbab78623557))
+
+
+
+
+
 ## [0.1.10](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-nav@0.1.9...@reflexjs/gatsby-theme-nav@0.1.10) (2020-07-04)
 
 **Note:** Version bump only for package @reflexjs/gatsby-theme-nav

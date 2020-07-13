@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.4](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-metatags@0.1.3...@reflexjs/gatsby-plugin-metatags@0.1.4) (2020-07-13)
+
+**Note:** Version bump only for package @reflexjs/gatsby-plugin-metatags
+
+
+
+
+
 ## [0.1.3](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-metatags@0.1.2...@reflexjs/gatsby-plugin-metatags@0.1.3) (2020-07-10)
 
 

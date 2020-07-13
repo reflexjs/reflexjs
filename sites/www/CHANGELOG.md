@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/reflexjs/reflex/compare/www@0.4.1...www@0.4.2) (2020-07-13)
+
+
+### Bug Fixes
+
+* **www:** update theme links ([83cda0d](https://github.com/reflexjs/reflex/commit/83cda0db5cf4ac3571b298e40e9278b82a5b69cb))
+
+
+
+
+
 ## [0.4.1](https://github.com/reflexjs/reflex/compare/www@0.4.0...www@0.4.1) (2020-07-13)
 
 **Note:** Version bump only for package www

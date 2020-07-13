@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.6](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-library@0.3.5...@reflexjs/gatsby-theme-library@0.3.6) (2020-07-13)
+
+
+### Bug Fixes
+
+* **www:** update theme links ([83cda0d](https://github.com/reflexjs/reflex/commit/83cda0db5cf4ac3571b298e40e9278b82a5b69cb))
+
+
+
+
+
 ## [0.3.5](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-library@0.3.4...@reflexjs/gatsby-theme-library@0.3.5) (2020-07-13)
 
 **Note:** Version bump only for package @reflexjs/gatsby-theme-library

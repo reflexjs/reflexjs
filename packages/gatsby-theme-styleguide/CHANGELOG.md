@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.11](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-styleguide@0.1.10...@reflexjs/gatsby-theme-styleguide@0.1.11) (2020-07-13)
+
+**Note:** Version bump only for package @reflexjs/gatsby-theme-styleguide
+
+
+
+
+
 ## [0.1.10](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-styleguide@0.1.9...@reflexjs/gatsby-theme-styleguide@0.1.10) (2020-07-04)
 
 
