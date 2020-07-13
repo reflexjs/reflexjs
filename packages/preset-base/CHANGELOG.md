@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.3](https://github.com/reflexjs/reflex/compare/@reflexjs/preset-base@0.2.2...@reflexjs/preset-base@0.2.3) (2020-07-13)
+
+
+### Bug Fixes
+
+* **preset-base:** update primary color for dark mode ([ce269b6](https://github.com/reflexjs/reflex/commit/ce269b63e8ad700405ad2f2ed42494d90c8588c7))
+
+
+
+
+
 ## [0.2.2](https://github.com/reflexjs/reflex/compare/@reflexjs/preset-base@0.2.1...@reflexjs/preset-base@0.2.2) (2020-07-06)
 
 **Note:** Version bump only for package @reflexjs/preset-base

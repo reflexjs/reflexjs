@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter-base",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -12,7 +12,7 @@
     "preview": "gatsby build && gatsby serve"
   },
   "dependencies": {
-    "@reflexjs/gatsby-theme-base": "^0.2.4",
+    "@reflexjs/gatsby-theme-base": "^0.2.5",
     "gatsby": "^2.22.11",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
