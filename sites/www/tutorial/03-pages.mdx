@@ -9,37 +9,36 @@ excerpt: Create your first page
 
 Pages are placed in the `content/pages` directory.
 
-Add a new `index.mdx` page.
+Add a new `about.mdx` page.
 
 ```
 mysite
   └── content
     └── pages
+      ├── about.mdx // highlight-line
+      ├── basic.mdx
       └── index.mdx
 ```
 
-The `index.mdx` page is your home page.
-
 You build pages by writing Markdown and React components.
 
-```jsx
-// content/pages/index.mdx
+```jsx title=content/pages/about.mdx
 ---
-title: Welcome
-excerpt: This is your home page.
+title: About Us
+excerpt: This is a description for the about page.
 ---
 
-# Welcome
+# About Us
 
-This is your home page.
+Amazing Pandas Eating Things
 ```
 
 </Div>
 
 <Div>
 
-# Welcome
+# About Us
 
-This is your home page.
+Amazing Pandas Eating Things
 
 </Div>
