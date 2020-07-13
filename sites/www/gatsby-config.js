@@ -93,7 +93,7 @@ module.exports = {
         global: {
           title: `Reflex - Supercharge your Gatsby sites.`,
           description: `A collection of themes and plugins to help you build Gatsby sites faster.`,
-          image: `reflex-blocks.jpg`,
+          image: `thumbnail.jpg`,
         },
         types: [`Page`, `Post`, `Doc`, `Tutorial`, `Styleguide`],
         paths: [
