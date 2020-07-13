@@ -128,24 +128,24 @@ Then use an array-like syntax to style components.
 ```jsx
 // A one column grid for mobile and two column for larger breakpoints.
 
-<Grid col={["1fr", "1fr 1fr"]}>
+<Grid col="1fr|1fr 1fr">
   <Div>First</Div>
   <Div>Second</Div>
 </Grid>
 
 // Different font sizes and colors.
 
-<Button fontSize={[2, 4, 6]} colors={["primary", "secondary"]}>
+<Button fontSize="2|4|6" colors="primary|secondary">
 Button
 </Button>
 ```
 
 <Callout>
 
-**Tip**: In Reflex, you can also use a simpler syntax for responsive values.
+**Tip**: You can also use an array-like syntax for responsive values.
 
 ```jsx
-<Button fontSize="2|4|6" color="primary|secondary">
+<Button fontSize={[2, 4, 6]} colors={["primary", "secondary"]}>
   Button
 </Button>
 ```

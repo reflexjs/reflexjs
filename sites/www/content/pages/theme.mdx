@@ -60,11 +60,17 @@ For responsive styles, separate your values using a pipe: `|`.
 
 </Block>
 
-<Grid d="inline-grid" col="1|1|auto auto" alignItems="center" mt="4|6|8">
+<Grid
+  d="inline-grid"
+  col="1|1|auto auto"
+  gap="4|6"
+  alignItems="center"
+  mt="4|6|8"
+>
   <ButtonLink variant="link primary" to="/docs/theming#create-a-theme">
     Create a custom theme <Icon name="arrow-right" ml="2" />
   </ButtonLink>
-  <ButtonLink variant="link secondary" to="/docs/presets#base" ml="4">
+  <ButtonLink variant="link secondary" to="/docs/presets#extend-base">
     Extend base <Icon name="arrow-right" ml="2" />
   </ButtonLink>
 </Grid>
@@ -75,7 +81,11 @@ For responsive styles, separate your values using a pipe: `|`.
   id="colors"
 >
 
-`color, backgroundColor (bg), borderColor, borderTopColor, borderBottomColor, border-LeftColor, borderRightColor, outlineColor, fill, stroke`
+`color, backgroundColor (bg), borderColor, borderTopColor, borderBottomColor, borderLeftColor, borderRightColor, outlineColor, fill, stroke`
+
+```jsx title=Example
+<P color="primary" bg="muted" />
+```
 
 </Block>
 
@@ -88,6 +98,10 @@ For responsive styles, separate your values using a pipe: `|`.
 
 `fontFamily`
 
+```jsx title=Example
+<P fontFamily="body" />
+```
+
 </Block>
 
 <Block
@@ -98,6 +112,10 @@ For responsive styles, separate your values using a pipe: `|`.
 >
 
 `fontSize`
+
+```jsx title=Example
+<H1 fontSize="md" />
+```
 
 </Block>
 
@@ -110,6 +128,10 @@ For responsive styles, separate your values using a pipe: `|`.
 
 `fontWeight`
 
+```jsx title=Example
+<H1 fontWeight="semibold" />
+```
+
 </Block>
 
 <Block
@@ -121,6 +143,10 @@ For responsive styles, separate your values using a pipe: `|`.
 
 `lineHeight`
 
+```jsx title=Example
+<P lineHeight="relaxed" />
+```
+
 </Block>
 
 <Block
@@ -130,7 +156,11 @@ For responsive styles, separate your values using a pipe: `|`.
   reference="space"
 >
 
-`margin (m), marginTop (mt), marginRight (mr), marginBottom (mb), marginLeft (ml), top, right, bottom, left, gridGap, gridColumnGap, gridRowGap, gap, columnGap, rowGap`
+`margin (m), marginTop (mt), marginRight (mr), marginBottom (mb), marginLeft (ml), my, mx, top, right, bottom, left, gridGap, gridColumnGap, gridRowGap, gap, columnGap, rowGap`
+
+```jsx title=Example
+<Div mt="2" mx="auto" />
+```
 
 </Block>
 
@@ -141,7 +171,11 @@ For responsive styles, separate your values using a pipe: `|`.
   reference="space"
 >
 
-`padding (p), paddingTop (pt), paddingRight (pr), paddingBottom (pb), paddingLeft (pl), top, right, bottom, left, gridGap, gridColumnGap, gridRowGap, gap, columnGap, rowGap`
+`padding (p), paddingTop (pt), paddingRight (pr), paddingBottom (pb), paddingLeft (pl), py, px, top, right, bottom, left, gridGap, gridColumnGap, gridRowGap, gap, columnGap, rowGap`
+
+```jsx title=Example
+<Div py="6" />
+```
 
 </Block>
 
@@ -154,6 +188,10 @@ For responsive styles, separate your values using a pipe: `|`.
 
 `borderWidth, borderTopWidth, borderRightWidth, borderBottomWidth, borderLeftWidth`
 
+```jsx title=Example
+<Div borderBottomWidth="1px" />
+```
+
 </Block>
 
 <Block
@@ -164,6 +202,10 @@ For responsive styles, separate your values using a pipe: `|`.
 >
 
 `borderRadius (rounded), borderTopRightRadius, borderTopLeftRadius, borderBottomRightRadius, borderBottomLeftRadius`
+
+```jsx title=Example
+<Div rounded="2xl" />
+```
 
 </Block>
 
@@ -176,6 +218,10 @@ For responsive styles, separate your values using a pipe: `|`.
 
 `boxShadow, textShadow`
 
+```jsx title=Example
+<Div boxShadow="2xl" />
+```
+
 </Block>
 
 <Block
@@ -186,6 +232,10 @@ For responsive styles, separate your values using a pipe: `|`.
 >
 
 `col, row`
+
+```jsx title=Example
+<Grid col="4" gap="8" />
+```
 
 </Block>
 

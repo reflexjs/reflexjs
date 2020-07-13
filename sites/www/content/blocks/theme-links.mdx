@@ -1,0 +1,82 @@
+<Grid row="1fr auto" w="400px">
+  <Div p="4">
+    <P fontSize="lg" mt="0" fontWeight="semibold">
+      Theme reference
+    </P>
+    <Grid
+      col="2"
+      sx={{
+        ul: {
+          p: 0,
+          m: 0,
+          listStyle: "none",
+          li: {
+            mb: 1,
+            a: {
+              padding: "0 !important",
+              fontSize: "md",
+              color: "text",
+              "&:hover": {
+                textDecoration: "underline",
+                background: "none",
+              },
+            },
+          },
+        },
+      }}
+    >
+      <Ul>
+        <Li>
+          <Link to="/theme#colors">Colors</Link>
+        </Li>
+        <Li>
+          <Link to="/theme#font-family">Font family</Link>
+        </Li>
+        <Li>
+          <Link to="/theme#font-size">Font size</Link>
+        </Li>
+        <Li>
+          <Link to="/theme#font-weight">Font weight</Link>
+        </Li>
+        <Li>
+          <Link to="/theme#line-height">Line height</Link>
+        </Li>
+        <Li>
+          <Link to="/theme#box-shadow">Box shadow</Link>
+        </Li>
+      </Ul>
+      <Ul>
+        <Li>
+          <Link to="/theme#margin">Margin</Link>
+        </Li>
+        <Li>
+          <Link to="/theme#padding">Padding</Link>
+        </Li>
+        <Li>
+          <Link to="/theme#border">Border</Link>
+        </Li>
+        <Li>
+          <Link to="/theme#border-radius">Border radius</Link>
+        </Li>
+        <Li>
+          <Link to="/theme#grid">Grid</Link>
+        </Li>
+      </Ul>
+    </Grid>
+  </Div>
+  <Grid
+    d="inline-grid"
+    col="1|1|auto auto"
+    gap="4"
+    alignItems="center"
+    borderTopWidth="1px"
+    p="4"
+  >
+    <ButtonLink variant="link primary sm" to="/docs/theming#create-a-theme">
+      Create a theme <Icon name="arrow-right" ml="2" />
+    </ButtonLink>
+    <ButtonLink variant="link secondary sm" to="/docs/presets#extend-base">
+      Extend base <Icon name="arrow-right" ml="2" />
+    </ButtonLink>
+  </Grid>
+</Grid>
