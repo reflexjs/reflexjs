@@ -1,14 +1,21 @@
 export const VideoCard = ({ heading, url }) => (
   <Div mb="10">
     <H2>{heading}</H2>
-    <Iframe
-      width="100%"
-      height="600"
-      src={url}
-      frameborder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    />
+    <Div position="relative" pb="56.25%" h="0" overflow="hidden" maxW="100%">
+      <Iframe
+        position="absolute"
+        width="100%"
+        height="100%"
+        top="0"
+        right="0"
+        left="0"
+        bottom="0"
+        src={url}
+        frameborder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      />
+    </Div>
     <Hr />
   </Div>
 )
