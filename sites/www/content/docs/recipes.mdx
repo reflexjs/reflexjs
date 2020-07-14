@@ -1,0 +1,82 @@
+---
+title: Recipes
+excerpt: Helpful guides and code snippets.
+---
+
+## Theming
+
+### Styling components
+
+Any component can be styled in `theme.js` using the component name (lowercased).
+
+Example:
+
+1. Use `button` for the `Button` component.
+2. Use `h1` for the `H1` component.
+
+```js title=src/@reflexjs/gatsby-theme-base/theme.js
+import base from "@reflexjs/preset-base"
+
+export default {
+  preset: base,
+  // highlight-start
+  // Extend the styles for button.
+  // This inherits all the styles from the base preset.
+  button: {
+    fontSize: "md",
+    borderRadius: "3xl",
+  },
+  // highlight-end
+}
+```
+
+We call this a variant. You can read more on Theme UI variants [here](https://theme-ui.com/theme-spec#variants).
+
+### Skipping breakpoints
+
+Use `null` to skip some breakpoints when using responsive style props.
+
+```jsx
+<Div pt="null|null|10" />
+```
+
+### Styling active links
+
+To style the active `Link` component use the `activeStyle` prop:
+
+```jsx
+<Link
+  to={slug}
+  color="text"
+  fontWeight="semi"
+  // highlight-start
+  activeStyle={{
+    color: "primary",
+  }}
+  // highlight-end
+>
+  {title}
+</Link>
+```
+
+## Images
+
+### Aspect ratio
+
+The `Image` component has support for aspect ratio using the `aspectRatio` prop:
+
+#### 4/3
+
+```jsx
+<Image src="placeholder.jpg" aspectRatio={4 / 3} />
+```
+
+<Image src="placeholder.jpg" aspectRatio={4 / 3} maxW="50%" />
+
+#### 16/8
+
+```jsx
+<Image src="placeholder.jpg" aspectRatio={16 / 8} />
+```
+
+<Image src="placeholder.jpg" aspectRatio={16 / 8} maxW="50%" />

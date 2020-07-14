@@ -44,9 +44,11 @@ Make sure you have the Gatsby CLI installed.
 npm i -g gatsby-cli
 ```
 
-## Using a starter
+## Create a site
 
 The easiest way to use Reflex is to use the `base` starter.
+
+**Step 1: Create site**
 
 To create a new site using the `base` starter run the following command:
 
@@ -54,42 +56,26 @@ To create a new site using the `base` starter run the following command:
 gatsby new NAME_OF_SITE reflexjs/gatsby-starter-base
 ```
 
-## Manual setup
+**Step 2: Configure Gatsby**
 
-**Step 1: Install dependencies**
-
-Install `gatsby`, `react` and `react-dom`.
-
-```sh
-npm i gatsby react react-dom
-```
-
-**Step 2: Install Reflex core**
-
-Add `@reflexjs/gatsby-theme-core`.
-
-```sh
-npm i @reflexjs/gatsby-theme-core
-```
-
-**Step 3: Configure Gatsby**
-
-Create a `gatsby-config.js` file and configure `@reflexjs/gatsby-theme-core`.
+Edit `gatsby-config.js` file and configure your site name and description.
 
 ```js title=gatsby-config.js
 require(`dotenv`).config()
 
 module.exports = {
   siteMetadata: {
-    title: "Name of your site",
-    description: "Description for your site.",
+    // highlight-start
+    title: "Reflex",
+    description: "Starter for Reflex.",
+    // highlight-end
     siteUrl: process.env.SITE_URL || "http://localhost:8000",
   },
-  plugins: [`@reflexjs/gatsby-theme-core`], // highlight-line
+  plugins: ["@reflexjs/gatsby-theme-base"],
 }
 ```
 
-**Step 4: Run your site.**
+**Step 3: Run your site.**
 
 You can now run your Gatsby site:
 
@@ -97,27 +83,6 @@ You can now run your Gatsby site:
 gatsby develop
 ```
 
-**Step 5: View your site**
+**Step 4: View your site**
 
 Gatsby will start your development environment at [http://localhost:8000](http://localhost:8000).
-
-## Creating content
-
-Content in Reflex is created and managed using [MDX](https://mdxjs.com). MDX is [Markdown](https://daringfireball.net/projects/markdown/syntax)
-with support for exporting and importing components.
-
-This allows you to write content along side React components. See the following example below.
-
-```jsx
-### This is a heading
-
-<Callout>With some paragraph in a callout.</Callout>
-```
-
-The code above will output the following:
-
-### This is a heading
-
-<Callout>With some paragraph in a callout.</Callout>
-
-Every piece of content in Reflex is managed in MDX files. You place your MDX files in the `content` directory.
