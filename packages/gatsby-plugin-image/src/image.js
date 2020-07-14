@@ -4,7 +4,7 @@ import { isRelativeUrl } from "@reflexjs/utils"
 import { Img, Figure, Figcaption } from "@reflexjs/components"
 import { useImage } from "./use-image"
 
-export const Image = ({ src, alt, title, caption, ...props }) => {
+export const Image = ({ src, alt, title, caption, aspectRatio, ...props }) => {
   const [image] = useImage(src)
 
   props = {
@@ -46,7 +46,22 @@ export const Image = ({ src, alt, title, caption, ...props }) => {
 
   return image ? (
     <Figure {...props}>
-      <GatsbyImg fluid={image.childImageSharp.fluid} alt={alt} title={title} />
+      {aspectRatio ? (
+        <GatsbyImg
+          sizes={{
+            ...image.childImageSharp.fluid,
+            aspectRatio,
+          }}
+          alt={alt}
+          title={title}
+        />
+      ) : (
+        <GatsbyImg
+          fluid={image.childImageSharp.fluid}
+          alt={alt}
+          title={title}
+        />
+      )}
       <Caption />
     </Figure>
   ) : null
