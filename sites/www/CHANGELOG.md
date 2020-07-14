@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/reflexjs/reflex/compare/www@0.4.2...www@0.5.0) (2020-07-14)
+
+
+### Bug Fixes
+
+* **www:** update metatags for videos page ([f36184e](https://github.com/reflexjs/reflex/commit/f36184ecf6c8999a89abe53586b87eb0528e5d29))
+* **www:** update video display ([2751b61](https://github.com/reflexjs/reflex/commit/2751b61d2c15c3537bf1e25206895ee95a449cc3))
+
+
+### Features
+
+* **www:** add sitemap ([78844d3](https://github.com/reflexjs/reflex/commit/78844d35a7b73f9a8426ca5038c60d7cc1821ed4))
+* **www:** add videos page ([2270fe6](https://github.com/reflexjs/reflex/commit/2270fe6e2d586811580fd602a87dd725d9668f1b))
+
+
+
+
+
 ## [0.4.2](https://github.com/reflexjs/reflex/compare/www@0.4.1...www@0.4.2) (2020-07-13)
 
 

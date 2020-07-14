@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-post",
   "description": "Adds a Post type to Gatsby sites.",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -31,10 +31,10 @@
   "dependencies": {
     "@reflexjs/components": "^0.1.8",
     "@reflexjs/gatsby-helpers": "^0.3.1",
-    "@reflexjs/gatsby-plugin-image": "^0.1.2",
+    "@reflexjs/gatsby-plugin-image": "^0.2.0",
     "@reflexjs/gatsby-theme-block": "^0.2.1",
     "@reflexjs/gatsby-theme-core": "^0.3.1",
-    "@reflexjs/gatsby-theme-profile": "^0.3.2",
+    "@reflexjs/gatsby-theme-profile": "^0.3.3",
     "@reflexjs/utils": "^0.2.1",
     "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-source-filesystem": "^2.3.8"
