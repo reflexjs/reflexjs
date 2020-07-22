@@ -16,7 +16,6 @@ module.exports = ({ types: t }) => {
   return {
     visitor: {
       JSXOpeningElement(path, state) {
-        debugger
         if (isJSXFragment(path)) {
           return
         }
