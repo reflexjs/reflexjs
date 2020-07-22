@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-devtools",
   "description": "A plugin to help with Gatsby development.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -10,7 +10,13 @@
   "scripts": {
     "test": "jest"
   },
-  "keywords": ["gatsby", "gatsby-plugin", "gatsby-theme", "shadow", "reflex"],
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "shadow",
+    "reflex"
+  ],
   "bugs": {
     "url": "https://github.com/reflexjs/reflex/issues"
   },
