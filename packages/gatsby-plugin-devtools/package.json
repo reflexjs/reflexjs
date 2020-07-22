@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-devtools",
   "description": "A plugin to help with Gatsby development.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
