@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-styleguide",
   "description": "Adds a styleguide to your site to make building and testing themes easy.",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -29,8 +29,8 @@
   },
   "dependencies": {
     "@reflexjs/components": "^0.1.8",
-    "@reflexjs/gatsby-helpers": "^0.3.1",
-    "@reflexjs/gatsby-theme-core": "^0.3.1",
+    "@reflexjs/gatsby-helpers": "^0.4.0",
+    "@reflexjs/gatsby-theme-core": "^0.3.2",
     "@reflexjs/utils": "^0.2.1",
     "fs-extra": "^9.0.1",
     "gatsby-image": "^2.4.5",
