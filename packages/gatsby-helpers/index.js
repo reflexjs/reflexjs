@@ -77,23 +77,23 @@ exports.generateNodeFromMdx = (
   const { basePath } = themeOptions
   const { relativeDirectory, name } = parent
 
+  // Fallback to the parent name if no title is set.
+  if (withTitle && !node.frontmatter.title) {
+    nodeData.title = name
+  }
+
   if (withSlug) {
     let slug =
       (node.frontmatter && node.frontmatter.slug) ||
       exports.toSlug(relativeDirectory) + "/" + exports.toSlug(name)
     slug = slug.replace(/^\//, "").replace(/index$/, "")
 
+    nodeData.slug = `${basePath}/${slug}`
+
     // Allow theme consumers to customize the slug.
     if (themeOptions.slugResolver) {
-      slug = themeOptions.slugResolver(node, parent)
+      nodeData.slug = themeOptions.slugResolver(node, parent, basePath)
     }
-
-    nodeData.slug = `${basePath}/${slug}`
-  }
-
-  // Fallback to the parent name if no title is set.
-  if (withTitle && !node.frontmatter.title) {
-    nodeData.title = name
   }
 
   return {
