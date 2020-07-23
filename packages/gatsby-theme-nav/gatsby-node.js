@@ -13,17 +13,25 @@ exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 
 exports.createSchemaCustomization = async ({ actions }) => {
   actions.createTypes(`
-    type NavLink implements Node @dontInfer {
+    type NavLink implements Node {
       type: String
       value: String
       url: String
       items: [NavLink]
     }
 
-    type Nav implements Node @dontInfer {
+    interface Nav @nodeInterface {
       id: ID!
       name: String
       items: [NavLink]
+      data: JSON
+    }
+
+    type MdxNav implements Node & Nav {
+      id: ID!
+      name: String
+      items: [NavLink]
+      data: JSON
     }
   `)
 }
@@ -33,7 +41,7 @@ exports.onCreateNode = async (
   themeOptions
 ) => {
   const navNode = generateNodeFromMdx(
-    `Nav`,
+    `MdxNav`,
     node,
     getNode,
     createNodeId,
@@ -54,7 +62,7 @@ exports.onCreateNode = async (
 
 exports.createResolvers = async ({ createResolvers }) => {
   createResolvers({
-    Nav: {
+    MdxNav: {
       items: {
         resolve: async (source, args, context, info) => {
           const mdxAST = await mdxResolverPassthrough(`mdxAST`)(

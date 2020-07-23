@@ -9,7 +9,7 @@ module.exports = (themeOptions) => {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          name: `Doc`,
+          name: `MdxDoc`,
           path: contentPath,
         },
       },

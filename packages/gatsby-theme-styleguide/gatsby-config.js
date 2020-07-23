@@ -9,7 +9,7 @@ module.exports = (themeOptions) => {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          name: `Styleguide`,
+          name: `MdxStyleguide`,
           path: contentPath,
         },
       },

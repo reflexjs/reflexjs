@@ -8,5 +8,6 @@ export const fragment = graphql`
     excerpt
     body
     image
+    data
   }
 `

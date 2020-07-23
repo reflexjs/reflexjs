@@ -9,5 +9,6 @@ export const fragment = graphql`
     body
     tableOfContents
     timeToRead
+    data
   }
 `

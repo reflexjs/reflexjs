@@ -31,7 +31,7 @@ module.exports = (themeOptions) => {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          name: `Page`,
+          name: `MdxPage`,
           path: contentPath,
         },
       },

@@ -8,5 +8,6 @@ export const fragment = graphql`
     body
     slug
     weight
+    data
   }
 `

@@ -24,7 +24,7 @@ exports.ensureContentPath = (contentPath, reporter) => {
 }
 
 // Helper to resolve mdx fields.
-exports.mdxResolverPassthrough = (fieldName, show = false) => async (
+exports.mdxResolverPassthrough = (fieldName) => async (
   source,
   args,
   context,
@@ -38,10 +38,6 @@ exports.mdxResolverPassthrough = (fieldName, show = false) => async (
   const value = await resolver(mdxNode, args, context, {
     fieldName,
   })
-
-  if (show) {
-    console.log(value)
-  }
 
   return value.items ? value.items : value
 }
@@ -95,6 +91,8 @@ exports.generateNodeFromMdx = (
       nodeData.slug = themeOptions.slugResolver(node, parent, basePath)
     }
   }
+
+  nodeData.data = node.frontmatter
 
   return {
     id: createNodeId(`${nodeType}-${node.id}`),

@@ -5,5 +5,6 @@ export const fragment = graphql`
     id
     src
     body
+    data
   }
 `

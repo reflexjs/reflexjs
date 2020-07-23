@@ -13,20 +13,31 @@ exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 
 exports.createSchemaCustomization = async ({ actions }) => {
   actions.createTypes(`
-    type Tutorial implements Node @dontInfer {
+    interface Tutorial @nodeInterface {
       id: ID!
       title: String
       excerpt: String
       weight: Int
       body: String
       slug: String
+      data: JSON
+    }
+
+    type MdxTutorial implements Node & Tutorial {
+      id: ID!
+      title: String
+      excerpt: String
+      weight: Int
+      body: String
+      slug: String
+      data: JSON
     }
   `)
 }
 
 exports.createResolvers = async ({ createResolvers }) => {
   createResolvers({
-    Tutorial: {
+    MdxTutorial: {
       body: {
         resolve: mdxResolverPassthrough(`body`),
       },
@@ -40,7 +51,7 @@ exports.onCreateNode = async (
 ) => {
   const { basePath } = withDefaults(themeOptions)
   const tutorialNode = generateNodeFromMdx(
-    `Tutorial`,
+    `MdxTutorial`,
     node,
     getNode,
     createNodeId,

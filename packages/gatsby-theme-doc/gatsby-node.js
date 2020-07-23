@@ -13,7 +13,7 @@ exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 
 exports.createSchemaCustomization = async ({ actions }) => {
   actions.createTypes(`
-    type Doc implements Node @dontInfer {
+    interface Doc @nodeInterface {
       id: ID!
       title: String
       excerpt: String
@@ -21,6 +21,18 @@ exports.createSchemaCustomization = async ({ actions }) => {
       body: String
       tableOfContents: JSON
       timeToRead: Int
+      data: JSON
+    }
+
+    type MdxDoc implements Node & Doc {
+      id: ID!
+      title: String
+      excerpt: String
+      slug: String
+      body: String
+      tableOfContents: JSON
+      timeToRead: Int
+      data: JSON
     }
   `)
 }
@@ -30,7 +42,7 @@ exports.onCreateNode = async (
   themeOptions
 ) => {
   const docNode = generateNodeFromMdx(
-    `Doc`,
+    `MdxDoc`,
     node,
     getNode,
     createNodeId,
@@ -47,7 +59,7 @@ exports.onCreateNode = async (
 
 exports.createResolvers = async ({ createResolvers }) => {
   createResolvers({
-    Doc: {
+    MdxDoc: {
       body: {
         resolve: mdxResolverPassthrough(`body`),
       },

@@ -7,5 +7,6 @@ export const fragment = graphql`
     slug
     excerpt
     body
+    data
   }
 `

@@ -15,7 +15,7 @@ exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 
 exports.createSchemaCustomization = async ({ actions }) => {
   actions.createTypes(`
-    type Post implements Node @dontInfer {
+    interface Post @nodeInterface {
       id: ID!
       title: String
       excerpt: String
@@ -29,9 +29,33 @@ exports.createSchemaCustomization = async ({ actions }) => {
       published: Boolean
       author: Profile @link(by: "name")
       tags: [PostTag] @link(by: "name")
+      data: JSON
     }
 
-    type PostTag implements Node @dontInfer {
+    type MdxPost implements Node & Post {
+      id: ID!
+      title: String
+      excerpt: String
+      date: Date @dateformat
+      slug: String
+      body: String
+      image: String
+      caption: String
+      timeToRead: Int
+      featured: Boolean
+      published: Boolean
+      author: Profile @link(by: "name")
+      tags: [PostTag] @link(by: "name")
+      data: JSON
+    }
+
+    interface PostTag @nodeInterface {
+      id: ID!
+      name: String
+      slug: String
+    }
+
+    type MdxPostTag implements Node & PostTag {
       id: ID!
       name: String
       slug: String
@@ -46,7 +70,7 @@ exports.onCreateNode = async (
   const { basePath } = withDefaults(themeOptions)
 
   const postNode = generateNodeFromMdx(
-    `Post`,
+    `MdxPost`,
     node,
     getNode,
     createNodeId,
@@ -59,7 +83,7 @@ exports.onCreateNode = async (
     const { tags } = postNode
 
     if (tags) {
-      const nodeType = "PostTag"
+      const nodeType = "MdxPostTag"
       tags.forEach((name) => {
         const tagNode = {
           name,
@@ -79,7 +103,8 @@ exports.onCreateNode = async (
 
     // If no author is set and only one profile is available,
     // set it as the default author.
-    const profiles = getNodesByType("Profile")
+    // TODO: Refactor this to get Profile nodes.
+    const profiles = getNodesByType("MdxProfile")
     if (!postNode.author && profiles.length === 1) {
       postNode.author = profiles[0].name
     }
@@ -92,7 +117,7 @@ exports.onCreateNode = async (
 
 exports.createResolvers = async ({ createResolvers }) => {
   createResolvers({
-    Post: {
+    MdxPost: {
       body: {
         resolve: mdxResolverPassthrough(`body`),
       },

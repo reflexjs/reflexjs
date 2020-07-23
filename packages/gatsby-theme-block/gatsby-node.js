@@ -12,17 +12,25 @@ exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 
 exports.createSchemaCustomization = async ({ actions }) => {
   actions.createTypes(`
-    type Block implements Node @dontInfer {
+    interface Block @nodeInterface {
       id: ID!
       src: String
       body: String
+      data: JSON
+    }
+
+    type MdxBlock implements Node & Block {
+      id: ID!
+      src: String
+      body: String
+      data: JSON
     }
   `)
 }
 
 exports.createResolvers = async ({ createResolvers }) => {
   createResolvers({
-    Block: {
+    MdxBlock: {
       body: {
         resolve: mdxResolverPassthrough(`body`),
       },
@@ -41,7 +49,7 @@ exports.onCreateNode = async ({
     return
   }
 
-  const nodeType = `Block`
+  const nodeType = `MdxBlock`
 
   const parent = getNode(node.parent)
   if (parent.sourceInstanceName !== nodeType) {

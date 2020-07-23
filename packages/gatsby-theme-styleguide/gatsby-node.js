@@ -20,13 +20,24 @@ exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 
 exports.createSchemaCustomization = async ({ actions }) => {
   actions.createTypes(`
-    type Styleguide implements Node @dontInfer {
+    interface Styleguide @nodeInterface {
       id: ID!
       title: String
       weight: Int
       excerpt: String
       slug: String
       body: String
+      data: JSON
+    }
+
+    type MdxStyleguide implements Node & Styleguide {
+      id: ID!
+      title: String
+      weight: Int
+      excerpt: String
+      slug: String
+      body: String
+      data: JSON
     }
   `)
 }
@@ -36,7 +47,7 @@ exports.onCreateNode = async (
   themeOptions
 ) => {
   const styleguideNode = generateNodeFromMdx(
-    `Styleguide`,
+    `MdxStyleguide`,
     node,
     getNode,
     createNodeId,
@@ -53,7 +64,7 @@ exports.onCreateNode = async (
 
 exports.createResolvers = async ({ createResolvers }) => {
   createResolvers({
-    Styleguide: {
+    MdxStyleguide: {
       body: {
         resolve: mdxResolverPassthrough(`body`),
       },

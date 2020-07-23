@@ -13,7 +13,7 @@ exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 
 exports.createSchemaCustomization = async ({ actions }) => {
   actions.createTypes(`
-    type Profile implements Node @dontInfer {
+    interface Profile @nodeInterface {
       id: ID!
       name: String
       excerpt: String
@@ -21,9 +21,21 @@ exports.createSchemaCustomization = async ({ actions }) => {
       body: String
       picture: String
       links: [ProfileLink]
+      data: JSON
     }
 
-    type ProfileLink implements Node @dontInfer {
+    type MdxProfile implements Node & Profile {
+      id: ID!
+      name: String
+      excerpt: String
+      slug: String
+      body: String
+      picture: String
+      links: [ProfileLink]
+      data: JSON
+    }
+    
+    type ProfileLink implements Node{
       title: String
       url: String
     }
@@ -35,7 +47,7 @@ exports.onCreateNode = async (
   themeOptions
 ) => {
   const profileNode = generateNodeFromMdx(
-    `Profile`,
+    `MdxProfile`,
     node,
     getNode,
     createNodeId,
@@ -54,7 +66,7 @@ exports.onCreateNode = async (
 
 exports.createResolvers = async ({ createResolvers }) => {
   createResolvers({
-    Profile: {
+    MdxProfile: {
       body: {
         resolve: mdxResolverPassthrough(`body`),
       },

@@ -13,13 +13,24 @@ exports.onPreBootstrap = ({ reporter }, themeOptions) => {
 
 exports.createSchemaCustomization = async ({ actions }) => {
   actions.createTypes(`
-    type Page implements Node @dontInfer {
+    interface Page @nodeInterface {
       id: ID!
       title: String
       excerpt: String
       image: String
       slug: String
       body: String
+      data: JSON
+    }
+
+    type MdxPage implements Node & Page {
+      id: ID!
+      title: String
+      excerpt: String
+      image: String
+      slug: String
+      body: String
+      data: JSON
     }
   `)
 }
@@ -29,7 +40,7 @@ exports.onCreateNode = async (
   themeOptions
 ) => {
   const pageNode = generateNodeFromMdx(
-    `Page`,
+    `MdxPage`,
     node,
     getNode,
     createNodeId,
@@ -46,7 +57,7 @@ exports.onCreateNode = async (
 
 exports.createResolvers = async ({ createResolvers }) => {
   createResolvers({
-    Page: {
+    MdxPage: {
       body: {
         resolve: mdxResolverPassthrough(`body`),
       },

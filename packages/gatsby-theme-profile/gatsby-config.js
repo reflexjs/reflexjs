@@ -8,7 +8,7 @@ module.exports = (themeOptions) => {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          name: `Profile`,
+          name: `MdxProfile`,
           path: contentPath,
         },
       },
