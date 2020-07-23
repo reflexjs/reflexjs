@@ -110,79 +110,6 @@ export const Post = ({
   slug,
 }) => (
   <Article py="8|12|14">
-    <Container maxW="null|null|null|900px">
-      <Div textAlign="center">
-        {tags && (
-          <Link to={tags[0].slug} textDecoration="none" color="text">
-            {tags[0].name}
-          </Link>
-        )}
-        {title && (
-          <H1 my="0" fontWeight="extrabold">
-            {title}
-          </H1>
-        )}
-        {excerpt && (
-          <P fontSize="2xl" maxW="700px" mx="auto">
-            {excerpt}
-          </P>
-        )}
-
-        <PostMeta
-          author={author}
-          timeToRead={timeToRead}
-          date={date}
-          datetime={datetime}
-          alignItems="center"
-          justifyContent="center"
-          my="8"
-        />
-      </Div>
-    </Container>
-    {image && (
-      <Container variant="lg">
-        <Image
-          src={image}
-          title={title}
-          alt={caption || title}
-          caption={caption}
-          mx="auto"
-          my="4|8|10"
-          overflow="hidden"
-          sx={{
-            img: {
-              borderRadius: "md",
-            },
-          }}
-        />
-      </Container>
-    )}
-    <Container maxW="null|null|null|900px">
-      <MDXRenderer>{body}</MDXRenderer>
-      {tags && (
-        <Flexbox alignItems="center" my="6" mx="auto">
-          {tags.map(({ name, slug }, index) => (
-            <Link
-              key={name}
-              to={slug}
-              display="inline-block"
-              bg="muted"
-              px="2"
-              py="1"
-              rounded="md"
-              color="text"
-              textDecoration="none"
-              fontSize="sm"
-              ml={index !== 0 && 2}
-              hoverBg="secondary"
-              hoverColor="white"
-            >
-              {name}
-            </Link>
-          ))}
-        </Flexbox>
-      )}
-    </Container>
     // highlight-start
     <Container maxW="900px" mt="20">
       <DiscussionEmbed
@@ -193,6 +120,29 @@ export const Post = ({
     // highlight-end
   </Article>
 )
+```
+
+### Custom slug
+
+Use the `slugResolver` option to override the generated slug.
+
+```js title=gatsby-config.js
+const { toSlug } = require("@reflexjs/gatsby-helpers") // highlight-line
+
+module.exports = {
+  plugins: [
+    `@reflexjs/gatsby-theme-base`,
+    {
+      resolve: `@reflexjs/gatsby-theme-post`,
+      // highlight-start
+      options: {
+        slugResolver: (node, parent, basePath) =>
+          `${toSlug(node.frontmatter.title)}.html`,
+      },
+      // highlight-end
+    },
+  ],
+}
 ```
 
 ## Images
