@@ -23,6 +23,7 @@
     "@reflexjs/gatsby-theme-post": "^0.3.4",
     "@reflexjs/gatsby-theme-styleguide": "^0.1.12",
     "@reflexjs/gatsby-theme-tutorial": "^0.2.3",
+    "@reflexjs/gatsby-theme-video": "^0.0.1",
     "gatsby": "^2.22.11",
     "gatsby-plugin-manifest": "^2.4.11",
     "gatsby-plugin-sitemap": "^2.4.11",
