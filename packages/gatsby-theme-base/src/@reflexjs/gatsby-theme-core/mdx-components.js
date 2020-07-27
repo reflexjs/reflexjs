@@ -8,4 +8,5 @@ export const MDXComponents = {
   Block,
   Image,
   NavMenu,
+  img: Image,
 }
