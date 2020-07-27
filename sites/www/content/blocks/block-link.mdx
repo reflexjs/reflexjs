@@ -1,21 +1,55 @@
-export const BlockLink = ({ heading, text, url, ...props }) => (
-  <A
-    href={url}
+export const BlockLink = ({ heading, text, url, links, ...props }) => (
+  <Div
     borderWidth="1px"
     rounded="xl"
-    p="4"
-    hoverBorderColor="borderHover"
-    d="flex"
-    flexDirection="column"
-    alignItems="flex-start"
+    maxW="none|none|350px"
+    bg="background"
+    zIndex="500"
+    position="relative"
     {...props}
   >
-    <H3 my="0" d="flex" fontSize="xl|2xl" alignItems="center">
-      {heading}
-      <Icon name="arrow-right" ml="2" />
-    </H3>
-    <P mt="2" mb="0" color="text" fontSize="md">
-      {text}
-    </P>
-  </A>
+    <A
+      href={url}
+      p="4"
+      d="flex"
+      flexDirection="column"
+      alignItems="flex-start"
+      hoverColor="primary"
+      sx={{
+        "&:hover": {
+          h4: {
+            color: "primary",
+          },
+        },
+      }}
+    >
+      <H4 my="0" d="flex" fontSize="xl|2xl" alignItems="center">
+        {heading}
+        <Icon name="arrow-right" ml="2" size="5" />
+      </H4>
+      <P mt="2" mb="0" color="text" fontSize="md">
+        {text}
+      </P>
+    </A>
+    {links && (
+      <Flexbox flexDirection="column" alignItems="flex-start">
+        {links.map((link) => (
+          <A
+            href={link.url}
+            px="4"
+            py="2"
+            fontSize="md"
+            borderTopWidth="1px"
+            w="full"
+            color="text"
+            hoverColor="primary"
+            hoverTransform="translateX(5px)"
+            transition="transform .25s ease-in"
+          >
+            {link.title}
+          </A>
+        ))}
+      </Flexbox>
+    )}
+  </Div>
 )

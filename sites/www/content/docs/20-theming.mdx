@@ -1,0 +1,43 @@
+---
+title: Theming
+excerpt: Add styles to your site using Theme UI and Style props.
+---
+
+## Theme UI
+
+Reflex uses [Theme UI](https://theme-ui.com) for styling. Theme UI is a CSS-in-JS library
+for creating constraint-based designs.
+
+What this means is you create a shared set of values such as colors, font sizes, and spacing and then reference
+these values to build your site.
+
+Here's a simple theme:
+
+```js title=src/gatsby-theme-base/theme.js
+export default {
+  colors: {
+    text: "#000",
+    background: "#fff"
+    primary: "#82aaff",
+  },
+  fontSizes: [14, 16, 18, 20, 22, 36, 56, 72],
+}
+```
+
+You can then use values from this theme in your components.
+
+```jsx
+<Button bg="primary" color="text" fontSize="2">
+  Styled button
+</Button>
+```
+
+This will create a `button` with the following CSS styles:
+
+```css
+{
+  background-color: "#82aaff", // --> colors.primary
+  color: "#000", // --> colors.text
+  font-size: "18px" // --> fontSizes[2]
+}
+```

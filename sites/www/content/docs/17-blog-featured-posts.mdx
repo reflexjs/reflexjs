@@ -1,0 +1,80 @@
+---
+title: Featured posts
+excerpt: Add a featured posts section to a page.
+---
+
+The `@reflexjs/gatsby-theme-post` provides a `usePost` hook to easily retrieve, filter and render posts.
+
+Let's use this hook to get a list of featured posts in a block and use the block on the home page.
+
+<Block
+  src="video-card"
+  url="https://www.youtube-nocookie.com/embed/KxdhGAw93QI"
+/>
+
+## Create a block
+
+```jsx title=content/blocks/featured-posts
+import { usePost } from "@reflexjs/gatsby-theme-post" // highlight-line
+
+export const FeaturedPosts = () => {
+  // highlight-start
+  // This will return an array of all featured posts.
+  const featuredPosts = usePost({ featured: true })
+  // highlight-end
+}
+```
+
+## Render the posts in a list
+
+```jsx title=content/blocks/featured-posts
+import { usePost } from "@reflexjs/gatsby-theme-post"
+
+export const FeaturedPosts = () => {
+  const featuredPosts = usePost({ featured: true })
+  // highlight-start
+  return featuredPosts
+    ? featuredPosts.map((post) => <A href={post.slug}>{post.title}</A>)
+    : null
+  // highlight-end
+}
+```
+
+## Place block on page
+
+```md title=content/pages/about.mdx
+---
+title: Welcome to Reflex
+excerpt: Description for this page. This is mostly used for the description meta tag.
+---
+
+<Block src="featured-posts" /> // highlight-line
+```
+
+## Make block configurable
+
+Let's add a limit props to the block so that we can set how many featured posts to show.
+
+```jsx title=content/blocks/featured-posts
+import { usePost } from "@reflexjs/gatsby-theme-post"
+
+// highlight-start
+export const FeaturedPosts = ({ limit = 5 }) => {
+  // highlight-end
+  const featuredPosts = usePost({ featured: true })
+  return featuredPosts
+    ? featuredPosts
+        .slice(0, limit) // highlight-line
+        .map((post) => <A href={post.slug}>{post.title}</A>)
+    : null
+}
+```
+
+```md title=content/pages/about.mdx
+---
+title: Welcome to Reflex
+excerpt: Description for this page. This is mostly used for the description meta tag.
+---
+
+<Block src="featured-posts" limit="3" /> // highlight-line
+```

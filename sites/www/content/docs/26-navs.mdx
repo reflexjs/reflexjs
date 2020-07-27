@@ -1,0 +1,115 @@
+---
+title: Navs
+excerpt: Use navs to build header, footer and other navigation menus using mdx files.
+---
+
+## Add a nav
+
+To add a nav, simply create an `.mdx` file in the `/content/navs` directory.
+
+Navs uses using simple lists of links.
+
+```md title=content/navs/main.mdx
+- [Home](/home)
+- [Blocks](/blocks)
+  - [Headers](/blocks/headers)
+  - [Hero](/blocks/hero)
+  - [Footers](/blocks/footers)
+- [Docs](/docs)
+  - [Components](/docs/components)
+  - [Images](/docs/images)
+```
+
+## Rendering navs
+
+Once your nav has been created, you can use the `NavMenu` component to render the nav.
+
+```jsx title=content/blocks/header.mdx
+<NavMenu name="example" />
+```
+
+## Add dropdown
+
+Add a dropdown by using a nested list.
+
+```mdx title=content/navs/example.mdx
+- [Home](/)
+- Dropdown // highlight-line
+  - [Item One](/item-one) // highlight-line
+  - [Item Two](/item-two) // highlight-line
+  - [Item Three](/item-three) // highlight-line
+- [About](/about)
+- [Contact](/contact)
+```
+
+## Add mega menu
+
+To create a mega menu, use a block as a dropdown.
+
+Create a block in `content/blocks/example-nav-block.mdx`
+
+```jsx title=content/blocks/example-nav-block.mdx
+<Div>
+  <Grid p="4" col="1fr 1fr" w="460px" gap="10">
+    <Div>
+      <H4 my="0" fontSize="md">
+        Section One
+      </H4>
+      <P mt="2" mb="0" fontSize="sm">
+        Autem maiores ab praesentium. Blanditiis numquam eaque odit. Corporis
+        totam sit aliquid.
+      </P>
+    </Div>
+    <Div>
+      <H4 my="0" fontSize="md">
+        Section One
+      </H4>
+      <P mt="2" mb="0" fontSize="sm">
+        Autem maiores ab praesentium. Blanditiis numquam eaque odit. Corporis
+        totam sit aliquid.
+      </P>
+    </Div>
+  </Grid>
+  <Flexbox bg="muted" px="2" py="2">
+    <Button variant="link sm">
+      Learn more
+      <Icon name="arrow-right" ml="2" size="4" lineHeight="1" />
+    </Button>
+  </Flexbox>
+</Div>
+```
+
+Next, add this block to your nav.
+
+```mdx title=content/navs/example.mdx
+- [Home](/)
+- [About](/about)
+- Dropdown
+  - [Item One](/item-one)
+  - [Item Two](/item-two)
+  - [Item Three](/item-three)
+- Mega menu // highlight-line
+  - <Block src="example-nav-block" /> // highlight-line
+- [Contact](/contact)
+```
+
+## useNav
+
+The `useNav` hook can be used to retrieve and filter navs.
+
+```jsx title=blocks/main-nav.mdx
+import { useNav } from "@reflexjs/gatsby-theme-nav"
+
+export const MainNav = () => {
+  const [main] = useNav("main")
+  return main.items ? (
+    <Ul>
+      {main.items.map(({ value, url, items }, index) => (
+        <Li key={index}>
+          <Link href={url}>{value}</Link>
+        </Li>
+      ))}
+    </Ul>
+  ) : null
+}
+```

@@ -1,0 +1,27 @@
+---
+title: Add an author
+---
+
+To add a new author, create the author profile under `content/profiles`.
+
+```md title=content/profiles/megan-morales.mdx
+---
+name: Megan Morales
+excerpt: Wildlife Photographer and Storyteller.
+picture: avatar.png
+---
+```
+
+To set the author of a post, you use the author `name`.
+
+```md
+---
+title: Title of the Post
+author: Megan Morales // highlight-line
+---
+```
+
+<Callout my="8">
+  If you have only one author, you do not need to set it for each post. It will
+  automatically be set for you.
+</Callout>

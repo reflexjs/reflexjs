@@ -1,0 +1,111 @@
+---
+title: Configuration
+excerpt: Configure your blog using theme options.
+---
+
+The `@reflexjs/gatsby-theme-post` package accepts the following options to make it easy to customize your blog.
+
+```js title=gatsby-config.js
+module.exports = {
+  siteMetadata: {
+    title: "Reflex",
+    description: "Starter for Reflex.",
+    siteUrl: process.env.SITE_URL || "http://localhost:8000",
+  },
+  plugins: [
+    "@reflexjs/gatsby-theme-base"
+    // highlight-start
+    {
+      resolve: `@reflexjs/gatsby-theme-post`,
+      options: {
+        contentPath: "content/posts",
+        basePath: "/blog",
+        postsPerPage: 4,
+        pageQuery: null,
+        slugResolver: null,
+      }
+    }
+    // highlight-end
+  ],
+}
+```
+
+<Hr mt="8" />
+
+### contentPath
+
+Update the `contentPath` if you need to place your posts in a different location (defaults to `/content/posts`).
+
+<Hr mt="8" />
+
+### basePath
+
+The `basePath` sets the path for the blog landing page, the tags pages and the post pages. All blog pages are prefixed by the `basePath`.
+
+See `slugResolver` if you need more flexibility.
+
+<Hr mt="8" />
+
+### postsPerPage
+
+The number of posts to use to paginate blog pages.
+
+<Hr mt="8" />
+
+### pageQuery
+
+The GraphQL query to use to create the `/blog` page. You can use this option to filter out or customize the posts that are displayed on the page.
+
+**Example:**
+
+Filter out all posts tagged with _Example_.
+
+```js
+pageQuery: `
+  query {
+    allPost(sort: {fields: date, order: DESC}, filter: {tags: {elemMatch: {name: {nin: "Example"}}}}) {
+      nodes {
+        id
+        slug
+      }
+    }
+    allPostTag(sort: {fields: name, order: ASC}) {
+      nodes {
+        id
+        name
+        slug
+      }
+    }
+  }
+`,
+},
+```
+
+<Hr mt="8" />
+
+### slugResolver
+
+Use the `slugResolver` option to have more flexibility on how post slugs are created.
+
+**Example:**
+
+This will remove the `/blog` prefix and add a `.html` suffix to all post slugs.
+
+```js title=gatsby-config.js
+const { toSlug } = require("@reflexjs/gatsby-helpers") // highlight-line
+
+module.exports = {
+  plugins: [
+    `@reflexjs/gatsby-theme-base`,
+    {
+      resolve: `@reflexjs/gatsby-theme-post`,
+      // highlight-start
+      options: {
+        slugResolver: (node, parent, basePath) =>
+          `${toSlug(node.frontmatter.title)}.html`,
+      },
+      // highlight-end
+    },
+  ],
+}
+```

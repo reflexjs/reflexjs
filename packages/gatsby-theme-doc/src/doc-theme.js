@@ -14,4 +14,14 @@ export default {
       textDecoration: "none",
     },
   },
+
+  h3: {
+    fontSize: "3xl",
+  },
+
+  styles: {
+    inlineCode: {
+      bg: "muted",
+    },
+  },
 }

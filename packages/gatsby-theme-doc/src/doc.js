@@ -5,13 +5,22 @@ import {
   ThemeProvider,
   Icon,
 } from "@reflexjs/gatsby-theme-core"
-import { H1, Container, Grid, Div, Button, P } from "@reflexjs/components"
+import {
+  H1,
+  Container,
+  Grid,
+  Div,
+  Button,
+  P,
+  A,
+  Flexbox,
+} from "@reflexjs/components"
 import { Block } from "@reflexjs/gatsby-theme-block"
 import { MDXComponents } from "./mdx-components"
 import { DocNav } from "./doc-nav"
 import docTheme from "./doc-theme"
 
-export const Doc = ({ title, excerpt, body }) => {
+export const Doc = ({ title, excerpt, body, previousDoc, nextDoc }) => {
   const [showMenu, setShowMenu] = React.useState(false)
   return (
     <ThemeProvider theme={docTheme}>
@@ -68,7 +77,7 @@ export const Doc = ({ title, excerpt, body }) => {
               <Block src="docs-header" my="6" />
 
               {title && (
-                <H1 mt="0" mb="4" fontWeight="extrabold">
+                <H1 mt="0" mb="2" fontWeight="extrabold">
                   {title}
                 </H1>
               )}
@@ -80,6 +89,26 @@ export const Doc = ({ title, excerpt, body }) => {
               )}
 
               {body && <MDXRenderer>{body}</MDXRenderer>}
+
+              <Flexbox justifyContent="space-between" mt="10">
+                {previousDoc && (
+                  <Button as={A} variant="link" href={previousDoc.slug}>
+                    <Icon name="arrow-left" mr="2" />
+                    {previousDoc.title}
+                  </Button>
+                )}
+                {nextDoc && (
+                  <Button
+                    as={A}
+                    variant="primary"
+                    ml="auto"
+                    href={nextDoc.slug}
+                  >
+                    {nextDoc.title}
+                    <Icon name="arrow-right" ml="2" />
+                  </Button>
+                )}
+              </Flexbox>
             </Div>
           </Grid>
         </Container>

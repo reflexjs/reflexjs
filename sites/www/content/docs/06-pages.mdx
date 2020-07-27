@@ -1,0 +1,29 @@
+---
+title: Build a landing page
+excerpt: Learn how to build a landing page using blocks.
+---
+
+Reflex ships with a **Page** type. You can use a **page** to create a simple
+text-based page or a complex landing page with [components](/docs/components) and [blocks](/docs/blocks).
+
+## Add a page
+
+To add a page, create a file in the `content/pages` directory. Example: `content/pages/about.mdx`.
+
+<Callout my="8">
+  You can use either <Strong>.mdx</Strong> or <Strong>.md</Strong> file
+  extension. They both work.
+</Callout>
+
+A basic page looks like this.
+
+```md title=content/pages/about.mdx
+---
+title: Welcome to Reflex
+excerpt: Description for this page. This is mostly used for the description meta tag.
+---
+
+# Add your content here.
+```
+
+On save, Gatsby will automatically create a new page for you at `/about`.
