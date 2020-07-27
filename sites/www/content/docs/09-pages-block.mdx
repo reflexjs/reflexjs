@@ -30,19 +30,16 @@ title: Welcome to Reflex
 excerpt: Description for this page. This is mostly used for the description meta tag.
 ---
 
-// highlight-start
-
-<Block src="hero" />
-
-// highlight-end
+<Block src="hero" /> // highlight-line
 ```
 
-<Callout my="8">
-  When adding a block to a page, you can omit the <code>/content/blocks</code>{" "}
-  path prefix. Reflex will automatically resolve the block using the block name.
+<Callout my="8" pt="0" pb="2">
+
+When adding a block to a page, you can omit the `/content/blocks` path prefix. Reflex will automatically resolve the block using the block name.
+
 </Callout>
 
-Blocks can be nested in sub-directories and used as follows:
+Blocks can also be nested in sub-directories and used as follows:
 
 `<Block src="about/contact" />` will display the block found at `/content/blocks/about/contact`.
 
