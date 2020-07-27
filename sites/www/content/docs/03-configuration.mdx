@@ -1,0 +1,70 @@
+---
+title: Configuration
+excerpt: Configure your site name, description, plugins and themes.
+---
+
+## gatsby-config.js
+
+Configuration options for a Gatsby (and Reflex) site are placed in a `gatsby-config.js` file at the root of the project folder.
+
+```js title=gatsby-config.js
+module.exports = {
+  siteMetadata: {
+    title: "Reflex",
+    description: "Starter for Reflex.",
+    siteUrl: process.env.SITE_URL || "http://localhost:8000",
+  },
+  plugins: ["@reflexjs/gatsby-theme-base"],
+}
+```
+
+<Hr mt="8" />
+
+### siteMetadata
+
+The siteMetadata is for common config that is used across the site. The site name (title), description and other site related
+config are stored in the `siteMetadata`.
+
+Reflex provides the `useSiteMetadata` helper hook to retrieve the `siteMetadata` config.
+
+```jsx title=content/blocks/copyright.mdx
+import { useSiteMetadata } from "@reflexjs/gatsby-theme-core" // highlight-line
+
+export const Copyright = ({ ...props }) => {
+  const { title } = useSiteMetadata() // highlight-line
+  return (
+    <P fontSize="sm" {...props}>
+      © {new Date().getFullYear()} {title}
+    </P>
+  )
+}
+```
+
+<Hr mt="8" />
+
+### plugins
+
+This is where you define your site plugins and themes. Plugins can be listed by name or with options.
+
+```js title=gatsby-config.js
+module.exports = {
+  siteMetadata: {
+    title: "Reflex",
+    description: "Starter for Reflex.",
+    siteUrl: process.env.SITE_URL || "http://localhost:8000",
+  },
+  // highlight-start
+  plugins: [
+    "@reflexjs/gatsby-theme-base"
+    {
+      resolve: "@reflexjs/gatsby-theme-post",
+      options: {
+        basePath: "/the-blog",
+      }
+    }
+  ],
+  // highlight-end
+}
+```
+
+You can read more on the `gatsby-config.js` file in the [Gatsby docs](https://www.gatsbyjs.org/docs/gatsby-config/).

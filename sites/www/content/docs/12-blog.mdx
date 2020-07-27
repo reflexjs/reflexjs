@@ -1,0 +1,70 @@
+---
+title: Build a blog
+excerpt: Learn how to build a blog with Reflex.
+---
+
+Use the `@reflexjs/gatsby-theme-post` package to add a blog to your site.
+
+## Features
+
+- Write your posts using Markdown
+- Add interactive component using MDX
+- Multi-user support
+- Includes tags for taxonomy
+- Code highlighting
+- Click to copy and line highlighting for code
+- SEO, Open graph and Twitter metatags.
+- Fully accessible (WAI-ARIA standards)
+
+## Installation
+
+**Step 1: add dependencies**
+
+Add the `@reflexjs/gatsby-theme-post` package.
+
+```sh
+npm i @reflexjs/gatsby-theme-post
+```
+
+**Step 2: enable the plugin**
+
+Edit your `gatsby-config.js` file and add the plugin.
+
+```js title=gatsby-config.js
+require(`dotenv`).config()
+
+module.exports = {
+  siteMetadata: {
+    title: "Reflex",
+    description: "Starter for Reflex.",
+    siteUrl: process.env.SITE_URL || "http://localhost:8000",
+  },
+  plugins: [
+    "@reflexjs/gatsby-theme-base"
+    "@reflexjs/gatsby-theme-post" // highlight-line
+  ],
+}
+```
+
+**Step 3: run your site**
+
+Start the development server.
+
+```sh
+gatsby develop
+```
+
+This will add the following directories to your site.
+
+```
+site
+└── content
+    └── blocks
+        ├── images
+        ├── navs
+        ├── pages
+        ├── posts
+        │   └── . <-- Place posts here. // highlight-line
+        └── profiles
+            └── . <-- Place author profiles here. // highlight-line
+```

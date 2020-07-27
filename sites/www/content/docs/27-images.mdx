@@ -29,3 +29,23 @@ Remote images can be used the same way.
 and mdx, we are using a workaround for images. We'll fix this once the bug is resolved.
 
 </Callout>
+
+## Aspect ratio
+
+The `Image` component has support for aspect ratio using the `aspectRatio` prop:
+
+### 4/3
+
+```jsx
+<Image src="placeholder.jpg" aspectRatio={4 / 3} />
+```
+
+<Image src="placeholder.jpg" aspectRatio={4 / 3} maxW="50%" />
+
+### 16/8
+
+```jsx
+<Image src="placeholder.jpg" aspectRatio={16 / 8} />
+```
+
+<Image src="placeholder.jpg" aspectRatio={16 / 8} maxW="50%" />

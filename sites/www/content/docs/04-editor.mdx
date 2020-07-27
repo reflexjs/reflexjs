@@ -1,0 +1,21 @@
+---
+title: Configure your editor
+excerpt: Some helpful settings and extensions to make developing with Reflex easier.
+---
+
+## VS Code
+
+1. Install the [VSCode MDX](https://marketplace.visualstudio.com/items?itemName=JounQin.vscode-mdx) extension to add language support for MDX.
+
+2. Enable `ESLint` support for `.md` and `.mdx` extensions.
+
+```js title=.vscode/settings.json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"] // highlight-line
+  }
+}
+```

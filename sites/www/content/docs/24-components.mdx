@@ -8,19 +8,13 @@ import { Callout } from "@reflexjs/gatsby-theme-doc"
 
 ## Installation
 
-Components are provided by the `@reflexjs/components` package.
+Components are provided by the `@reflexjs/components` package and is aleady included in the `base` starter.
 
-```jsx
-npm i @reflexjs/components
-```
-
-Note: `@reflexjs/components` can also be used in any React project.
+[Learn how to use Reflex components in any React project](/blog/reflex-create-react-app).
 
 ## What is a component?
 
-A component is a small reusable piece of content that you can use to build your site.
-
-In Reflex we have made it easy for you to build and theme components.
+A component is a small reusable piece of content that you can use to build your site. In Reflex we have made it easy for you to build and theme components.
 
 Creating and styling component is as easy as writing HTML.
 
@@ -61,11 +55,11 @@ This is a button but with power!
 Styling is a easy as adding attributes to the component, just like `HTML`.
 
 <ThemeProvider>
-  <Button background="tomato">A button</Button>
+  <Button bg="tomato">A button</Button>
 </ThemeProvider>
 
 ```jsx
-<Button background="tomato">A button</Button>
+<Button bg="tomato">A button</Button>
 ```
 
 Now turn this into a fancy button.
@@ -73,11 +67,11 @@ Now turn this into a fancy button.
 <Button
   background="tomato"
   color="white"
-  px="16px"
-  py="12px"
+  px="4"
+  py="3"
+  fontSize="md"
   border="0"
-  fontSize="18px"
-  borderRadius="5px"
+  borderRadius="md"
   hoverBackground="purple"
 >
   Fancy Button
@@ -87,49 +81,18 @@ Now turn this into a fancy button.
 <Button
   background="tomato"
   color="white"
-  padding="12px 16px"
+  px="4"
+  py="3"
+  fontSize="md"
   border="0"
-  fontSize="18px"
-  borderRadius="5px"
+  borderRadius="md"
   hoverBackground="purple"
 >
   Fancy Button
 </Button>
 ```
 
-That was easy. You are now ready to build a hero.
-
-<ThemeProvider>
-  <Section bg="#f7f7f7" p="20px 30px" borderRadius="5px">
-    <Grid col="1fr 300px" gap="18px" alignItems="center">
-      <Div color="#111">
-        <H1 fontSize="40px" mb="0" lineHeight="1.1">
-          This is the heading
-        </H1>
-        <P fontSize="20px" lineHeight="1.4">
-          Ratione dolor nobis maiores impedit ex voluptatibus.
-        </P>
-      </Div>
-      <Image src="placeholder.jpg" />
-    </Grid>
-  </Section>
-</ThemeProvider>
-
-```jsx
-<Section bg="#f7f7f7" p="20px 30px" borderRadius="5px">
-  <Grid col="1fr 300px" gap="18px" alignItems="center">
-    <Div color="#111">
-      <H1 fontSize="40px" mb="0" lineHeight="1.1">
-        This is the heading
-      </H1>
-      <P fontSize="20px" lineHeight="1.4">
-        Ratione dolor nobis maiores impedit ex voluptatibus.
-      </P>
-    </Div>
-    <Image src="placeholder.jpg" />
-  </Grid>
-</Section>
-```
+That was easy. You are now ready to [build a hero](/docs/pages-style-hero).
 
 **Note**: _Grid_, _Flexbox_, _Container_ and _Image_ are special components we added to Reflex. You can learn more about using images [here](/docs/images).
 

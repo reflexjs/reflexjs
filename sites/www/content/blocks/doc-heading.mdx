@@ -1,0 +1,30 @@
+export const DocHeading = ({ heading, step }) => (
+  <H3
+    textAlign="left|left|center"
+    fontSize="xl|2xl"
+    bg="background"
+    position="relative"
+    zIndex="100"
+    d="flex"
+    flexDirection="column"
+    justifyContent="center"
+    alignItems="center"
+    mt="20px|50px|70px"
+    mb="8"
+  >
+    <Span
+      color="background"
+      bg="primary"
+      size="32px"
+      rounded="full"
+      fontSize="lg"
+      d="flex"
+      justifyContent="center"
+      alignItems="center"
+      mb="4"
+    >
+      {step}
+    </Span>
+    {heading}
+  </H3>
+)

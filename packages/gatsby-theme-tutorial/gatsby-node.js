@@ -65,7 +65,7 @@ exports.onCreateNode = async (
     actions.createNode({
       ...tutorialNode,
       weight: parseInt(weight),
-      slug: name === "index" ? `/${basePath}` : `/${basePath}/${name}`,
+      slug: name === "index" ? `${basePath}` : `${basePath}/${name}`,
     })
   }
 }

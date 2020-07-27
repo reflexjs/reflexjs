@@ -1,5 +1,5 @@
 module.exports = (themeOptions) => ({
   contentPath: "tutorial",
-  basePath: "learn",
+  basePath: "/learn",
   ...themeOptions,
 })
