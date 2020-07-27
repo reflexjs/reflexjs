@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-base@0.2.8...@reflexjs/gatsby-theme-base@0.3.0) (2020-07-27)
+
+
+### Features
+
+* **base:** use Image component for markdown img ([0afbd3b](https://github.com/reflexjs/reflex/commit/0afbd3bd1656af497c8294323b508b5dc7a7bacf))
+
+
+
+
+
 ## [0.2.8](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-base@0.2.7...@reflexjs/gatsby-theme-base@0.2.8) (2020-07-23)
 
 **Note:** Version bump only for package @reflexjs/gatsby-theme-base

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/reflexjs/reflex/compare/www@0.5.2...www@0.6.0) (2020-07-27)
+
+
+### Features
+
+* refactor and rewrite docs ([873f12a](https://github.com/reflexjs/reflex/commit/873f12af775622b5c3d66a3eb1083213b8a3d70c))
+
+
+
+
+
 ## [0.5.2](https://github.com/reflexjs/reflex/compare/www@0.5.1...www@0.5.2) (2020-07-23)
 
 **Note:** Version bump only for package www
