@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-video",
   "description": "Adds a Video type to Gatsby sites.",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {

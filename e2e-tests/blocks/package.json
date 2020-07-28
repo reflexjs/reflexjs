@@ -1,7 +1,7 @@
 {
   "name": "e2e-tests-blocks",
   "private": true,
-  "version": "0.1.18",
+  "version": "0.1.19",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby clean && gatsby develop",
@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@reflexjs/gatsby-theme-base": "^0.3.0",
-    "@reflexjs/gatsby-theme-post": "^0.4.0",
-    "@reflexjs/gatsby-theme-video": "^0.0.1"
+    "@reflexjs/gatsby-theme-post": "^0.5.0",
+    "@reflexjs/gatsby-theme-video": "^0.1.0"
   },
   "devDependencies": {
     "fs-extra": "^9.0.1",

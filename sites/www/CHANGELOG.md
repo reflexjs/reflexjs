@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/reflexjs/reflex/compare/www@0.6.1...www@0.7.0) (2020-07-28)
+
+
+### Features
+
+* **video:** add video package ([1b9ec9f](https://github.com/reflexjs/reflex/commit/1b9ec9f87f719071c8247c98abe7c746e0eb19dd))
+* **www:** add videos to site ([e8aeac9](https://github.com/reflexjs/reflex/commit/e8aeac9146c89f658381d5941f5613e27e4f770d))
+* add gatsby-theme-video ([315e56c](https://github.com/reflexjs/reflex/commit/315e56c8eaa4c93eef514dfe18f420388ceba432))
+* **www:** refactor and rewrite docs ([e49fd0a](https://github.com/reflexjs/reflex/commit/e49fd0a7b1c9626259b4c87b8195760ab97fa39f))
+
+
+
+
+
 ## [0.6.1](https://github.com/reflexjs/reflex/compare/www@0.6.0...www@0.6.1) (2020-07-28)
 
 
