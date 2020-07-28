@@ -65,7 +65,14 @@ module.exports = {
           description: `A collection of themes and plugins to help you build Gatsby sites faster.`,
           image: `thumbnail.jpg`,
         },
-        types: [`Page`, `Post`, `Doc`, `Tutorial`, `Styleguide`, `Video`],
+        types: [
+          `MdxPage`,
+          `MdxPost`,
+          `MdxDoc`,
+          `MdxTutorial`,
+          `MdxStyleguide`,
+          `MdxVideo`,
+        ],
         paths: [
           {
             pathname: `/library{,/**}`,
