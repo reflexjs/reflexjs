@@ -9,7 +9,7 @@ module.exports = [
         .match(
           /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/i
         )
-        ?.pop(),
+        .pop(),
   },
   {
     name: "vimeo",
@@ -19,6 +19,6 @@ module.exports = [
         .match(
           /(https?:\/\/)?(www.)?(player.)?vimeo.com\/([a-z]*\/)*([0-9]{6,11})[?]?.*/i
         )
-        ?.pop(),
+        .pop(),
   },
 ]
