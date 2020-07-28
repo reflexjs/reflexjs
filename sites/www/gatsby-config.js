@@ -66,11 +66,15 @@ module.exports = {
             name: "Cards",
           },
           {
-            name: "Footer",
-          },
-          {
             name: "Posts",
             display: "grid",
+          },
+          {
+            name: "Videos",
+            display: "grid",
+          },
+          {
+            name: "Footer",
           },
         ],
       },

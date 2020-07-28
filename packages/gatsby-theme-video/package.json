@@ -1,0 +1,41 @@
+{
+  "name": "@reflexjs/gatsby-theme-video",
+  "description": "Adds a Video type to Gatsby sites.",
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-theme",
+    "video",
+    "youtube",
+    "mdx"
+  ],
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/gatsby-theme-video"
+  },
+  "devDependencies": {
+    "gatsby": "^2.23.3",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "dependencies": {
+    "@reflexjs/components": "^0.1.8",
+    "@reflexjs/gatsby-helpers": "^0.4.0",
+    "@reflexjs/gatsby-plugin-image": "^0.2.1",
+    "@reflexjs/gatsby-theme-core": "^0.3.2",
+    "@reflexjs/utils": "^0.2.1",
+    "gatsby-awesome-pagination": "^0.3.6",
+    "gatsby-source-filesystem": "^2.3.8"
+  }
+}
