@@ -109,6 +109,9 @@ exports.onCreateNode = async (
       postNode.author = profiles[0].name
     }
 
+    // Set publish to true by default.
+    if (postNode.published !== false) postNode.published = true
+
     actions.createNode({
       ...postNode,
     })
@@ -140,6 +143,7 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
           nodes {
             id
             slug
+            published
           }
         }
         allPostTag(sort: { fields: name, order: ASC }) {
@@ -160,21 +164,20 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const tags = result.data.allPostTag.nodes
 
   if (posts.length) {
-    // Create paginated posts pages.
+    const publishedPosts = posts.filter(({ published }) => published)
     paginate({
       createPage,
-      items: posts,
+      items: publishedPosts,
       itemsPerPage: postsPerPage,
       pathPrefix: ({ pageNumber }) =>
         pageNumber === 0 ? basePath : `${basePath}/page`,
       component: require.resolve(`./src/posts-template.js`),
       context: {
-        total: posts.length,
+        total: publishedPosts.length,
         themeOptions: options,
       },
     })
 
-    // Create post pages.
     posts.forEach((node, index) => {
       actions.createPage({
         path: node.slug,

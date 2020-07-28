@@ -11,7 +11,10 @@ export const query = graphql`
       slug
     }
     allPost(
-      filter: { tags: { elemMatch: { name: { eq: $name } } } }
+      filter: {
+        published: { eq: true }
+        tags: { elemMatch: { name: { eq: $name } } }
+      }
       sort: { fields: [date], order: DESC }
     ) {
       posts: nodes {

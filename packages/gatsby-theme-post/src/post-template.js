@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql } from "gatsby"
 import { Layout } from "@reflexjs/gatsby-theme-core"
+import { Block } from "@reflexjs/gatsby-theme-block"
 import { Post } from "./post"
 
 export const query = graphql`
@@ -19,6 +20,7 @@ export const query = graphql`
 
 export default ({ data, ...props }) => (
   <Layout pathname={data.post.slug}>
+    <Block src="post-header" post={data.post} />
     {data.post ? (
       <Post
         {...data.post}
@@ -27,5 +29,6 @@ export default ({ data, ...props }) => (
         {...props}
       />
     ) : null}
+    <Block src="post-footer" post={data.post} />
   </Layout>
 )
