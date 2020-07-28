@@ -39,14 +39,7 @@ Theme UI and style props for a constraint-based design.
 That you can copy and paste into your site.
 
 ### And so much more:
-
-  - Landing pages
-  - Blogs
-  - Podcasts
-  - Photography
-  - SEO
-  - Light and dark mode
-  - Code highlighting
+Landing pages, blogs, podcasts, photography, SEO, light and dark modes, code highlighting.
 
 ## Getting Started
 
