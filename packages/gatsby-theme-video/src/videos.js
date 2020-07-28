@@ -5,17 +5,42 @@ import { Image } from "@reflexjs/gatsby-plugin-image"
 
 export const Videos = ({ videos }) => {
   return videos.length ? (
-    <Grid col="1|2" gap="10|14">
+    <Grid col="1|1|2" gap="6|8|10|14">
       {videos &&
         videos.map((video, index) => (
           <Div key={index} mb="8">
-            <Link to={video.slug} d="block">
-              <Image src={video.thumbnail} aspectRatio={2 / 3} />
-            </Link>
-            <H2>{video.title}</H2>
-            {video.data.duration}
+            <VideoTeaser {...video} />
           </Div>
         ))}
     </Grid>
   ) : null
 }
+
+export const VideoTeaser = ({ title, excerpt, slug, thumbnail, ...props }) => (
+  <Article {...props}>
+    {thumbnail && (
+      <Link href={slug} d="block">
+        <Image
+          src={thumbnail}
+          title={title}
+          alt={title}
+          aspectRatio={16 / 9}
+          rounded="lg"
+          overflow="hidden"
+        />
+      </Link>
+    )}
+    {title && (
+      <Link href={slug}>
+        <H2 mt="4" mb="0" fontSize="2xl" hoverColor="primary">
+          {title}
+        </H2>
+      </Link>
+    )}
+    {excerpt && (
+      <P mt="2" fontSize="md">
+        {excerpt}
+      </P>
+    )}
+  </Article>
+)

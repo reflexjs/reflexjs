@@ -74,13 +74,16 @@ exports.onCreateNode = async (
     // Set videoId and embedUrl
     if (videoProviders.length) {
       const [provider] = videoProviders
-      videoNode.videoId = provider?.videoId(videoNode.url)
-      videoNode.embedUrl = provider?.embedUrl(videoNode.videoId)
+      videoNode.videoId = provider?.videoId(videoNode)
+      videoNode.embedUrl = provider?.embedUrl(videoNode)
 
       if (!videoNode.thumbnail && typeof provider.thumbnail === "function") {
-        videoNode.thumbnail = provider?.thumbnail(videoNode.videoId)
+        videoNode.thumbnail = provider?.thumbnail(videoNode)
       }
     }
+
+    // Set publish to true by default.
+    if (videoNode.published !== false) videoNode.published = true
 
     actions.createNode({
       ...videoNode,
@@ -106,10 +109,11 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const result = await graphql(
     pageQuery ||
       `query {
-        allVideo(filter: {published: {eq: true}}, sort: { fields: title, order: ASC }) {
+        allVideo(sort: {fields: date, order: DESC}) {
           videos: nodes {
             id
             slug
+            published
           }
         }
       }
@@ -123,25 +127,29 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
   const { videos } = result.data.allVideo
 
   if (videos.length) {
+    const publishedVideos = videos.filter(({ published }) => published)
     paginate({
       createPage,
-      items: videos,
+      items: publishedVideos,
       itemsPerPage: videosPerPage,
       pathPrefix: ({ pageNumber }) =>
         pageNumber === 0 ? basePath : `${basePath}/page`,
       component: require.resolve(`./src/videos-template.js`),
       context: {
-        total: videos.length,
+        total: publishedVideos.length,
         themeOptions: options,
       },
     })
 
-    videos.forEach((video) => {
+    videos.forEach((video, index) => {
       actions.createPage({
         path: video.slug,
         component: require.resolve(`./src/video-template.js`),
         context: {
           id: video.id,
+          prev: index === 0 ? null : videos[index - 1].id,
+          next: index === videos.length - 1 ? null : videos[index + 1].id,
+          themeOptions: options,
         },
       })
     })
