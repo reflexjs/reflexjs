@@ -74,11 +74,11 @@ exports.onCreateNode = async (
     // Set videoId and embedUrl
     if (videoProviders.length) {
       const [provider] = videoProviders
-      videoNode.videoId = provider?.videoId(videoNode)
-      videoNode.embedUrl = provider?.embedUrl(videoNode)
+      videoNode.videoId = provider.videoId(videoNode)
+      videoNode.embedUrl = provider.embedUrl(videoNode)
 
       if (!videoNode.thumbnail && typeof provider.thumbnail === "function") {
-        videoNode.thumbnail = provider?.thumbnail(videoNode)
+        videoNode.thumbnail = provider.thumbnail(videoNode)
       }
     }
 
