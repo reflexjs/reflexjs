@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "@reflexjs/gatsby-theme-base": "^0.3.0",
-    "@reflexjs/gatsby-theme-post": "^0.4.0"
+    "@reflexjs/gatsby-theme-post": "^0.4.0",
+    "@reflexjs/gatsby-theme-video": "^0.0.1"
   },
   "devDependencies": {
     "fs-extra": "^9.0.1",
