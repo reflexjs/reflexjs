@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/reflexjs/reflex/compare/www@0.6.0...www@0.6.1) (2020-07-28)
+
+
+### Bug Fixes
+
+* **www:** update heading for docs page ([491a773](https://github.com/reflexjs/reflex/commit/491a7733614b0c49618b49a90dd7c4c431259621))
+
+
+
+
+
 # [0.6.0](https://github.com/reflexjs/reflex/compare/www@0.5.2...www@0.6.0) (2020-07-27)
 
 
