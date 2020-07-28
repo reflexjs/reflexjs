@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-video@0.2.0...@reflexjs/gatsby-theme-video@0.3.0) (2020-07-28)
+
+
+### Features
+
+* **video:** update dependencies ([6a67b1a](https://github.com/reflexjs/reflex/commit/6a67b1a15ce56f7ff4bcfb04ea05e5cb1545c08c))
+
+
+
+
+
 # [0.2.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-video@0.1.0...@reflexjs/gatsby-theme-video@0.2.0) (2020-07-28)
 
 
