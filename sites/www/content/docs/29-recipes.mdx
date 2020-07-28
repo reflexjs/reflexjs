@@ -3,6 +3,36 @@ title: Recipes
 excerpt: Helpful guides and code snippets.
 ---
 
+## Schema
+
+### Additional fields
+
+All Reflex schema types such as `Page`, `Post` or `Video` have a `data` (JSON) field you can use to store additional data via frontmatter.
+
+Consider the following page example:
+
+```md title=content/pages/a-page.mdx
+---
+title: Page title
+display: full
+---
+
+Page content
+```
+
+The `display` field is not defined in the `Page` schema. However, when Reflex builds the `Page`, all frontmatter fields, including `display`, are stored
+as is in the `data` field.
+
+You can leverage this to pass in additional data from your `.mdx` file to your component.
+
+Example:
+
+```jsx title=src/@reflexjs/gatsby-theme-core/page.js
+export const Page = ({ title, data }) => (
+  {data.display === "full"} do something... // highlight-line
+)
+```
+
 ## Theming
 
 ### Styling components
@@ -59,7 +89,51 @@ To style the active `Link` component use the `activeStyle` prop:
 </Link>
 ```
 
-## Slugs
+### Custom syntax highlighting
+
+Syntax highlighting for the code block is provided by [Prism](https://prismjs.com). To customize the colors, add the following colors to your `theme.js` file.
+
+```js title=src/@reflexjs/gatsby-theme-base/theme.js
+export default {
+  preset: base,
+  colors: {
+    // Other custom colors.
+    text: "#000",
+    background: "#fff",
+    primary: "#2a9d8f",
+    secondary: "#e76f51",
+    // highlight-start
+    // Customize the code block theme.
+    prism: {
+      text: "#d6deeb",
+      background: "#212130",
+      comment: "#93b4b4",
+      string: "#addb67",
+      var: "#d6deeb",
+      number: "#f78c6c",
+      constant: "#82aaff",
+      punctuation: "#c792ea",
+      className: "#ffcb8b",
+      tag: "#7fdbca",
+      boolean: "#ff5874",
+      property: "#80cbc4",
+      namespace: "#b2ccd6",
+      highlight: "#243E73",
+      file: "#92B5B2",
+    },
+  },
+  fonts: {
+    ...
+    // Customize the font for the code block.
+    monospace: "Menlo, monospace",
+  },
+  // highlight-end
+}
+```
+
+## Content
+
+### Slugs
 
 Every page is associated with a slug (or route).
 
@@ -81,4 +155,4 @@ The page above will be accessible at `/a-custom-slug.`
 **Hint**: If you name your page `index.mdx`, it will use `` as the slug. Use this to create your front page.
 
 - `content/pages/index.mdx` will have the `/` slug.
-- `content/pages/about/index.mdx` will have the `/about`slug.
+- `content/pages/about/index.mdx` will have the `/about` slug.

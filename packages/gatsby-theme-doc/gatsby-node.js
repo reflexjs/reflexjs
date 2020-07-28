@@ -83,7 +83,7 @@ exports.createResolvers = async ({ createResolvers }) => {
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     query {
-      allDoc {
+      allDoc(sort: { fields: weight }) {
         docs: nodes {
           id
           slug
