@@ -1,4 +1,5 @@
 require(`dotenv`).config()
+const blockCategories = require("./config/block-categories")
 
 module.exports = {
   siteMetadata: {
@@ -12,6 +13,10 @@ module.exports = {
     `@reflexjs/gatsby-theme-doc`,
     `@reflexjs/gatsby-theme-tutorial`,
     `@reflexjs/gatsby-theme-styleguide`,
+    `@reflexjs/gatsby-theme-video`,
+    {
+      resolve: `@reflexjs/gatsby-theme-video`,
+    },
     {
       resolve: `@reflexjs/gatsby-theme-post`,
       options: {
@@ -37,46 +42,7 @@ module.exports = {
     {
       resolve: `@reflexjs/gatsby-theme-library`,
       options: {
-        blockCategories: [
-          {
-            name: "Header",
-          },
-          {
-            name: "Hero",
-          },
-          {
-            name: "Features",
-          },
-          {
-            name: "Call To Action",
-          },
-          {
-            name: "Forms",
-          },
-          {
-            name: "Pricing",
-          },
-          {
-            name: "Team",
-          },
-          {
-            name: "Testimonials",
-          },
-          {
-            name: "Cards",
-          },
-          {
-            name: "Posts",
-            display: "grid",
-          },
-          {
-            name: "Videos",
-            display: "grid",
-          },
-          {
-            name: "Footer",
-          },
-        ],
+        blockCategories,
       },
     },
     {
@@ -99,7 +65,7 @@ module.exports = {
           description: `A collection of themes and plugins to help you build Gatsby sites faster.`,
           image: `thumbnail.jpg`,
         },
-        types: [`Page`, `Post`, `Doc`, `Tutorial`, `Styleguide`],
+        types: [`Page`, `Post`, `Doc`, `Tutorial`, `Styleguide`, `Video`],
         paths: [
           {
             pathname: `/library{,/**}`,

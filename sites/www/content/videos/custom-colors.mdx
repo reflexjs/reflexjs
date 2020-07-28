@@ -1,0 +1,22 @@
+---
+title: How to add custom colors
+excerpt: Learn how to add custom colors to your Reflex site.
+url: https://www.youtube.com/watch?v=SRBAFNIMX5o
+provider: youtube
+thumbnail: videos/how-to-add-custom-colors.jpg
+date: 2020-07-13
+---
+
+```js title=src/@reflex/gatsby-theme-base/theme.js
+export default {
+  preset: base,
+  // highlight-start
+  colors: {
+    text: "#000",
+    background: "#fff",
+    primary: "#2a9d8f",
+    secondary: "#e76f51",
+  },
+  // highlight-end
+}
+```
