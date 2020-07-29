@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.1.0 (2020-07-29)
+
+
+### Features
+
+* **example-video:** update site ([c5b001b](https://github.com/reflexjs/reflex/commit/c5b001bed6be2e227a1b225cc26a0add5002e3ce))
+* add example-video ([44ac0e3](https://github.com/reflexjs/reflex/commit/44ac0e32338cd8dc60fce5cc6399633fce035d16))
+
+
+
+
+
 ## [0.2.5](https://github.com/reflexjs/reflex/compare/gatsby-starter-base@0.2.4...gatsby-starter-base@0.2.5) (2020-07-27)
 
 **Note:** Version bump only for package gatsby-starter-base

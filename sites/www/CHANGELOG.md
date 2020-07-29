@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.8.0](https://github.com/reflexjs/reflex/compare/www@0.7.2...www@0.8.0) (2020-07-29)
+
+
+### Bug Fixes
+
+* **www:** update types for metatags ([eba78af](https://github.com/reflexjs/reflex/commit/eba78af484d9b1f69af8094af6ceea4df3e7d532))
+
+
+### Features
+
+* add example-video ([44ac0e3](https://github.com/reflexjs/reflex/commit/44ac0e32338cd8dc60fce5cc6399633fce035d16))
+
+
+
+
+
 ## [0.7.2](https://github.com/reflexjs/reflex/compare/www@0.7.1...www@0.7.2) (2020-07-28)
 
 **Note:** Version bump only for package www

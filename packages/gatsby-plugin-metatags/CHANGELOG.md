@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-metatags@0.1.7...@reflexjs/gatsby-plugin-metatags@0.2.0) (2020-07-29)
+
+
+### Features
+
+* **metatags:** allow multiple aliases ([5afdf38](https://github.com/reflexjs/reflex/commit/5afdf38bf0bfc263c3013ef0beca00cf233ac04f))
+
+
+
+
+
 ## [0.1.7](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-metatags@0.1.6...@reflexjs/gatsby-plugin-metatags@0.1.7) (2020-07-27)
 
 **Note:** Version bump only for package @reflexjs/gatsby-plugin-metatags
