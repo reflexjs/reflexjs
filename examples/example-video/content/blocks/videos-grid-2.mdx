@@ -3,7 +3,7 @@ import { useVideo } from "@reflexjs/gatsby-theme-video"
 export const Videos = () => {
   const videos = useVideo()
   return videos.length ? (
-    <Container maxW="900px" my="20">
+    <Container maxW="900px" my="10|10|20">
       {videos &&
         videos.map((video, index) => (
           <VideoTeaser key={index} mb="10" {...video} />
@@ -23,7 +23,7 @@ export const VideoTeaser = ({
   ...props
 }) => (
   <Article position="relative" {...props}>
-    <Grid col="350px 1fr" gap="10" alignItems="flex-start">
+    <Grid col="1|1|350px 1fr" gap="4|4|10" alignItems="flex-start">
       {thumbnail && (
         <Link href={slug} d="block" position="relative">
           {data.duration && (

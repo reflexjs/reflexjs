@@ -3,7 +3,7 @@ import { useVideo } from "@reflexjs/gatsby-theme-video"
 export const Videos = () => {
   const videos = useVideo()
   return videos.length ? (
-    <Container my="14">
+    <Container my="10|10|14">
       <Grid col="1|1|2|3" gap="6|8|10|14">
         {videos &&
           videos.map((video, index) => <VideoTeaser key={index} {...video} />)}
