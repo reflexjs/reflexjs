@@ -16,8 +16,8 @@
     "start": "lerna run start --parallel",
     "prepare": "lerna run prepare",
     "lint": "eslint --cache --ext .js,.jsx .",
-    "sync": "npm run sync:starters && npm run sync:sites",
-    "release": "lerna publish && npm run sync",
+    "release": "lerna publish && npm run sync:all",
+    "sync:all": "npm run sync:starters && npm run sync:sites && npm run sync:examples",
     "sync:starters": "./scripts/sync.sh \"starters/*\"",
     "sync:examples": "./scripts/sync.sh \"examples/*\"",
     "sync:sites": "./scripts/sync.sh \"sites/*\""
