@@ -7,14 +7,14 @@ exports.generateMetatags = (node, defaults = {}, overrides = {}) => {
 
   // TODO: Make this configurable.
   const aliases = {
-    title: "name",
-    image: "picture",
-    description: "excerpt",
-    pathname: "slug",
+    title: ["name"],
+    image: ["picture", "thumbnail"],
+    description: ["excerpt"],
+    pathname: ["slug"],
   }
 
-  Object.keys(aliases).forEach(
-    (key) => _node[aliases[key]] && (_node[key] = _node[aliases[key]])
+  Object.keys(aliases).forEach((key) =>
+    aliases[key].forEach((alias) => _node[alias] && (_node[key] = _node[alias]))
   )
 
   const { metatags, ...restNode } = _node
