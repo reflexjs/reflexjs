@@ -1,0 +1,77 @@
+import { useVideo } from "@reflexjs/gatsby-theme-video"
+
+export const Videos = () => {
+  const videos = useVideo()
+  return videos.length ? (
+    <Container maxW="900px" my="20">
+      {videos &&
+        videos.map((video, index) => (
+          <VideoTeaser key={index} mb="10" {...video} />
+        ))}
+    </Container>
+  ) : null
+}
+
+export const VideoTeaser = ({
+  title,
+  slug,
+  excerpt,
+  thumbnail,
+  date,
+  datetime,
+  data,
+  ...props
+}) => (
+  <Article position="relative" {...props}>
+    <Grid col="350px 1fr" gap="10" alignItems="flex-start">
+      {thumbnail && (
+        <Link href={slug} d="block" position="relative">
+          {data.duration && (
+            <Span
+              color="white"
+              bg="primary"
+              rounded="md"
+              bottom="4"
+              right="4"
+              zIndex="100"
+              px="2"
+              py="1"
+              fontSize="sm"
+              position="absolute"
+            >
+              {data.duration}
+            </Span>
+          )}
+          <Image
+            src={thumbnail}
+            title={title}
+            alt={title}
+            aspectRatio={16 / 9}
+            rounded="lg"
+            overflow="hidden"
+            w="full"
+          />
+        </Link>
+      )}
+      <Div py="2">
+        {title && (
+          <Link href={slug}>
+            <H2 my="0" fontSize="3xl" hoverColor="primary">
+              {title}
+            </H2>
+          </Link>
+        )}
+        {excerpt && (
+          <P mt="2" fontSize="md">
+            {excerpt}
+          </P>
+        )}
+        {date && (
+          <Time dateTime={datetime} fontSize="sm">
+            {date}
+          </Time>
+        )}
+      </Div>
+    </Grid>
+  </Article>
+)

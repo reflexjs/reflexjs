@@ -1,0 +1,65 @@
+import { useVideo } from "@reflexjs/gatsby-theme-video"
+
+export const Videos = ({ limit }) => {
+  const videos = useVideo({ featured: true })
+  return videos.length ? (
+    <Container my="10">
+      <Grid col="1|1|2|3" gap="6|8|10|14">
+        {videos &&
+          videos
+            .slice(0, limit)
+            .map((video, index) => <VideoTeaser key={index} {...video} />)}
+      </Grid>
+    </Container>
+  ) : null
+}
+
+export const VideoTeaser = ({
+  title,
+  slug,
+  excerpt,
+  thumbnail,
+  date,
+  datetime,
+  data,
+  ...props
+}) => (
+  <Article position="relative" {...props}>
+    {thumbnail && (
+      <Link href={slug} d="block" position="relative">
+        {data.duration && (
+          <Span
+            color="white"
+            bg="primary"
+            rounded="md"
+            bottom="4"
+            right="4"
+            zIndex="100"
+            px="2"
+            py="1"
+            fontSize="sm"
+            position="absolute"
+          >
+            {data.duration}
+          </Span>
+        )}
+        <Image
+          src={thumbnail}
+          title={title}
+          alt={title}
+          aspectRatio={16 / 9}
+          rounded="lg"
+          overflow="hidden"
+          w="full"
+        />
+      </Link>
+    )}
+    {title && (
+      <Link href={slug}>
+        <H2 mt="4" fontSize="xl" hoverColor="primary">
+          {title}
+        </H2>
+      </Link>
+    )}
+  </Article>
+)

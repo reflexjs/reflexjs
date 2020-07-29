@@ -3819,36 +3819,6 @@
   dependencies:
     tslib "^1.11.2"
 
-"@reflexjs/gatsby-helpers@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@reflexjs/gatsby-helpers/-/gatsby-helpers-0.4.0.tgz#547413bbe87acbd87df95f1a1b0f9754ee83787d"
-  integrity sha512-nSxOaqp812aibNyEFzMXPiqR9NWyHXonQCF8zkKz1+drWMMZ46dp5XNnHfCBNKksnBu0ss/3ashaGLzX2i/XoQ==
-  dependencies:
-    "@sindresorhus/slugify" "^1.0.0"
-
-"@reflexjs/gatsby-theme-core@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@reflexjs/gatsby-theme-core/-/gatsby-theme-core-0.3.2.tgz#c0a21a464eddcb76ba7d8f6df7b2548f4f5cedd2"
-  integrity sha512-eUhBX4Y2mxmwQcRVyZWnwl/hUa7CMKGNwalIqK1w3WX/37ichE8O5knv+bSML8dkUTOgaFPRkwdpY8K9UQ+xAw==
-  dependencies:
-    "@emotion/core" "^10.0.28"
-    "@mdx-js/mdx" "^1.6.4"
-    "@mdx-js/react" "^1.6.5"
-    "@reflexjs/components" "^0.1.8"
-    "@reflexjs/gatsby-helpers" "^0.4.0"
-    "@reflexjs/utils" "^0.2.1"
-    "@theme-ui/prism" "^0.4.0-rc.1"
-    copy-to-clipboard "^3.3.1"
-    gatsby-image "^2.4.5"
-    gatsby-plugin-catch-links "^2.3.2"
-    gatsby-plugin-mdx "^1.2.15"
-    gatsby-plugin-sharp "^2.6.9"
-    gatsby-plugin-theme-ui "^0.3.0"
-    gatsby-source-filesystem "^2.3.8"
-    gatsby-transformer-remark "^2.8.13"
-    gatsby-transformer-sharp "^2.5.3"
-    theme-ui "^0.3.1"
-
 "@rollup/plugin-alias@^3.0.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-alias/-/plugin-alias-3.1.1.tgz#bb96cf37fefeb0a953a6566c284855c7d1cd290c"

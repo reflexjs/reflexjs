@@ -1,0 +1,42 @@
+---
+title: Home
+excerpt: This is your home page.
+---
+
+<Block src="hero" />
+
+<Section bg="muted" py="10|14|16">
+  <Container>
+    <H2 textAlign="center" fontSize="2xl|3xl" fontWeight="bold" mb="0">
+      Featured Videos
+    </H2>
+    <Block src="featured-videos" limit={3} />
+  </Container>
+</Section>
+
+<Block src="home-page-form" />
+
+<Section bg="muted" py="10|14|16">
+  <Container>
+    <H2 textAlign="center" fontSize="2xl|3xl" fontWeight="bold" mb="0">
+      More Videos
+    </H2>
+    <Block src="featured-videos-2" />
+  </Container>
+</Section>
+
+<Section py="8|12|16|24">
+  <Container>
+    <Div textAlign="center">
+      <H2 fontSize="4xl|5xl" m="0">
+        Ready to grow your business?
+      </H2>
+      <P fontSize="xl|2xl" mt="2">
+        Create short videos in minutes without any experience.
+      </P>
+      <ButtonLink href="#" variant="primary lg">
+        Get Started <Icon name="arrow-right-circle" ml="2" />
+      </ButtonLink>
+    </Div>
+  </Container>
+</Section>
