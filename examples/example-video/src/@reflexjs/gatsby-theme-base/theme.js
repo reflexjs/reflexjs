@@ -3,7 +3,7 @@ import base from "@reflexjs/preset-base"
 export default {
   preset: base,
   colors: {
-    primary: "#e63946",
-    primaryHover: "#C81927",
+    primary: "#d22f3b",
+    primaryHover: "#e63946",
   },
 }
