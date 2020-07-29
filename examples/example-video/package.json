@@ -16,6 +16,7 @@
     "@reflexjs/gatsby-theme-base": "^0.3.0",
     "@reflexjs/gatsby-theme-video": "^0.3.0",
     "gatsby": "^2.22.11",
+    "gatsby-plugin-manifest": "^2.4.21",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
