@@ -4,7 +4,7 @@ excerpt: Customize the blog landing page.
 ---
 
 <Block
-  src="video-card"
+  src="post-card"
   url="https://www.youtube-nocookie.com/embed/R22CBI4MFB0"
 />
 
@@ -76,3 +76,23 @@ Make your changes to `posts.js` and save.
 Restart the `gatsby develop` server to see your changes.
 
 Browse the [Blocks library](/library/blocks#posts) for more posts examples.
+
+## Add header and footer
+
+To add a header and footer to the blog pages, create the following blocks.
+
+```
+site
+└── content
+    └── blocks
+        └── posts-header.mdx <-- /posts header // highlight-line
+        └── posts-footer.mdx <-- /posts footer  // highlight-line
+        └── post-header.mdx <-- post page header // highlight-line
+        └── post-footer.mdx <-- post page footer // highlight-line
+    ├── images
+    ├── navs
+    ├── pages
+    └── posts
+```
+
+The blocks are placed on the corresponding pages automatically.

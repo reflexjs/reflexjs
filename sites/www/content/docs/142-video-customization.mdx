@@ -1,0 +1,71 @@
+---
+title: Customization
+excerpt: Customize the videos landing page, header and the video page.
+---
+
+## Videos landing page
+
+To customize the `/videos` landing page, create `src/@reflexjs/gatsby-theme-video/videos.js`:
+
+View [source](https://github.com/reflexjs/reflex/blob/master/packages/gatsby-theme-video/src/videos.js).
+
+```jsx title=src/@reflexjs/gatsby-theme-video/videos.js
+import * as React from "react"
+import { Article, H2, P, Div, Grid, Span } from "@reflexjs/components"
+import { Link } from "@reflexjs/gatsby-theme-core"
+import { Image } from "@reflexjs/gatsby-plugin-image"
+
+export const Videos = ({ videos }) => {
+  // Add custom video display here.
+}
+```
+
+See more examples in the [blocks library](/library/blocks#videos).
+
+## Video page
+
+To customize the video page, create `src/@reflexjs/gatsby-theme-video/video.js`:
+
+View [source](https://github.com/reflexjs/reflex/blob/master/packages/gatsby-theme-video/src/video.js).
+
+```jsx title=src/@reflexjs/gatsby-theme-video/video.js
+import * as React from "react"
+import { MDXRenderer, Icon, ButtonLink } from "@reflexjs/gatsby-theme-core"
+import { Article, H1, Container, Div, Iframe, P } from "@reflexjs/components"
+
+export const Video = ({
+  title,
+  excerpt,
+  body,
+  embedUrl,
+  date,
+  datetime,
+  pageContext,
+}) => {
+  return (
+    <Article py="8|12|14">
+      <Container>// Customize the display here.</Container>
+    </Article>
+  )
+}
+```
+
+## Add header and footer
+
+To add a header and footer to the video pages, create the following blocks.
+
+```
+site
+└── content
+    └── blocks
+        └── videos-header.mdx <-- /videos header // highlight-line
+        └── videos-footer.mdx <-- /videos footer  // highlight-line
+        └── video-header.mdx <-- video page header // highlight-line
+        └── video-footer.mdx <-- video page footer // highlight-line
+    ├── images
+    ├── navs
+    ├── pages
+    └── videos
+```
+
+The blocks are placed on the corresponding pages automatically.
