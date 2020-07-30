@@ -64,7 +64,7 @@ Filter out all unpublished videos tagged with _Example_.
 ```js
 pageQuery: `
   query {
-    allvideo(sort: {fields: date, order: DESC}, filter: { published: { eq: false } }) {
+    allVideo(sort: {fields: date, order: DESC}, filter: { published: { eq: false } }) {
       nodes {
         id
         slug
