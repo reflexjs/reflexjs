@@ -121,3 +121,67 @@ export const Post = ({
   )
 }
 ```
+
+## Previous and Next Pager
+
+The `post-template` automatically renders a `post-header` and a `post-footer` block. Theses blocks receive the same
+props as the `post.js` file.
+
+We can use this to render a previous and next pager without having to shadow `post.js`.
+
+**Create a `content/blocks/post-footer.mdx` block with the following:**
+
+```jsx title=content/blocks/post-footer.mdx
+export const PostFooter = ({ previous, next }) => (
+  <Container maxW="null|null|null|900px">
+    <Flexbox justifyContent="space-between">
+      {previous && (
+        <PagerLink>
+          <Span d="flex" alignItems="center">
+            <Icon name="arrow-left" mr="2" /> Previous
+          </Span>
+          <PagerTitle title={previous.title} />
+        </PagerLink>
+      )}
+      {next && (
+        <PagerLink ml="auto" textAlign="right" alignItems="flex-end">
+          <Span d="flex" alignItems="center">
+            Next <Icon name="arrow-right" ml="2" />
+          </Span>
+          <PagerTitle title={next.title} />
+        </PagerLink>
+      )}
+    </Flexbox>
+  </Container>
+)
+
+export const PagerLink = ({ link, children, ...props }) => (
+  <ButtonLink
+    href={link}
+    d="flex"
+    flexDirection="column"
+    alignItems="flex-start"
+    bg="transparent"
+    rounded="md"
+    border="0"
+    p="4"
+    w="40%"
+    hoverBg="muted"
+    {...props}
+  >
+    {children}
+  </ButtonLink>
+)
+
+export const PagerTitle = ({ title }) => (
+  <P
+    d="none|none|block"
+    mt="4"
+    mb="0"
+    fontWeight="semibold"
+    lineHeight="normal"
+  >
+    {title}
+  </P>
+)
+```
