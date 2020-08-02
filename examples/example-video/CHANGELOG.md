@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.1](https://github.com/reflexjs/reflex/compare/example-video@0.1.0...example-video@0.1.1) (2020-08-02)
+
+
+### Bug Fixes
+
+* **example-blog:** fix responsive style ([00f0005](https://github.com/reflexjs/reflex/commit/00f00054b3a4f7d7fda20bdce714b93b16876f80))
+* **example-video:** compress images ([ff9f722](https://github.com/reflexjs/reflex/commit/ff9f7223038a124252091a8429af8cda67898f8d))
+
+
+
+
+
 # 0.1.0 (2020-07-29)
 
 

@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-post@0.5.0...@reflexjs/gatsby-theme-post@0.6.0) (2020-08-02)
+
+
+### Features
+
+* pass all props to post and video blocks ([9552b84](https://github.com/reflexjs/reflex/commit/9552b84095af035b660294d410cd2cfe62808c90))
+* update video and post template ([0704e6c](https://github.com/reflexjs/reflex/commit/0704e6c530f11d0975fde4a8f0111be176677dc8))
+
+
+
+
+
 # [0.5.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-post@0.4.0...@reflexjs/gatsby-theme-post@0.5.0) (2020-07-28)
 
 

@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.23](https://github.com/reflexjs/reflex/compare/e2e-tests-blocks@0.1.22...e2e-tests-blocks@0.1.23) (2020-08-02)
+
+**Note:** Version bump only for package e2e-tests-blocks
+
+
+
+
+
 ## [0.1.22](https://github.com/reflexjs/reflex/compare/e2e-tests-blocks@0.1.21...e2e-tests-blocks@0.1.22) (2020-07-29)
 
 **Note:** Version bump only for package e2e-tests-blocks

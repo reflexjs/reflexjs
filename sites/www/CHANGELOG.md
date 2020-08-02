@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.1](https://github.com/reflexjs/reflex/compare/www@0.8.0...www@0.8.1) (2020-08-02)
+
+
+### Bug Fixes
+
+* **blocks:** add missing import ([de39e97](https://github.com/reflexjs/reflex/commit/de39e975c49810ced26a1fd72f5de9f34477a36c))
+
+
+
+
+
 # [0.8.0](https://github.com/reflexjs/reflex/compare/www@0.7.2...www@0.8.0) (2020-07-29)
 
 

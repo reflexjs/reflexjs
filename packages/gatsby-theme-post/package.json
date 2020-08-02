@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-post",
   "description": "Adds a Post type to Gatsby sites.",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
