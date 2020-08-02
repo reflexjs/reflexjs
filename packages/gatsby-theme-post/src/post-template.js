@@ -18,17 +18,18 @@ export const query = graphql`
   }
 `
 
-export default ({ data, ...props }) => (
-  <Layout pathname={data.post.slug}>
-    <Block src="post-header" post={data.post} />
-    {data.post ? (
-      <Post
-        {...data.post}
-        previousPost={data.prev}
-        nextPost={data.next}
-        {...props}
-      />
-    ) : null}
-    <Block src="post-footer" post={data.post} />
-  </Layout>
-)
+export default ({ data, ...props }) => {
+  props = {
+    ...data.post,
+    previousPost: data.prev,
+    nextPost: data.next,
+    ...props,
+  }
+  return (
+    <Layout pathname={data.post.slug}>
+      <Block src="post-header" {...props} />
+      {data.post ? <Post {...props} /> : null}
+      <Block src="post-footer" {...props} />
+    </Layout>
+  )
+}

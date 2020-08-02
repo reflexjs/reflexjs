@@ -18,17 +18,18 @@ export const query = graphql`
   }
 `
 
-export default ({ data, ...props }) => (
-  <Layout pathname={data.video.slug}>
-    <Block src="video-header" video={data.video} />
-    {data.video ? (
-      <Video
-        {...data.video}
-        previousvideo={data.prev}
-        nextvideo={data.next}
-        {...props}
-      />
-    ) : null}
-    <Block src="video-header" video={data.video} />
-  </Layout>
-)
+export default ({ data, ...props }) => {
+  props = {
+    ...data.video,
+    previousVideo: data.prev,
+    nextVideo: data.next,
+    ...props,
+  }
+  return (
+    <Layout pathname={data.video.slug}>
+      <Block src="video-header" {...props} />
+      {data.video ? <Video {...props} /> : null}
+      <Block src="video-header" {...props} />
+    </Layout>
+  )
+}
