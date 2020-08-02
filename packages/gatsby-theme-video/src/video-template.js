@@ -21,8 +21,8 @@ export const query = graphql`
 export default ({ data, ...props }) => {
   props = {
     ...data.video,
-    previousVideo: data.prev,
-    nextVideo: data.next,
+    previous: data.prev,
+    next: data.next,
     ...props,
   }
   return (
