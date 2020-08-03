@@ -136,7 +136,7 @@ export const PostFooter = ({ previous, next }) => (
   <Container maxW="null|null|null|900px">
     <Flexbox justifyContent="space-between">
       {previous && (
-        <PagerLink>
+        <PagerLink href={previous.slug}>
           <Span d="flex" alignItems="center">
             <Icon name="arrow-left" mr="2" /> Previous
           </Span>
@@ -144,7 +144,12 @@ export const PostFooter = ({ previous, next }) => (
         </PagerLink>
       )}
       {next && (
-        <PagerLink ml="auto" textAlign="right" alignItems="flex-end">
+        <PagerLink
+          href={next.slug}
+          ml="auto"
+          textAlign="right"
+          alignItems="flex-end"
+        >
           <Span d="flex" alignItems="center">
             Next <Icon name="arrow-right" ml="2" />
           </Span>
@@ -155,9 +160,8 @@ export const PostFooter = ({ previous, next }) => (
   </Container>
 )
 
-export const PagerLink = ({ link, children, ...props }) => (
+export const PagerLink = ({ children, ...props }) => (
   <ButtonLink
-    href={link}
     d="flex"
     flexDirection="column"
     alignItems="flex-start"
