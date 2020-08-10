@@ -1,0 +1,38 @@
+---
+title: Title of this document
+---
+
+<Block src="hero" />
+
+<Container>
+
+This is a paragraph with no section
+
+# Section heading 1
+
+This is paragraph 1 with _emphasied_ code.
+
+This is paragraph 2 with `inline code`.
+
+## Section heading 2
+
+This is content from section heading 2 with [a link](http://example.com) and some **bold** text.
+
+<Block src="posts-grid" filters={{ featured: true }} />
+
+<Hr />
+
+### Section Heading 3
+
+This is some content for section 3.
+
+<Block src="posts-grid" filters={{ tags: [{ name: "Stories" }] }} />
+
+```js
+module.exports = () => {
+  // a comment
+  console.log("this is a code block")
+}
+```
+
+</Container>
