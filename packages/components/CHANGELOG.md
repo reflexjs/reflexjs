@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/reflexjs/reflex/compare/@reflexjs/components@0.1.9...@reflexjs/components@0.2.0) (2020-08-14)
+
+
+### Features
+
+* remove font dependencies from presets ([cd069fd](https://github.com/reflexjs/reflex/commit/cd069fd5d18a2d0b553e9b413ed59049e9dd9c2d))
+
+
+
+
+
 ## [0.1.9](https://github.com/reflexjs/reflex/compare/@reflexjs/components@0.1.8...@reflexjs/components@0.1.9) (2020-08-14)
 
 **Note:** Version bump only for package @reflexjs/components

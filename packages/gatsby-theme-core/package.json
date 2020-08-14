@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-core",
   "description": "The core theme for Reflex. This adds a Page type.",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -32,7 +32,7 @@
     "@emotion/core": "^10.0.28",
     "@mdx-js/mdx": "^1.6.4",
     "@mdx-js/react": "^1.6.5",
-    "@reflexjs/components": "^0.1.9",
+    "@reflexjs/components": "^0.2.0",
     "@reflexjs/gatsby-helpers": "^0.5.0",
     "@reflexjs/utils": "^0.2.1",
     "@theme-ui/prism": "^0.4.0-rc.1",

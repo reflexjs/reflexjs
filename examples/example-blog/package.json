@@ -1,6 +1,6 @@
 {
   "name": "example-blog",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -12,9 +12,9 @@
     "preview": "gatsby build && gatsby serve"
   },
   "dependencies": {
-    "@reflexjs/gatsby-plugin-metatags": "^0.2.1",
-    "@reflexjs/gatsby-theme-base": "^0.3.2",
-    "@reflexjs/gatsby-theme-post": "^0.6.1",
+    "@reflexjs/gatsby-plugin-metatags": "^0.2.2",
+    "@reflexjs/gatsby-theme-base": "^0.3.3",
+    "@reflexjs/gatsby-theme-post": "^0.6.2",
     "gatsby": "^2.22.11",
     "gatsby-plugin-manifest": "^2.4.17",
     "react": "^16.13.1",
