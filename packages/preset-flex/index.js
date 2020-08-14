@@ -1,6 +1,4 @@
 import base from "@reflexjs/preset-base"
-import "typeface-open-sans"
-import "typeface-prata"
 
 export default {
   preset: base,

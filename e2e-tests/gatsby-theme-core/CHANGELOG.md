@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.14](https://github.com/reflexjs/reflex/compare/e2e-tests-gatsby-theme-core@0.1.13...e2e-tests-gatsby-theme-core@0.1.14) (2020-08-14)
+
+**Note:** Version bump only for package e2e-tests-gatsby-theme-core
+
+
+
+
+
+## [0.1.13](https://github.com/reflexjs/reflex/compare/e2e-tests-gatsby-theme-core@0.1.12...e2e-tests-gatsby-theme-core@0.1.13) (2020-08-14)
+
+**Note:** Version bump only for package e2e-tests-gatsby-theme-core
+
+
+
+
+
 ## [0.1.12](https://github.com/reflexjs/reflex/compare/e2e-tests-gatsby-theme-core@0.1.11...e2e-tests-gatsby-theme-core@0.1.12) (2020-07-27)
 
 **Note:** Version bump only for package e2e-tests-gatsby-theme-core

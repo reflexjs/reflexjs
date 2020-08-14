@@ -10,12 +10,13 @@ You can see presets in action in the [Blocks library](/library).
 ## Base
 
 ```sh
-npm i @reflexjs/preset-base
+npm i @reflexjs/preset-base typeface-inter
 ```
 
 ### Extend base
 
 ```js title=src/@reflexjs/gatsby-theme-base/theme.js
+import typeface-inter
 import base from "@reflexjs/preset-base"
 
 export default {
@@ -30,12 +31,14 @@ export default {
 ## Flex
 
 ```sh
-npm i @reflexjs/preset-flex
+npm i @reflexjs/preset-flex typeface-open-sans typeface-prata
 ```
 
 ### Extend flex
 
 ```js title=src/@reflexjs/gatsby-theme-base/theme.js
+import typeface-open-sans
+import typeface-prata
 import flex from "@reflexjs/preset-flex"
 
 export default {

@@ -1,1 +1,5 @@
+require("typeface-open-sans")
+require("typeface-prata")
+require("typeface-lora")
+require("typeface-merriweather")
 require("./src/style.css")

@@ -1,5 +1,3 @@
-import "typeface-inter"
-
 const spacing = {
   "0": "0",
   "1": "0.25rem",

@@ -1,6 +1,4 @@
 import base from "@reflexjs/preset-base"
-import "typeface-lora"
-import "typeface-merriweather"
 
 export default {
   preset: base,
