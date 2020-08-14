@@ -22,8 +22,5 @@
     "url": "https://github.com/reflexjs/reflex.git",
     "directory": "packages/preset-base"
   },
-  "dependencies": {
-    "typeface-inter": "^3.12.0"
-  },
   "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52"
 }

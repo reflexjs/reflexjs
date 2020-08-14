@@ -5,7 +5,7 @@ Base preset for Reflex themes.
 ## Installation
 
 ```sh
-npm i @reflexjs/preset-base
+npm i @reflexjs/preset-base typeface-inter
 ```
 
 ## Usage
@@ -13,6 +13,7 @@ npm i @reflexjs/preset-base
 In your `theme.js` file, import and use the preset as follows:
 
 ```js
+import typeface-inter
 import base from "@reflexjs/preset-base"
 
 export default {

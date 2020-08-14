@@ -28,7 +28,11 @@
     "gatsby-plugin-manifest": "^2.4.11",
     "gatsby-plugin-sitemap": "^2.4.11",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "typeface-open-sans": "^0.0.75",
+    "typeface-lora": "^0.0.72",
+    "typeface-merriweather": "^0.0.72",
+    "typeface-prata": "^0.0.72"
   },
   "devDependencies": {
     "glob": "^7.1.6",

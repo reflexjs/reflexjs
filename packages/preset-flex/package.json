@@ -23,9 +23,7 @@
     "directory": "packages/preset-flex"
   },
   "dependencies": {
-    "@reflexjs/preset-base": "^0.2.4",
-    "typeface-open-sans": "^0.0.75",
-    "typeface-prata": "^0.0.72"
+    "@reflexjs/preset-base": "^0.2.4"
   },
   "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52"
 }
