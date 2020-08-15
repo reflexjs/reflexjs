@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.1](https://github.com/reflexjs/reflex/compare/www@0.10.0...www@0.10.1) (2020-08-15)
+
+
+### Bug Fixes
+
+* **www:** add missing dependencies ([d3442b4](https://github.com/reflexjs/reflex/commit/d3442b4e26b6bb1725e0bd3c404fa767f3514ab3))
+
+
+
+
+
 # [0.10.0](https://github.com/reflexjs/reflex/compare/www@0.9.0...www@0.10.0) (2020-08-15)
 
 
