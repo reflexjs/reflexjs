@@ -5,8 +5,12 @@ const _types = require("./types")
 
 module.exports = (options) => {
   const Slugger = new GithubSlugger()
-  const { appId, apiKey, indexName, types } = withDefaults(options)
+  const { appId, adminKey, indexName, types } = withDefaults(options)
   let { query } = withDefaults(options)
+
+  if (!types.length) {
+    return {}
+  }
 
   // Build query for supplied types.
   if (!query && types.length) {
@@ -64,6 +68,8 @@ module.exports = (options) => {
 
             const sections = mdxToSearchable(node.data.rawBody)
             return sections.reduce((nodeSections, section, index) => {
+              Slugger.reset()
+
               // Create section data.
               const sectionData = {
                 ...defaults,
@@ -99,7 +105,7 @@ module.exports = (options) => {
         resolve: `gatsby-plugin-algolia`,
         options: {
           appId,
-          apiKey,
+          apiKey: adminKey,
           queries,
         },
       },

@@ -14,7 +14,7 @@ export const Highlight = connectHighlight(
       <React.Fragment>
         {parsedHit.map((part, index) =>
           part.isHighlighted ? (
-            <Strong key={index} bg="primary">
+            <Strong key={index} color="primary">
               {part.value}
             </Strong>
           ) : (

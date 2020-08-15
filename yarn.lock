@@ -4302,6 +4302,19 @@
   dependencies:
     tslib "^1.11.2"
 
+"@reflexjs/components@^0.1.8":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@reflexjs/components/-/components-0.1.9.tgz#fe79678763699372854ed4f9a977e3af5ca46c0c"
+  integrity sha512-I7xk+jMeXIo7Bk384fa2te36Mqmwxg/SGdTsemVuHNaPZWZbEw+02u4GG/QsH6UK0mLzvA0+oG+blp/le1cjNw==
+  dependencies:
+    "@emotion/core" "^10.0.28"
+    "@emotion/styled" "^10.0.27"
+    "@styled-system/should-forward-prop" "^5.1.5"
+    "@theme-ui/css" "^0.3.1"
+    "@theme-ui/match-media" "^0.3.1"
+    react "^16.13.1"
+    theme-ui "^0.3.1"
+
 "@rollup/plugin-alias@^3.0.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-alias/-/plugin-alias-3.1.1.tgz#bb96cf37fefeb0a953a6566c284855c7d1cd290c"

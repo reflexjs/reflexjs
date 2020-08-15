@@ -4,15 +4,15 @@ import { Div, Ul, Li, Flexbox, P, Span } from "@reflexjs/components"
 import { Link } from "@reflexjs/gatsby-theme-core"
 import { Highlight } from "./highlight"
 
-export const Hits = connectHits(({ hits, focusedIndex, ...props }) => {
+export const Hits = connectHits(({ hits, ...props }) => {
   return (
     <Div
       bg="background"
-      boxShadow="xl"
+      boxShadow="none|none|xl"
       rounded="lg"
-      w="500px"
+      minW="0|0|500px"
       right="0"
-      position="absolute"
+      position="relative|relative|absolute"
       top="100%"
       mt="2"
     >
@@ -30,6 +30,7 @@ export const Hits = connectHits(({ hits, focusedIndex, ...props }) => {
                 focusBg="muted"
                 hoverTextDecoration="none"
                 focusTextDecoration="none"
+                focusColor="text"
               >
                 <Flexbox flexDirection="column" alignItems="flex-start">
                   <P fontWeight="semibold" fontSize="md" m="0">
@@ -60,7 +61,7 @@ export const Hits = connectHits(({ hits, focusedIndex, ...props }) => {
       <Flexbox
         px="4"
         py="2"
-        justifyContent="flex-end"
+        justifyContent="center|center|flex-end"
         fontSize="sm"
         sx={{
           "> div": {
