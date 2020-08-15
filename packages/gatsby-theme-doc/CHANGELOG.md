@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-doc@0.3.3...@reflexjs/gatsby-theme-doc@0.4.0) (2020-08-15)
+
+
+### Features
+
+* add gatsby-plugin-search-algolia ([150660d](https://github.com/reflexjs/reflex/commit/150660dd5fd009e33dc78c161e863f2a0dc49d8f))
+
+
+
+
+
 ## [0.3.3](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-doc@0.3.2...@reflexjs/gatsby-theme-doc@0.3.3) (2020-08-14)
 
 **Note:** Version bump only for package @reflexjs/gatsby-theme-doc

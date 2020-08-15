@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.10.0](https://github.com/reflexjs/reflex/compare/www@0.9.0...www@0.10.0) (2020-08-15)
+
+
+### Features
+
+* add search ([6430309](https://github.com/reflexjs/reflex/commit/6430309990f511583aab6dfc1146480a65fefa29))
+
+
+
+
+
 # [0.9.0](https://github.com/reflexjs/reflex/compare/www@0.8.2...www@0.9.0) (2020-08-14)
 
 
