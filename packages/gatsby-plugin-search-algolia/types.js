@@ -18,6 +18,11 @@ module.exports = {
       image: "image",
     },
   },
+  Video: {
+    fields: {
+      ...defaultFields,
+    },
+  },
   Doc: {
     fields: {
       ...defaultFields,
