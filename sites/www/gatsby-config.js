@@ -87,5 +87,15 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
     },
+    {
+      resolve: `@reflexjs/gatsby-plugin-search-algolia`,
+      options: {
+        appId: process.env.ALGOLIA_APP_ID,
+        adminKey: process.env.ALGOLIA_ADMIN_KEY,
+        searchKey: process.env.ALGOLIA_SEARCH_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME,
+        types: [`Page`, `Doc`, `Post`, `Video`],
+      },
+    },
   ],
 }

@@ -92,7 +92,7 @@ exports.generateNodeFromMdx = (
     }
   }
 
-  nodeData.data = node.frontmatter
+  nodeData.data = { ...node.frontmatter, rawBody: node.rawBody }
 
   return {
     id: createNodeId(`${nodeType}-${node.id}`),

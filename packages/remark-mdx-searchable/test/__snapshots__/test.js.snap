@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`extracts searchable sections from mdx 1`] = `
+Array [
+  Object {
+    "heading": null,
+    "text": "This is a paragraph with no section",
+  },
+  Object {
+    "heading": "Section heading 1",
+    "text": "This is paragraph 1 with emphasied code.",
+  },
+  Object {
+    "heading": "Section heading 1",
+    "text": "This is paragraph 2 with inline code.",
+  },
+  Object {
+    "heading": "Section heading 2",
+    "text": "This is content from section heading 2 with a link and some bold text.",
+  },
+  Object {
+    "heading": "Section Heading 3",
+    "text": "This is some content for section 3.",
+  },
+]
+`;

@@ -1,0 +1,33 @@
+{
+  "name": "remark-mdx-searchable",
+  "version": "0.0.1",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "mdx",
+    "markdown",
+    "remark",
+    "mdxast"
+  ],
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/remark-mdx-searchable"
+  },
+  "devDependencies": {
+    "jest": "^26.2.2"
+  },
+  "dependencies": {
+    "unist-util-visit": "^2.0.3"
+  }
+}
