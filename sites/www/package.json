@@ -1,7 +1,7 @@
 {
   "name": "www",
   "private": true,
-  "version": "0.10.1",
+  "version": "0.10.2",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@reflexjs/gatsby-plugin-metatags": "^0.2.3",
-    "@reflexjs/gatsby-plugin-search-algolia": "^0.1.1",
+    "@reflexjs/gatsby-plugin-search-algolia": "^0.2.0",
     "@reflexjs/gatsby-theme-base": "^0.3.4",
     "@reflexjs/gatsby-theme-doc": "^0.4.0",
     "@reflexjs/gatsby-theme-library": "^0.3.12",

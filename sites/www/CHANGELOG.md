@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.2](https://github.com/reflexjs/reflex/compare/www@0.10.1...www@0.10.2) (2020-08-15)
+
+
+### Bug Fixes
+
+* **www:** add typeface-inter ([4759a01](https://github.com/reflexjs/reflex/commit/4759a01b6fd3f3c4719cdb8e669a9b5cb287f31c))
+
+
+
+
+
 ## [0.10.1](https://github.com/reflexjs/reflex/compare/www@0.10.0...www@0.10.1) (2020-08-15)
 
 
