@@ -71,8 +71,13 @@ exports.onCreateNode = async (
   // Do nothing if options is not set.
   if (!global || !types || !paths) return
 
-  const nodeTypes = types.map((type) =>
+  let nodeTypes = types.map((type) =>
     typeof type === "string" ? type : type.type
+  )
+
+  // Fix interface to types.
+  nodeTypes = nodeTypes.map((type) =>
+    type.startsWith("Mdx") ? type : `Mdx${type}`
   )
 
   if (!nodeTypes.includes(node.internal.type)) {
