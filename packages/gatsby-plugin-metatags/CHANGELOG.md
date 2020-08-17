@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.4](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-metatags@0.2.3...@reflexjs/gatsby-plugin-metatags@0.2.4) (2020-08-17)
+
+
+### Bug Fixes
+
+* **metatags:** make sure Mdx types are used ([f5673c6](https://github.com/reflexjs/reflex/commit/f5673c629962bebab5f75a8f0008e13220fe685f))
+
+
+
+
+
 ## [0.2.3](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-metatags@0.2.2...@reflexjs/gatsby-plugin-metatags@0.2.3) (2020-08-15)
 
 **Note:** Version bump only for package @reflexjs/gatsby-plugin-metatags

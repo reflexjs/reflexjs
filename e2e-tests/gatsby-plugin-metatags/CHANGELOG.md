@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.0.12](https://github.com/reflexjs/reflex/compare/e2e-tests-gatsby-plugin-metatags@0.0.11...e2e-tests-gatsby-plugin-metatags@0.0.12) (2020-08-17)
+
+**Note:** Version bump only for package e2e-tests-gatsby-plugin-metatags
+
+
+
+
+
 ## [0.0.11](https://github.com/reflexjs/reflex/compare/e2e-tests-gatsby-plugin-metatags@0.0.10...e2e-tests-gatsby-plugin-metatags@0.0.11) (2020-08-15)
 
 **Note:** Version bump only for package e2e-tests-gatsby-plugin-metatags

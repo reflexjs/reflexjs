@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-plugin-metatags",
   "description": "Adds a Post type to Gatsby sites.",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
