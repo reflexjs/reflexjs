@@ -4595,9 +4595,9 @@
     "@mdx-js/react" "^1.0.0"
 
 "@theme-ui/prism@^0.4.0-rc.1":
-  version "0.4.0-rc.1"
-  resolved "https://registry.yarnpkg.com/@theme-ui/prism/-/prism-0.4.0-rc.1.tgz#79913008cf4272e4fbc226bb0f025957198e5257"
-  integrity sha512-FiUM2YlHmf60xFmY6Y72el76q/ayy3FWyaEnfki5uW7a/lMGf0Ev1gOc2yUpGpzh3XxNbk2R0XdReQuqDcKm5Q==
+  version "0.4.0-rc.3"
+  resolved "https://registry.yarnpkg.com/@theme-ui/prism/-/prism-0.4.0-rc.3.tgz#99f0e2c13902750dff8c12eaefde51e97e33f3dc"
+  integrity sha512-PJP4BwRgFopBHBJHG/tvNekFQt5s18NeZmAACu35Y3pFrU9ZrKMD4Hq+jTr8IhsC8ydhV/i52hMu+q31MNZMyQ==
   dependencies:
     prism-react-renderer "^1.0.2"
 
