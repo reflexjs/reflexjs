@@ -69,7 +69,7 @@
     "lerna": "^3.20.2",
     "microbundle": "^0.12.1",
     "prettier": "^2.0.4",
-    "pretty-quick": "^2.0.1",
+    "pretty-quick": "^3.0.0",
     "react-test-renderer": "^16.13.1",
     "start-server-and-test": "^1.11.0",
     "typescript": "^3.9.7"
