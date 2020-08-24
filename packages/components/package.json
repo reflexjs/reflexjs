@@ -28,6 +28,7 @@
     "react": "^16.13.1"
   },
   "dependencies": {
+    "@emotion/is-prop-valid": "^0.8.8",
     "@theme-ui/core": "^0.3.1"
   },
   "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52",

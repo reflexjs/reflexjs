@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, useThemeUI } from "@theme-ui/core"
+import isPropValid from "@emotion/is-prop-valid"
 import { forwardRef } from "react"
 import { styleProps } from "./style-props"
 
@@ -59,7 +60,11 @@ export const propsToSxProps = (props) => {
     })
   })
 
-  return [sxProps, otherProps]
+  const validProps = Object.fromEntries(
+    Object.entries(otherProps).filter(([prop, _]) => isPropValid(prop))
+  )
+
+  return [sxProps, validProps]
 }
 
 export const Box = forwardRef(({ as = "div", __themeKey, ...props }, ref) => {
@@ -71,10 +76,10 @@ export const Box = forwardRef(({ as = "div", __themeKey, ...props }, ref) => {
   if (variant) {
     variant.forEach((variants) =>
       variants.split(" ").map((v) => {
-        sx = {
+        return (sx = {
           ...sx,
           ...theme[__themeKey][v],
-        }
+        })
       })
     )
   }

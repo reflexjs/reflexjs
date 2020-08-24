@@ -31,9 +31,7 @@ export type ComponentWithRef<
   P extends keyof JSX.IntrinsicElements
 > = ForwardRef<T, ComponentProps<P>>
 
-export interface BoxProps extends CssProps {
-  as?: string
-  variant?: string
+export interface AliasProps {
   /**
    * Th/**e **d``** is a shorthand property for the **`display`** CSS property.
    */
@@ -174,6 +172,15 @@ export interface BoxProps extends CssProps {
    * The **`roundedLeft`** is a shorthand property for the **`borderTopLeftRadius`** and **`borderBottomLeftRadius`** CSS properties.
    */
   roundedLeft?: Property.BorderTopLeftRadius
+  /**
+   * The **`size`** is a shorthand property for the **`width`** and **`height`** CSS properties.
+   */
+  size?: Property.Width
+}
+
+export interface BoxProps extends CssProps, AliasProps {
+  as?: string
+  variant?: string
 }
 
 export const A: ComponentWithRef<HTMLAnchorElement, "a">

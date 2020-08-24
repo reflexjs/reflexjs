@@ -140,7 +140,7 @@ export const Preview = ({
         {preview ? (
           <Container
             borderWidth="1px"
-            px="0"
+            px="0|0|0|0"
             boxShadow="null|null|null|lg"
             rounded="null|null|null|lg"
             maxW="null|null|null|1240px"

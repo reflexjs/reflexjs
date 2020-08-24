@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Div renders 1`] = `
-<div
-  className="css-1xi4blx"
-/>
-`;
