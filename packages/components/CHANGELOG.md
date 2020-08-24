@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflex/compare/@reflexjs/components@0.2.0...@reflexjs/components@0.3.0) (2020-08-24)
+
+
+### Features
+
+* **components:** wip for adding ts to components ([46f2f80](https://github.com/reflexjs/reflex/commit/46f2f80a90f2d9618af5e4c378b43d3d0139b161))
+
+
+
+
+
 # [0.2.0](https://github.com/reflexjs/reflex/compare/@reflexjs/components@0.1.9...@reflexjs/components@0.2.0) (2020-08-14)
 
 

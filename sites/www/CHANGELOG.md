@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.10.5](https://github.com/reflexjs/reflex/compare/www@0.10.4...www@0.10.5) (2020-08-24)
+
+
+### Bug Fixes
+
+* **www:** fix a11y issue ([ba805f7](https://github.com/reflexjs/reflex/commit/ba805f7ddd9419c6503dd0ffbfddedfaf554fb1c))
+
+
+
+
+
 ## [0.10.4](https://github.com/reflexjs/reflex/compare/www@0.10.3...www@0.10.4) (2020-08-24)
 
 **Note:** Version bump only for package www

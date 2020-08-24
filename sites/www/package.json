@@ -1,7 +1,7 @@
 {
   "name": "www",
   "private": true,
-  "version": "0.10.4",
+  "version": "0.10.5",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -16,15 +16,15 @@
     "test:e2e:ci": "start-server-and-test dev http://localhost:8080 cy:run"
   },
   "dependencies": {
-    "@reflexjs/gatsby-plugin-metatags": "^0.2.5",
-    "@reflexjs/gatsby-plugin-search-algolia": "^0.2.0",
-    "@reflexjs/gatsby-theme-base": "^0.3.6",
-    "@reflexjs/gatsby-theme-doc": "^0.4.0",
-    "@reflexjs/gatsby-theme-library": "^0.3.13",
-    "@reflexjs/gatsby-theme-post": "^0.6.4",
-    "@reflexjs/gatsby-theme-styleguide": "^0.2.3",
-    "@reflexjs/gatsby-theme-tutorial": "^0.3.3",
-    "@reflexjs/gatsby-theme-video": "^0.4.4",
+    "@reflexjs/gatsby-plugin-metatags": "^0.2.6",
+    "@reflexjs/gatsby-plugin-search-algolia": "^0.2.1",
+    "@reflexjs/gatsby-theme-base": "^0.3.7",
+    "@reflexjs/gatsby-theme-doc": "^0.4.1",
+    "@reflexjs/gatsby-theme-library": "^0.3.14",
+    "@reflexjs/gatsby-theme-post": "^0.6.5",
+    "@reflexjs/gatsby-theme-styleguide": "^0.2.4",
+    "@reflexjs/gatsby-theme-tutorial": "^0.3.4",
+    "@reflexjs/gatsby-theme-video": "^0.4.5",
     "gatsby": "^2.22.11",
     "gatsby-plugin-manifest": "^2.4.11",
     "gatsby-plugin-sitemap": "^2.4.11",
