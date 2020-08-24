@@ -3,15 +3,16 @@
   "description": "React components that can be styled using style props and Theme UI.",
   "version": "0.2.0",
   "sideEffects": false,
-  "source": "index.js",
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
+  "types": "index.d.ts",
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "scripts": {
     "prepare": "microbundle --no-compress --jsx React.createElement",
+    "watch": "microbundle watch --no-compress --jsx React.createElement",
     "test": "jest"
   },
   "bugs": {
@@ -23,15 +24,14 @@
     "url": "https://github.com/reflexjs/reflex.git",
     "directory": "packages/components"
   },
-  "dependencies": {
-    "@emotion/core": "^10.0.28",
-    "@emotion/styled": "^10.0.27",
-    "@styled-system/should-forward-prop": "^5.1.5",
-    "@theme-ui/css": "^0.3.1",
-    "@theme-ui/match-media": "^0.3.1"
-  },
   "peerDependencies": {
     "react": "^16.13.1"
   },
-  "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52"
+  "dependencies": {
+    "@theme-ui/core": "^0.3.1"
+  },
+  "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52",
+  "devDependencies": {
+    "csstype": "^3.0.2"
+  }
 }

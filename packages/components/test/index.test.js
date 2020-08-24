@@ -3,7 +3,7 @@ import renderer from "react-test-renderer"
 import { matchers } from "jest-emotion"
 import { ThemeProvider } from "theme-ui"
 
-import { Div, A, Button } from "../"
+import { Div, A, Button } from "../dist"
 
 expect.extend(matchers)
 
