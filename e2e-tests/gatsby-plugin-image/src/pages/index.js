@@ -17,5 +17,9 @@ export default () => (
     <div data-cy="no-image">
       <Image src="does-not-exit.jpg" />
     </div>
+
+    <div data-cy="svg-image">
+      <Image src="placeholder.svg" alt="This is a SVG image" />
+    </div>
   </div>
 )

@@ -4,9 +4,9 @@ import { filterNodes } from "@reflexjs/utils"
 export const useImage = (filters) => {
   filters = typeof filters === "string" && filters.replace(/^.?\//, "")
 
-  const data = useStaticQuery(graphql`
+  let data = useStaticQuery(graphql`
     {
-      allFile(
+      images: allFile(
         filter: {
           sourceInstanceName: { eq: "Image" }
           extension: { ne: "svg" }
@@ -14,6 +14,8 @@ export const useImage = (filters) => {
       ) {
         nodes {
           src: relativePath
+          extension
+          publicURL
           childImageSharp {
             fluid(cropFocus: CENTER, quality: 100) {
               base64
@@ -25,8 +27,28 @@ export const useImage = (filters) => {
           }
         }
       }
+      svgs: allFile(
+        filter: {
+          sourceInstanceName: { eq: "Image" }
+          extension: { eq: "svg" }
+        }
+      ) {
+        nodes {
+          src: relativePath
+          extension
+          publicURL
+        }
+      }
     }
   `)
 
-  return filterNodes(data, filters, "src")
+  return filterNodes(
+    {
+      allImages: {
+        nodes: [...data.images?.nodes, ...data.svgs?.nodes],
+      },
+    },
+    filters,
+    "src"
+  )
 }

@@ -44,6 +44,16 @@ export const Image = ({ src, alt, title, caption, aspectRatio, ...props }) => {
     )
   }
 
+  // Determine if image is svg using extension.
+  if (image && image.extension === "svg") {
+    return (
+      <Figure {...props}>
+        <Img src={image.publicURL} alt={alt} title={title} {...props} />
+        <Caption />
+      </Figure>
+    )
+  }
+
   return image ? (
     <Figure {...props}>
       {aspectRatio ? (

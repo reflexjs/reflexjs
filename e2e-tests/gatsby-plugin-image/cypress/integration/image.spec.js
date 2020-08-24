@@ -18,4 +18,10 @@ describe("image", () => {
   it("should not display non existing images", () => {
     cy.get("[data-cy=no-image]").find("img").should("not.exist")
   })
+  it("should display svg images", () => {
+    cy.get("[data-cy=svg-image]")
+      .find("figure > img")
+      .invoke("attr", "alt")
+      .should("contain", "This is a SVG image")
+  })
 })
