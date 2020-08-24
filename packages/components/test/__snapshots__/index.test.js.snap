@@ -2,6 +2,6 @@
 
 exports[`Div renders 1`] = `
 <div
-  className="css-1xi4blx"
+  className="css-0"
 />
 `;

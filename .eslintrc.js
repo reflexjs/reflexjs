@@ -30,4 +30,25 @@ module.exports = {
       version: "detect",
     },
   },
+  overrides: [
+    {
+      files: ["*.ts", "*.tsx"],
+      parser: "@typescript-eslint/parser",
+      plugins: ["@typescript-eslint/eslint-plugin"],
+      extends: [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+      ],
+      rules: {
+        "@typescript-eslint/member-delimiter-style": [
+          "error",
+          {
+            multiline: {
+              delimiter: "none",
+            },
+          },
+        ],
+      },
+    },
+  ],
 }

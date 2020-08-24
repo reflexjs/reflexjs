@@ -3,7 +3,7 @@ import renderer from "react-test-renderer"
 import { matchers } from "jest-emotion"
 import { ThemeProvider } from "theme-ui"
 
-import { Div, A, Button } from "../"
+import { Div, A, Button } from "../dist"
 
 expect.extend(matchers)
 
@@ -20,6 +20,7 @@ const theme = {
     bg: "primary",
     color: "background",
     fontSize: "16px",
+    px: [1, 2, 3],
 
     secondary: {
       bg: "secondary",
@@ -116,7 +117,7 @@ describe("Div", () => {
   test("variants style can be overriden", () => {
     const json = renderJSON(
       <ThemeProvider theme={theme}>
-        <Button variant="secondary lg" color="#930">
+        <Button variant="secondary lg" color="#930" px="10">
           Button
         </Button>
       </ThemeProvider>
@@ -127,6 +128,7 @@ describe("Div", () => {
     )
     expect(json).toHaveStyleRule("font-size", "20px")
     expect(json).toHaveStyleRule("color", "#930")
+    expect(json).toHaveStyleRule("padding-left", "10px")
   })
 
   test("renders with pseudo props", () => {

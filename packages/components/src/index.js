@@ -1,48 +1,111 @@
-/* eslint-disable react/display-name */
-import * as React from "react"
-import { Box } from "./box"
-import { split } from "./helpers"
+/** @jsx jsx */
+import { jsx, useThemeUI } from "@theme-ui/core"
+import isPropValid from "@emotion/is-prop-valid"
+import { forwardRef } from "react"
+import { styleProps } from "./style-props"
 
 const RESPONSIVE_SEPARATOR = "|"
 
-const getTag = (tag, componentProps, __themeKey) =>
-  React.forwardRef(({ ...props }, ref) => {
+const regex = new RegExp(`^(${Object.keys(styleProps).join("|")})$`)
+
+// Helper to omit props.
+// See https://github.com/styled-system/styled-system/tree/master/packages/props.
+export const omit = (props) => {
+  const next = {}
+  for (let key in props) {
+    if (regex.test(key)) continue
+    next[key] = props[key]
+  }
+  return next
+}
+
+// Helper to pick props.
+// See https://github.com/styled-system/styled-system/tree/master/packages/props.
+export const pick = (props) => {
+  const next = {}
+  for (let key in props) {
+    if (!regex.test(key)) continue
+    next[key] = props[key]
+  }
+  return next
+}
+
+export const split = (props) => [pick(props), omit(props)]
+
+export const propsToSxProps = (props) => {
+  const [_styleProps, otherProps] = split(props)
+  const sxProps = {}
+
+  Object.entries(_styleProps).forEach(([propName, propValue]) => {
+    // Handle responsive values.
+    if (typeof propValue === "string") {
+      // Allow responsive values to be written as "foo|bar|baz".
+      propValue = propValue.split(RESPONSIVE_SEPARATOR).map((value) => {
+        if (value === "null") {
+          return null
+        }
+        return value.match(/^\d+$/) ? parseInt(value) : value
+      })
+    }
+
+    const { pseudoClass, names } = styleProps[propName]
+    return names.forEach((name) => {
+      if (!pseudoClass) return (sxProps[name] = propValue)
+
+      const pseudoSelector = `&:${pseudoClass}`
+      if (typeof sxProps[pseudoSelector] === "undefined")
+        sxProps[pseudoSelector] = {}
+
+      return (sxProps[pseudoSelector][name] = propValue)
+    })
+  })
+
+  const validProps = Object.fromEntries(
+    Object.entries(otherProps).filter(([prop, _]) => isPropValid(prop))
+  )
+
+  return [sxProps, validProps]
+}
+
+export const Box = forwardRef(({ as = "div", __themeKey, ...props }, ref) => {
+  const { theme } = useThemeUI()
+  const [{ variant, ...sxProps }, otherProps] = propsToSxProps(props)
+
+  // Handle variants.
+  let sx = { ...theme[__themeKey] }
+  if (variant) {
+    variant.forEach((variants) =>
+      variants.split(" ").map((v) => {
+        return (sx = {
+          ...sx,
+          ...theme[__themeKey][v],
+        })
+      })
+    )
+  }
+
+  sx = {
+    ...sx,
+    ...sxProps,
+  }
+
+  return jsx(as, {
+    ref,
+    sx,
+    ...otherProps,
+  })
+})
+
+export const getTag = (tag, componentProps, __themeKey) =>
+  forwardRef((props, ref) => {
     props = {
       ...componentProps,
       ...props,
     }
 
-    const [styleProps, otherProps] = split(props)
-
-    // Allow responsive values to be written as "foo|bar|baz".
-    Object.keys(styleProps).forEach((propName) => {
-      const prop = styleProps[propName]
-      if (typeof prop !== "string") return
-
-      styleProps[propName] = styleProps[propName]
-        .split(RESPONSIVE_SEPARATOR)
-        .map((value) => {
-          if (value === "null") {
-            return null
-          }
-
-          return value.match(/^\d+$/) ? parseInt(value) : value
-        })
-    })
-
-    return (
-      <Box
-        __themeKey={__themeKey || tag}
-        ref={ref}
-        as={tag}
-        {...styleProps}
-        {...otherProps}
-      />
-    )
+    return <Box __themeKey={__themeKey || tag} ref={ref} as={tag} {...props} />
   })
 
-// HTML components.
-// TODO: Use commonjs export so that exports[NAME] can be in a loop?
 export const A = getTag("a")
 export const Abbr = getTag("abbr")
 export const Address = getTag("address")

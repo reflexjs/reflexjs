@@ -1,6 +1,6 @@
 import * as React from "react"
 import { connectSearchBox } from "react-instantsearch-dom"
-import { Form, Input } from "@reflexjs/components"
+import { Form, Input, VisuallyHidden, Label } from "@reflexjs/components"
 import { SearchContext } from "./search-context"
 
 export const SearchBox = connectSearchBox(
@@ -8,7 +8,12 @@ export const SearchBox = connectSearchBox(
     const [, setHasRefinement] = React.useContext(SearchContext)
     return (
       <Form novalidate role="search">
+        <VisuallyHidden>
+          <Label htmlFor="keywords">Search</Label>
+        </VisuallyHidden>
         <Input
+          id="keywords"
+          name="keywords"
           type="search"
           px="3"
           py="2"
