@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-image@0.2.5...@reflexjs/gatsby-plugin-image@0.3.0) (2020-08-24)
+
+
+### Features
+
+* **image:** add svg support ([524633f](https://github.com/reflexjs/reflex/commit/524633f71f0c78d3e3bc383e8e694ae79a4d000d))
+
+
+
+
+
 ## [0.2.5](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-image@0.2.4...@reflexjs/gatsby-plugin-image@0.2.5) (2020-08-15)
 
 **Note:** Version bump only for package @reflexjs/gatsby-plugin-image

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/reflexjs/reflex/compare/e2e-tests-gatsby-plugin-image@0.1.17...e2e-tests-gatsby-plugin-image@0.2.0) (2020-08-24)
+
+
+### Features
+
+* **image:** add svg support ([524633f](https://github.com/reflexjs/reflex/commit/524633f71f0c78d3e3bc383e8e694ae79a4d000d))
+
+
+
+
+
 ## [0.1.17](https://github.com/reflexjs/reflex/compare/e2e-tests-gatsby-plugin-image@0.1.16...e2e-tests-gatsby-plugin-image@0.1.17) (2020-08-15)
 
 **Note:** Version bump only for package e2e-tests-gatsby-plugin-image
