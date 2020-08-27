@@ -1,0 +1,22 @@
+{
+  "name": "ui",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "dev": "gatsby clean && gatsby develop",
+    "preview": "gatsby build && gatsby serve"
+  },
+  "dependencies": {
+    "@reflexjs/gatsby-plugin-metatags": "^0.2.6",
+    "@reflexjs/gatsby-theme-base": "^0.3.7",
+    "gatsby": "^2.22.11",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "typeface-inter": "^3.12.0"
+  }
+}
