@@ -1,6 +1,20 @@
-# @reflexjs/ui
+<h1 align="center">
+@reflexjs/ui
+</h1>
 
-A tiny library for creating and styling UI components with [Theme UI](https://theme-ui.com). It combines the flexibility of Theme UI with the comfort of style props.
+<p align="center">
+  A tiny library for creating and styling UI components with <strong>Theme UI</strong>. It combines the flexibility of Theme UI with the comfort of style props.
+</p>
+
+<p align="center">
+  <a href="https://github.com/reflexjs/reflex/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/@arshad/gatsby-theme-phoenix.svg" alt="License"></a>
+  <a href="https://github.com/reflexjs/reflex/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" /></a>
+  <a href="https://twitter.com/arshadcn"><img src="https://img.shields.io/badge/Follow-%40arshadcn-1da1f2" alt="Follow @arshadcn" /></a>
+</p>
+
+<p align="center">
+<img src="https://i.imgur.com/wGPg1zq.jpg" width="650" />
+</p>
 
 ## Documentation
 
