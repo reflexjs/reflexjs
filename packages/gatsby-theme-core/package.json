@@ -35,6 +35,7 @@
     "@reflexjs/components": "^0.3.0",
     "@reflexjs/gatsby-helpers": "^0.6.0",
     "@reflexjs/utils": "^0.2.1",
+    "@theme-ui/match-media": "^0.3.1",
     "@theme-ui/prism": "^0.4.0-rc.1",
     "copy-to-clipboard": "^3.3.1",
     "gatsby-image": "^2.4.5",
