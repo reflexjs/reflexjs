@@ -1,0 +1,37 @@
+{
+  "name": "@reflexjs/ui",
+  "description": "A tiny library for creating and styling UI components with Theme UI.",
+  "version": "0.3.0",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "index.d.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "microbundle --no-compress --jsx React.createElement",
+    "watch": "microbundle watch --no-compress --jsx React.createElement",
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/ui"
+  },
+  "peerDependencies": {
+    "react": "^16.13.1"
+  },
+  "dependencies": {
+    "@emotion/is-prop-valid": "^0.8.8",
+    "@theme-ui/core": "^0.3.1"
+  },
+  "devDependencies": {
+    "csstype": "^3.0.2"
+  }
+}
