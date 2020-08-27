@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.4.0 (2020-08-27)
+
+
+### Features
+
+* **ui:** add ui package ([e3a6982](https://github.com/reflexjs/reflex/commit/e3a69825e59d61dfece09404d114ab68203e52dc))
+
+
+
+
+
 # [0.3.0](https://github.com/reflexjs/reflex/compare/@reflexjs/ui@0.2.0...@reflexjs/ui@0.3.0) (2020-08-24)
 
 
