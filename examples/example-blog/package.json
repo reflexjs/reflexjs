@@ -1,6 +1,6 @@
 {
   "name": "example-blog",
-  "version": "0.3.14",
+  "version": "0.3.15",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@reflexjs/gatsby-plugin-metatags": "^0.2.6",
-    "@reflexjs/gatsby-theme-base": "^0.3.7",
-    "@reflexjs/gatsby-theme-post": "^0.6.5",
+    "@reflexjs/gatsby-theme-base": "^0.3.8",
+    "@reflexjs/gatsby-theme-post": "^0.6.6",
     "gatsby": "^2.22.11",
     "gatsby-plugin-manifest": "^2.4.17",
     "react": "^16.13.1",

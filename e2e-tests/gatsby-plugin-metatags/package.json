@@ -1,7 +1,7 @@
 {
   "name": "e2e-tests-gatsby-plugin-metatags",
   "private": true,
-  "version": "0.0.14",
+  "version": "0.0.15",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby clean && gatsby develop",
@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@reflexjs/gatsby-plugin-metatags": "^0.2.6",
-    "@reflexjs/gatsby-theme-core": "^0.5.1"
+    "@reflexjs/gatsby-theme-core": "^0.5.2"
   },
   "devDependencies": {
     "gatsby": "^2.23.11",
