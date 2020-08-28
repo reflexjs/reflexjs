@@ -68,20 +68,23 @@ export const propsToSxProps = (props) => {
 }
 
 export const Box = forwardRef(({ as = "div", __themeKey, ...props }, ref) => {
+  let sx = {}
   const { theme } = useThemeUI()
   const [{ variant, ...sxProps }, otherProps] = propsToSxProps(props)
 
   // Handle variants.
-  let sx = { ...theme[__themeKey] }
-  if (variant) {
-    variant.forEach((variants) =>
-      variants.split(" ").map((v) => {
-        return (sx = {
-          ...sx,
-          ...theme[__themeKey][v],
+  if (theme) {
+    sx = { ...theme[__themeKey] }
+    if (variant) {
+      variant.forEach((variants) =>
+        variants.split(" ").map((v) => {
+          return (sx = {
+            ...sx,
+            ...theme[__themeKey][v],
+          })
         })
-      })
-    )
+      )
+    }
   }
 
   sx = {

@@ -1,5 +1,7 @@
 # @reflexjs/components
 
+DEPRECATED: Use [@reflexjs/ui](https://github.com/reflexjs/reflex/tree/master/packages/ui)
+
 React components that can be styled using `style props` and [Theme UI](https://theme-ui.com).
 
 Components are one of the most useful features of Reflex.
