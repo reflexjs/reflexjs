@@ -1,7 +1,7 @@
 {
   "name": "www",
   "private": true,
-  "version": "0.10.6",
+  "version": "0.10.7",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -19,7 +19,7 @@
     "@reflexjs/gatsby-plugin-metatags": "^0.2.6",
     "@reflexjs/gatsby-plugin-search-algolia": "^0.2.1",
     "@reflexjs/gatsby-theme-base": "^0.3.8",
-    "@reflexjs/gatsby-theme-doc": "^0.4.2",
+    "@reflexjs/gatsby-theme-doc": "^0.5.0",
     "@reflexjs/gatsby-theme-library": "^0.3.15",
     "@reflexjs/gatsby-theme-post": "^0.6.6",
     "@reflexjs/gatsby-theme-styleguide": "^0.2.5",

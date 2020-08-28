@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-doc@0.4.2...@reflexjs/gatsby-theme-doc@0.5.0) (2020-08-28)
+
+
+### Features
+
+* **doc:** add DocSearch class ([24e63f0](https://github.com/reflexjs/reflex/commit/24e63f0e66b83d87af2b67a9f20056cb9bd0adea))
+
+
+
+
+
 ## [0.4.2](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-doc@0.4.1...@reflexjs/gatsby-theme-doc@0.4.2) (2020-08-27)
 
 **Note:** Version bump only for package @reflexjs/gatsby-theme-doc
