@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-base",
   "description": "A base theme that bundles other themes.",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -28,12 +28,12 @@
     "react-dom": "^16.13.1"
   },
   "dependencies": {
-    "@reflexjs/components": "^0.3.0",
-    "@reflexjs/gatsby-plugin-image": "^0.3.1",
-    "@reflexjs/gatsby-plugin-metatags": "^0.2.6",
-    "@reflexjs/gatsby-theme-block": "^0.3.5",
-    "@reflexjs/gatsby-theme-core": "^0.5.2",
-    "@reflexjs/gatsby-theme-nav": "^0.3.5",
+    "@reflexjs/components": "^0.3.1",
+    "@reflexjs/gatsby-plugin-image": "^0.3.2",
+    "@reflexjs/gatsby-plugin-metatags": "^0.2.7",
+    "@reflexjs/gatsby-theme-block": "^0.3.6",
+    "@reflexjs/gatsby-theme-core": "^0.5.3",
+    "@reflexjs/gatsby-theme-nav": "^0.3.6",
     "@reflexjs/icons-feather": "^0.1.4",
     "@reflexjs/preset-base": "^0.3.0"
   },

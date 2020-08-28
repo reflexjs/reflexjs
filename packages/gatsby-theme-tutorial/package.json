@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-tutorial",
   "description": "Adds a tutorial section to the Reflex site.",
-  "version": "0.3.5",
+  "version": "0.3.6",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -22,10 +22,10 @@
     "directory": "packages/gatsby-theme-tutorial"
   },
   "dependencies": {
-    "@reflexjs/components": "^0.3.0",
+    "@reflexjs/components": "^0.3.1",
     "@reflexjs/gatsby-helpers": "^0.6.0",
-    "@reflexjs/gatsby-theme-block": "^0.3.5",
-    "@reflexjs/gatsby-theme-core": "^0.5.2",
+    "@reflexjs/gatsby-theme-block": "^0.3.6",
+    "@reflexjs/gatsby-theme-core": "^0.5.3",
     "@reflexjs/icons-feather": "^0.1.4",
     "gatsby": "^2.23.3",
     "gatsby-source-filesystem": "^2.3.8",

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/reflexjs/reflex/compare/@reflexjs/components@0.3.0...@reflexjs/components@0.3.1) (2020-08-28)
+
+
+### Bug Fixes
+
+* **components:** add deprecated message ([79cb87e](https://github.com/reflexjs/reflex/commit/79cb87e665d65bf97fa753581c3373faa8d89dcf))
+
+
+
+
+
 # [0.3.0](https://github.com/reflexjs/reflex/compare/@reflexjs/components@0.2.0...@reflexjs/components@0.3.0) (2020-08-24)
 
 
