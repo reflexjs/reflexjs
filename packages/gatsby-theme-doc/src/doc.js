@@ -73,7 +73,7 @@ export const Doc = ({ title, excerpt, body, previousDoc, nextDoc }) => {
             >
               <DocNav onClick={() => setShowMenu(false)} />
             </Div>
-            <Div mt={[10, 0]} pt="8">
+            <Div mt={[10, 0]} pt="8" className="DocSearch-content">
               <Block src="docs-header" my="6" />
 
               {title && (
