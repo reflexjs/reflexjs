@@ -7,7 +7,7 @@
   "scripts": {
     "start": "gatsby develop -H 0.0.0.0 -p 8080 -o",
     "dev": "gatsby clean && gatsby develop -p 8080 -o",
-    "preview": "gatsby build && gatsby serve -p 9090 -o",
+    "preview": "gatsby clean && gatsby build && gatsby serve -p 9090 -o",
     "screenshot:blocks": "node ./scripts/generate-screenshot-blocks.js",
     "screenshot:pages": "node ./scripts/generate-screenshot-pages.js",
     "cy:open": "cypress open",
