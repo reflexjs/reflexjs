@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@reflexjs/gatsby-plugin-metatags": "^0.2.7",
-    "@reflexjs/gatsby-plugin-search-algolia": "^0.2.1",
     "@reflexjs/gatsby-theme-base": "^0.3.9",
     "@reflexjs/gatsby-theme-doc": "^0.5.1",
     "@reflexjs/gatsby-theme-library": "^0.3.16",

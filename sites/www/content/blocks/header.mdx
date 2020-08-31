@@ -4,7 +4,6 @@ import {
   useLocation,
 } from "@reflexjs/gatsby-theme-core"
 import { useNav } from "@reflexjs/gatsby-theme-nav"
-import { Search } from "@reflexjs/gatsby-plugin-search-algolia"
 
 export const HeaderBlock = ({ ...props }) => {
   const { isFront } = useLocation()
@@ -23,7 +22,6 @@ export const HeaderBlock = ({ ...props }) => {
           <Flexbox d="none|flex" justifyContent="space-between" py="1">
             <Branding />
             <NavMenu name="header" gap="0|8" ml="8|10" />
-            <Search ml="auto" />
             <SocialLinks mx="4" borderRightWidth="1px" pr="4" />
             <ModeToggle ml="0" />
           </Flexbox>
