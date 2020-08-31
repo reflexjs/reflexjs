@@ -23,6 +23,9 @@ export const HeaderBlock = ({ ...props }) => {
             <Branding />
             <NavMenu name="header" gap="0|8" ml="8|10" />
             <Flexbox ml="auto">
+              <VisuallyHidden>
+                <Label htmlFor="docsearch-input">Search</Label>
+              </VisuallyHidden>
               <Input
                 id="docsearch-input"
                 placeholder="Search reflexjs.org"
