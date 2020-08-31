@@ -22,8 +22,20 @@ export const HeaderBlock = ({ ...props }) => {
           <Flexbox d="none|flex" justifyContent="space-between" py="1">
             <Branding />
             <NavMenu name="header" gap="0|8" ml="8|10" />
-            <SocialLinks mx="4" borderRightWidth="1px" pr="4" />
-            <ModeToggle ml="0" />
+            <Flexbox ml="auto">
+              <Input
+                id="docsearch-input"
+                placeholder="Search reflexjs.org"
+                ml="4"
+                rounded="3xl"
+                py="2"
+                fontSize="sm"
+                maxWidth="100%|100%|250px"
+                bg="muted"
+              />
+              <SocialLinks ml="2" mr="4" borderRightWidth="1px" pr="4" />
+              <ModeToggle ml="0" />
+            </Flexbox>
           </Flexbox>
         </Container>
         <Flexbox

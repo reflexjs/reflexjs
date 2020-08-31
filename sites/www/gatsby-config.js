@@ -87,5 +87,14 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
     },
+    {
+      resolve: "gatsby-plugin-docsearch",
+      options: {
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME,
+        inputSelector: process.env.ALGOLIA_INPUT_SELECTOR,
+        debug: process.env.ALGOLIA_DEBUG,
+      },
+    },
   ],
 }
