@@ -12,6 +12,11 @@ module.exports = {
     {
       resolve: "@reflexjs/gatsby-plugin-metatags",
       options: {
+        global: {
+          title: `Reflex UI - A tiny library for creating and styling UI components with Theme UI.`,
+          description: `It combines the flexibility of Theme UI with style props and supports Intellisense.`,
+          image: `thumbnail.jpg`,
+        },
         types: [`Page`],
       },
     },
