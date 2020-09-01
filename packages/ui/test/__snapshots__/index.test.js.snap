@@ -5,3 +5,22 @@ exports[`Div renders 1`] = `
   className="css-0"
 />
 `;
+
+exports[`propsToSxProps it split props in sx-valid props and other props 1`] = `
+Array [
+  Object {
+    "backgroundColor": Array [
+      "primary",
+    ],
+    "fontSize": Array [
+      "sm",
+    ],
+    "variant": Array [
+      "primary lg",
+    ],
+  },
+  Object {
+    "onClick": [Function],
+  },
+]
+`;

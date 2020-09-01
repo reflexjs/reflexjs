@@ -3,7 +3,7 @@ import renderer from "react-test-renderer"
 import { matchers } from "jest-emotion"
 import { ThemeProvider } from "theme-ui"
 
-import { Div, A, Button } from "../dist"
+import { Div, A, Button, propsToSxProps } from "../dist"
 
 expect.extend(matchers)
 
@@ -157,5 +157,19 @@ describe("Div", () => {
     expect(json).toHaveStyleRule("background-color", "#f83", {
       target: ":focus",
     })
+  })
+})
+
+describe("propsToSxProps", () => {
+  test("it split props in sx-valid props and other props", () => {
+    expect(
+      propsToSxProps({
+        bg: "primary",
+        foo: "bar",
+        onClick: () => {},
+        fontSize: "sm",
+        variant: "primary lg",
+      })
+    ).toMatchSnapshot()
   })
 })
