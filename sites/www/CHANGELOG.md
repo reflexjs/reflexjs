@@ -3,6 +3,24 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.11.0](https://github.com/reflexjs/reflex/compare/www@0.10.8...www@0.11.0) (2020-09-01)
+
+
+### Bug Fixes
+
+* **www:** add label for search input ([a4dc8da](https://github.com/reflexjs/reflex/commit/a4dc8da7e5b9341d2d15667677713ba1eadb45a0))
+* **www:** temporarily disable search ([2e288fd](https://github.com/reflexjs/reflex/commit/2e288fdb3e82f13f329a6491fe9273b595fdc6f4))
+
+
+### Features
+
+* **www:** add algolia docsearch ([228cc92](https://github.com/reflexjs/reflex/commit/228cc92eba7f9294a9dd0a90e4eab7b81f64a6d3))
+* **www:** add gatsby-browser for docsearch ([d4d7c4c](https://github.com/reflexjs/reflex/commit/d4d7c4c8b08c1aeadffb30b075855167e3f4cd86))
+
+
+
+
+
 ## [0.10.8](https://github.com/reflexjs/reflex/compare/www@0.10.7...www@0.10.8) (2020-08-28)
 
 **Note:** Version bump only for package www

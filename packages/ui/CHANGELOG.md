@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.2](https://github.com/reflexjs/reflex/compare/@reflexjs/ui@0.4.1...@reflexjs/ui@0.4.2) (2020-09-01)
+
+
+### Bug Fixes
+
+* **ui:** use a ponyfill for Object.fromEntries ([b282d5a](https://github.com/reflexjs/reflex/commit/b282d5abcb9b540f4d0676d7e5b4df545dcde521))
+
+
+
+
+
 ## [0.4.1](https://github.com/reflexjs/reflex/compare/@reflexjs/ui@0.4.0...@reflexjs/ui@0.4.1) (2020-08-27)
 
 **Note:** Version bump only for package @reflexjs/ui

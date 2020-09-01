@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/reflexjs/reflex/compare/ui@0.1.3...ui@0.2.0) (2020-09-01)
+
+
+### Features
+
+* **ui:** update meta tags ([8690b9c](https://github.com/reflexjs/reflex/commit/8690b9c13e1b28c4a038e5ec9a5af924c3b0261c))
+
+
+
+
+
 ## [0.1.3](https://github.com/reflexjs/reflex/compare/ui@0.1.2...ui@0.1.3) (2020-08-28)
 
 **Note:** Version bump only for package ui
