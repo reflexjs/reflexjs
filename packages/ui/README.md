@@ -190,15 +190,13 @@ import {
   P,
   Button,
   Img,
-  Icon,
 } from "@reflexjs/ui"
 
 export default () => (
   <Section py="8|12|16|24">
     <Container>
       <Grid col="1|2" gap="8|12|16" alignItems="center">
-        <Img src="/placeholder.jpg" w="full" rounded="lg" />
-        <Flexbox flexDirection="column" alignItems="center">
+        <Flexbox flexDirection="column" alignItems="center|flex-start">
           <H1 m="0" fontWeight="black" lineHeight="tight">
             Experiences that sell.
           </H1>
@@ -208,9 +206,9 @@ export default () => (
           </P>
           <Button as="a" href="#" variant="primary">
             Try it for free
-            <Icon name="arrow-right" ml="2" />
           </Button>
         </Flexbox>
+        <Img src="/placeholder.jpg" w="full" rounded="lg" />
       </Grid>
     </Container>
   </Section>
