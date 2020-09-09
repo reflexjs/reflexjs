@@ -2,9 +2,13 @@
   "name": "@reflexjs/icons-feather",
   "description": "Packages feather icons for Reflex.",
   "version": "0.1.4",
-  "main": "index.js",
+  "sideEffects": false,
+  "source": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
   "scripts": {
-    "build": "node ./scripts/build.js"
+    "build": "node ./scripts/build.js",
+    "prepare": "microbundle --no-compress"
   },
   "license": "MIT",
   "publishConfig": {
