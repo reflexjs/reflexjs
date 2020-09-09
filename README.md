@@ -19,12 +19,12 @@ A collection of <strong>plugins</strong>, <strong>themes</strong> and pre-built 
 
 ## Features
 
-- **A flexible [component](https://reflexjs.org/docs/components) library:** Building components is as easy as writing HTML. You already know how to use it.
+- **A flexible [component](https://reflexjs.org/docs/components) library:** Building components is as easy as writing HTML.
 - **A powerful [block](https://reflexjs.org/docs/blocks) system:** Build your site using small re-usable blocks that can be placed anywhere.
 - **Responsive [navigation](https://reflexjs.org/docs/navs/) menus:** Create responsive navigation menus and fly-outs using Markdown.
 - **A best-in-class [theming](https://reflexjs.org/docs/theming) library:** Theme UI and style props for a constraint-based design.
 - **A library of [30+ ready-to-use](https://reflexjs.org/library/blocks/) blocks:** That you can copy and paste into your site.
-- **And so much more::** Landing pages, blogs, podcasts, photography, SEO, light and dark modes, code highlighting.
+- **And so much more::** Landing pages, blogs, photography, SEO, light and dark modes, code highlighting.
 
 ## Getting Started
 
