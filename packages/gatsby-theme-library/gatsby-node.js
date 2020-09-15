@@ -98,8 +98,9 @@ exports.onCreateNode = async (
     const code = stripPreviewCode(stripFrontmater(node.rawBody))
 
     const nodeType = `LibraryBlock`
-    const { blockBasePath } = withDefaults(themeOptions)
+    const { blockBasePath, imagePath } = withDefaults(themeOptions)
     const slug = `/${blockBasePath}/${name}`
+    const screenshotPath = `${imagePath}/${name}`
     actions.createNode({
       id: createNodeId(`${nodeType}-${parent.id}`),
       parent: node.id,
@@ -109,8 +110,8 @@ exports.onCreateNode = async (
       doc: node.frontmatter.doc || "default",
       category: parent.relativeDirectory,
       screenshots: {
-        default: `${slug}.png`,
-        dark: `${slug}-dark.png`,
+        default: `${screenshotPath}.png`,
+        dark: `${screenshotPath}-dark.png`,
       },
       internal: {
         type: nodeType,
@@ -121,8 +122,9 @@ exports.onCreateNode = async (
 
   if (parent.sourceInstanceName === "LibraryPage") {
     const nodeType = `LibraryPage`
-    const { pageBasePath } = withDefaults(themeOptions)
+    const { pageBasePath, imagePath } = withDefaults(themeOptions)
     const slug = `/${pageBasePath}/${name}`
+    const screenshotPath = `${imagePath}/${name}`
     const code = stripPreviewCode(stripFrontmater(node.rawBody))
 
     actions.createNode({
@@ -132,8 +134,8 @@ exports.onCreateNode = async (
       code,
       slug,
       screenshots: {
-        default: `${slug}.png`,
-        dark: `${slug}-dark.png`,
+        default: `${screenshotPath}.png`,
+        dark: `${screenshotPath}-dark.png`,
       },
       internal: {
         type: nodeType,

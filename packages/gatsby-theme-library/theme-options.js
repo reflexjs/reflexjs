@@ -3,5 +3,10 @@ module.exports = (themeOptions) => ({
   blockBasePath: "library/blocks",
   pageContentPath: "library/pages",
   pageBasePath: "library/pages",
+  imagePath: "library/images",
+  cloudName: null,
+  apiKey: null,
+  apiSecret: null,
+  uploadFolder: null,
   ...themeOptions,
 })
