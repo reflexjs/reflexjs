@@ -8,10 +8,11 @@ module.exports = {
   },
   plugins: [
     "@reflexjs/gatsby-theme-base",
+    "@reflexjs/gatsby-theme-post",
     {
       resolve: "@reflexjs/gatsby-plugin-metatags",
       options: {
-        types: [`Page`],
+        types: [`Page`, `Post`],
       },
     },
   ],
