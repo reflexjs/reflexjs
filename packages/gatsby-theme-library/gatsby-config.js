@@ -1,7 +1,15 @@
 const withDefaults = require("./theme-options")
 
 module.exports = (themeOptions) => {
-  const { blockContentPath, pageContentPath } = withDefaults(themeOptions)
+  const {
+    blockContentPath,
+    pageContentPath,
+    imagePath,
+    cloudName,
+    apiKey,
+    apiSecret,
+    uploadFolder,
+  } = withDefaults(themeOptions)
 
   return {
     plugins: [
@@ -18,6 +26,22 @@ module.exports = (themeOptions) => {
         options: {
           name: `LibraryPage`,
           path: pageContentPath,
+        },
+      },
+      {
+        resolve: `gatsby-source-filesystem`,
+        options: {
+          name: `images`,
+          path: imagePath,
+        },
+      },
+      {
+        resolve: "gatsby-transformer-cloudinary",
+        options: {
+          cloudName,
+          apiKey,
+          apiSecret,
+          uploadFolder,
         },
       },
     ],

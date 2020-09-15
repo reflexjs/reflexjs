@@ -22,8 +22,12 @@ export const useLibraryBlockCategories = (filters) => {
 
   if (!nodes.length) return null
 
-  nodes.map((node) =>
-    node.blocks.sort((a, b) => (a.slug < b.slug ? -1 : a.slug > b.slug ? 1 : 0))
+  nodes.map(
+    (node) =>
+      node.blocks &&
+      node.blocks.sort((a, b) =>
+        a.slug < b.slug ? -1 : a.slug > b.slug ? 1 : 0
+      )
   )
 
   return nodes

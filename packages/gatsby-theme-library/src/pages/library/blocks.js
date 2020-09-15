@@ -67,7 +67,7 @@ export default ({ location }) => {
           <Div mt="10|0" pt="8">
             <Block src="library/header-blocks" />
             {categories.map(({ name, slug, display, blocks }, index) => {
-              return (
+              return !blocks ? null : (
                 <React.Fragment key={index}>
                   <H2
                     id={slug}
