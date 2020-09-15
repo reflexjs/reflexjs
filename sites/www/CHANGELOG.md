@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.12.0](https://github.com/reflexjs/reflex/compare/www@0.11.1...www@0.12.0) (2020-09-15)
+
+
+### Features
+
+* **gatsby-theme-library:** switch to cloudinary ([22401f1](https://github.com/reflexjs/reflex/commit/22401f131c9d0c20c6910261c7cd4cc6b826463d))
+
+
+
+
+
 ## [0.11.1](https://github.com/reflexjs/reflex/compare/www@0.11.0...www@0.11.1) (2020-09-09)
 
 **Note:** Version bump only for package www

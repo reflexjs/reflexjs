@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-library@0.3.17...@reflexjs/gatsby-theme-library@0.4.0) (2020-09-15)
+
+
+### Features
+
+* **gatsby-theme-library:** switch to cloudinary ([22401f1](https://github.com/reflexjs/reflex/commit/22401f131c9d0c20c6910261c7cd4cc6b826463d))
+
+
+
+
+
 ## [0.3.17](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-library@0.3.16...@reflexjs/gatsby-theme-library@0.3.17) (2020-09-09)
 
 **Note:** Version bump only for package @reflexjs/gatsby-theme-library

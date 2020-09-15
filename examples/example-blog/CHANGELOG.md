@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/reflexjs/reflex/compare/example-blog@0.3.17...example-blog@0.4.0) (2020-09-15)
+
+
+### Features
+
+* **gatsby-starter-base:** add gatsby-theme-post ([ddb64db](https://github.com/reflexjs/reflex/commit/ddb64dbcf79ba10e061a6d980d1f3b717168bf41))
+
+
+
+
+
 ## [0.3.17](https://github.com/reflexjs/reflex/compare/example-blog@0.3.16...example-blog@0.3.17) (2020-09-09)
 
 **Note:** Version bump only for package example-blog
