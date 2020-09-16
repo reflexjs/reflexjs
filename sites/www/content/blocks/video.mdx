@@ -1,4 +1,4 @@
-export const VideoBlock = ({ url, play = true }) => {
+export const VideoBlock = ({ url, play = true, children, ...props }) => {
   const videoRef = React.useRef()
   const [isPlaying, setIsPlaying] = React.useState(play)
   React.useEffect(() => {
@@ -31,6 +31,7 @@ export const VideoBlock = ({ url, play = true }) => {
       borderWidth="10px"
       borderColor="#000"
       bg="#000"
+      {...props}
     >
       {!isPlaying && (
         <Flexbox
@@ -63,6 +64,7 @@ export const VideoBlock = ({ url, play = true }) => {
       <Video muted playsinline ref={videoRef} w="full" loop={isPlaying}>
         <Source src={url} type="video/mp4" />
       </Video>
+      {!isPlaying && children}
     </Div>
   )
 }

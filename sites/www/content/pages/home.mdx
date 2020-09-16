@@ -21,7 +21,11 @@ slug: index
         <Strong>plugins</Strong> to help you build Gatsby sites faster.
       </P>
       <Grid d="inline-grid" mt="2" gap="4" col="2">
-        <ButtonLink href="/docs" variant="primary">
+        <ButtonLink
+          href="/docs"
+          variant="primary"
+          animation="pulsate-fwd 1.5s ease-in-out infinite both"
+        >
           Get started
           <Icon name="arrow-right" ml="2" />
         </ButtonLink>
@@ -30,7 +34,18 @@ slug: index
         </ButtonLink>
       </Grid>
     </Div>
-    <Block src="video" url="reflexjs.mp4" play={false} />
+    <Block src="video" url="reflexjs.mp4" play={false}>
+      <Div
+        backgroundImage="url('reflexjs-blocks.png')"
+        backgroundSize="100%"
+        animation="slide 20s linear infinite"
+        backgroundRepeat="repeat-y"
+        w="100%"
+        h="2400px"
+        position="absolute"
+        top="0"
+      ></Div>
+    </Block>
   </Container>
 </Section>
 
