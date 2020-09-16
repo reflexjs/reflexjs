@@ -62,6 +62,10 @@ export const Tutorial = ({
               "> h2:first-of-type": {
                 my: 0,
                 fontSize: ["xl", "2xl", "3xl"],
+                a: {
+                  color: "text",
+                  textDecoration: "none",
+                },
               },
 
               h3: {

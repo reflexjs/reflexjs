@@ -19,9 +19,9 @@ export const HeaderBlock = ({ ...props }) => {
         <Flexbox d={["none", "flex"]} justifyContent="space-between" py="1">
           <Branding />
           <NavMenu name={navName} gap={[0, 8, 14]} ml="null|10" />
-          <ButtonLink href="/" ml="auto" variant="accent sm">
+          <Button as="a" href="/" ml="auto" variant="accent sm">
             Get Started
-          </ButtonLink>
+          </Button>
           <ModeToggle ml="6" />
         </Flexbox>
       </Container>
@@ -75,9 +75,9 @@ export const HeaderBlock = ({ ...props }) => {
           </Flexbox>
           <NavMenu name={navName} gap={[0, 8]} borderTopWidth="1px" />
           <Flexbox py="4" justifyContent="space-between">
-            <ButtonLink href="/" variant="accent sm">
+            <Button as="a" href="/" variant="accent sm">
               Get Started
-            </ButtonLink>
+            </Button>
             <ModeToggle ml="auto" />
           </Flexbox>
         </Div>

@@ -37,7 +37,7 @@ const glob = require("glob")
   }
 
   try {
-    const imagePathPrefix = `content/images/library/pages`
+    const imagePathPrefix = `library/images`
     const paths = glob.sync(`library/pages/**/*.mdx`).map((path) => {
       const { name } = parse(path)
       return {

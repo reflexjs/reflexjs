@@ -1,5 +1,17 @@
-export const LibraryBlockFooter = ({ block }) => (
-  <Container py="4">
-    <Block src={`library/doc-${block.doc}`} maxW={["none", "60%"]} />
+export const LibraryBlockFooter = ({ block, ...props }) => (
+  <Container py="4" {...props}>
+    <Block
+      src={`library/doc-${block.doc}`}
+      maxW={["none", "60%"]}
+      sx={{
+        h2: {
+          fontSize: "4xl",
+          a: {
+            color: "text",
+            textDecoration: "none",
+          },
+        },
+      }}
+    />
   </Container>
 )

@@ -29,9 +29,9 @@ export const Card = ({ image, title, description, link, ...props }) => (
         {title}
       </H2>
       <P fontSize="xl">{description}</P>
-      <ButtonLink href={link} variant="primary">
+      <Button as="a" href={link} variant="primary">
         Learn more <Icon name="arrow-right" ml="2" />
-      </ButtonLink>
+      </Button>
     </Div>
   </Div>
 )

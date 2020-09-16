@@ -35,9 +35,9 @@ export const Card = ({ image, title, link, ...props }) => (
       <P fontSize="xl" fontWeight="semibold" m="0" flex="1">
         {title}
       </P>
-      <ButtonLink href={link} variant="primary sm" mt="6">
+      <Button as="a" href={link} variant="primary sm" mt="6">
         Learn more <Icon name="arrow-right" ml="2" />
-      </ButtonLink>
+      </Button>
     </Flexbox>
   </Flexbox>
 )
