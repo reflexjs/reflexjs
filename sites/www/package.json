@@ -1,7 +1,7 @@
 {
   "name": "www",
   "private": true,
-  "version": "0.12.0",
+  "version": "0.13.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -22,7 +22,7 @@
     "@reflexjs/gatsby-theme-library": "^0.4.0",
     "@reflexjs/gatsby-theme-post": "^0.6.7",
     "@reflexjs/gatsby-theme-styleguide": "^0.2.6",
-    "@reflexjs/gatsby-theme-tutorial": "^0.3.7",
+    "@reflexjs/gatsby-theme-tutorial": "^0.3.8",
     "@reflexjs/gatsby-theme-video": "^0.4.7",
     "gatsby": "^2.22.11",
     "gatsby-plugin-manifest": "^2.4.11",
