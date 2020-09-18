@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/reflexjs/reflex/compare/example-blog@0.4.0...example-blog@0.4.1) (2020-09-18)
+
+**Note:** Version bump only for package example-blog
+
+
+
+
+
 # [0.4.0](https://github.com/reflexjs/reflex/compare/example-blog@0.3.17...example-blog@0.4.0) (2020-09-15)
 
 

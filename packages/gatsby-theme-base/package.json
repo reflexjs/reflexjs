@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-base",
   "description": "A base theme that bundles other themes.",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -33,7 +33,7 @@
     "@reflexjs/gatsby-plugin-metatags": "^0.2.7",
     "@reflexjs/gatsby-theme-block": "^0.3.6",
     "@reflexjs/gatsby-theme-core": "^0.5.3",
-    "@reflexjs/gatsby-theme-nav": "^0.3.6",
+    "@reflexjs/gatsby-theme-nav": "^0.3.7",
     "@reflexjs/icons-feather": "^0.2.0",
     "@reflexjs/preset-base": "^0.3.0"
   },

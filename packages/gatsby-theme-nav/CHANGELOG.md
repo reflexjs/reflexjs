@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.7](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-nav@0.3.6...@reflexjs/gatsby-theme-nav@0.3.7) (2020-09-18)
+
+
+### Bug Fixes
+
+* **gatsby-theme-nav:** update style for text only menu items ([e6376e5](https://github.com/reflexjs/reflex/commit/e6376e5aba61af59eda4d718e55c0e0e9040d602))
+
+
+
+
+
 ## [0.3.6](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-nav@0.3.5...@reflexjs/gatsby-theme-nav@0.3.6) (2020-08-28)
 
 **Note:** Version bump only for package @reflexjs/gatsby-theme-nav

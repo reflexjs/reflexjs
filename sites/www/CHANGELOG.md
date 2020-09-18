@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.13.1](https://github.com/reflexjs/reflex/compare/www@0.13.0...www@0.13.1) (2020-09-18)
+
+**Note:** Version bump only for package www
+
+
+
+
+
 # [0.13.0](https://github.com/reflexjs/reflex/compare/www@0.12.0...www@0.13.0) (2020-09-16)
 
 

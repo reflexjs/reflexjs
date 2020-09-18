@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-nav",
   "description": "Handles navigation menus for Reflex.",
-  "version": "0.3.6",
+  "version": "0.3.7",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
