@@ -22,9 +22,8 @@ export const NavMenuLink = ({
     ...props,
   }
 
-  const linkStyle = {
+  const style = {
     color: "text",
-    hoverColor: "primary",
     fontSize: "md",
     fontWeight: depth === 1 ? "light" : "normal",
     d: "block",
@@ -32,15 +31,25 @@ export const NavMenuLink = ({
     px: [4, 0],
     py: dropdown && 3,
     textAlign: ["left", !dropdown ? "left" : "center"],
+  }
+
+  const linkStyle = {
+    ...style,
     ...(isOpen && activeStyle),
   }
 
   return type === "link" ? (
-    <Link href={url} activeStyle={activeStyle} {...linkStyle} {...props}>
+    <Link
+      href={url}
+      activeStyle={activeStyle}
+      {...linkStyle}
+      {...props}
+      hoverColor="primary"
+    >
       {value}
     </Link>
   ) : (
-    <Span {...linkStyle} {...props}>
+    <Span {...style} {...props} cursor="auto">
       {value}
     </Span>
   )
