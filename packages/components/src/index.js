@@ -8,6 +8,14 @@ const RESPONSIVE_SEPARATOR = "|"
 
 const regex = new RegExp(`^(${Object.keys(styleProps).join("|")})$`)
 
+// Object.fromEntries ponyfill.
+export const fromEntries = (iterable) => {
+  return [...iterable].reduce((obj, [key, val]) => {
+    obj[key] = val
+    return obj
+  }, {})
+}
+
 // Helper to omit props.
 // See https://github.com/styled-system/styled-system/tree/master/packages/props.
 export const omit = (props) => {
@@ -60,7 +68,7 @@ export const propsToSxProps = (props) => {
     })
   })
 
-  const validProps = Object.fromEntries(
+  const validProps = fromEntries(
     Object.entries(otherProps).filter(([prop, _]) => isPropValid(prop))
   )
 
