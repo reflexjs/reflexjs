@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.12](https://github.com/reflexjs/reflex/compare/example-video@0.1.11...example-video@0.1.12) (2020-09-21)
+
+**Note:** Version bump only for package example-video
+
+
+
+
+
 ## [0.1.11](https://github.com/reflexjs/reflex/compare/example-video@0.1.10...example-video@0.1.11) (2020-09-18)
 
 **Note:** Version bump only for package example-video

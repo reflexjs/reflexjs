@@ -1,6 +1,6 @@
 {
   "name": "example-video",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -12,9 +12,9 @@
     "preview": "gatsby build && gatsby serve"
   },
   "dependencies": {
-    "@reflexjs/gatsby-plugin-metatags": "^0.2.7",
-    "@reflexjs/gatsby-theme-base": "^0.3.11",
-    "@reflexjs/gatsby-theme-video": "^0.4.7",
+    "@reflexjs/gatsby-plugin-metatags": "^0.2.8",
+    "@reflexjs/gatsby-theme-base": "^0.3.12",
+    "@reflexjs/gatsby-theme-video": "^0.4.8",
     "gatsby": "^2.22.11",
     "gatsby-plugin-manifest": "^2.4.21",
     "react": "^16.13.1",

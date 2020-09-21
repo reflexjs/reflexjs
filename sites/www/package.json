@@ -1,7 +1,7 @@
 {
   "name": "www",
   "private": true,
-  "version": "0.13.1",
+  "version": "0.13.2",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -16,14 +16,14 @@
     "test:e2e:ci": "start-server-and-test dev http://localhost:8080 cy:run"
   },
   "dependencies": {
-    "@reflexjs/gatsby-plugin-metatags": "^0.2.7",
-    "@reflexjs/gatsby-theme-base": "^0.3.11",
-    "@reflexjs/gatsby-theme-doc": "^0.5.2",
-    "@reflexjs/gatsby-theme-library": "^0.4.0",
-    "@reflexjs/gatsby-theme-post": "^0.6.7",
-    "@reflexjs/gatsby-theme-styleguide": "^0.2.6",
-    "@reflexjs/gatsby-theme-tutorial": "^0.3.8",
-    "@reflexjs/gatsby-theme-video": "^0.4.7",
+    "@reflexjs/gatsby-plugin-metatags": "^0.2.8",
+    "@reflexjs/gatsby-theme-base": "^0.3.12",
+    "@reflexjs/gatsby-theme-doc": "^0.5.3",
+    "@reflexjs/gatsby-theme-library": "^0.4.1",
+    "@reflexjs/gatsby-theme-post": "^0.6.8",
+    "@reflexjs/gatsby-theme-styleguide": "^0.2.7",
+    "@reflexjs/gatsby-theme-tutorial": "^0.3.9",
+    "@reflexjs/gatsby-theme-video": "^0.4.8",
     "gatsby": "^2.22.11",
     "gatsby-plugin-manifest": "^2.4.11",
     "gatsby-plugin-sitemap": "^2.4.11",

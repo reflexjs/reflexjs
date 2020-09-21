@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/reflexjs/reflex/compare/@reflexjs/components@0.3.1...@reflexjs/components@0.3.2) (2020-09-21)
+
+
+### Bug Fixes
+
+* **components:** add ponyfill for fromEntries ([449e8d7](https://github.com/reflexjs/reflex/commit/449e8d7a3ad204dc378407b9714048b3fb9fc763))
+
+
+
+
+
 ## [0.3.1](https://github.com/reflexjs/reflex/compare/@reflexjs/components@0.3.0...@reflexjs/components@0.3.1) (2020-08-28)
 
 
