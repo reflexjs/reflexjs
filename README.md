@@ -1,21 +1,14 @@
-<h1 align="center">
-🚀<br />
-Reflex - Supercharge your Gatsby sites
-</h1>
+# Reflex - Supercharge your Gatsby sites
 
-<p align="center">
 A collection of <strong>plugins</strong>, <strong>themes</strong> and pre-built <strong>blocks</strong> to help you build Gatsby sites faster.
-</p>
 
-<p align="center">
+<p>
   <a href="https://github.com/reflexjs/reflex/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/@arshad/gatsby-theme-phoenix.svg" alt="License"></a>
   <a href="https://github.com/reflexjs/reflex/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" /></a>
   <a href="https://twitter.com/arshadcn"><img src="https://img.shields.io/badge/Follow-%40arshadcn-1da1f2" alt="Follow @arshadcn" /></a>
 </p>
 
-<p align="center">
 <img src="https://arshad.io/uploads/reflexjs.gif" width="650" />
-</p>
 
 ## Features
 
@@ -31,6 +24,14 @@ A collection of <strong>plugins</strong>, <strong>themes</strong> and pre-built 
 ```sh
 gatsby new site reflexjs/gatsby-starter-base
 ```
+
+## @reflexjs/ui
+
+A tiny library for creating and styling UI components with <strong>Theme UI</strong>. It combines the flexibility of Theme UI with the comfort of style props.
+
+<img src="https://i.imgur.com/wGPg1zq.jpg" width="650" />
+
+[Learn more](https://ui.reflexjs.org)
 
 ## Learn
 
