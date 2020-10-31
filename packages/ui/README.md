@@ -93,7 +93,7 @@ Step 3: Add `InitializeColorMode` to `src/pages/_document.js`
 
 ```jsx
 // src/pages/_document.js
-import Document, { Main, NextScript } from "next/document"
+import Document, { Main, Html, Head, NextScript } from "next/document"
 import { InitializeColorMode } from "theme-ui"
 
 export default class extends Document {
@@ -104,13 +104,14 @@ export default class extends Document {
 
   render() {
     return (
-      <html lang="en">
+      <Html lang="en">
+        <Head />
         <body>
           <InitializeColorMode />
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     )
   }
 }
