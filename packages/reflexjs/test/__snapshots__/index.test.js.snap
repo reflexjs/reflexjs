@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`transformProps it transform reflexjs sx to theme-ui sx 1`] = `
+Object {
+  "&:hover, &:focus": Object {
+    "> a": Object {
+      "width": Array [
+        "sm",
+        "md",
+        "lg",
+      ],
+    },
+  },
+  ":hover": Object {
+    "a": Object {
+      ":focus": Object {
+        "maxWidth": 100,
+      },
+      "color": Array [
+        "yellow",
+        "green",
+      ],
+      "height": Array [
+        1,
+        2,
+        3,
+      ],
+    },
+  },
+  "backgroundColor": Array [
+    "red",
+    "blue",
+  ],
+  "color": [Function],
+  "fontSize": Array [
+    "red",
+  ],
+  "h1": Object {
+    ":hover": Object {
+      "color": Array [
+        "red",
+        "blue",
+      ],
+    },
+    "a": Object {
+      "height": Array [
+        4,
+        5,
+        6,
+      ],
+      "width": Array [
+        4,
+        5,
+        6,
+      ],
+    },
+    "color": Array [
+      "red",
+    ],
+    "paddingLeft": Array [
+      1,
+      2,
+      3,
+    ],
+    "paddingRight": Array [
+      1,
+      2,
+      3,
+    ],
+  },
+  "height": Array [
+    4,
+    5,
+    6,
+  ],
+  "width": Array [
+    4,
+    5,
+    6,
+  ],
+}
+`;

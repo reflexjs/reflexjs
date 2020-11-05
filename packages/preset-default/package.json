@@ -1,0 +1,26 @@
+{
+  "name": "@reflexjs/preset-default",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "source": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "microbundle --no-compress",
+    "watch": "microbundle watch --no-compress"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/preset-default"
+  }
+}
