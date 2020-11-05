@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/ui",
   "description": "A tiny library for creating and styling UI components with Theme UI.",
-  "version": "0.4.3",
+  "version": "0.4.4",
   "sideEffects": false,
   "main": "dist/index.js",
   "module": "dist/index.esm.js",

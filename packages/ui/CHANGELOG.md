@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.4](https://github.com/reflexjs/reflex/compare/@reflexjs/ui@0.4.3...@reflexjs/ui@0.4.4) (2020-11-05)
+
+**Note:** Version bump only for package @reflexjs/ui
+
+
+
+
+
 ## [0.4.3](https://github.com/reflexjs/reflex/compare/@reflexjs/ui@0.4.2...@reflexjs/ui@0.4.3) (2020-09-09)
 
 **Note:** Version bump only for package @reflexjs/ui
