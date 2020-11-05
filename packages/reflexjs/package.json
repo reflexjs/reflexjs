@@ -22,7 +22,8 @@
   "homepage": "https://github.com/reflexjs/reflex",
   "repository": {
     "type": "git",
-    "url": "https://github.com/reflexjs/reflex.git"
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/reflexjs"
   },
   "dependencies": {
     "csstype": "^3.0.2",
