@@ -1,0 +1,35 @@
+{
+  "name": "reflexjs",
+  "description": "A tiny library for creating and styling components using style props.",
+  "version": "1.0.0-alpha.1",
+  "sideEffects": false,
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "microbundle --no-compress --jsx React.createElement",
+    "watch": "microbundle watch --no-compress --jsx React.createElement",
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git"
+  },
+  "dependencies": {
+    "csstype": "^3.0.2",
+    "deepmerge": "^4.2.2",
+    "theme-ui": "^0.4.0-rc.5"
+  },
+  "peerDependencies": {
+    "react": "^16.14.0"
+  }
+}
