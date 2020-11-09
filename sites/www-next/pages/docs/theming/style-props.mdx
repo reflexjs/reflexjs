@@ -1,0 +1,69 @@
+---
+title: Style props
+---
+
+Reflexjs allows you to style your component using style props. Using style props you style a component
+by passing props to it.
+
+## Example
+
+```jsx
+/** @jsx jsx */
+import { jsx } from "reflexjs"
+
+export default Hero({ title, text, url, image}) {
+  return (
+    <section display="grid" col="2" py="10">
+      <div>
+        <h1>{title}</h1>
+        <p>{text}</p>
+        <button bg="primary" py="2" px="4" mt="4>Learn more</button>
+      </div>
+      <img src={image} />
+    </section>
+  )
+}
+```
+
+## Reference Table
+
+Reflexjs exposes all CSS properties as style props. You can see a reference of the most commonly used style props below.
+
+### Margin and padding
+
+```jsx
+// `margin-left` and `margin-right` to `auto`
+// `padding` to `theme.space[4]`
+<div mx="auto" p="4" />
+```
+
+| Prop                  | CSS Property                       | Theme Field |
+| --------------------- | ---------------------------------- | ----------- |
+| `m`, `margin`         | `margin`                           | `space`     |
+| `mt`, `marginTop`     | `margin-top`                       | `space`     |
+| `mr`, `marginRight`   | `margin-right`                     | `space`     |
+| `mb`, `marginBottom`  | `margin-bottom`                    | `space`     |
+| `ml`, `marginLeft`    | `margin-left`                      | `space`     |
+| `mx`, `marginX`       | `margin-left` and `margin-right`   | `space`     |
+| `my`, `marginY`       | `margin-top` and `margin-bottom`   | `space`     |
+| `p`, `padding`        | `padding`                          | `space`     |
+| `pt`, `paddingTop`    | `padding-top`                      | `space`     |
+| `pr`, `paddingRight`  | `padding-right`                    | `space`     |
+| `pb`, `paddingBottom` | `padding-bottom`                   | `space`     |
+| `pl`, `paddingLeft`   | `padding-left`                     | `space`     |
+| `px`, `paddingX`      | `padding-left` and `padding-right` | `space`     |
+| `py`, `paddingY`      | `padding-top` and `padding-bottom` | `space`     |
+
+## Color
+
+```jsx
+// `color` to `theme.colors.text`
+// `background-color` to `theme.colors.primary`
+<button color="text" bg="primary" />
+```
+
+| Prop                    | CSS Property       | Theme Field |
+| ----------------------- | ------------------ | ----------- |
+| `color`                 | `color`            | `colors`    |
+| `bg`, `backgroundColor` | `background-color` | `colors`    |
+| `opacity`               | `opacity`          | none        |

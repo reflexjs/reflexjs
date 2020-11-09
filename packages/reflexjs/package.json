@@ -26,6 +26,7 @@
     "directory": "packages/reflexjs"
   },
   "dependencies": {
+    "@emotion/core": "^10.0.0",
     "csstype": "^3.0.2",
     "deepmerge": "^4.2.2",
     "theme-ui": "^0.4.0-rc.5"

@@ -25,7 +25,7 @@
     "directory": "packages/components"
   },
   "peerDependencies": {
-    "react": "^16.13.1"
+    "react": "^16.14.0"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "^0.8.8",

@@ -31,8 +31,8 @@
     "deepmerge": "^4.2.2",
     "gatsby": "^2.23.3",
     "minimatch": "^3.0.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "dependencies": {
     "@reflexjs/gatsby-plugin-image": "^0.3.3",

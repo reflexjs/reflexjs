@@ -65,7 +65,7 @@ export const Flexbox = React.forwardRef(
     <Box
       ref={ref}
       sx={{
-        d: "flex",
+        display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
       }}
@@ -81,7 +81,7 @@ export const Grid = React.forwardRef(
     <Box
       ref={ref}
       sx={{
-        d: "grid",
+        display: "grid",
         gridAutoFlow: "dense",
       }}
       {...props}
@@ -109,7 +109,7 @@ export const VisuallyHidden = React.forwardRef(
 
 export interface IconProps extends ComponentWithStyleProps<"svg"> {}
 
-export const Icon = ({ name, ...props }: IconProps) => {
+export const Icon = ({ name, size = 4, ...props }: IconProps) => {
   const { theme } = useThemeUI()
   return theme.icons && theme.icons[name] ? (
     <svg
@@ -117,6 +117,7 @@ export const Icon = ({ name, ...props }: IconProps) => {
       dangerouslySetInnerHTML={{
         __html: theme.icons[name],
       }}
+      size={size}
       {...props}
     />
   ) : null

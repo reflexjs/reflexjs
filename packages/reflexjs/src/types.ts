@@ -202,7 +202,18 @@ export type ComponentWithStyleProps<T extends React.ElementType> = Assign<
 
 declare module "@theme-ui/css" {
   interface Theme {
-    icons?: string[]
+    [name: string]: {}
+    icons?: {
+      [name: string]: string
+    }
+  }
+}
+
+declare module "theme-ui" {
+  interface Theme {
+    icons?: {
+      [name: string]: string
+    }
   }
 }
 

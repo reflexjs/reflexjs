@@ -17,8 +17,8 @@
     "@reflexjs/gatsby-theme-post": "^0.6.8",
     "gatsby": "^2.22.11",
     "gatsby-plugin-manifest": "^2.4.17",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "typeface-open-sans": "^0.0.75",
     "typeface-prata": "^0.0.72"
   }

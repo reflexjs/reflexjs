@@ -29,8 +29,8 @@
     "@reflexjs/icons-feather": "^0.2.0",
     "gatsby": "^2.23.3",
     "gatsby-source-filesystem": "^2.3.8",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52"
 }

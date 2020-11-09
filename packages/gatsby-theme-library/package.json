@@ -35,8 +35,8 @@
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-transformer-cloudinary": "^1.0.1",
     "lodash.omit": "^4.5.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0"
   },
   "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52"
 }
