@@ -1,7 +1,7 @@
 {
   "name": "e2e-tests-gatsby-theme-core",
   "private": true,
-  "version": "0.1.19",
+  "version": "0.2.0",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby clean && gatsby develop",
@@ -11,7 +11,7 @@
     "test:e2e:ci": "start-server-and-test dev http://localhost:8000 cy:run"
   },
   "dependencies": {
-    "@reflexjs/gatsby-theme-core": "^0.5.4"
+    "@reflexjs/gatsby-theme-core": "^0.6.0"
   },
   "devDependencies": {
     "gatsby": "^2.23.11",

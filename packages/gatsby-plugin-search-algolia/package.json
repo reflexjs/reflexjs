@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-plugin-search-algolia",
   "description": "Algolia search integration for Reflex sites",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {

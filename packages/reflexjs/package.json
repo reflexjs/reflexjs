@@ -1,7 +1,7 @@
 {
   "name": "reflexjs",
   "description": "A tiny library for creating and styling components using style props.",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0-alpha.3",
   "sideEffects": false,
   "source": "src/index.ts",
   "main": "dist/index.js",

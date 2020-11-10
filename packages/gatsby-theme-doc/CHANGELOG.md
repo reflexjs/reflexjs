@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-doc@0.5.3...@reflexjs/gatsby-theme-doc@0.6.0) (2020-11-10)
+
+
+### Features
+
+* **www-next:** add www-next site ([8a230e7](https://github.com/reflexjs/reflex/commit/8a230e7e43d1bb6a25c7332501547ee0f9eea080))
+
+
+
+
+
 ## [0.5.3](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-doc@0.5.2...@reflexjs/gatsby-theme-doc@0.5.3) (2020-09-21)
 
 **Note:** Version bump only for package @reflexjs/gatsby-theme-doc

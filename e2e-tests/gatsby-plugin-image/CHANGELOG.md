@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflex/compare/e2e-tests-gatsby-plugin-image@0.2.3...e2e-tests-gatsby-plugin-image@0.3.0) (2020-11-10)
+
+
+### Features
+
+* **www-next:** add www-next site ([8a230e7](https://github.com/reflexjs/reflex/commit/8a230e7e43d1bb6a25c7332501547ee0f9eea080))
+
+
+
+
+
 ## [0.2.3](https://github.com/reflexjs/reflex/compare/e2e-tests-gatsby-plugin-image@0.2.2...e2e-tests-gatsby-plugin-image@0.2.3) (2020-09-21)
 
 **Note:** Version bump only for package e2e-tests-gatsby-plugin-image

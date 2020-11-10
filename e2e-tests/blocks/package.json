@@ -1,7 +1,7 @@
 {
   "name": "e2e-tests-blocks",
   "private": true,
-  "version": "0.1.34",
+  "version": "0.2.0",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby clean && gatsby develop",
@@ -12,9 +12,9 @@
     "test:e2e:ci": "yarn cy:setup && start-server-and-test dev http://localhost:8000 cy:run"
   },
   "dependencies": {
-    "@reflexjs/gatsby-theme-base": "^0.3.12",
-    "@reflexjs/gatsby-theme-post": "^0.6.8",
-    "@reflexjs/gatsby-theme-video": "^0.4.8"
+    "@reflexjs/gatsby-theme-base": "^0.4.0",
+    "@reflexjs/gatsby-theme-post": "^0.7.0",
+    "@reflexjs/gatsby-theme-video": "^0.5.0"
   },
   "devDependencies": {
     "fs-extra": "^9.0.1",

@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-video",
   "description": "Adds a Video type to Gatsby sites.",
-  "version": "0.4.8",
+  "version": "0.5.0",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -30,11 +30,11 @@
     "react-dom": "^16.14.0"
   },
   "dependencies": {
-    "@reflexjs/components": "^0.3.2",
+    "@reflexjs/components": "^0.4.0",
     "@reflexjs/gatsby-helpers": "^0.6.0",
-    "@reflexjs/gatsby-plugin-image": "^0.3.3",
-    "@reflexjs/gatsby-theme-block": "^0.3.7",
-    "@reflexjs/gatsby-theme-core": "^0.5.4",
+    "@reflexjs/gatsby-plugin-image": "^0.4.0",
+    "@reflexjs/gatsby-theme-block": "^0.4.0",
+    "@reflexjs/gatsby-theme-core": "^0.6.0",
     "@reflexjs/utils": "^0.2.1",
     "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-source-filesystem": "^2.3.8"

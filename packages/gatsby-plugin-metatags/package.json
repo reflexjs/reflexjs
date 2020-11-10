@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-plugin-metatags",
   "description": "Adds a Post type to Gatsby sites.",
-  "version": "0.2.8",
+  "version": "0.3.0",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -35,7 +35,7 @@
     "react-dom": "^16.14.0"
   },
   "dependencies": {
-    "@reflexjs/gatsby-plugin-image": "^0.3.3",
+    "@reflexjs/gatsby-plugin-image": "^0.4.0",
     "@reflexjs/utils": "^0.2.1",
     "gatsby-plugin-react-helmet": "^3.3.6",
     "react-helmet": "^6.1.0"
