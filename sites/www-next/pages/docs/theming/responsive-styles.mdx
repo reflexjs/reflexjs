@@ -1,0 +1,55 @@
+---
+title: Responsive Styles
+---
+
+Reflexjs includes a shorthand synxtax for writing mobile-first responsive styles. All style props accept responsive styles.
+
+<Callout>
+  
+Use a `|` pipe to separate responsive values. Array values are also supported.
+
+
+</Callout>
+
+
+This shortcut is an alternative to writing media queries out by hand. Given the following:
+
+```jsx
+<div bg="red|blue|green" />
+
+// or
+
+<div bg={["red", "blue", "green"]} />
+```
+
+Reflexjs will generate the following CSS:
+
+```css
+.css-HASH {
+  background-color: "red";
+}
+
+@media screen and (min-width: 640px) {
+  .css-HASH {
+    background-color: "blue";
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .css-HASH {
+    background-color: "green";
+  }
+}
+```
+
+## Skipping Breakpoints
+
+If you want to skip a breakpoint, you can use the value `null` or leave it blank.
+
+```jsx
+<div bg="red|null|green" />
+
+// or
+
+<div bg="red||green" />
+```

@@ -1,0 +1,99 @@
+---
+title: Variants
+---
+
+Use the variant API to apply complex styles to a component based on a single prop. This can be a handy way to support slight stylistic variations in button or typography components.
+
+## Example
+
+Given the following `theme.js`:
+
+```js title=theme.js
+export default {
+  colors: {
+    primary: "#0cf",
+    secondary: "#c0f",
+    text: "#111",
+  },
+  fontSizes: {
+    xs: "0.75rem",
+    sm: "0.875rem",
+    md: "1rem",
+  },
+  space: {
+    0: "0",
+    1: "0.25rem",
+    2: "0.5rem",
+    3: "0.75rem",
+  },
+
+  // highlight-start
+  text: {
+    caps: {
+      textDecoration: "uppercase",
+    },
+  },
+
+  button: {
+    color: "text",
+    fontSize: "md",
+
+    primary: {
+      bg: "primary",
+    },
+
+    secondary: {
+      bg: "secondary",
+    },
+
+    lg: {
+      fontSize: 3,
+    },
+
+    sm: {
+      fontSize: 1,
+    },
+  },
+  // highlight-end
+}
+```
+
+Use the `variant` props to apply variant styles to your components.
+
+```jsx
+<button variant="button.primary" />
+<a variant="button.secondary" />
+```
+
+## Variant Composition
+
+Variant styles can be composed (from left to right).
+
+<Callout>
+
+
+Reflexjs will automatically compose your styles using nested composition.
+
+</Callout>
+
+
+```jsx
+<button variant="button.primary.lg" />
+<button variant="button.sm" />
+```
+
+## Multiple Variants
+
+You can also pass multiple variants to the `variant` prop for more advanced composition.
+
+```jsx
+<button variant="button.primary.sm text.caps" />
+```
+
+## Overriding variant styles
+
+To override variant syles, simply pass in style props.
+
+```jsx
+<button variant="button.primary" bg="tomato" />
+```

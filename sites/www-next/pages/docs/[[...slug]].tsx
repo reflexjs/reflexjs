@@ -3,7 +3,7 @@ import { jsx } from "reflexjs"
 import hydrate from "next-mdx-remote/hydrate"
 import { getMdxContent } from "../../src/get-mdx-content"
 import { Layout, mdxComponents, SidebarNav } from "../../src/components"
-import navItems from "./nav"
+import navItems from "../../src/doc-nav"
 
 const DOCS_CONTENT_PATH = "./pages/docs"
 

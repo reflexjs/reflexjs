@@ -60,7 +60,7 @@ export function CodeBlock({
             {title}
           </div>
         )}
-        <div maxH="550" overflow="scroll">
+        <div>
           <Prism
             showLineNumbers={showLineNumbers ? true : false}
             {...restProps}

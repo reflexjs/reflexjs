@@ -20,7 +20,12 @@ export const mdxComponents = {
     <table
       mt="6"
       w="full"
+      fontSize="sm"
+      borderCollapse="collapse"
       sx={{
+        "tr:hover": {
+          bg: "muted",
+        },
         "td, th": {
           borderBottomWidth: 1,
           p: 2,

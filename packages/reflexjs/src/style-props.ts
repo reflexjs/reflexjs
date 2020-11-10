@@ -44,6 +44,7 @@ export default {
   rowStart: ["gridRowStart"],
   size: ["width", "height"],
   w: ["width"],
+  z: ["zIndex"],
 
   // Theme UI props.
   variant: ["variant"],

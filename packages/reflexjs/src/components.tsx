@@ -11,7 +11,7 @@ import {
 import { Global } from "@emotion/core"
 
 export {
-  useThemeUI,
+  useThemeUI as useTheme,
   useColorMode,
   css,
   get,
