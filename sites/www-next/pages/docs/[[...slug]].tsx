@@ -15,13 +15,13 @@ export default function DocsPage({ mdx, frontMatter }) {
   return (
     <Layout title={frontMatter.title} description={frontMatter.description}>
       <div variant="container">
-        <div display="grid" col="250px 1fr" gap="20">
+        <div display="grid" col="200px 1fr" gap="18">
           <aside
             position="sticky"
             top="14"
             h={(theme) => `calc(100vh - ${theme.space[14]})`}
             overflow="scroll"
-            py="10"
+            py="12"
           >
             <SidebarNav items={navItems} />
           </aside>

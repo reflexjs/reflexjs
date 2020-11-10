@@ -55,6 +55,11 @@ export function SidebarNav({ items }: SidebarNavProps) {
               <AccordionItem>
                 <AccordionButton
                   {...headingStyles}
+                  _hover={{
+                    svg: {
+                      visibility: "visible",
+                    },
+                  }}
                   sx={{
                     "&[aria-expanded=true] > svg": {
                       transform: "rotate(90deg)",
@@ -62,7 +67,13 @@ export function SidebarNav({ items }: SidebarNavProps) {
                   }}
                 >
                   {item.title}
-                  <Icon name="chevron" size={4} ml="auto" opacity="0.5" />
+                  <Icon
+                    name="chevron"
+                    size={4}
+                    ml="auto"
+                    opacity="0.5"
+                    visibility="hidden"
+                  />
                 </AccordionButton>
                 <AccordionPanel>
                   {item.items.map((_item, _index) => (

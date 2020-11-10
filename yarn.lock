@@ -5484,6 +5484,11 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.13.tgz#ee1128e881b874c371374c1f72201893616417c9"
   integrity sha512-rouEWBImiRaSJsVA+ITTFM6ZxibuAlTuNOCyxVbwreu6k6+ujs7DfnU9o+PShFhET78pMBl3eH+AGSI5eOTkPA==
 
+"@types/node@^14.14.7":
+  version "14.14.7"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.14.7.tgz#8ea1e8f8eae2430cf440564b98c6dfce1ec5945d"
+  integrity sha512-Zw1vhUSQZYw+7u5dAwNbIA9TuTotpzY/OF7sJM9FqPOF3SPjKnxrjoTktXDZgUjybf4cWVBP7O8wvKdSaGHweg==
+
 "@types/node@^8.5.7":
   version "8.10.61"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.10.61.tgz#d299136ce54bcaf1abaa4a487f9e4bedf6b0d393"
@@ -5539,6 +5544,14 @@
   dependencies:
     "@types/prop-types" "*"
     csstype "^2.2.0"
+
+"@types/react@^16.9.56":
+  version "16.9.56"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.56.tgz#ea25847b53c5bec064933095fc366b1462e2adf0"
+  integrity sha512-gIkl4J44G/qxbuC6r2Xh+D3CGZpJ+NdWTItAPmZbR5mUS+JQ8Zvzpl0ea5qT/ZT3ZNTUcDKUVqV3xBE8wv/DyQ==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
 
 "@types/reflexbox@^4.0.0":
   version "4.0.1"
@@ -23918,6 +23931,11 @@ typescript@^3.9.7:
   version "3.9.7"
   resolved "https://registry.yarnpkg.com/typescript/-/typescript-3.9.7.tgz#98d600a5ebdc38f40cb277522f12dc800e9e25fa"
   integrity sha512-BLbiRkiBzAwsjut4x/dsibSTB6yWpwT5qWmC2OfuCg3GgVQCSgMs4vEctYPhsaGtd0AeuuHMkjZ2h2WG8MSzRw==
+
+typescript@^4.0.5:
+  version "4.0.5"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.0.5.tgz#ae9dddfd1069f1cb5beb3ef3b2170dd7c1332389"
+  integrity sha512-ywmr/VrTVCmNTJ6iV2LwIrfG1P+lv6luD8sUJs+2eI9NLGigaN+nUQc13iHqisq7bra9lnmUSYqbJvegraBOPQ==
 
 ua-parser-js@^0.7.18:
   version "0.7.21"
