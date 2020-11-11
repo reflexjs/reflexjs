@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflex/compare/www-next@0.2.1...www-next@0.3.0) (2020-11-11)
+
+
+### Features
+
+* **www-next:** add custom babel preset ([d616313](https://github.com/reflexjs/reflex/commit/d616313a03c471488d076e65418f11ad3a6ee22c))
+* **www-next:** update docs ([51c4109](https://github.com/reflexjs/reflex/commit/51c4109c553f2d330cc65a1b237021b8a2e010fe))
+
+
+
+
+
 ## [0.2.1](https://github.com/reflexjs/reflex/compare/www-next@0.2.0...www-next@0.2.1) (2020-11-11)
 
 **Note:** Version bump only for package www-next
