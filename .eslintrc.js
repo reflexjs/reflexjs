@@ -24,6 +24,8 @@ module.exports = {
     "react/prop-types": 0,
     "prettier/prettier": ["error"],
     "react/display-name": "off",
+    "react/react-in-jsx-scope": "off",
+    "import/export": 0,
   },
   settings: {
     react: {

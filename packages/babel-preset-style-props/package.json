@@ -1,0 +1,38 @@
+{
+  "name": "@reflexjs/babel-preset-style-props",
+  "description": "A babel preset to automatically enable reflejx style props",
+  "version": "0.0.1",
+  "sideEffects": false,
+  "source": "src/index.ts",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "microbundle --no-compress",
+    "watch": "microbundle watch --no-compress",
+    "test": "jest"
+  },
+  "bugs": {
+    "url": "https://github.com/reflexjs/reflex/issues"
+  },
+  "homepage": "https://github.com/reflexjs/reflex",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reflexjs/reflex.git",
+    "directory": "packages/babel-preset-style-props"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-react-jsx": "^7.12.5",
+    "babel-plugin-jsx-pragmatic": "^1.0.2"
+  },
+  "peerDependencies": {
+    "@babel/core": "^7.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5"
+  }
+}
