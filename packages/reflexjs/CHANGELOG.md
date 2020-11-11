@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.6](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0-alpha.5...reflexjs@1.0.0-alpha.6) (2020-11-11)
+
+
+### Features
+
+* **reflexjs:** add cli command to create theme ([c0ca6db](https://github.com/reflexjs/reflex/commit/c0ca6db1b90853c4cca26adb8e8fb60633ca5393))
+
+
+
+
+
 # [1.0.0-alpha.5](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0-alpha.4...reflexjs@1.0.0-alpha.5) (2020-11-11)
 
 
