@@ -1,4 +1,7 @@
 {
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*.ts"]
+  "compilerOptions": {
+    "isolatedModules": false
+  },
+  "include": ["src/**/*.ts", "src/react-jsx.tsx", "src/index.jsx"]
 }
