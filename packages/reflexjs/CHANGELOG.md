@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.4](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0-alpha.3...reflexjs@1.0.0-alpha.4) (2020-11-11)
+
+
+### Features
+
+* add gatsby-plugin-reflexjs ([4a6b218](https://github.com/reflexjs/reflex/commit/4a6b21809bb551ce3fb41595830f60b4eeb832f4))
+
+
+
+
+
 # [1.0.0-alpha.3](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0-alpha.2...reflexjs@1.0.0-alpha.3) (2020-11-10)
 
 

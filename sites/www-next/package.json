@@ -1,7 +1,7 @@
 {
   "name": "www-next",
   "private": "true",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -20,7 +20,7 @@
     "prism-react-renderer": "^1.1.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "reflexjs": "^1.0.0-alpha.3"
+    "reflexjs": "^1.0.0-alpha.4"
   },
   "devDependencies": {
     "@types/node": "^14.14.7",
