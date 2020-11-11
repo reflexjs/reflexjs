@@ -11,7 +11,7 @@ export const mdxComponents = {
   h5: (props) => <LinkedHeading is="h5" {...props} />,
   h6: (props) => <LinkedHeading is="h6" {...props} />,
   p: (props) => <p my="4" {...props} />,
-  code: CodeBlock,
+  code: (props) => <CodeBlock {...props} />,
   strong: (props) => <strong fontWeight="semibold" {...props} />,
   inlineCode: (props) => <code color="primary" {...props} />,
   table: (props) => (

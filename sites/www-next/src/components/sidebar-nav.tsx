@@ -80,7 +80,6 @@ export function SidebarNav({ items }: SidebarNavProps) {
                       <a
                         display="flex"
                         my="2"
-                        fontSize="sm"
                         color={asPath === _item.url ? "primary" : "text"}
                         _hover={{
                           color: "primary",
