@@ -25,16 +25,6 @@ A collection of <strong>plugins</strong>, <strong>themes</strong> and pre-built 
 gatsby new site reflexjs/gatsby-starter-base
 ```
 
-## @reflexjs/ui
-
-A tiny library for creating and styling UI components with <strong>Theme UI</strong>. It combines the flexibility of Theme UI with the comfort of style props.
-
-<img src="https://i.imgur.com/wGPg1zq.jpg" width="650" />
-
-[Learn more](https://ui.reflexjs.org)
-
-## Learn
-
 Visit [https://reflexjs.org/learn](https://reflexjs.org/learn) to get started with Gatsby and Reflex.
 
 ## Blocks
