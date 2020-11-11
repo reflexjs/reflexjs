@@ -1,6 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "reflexjs"
-
 interface CalloutProps {
   type: "success" | "warning" | "info" | "error"
   children?: React.ReactNode

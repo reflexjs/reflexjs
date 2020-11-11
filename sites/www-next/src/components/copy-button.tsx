@@ -1,6 +1,5 @@
-/** @jsx jsx */
-import { Icon, jsx, VisuallyHidden } from "reflexjs"
 import * as React from "react"
+import { Icon, VisuallyHidden } from "reflexjs"
 import copy from "copy-to-clipboard"
 
 interface CopyButtonProps

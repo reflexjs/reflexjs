@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "reflexjs"
 import { CodeBlock, LinkedHeading, Callout } from "."
 
 export const mdxComponents = {

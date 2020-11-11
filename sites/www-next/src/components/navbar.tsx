@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { Icon, jsx } from "reflexjs"
+import { Icon } from "reflexjs"
 import packageInfo from "reflexjs/package.json"
 import Link from "next/link"
 import { ModeToggle } from "."

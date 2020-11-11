@@ -1,5 +1,4 @@
-/** @jsx jsx */
-import { Icon, jsx, useColorMode, VisuallyHidden } from "reflexjs"
+import { Icon, useColorMode, VisuallyHidden } from "reflexjs"
 
 export interface ModeToggleProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {}

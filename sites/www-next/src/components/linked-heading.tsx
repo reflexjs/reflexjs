@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "reflexjs"
 import Slugger from "github-slugger"
 const slugger = new Slugger()
 

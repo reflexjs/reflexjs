@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "reflexjs"
 import { Prism, CopyButton } from "."
 
 export const preToCodeBlock = (preProps) => {

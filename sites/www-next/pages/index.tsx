@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "reflexjs"
 import Link from "next/link"
 
 export default function IndexPage() {

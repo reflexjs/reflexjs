@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "reflexjs"
 import hydrate from "next-mdx-remote/hydrate"
 import { getMdxContent } from "../../src/get-mdx-content"
 import { Layout, mdxComponents, SidebarNav } from "../../src/components"
@@ -13,7 +11,7 @@ export default function DocsPage({ mdx, frontMatter }) {
   })
 
   return (
-    <Layout title={frontMatter.title} description={frontMatter.description}>
+    <Layout>
       <div variant="container">
         <div display="grid" col="200px 1fr" gap="18">
           <aside

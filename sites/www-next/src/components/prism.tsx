@@ -1,5 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "reflexjs"
 /* eslint react/jsx-key: 0 */
 import { ComponentProps } from "react"
 import Highlight, { defaultProps, Language } from "prism-react-renderer"

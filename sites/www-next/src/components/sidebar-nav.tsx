@@ -1,7 +1,6 @@
-/** @jsx jsx */
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { jsx, Icon } from "reflexjs"
+import { Icon } from "reflexjs"
 import {
   Accordion,
   AccordionItem,
