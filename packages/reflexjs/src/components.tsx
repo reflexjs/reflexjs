@@ -1,23 +1,7 @@
-import { jsx } from "./react-jsx"
-import { ComponentWithStyleProps } from "./types"
 import * as React from "react"
-import {
-  useThemeUI,
-  ThemeProvider as ThemeUIThemeProvider,
-  get,
-  css,
-  Theme,
-} from "theme-ui"
 import { Global } from "@emotion/core"
-
-export {
-  useThemeUI as useTheme,
-  useColorMode,
-  css,
-  get,
-  merge,
-  InitializeColorMode,
-} from "theme-ui"
+import { ComponentWithStyleProps } from "./types"
+import { jsx, get, css, useTheme, Theme, ThemeUIProvider } from "./react-jsx"
 
 export interface GlobalStylesProps {
   theme: Theme
@@ -38,10 +22,10 @@ export const GlobalStyles = ({ theme }) => {
 export const ThemeProvider = ({ children, ...props }) => {
   const { theme } = props
   return (
-    <ThemeUIThemeProvider theme={theme} {...props}>
+    <ThemeUIProvider theme={theme} {...props}>
       <GlobalStyles theme={theme} />
       {children}
-    </ThemeUIThemeProvider>
+    </ThemeUIProvider>
   )
 }
 
@@ -110,7 +94,7 @@ export const VisuallyHidden = React.forwardRef(
 export interface IconProps extends ComponentWithStyleProps<"svg"> {}
 
 export const Icon = ({ name, size = 4, ...props }: IconProps) => {
-  const { theme } = useThemeUI()
+  const { theme } = useTheme()
   return theme.icons && theme.icons[name] ? (
     <svg
       fill="currentColor"

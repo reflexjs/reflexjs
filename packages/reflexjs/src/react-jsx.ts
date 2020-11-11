@@ -1,9 +1,25 @@
 import * as React from "react"
-import { jsx as themeUIJSX, css, ThemeUIStyleObject } from "theme-ui"
 import { InterpolationWithTheme } from "@emotion/core"
 import styleProps from "./style-props"
 import { StyleProps, SxProps } from "./types"
 import deepmerge from "deepmerge"
+import {
+  jsx as themeUIJSX,
+  css,
+  ThemeUIStyleObject,
+  Theme as ThemeUITheme,
+} from "theme-ui"
+export {
+  useThemeUI as useTheme,
+  ThemeProvider as ThemeUIProvider,
+  useColorMode,
+  css,
+  get,
+  merge,
+  InitializeColorMode,
+} from "theme-ui"
+
+export interface Theme extends ThemeUITheme {}
 
 // Helper to omit props.
 // See https://github.com/styled-system/styled-system/tree/master/packages/props.
@@ -91,7 +107,7 @@ function parseProps(props) {
     const variants = variant.split(" ")
     let __themeKeyFailed = false
     let variantStyles = {}
-    variants.map((variant) => {
+    variants.forEach((variant) => {
       const [__themeKey, ...nestedVariants] = variant.split(".")
       if (!theme[__themeKey]) {
         __themeKeyFailed = true
