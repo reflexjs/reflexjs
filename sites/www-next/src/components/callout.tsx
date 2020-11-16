@@ -7,6 +7,7 @@ export function Callout({ type = "info", children }: CalloutProps) {
   return (
     <div
       borderLeftWidth={4}
+      rounded="md"
       bg="muted"
       p="4"
       sx={{

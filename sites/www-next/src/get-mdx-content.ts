@@ -7,7 +7,15 @@ import glob from "fast-glob"
 import { mdxComponents } from "./components"
 import mdxOptions from "./mdx-options"
 
-export async function getMdxContent(source) {
+export interface MdxContent {
+  filepath: string
+  slug: string
+  content: string
+  data: Record<string, unknown>
+  mdx: string
+}
+
+export default async function (source): Promise<MdxContent[]> {
   const contentGlob = `${source}/**/*.mdx`
   const files = glob.sync(contentGlob)
 
@@ -30,7 +38,7 @@ export async function getMdxContent(source) {
 
       return {
         filepath,
-        slug,
+        slug: slug === "index" ? "" : slug,
         content,
         data,
         mdx,

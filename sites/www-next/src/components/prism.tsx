@@ -118,7 +118,7 @@ export function Prism({
               }
               return (
                 <div
-                  pl={showLineNumbers ? 10 : 4}
+                  pl={showLineNumbers ? 10 : 6}
                   position="relative"
                   {...lineProps}
                 >

@@ -1,0 +1,113 @@
+---
+title: Gatsby
+excerpt: Learn how to use Reflexjs with Gatsby
+---
+
+### 1. Install dependencies
+
+```sh
+npm i reflexjs gatsby-plugin-reflexjs babel-preset-gatsby
+```
+
+### 2. Create a theme
+
+Generate a theme using the Reflexjs CLI utility.
+
+```sh
+npx reflexjs
+```
+
+This will create a minimal `theme.js` file at the root of your project.
+
+```js title=theme.js
+module.exports = {
+  breakpoints: ["640px", "768px", "1024px", "1280px"],
+  colors: {
+    text: "#111",
+    background: "#fff",
+    primary: "#06f",
+    modes: {
+      dark: {
+        text: "#ededee",
+        background: "#1a202c",
+        primary: "#fb3640",
+      },
+    },
+  },
+  fonts: {
+    body: "system-ui, sans-serif",
+    heading: "system-ui, sans-serif",
+    monospace: "Menlo, monospace",
+  },
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700,
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
+  styles: {
+    global: {
+      "*": {
+        m: 0,
+        p: 0,
+      },
+    },
+  },
+}
+```
+
+### 3. Enable the plugin
+
+Enable the `gatsby-plugin-reflexjs` in your `gatsby-config.js` file.
+
+```js title=gatsby-config.js
+const theme = require("./theme") // highlight-line
+
+module.exports = {
+  plugins: [
+    // ....
+    // highlight-start
+    {
+      resolve: `gatsby-plugin-reflexjs`,
+      options: {
+        theme,
+      },
+    },
+    // highlight-end
+    // ...
+  ],
+}
+```
+
+### 4. Add the Babel preset
+
+Reflexjs includes the `reflexjs/babel` preset. This preset automatically sets the `jsx` pragma for you.
+
+Create a `.babelrc` file at the root of your project with the following:
+
+```json
+{
+  "presets": ["babel-preset-gatsby", "reflexjs/babel"]
+}
+```
+
+You are now ready to start using Reflexjs to style your pages.
+
+```jsx title=src/pages/index.js
+export default function IndexPage() {
+  return (
+    <div mx="auto">
+      <h1 fontWeight="bold" color="primary">
+        The modern way to build the web
+      </h1>
+      <p fontSize="20px">
+        Gatsby is a React-based open source framework for creating websites and
+        apps.
+      </p>
+    </div>
+  )
+}
+```

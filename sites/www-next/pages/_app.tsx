@@ -1,4 +1,3 @@
-import * as React from "react"
 import { ThemeProvider } from "reflexjs"
 import theme from "../theme"
 

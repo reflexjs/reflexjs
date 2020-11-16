@@ -53,7 +53,7 @@ module.exports = {
   },
   breakpoints: ["640px", "768px", "1024px", "1280px"],
   fonts: {
-    body: "Inter, sans-serif",
+    body: "Poppins, serif",
     heading: "Inherit",
     monospace:
       "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
@@ -239,13 +239,6 @@ module.exports = {
       "*": {
         m: 0,
         p: 0,
-        listStyle: "none",
-        border: "0 solid",
-        borderColor: "border",
-
-        "::selection": {
-          bg: "selection",
-        },
       },
       a: {
         color: "inherit",
@@ -270,10 +263,19 @@ module.exports = {
       color: "text",
       fontFamily: "body",
       fontWeight: "normal",
-      fontSize: "md",
+      fontSize: "lg",
       lineHeight: "relaxed",
       letterSpacing: "normal",
       "--reach-accordion": 1,
+
+      "*": {
+        border: "0 solid",
+        borderColor: "border",
+
+        "::selection": {
+          bg: "selection",
+        },
+      },
     },
     pre: {
       variant: "text.pre",
@@ -287,6 +289,17 @@ module.exports = {
     },
   },
   text: {
+    lead: {
+      fontSize: "2xl",
+    },
+    link: {
+      color: "primary",
+      textDecoration: "none",
+
+      "&:hover, &:focus": {
+        color: "primaryHover",
+      },
+    },
     code: {
       fontFamily: "monospace",
     },
@@ -299,7 +312,7 @@ module.exports = {
       tabSize: 2,
       hyphens: "none",
       my: 8,
-      py: 4,
+      py: 6,
       overflow: "auto",
       borderRadius: "md",
       whiteSpace: "pre-wrap",
@@ -348,12 +361,242 @@ module.exports = {
       },
     },
   },
+  heading: {
+    color: "text",
+    fontFamily: "heading",
+    fontWeight: "semibold",
+    lineHeight: "tight",
+    letterSpacing: "tight",
 
-  // Usage: variant="container"
+    h1: {
+      fontSize: "4xl|5xl",
+    },
+    h2: {
+      fontSize: "3xl|4xl|5xl",
+    },
+    h3: {
+      fontSize: "2xl|3xl|4xl",
+    },
+    h4: {
+      fontSize: "xl|2xl|3xl",
+    },
+    h5: {
+      fontSize: "lg|xl|2xl",
+    },
+    h6: {
+      fontSize: "md|lg|xl",
+    },
+  },
   container: {
     px: [4, 6, 6, 4],
     mx: "auto",
-    maxWidth: 1280,
+    maxWidth: 1024,
+  },
+  button: {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "text",
+    bg: "muted",
+    fontFamily: "body",
+    fontSize: "md",
+    lineHeight: "none",
+    textDecoration: "none",
+    border: "1px solid",
+    borderColor: "border",
+    borderRadius: "md",
+    px: 4,
+    py: 3,
+    cursor: "pointer",
+    transition: "all .15s ease-in",
+
+    ":hover, :focus": {
+      transform: "translateY(-2px)",
+      boxShadow: "lg",
+    },
+
+    sm: {
+      px: 3,
+      py: 2,
+      fontSize: "sm",
+    },
+
+    lg: {
+      px: 5,
+      py: 4,
+      fontSize: "xl",
+    },
+
+    muted: {
+      bg: "muted",
+      color: "text",
+      borderColor: "muted",
+
+      "&:hover, &:focus": {
+        bg: "mutedHover",
+        color: "text",
+        borderColor: "mutedHover",
+      },
+    },
+
+    primary: {
+      bg: "primary",
+      color: "white",
+      borderColor: "primary",
+
+      "&:hover, &:focus": {
+        bg: "primaryHover",
+        color: "white",
+        borderColor: "primaryHover",
+        transform: "translateY(-2px)",
+        boxShadow: "lg",
+      },
+    },
+
+    secondary: {
+      bg: "secondary",
+      color: "white",
+      borderColor: "secondary",
+
+      "&:hover, &:focus": {
+        bg: "secondaryHover",
+        color: "white",
+        borderColor: "secondaryHover",
+        transform: "translateY(-2px)",
+        boxShadow: "lg",
+      },
+    },
+
+    accent: {
+      bg: "accent",
+      color: "white",
+      borderColor: "accent",
+
+      "&:hover, &:focus": {
+        bg: "accentHover",
+        color: "white",
+        borderColor: "accentHover",
+        transform: "translateY(-2px)",
+        boxShadow: "lg",
+      },
+    },
+
+    link: {
+      bg: "transparent",
+      color: "text",
+      borderColor: "transparent",
+
+      "&:hover, &:focus": {
+        bg: "transparent",
+        borderColor: "transparent",
+        transform: "translateY(-2px)",
+        boxShadow: "none",
+        color: "primary",
+      },
+    },
+  },
+  input: {
+    bg: "background",
+    color: "text",
+    fontFamily: "body",
+    fontSize: ["sm", "md", "lg"],
+    lineHeight: "none",
+    border: "1px solid",
+    borderColor: "border",
+    borderRadius: "md",
+    px: 4,
+    py: 3,
+    width: "100%",
+
+    "&:focus": {
+      borderColor: "primary",
+      outline: "none",
+    },
+
+    "&[type=checkbox], &[type=radio]": {
+      display: "none",
+
+      "+ label": {
+        display: "inline-flex",
+        alignItems: "center",
+        position: "relative",
+        cursor: "pointer",
+
+        "&:before": {
+          content: "''",
+          width: "14px",
+          height: "14px",
+          flex: "none",
+          bg: "background",
+          borderRadius: "sm",
+          mr: 3,
+          border: "2px solid",
+          borderColor: "background",
+          boxShadow: ({ colors }) => `0 0 0 1px ${colors.border}`,
+        },
+      },
+    },
+
+    "&:checked + label:before": {
+      bg: "primary",
+      boxShadow: ({ colors }) => `0 0 0 2px ${colors.primary}`,
+    },
+
+    "&[type=radio]": {
+      "+ label": {
+        "&:before": {
+          borderRadius: "full",
+        },
+      },
+    },
+
+    sm: {
+      py: 2,
+      fontSize: ["xs", "sm", "md"],
+    },
+
+    lg: {
+      py: 4,
+      fontSize: ["md", "lg", "xl"],
+    },
+  },
+  select: {
+    bg: "background",
+    color: "text",
+    fontFamily: "body",
+    fontSize: ["sm", "md", "lg"],
+    lineHeight: "none",
+    border: "1px solid",
+    borderColor: "border",
+    borderRadius: "md",
+    pl: 4,
+    pr: 12,
+    py: 3,
+    appearance: "none",
+    cursor: "pointer",
+    width: "100%",
+    background:
+      'url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJmZWF0aGVyIGZlYXRoZXItY2hldnJvbi1kb3duIj48cG9seWxpbmUgcG9pbnRzPSI2IDkgMTIgMTUgMTggOSI+PC9wb2x5bGluZT48L3N2Zz4=") no-repeat right 12px center',
+
+    sm: {
+      py: 2,
+      fontSize: ["xs", "sm", "md"],
+    },
+
+    lg: {
+      py: 4,
+      fontSize: ["md", "lg", "xl"],
+    },
+  },
+
+  textarea: {
+    variant: "input",
+  },
+
+  fieldset: {
+    border: "1px solid",
+    borderColor: "border",
+    borderRadius: "md",
   },
 
   icons: {

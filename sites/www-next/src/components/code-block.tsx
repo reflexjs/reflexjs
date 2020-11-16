@@ -46,7 +46,8 @@ export function CodeBlock({
             borderBottomColor="prism.highlight"
             fontSize="sm"
             roundedTop="md"
-            p="4"
+            py="4"
+            px="6"
             sx={{
               "+ div > pre": {
                 my: 0,

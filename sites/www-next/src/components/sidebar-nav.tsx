@@ -26,7 +26,7 @@ export function SidebarNav({ items }: SidebarNavProps) {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    fontSize: "lg",
+    fontSize: "md",
     fontWeight: "semibold",
     cursor: "pointer",
     color: "text",
@@ -79,6 +79,7 @@ export function SidebarNav({ items }: SidebarNavProps) {
                     <Link href={_item.url} passHref key={_index}>
                       <a
                         display="flex"
+                        fontSize="md"
                         my="2"
                         color={asPath === _item.url ? "primary" : "text"}
                         _hover={{
