@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.7](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0-alpha.6...reflexjs@1.0.0-alpha.7) (2020-11-16)
+
+
+### Features
+
+* **reflexjs:** add babel ([912f2c7](https://github.com/reflexjs/reflex/commit/912f2c77ee7ab000fbbda9d068c43556f5397dd6))
+* **reflexjs:** use minimal reset for default theme ([7999576](https://github.com/reflexjs/reflex/commit/799957641abe1875ac8c07027ae3abdde2951e5e))
+
+
+
+
+
 # [1.0.0-alpha.6](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0-alpha.5...reflexjs@1.0.0-alpha.6) (2020-11-11)
 
 

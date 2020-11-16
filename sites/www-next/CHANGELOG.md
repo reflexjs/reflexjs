@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/reflexjs/reflex/compare/www-next@0.3.1...www-next@0.4.0) (2020-11-16)
+
+
+### Bug Fixes
+
+* **www-next:** use reflexjs/babel ([0eff554](https://github.com/reflexjs/reflex/commit/0eff554878af351e1406114941af3a06e7d441f5))
+
+
+### Features
+
+* **www-next:** add get-docs ([c67ae7a](https://github.com/reflexjs/reflex/commit/c67ae7ae050ebb9b04f8b0a4d5c376c06f25cd23))
+
+
+
+
+
 ## [0.3.1](https://github.com/reflexjs/reflex/compare/www-next@0.3.0...www-next@0.3.1) (2020-11-11)
 
 **Note:** Version bump only for package www-next
