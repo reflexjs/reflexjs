@@ -30,11 +30,11 @@ export default async function (): Promise<Doc[]> {
       prevDoc:
         index === 0
           ? null
-          : mdxDocs.find((mdxDoc) => mdxDoc.slug === slugs[index - 1]),
+          : mdxDocs.find((mdxDoc) => mdxDoc.slug === slugs[index - 1]) || null,
       nextDoc:
         index === slugs.length - 1
           ? null
-          : mdxDocs.find((mdxDoc) => mdxDoc.slug === slugs[index + 1]),
+          : mdxDocs.find((mdxDoc) => mdxDoc.slug === slugs[index + 1]) || null,
     }
   })
 }

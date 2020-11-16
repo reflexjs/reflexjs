@@ -1,6 +1,117 @@
 ---
 title: Create React App
-description: Learn how to use Reflexjs with Create React App
+excerpt: Add Reflexjs to Create React App
 ---
 
-Install using next
+### 1. Install dependencies
+
+```sh
+npm i reflexjs
+```
+
+### 2. Create a theme
+
+Generate a theme using the Reflexjs CLI utility.
+
+```sh
+npx reflexjs
+```
+
+This will create a minimal `theme.js` file at the root of your project.
+
+Move `theme.js` inside the `src` directory.
+
+```js title=src/theme.js
+module.exports = {
+  breakpoints: ["640px", "768px", "1024px", "1280px"],
+  colors: {
+    text: "#111",
+    background: "#fff",
+    primary: "#06f",
+    modes: {
+      dark: {
+        text: "#ededee",
+        background: "#1a202c",
+        primary: "#fb3640",
+      },
+    },
+  },
+  fonts: {
+    body: "system-ui, sans-serif",
+    heading: "system-ui, sans-serif",
+    monospace: "Menlo, monospace",
+  },
+  fontWeights: {
+    body: 400,
+    heading: 700,
+    bold: 700,
+  },
+  lineHeights: {
+    body: 1.5,
+    heading: 1.125,
+  },
+  styles: {
+    global: {
+      "*": {
+        m: 0,
+        p: 0,
+      },
+    },
+  },
+}
+```
+
+### 3. Update index.js
+
+```jsx title=src/index.js
+import React from "react"
+import ReactDOM from "react-dom"
+import "./index.css"
+import App from "./App"
+import reportWebVitals from "./reportWebVitals"
+import theme from "./theme"
+import { ThemeProvider } from "reflexjs" // highlight-line
+
+ReactDOM.render(
+  <React.StrictMode>
+    // highlight-start
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
+    // highlight-end
+  </React.StrictMode>,
+  document.getElementById("root")
+)
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals()
+```
+
+### 4. Update `.env`.
+
+Turn off the new JSX transform. We are still working on adding support for the new JSX transform.
+
+```text title=.env
+DISABLE_NEW_JSX_TRANSFORM=true
+```
+
+You are now ready to start using Reflexjs to style your pages.
+
+```jsx title=src/App.js
+/** @jsx jsx */ // highlight-line
+import { jsx } from "reflexjs" // highlight-line
+
+function App() {
+  return (
+    <div p="10" textAlign="center">
+      <p color="primary">
+        Edit <code>src/App.js</code> and save to reload.
+      </p>
+    </div>
+  )
+}
+
+export default App
+```

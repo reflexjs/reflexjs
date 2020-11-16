@@ -34,6 +34,7 @@ export default function DocsPage({ doc }: DocsPageProps) {
                 {doc.data.excerpt}
               </p>
             ) : null}
+            <hr mt="6" />
             {content}
             <div
               display="flex"
