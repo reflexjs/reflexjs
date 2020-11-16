@@ -31,9 +31,6 @@ module.exports = {
       "*": {
         m: 0,
         p: 0,
-        listStyle: "none",
-        border: "0 solid",
-        borderColor: "border",
       },
     },
   },
