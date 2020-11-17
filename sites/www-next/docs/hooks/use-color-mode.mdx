@@ -2,4 +2,24 @@
 title: useColorMode
 ---
 
-In progress...
+Use the `useColorMode` hook in your application to access the current color mode or to change the color mode.
+
+```jsx
+import React from "react"
+import { useColorMode } from "reflexjs" // highlight-line
+
+export default function () {
+  const [colorMode, setColorMode] = useColorMode() // highlight-line
+  return (
+    <header>
+      <button
+        onClick={(e) => {
+          setColorMode(colorMode === "default" ? "dark" : "default")
+        }}
+      >
+        Toggle {colorMode === "default" ? "Dark" : "Light"}
+      </button>
+    </header>
+  )
+}
+```

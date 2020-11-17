@@ -1,5 +1,99 @@
 ---
 title: Color modes
+excerpt: Add dark mode and other color modes.
 ---
 
-In progress...
+## Defining colors
+
+To add color modes to your app, start by defining the code modes in your `theme.js`.
+
+```js title=theme.js
+module.exports = {
+  // highlight-start
+  colors: {
+    text: "#111",
+    background: "#fff",
+    primary: "#06f",
+    modes: {
+      dark: {
+        text: "#ededee",
+        background: "#1a202c",
+        primary: "#fb3640",
+      },
+    },
+  },
+  // highlight-end
+}
+```
+
+The above example will have two modes: `default` and `dark`.
+
+## Usage
+
+Colors are automatically applied when you use the `ThemeProvider`.
+
+```jsx
+// Default: `background-color: #06f`
+// Dark: `background-color: #fb3640`
+<button bg="primary>Primary</button
+```
+
+You can also access colors using a callback in style props.
+
+```jsx
+<button text={(theme) => theme.colors.dark.primary}>Button</button>
+```
+
+## Setting the color mode
+
+Use the `useColorMode` hook in your application to access the current color mode or to change the color mode.
+
+<Callout>
+
+
+This value is stored in `localStorage` and used whenever the page is loaded.
+
+</Callout>
+
+
+```jsx
+import React from "react"
+import { useColorMode } from "reflexjs" // highlight-line
+
+export default function () {
+  const [colorMode, setColorMode] = useColorMode() // highlight-line
+  return (
+    <header>
+      <button
+        onClick={(e) => {
+          setColorMode(colorMode === "default" ? "dark" : "default")
+        }}
+      >
+        Toggle {colorMode === "default" ? "Dark" : "Light"}
+      </button>
+    </header>
+  )
+}
+```
+
+## prefers-color-scheme
+
+To initialize a color mode based on the [prefers-color-scheme](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme) media query, add the useColorSchemeMediaQuery flag to your theme.
+
+```js title=theme.js
+module.exports = {
+  useColorSchemeMediaQuery: true, // highlight-line
+  colors: {
+    text: "#111",
+    background: "#fff",
+    primary: "#06f",
+    modes: {
+      dark: {
+        text: "#ededee",
+        background: "#1a202c",
+        primary: "#fb3640",
+      },
+    },
+  },
+}
+```

@@ -3,7 +3,7 @@
     "title": "Documentation",
     "items": [
       {
-        "title": "Quick Start",
+        "title": "Getting Started",
         "url": "/docs"
       }
     ]
@@ -33,6 +33,10 @@
         "url": "/docs/theming/style-props"
       },
       {
+        "title": "Breakpoints",
+        "url": "/docs/theming/breakpoints"
+      },
+      {
         "title": "Responsive Styles",
         "url": "/docs/theming/responsive-styles"
       },
@@ -45,12 +49,16 @@
         "url": "/docs/theming/pseudo-props"
       },
       {
-        "title": "The sx prop",
-        "url": "/docs/theming/sx"
+        "title": "Global styles",
+        "url": "/docs/theming/global-styles"
       },
       {
         "title": "Color modes",
         "url": "/docs/theming/color-modes"
+      },
+      {
+        "title": "The sx prop",
+        "url": "/docs/theming/sx"
       }
     ]
   },

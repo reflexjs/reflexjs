@@ -1,5 +1,5 @@
 import { ThemeProvider } from "reflexjs"
-import theme from "../theme"
+import theme from "../src/theme"
 
 export default function App({ Component, pageProps }) {
   return (

@@ -1,4 +1,5 @@
-import { CodeBlock, LinkedHeading, Callout } from "."
+import { Box } from "reflexjs"
+import { CodeBlock, LinkedCard, LinkedHeading, Callout } from "."
 
 export const mdxComponents = {
   a: (props) => (
@@ -38,4 +39,6 @@ export const mdxComponents = {
     />
   ),
   Callout,
+  LinkedCard,
+  Box,
 }

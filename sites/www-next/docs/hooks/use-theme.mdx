@@ -2,4 +2,14 @@
 title: useTheme
 ---
 
-In progress...
+To access the context object directly in a component, use the `useTheme` hook.
+
+```jsx
+import { useTheme } from "reflexjs"
+
+export default function () {
+  const { theme } = useTheme()
+
+  return <p color={theme.colors.primary}>Example</p>
+}
+```
