@@ -1,12 +1,18 @@
 import hydrate from "next-mdx-remote/hydrate"
-import getDocs, { Doc } from "../../src/get-docs"
 import { Layout, mdxComponents, SidebarNav } from "../../src/components"
 import Link from "next/link"
 import manifest from "../../docs/manifest.json"
 import { Icon } from "reflexjs"
+import {
+  getMdxPaths,
+  getMdxContent,
+  MdxContent,
+} from "../../src/get-mdx-content"
+
+export const DOCS_CONTENT_PATH = "./docs"
 
 export interface DocsPageProps {
-  doc: Doc
+  doc: MdxContent
 }
 
 export default function DocsPage({ doc }: DocsPageProps) {
@@ -17,24 +23,29 @@ export default function DocsPage({ doc }: DocsPageProps) {
   return (
     <Layout>
       <div variant="container">
-        <div display="grid" col="200px 1fr" gap="18">
+        <div
+          display="grid"
+          col="1|180px 1fr|180px 1fr|250px 1fr"
+          gap="null|6|6|20"
+        >
           <aside
             position="sticky"
             top="14"
             h={(theme) => `calc(100vh - ${theme.space[14]})`}
             overflow="scroll"
             py="12"
+            borderRightWidth="1"
           >
             <SidebarNav items={manifest} />
           </aside>
-          <div py="10">
+          <div py="10" className="DocSearch-content">
             <h1 variant="heading.h1">{doc.data.title}</h1>
             {doc.data.excerpt ? (
               <p variant="text.lead" mt="2">
                 {doc.data.excerpt}
               </p>
             ) : null}
-            <hr mt="6" />
+            <hr my="6" />
             {content}
             <div
               display="flex"
@@ -42,8 +53,8 @@ export default function DocsPage({ doc }: DocsPageProps) {
               justifyContent="space-between"
               py="10"
             >
-              {doc.prevDoc ? (
-                <Link href={doc.prevDoc.slug} passHref>
+              {doc.prev ? (
+                <Link href={doc.prev.url} passHref>
                   <a variant="button.link">
                     <Icon
                       name="chevron"
@@ -51,15 +62,14 @@ export default function DocsPage({ doc }: DocsPageProps) {
                       mr="2"
                       transform="rotate(180deg)"
                     />
-                    {doc.prevDoc.data.title}
+                    {doc.prev.title}
                   </a>
                 </Link>
               ) : null}
-              {doc.nextDoc ? (
-                <Link href={doc.nextDoc.slug} passHref>
+              {doc.next ? (
+                <Link href={doc.next.url} passHref>
                   <a variant="button.link" ml="auto">
-                    {doc.nextDoc.data.title}{" "}
-                    <Icon name="chevron" size="5" ml="2" />
+                    {doc.next.title} <Icon name="chevron" size="5" ml="2" />
                   </a>
                 </Link>
               ) : null}
@@ -72,8 +82,8 @@ export default function DocsPage({ doc }: DocsPageProps) {
 }
 
 export async function getStaticPaths() {
-  const docs = await getDocs()
-  const paths = docs.map(({ slug }) => ({
+  const mdxPaths = await getMdxPaths(DOCS_CONTENT_PATH)
+  const paths = mdxPaths.map(({ slug }) => ({
     params: {
       slug: slug.split("/"),
     },
@@ -86,10 +96,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params: { slug } }) {
-  const docs = await getDocs()
-  const [doc] = docs.filter((doc) =>
-    slug ? doc.slug === slug.join("/") : "index"
-  )
+  const doc = await getMdxContent(DOCS_CONTENT_PATH, slug ? slug.join("/") : "")
 
   return {
     props: {

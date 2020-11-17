@@ -53,7 +53,7 @@ module.exports = {
   },
   breakpoints: ["640px", "768px", "1024px", "1280px"],
   fonts: {
-    body: "Poppins, serif",
+    body: "Inter, sans-serif",
     heading: "Inherit",
     monospace:
       "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
@@ -257,6 +257,7 @@ module.exports = {
       },
       "pre, code, kbd, samp": {
         fontFamily: "monospace",
+        m: 0,
       },
     },
     root: {
@@ -369,7 +370,8 @@ module.exports = {
     letterSpacing: "tight",
 
     h1: {
-      fontSize: "4xl|5xl",
+      fontSize: "4xl|5xl|6xl",
+      fontWeight: "black",
     },
     h2: {
       fontSize: "3xl|4xl|5xl",
@@ -390,7 +392,7 @@ module.exports = {
   container: {
     px: [4, 6, 6, 4],
     mx: "auto",
-    maxWidth: 1024,
+    maxWidth: 1100,
   },
   button: {
     display: "inline-flex",

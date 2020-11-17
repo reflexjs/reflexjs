@@ -26,7 +26,8 @@ export function SidebarNav({ items }: SidebarNavProps) {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    fontSize: "md",
+    fontSize: "lg",
+    fontFamily: "body",
     fontWeight: "semibold",
     cursor: "pointer",
     color: "text",
@@ -36,7 +37,7 @@ export function SidebarNav({ items }: SidebarNavProps) {
   }
 
   return items.length ? (
-    <>
+    <div>
       {items.map((item, index) => (
         <div key={index} mb="10">
           {item.url ? (
@@ -54,6 +55,8 @@ export function SidebarNav({ items }: SidebarNavProps) {
               <AccordionItem>
                 <AccordionButton
                   {...headingStyles}
+                  borderTopWidth={index !== 0 && "1px"}
+                  pt={index !== 0 && 4}
                   _hover={{
                     svg: {
                       visibility: "visible",
@@ -70,6 +73,7 @@ export function SidebarNav({ items }: SidebarNavProps) {
                     name="chevron"
                     size={4}
                     ml="auto"
+                    mr="4"
                     opacity="0.5"
                     visibility="hidden"
                   />
@@ -96,6 +100,6 @@ export function SidebarNav({ items }: SidebarNavProps) {
           ) : null}
         </div>
       ))}
-    </>
+    </div>
   ) : null
 }
