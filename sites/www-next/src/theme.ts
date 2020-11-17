@@ -280,9 +280,6 @@ export default <Theme>{
         },
       },
     },
-    pre: {
-      variant: "text.pre",
-    },
     code: {
       variant: "text.code",
     },
@@ -319,6 +316,10 @@ export default <Theme>{
       overflow: "auto",
       borderRadius: "md",
       whiteSpace: "pre-wrap",
+      ".token-line": {
+        borderLeftWidth: "3",
+        borderColor: "prism.background",
+      },
       ".plain": {
         minHeight: "1ch",
         display: "inline-block",
@@ -361,6 +362,7 @@ export default <Theme>{
       },
       ".highlight": {
         bg: "prism.highlight",
+        borderColor: "prism.tag",
       },
     },
   },
