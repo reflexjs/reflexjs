@@ -1,3 +1,4 @@
+import Head from "next/head"
 import hydrate from "next-mdx-remote/hydrate"
 import { Layout, mdxComponents, SidebarNav } from "../../src/components"
 import Link from "next/link"
@@ -22,6 +23,11 @@ export default function DocsPage({ doc }: DocsPageProps) {
 
   return (
     <Layout>
+      {/* TODO: Add this back when Nextjs 10.1.0 is released */}
+      {/* <Head>
+        <meta name="description" content={doc.data.excerpt} />
+        <title>{doc.data.title} | Reflex</title>
+      </Head> */}
       <div variant="container">
         <div
           display="grid"

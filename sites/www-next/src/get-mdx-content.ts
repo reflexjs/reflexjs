@@ -20,15 +20,13 @@ export interface MdxPath {
 export interface MdxContent extends MdxPath {
   hash: string
   content: string
-  data: Record<string, unknown>
+  data: {
+    title?: string
+    excerpt?: string
+  }
   mdx: string
   prev: ManifestItem
   next: ManifestItem
-}
-
-export interface DocTree {
-  title: string
-  url: string
 }
 
 export interface ManifestItem {
