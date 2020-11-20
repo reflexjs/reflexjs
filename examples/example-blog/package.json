@@ -15,7 +15,7 @@
     "@reflexjs/gatsby-plugin-metatags": "^0.3.0",
     "@reflexjs/gatsby-theme-base": "^0.4.0",
     "@reflexjs/gatsby-theme-post": "^0.7.0",
-    "gatsby": "^2.22.11",
+    "gatsby": "^2.26.1",
     "gatsby-plugin-manifest": "^2.4.17",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",

@@ -1,6 +1,6 @@
 import { Theme } from "reflexjs"
 
-export default <Theme>{
+export default {
   colors: {
     text: "#191924",
     textLighter: "#777",

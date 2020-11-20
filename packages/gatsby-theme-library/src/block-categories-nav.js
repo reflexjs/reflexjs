@@ -1,15 +1,16 @@
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import * as React from "react"
-import { A, Ul, Li, H3 } from "@reflexjs/components"
 
 export const BlockCategoriesNav = ({ categories, onClick, ...props }) => (
   <React.Fragment>
-    <H3 my="4" fontSize="xl">
+    <h3 variant="heading.h3" my="4" fontSize="xl">
       Categories
-    </H3>
-    <Ul listStyle="none" p="0" m="0" {...props}>
+    </h3>
+    <ul listStyle="none" p="0" m="0" {...props}>
       {categories.map(({ slug, name }) => (
-        <Li key={name} mb="2">
-          <A
+        <li key={name} mb="2">
+          <a
             href={`#${slug}`}
             color="text"
             fontSize="md"
@@ -18,9 +19,9 @@ export const BlockCategoriesNav = ({ categories, onClick, ...props }) => (
             }}
           >
             {name}
-          </A>
-        </Li>
+          </a>
+        </li>
       ))}
-    </Ul>
+    </ul>
   </React.Fragment>
 )

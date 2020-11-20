@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "deepmerge": "^4.2.2",
-    "gatsby": "^2.23.3",
+    "gatsby": "^2.26.1",
     "minimatch": "^3.0.4",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
@@ -38,6 +38,7 @@
     "@reflexjs/gatsby-plugin-image": "^0.4.0",
     "@reflexjs/utils": "^0.2.1",
     "gatsby-plugin-react-helmet": "^3.3.6",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "reflexjs": "^1.0.0-alpha.7"
   }
 }

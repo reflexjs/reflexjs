@@ -1,5 +1,5 @@
-import * as React from "react"
-import { Flexbox } from "@reflexjs/components"
+/** @jsx jsx */
+import { jsx, Flexbox } from "reflexjs"
 import { ButtonLink } from "./button-link"
 import { Icon } from "./icon"
 

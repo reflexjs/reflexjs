@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx, Container, Flexbox, VisuallyHidden } from "reflexjs"
 import * as React from "react"
 import {
   ThemeProvider,
@@ -9,15 +11,6 @@ import {
   Icon,
   Link,
 } from "@reflexjs/gatsby-theme-core"
-import {
-  Button,
-  Container,
-  Div,
-  Flexbox,
-  Section,
-  Span,
-  VisuallyHidden,
-} from "@reflexjs/components"
 import presets from "./presets"
 import { PresetSelector } from "./preset-selector"
 import copy from "copy-to-clipboard"
@@ -64,7 +57,7 @@ export const Preview = ({
 
   return (
     <Layout pathname={slug}>
-      <Section py="2|6">
+      <section py="2|6">
         <Container>
           <Flexbox
             flexDirection={["column", "row"]}
@@ -89,7 +82,7 @@ export const Preview = ({
                 d={preview ? "flex" : "none"}
                 flex="1"
               >
-                <Span
+                <span
                   fontSize="sm"
                   position="absolute"
                   left="2"
@@ -97,7 +90,7 @@ export const Preview = ({
                   pointerEvents="none"
                 >
                   Select a preset:
-                </Span>
+                </span>
                 <PresetSelector
                   fontSize="sm"
                   fontWeight="semibold"
@@ -113,7 +106,8 @@ export const Preview = ({
                 />
               </Flexbox>
 
-              <Button
+              <button
+                variant="button"
                 fontSize="sm"
                 p="2"
                 bg="transparent"
@@ -121,17 +115,17 @@ export const Preview = ({
                 onClick={() => togglePreview(!preview)}
               >
                 {preview ? "Source" : "Preview"}
-              </Button>
+              </button>
 
               <Flexbox borderLeftWidth="1px" ml="4" pl="3">
-                <Button
-                  variant="icon"
+                <button
+                  variant="button.icon"
                   hoverColor="primary"
                   onClick={() => copy(code)}
                 >
                   <Icon name="clipboard" />
                   <VisuallyHidden>Copy code</VisuallyHidden>
-                </Button>
+                </button>
               </Flexbox>
             </Flexbox>
           </Flexbox>
@@ -162,17 +156,17 @@ export const Preview = ({
               >
                 <VisuallyHidden>Go back</VisuallyHidden>
               </Link>
-              <Span bg="border" size="4" rounded="full" ml="2" />
-              <Span bg="border" size="4" rounded="full" ml="2" />
+              <span bg="border" size="4" rounded="full" ml="2" />
+              <span bg="border" size="4" rounded="full" ml="2" />
             </Flexbox>
             <ThemeProvider theme={previewTheme}>
-              <Div id="preview-wrapper">
+              <div id="preview-wrapper">
                 <Styled.root>
                   <MDXProvider components={blockMDXComponents}>
                     <MDXRenderer {...props}>{body}</MDXRenderer>
                   </MDXProvider>
                 </Styled.root>
-              </Div>
+              </div>
             </ThemeProvider>
           </Container>
         ) : (
@@ -189,7 +183,7 @@ export const Preview = ({
             </CodeBlock>
           </Container>
         )}
-      </Section>
+      </section>
       {children}
     </Layout>
   )

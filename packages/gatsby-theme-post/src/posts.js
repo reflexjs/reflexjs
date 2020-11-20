@@ -1,5 +1,5 @@
-import * as React from "react"
-import { Article, H2, P, Div, Grid } from "@reflexjs/components"
+/** @jsx jsx */
+import { jsx, Grid } from "reflexjs"
 import { Link } from "@reflexjs/gatsby-theme-core"
 import { Image } from "@reflexjs/gatsby-plugin-image"
 import { PostMeta } from "./post-meta"
@@ -9,9 +9,9 @@ export const Posts = ({ posts }) => {
     <Grid col="1|2" gap="10|14">
       {posts &&
         posts.map((post, index) => (
-          <Div key={index} mb="8">
+          <div key={index} mb="8">
             <PostTeaser {...post} />
-          </Div>
+          </div>
         ))}
     </Grid>
   ) : null
@@ -28,7 +28,7 @@ export const PostTeaser = ({
   timeToRead,
   ...props
 }) => (
-  <Article {...props}>
+  <article {...props}>
     <Grid>
       {image && (
         <Link href={slug} d="block">
@@ -37,12 +37,12 @@ export const PostTeaser = ({
       )}
       {title && (
         <Link href={slug}>
-          <H2 my="4" fontSize="3xl" hoverColor="primary">
+          <h2 variant="heading.h2" my="4" fontSize="3xl" hoverColor="primary">
             {title}
-          </H2>
+          </h2>
         </Link>
       )}
-      {excerpt && <P mt="1">{excerpt}</P>}
+      {excerpt && <p mt="1">{excerpt}</p>}
 
       <PostMeta
         author={author}
@@ -52,5 +52,5 @@ export const PostTeaser = ({
         fontSize="md"
       />
     </Grid>
-  </Article>
+  </article>
 )

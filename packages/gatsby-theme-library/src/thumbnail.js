@@ -1,7 +1,7 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx, VisuallyHidden } from "reflexjs"
 import { Link } from "@reflexjs/gatsby-theme-core"
 import Image from "gatsby-image"
-import { VisuallyHidden } from "@reflexjs/components"
 import { useCloudinaryImage } from "./use-cloudinary-image"
 
 export const Thumbnail = ({ screenshots, slug, mode, name, ...props }) => {

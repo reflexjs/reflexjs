@@ -1,6 +1,6 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import PrismCodeBlock from "@theme-ui/prism"
-import { Div } from "@reflexjs/components"
 import { CopyButton } from "./copy-button"
 
 export const preToCodeBlock = (preProps) => {
@@ -29,9 +29,9 @@ export const CodeBlock = (preProps) => {
     const { codeString, title, ...restProps } = props
 
     return (
-      <Div position="relative" {...preProps}>
+      <div position="relative" {...preProps}>
         {title && (
-          <Div
+          <div
             bg="prism.background"
             color="prism.file"
             borderBottomWidth="1px"
@@ -48,11 +48,11 @@ export const CodeBlock = (preProps) => {
             }}
           >
             {title}
-          </Div>
+          </div>
         )}
         <PrismCodeBlock {...restProps}>{codeString}</PrismCodeBlock>
         <CopyButton value={codeString} position="absolute" top="4" right="4" />
-      </Div>
+      </div>
     )
   }
 }

@@ -1,6 +1,6 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx, Container } from "reflexjs"
 import { MDXRenderer, Icon, ButtonLink } from "@reflexjs/gatsby-theme-core"
-import { Article, H1, Container, Div, Iframe, P } from "@reflexjs/components"
 
 export const Video = ({
   title,
@@ -11,7 +11,7 @@ export const Video = ({
   datetime,
   pageContext,
 }) => (
-  <Article py="8|12|14">
+  <article py="8|12|14">
     <Container maxW="null|null|null|900px">
       <ButtonLink
         to={pageContext.themeOptions.basePath}
@@ -20,17 +20,17 @@ export const Video = ({
       >
         <Icon name="arrow-left" mr="4" /> See all videos
       </ButtonLink>
-      <H1 fontWeight="extrabold" my="0">
+      <h1 variant="heading.h1" fontWeight="extrabold" my="0">
         {title}
-      </H1>
+      </h1>
       {excerpt && (
-        <P fontSize="2xl" maxW="700px">
+        <p fontSize="2xl" maxW="700px">
           {excerpt}
-        </P>
+        </p>
       )}
       {date && <time dateTime={datetime}>{date}</time>}
       {embedUrl && (
-        <Div
+        <div
           position="relative"
           pb="56.25%"
           h="0"
@@ -38,8 +38,9 @@ export const Video = ({
           maxW="100%"
           my="10"
         >
-          <Iframe
+          <iframe
             src={embedUrl}
+            title={title}
             position="absolute"
             width="100%"
             height="100%"
@@ -47,14 +48,14 @@ export const Video = ({
             right="0"
             left="0"
             bottom="0"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           />
-        </Div>
+        </div>
       )}
 
       <MDXRenderer>{body}</MDXRenderer>
     </Container>
-  </Article>
+  </article>
 )

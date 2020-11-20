@@ -1,12 +1,13 @@
 import * as React from "react"
 
 export const Wrapper = ({ children, ...props }) => {
-  // We have named exports.
-  const [DynamicBlock] = Object.values(props).filter(
-    (prop) => typeof prop === "function"
+  const dynamicBlockIndex = Object.keys(props).find(
+    (prop) => typeof props[prop] === "function"
   )
-  if (DynamicBlock) {
-    return <DynamicBlock {...props}>{children}</DynamicBlock>
+  if (dynamicBlockIndex) {
+    // We have named exports.
+    const { [dynamicBlockIndex]: DynamicBlock, ..._props } = props
+    return <DynamicBlock {..._props}>{children}</DynamicBlock>
   }
   if (children) {
     const [_child, ...rest] = Array.isArray(children) ? children : [children]

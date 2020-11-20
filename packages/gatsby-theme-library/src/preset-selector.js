@@ -1,25 +1,26 @@
+/** @jsx jsx */
+import { jsx, VisuallyHidden } from "reflexjs"
 import * as React from "react"
-import { Select, Option, VisuallyHidden, Label } from "@reflexjs/components"
 import presets from "./presets"
 
 export const PresetSelector = ({ onChange, ...props }) => (
   <React.Fragment>
     <VisuallyHidden>
-      <Label htmlFor="preset-selector">Select preset</Label>
+      <label htmlFor="preset-selector">Select preset</label>
     </VisuallyHidden>
-    <Select
+    <select
       id="preset-selector"
       defaultValue={0}
-      onChange={(e) => {
+      onBlur={(e) => {
         onChange(e.currentTarget.value)
       }}
       {...props}
     >
       {presets.map(({ name }, index) => (
-        <Option value={index} key={index}>
+        <option value={index} key={index}>
           {name}
-        </Option>
+        </option>
       ))}
-    </Select>
+    </select>
   </React.Fragment>
 )

@@ -10,7 +10,7 @@ export const HeaderBlock = ({ ...props }) => {
   const [showMenu, setShowMenu] = React.useState(false)
   return (
     <React.Fragment>
-      <Header
+      <header
         position="sticky|relative"
         top="0"
         bg="background"
@@ -26,7 +26,8 @@ export const HeaderBlock = ({ ...props }) => {
               <VisuallyHidden>
                 <Label htmlFor="docsearch-input">Search</Label>
               </VisuallyHidden>
-              <Input
+              <input
+                variant="input"
                 id="docsearch-input"
                 placeholder="Search reflexjs.org"
                 ml="4"
@@ -42,7 +43,7 @@ export const HeaderBlock = ({ ...props }) => {
           </Flexbox>
         </Container>
         <Flexbox
-          d={["flex", "none"]}
+          display="flex|none"
           flexDirection="column"
           justifyContent="center"
         >
@@ -57,16 +58,16 @@ export const HeaderBlock = ({ ...props }) => {
             <Branding />
             <Flexbox>
               <SocialLinks ml="auto" />
-              <Button
-                variant="link"
+              <button
+                variant="button.link"
                 outline="none"
                 onClick={() => setShowMenu(true)}
               >
                 <Icon name="menu" size="7" />
-              </Button>
+              </button>
             </Flexbox>
           </Flexbox>
-          <Div
+          <div
             position="absolute"
             zIndex="1000"
             bg="background"
@@ -88,18 +89,22 @@ export const HeaderBlock = ({ ...props }) => {
           >
             <Flexbox justifyContent="space-between" w="full" py="2" px="0">
               <Branding />
-              <Button variant="link" onClick={() => setShowMenu(false)} mr={-3}>
+              <button
+                variant="button.link"
+                onClick={() => setShowMenu(false)}
+                mr={-3}
+              >
                 <Icon name="x" size="6" />
-              </Button>
+              </button>
             </Flexbox>
             <NavMenu name="header" gap={[0, 8]} borderTopWidth="1px" />
             <Flexbox py="4" justifyContent="space-between">
               <SocialLinks />
               <ModeToggle ml="auto" />
             </Flexbox>
-          </Div>
+          </div>
         </Flexbox>
-      </Header>
+      </header>
     </React.Fragment>
   )
 }
@@ -124,10 +129,10 @@ export const Branding = () => {
 export const ModeToggle = ({ ...props }) => {
   const [colorMode, setColorMode] = useColorMode()
   return (
-    <Button
+    <button
+      variant="button.icon"
       className="mode-toggle"
       aria-label="Toggle mode"
-      variant="icon"
       onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
       ml={[2, 4]}
       hoverColor="primary"
@@ -135,7 +140,7 @@ export const ModeToggle = ({ ...props }) => {
       {...props}
     >
       <Icon name={colorMode === "default" ? "sun" : "moon"} size="5" />
-    </Button>
+    </button>
   )
 }
 

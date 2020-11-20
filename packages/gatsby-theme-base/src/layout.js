@@ -1,5 +1,6 @@
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import * as React from "react"
-import { Main } from "@reflexjs/components"
 import { Metatags } from "@reflexjs/gatsby-plugin-metatags"
 import { MDXProvider } from "@reflexjs/gatsby-theme-core"
 import { Block } from "@reflexjs/gatsby-theme-block"
@@ -14,7 +15,7 @@ export const Layout = ({
     <Metatags pathname={pathname} />
     <MDXProvider>
       {header && <Block src={header} />}
-      <Main>{children}</Main>
+      <main>{children}</main>
       {footer && <Block src={footer} />}
     </MDXProvider>
   </React.Fragment>

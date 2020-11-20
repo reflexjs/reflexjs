@@ -1,13 +1,13 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import { useTutorial } from "./use-tutorial"
-import { Ul, Li } from "@reflexjs/components"
 import { Link } from "@reflexjs/gatsby-theme-core"
 
 export const Progress = ({ current }) => {
   const tutorials = useTutorial()
 
   return (
-    <Ul
+    <ul
       listStyle="none"
       d="inline-grid"
       m="0"
@@ -18,7 +18,7 @@ export const Progress = ({ current }) => {
       {tutorials.map((tutorial, index) => {
         const isCompleted = tutorial.weight < current
         return (
-          <Li key={index}>
+          <li key={index}>
             <Link
               href={tutorial.slug}
               opacity={isCompleted ? 0.5 : 1}
@@ -35,9 +35,9 @@ export const Progress = ({ current }) => {
             >
               {tutorial.weight + 1}
             </Link>
-          </Li>
+          </li>
         )
       })}
-    </Ul>
+    </ul>
   )
 }

@@ -1,6 +1,7 @@
+/** @jsx jsx */
+import { jsx, Container, Grid } from "reflexjs"
 import * as React from "react"
 import { Layout, useColorMode, Icon } from "@reflexjs/gatsby-theme-core"
-import { Container, Div, H2, Grid, Button } from "@reflexjs/components"
 import { Block } from "@reflexjs/gatsby-theme-block"
 import { Thumbnail } from "../../thumbnail"
 import { useLibraryBlockCategories } from "../../use-library-block-categories"
@@ -14,8 +15,9 @@ export default ({ location }) => {
   return (
     <Layout pathname={location && location.pathname}>
       <Container pb="8">
-        <Button
-          d="inline-flex|none"
+        <button
+          variant="button"
+          display="inline-flex|none"
           w="100%"
           justifyContent="space-between"
           boxShadow="lg"
@@ -38,13 +40,13 @@ export default ({ location }) => {
             transition="all .15s ease-in"
             mr="2"
           />
-        </Button>
+        </button>
         <Grid
           col="1|180px 1fr|180px 1fr|250px 1fr"
           gap="null|6|6|20"
           alignItems="flex-start"
         >
-          <Div
+          <div
             position="fixed|sticky"
             top={[showMenu ? "116px" : "-100vh", 0]}
             transition="all .15s ease-in|none"
@@ -63,13 +65,14 @@ export default ({ location }) => {
               categories={categories}
               onClick={() => setShowMenu(false)}
             />
-          </Div>
-          <Div mt="10|0" pt="8">
+          </div>
+          <div mt="10|0" pt="8">
             <Block src="library/header-blocks" />
             {categories.map(({ name, slug, display, blocks }, index) => {
               return !blocks ? null : (
                 <React.Fragment key={index}>
-                  <H2
+                  <h2
+                    variant="heading.h2"
                     id={slug}
                     pt="8"
                     mt="8|8|14|20"
@@ -77,7 +80,7 @@ export default ({ location }) => {
                     fontSize="3xl"
                   >
                     {name}
-                  </H2>
+                  </h2>
                   {display === "grid" ? (
                     <Grid
                       col={display === "grid" && "1|1|2"}
@@ -122,7 +125,7 @@ export default ({ location }) => {
                 </React.Fragment>
               )
             })}
-          </Div>
+          </div>
         </Grid>
       </Container>
     </Layout>

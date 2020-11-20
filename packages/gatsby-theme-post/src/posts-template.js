@@ -1,8 +1,8 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import { graphql } from "gatsby"
 import { Layout, Pager } from "@reflexjs/gatsby-theme-core"
 import { Block } from "@reflexjs/gatsby-theme-block"
-import { Container, Section } from "@reflexjs/components"
 import { Posts } from "./posts"
 
 export const query = graphql`
@@ -26,15 +26,15 @@ export default ({ data, ...props }) => {
     <Layout pathname={props.location.pathname}>
       <Block src="posts-header" posts={data.allPost.posts} />
       {data.allPost ? (
-        <Section py="8|12|14">
-          <Container>
+        <section py="8|12|14">
+          <div variant="container">
             <Posts {...data.allPost} {...props} />
             <Pager
               previousPagePath={previousPagePath}
               nextPagePath={nextPagePath}
             />
-          </Container>
-        </Section>
+          </div>
+        </section>
       ) : null}
       <Block src="posts-footer" videos={data.allPost.posts} />
     </Layout>

@@ -14,7 +14,7 @@
     "@reflexjs/gatsby-theme-core": "^0.6.0"
   },
   "devDependencies": {
-    "gatsby": "^2.23.11",
+    "gatsby": "^2.26.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   }

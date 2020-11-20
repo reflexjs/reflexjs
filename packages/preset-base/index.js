@@ -1,33 +1,33 @@
 const spacing = {
-  "0": "0",
-  "1": "0.25rem",
-  "2": "0.5rem",
-  "3": "0.75rem",
-  "4": "1rem",
-  "5": "1.25rem",
-  "6": "1.5rem",
-  "7": "1.75rem",
-  "8": "2rem",
-  "9": "2.25rem",
-  "10": "2.5rem",
-  "12": "3rem",
-  "14": "3.5rem",
-  "16": "4rem",
-  "18": "4.5rem",
-  "20": "5rem",
-  "22": "5.5rem",
-  "24": "6rem",
-  "26": "6.5rem",
-  "28": "7rem",
-  "30": "7.5rem",
-  "32": "8rem",
-  "36": "9rem",
-  "40": "10rem",
-  "48": "12rem",
-  "56": "14rem",
-  "64": "16rem",
-  "72": "18rem",
-  "80": "20rem",
+  0: "0",
+  1: "0.25rem",
+  2: "0.5rem",
+  3: "0.75rem",
+  4: "1rem",
+  5: "1.25rem",
+  6: "1.5rem",
+  7: "1.75rem",
+  8: "2rem",
+  9: "2.25rem",
+  10: "2.5rem",
+  12: "3rem",
+  14: "3.5rem",
+  16: "4rem",
+  18: "4.5rem",
+  20: "5rem",
+  22: "5.5rem",
+  24: "6rem",
+  26: "6.5rem",
+  28: "7rem",
+  30: "7.5rem",
+  32: "8rem",
+  36: "9rem",
+  40: "10rem",
+  48: "12rem",
+  56: "14rem",
+  64: "16rem",
+  72: "18rem",
+  80: "20rem",
 }
 
 export default {
@@ -124,14 +124,14 @@ export default {
     normal: "1.5",
     relaxed: "1.625",
     loose: "2",
-    "3": ".75rem",
-    "4": "1rem",
-    "5": "1.25rem",
-    "6": "1.5rem",
-    "7": "1.75rem",
-    "8": "2rem",
-    "9": "2.25rem",
-    "10": "2.5rem",
+    3: ".75rem",
+    4: "1rem",
+    5: "1.25rem",
+    6: "1.5rem",
+    7: "1.75rem",
+    8: "2rem",
+    9: "2.25rem",
+    10: "2.5rem",
   },
   space: {
     ...spacing,
@@ -183,28 +183,105 @@ export default {
   },
   gridTemplateColumns: {
     none: "none",
-    "1": "repeat(1, minmax(0, 1fr))",
-    "2": "repeat(2, minmax(0, 1fr))",
-    "3": "repeat(3, minmax(0, 1fr))",
-    "4": "repeat(4, minmax(0, 1fr))",
-    "5": "repeat(5, minmax(0, 1fr))",
-    "6": "repeat(6, minmax(0, 1fr))",
-    "7": "repeat(7, minmax(0, 1fr))",
-    "8": "repeat(8, minmax(0, 1fr))",
-    "9": "repeat(9, minmax(0, 1fr))",
-    "10": "repeat(10, minmax(0, 1fr))",
-    "11": "repeat(11, minmax(0, 1fr))",
-    "12": "repeat(12, minmax(0, 1fr))",
+    1: "repeat(1, minmax(0, 1fr))",
+    2: "repeat(2, minmax(0, 1fr))",
+    3: "repeat(3, minmax(0, 1fr))",
+    4: "repeat(4, minmax(0, 1fr))",
+    5: "repeat(5, minmax(0, 1fr))",
+    6: "repeat(6, minmax(0, 1fr))",
+    7: "repeat(7, minmax(0, 1fr))",
+    8: "repeat(8, minmax(0, 1fr))",
+    9: "repeat(9, minmax(0, 1fr))",
+    10: "repeat(10, minmax(0, 1fr))",
+    11: "repeat(11, minmax(0, 1fr))",
+    12: "repeat(12, minmax(0, 1fr))",
   },
   gridTemplateRows: {
     none: "none",
-    "1": "repeat(1, minmax(0, 1fr))",
-    "2": "repeat(2, minmax(0, 1fr))",
-    "3": "repeat(3, minmax(0, 1fr))",
-    "4": "repeat(4, minmax(0, 1fr))",
-    "5": "repeat(5, minmax(0, 1fr))",
+    1: "repeat(1, minmax(0, 1fr))",
+    2: "repeat(2, minmax(0, 1fr))",
+    3: "repeat(3, minmax(0, 1fr))",
+    4: "repeat(4, minmax(0, 1fr))",
+    5: "repeat(5, minmax(0, 1fr))",
   },
   styles: {
+    global: {
+      a: {
+        color: "primary",
+        textDecoration: "none",
+
+        "&:hover, &:focus": {
+          color: "primaryHover",
+        },
+      },
+      pre: {
+        color: "prism.text",
+        backgroundColor: "prism.background",
+        fontFamily: "monospace",
+        fontSize: "md",
+        lineHeight: 8,
+        tabSize: 2,
+        hyphens: "none",
+        my: 8,
+        py: 4,
+        overflow: "auto",
+        borderRadius: "md",
+        whiteSpace: "pre-wrap",
+        "> .token-line": {
+          px: 4,
+        },
+        ".plain": {
+          minHeight: "1ch",
+          display: "inline-block",
+        },
+        ".attr-name": {
+          fontStyle: "italic",
+        },
+        ".comment": {
+          color: "prism.comment",
+        },
+        ".attr-name, .string, .url": {
+          color: "prism.string",
+        },
+        ".variable": {
+          color: "prism.var",
+        },
+        ".number": {
+          color: "prism.number",
+        },
+        ".builtin, .char, .constant, .function": {
+          color: "prism.constant",
+        },
+        ".punctuation, .selector, .doctype": {
+          color: "prism.punctuation",
+        },
+        ".class-name": {
+          color: "prism.className",
+        },
+        ".operator, .keyword": {
+          color: "prism.tag",
+        },
+        ".boolean": {
+          color: "prism.boolean",
+        },
+        ".property": {
+          color: "prism.property",
+        },
+        ".namespace": {
+          color: "prism.namespace",
+        },
+        ".highlight": {
+          bg: "prism.highlight",
+        },
+      },
+      code: {
+        fontFamily: "monospace",
+      },
+      inlineCode: {
+        fontFamily: "monospace",
+        color: "primary",
+      },
+    },
     root: {
       color: "text",
       fontFamily: "body",
@@ -223,81 +300,6 @@ export default {
         borderColor: "border",
       },
     },
-    a: {
-      color: "primary",
-      textDecoration: "none",
-
-      "&:hover, &:focus": {
-        color: "primaryHover",
-      },
-    },
-    pre: {
-      color: "prism.text",
-      backgroundColor: "prism.background",
-      fontFamily: "monospace",
-      fontSize: "md",
-      lineHeight: 8,
-      tabSize: 2,
-      hyphens: "none",
-      my: 8,
-      py: 4,
-      overflow: "auto",
-      borderRadius: "md",
-      whiteSpace: "pre-wrap",
-      "> .token-line": {
-        px: 4,
-      },
-      ".plain": {
-        minHeight: "1ch",
-        display: "inline-block",
-      },
-      ".attr-name": {
-        fontStyle: "italic",
-      },
-      ".comment": {
-        color: "prism.comment",
-      },
-      ".attr-name, .string, .url": {
-        color: "prism.string",
-      },
-      ".variable": {
-        color: "prism.var",
-      },
-      ".number": {
-        color: "prism.number",
-      },
-      ".builtin, .char, .constant, .function": {
-        color: "prism.constant",
-      },
-      ".punctuation, .selector, .doctype": {
-        color: "prism.punctuation",
-      },
-      ".class-name": {
-        color: "prism.className",
-      },
-      ".operator, .keyword": {
-        color: "prism.tag",
-      },
-      ".boolean": {
-        color: "prism.boolean",
-      },
-      ".property": {
-        color: "prism.property",
-      },
-      ".namespace": {
-        color: "prism.namespace",
-      },
-      ".highlight": {
-        bg: "prism.highlight",
-      },
-    },
-    code: {
-      fontFamily: "monospace",
-    },
-    inlineCode: {
-      fontFamily: "monospace",
-      color: "primary",
-    },
   },
   heading: {
     color: "heading",
@@ -308,6 +310,10 @@ export default {
 
     a: {
       color: "text",
+
+      ":hover": {
+        color: "primary",
+      },
     },
   },
   h1: {
@@ -349,6 +355,7 @@ export default {
   container: {
     px: [4, 6, 6, 4],
     maxWidth: 1110,
+    mx: "auto",
 
     sm: {
       maxWidth: 640,
@@ -381,9 +388,6 @@ export default {
     "&:hover, &:focus, &:active, &[aria-current=page]": {
       color: "primaryHover",
     },
-  },
-  svg: {
-    size: ["20px", "22px", "24px"],
   },
   button: {
     display: "inline-flex",

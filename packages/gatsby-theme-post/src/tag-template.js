@@ -1,6 +1,6 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx, Flexbox } from "reflexjs"
 import { graphql } from "gatsby"
-import { Container, Section, H1, Flexbox } from "@reflexjs/components"
 import { Layout, ButtonLink, Icon } from "@reflexjs/gatsby-theme-core"
 import { Posts } from "./posts"
 
@@ -26,10 +26,12 @@ export const query = graphql`
 
 export default ({ data, ...props }) => (
   <Layout pathname={data.postTag.slug}>
-    <Section py="8|12|14">
-      <Container>
+    <section py="8|12|14">
+      <div variant="container">
         <Flexbox alignItems="center" mb="6|8|10">
-          <H1 m="0">{data.postTag.name}</H1>
+          <h1 variant="heading.h1" m="0">
+            {data.postTag.name}
+          </h1>
           <ButtonLink
             to={props.pageContext.themeOptions.basePath}
             variant="link"
@@ -39,7 +41,7 @@ export default ({ data, ...props }) => (
           </ButtonLink>
         </Flexbox>
         <Posts {...data.allPost} {...props} />
-      </Container>
-    </Section>
+      </div>
+    </section>
   </Layout>
 )

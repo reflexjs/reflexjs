@@ -1,6 +1,7 @@
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import * as React from "react"
 import { connectHighlight } from "react-instantsearch-dom"
-import { Strong, Span } from "@reflexjs/components"
 
 export const Highlight = connectHighlight(
   ({ highlight, attribute = "title", hit }) => {
@@ -14,11 +15,11 @@ export const Highlight = connectHighlight(
       <React.Fragment>
         {parsedHit.map((part, index) =>
           part.isHighlighted ? (
-            <Strong key={index} color="primary">
+            <strong key={index} color="primary">
               {part.value}
-            </Strong>
+            </strong>
           ) : (
-            <Span key={index}>{part.value}</Span>
+            <span key={index}>{part.value}</span>
           )
         )}
       </React.Fragment>

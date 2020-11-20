@@ -1,18 +1,24 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import { MDXProvider, MDXRenderer, Layout } from "@reflexjs/gatsby-theme-core"
-import { H1, Container, Main, Grid } from "@reflexjs/components"
 import { StyleguideHeader } from "./styleguide-header"
 import { Palette } from "./palette"
 
 export const Styleguide = ({ title, body }) => (
   <Layout>
-    <Container py="6">
-      <Grid row="50px 1fr" alignItems="flex-start" gap="10">
+    <div variant="container" py="6">
+      <div d="grid" row="50px 1fr" alignItems="flex-start" gap="10">
         <StyleguideHeader position="sticky" top="0" bg="background" />
-        <Main>
-          <H1 mt="0" borderBottom="1px solid" borderColor="border" pb="4">
+        <main>
+          <h1
+            variant="heading.h1"
+            mt="0"
+            borderBottom="1px solid"
+            borderColor="border"
+            pb="4"
+          >
             {title}
-          </H1>
+          </h1>
           <MDXProvider
             components={{
               Palette,
@@ -20,8 +26,8 @@ export const Styleguide = ({ title, body }) => (
           >
             <MDXRenderer>{body}</MDXRenderer>
           </MDXProvider>
-        </Main>
-      </Grid>
-    </Container>
+        </main>
+      </div>
+    </div>
   </Layout>
 )

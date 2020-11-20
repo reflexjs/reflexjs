@@ -1,16 +1,6 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx, Flexbox } from "reflexjs"
 import { MDXRenderer, Icon } from "@reflexjs/gatsby-theme-core"
-import {
-  Container,
-  H1,
-  P,
-  Button,
-  A,
-  Section,
-  Grid,
-  Flexbox,
-  Div,
-} from "@reflexjs/components"
 import { Progress } from "./progress"
 
 export const Tutorial = ({
@@ -21,22 +11,23 @@ export const Tutorial = ({
   previousTutorial,
   nextTutorial,
 }) => (
-  <Section pt="8|12|16">
-    <Container>
-      <Flexbox flexDirection={["column", "row"]} justifyContent="space-between">
-        <Div textAlign={["center", "left"]}>
-          <H1 m="0" fontWeight="extrabold">
+  <section pt="8|12|16">
+    <div variant="container">
+      <flexbox flexDirection={["column", "row"]} justifyContent="space-between">
+        <div textAlign={["center", "left"]}>
+          <h1 variant="heading.h1" m="0" fontWeight="extrabold">
             {title}
-          </H1>
-          <P fontSize="xl|2xl" mt="2" mb="0">
+          </h1>
+          <p fontSize="xl|2xl" mt="2" mb="0">
             {excerpt}
-          </P>
-        </Div>
+          </p>
+        </div>
         <Progress current={weight} />
-      </Flexbox>
+      </flexbox>
 
-      <Section py="8">
-        <Grid
+      <section py="8">
+        <div
+          display="grid"
           col={[1, 2]}
           gap="10"
           sx={{
@@ -80,22 +71,22 @@ export const Tutorial = ({
           }}
         >
           <MDXRenderer>{body}</MDXRenderer>
-        </Grid>
-      </Section>
+        </div>
+      </section>
       <Flexbox justifyContent="space-between">
         {previousTutorial && (
-          <Button as={A} variant="link" href={previousTutorial.slug}>
+          <a variant="button.link" href={previousTutorial.slug}>
             <Icon name="arrow-left" mr="2" />
             {previousTutorial.title}
-          </Button>
+          </a>
         )}
         {nextTutorial && (
-          <Button as={A} variant="primary" ml="auto" href={nextTutorial.slug}>
+          <a variant="button.primary" ml="auto" href={nextTutorial.slug}>
             {nextTutorial.title}
             <Icon name="arrow-right" ml="2" />
-          </Button>
+          </a>
         )}
       </Flexbox>
-    </Container>
-  </Section>
+    </div>
+  </section>
 )

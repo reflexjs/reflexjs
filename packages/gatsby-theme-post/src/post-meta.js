@@ -1,5 +1,5 @@
-import * as React from "react"
-import { Flexbox, Span } from "@reflexjs/components"
+/** @jsx jsx */
+import { jsx, Flexbox } from "reflexjs"
 import { Image } from "@reflexjs/gatsby-plugin-image"
 
 export const PostMeta = ({ author, datetime, date, timeToRead, ...props }) => (
@@ -15,10 +15,10 @@ export const PostMeta = ({ author, datetime, date, timeToRead, ...props }) => (
           rounded="full"
           overflow="hidden"
         />
-        <Span fontWeight="semibold">{author.name}</Span>
+        <span fontWeight="semibold">{author.name}</span>
       </Flexbox>
     )}
     {date && <time dateTime={datetime}> - {date}</time>}
-    {timeToRead && <Span ml="2"> - {timeToRead} min read</Span>}
+    {timeToRead && <span ml="2"> - {timeToRead} min read</span>}
   </Flexbox>
 )

@@ -1,7 +1,7 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import GatsbyImg from "gatsby-image"
 import { isRelativeUrl } from "@reflexjs/utils"
-import { Img, Figure, Figcaption } from "@reflexjs/components"
 import { useImage } from "./use-image"
 
 export const Image = ({ src, alt, title, caption, aspectRatio, ...props }) => {
@@ -14,7 +14,7 @@ export const Image = ({ src, alt, title, caption, aspectRatio, ...props }) => {
 
   const Caption = () =>
     caption ? (
-      <Figcaption
+      <figcaption
         dangerouslySetInnerHTML={{ __html: caption }}
         mt="2"
         textAlign="center"
@@ -25,10 +25,10 @@ export const Image = ({ src, alt, title, caption, aspectRatio, ...props }) => {
   // Return Gatsby image if fixed or fluid is passed.
   if (props.fixed || props.fluid) {
     return (
-      <Figure {...props}>
+      <figure {...props}>
         <GatsbyImg {...props} alt={alt} title={title} />
         <Caption />
-      </Figure>
+      </figure>
     )
   }
 
@@ -37,25 +37,25 @@ export const Image = ({ src, alt, title, caption, aspectRatio, ...props }) => {
   // Return default image tag if absolute src.
   if (!isRelativeUrl(src)) {
     return (
-      <Figure {...props}>
-        <Img src={src} alt={alt} title={title} {...props} />
+      <figure {...props}>
+        <img src={src} alt={alt} title={title} {...props} />
         <Caption />
-      </Figure>
+      </figure>
     )
   }
 
   // Determine if image is svg using extension.
   if (image && image.extension === "svg") {
     return (
-      <Figure {...props}>
-        <Img src={image.publicURL} alt={alt} title={title} {...props} />
+      <figure {...props}>
+        <img src={image.publicURL} alt={alt} title={title} {...props} />
         <Caption />
-      </Figure>
+      </figure>
     )
   }
 
   return image ? (
-    <Figure {...props}>
+    <figure {...props}>
       {aspectRatio ? (
         <GatsbyImg
           sizes={{
@@ -73,6 +73,6 @@ export const Image = ({ src, alt, title, caption, aspectRatio, ...props }) => {
         />
       )}
       <Caption />
-    </Figure>
+    </figure>
   ) : null
 }

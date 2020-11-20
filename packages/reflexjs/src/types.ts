@@ -170,6 +170,7 @@ export interface CssProps
     StandardShorthandProperties {}
 
 export type ResponsiveCssProps<T> = {
+  /*eslint @typescript-eslint/ban-types: "off" */
   [P in keyof T]?: T[P] | {}
 }
 
@@ -200,14 +201,14 @@ export type ComponentWithStyleProps<T extends React.ElementType> = Assign<
   StyleProps
 >
 
-declare module "@theme-ui/css" {
-  interface Theme {
-    [name: string]: {}
-    icons?: {
-      [name: string]: string
-    }
-  }
-}
+// declare module "@theme-ui/css" {
+//   interface Theme {
+//     [name: string]: {}
+//     icons?: {
+//       [name: string]: string
+//     }
+//   }
+// }
 
 declare module "theme-ui" {
   interface Theme {
