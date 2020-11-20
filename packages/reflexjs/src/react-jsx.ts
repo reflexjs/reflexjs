@@ -25,7 +25,7 @@ export interface Theme extends ThemeUITheme {}
 // See https://github.com/styled-system/styled-system/tree/master/packages/props.
 const omit = (props) => {
   const next = {}
-  for (let key in props) {
+  for (const key in props) {
     if (regex.test(key)) continue
     next[key] = props[key]
   }
@@ -36,7 +36,7 @@ const omit = (props) => {
 // See https://github.com/styled-system/styled-system/tree/master/packages/props.
 const pick = (props) => {
   const next = {}
-  for (let key in props) {
+  for (const key in props) {
     if (!regex.test(key)) continue
     next[key] = props[key]
   }
@@ -91,7 +91,8 @@ function parseProps(props) {
   const [styleProps, otherProps] = split(_props)
   const sxProps = transformProps(deepmerge(styleProps, sx))
 
-  let next: typeof props & {
+  const next: typeof props & {
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
     css?: InterpolationWithTheme<any>
     sx: SxProps
   } = {
