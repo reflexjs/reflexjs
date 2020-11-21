@@ -1,6 +1,6 @@
-# Reflex - Supercharge your Gatsby sites
+# Reflex - Supercharge your Gatsby and Nextjs sites
 
-A collection of <strong>plugins</strong>, <strong>themes</strong> and pre-built <strong>blocks</strong> to help you build Gatsby sites faster.
+A collection of <strong>plugins</strong>, <strong>themes</strong> and pre-built <strong>blocks</strong> to help you build Gatsby and Nextjs sites faster.
 
 <p>
   <a href="https://github.com/reflexjs/reflex/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/@arshad/gatsby-theme-phoenix.svg" alt="License"></a>
