@@ -22,12 +22,12 @@ export const VideoTeaser = ({
   data,
   ...props
 }) => (
-  <Article position="relative" {...props}>
+  <article position="relative" {...props}>
     <Grid col="1|1|350px 1fr" gap="4|4|10" alignItems="flex-start">
       {thumbnail && (
-        <Link href={slug} d="block" position="relative">
+        <Link href={slug} display="block" position="relative">
           {data.duration && (
-            <Span
+            <span
               color="white"
               bg="primary"
               rounded="md"
@@ -40,7 +40,7 @@ export const VideoTeaser = ({
               position="absolute"
             >
               {data.duration}
-            </Span>
+            </span>
           )}
           <Image
             src={thumbnail}
@@ -53,25 +53,32 @@ export const VideoTeaser = ({
           />
         </Link>
       )}
-      <Div py="2">
+      <div py="2">
         {title && (
           <Link href={slug}>
-            <H2 my="0" fontSize="3xl" hoverColor="primary">
+            <h2
+              variant="heading.h2"
+              my="0"
+              fontSize="3xl"
+              _hover={{
+                color: "primary",
+              }}
+            >
               {title}
-            </H2>
+            </h2>
           </Link>
         )}
         {excerpt && (
-          <P mt="2" fontSize="md">
+          <p mt="2" fontSize="md">
             {excerpt}
-          </P>
+          </p>
         )}
         {date && (
-          <Time dateTime={datetime} fontSize="sm">
+          <time dateTime={datetime} fontSize="sm">
             {date}
-          </Time>
+          </time>
         )}
-      </Div>
+      </div>
     </Grid>
-  </Article>
+  </article>
 )

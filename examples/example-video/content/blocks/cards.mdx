@@ -1,5 +1,5 @@
 export const Cards = ({ ...props }) => (
-  <Section py="8|12" {...props}>
+  <section py="8|12" {...props}>
     <Container>
       <Grid col="1|2|3" mt="8|10|12" gap="4|6|8">
         <Card
@@ -22,7 +22,7 @@ export const Cards = ({ ...props }) => (
         />
       </Grid>
     </Container>
-  </Section>
+  </section>
 )
 
 export const Card = ({ icon, heading, description, url, ...props }) => (
@@ -33,8 +33,10 @@ export const Card = ({ icon, heading, description, url, ...props }) => (
     rounded="lg"
     p="4|6|8"
     position="relative"
-    hoverBorderColor="primary"
     {...props}
+    _hover={{
+      borderColor: "primary",
+    }}
   >
     <Link
       href={url}
@@ -57,11 +59,11 @@ export const Card = ({ icon, heading, description, url, ...props }) => (
     >
       <Icon name={icon} size="6" />
     </Flexbox>
-    <H3 fontSize="2xl" mt="4|6" mb="0">
+    <h3 variant="heading.h3" fontSize="2xl" mt="4|6" mb="0">
       {heading}
-    </H3>
-    <P mb="0" mt="2">
+    </h3>
+    <p mb="0" mt="2">
       {description}
-    </P>
+    </p>
   </Flexbox>
 )

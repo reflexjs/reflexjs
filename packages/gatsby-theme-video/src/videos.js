@@ -16,39 +16,48 @@ export const Videos = ({ videos }) => {
   ) : null
 }
 
-export const VideoTeaser = ({ title, excerpt, slug, thumbnail, ...props }) => (
-  <article {...props}>
-    {thumbnail && (
-      <Link href={slug} display="block">
-        <Image
-          src={thumbnail}
-          title={title}
-          alt={title}
-          aspectRatio={16 / 9}
-          rounded="lg"
-          overflow="hidden"
-        />
-      </Link>
-    )}
-    {title && (
-      <Link href={slug}>
-        <h1
-          variant="heading.h2"
-          mt="4"
-          mb="0"
-          fontSize="2xl"
-          _hover={{
-            color: "primary",
-          }}
-        >
-          {title}
-        </h1>
-      </Link>
-    )}
-    {excerpt && (
-      <p mt="2" fontSize="md">
-        {excerpt}
-      </p>
-    )}
-  </article>
-)
+export const VideoTeaser = function ({
+  title,
+  excerpt,
+  slug,
+  thumbnail,
+  ...props
+}) {
+  console.log(props)
+  return (
+    <article {...props}>
+      {thumbnail && (
+        <Link href={slug} display="block">
+          <Image
+            src={thumbnail}
+            title={title}
+            alt={title}
+            aspectRatio={16 / 9}
+            rounded="lg"
+            overflow="hidden"
+          />
+        </Link>
+      )}
+      {title && (
+        <Link href={slug}>
+          <h1
+            variant="heading.h2"
+            mt="4"
+            mb="0"
+            fontSize="2xl"
+            _hover={{
+              color: "primary",
+            }}
+          >
+            {title}
+          </h1>
+        </Link>
+      )}
+      {excerpt && (
+        <p mt="2" fontSize="md">
+          {excerpt}
+        </p>
+      )}
+    </article>
+  )
+}

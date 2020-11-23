@@ -22,11 +22,11 @@ export const VideoTeaser = ({
   data,
   ...props
 }) => (
-  <Article position="relative" {...props}>
+  <article position="relative" {...props}>
     {thumbnail && (
-      <Link href={slug} d="block" position="relative">
+      <Link href={slug} display="block" position="relative">
         {data.duration && (
-          <Span
+          <span
             color="white"
             bg="primary"
             rounded="md"
@@ -39,7 +39,7 @@ export const VideoTeaser = ({
             position="absolute"
           >
             {data.duration}
-          </Span>
+          </span>
         )}
         <Image
           src={thumbnail}
@@ -54,10 +54,17 @@ export const VideoTeaser = ({
     )}
     {title && (
       <Link href={slug}>
-        <H2 mt="4" fontSize="xl" hoverColor="primary">
+        <h2
+          variant="heading.h2"
+          mt="4"
+          fontSize="xl"
+          _hover={{
+            color: "primary",
+          }}
+        >
           {title}
-        </H2>
+        </h2>
       </Link>
     )}
-  </Article>
+  </article>
 )

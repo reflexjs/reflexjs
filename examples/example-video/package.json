@@ -18,6 +18,10 @@
     "gatsby": "^2.26.1",
     "gatsby-plugin-manifest": "^2.4.21",
     "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react-dom": "^16.14.0",
+    "reflexjs": "^1.0.0-alpha.7"
+  },
+  "devDependencies": {
+    "babel-preset-gatsby": "^0.7.0"
   }
 }

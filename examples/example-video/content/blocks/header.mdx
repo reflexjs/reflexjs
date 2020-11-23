@@ -4,7 +4,7 @@ export const HeaderBlock = ({ ...props }) => {
   const [showMenu, setShowMenu] = React.useState(false)
   const navName = "header"
   return (
-    <Header
+    <header
       position={["sticky", "relative"]}
       top="0"
       bg="background"
@@ -13,7 +13,11 @@ export const HeaderBlock = ({ ...props }) => {
       {...props}
     >
       <Container>
-        <Flexbox d={["none", "flex"]} justifyContent="space-between" py="1">
+        <Flexbox
+          display={["none", "flex"]}
+          justifyContent="space-between"
+          py="1"
+        >
           <Branding />
           <NavMenu
             name={navName}
@@ -25,7 +29,7 @@ export const HeaderBlock = ({ ...props }) => {
         </Flexbox>
       </Container>
       <Flexbox
-        d={["flex", "none"]}
+        display={["flex", "none"]}
         flexDirection="column"
         justifyContent="center"
       >
@@ -38,15 +42,15 @@ export const HeaderBlock = ({ ...props }) => {
           transition="all .15s ease-in"
         >
           <Branding />
-          <Button
-            variant="link"
+          <button
+            variant="button.link"
             outline="none"
             onClick={() => setShowMenu(true)}
           >
             <Icon name="menu" size="7" />
-          </Button>
+          </button>
         </Flexbox>
-        <Div
+        <div
           position="absolute"
           zIndex="1000"
           bg="background"
@@ -68,43 +72,51 @@ export const HeaderBlock = ({ ...props }) => {
         >
           <Flexbox justifyContent="space-between" w="full" py="2" px="0">
             <Branding />
-            <Button variant="link" onClick={() => setShowMenu(false)} mr={-3}>
+            <button
+              variant="button.link"
+              onClick={() => setShowMenu(false)}
+              mr={-3}
+            >
               <Icon name="x" size="6" />
-            </Button>
+            </button>
           </Flexbox>
           <NavMenu name={navName} gap={[0, 8]} borderTopWidth="1px" />
           <Flexbox py="4" justifyContent="space-between">
             <ModeToggle ml="auto" />
           </Flexbox>
-        </Div>
+        </div>
       </Flexbox>
-    </Header>
+    </header>
   )
 }
 
 export const Branding = () => {
   const { title } = useSiteMetadata()
   return (
-    <A href="/" fontSize="2xl" fontWeight="semibold" color="text">
+    <a href="/" fontSize="2xl" fontWeight="semibold" color="text">
       <Icon name="play-circle" color="primary" mr="2" />
       {title}
-    </A>
+    </a>
   )
 }
 
 export const ModeToggle = ({ ...props }) => {
   const [colorMode, setColorMode] = useColorMode()
   return (
-    <Button
-      variant="icon"
+    <button
+      variant="button.icon"
       onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
       ml={[2, 4]}
-      hoverColor="primary"
-      focusColor="text"
       {...props}
+      _hover={{
+        color: "primary",
+      }}
+      _focus={{
+        color: "text",
+      }}
     >
       <Icon name={colorMode === "default" ? "sun" : "moon"} size="5" />
       <VisuallyHidden>Toggle mode</VisuallyHidden>
-    </Button>
+    </button>
   )
 }

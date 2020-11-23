@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Container } from "reflexjs"
-import { MDXRenderer, Icon, ButtonLink } from "@reflexjs/gatsby-theme-core"
+import { MDXRenderer, Icon } from "@reflexjs/gatsby-theme-core"
 
 export const Video = ({
   title,

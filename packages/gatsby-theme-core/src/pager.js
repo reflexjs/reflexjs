@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, Flexbox } from "reflexjs"
-import { ButtonLink } from "./button-link"
 import { Icon } from "./icon"
 
 export const Pager = ({ previousPagePath, nextPagePath, ...props }) => (
