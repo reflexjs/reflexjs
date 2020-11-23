@@ -107,6 +107,7 @@ const MAPPING = {
   Ul: "ul",
   Video: "video",
   Wbr: "wbr",
+  ButtonLink: "a",
 }
 
 const PROPS_MAPPING = {
@@ -178,7 +179,7 @@ export default function transform(file: FileInfo, api: API): string {
 
   // Transforms `<Button variant="primary" />` to `<button variant="button.primary" />`.
   function transformButtonVariants(node): void {
-    if (!nodeIsOfIdentifierTypes(node, ["Button"])) return
+    if (!nodeIsOfIdentifierTypes(node, ["Button", "ButtonLink"])) return
 
     const variants = [`button`]
 
@@ -248,7 +249,7 @@ export default function transform(file: FileInfo, api: API): string {
       })
 
       if (values.length) {
-        node.value.attributes.unshift(
+        node.value.attributes.push(
           j.jsxAttribute(
             j.jsxIdentifier(`_${name}`),
             j.jsxExpressionContainer(j.objectExpression(values))
@@ -262,6 +263,7 @@ export default function transform(file: FileInfo, api: API): string {
   function cleanComponentImports(node): void {
     if (node.value.source.value !== "@reflexjs/components") return
 
+    node.value.source.value = "reflexjs"
     node.value.specifiers = node.value.specifiers.filter(
       (specifier) => !Object.keys(MAPPING).includes(specifier.imported.name)
     )

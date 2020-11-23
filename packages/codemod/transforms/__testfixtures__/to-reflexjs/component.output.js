@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Container, Grid, Flexbox, Icon } from "@reflexjs/components";
+import { Container, Grid, Flexbox, Icon } from "reflexjs";
 
 export default function Component() {
   return (
@@ -24,10 +24,10 @@ export default function Component() {
             <p fontSize="xl|2xl" mt="2">
               Build a blazing fast site with Gatsby and Reflex.
             </p>
-            <ButtonLink href="#" variant="primary">
+            <a href="#" variant="button.primary">
               Get Started
               <Icon name="arrow-right" ml="4" />
-            </ButtonLink>
+            </a>
           </Flexbox>
         </Grid>
       </Container>
