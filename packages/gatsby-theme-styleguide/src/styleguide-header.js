@@ -28,7 +28,7 @@ export const StyleguideHeader = ({ ...props }) => {
               <Link
                 to={slug}
                 textDecoration="none"
-                d="inline-flex"
+                display="inline-flex"
                 mb="2"
                 color="text"
                 fontWeight="semi"
@@ -51,11 +51,13 @@ export const StyleguideHeader = ({ ...props }) => {
         bg="transparent"
         p="0"
         color="text"
-        hoverColor="primary"
         sx={{
           ":focus": {
             outline: "none",
           },
+        }}
+        _hover={{
+          color: "primary",
         }}
       >
         <svg

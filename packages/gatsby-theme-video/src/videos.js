@@ -19,7 +19,7 @@ export const Videos = ({ videos }) => {
 export const VideoTeaser = ({ title, excerpt, slug, thumbnail, ...props }) => (
   <article {...props}>
     {thumbnail && (
-      <Link href={slug} d="block">
+      <Link href={slug} display="block">
         <Image
           src={thumbnail}
           title={title}
@@ -37,7 +37,9 @@ export const VideoTeaser = ({ title, excerpt, slug, thumbnail, ...props }) => (
           mt="4"
           mb="0"
           fontSize="2xl"
-          hoverColor="primary"
+          _hover={{
+            color: "primary",
+          }}
         >
           {title}
         </h1>

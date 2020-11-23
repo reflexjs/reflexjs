@@ -84,8 +84,10 @@ export const Post = ({
               textDecoration="none"
               fontSize="sm"
               ml={index !== 0 && 2}
-              hoverBg="secondary"
-              hoverColor="white"
+              _hover={{
+                bg: "secondary",
+                color: "white",
+              }}
             >
               {name}
             </Link>

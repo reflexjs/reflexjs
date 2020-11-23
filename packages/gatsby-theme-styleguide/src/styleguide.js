@@ -7,7 +7,7 @@ import { Palette } from "./palette"
 export const Styleguide = ({ title, body }) => (
   <Layout>
     <div variant="container" py="6">
-      <div d="grid" row="50px 1fr" alignItems="flex-start" gap="10">
+      <div display="grid" row="50px 1fr" alignItems="flex-start" gap="10">
         <StyleguideHeader position="sticky" top="0" bg="background" />
         <main>
           <h1

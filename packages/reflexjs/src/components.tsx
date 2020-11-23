@@ -97,7 +97,6 @@ export const Flexbox = React.forwardRef(
       sx={{
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
       }}
       {...props}
     />

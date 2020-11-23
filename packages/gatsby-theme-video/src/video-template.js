@@ -28,7 +28,7 @@ export default ({ data, ...props }) => {
   return (
     <Layout pathname={data.video.slug}>
       <Block src="video-header" {...props} />
-      {data.video ? <Video {...props} /> : null}
+      {data.video ? <video {...props} /> : null}
       <Block src="video-header" {...props} />
     </Layout>
   )

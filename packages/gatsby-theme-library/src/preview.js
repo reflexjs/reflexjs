@@ -67,7 +67,7 @@ export const Preview = ({
           >
             <Link
               to={libraryUrl}
-              d="inline-flex"
+              display="inline-flex"
               alignItems="center"
               fontSize="md"
               color="text"
@@ -79,7 +79,7 @@ export const Preview = ({
             <Flexbox w={["100%", "auto"]} mt={[4, 0]} justifyContent="flex-end">
               <Flexbox
                 position="relative"
-                d={preview ? "flex" : "none"}
+                display={preview ? "flex" : "none"}
                 flex="1"
               >
                 <span
@@ -96,13 +96,15 @@ export const Preview = ({
                   fontWeight="semibold"
                   backgroundSize="18px"
                   backgroundPosition="right 3px center"
-                  hoverBg="muted"
                   py="2"
                   pl="30"
                   pr="6"
                   mr="4"
                   flex="1"
                   onChange={(value) => setPreset(value)}
+                  _hover={{
+                    bg: "muted",
+                  }}
                 />
               </Flexbox>
 
@@ -111,8 +113,10 @@ export const Preview = ({
                 fontSize="sm"
                 p="2"
                 bg="transparent"
-                hoverBg="muted"
                 onClick={() => togglePreview(!preview)}
+                _hover={{
+                  bg: "muted",
+                }}
               >
                 {preview ? "Source" : "Preview"}
               </button>
@@ -120,8 +124,10 @@ export const Preview = ({
               <Flexbox borderLeftWidth="1px" ml="4" pl="3">
                 <button
                   variant="button.icon"
-                  hoverColor="primary"
                   onClick={() => copy(code)}
+                  _hover={{
+                    color: "primary",
+                  }}
                 >
                   <Icon name="clipboard" />
                   <VisuallyHidden>Copy code</VisuallyHidden>
@@ -144,7 +150,7 @@ export const Preview = ({
               h="50px"
               py="4"
               px="4"
-              d="none|none|none|flex"
+              display="none|none|none|flex"
               borderBottomWidth="1px"
             >
               <Link
@@ -152,7 +158,9 @@ export const Preview = ({
                 size="4"
                 rounded="full"
                 to={libraryUrl}
-                hoverBg="red"
+                _hover={{
+                  bg: "red",
+                }}
               >
                 <VisuallyHidden>Go back</VisuallyHidden>
               </Link>

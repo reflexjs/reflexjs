@@ -9,7 +9,7 @@ export const Progress = ({ current }) => {
   return (
     <ul
       listStyle="none"
-      d="inline-grid"
+      display="inline-grid"
       m="0"
       p="0"
       gap={["2", "2", "4"]}
@@ -25,12 +25,14 @@ export const Progress = ({ current }) => {
               px="2"
               rounded="md"
               color="text"
-              hoverBg="muted"
-              hoverColor="text"
               activeStyle={{
                 bg: "text",
                 color: "background",
                 opacity: 1,
+              }}
+              _hover={{
+                bg: "muted",
+                color: "text",
               }}
             >
               {tutorial.weight + 1}

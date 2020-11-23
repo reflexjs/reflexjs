@@ -32,13 +32,13 @@ export default ({ data, ...props }) => (
           <h1 variant="heading.h1" m="0">
             {data.postTag.name}
           </h1>
-          <ButtonLink
+          <a
             to={props.pageContext.themeOptions.basePath}
-            variant="link"
+            variant="button.link"
             ml="auto"
           >
             All posts <Icon name="arrow-right" ml="2" />
-          </ButtonLink>
+          </a>
         </Flexbox>
         <Posts {...data.allPost} {...props} />
       </div>

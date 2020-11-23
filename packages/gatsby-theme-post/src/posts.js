@@ -31,13 +31,20 @@ export const PostTeaser = ({
   <article {...props}>
     <Grid>
       {image && (
-        <Link href={slug} d="block">
+        <Link href={slug} display="block">
           <Image src={image} title={title} alt={title} />
         </Link>
       )}
       {title && (
         <Link href={slug}>
-          <h2 variant="heading.h2" my="4" fontSize="3xl" hoverColor="primary">
+          <h2
+            variant="heading.h2"
+            my="4"
+            fontSize="3xl"
+            _hover={{
+              color: "primary",
+            }}
+          >
             {title}
           </h2>
         </Link>

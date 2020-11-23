@@ -9,7 +9,7 @@ export const Thumbnail = ({ screenshots, slug, mode, name, ...props }) => {
   return (
     <Link
       to={slug}
-      d="inline-flex"
+      display="inline-flex"
       alignItems="center"
       justifyContent="center"
       w="100%"
@@ -20,9 +20,11 @@ export const Thumbnail = ({ screenshots, slug, mode, name, ...props }) => {
       mt="5px"
       transition="all .15s ease-in"
       boxShadow="xl"
-      hoverTransform="translateY(-5px)"
-      hoverBoxShadow="2xl"
       minH="60px"
+      _hover={{
+        transform: "translateY(-5px)",
+        boxShadow: "2xl",
+      }}
       {...props}
     >
       {image && <Image fluid={image.fluid} w="100%" alt={name} />}

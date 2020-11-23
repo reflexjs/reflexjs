@@ -13,13 +13,9 @@ export const Video = ({
 }) => (
   <article py="8|12|14">
     <Container maxW="null|null|null|900px">
-      <ButtonLink
-        to={pageContext.themeOptions.basePath}
-        variant="link sm"
-        mb="4"
-      >
+      <a to={pageContext.themeOptions.basePath} variant="button.link.sm" mb="4">
         <Icon name="arrow-left" mr="4" /> See all videos
-      </ButtonLink>
+      </a>
       <h1 variant="heading.h1" fontWeight="extrabold" my="0">
         {title}
       </h1>

@@ -8,7 +8,7 @@ export const PostMeta = ({ author, datetime, date, timeToRead, ...props }) => (
       <Flexbox alignItems="center" mr="2">
         <Image
           src={author.picture}
-          d="inline-block"
+          display="inline-block"
           m="0"
           mr="2"
           size="10"

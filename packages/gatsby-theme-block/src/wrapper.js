@@ -10,16 +10,22 @@ export const Wrapper = ({ children, ...props }) => {
 
     // Filter out other named exports.
     Object.keys(_props).forEach((prop) => {
-      if (typeof _props[prop] === "function") {
+      if (typeof _props[prop] === "function" || prop === "_frontmatter") {
         delete _props[prop]
       }
     })
-
     return <DynamicBlock {..._props}>{children}</DynamicBlock>
   }
 
   if (children) {
     const [_child, ...rest] = Array.isArray(children) ? children : [children]
+
+    Object.keys(props).forEach((prop) => {
+      if (prop === "_frontmatter") {
+        delete props[prop]
+      }
+    })
+
     children = [
       React.cloneElement(_child, { ...props }),
       ...rest,

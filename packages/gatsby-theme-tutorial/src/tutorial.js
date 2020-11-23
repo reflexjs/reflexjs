@@ -13,7 +13,7 @@ export const Tutorial = ({
 }) => (
   <section pt="8|12|16">
     <div variant="container">
-      <flexbox flexDirection={["column", "row"]} justifyContent="space-between">
+      <Flexbox flexDirection={["column", "row"]} justifyContent="space-between">
         <div textAlign={["center", "left"]}>
           <h1 variant="heading.h1" m="0" fontWeight="extrabold">
             {title}
@@ -23,8 +23,7 @@ export const Tutorial = ({
           </p>
         </div>
         <Progress current={weight} />
-      </flexbox>
-
+      </Flexbox>
       <section py="8">
         <div
           display="grid"

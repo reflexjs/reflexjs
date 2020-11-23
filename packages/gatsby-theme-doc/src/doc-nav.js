@@ -129,7 +129,7 @@ export const DocNav = ({ onClick, ...props }) => {
               <Link
                 href={url}
                 w="100%"
-                d="flex"
+                display="flex"
                 justifyContent="center"
                 fontWeight="semibold"
                 color="text"

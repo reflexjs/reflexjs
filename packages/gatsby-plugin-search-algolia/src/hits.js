@@ -26,11 +26,15 @@ export const Hits = connectHits(({ hits, ...props }) => {
                 textDecoration="none"
                 px="4"
                 py="3"
-                d="block"
-                focusBg="muted"
-                hoverTextDecoration="none"
-                focusTextDecoration="none"
-                focusColor="text"
+                display="block"
+                _hover={{
+                  textDecoration: "none",
+                }}
+                _focus={{
+                  bg: "muted",
+                  textDecoration: "none",
+                  color: "text",
+                }}
               >
                 <Flexbox flexDirection="column" alignItems="flex-start">
                   <p fontWeight="semibold" fontSize="md" m="0">
