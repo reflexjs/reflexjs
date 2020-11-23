@@ -1,4 +1,5 @@
 import { API, FileInfo, JSXAttribute } from "jscodeshift"
+import matter from "gray-matter"
 
 const MAPPING = {
   A: "a",
@@ -137,7 +138,20 @@ function findNodeAttributePath(node, attribute: string): JSXAttribute {
 
 export default function transform(file: FileInfo, api: API): string {
   const j = api.jscodeshift
-  const root = j(file.source)
+  const { data, content } = matter(file.source)
+  const isMdx = Object.keys(data).length
+
+  // TODO: Use a proper parser.
+  let mdxContent =
+    content.trim().charAt(0) === "<"
+      ? `<CodeModeWrapper>${content}</CodeModeWrapper>`
+      : content
+
+  // Strip mdx comment.
+  mdxContent = mdxContent.replace(/<!/gm, "// <!")
+
+  const raw = isMdx ? mdxContent : file.source
+  const root = j(raw)
 
   // Transforms `<Div />` to `<div />`.
   function transformComponentToJSX(node): void {
@@ -301,5 +315,14 @@ export default function transform(file: FileInfo, api: API): string {
 
   root.find(j.JSXClosingElement).forEach(transformComponentToJSX)
 
-  return root.toSource({})
+  const result = root.toSource({})
+
+  if (!isMdx) return result
+
+  mdxContent = mdxContent.replace(/\/<!-- preview/gm, "// <!-- preview")
+
+  return matter.stringify(
+    result.replace(/<\/?CodeModeWrapper>/g, "").replace(/\/\/ </gm, "<"),
+    data
+  )
 }

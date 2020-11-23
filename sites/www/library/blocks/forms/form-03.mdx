@@ -1,62 +1,71 @@
-<Section py="8|12|16|24">
+<section py="8|12|16|24">
   <Container>
     <Flexbox flexDirection="column" textAlign="center">
-      <H2 m="0" lineHeight="tight">
+      <h2 variant="heading.h2" m="0" lineHeight="tight">
         Get In Touch
-      </H2>
-      <P fontSize="xl|2xl" mt="2" textAlign="center">
+      </h2>
+      <p fontSize="xl|2xl" mt="2" textAlign="center">
         We are here ready to help you.
-      </P>
-      <Form d="grid" col="1|repeat(2, auto)" gap="4" mt="4" w="full|auto">
-        <Div>
+      </p>
+      <form display="grid" col="1|repeat(2, auto)" gap="4" mt="4" w="full|auto">
+        <div>
           <VisuallyHidden>
-            <Label htmlFor="form-03-name">Name</Label>
+            <label htmlFor="form-03-name">Name</label>
           </VisuallyHidden>
-          <Input type="text" id="form-03-name" name="name" placeholder="Name" />
-        </Div>
-        <Div>
+          <input
+            variant="input"
+            type="text"
+            id="form-03-name"
+            name="name"
+            placeholder="Name"
+          />
+        </div>
+        <div>
           <VisuallyHidden>
-            <Label htmlFor="form-03-email">Email</Label>
+            <label htmlFor="form-03-email">Email</label>
           </VisuallyHidden>
-          <Input
+          <input
+            variant="input"
             type="email"
             id="form-03-email"
             name="email"
             placeholder="Email"
           />
-        </Div>
-        <Div colStart="span 2">
+        </div>
+        <div colStart="span 2">
           <VisuallyHidden>
-            <Label htmlFor="form-03-phone">Phone</Label>
+            <label htmlFor="form-03-phone">Phone</label>
           </VisuallyHidden>
-          <Input
+          <input
+            variant="input"
             type="tel"
             id="form-03-phone"
             name="phone"
             placeholder="Phone"
           />
-        </Div>
-        <Div colStart="span 2">
+        </div>
+        <div colStart="span 2">
           <VisuallyHidden>
-            <Label htmlFor="form-03-message">Message</Label>
+            <label htmlFor="form-03-message">Message</label>
           </VisuallyHidden>
-          <Textarea
+          <textarea
+            variant="textarea"
             placeholder="Message"
             id="form-03-message"
             name="message"
             rows="5"
           />
-        </Div>
-        <Button type="submit" variant="primary" colStart="span 2">
+        </div>
+        <button type="submit" variant="button.primary" colStart="span 2">
           Send message
-        </Button>
-      </Form>
+        </button>
+      </form>
       <Flexbox mt="4" fontSize="md">
         <Icon name="help-circle" mr="2" size="5" /> Are you an existing client?{" "}
-        <A href="#" ml="1">
+        <a href="#" ml="1">
           Talk to us.
-        </A>
+        </a>
       </Flexbox>
     </Flexbox>
   </Container>
-</Section>
+</section>

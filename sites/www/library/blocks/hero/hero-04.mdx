@@ -1,26 +1,28 @@
-<Section py="8|12|16|24">
+<section py="8|12|16|24">
   <Container>
     <Flexbox flexDirection="column" textAlign="center">
-      <P m="0" fontSize="2xl" fontWeight="semibold">
+      <p m="0" fontSize="2xl" fontWeight="semibold">
         Reflex
-      </P>
-      <H1 m="0" fontWeight="extrabold" lineHeight="tight">
+      </p>
+      <h1 variant="heading.h1" m="0" fontWeight="extrabold" lineHeight="tight">
         Grow your network with video
-      </H1>
-      <P fontSize="xl|2xl" mt="2">
+      </h1>
+      <p fontSize="xl|2xl" mt="2">
         Create short videos in minutes without any experience.
-      </P>
-      <Button
-        variant="primary"
+      </p>
+      <button
+        variant="button.primary"
         rounded="full"
         size="22"
         transition="transform .15s ease-in"
-        hoverTransform="scale(1.1)"
-        hoverBoxShadow="xl"
+        _hover={{
+          transform: "scale(1.1)",
+          boxShadow: "xl",
+        }}
       >
         <Icon name="play" size="8" ml="1" />
         <VisuallyHidden>Play video</VisuallyHidden>
-      </Button>
+      </button>
     </Flexbox>
   </Container>
-</Section>
+</section>

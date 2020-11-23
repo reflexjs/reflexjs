@@ -3,7 +3,7 @@ import { useSiteMetadata } from "@reflexjs/gatsby-theme-core"
 export const FooterBlock = () => {
   const { title } = useSiteMetadata()
   return (
-    <Footer py="10">
+    <footer py="10">
       <Container>
         <Flexbox
           flexDirection="row"
@@ -12,19 +12,19 @@ export const FooterBlock = () => {
           borderTopWidth="1px"
           pt="4"
         >
-          <P fontSize="sm" mt="0">
+          <p fontSize="sm" mt="0">
             © {new Date().getFullYear()} {title}
-          </P>
+          </p>
           <NavMenu
             name="footer"
             dropdown={false}
             expand={false}
             my="6|0"
             gap="4|8"
-            d="none|none|grid"
+            display="none|none|grid"
           />
         </Flexbox>
       </Container>
-    </Footer>
+    </footer>
   )
 }

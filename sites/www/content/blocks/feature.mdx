@@ -4,13 +4,19 @@ export const Feature = ({
   icon = "check-circle",
   iconColor = "#27ae60",
 }) => (
-  <Div borderWidth="1px" p="4" rounded="xl">
-    <H3 fontSize="xl" m="0" d="flex" alignItems="center">
+  <div borderWidth="1px" p="4" rounded="xl">
+    <h3
+      variant="heading.h3"
+      fontSize="xl"
+      m="0"
+      display="flex"
+      alignItems="center"
+    >
       <Icon name={icon} mr="2" size="5" color={iconColor} />
       {title}
-    </H3>
-    <P fontSize="md" mb="0" mt="2">
+    </h3>
+    <p fontSize="md" mb="0" mt="2">
       {text}
-    </P>
-  </Div>
+    </p>
+  </div>
 )

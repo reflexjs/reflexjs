@@ -9,8 +9,9 @@ export const ColorReference = ({
   ...props
 }) => {
   return (
-    <Div {...props}>
-      <H2
+    <div {...props}>
+      <h2
+        variant="heading.h2"
         id={id}
         pt="8"
         mt="8|8|14|20"
@@ -19,10 +20,10 @@ export const ColorReference = ({
         fontSize="3xl"
       >
         {heading}
-      </H2>
+      </h2>
       {children}
       <Palette colors={theme.colors} />
-    </Div>
+    </div>
   )
 }
 
@@ -31,8 +32,8 @@ export const Palette = ({ colors }) => (
     {Object.keys(colors).map(
       (name, index) =>
         typeof colors[name] === "string" && (
-          <Div key={index}>
-            <Div
+          <div key={index}>
+            <div
               h="150px"
               w="100%"
               rounded="md"
@@ -46,12 +47,12 @@ export const Palette = ({ colors }) => (
               mt="2"
               fontSize="sm"
             >
-              <Span>
+              <span>
                 {name} ({colors[name]})
-              </Span>
+              </span>
               <CopyButton variant="icon" color="text" value={name} />
             </Flexbox>
-          </Div>
+          </div>
         )
     )}
   </Grid>

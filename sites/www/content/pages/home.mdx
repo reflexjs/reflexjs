@@ -7,37 +7,38 @@ slug: index
 
 <Block src="nextjs" />
 
-<Section py="4|8|12|20">
+<section py="4|8|12|20">
   <Container>
-    <Div textAlign="center|left" maxW="850px">
-      <H1
+    <div textAlign="center|left" maxW="850px">
+      <h1
+        variant="heading.h1"
         m="0"
         fontWeight="extrabold"
         fontSize="2.4rem|4.2rem|6rem"
         lineHeight="1"
       >
-        <Span color="primary">Kickstart</Span> your next Gatsby site.
-      </H1>
-      <P fontSize="lg|2xl" maxW="500px">
-        Reflex is a collection of <Strong>themes</Strong> and{" "}
-        <Strong>plugins</Strong> to help you build Gatsby sites faster.
-      </P>
-      <Grid d="inline-grid" mt="2" gap="4" col="2">
-        <ButtonLink
+        <span color="primary">Kickstart</span> your next Gatsby site.
+      </h1>
+      <p fontSize="lg|2xl" maxW="500px">
+        Reflex is a collection of <strong>themes</strong> and{" "}
+        <strong>plugins</strong> to help you build Gatsby sites faster.
+      </p>
+      <Grid display="inline-grid" mt="2" gap="4" col="2">
+        <a
           href="/docs"
-          variant="primary"
+          variant="button.primary"
           animation="pulsate-fwd 1.5s ease-in-out infinite both"
         >
           Get started
           <Icon name="arrow-right" ml="2" />
-        </ButtonLink>
-        <ButtonLink href="/library/blocks" variant="secondary">
+        </a>
+        <a href="/library/blocks" variant="button.secondary">
           Browse blocks
-        </ButtonLink>
+        </a>
       </Grid>
-    </Div>
+    </div>
     <Block src="video" url="reflexjs.mp4" play={false}>
-      <Div
+      <div
         backgroundImage="url('reflexjs-blocks.png')"
         backgroundSize="100%"
         animation="slide 20s linear infinite"
@@ -46,21 +47,26 @@ slug: index
         h="2400px"
         position="absolute"
         top="0"
-      ></Div>
+      ></div>
     </Block>
   </Container>
-</Section>
+</section>
 
-<Section py="10|12|14|18">
+<section py="10|12|14|18">
   <Container>
-    <Div maxW="640px" position="relative" textAlign="center|left">
-      <H2 m="0" fontWeight="extrabold" fontSize="2.4rem|4.2rem">
+    <div maxW="640px" position="relative" textAlign="center|left">
+      <h2
+        variant="heading.h2"
+        m="0"
+        fontWeight="extrabold"
+        fontSize="2.4rem|4.2rem"
+      >
         A flexible React <Link to="/docs/components">component</Link> library.
-      </H2>
-      <P fontSize="xl|2xl">
+      </h2>
+      <p fontSize="xl|2xl">
         Building components is as easy as writing HTML.{" "}
-        <Strong>You already know how to use it.</Strong>
-      </P>
+        <strong>You already know how to use it.</strong>
+      </p>
       <Link
         href="/docs/components"
         fontSize="xl"
@@ -70,21 +76,26 @@ slug: index
         Build a button
         <Icon name="arrow-right" ml="2" />
       </Link>
-    </Div>
+    </div>
     <Block src="video" url="01-reflexjs-components.mp4" />
   </Container>
-</Section>
+</section>
 
-<Section py="10|12|14|18">
+<section py="10|12|14|18">
   <Container>
-    <Div maxW="500px" position="relative" textAlign="center|left">
-      <H2 m="0" fontWeight="extrabold" fontSize="2.4rem|4.2rem">
+    <div maxW="500px" position="relative" textAlign="center|left">
+      <h2
+        variant="heading.h2"
+        m="0"
+        fontWeight="extrabold"
+        fontSize="2.4rem|4.2rem"
+      >
         A powerful <Link to="/docs/blocks">block</Link> system.
-      </H2>
-      <P fontSize="xl|2xl">
+      </h2>
+      <p fontSize="xl|2xl">
         Build your site using small re-usable blocks that can be placed
         anywhere.
-      </P>
+      </p>
       <Link
         href="/docs/blocks"
         fontSize="xl"
@@ -94,38 +105,48 @@ slug: index
         Create your first block
         <Icon name="arrow-right" ml="2" />
       </Link>
-    </Div>
+    </div>
     <Block src="video" url="02-reflexjs-blocks.mp4" />
   </Container>
-</Section>
+</section>
 
-<Section py="10|12|14|18">
+<section py="10|12|14|18">
   <Container>
-    <Div maxW="650px" position="relative" textAlign="center|left">
-      <H2 m="0" fontWeight="extrabold" fontSize="2.4rem|4.2rem">
+    <div maxW="650px" position="relative" textAlign="center|left">
+      <h2
+        variant="heading.h2"
+        m="0"
+        fontWeight="extrabold"
+        fontSize="2.4rem|4.2rem"
+      >
         Responsive <Link to="/docs/navs">navigation</Link> menus.
-      </H2>
-      <P fontSize="xl|2xl">
+      </h2>
+      <p fontSize="xl|2xl">
         Create responsive navigation menus and fly-outs using Markdown.
-      </P>
+      </p>
       <Link href="/docs/navs" fontSize="xl" color="text" fontWeight="semibold">
         Build a nav
         <Icon name="arrow-right" ml="2" />
       </Link>
-    </Div>
+    </div>
     <Block src="video" url="03-reflexjs-nav.mp4" />
   </Container>
-</Section>
+</section>
 
-<Section py="10|12|14|18">
+<section py="10|12|14|18">
   <Container>
-    <Div maxW="680px" position="relative" textAlign="center|left">
-      <H2 m="0" fontWeight="extrabold" fontSize="2.4rem|4.2rem">
+    <div maxW="680px" position="relative" textAlign="center|left">
+      <h2
+        variant="heading.h2"
+        m="0"
+        fontWeight="extrabold"
+        fontSize="2.4rem|4.2rem"
+      >
         A best-in-class <Link to="/docs/theming">theming</Link> library.
-      </H2>
-      <P fontSize="xl|2xl">
+      </h2>
+      <p fontSize="xl|2xl">
         Theme UI and style props for a constraint-based design.
-      </P>
+      </p>
       <Link
         href="/docs/theming"
         fontSize="xl"
@@ -135,18 +156,23 @@ slug: index
         Learn more about theming
         <Icon name="arrow-right" ml="2" />
       </Link>
-    </Div>
+    </div>
     <Block src="video" url="04-reflexjs-theme.mp4" />
   </Container>
-</Section>
+</section>
 
-<Section py="10|12|14|18">
+<section py="10|12|14|18">
   <Container>
-    <Div maxW="680px" position="relative" textAlign="center|left">
-      <H2 m="0" fontWeight="extrabold" fontSize="2.4rem|4.2rem">
+    <div maxW="680px" position="relative" textAlign="center|left">
+      <h2
+        variant="heading.h2"
+        m="0"
+        fontWeight="extrabold"
+        fontSize="2.4rem|4.2rem"
+      >
         A library of <Link to="/library/blocks">30+ ready-to-use</Link> blocks.
-      </H2>
-      <P fontSize="xl|2xl">That you can copy and paste into your site.</P>
+      </h2>
+      <p fontSize="xl|2xl">That you can copy and paste into your site.</p>
       <Link
         href="/library/blocks"
         fontSize="xl"
@@ -156,8 +182,8 @@ slug: index
         Browse blocks
         <Icon name="arrow-right" ml="2" />
       </Link>
-    </Div>
-    <Div
+    </div>
+    <div
       w="full"
       bg="black"
       boxShadow="3xl"
@@ -172,25 +198,30 @@ slug: index
       position="relative"
       h="225|425|425|600"
     >
-      <Div
+      <div
         backgroundImage="url('reflexjs-blocks.png')"
         backgroundSize="100%"
         animation="slide 20s linear infinite"
         backgroundRepeat="repeat-y"
         w="100%"
         h="2400px"
-      ></Div>
-    </Div>
+      ></div>
+    </div>
   </Container>
-</Section>
+</section>
 
-<Section py="10|12|14|18">
+<section py="10|12|14|18">
   <Container>
-    <Div maxW="680px" position="relative" textAlign="center|left">
-      <H2 mt="0" fontWeight="extrabold" fontSize="2.4rem|4.2rem">
+    <div maxW="680px" position="relative" textAlign="center|left">
+      <h2
+        variant="heading.h2"
+        mt="0"
+        fontWeight="extrabold"
+        fontSize="2.4rem|4.2rem"
+      >
         ...and so <Link to="/library/pages">much more</Link>
-      </H2>
-    </Div>
+      </h2>
+    </div>
     <Grid col="1|2|2|4" gap="4|4|6">
       <Block
         src="feature"
@@ -236,7 +267,7 @@ slug: index
         text="Easy responsive mega menus."
       />
     </Grid>
-    <Div textAlign="center|left">
+    <div textAlign="center|left">
       <Link
         href="https://twitter.com/arshadcn"
         color="text"
@@ -248,28 +279,33 @@ slug: index
         <Icon name="twitter" mr="2" />
         Get notified when we add more features
       </Link>
-    </Div>
+    </div>
   </Container>
-</Section>
+</section>
 
-<Section py="10|12|14|18">
+<section py="10|12|14|18">
   <Container>
-    <Div maxW="680px" position="relative" textAlign="center|left">
-      <H2 m="0" fontWeight="extrabold" fontSize="2.4rem|4.2rem">
+    <div maxW="680px" position="relative" textAlign="center|left">
+      <h2
+        variant="heading.h2"
+        m="0"
+        fontWeight="extrabold"
+        fontSize="2.4rem|4.2rem"
+      >
         Ready to get <Link to="/learn">started</Link>?
-      </H2>
-      <P fontSize="xl|2xl">
+      </h2>
+      <p fontSize="xl|2xl">
         Read the documentation and start building your site.
-      </P>
-      <Grid d="inline-grid" mt="2" gap="4" col="2">
-        <ButtonLink href="/docs" variant="primary">
+      </p>
+      <Grid display="inline-grid" mt="2" gap="4" col="2">
+        <a href="/docs" variant="button.primary">
           Get started
           <Icon name="arrow-right" ml="2" />
-        </ButtonLink>
-        <ButtonLink href="/library/pages" variant="secondary">
+        </a>
+        <a href="/library/pages" variant="button.secondary">
           See examples
-        </ButtonLink>
+        </a>
       </Grid>
-    </Div>
+    </div>
   </Container>
-</Section>
+</section>

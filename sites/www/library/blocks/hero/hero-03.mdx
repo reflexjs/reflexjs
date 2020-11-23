@@ -1,30 +1,37 @@
-<Section py="8|12|16|24">
+<section py="8|12|16|24">
   <Container variant="md">
     <Flexbox flexDirection="column" textAlign="center">
-      <H1 m="0" fontWeight="extrabold" lineHeight="tight">
+      <h1 variant="heading.h1" m="0" fontWeight="extrabold" lineHeight="tight">
         Want to be an environmental hero?
-      </H1>
-      <P fontSize="xl|2xl" mt="2">
+      </h1>
+      <p fontSize="xl|2xl" mt="2">
         Learn how to reduce your contribution to climate change.
-      </P>
+      </p>
     </Flexbox>
-    <Form d="grid" col="1|repeat(3, auto)" gap="4" w="full|auto">
+    <form display="grid" col="1|repeat(3, auto)" gap="4" w="full|auto">
       <VisuallyHidden>
-        <Label htmlFor="hero-03-email">Email</Label>
+        <label htmlFor="hero-03-email">Email</label>
       </VisuallyHidden>
-      <Input
+      <input
+        variant="input"
         type="email"
         id="hero-03-email"
         name="email"
         placeholder="Type your email"
       />
       <VisuallyHidden>
-        <Label htmlFor="hero-03-name">Name</Label>
+        <label htmlFor="hero-03-name">Name</label>
       </VisuallyHidden>
-      <Input type="text" id="hero-03-name" name="name" placeholder="Name" />
-      <Button type="submit" variant="primary">
+      <input
+        variant="input"
+        type="text"
+        id="hero-03-name"
+        name="name"
+        placeholder="Name"
+      />
+      <button type="submit" variant="button.primary">
         Join the community
-      </Button>
-    </Form>
+      </button>
+    </form>
   </Container>
-</Section>
+</section>

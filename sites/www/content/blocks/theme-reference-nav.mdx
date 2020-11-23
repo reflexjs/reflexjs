@@ -2,18 +2,18 @@ export const ThemeReferenceNav = ({ categories, ...props }) => {
   const [nav] = useNav("theme-reference")
   return (
     <React.Fragment>
-      <H3 my="4" fontSize="xl">
+      <h3 variant="heading.h3" my="4" fontSize="xl">
         Theme reference
-      </H3>
-      <Ul listStyle="none" p="0" m="0" {...props}>
+      </h3>
+      <ul listStyle="none" p="0" m="0" {...props}>
         {nav.items.map(({ url, value }, index) => (
-          <Li key={index} mb="2">
-            <A href={url} color="text" fontSize="md">
+          <li key={index} mb="2">
+            <a href={url} color="text" fontSize="md">
               {value}
-            </A>
-          </Li>
+            </a>
+          </li>
         ))}
-      </Ul>
+      </ul>
     </React.Fragment>
   )
 }
