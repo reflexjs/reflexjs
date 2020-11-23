@@ -286,6 +286,9 @@ module.exports = {
     },
   },
   text: {
+    lead: {
+      fontSize: "xl",
+    },
     code: {
       fontFamily: "monospace",
     },
@@ -348,10 +351,246 @@ module.exports = {
     },
   },
 
-  // Usage: variant="container"
+  heading: {
+    color: "heading",
+    fontFamily: "heading",
+    fontWeight: "semibold",
+    lineHeight: "tight",
+    letterSpacing: "tight",
+
+    a: {
+      color: "text",
+
+      ":hover": {
+        color: "primary",
+      },
+    },
+    h1: {
+      fontSize: ["4xl", "5xl", "6xl"],
+    },
+    h2: {
+      fontSize: ["3xl", "4xl", "5xl"],
+    },
+    h3: {
+      fontSize: ["2xl", "3xl", "4xl"],
+    },
+    h4: {
+      fontSize: ["xl", "2xl", "3xl"],
+    },
+    h5: {
+      fontSize: ["lg", "xl", "2xl"],
+    },
+    h6: {
+      fontSize: ["md", "lg", "xl"],
+    },
+  },
+
   container: {
     px: [4, 6, 6, 4],
     mx: "auto",
     maxWidth: 1280,
+
+    sm: {
+      maxWidth: 640,
+    },
+
+    md: {
+      maxWidth: 768,
+    },
+
+    lg: {
+      maxWidth: 1024,
+    },
+
+    xl: {
+      maxWidth: 1280,
+    },
+  },
+
+  button: {
+    display: "inline-flex",
+    alignItems: "center",
+    justifyContent: "center",
+    color: "text",
+    bg: "muted",
+    fontFamily: "body",
+    fontSize: ["sm", "md", "lg"],
+    lineHeight: "none",
+    textDecoration: "none",
+    border: "1px solid",
+    borderColor: "border",
+    borderRadius: "md",
+    px: 4,
+    py: 3,
+    cursor: "pointer",
+    transition: "all .15s ease-in",
+
+    sm: {
+      px: 3,
+      py: 2,
+      fontSize: ["xs", "sm", "md"],
+    },
+
+    lg: {
+      px: 5,
+      py: 4,
+      fontSize: ["md", "lg", "xl"],
+    },
+
+    primary: {
+      bg: "primary",
+      color: "white",
+      borderColor: "primary",
+
+      "&:hover, &:focus": {
+        bg: "primaryHover",
+        color: "white",
+        borderColor: "primaryHover",
+      },
+    },
+
+    outlinePrimary: {
+      bg: "transparent",
+      color: "primary",
+      borderColor: "primary",
+
+      "&:hover, &:focus": {
+        bg: "primaryHover",
+        color: "white",
+        borderColor: "primaryHover",
+      },
+    },
+
+    secondary: {
+      bg: "secondary",
+      color: "white",
+      borderColor: "secondary",
+
+      "&:hover, &:focus": {
+        bg: "secondaryHover",
+        color: "white",
+        borderColor: "secondaryHover",
+      },
+    },
+
+    outlineSecondary: {
+      bg: "transparent",
+      color: "secondary",
+      borderColor: "secondary",
+
+      "&:hover, &:focus": {
+        bg: "secondaryHover",
+        color: "white",
+        borderColor: "secondaryHover",
+      },
+    },
+
+    accent: {
+      bg: "accent",
+      color: "text",
+      borderColor: "accent",
+
+      "&:hover, &:focus": {
+        bg: "accentHover",
+        color: "text",
+        borderColor: "accentHover",
+      },
+    },
+
+    outlineAccent: {
+      bg: "transparent",
+      color: "accent",
+      borderColor: "accent",
+
+      "&:hover, &:focus": {
+        bg: "accentHover",
+        color: "white",
+        borderColor: "accentHover",
+      },
+    },
+
+    link: {
+      bg: "transparent",
+      color: "text",
+      borderColor: "transparent",
+
+      "&:hover, &:focus": {
+        bg: "muted",
+        color: "text",
+        borderColor: "transparent",
+      },
+    },
+
+    icon: {
+      bg: "transparent",
+      borderColor: "transparent",
+      p: 0,
+    },
+  },
+
+  input: {
+    bg: "background",
+    color: "text",
+    fontFamily: "body",
+    fontSize: ["sm", "md", "lg"],
+    lineHeight: "none",
+    border: "1px solid",
+    borderColor: "border",
+    borderRadius: "md",
+    px: 4,
+    py: 3,
+    width: "100%",
+
+    "&:focus": {
+      borderColor: "primary",
+      outline: "none",
+    },
+
+    "&[type=checkbox], &[type=radio]": {
+      display: "none",
+
+      "+ label": {
+        display: "inline-flex",
+        alignItems: "center",
+        position: "relative",
+        cursor: "pointer",
+
+        "&:before": {
+          content: "''",
+          width: "14px",
+          height: "14px",
+          flex: "none",
+          bg: "background",
+          borderRadius: "sm",
+          mr: 3,
+          border: "2px solid",
+          borderColor: "background",
+          boxShadow: ({ colors }) => `0 0 0 1px ${colors.border}`,
+        },
+      },
+    },
+
+    "&:checked + label:before": {
+      bg: "primary",
+      boxShadow: ({ colors }) => `0 0 0 2px ${colors.primary}`,
+    },
+
+    "&[type=radio]": {
+      "+ label": {
+        "&:before": {
+          borderRadius: "full",
+        },
+      },
+    },
+
+    sm: {
+      py: 2,
+      fontSize: ["xs", "sm", "md"],
+    },
+
+    lg: {
+      py: 4,
+      fontSize: ["md", "lg", "xl"],
+    },
   },
 }
