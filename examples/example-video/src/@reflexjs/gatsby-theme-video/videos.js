@@ -9,7 +9,13 @@ export const Videos = ({ videos }) => {
       {videos &&
         videos.map((video, index) => (
           <div key={index} mb="8">
-            <VideoTeaser {...video} />
+            <VideoTeaser
+              title={video.title}
+              excerpt={video.excerpt}
+              slug={video.slug}
+              thumbnail={video.thumbnail}
+              data={video.data}
+            />
           </div>
         ))}
     </Grid>

@@ -58,7 +58,7 @@ export const Image = ({ src, alt, title, caption, aspectRatio, ...props }) => {
     <figure {...props}>
       {aspectRatio ? (
         <GatsbyImg
-          sizes={{
+          fluid={{
             ...image.childImageSharp.fluid,
             aspectRatio,
           }}

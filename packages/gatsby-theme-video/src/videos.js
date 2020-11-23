@@ -9,7 +9,12 @@ export const Videos = ({ videos }) => {
       {videos &&
         videos.map((video, index) => (
           <div key={index} mb="8">
-            <VideoTeaser {...video} />
+            <VideoTeaser
+              title={video.title}
+              excerpt={video.excerpt}
+              slug={video.slug}
+              thumbnail={video.thumbnail}
+            />
           </div>
         ))}
     </Grid>
@@ -23,7 +28,6 @@ export const VideoTeaser = function ({
   thumbnail,
   ...props
 }) {
-  console.log(props)
   return (
     <article {...props}>
       {thumbnail && (

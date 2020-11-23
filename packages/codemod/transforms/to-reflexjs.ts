@@ -203,6 +203,19 @@ export default function transform(file: FileInfo, api: API): string {
     )
   }
 
+  // Transforms `<input />` to `<input variant="input" />`.
+  function transformInputVariants(
+    node,
+    types: string[],
+    variant: string
+  ): void {
+    if (!nodeIsOfIdentifierTypes(node, types)) return
+
+    node.value.attributes.unshift(
+      j.jsxAttribute(j.jsxIdentifier("variant"), j.stringLiteral(variant))
+    )
+  }
+
   // Renames props.
   // Example `d` to `display`
   function transformProps(node): void {
@@ -277,6 +290,9 @@ export default function transform(file: FileInfo, api: API): string {
     .find(j.JSXOpeningElement)
     .forEach(transformHeadingVariants)
     .forEach(transformButtonVariants)
+    .forEach((node) => transformInputVariants(node, ["Input"], "input"))
+    .forEach((node) => transformInputVariants(node, ["Textarea"], "textarea"))
+    .forEach((node) => transformInputVariants(node, ["Select"], "select"))
     .forEach(transformProps)
     .forEach(transformPseudoClasses)
     .forEach(transformComponentToJSX)
@@ -285,5 +301,5 @@ export default function transform(file: FileInfo, api: API): string {
 
   root.find(j.JSXClosingElement).forEach(transformComponentToJSX)
 
-  return root.toSource()
+  return root.toSource({})
 }

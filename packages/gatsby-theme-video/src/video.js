@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Container } from "reflexjs"
-import { MDXRenderer, Icon } from "@reflexjs/gatsby-theme-core"
+import { MDXRenderer, Icon, Link } from "@reflexjs/gatsby-theme-core"
 
 export const Video = ({
   title,
@@ -13,9 +13,13 @@ export const Video = ({
 }) => (
   <article py="8|12|14">
     <Container maxW="null|null|null|900px">
-      <a to={pageContext.themeOptions.basePath} variant="button.link.sm" mb="4">
+      <Link
+        to={pageContext.themeOptions.basePath}
+        variant="button.link."
+        mb="4"
+      >
         <Icon name="arrow-left" mr="4" /> See all videos
-      </a>
+      </Link>
       <h1 variant="heading.h1" fontWeight="extrabold" my="0">
         {title}
       </h1>
