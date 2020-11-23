@@ -11,12 +11,22 @@ import { ButtonLink } from "./button-link"
 
 const Slugger = new GithubSlugger()
 
-export const Heading = ({ as, children, ...props }) => {
-  Slugger.reset()
+export const getHeading = (as, props) => {
   const Tag = as
+  const { children, ..._props } = props
+
+  if (Object.keys(props).length) {
+    return (
+      <Tag variant={`heading.${as}`} {..._props}>
+        {children}
+      </Tag>
+    )
+  }
+
+  Slugger.reset()
   const id = Slugger.slug(children)
   return (
-    <Tag id={id} variant={`heading.${as} ${as}`} {...props}>
+    <Tag id={id} variant={`heading.${as}`} {..._props}>
       <a href={`#${id}`}>{children}</a>
     </Tag>
   )
@@ -24,7 +34,9 @@ export const Heading = ({ as, children, ...props }) => {
 
 const ReflexLegacyComponents = {}
 Object.keys(ReflexComponents).forEach((as) => {
-  ReflexLegacyComponents[as] = React.forwardRef((props, ref) => (
+  ReflexLegacyComponents[as] = ReflexLegacyComponents[
+    as.toLowerCase()
+  ] = React.forwardRef((props, ref) => (
     <Box ref={ref} as={as.toLowerCase()} {...props} />
   ))
 })
@@ -36,12 +48,12 @@ export const MDXComponents = {
   Grid: (props) => <Grid display="grid" {...props} />,
   VisuallyHidden,
   pre: CodeBlock,
-  h1: (props) => <Heading as="h1" {...props} />,
-  h2: (props) => <Heading as="h2" {...props} />,
-  h3: (props) => <Heading as="h3" {...props} />,
-  h4: (props) => <Heading as="h4" {...props} />,
-  h5: (props) => <Heading as="h5" {...props} />,
-  h6: (props) => <Heading as="h6" {...props} />,
+  h1: (props) => getHeading("h1", props),
+  h2: (props) => getHeading("h2", props),
+  h3: (props) => getHeading("h3", props),
+  h4: (props) => getHeading("h4", props),
+  h5: (props) => getHeading("h5", props),
+  h6: (props) => getHeading("h6", props),
   Link,
   ButtonLink,
   Pager,

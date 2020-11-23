@@ -7,8 +7,17 @@ export const Wrapper = ({ children, ...props }) => {
   if (dynamicBlockIndex) {
     // We have named exports.
     const { [dynamicBlockIndex]: DynamicBlock, ..._props } = props
+
+    // Filter out other named exports.
+    Object.keys(_props).forEach((prop) => {
+      if (typeof _props[prop] === "function") {
+        delete _props[prop]
+      }
+    })
+
     return <DynamicBlock {..._props}>{children}</DynamicBlock>
   }
+
   if (children) {
     const [_child, ...rest] = Array.isArray(children) ? children : [children]
     children = [
