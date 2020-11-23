@@ -2,5 +2,5 @@
 import { jsx } from "reflexjs"
 
 export const ButtonLink = ({ href, to, ...props }) => (
-  <button variant="button" as="a" href={href || to} {...props} />
+  <a variant="button" href={href || to} {...props} />
 )
