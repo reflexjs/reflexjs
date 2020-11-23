@@ -128,7 +128,7 @@ function nodeIsOfIdentifierTypes(node: any, types: string[]): boolean {
 
 function findNodeAttributePath(node, attribute: string): JSXAttribute {
   return node.value.attributes.find((node) => {
-    if (node.name.name === attribute) {
+    if (node?.name?.name === attribute) {
       return node.value
     }
   })
