@@ -45,7 +45,9 @@ export const NavMenuLink = ({
       activeStyle={activeStyle}
       {...linkStyle}
       {...props}
-      hoverColor="primary"
+      _hover={{
+        color: "primary",
+      }}
     >
       {value}
     </Link>
@@ -163,7 +165,7 @@ export const NavMenuItem = ({
             <button
               variant="button.icon"
               onClick={() => (isOpen ? close() : open())}
-              d={["block", "none"]}
+              display={["block", "none"]}
               position="absolute"
               right="2"
               top="0"
