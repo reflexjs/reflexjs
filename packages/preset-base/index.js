@@ -207,13 +207,16 @@ export default {
   styles: {
     global: {
       a: {
+        display: "inline-flex",
+        alignItems: "center",
         color: "primary",
         textDecoration: "none",
 
-        "&:hover, &:focus": {
+        "&:hover, &:focus, &:active, &[aria-current=page]": {
           color: "primaryHover",
         },
       },
+
       pre: {
         color: "prism.text",
         backgroundColor: "prism.background",
@@ -299,6 +302,13 @@ export default {
         border: "0 solid",
         borderColor: "border",
       },
+      small: {
+        fontSize: "sm",
+      },
+      hr: {
+        borderTop: "1px solid",
+        borderTopColor: "border",
+      },
     },
   },
   heading: {
@@ -315,42 +325,29 @@ export default {
         color: "primary",
       },
     },
-  },
-  h1: {
-    variant: "heading",
-    fontSize: ["4xl", "5xl", "6xl"],
-  },
-  h2: {
-    variant: "heading",
-    fontSize: ["3xl", "4xl", "5xl"],
-  },
-  h3: {
-    variant: "heading",
-    fontSize: ["2xl", "3xl", "4xl"],
-  },
-  h4: {
-    variant: "heading",
-    fontSize: ["xl", "2xl", "3xl"],
-  },
-  h5: {
-    variant: "heading",
-    fontSize: ["lg", "xl", "2xl"],
-  },
-  h6: {
-    variant: "heading",
-    fontSize: ["md", "lg", "xl"],
+    h1: {
+      fontSize: ["4xl", "5xl", "6xl"],
+    },
+    h2: {
+      fontSize: ["3xl", "4xl", "5xl"],
+    },
+    h3: {
+      fontSize: ["2xl", "3xl", "4xl"],
+    },
+    h4: {
+      fontSize: ["xl", "2xl", "3xl"],
+    },
+    h5: {
+      fontSize: ["lg", "xl", "2xl"],
+    },
+    h6: {
+      fontSize: ["md", "lg", "xl"],
+    },
   },
   p: {
     lead: {
       fontSize: "xl",
     },
-  },
-  small: {
-    fontSize: "sm",
-  },
-  hr: {
-    borderTop: "1px solid",
-    borderTopColor: "border",
   },
   container: {
     px: [4, 6, 6, 4],
@@ -373,22 +370,7 @@ export default {
       maxWidth: 1280,
     },
   },
-  grid: {
-    gridAutoFlow: "dense",
-  },
-  flexbox: {
-    alignItems: "center",
-  },
-  a: {
-    display: "inline-flex",
-    alignItems: "center",
-    color: "primary",
-    textDecoration: "none",
 
-    "&:hover, &:focus, &:active, &[aria-current=page]": {
-      color: "primaryHover",
-    },
-  },
   button: {
     display: "inline-flex",
     alignItems: "center",
