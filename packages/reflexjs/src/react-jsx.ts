@@ -89,6 +89,14 @@ function parseProps(props) {
   if (!props) return null
   const { variant, sx = {}, ..._props } = props
   const [styleProps, otherProps] = split(_props)
+
+  if (
+    !variant &&
+    Object.keys(sx).length === 0 &&
+    Object.keys(styleProps).length === 0
+  )
+    return props
+
   const sxProps = transformProps(deepmerge(styleProps, sx))
 
   const next: typeof props & {
