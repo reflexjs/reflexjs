@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Article, H2, P, Div, Grid } from "@reflexjs/components"
+import { Grid } from "reflexjs"
 import { Link } from "@reflexjs/gatsby-theme-core"
 import { Image } from "@reflexjs/gatsby-plugin-image"
 import { PostMeta } from "@reflexjs/gatsby-theme-post"
@@ -9,9 +9,9 @@ export const Posts = ({ posts }) => {
     <Grid col="1|1|2" gap="6|8|10|14">
       {posts &&
         posts.map((post, index) => (
-          <Div key={index} mb="8">
+          <div key={index} mb="8">
             <PostTeaser {...post} />
-          </Div>
+          </div>
         ))}
     </Grid>
   ) : null
@@ -28,20 +28,26 @@ export const PostTeaser = ({
   timeToRead,
   ...props
 }) => (
-  <Article {...props}>
+  <article {...props}>
     {image && (
-      <Link href={slug} d="block">
+      <Link href={slug} display="block">
         <Image src={image} title={title} alt={title} />
       </Link>
     )}
     {title && (
       <Link href={slug}>
-        <H2 my="4" fontSize="2xl" fontFamily="body" fontWeight="bold">
+        <h2
+          variant="heading.h2"
+          my="4"
+          fontSize="2xl"
+          fontFamily="body"
+          fontWeight="bold"
+        >
           {title}
-        </H2>
+        </h2>
       </Link>
     )}
-    {excerpt && <P mt="1">{excerpt}</P>}
+    {excerpt && <p mt="1">{excerpt}</p>}
     <PostMeta
       author={author}
       timeToRead={timeToRead}
@@ -49,5 +55,5 @@ export const PostTeaser = ({
       datetime={datetime}
       fontSize="md"
     />
-  </Article>
+  </article>
 )

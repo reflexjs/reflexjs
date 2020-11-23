@@ -7,10 +7,10 @@ export const FeaturedPosts = ({ filters }) => {
     <Grid col="1|1|2|3" gap="6|8">
       {posts &&
         posts.slice(0, 3).map((post, index) => (
-          <Div key={index} mb="8">
-            <Article>
+          <div key={index} mb="8">
+            <article>
               {post.image && (
-                <Link href={post.slug} d="block">
+                <Link href={post.slug} display="block">
                   <Image
                     src={post.image}
                     title={post.title}
@@ -22,7 +22,8 @@ export const FeaturedPosts = ({ filters }) => {
               )}
               {post.title && (
                 <Link href={post.slug}>
-                  <H2
+                  <h2
+                    variant="heading.h2"
                     my="4"
                     fontFamily="body"
                     lineHeight="normal"
@@ -30,16 +31,16 @@ export const FeaturedPosts = ({ filters }) => {
                     fontSize="xl"
                   >
                     {post.title}
-                  </H2>
+                  </h2>
                 </Link>
               )}
               {post.excerpt && (
-                <P mt="1" fontSize="lg">
+                <p mt="1" fontSize="lg">
                   {post.excerpt}
-                </P>
+                </p>
               )}
-            </Article>
-          </Div>
+            </article>
+          </div>
         ))}
     </Grid>
   ) : null

@@ -1,10 +1,9 @@
+import { merge } from "reflexjs"
 import base from "@reflexjs/preset-base"
 import "typeface-open-sans"
 import "typeface-prata"
 
-export default {
-  preset: base,
-
+export default merge(base, {
   colors: {
     black: "#191924",
     text: "#191924",
@@ -51,27 +50,26 @@ export default {
     root: {
       fontSize: ["sm", "md", "lg", "xl"],
     },
+    a: {
+      "&:hover, &:focus, &:active, &[aria-current=page]": {
+        color: "text",
+        textDecoration: "underline",
+      },
+    },
   },
 
   heading: {
     fontFamily: "body",
     letterSpacing: "normal",
-  },
 
-  h1: {
-    fontFamily: "heading",
-    fontWeight: 400,
-  },
+    h1: {
+      fontFamily: "heading",
+      fontWeight: 400,
+    },
 
-  h2: {
-    fontFamily: "heading",
-    fontWeight: 400,
-  },
-
-  a: {
-    "&:hover, &:focus, &:active, &[aria-current=page]": {
-      color: "text",
-      textDecoration: "underline",
+    h2: {
+      fontFamily: "heading",
+      fontWeight: 400,
     },
   },
 
@@ -105,4 +103,4 @@ export default {
       },
     },
   },
-}
+})
