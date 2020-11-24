@@ -1,3 +1,4 @@
+import Link from "next/link"
 import { Box } from "reflexjs"
 import { CodeBlock, LinkedCard, LinkedHeading, Callout } from "."
 
@@ -16,6 +17,7 @@ export const mdxComponents = {
       {...props}
     />
   ),
+  div: (props) => <div {...props} />,
   h3: (props) => <LinkedHeading is="h3" mt="8" {...props} />,
   h4: (props) => <LinkedHeading is="h4" {...props} />,
   h5: (props) => <LinkedHeading is="h5" {...props} />,
@@ -28,6 +30,7 @@ export const mdxComponents = {
   inlineCode: (props) => <code variant="text.code" {...props} />,
   table: (props) => <table variant="table" {...props} />,
   Callout,
+  Link,
   LinkedCard,
   Box,
 }

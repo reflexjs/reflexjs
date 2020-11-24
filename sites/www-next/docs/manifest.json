@@ -3,11 +3,11 @@
     "title": "Documentation",
     "items": [
       {
-        "title": "Home",
+        "title": "Getting Started",
         "url": "/docs"
       },
       {
-        "title": "Blocks library",
+        "title": "Blocks Library",
         "url": "/docs/blocks"
       }
     ]
@@ -20,8 +20,12 @@
         "url": "/docs/nextjs"
       },
       {
-        "title": "Add a page",
+        "title": "Add a Page",
         "url": "/docs/nextjs/pages"
+      },
+      {
+        "title": "Blocks",
+        "url": "/docs/nextjs/blocks"
       }
     ]
   },

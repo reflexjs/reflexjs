@@ -26,7 +26,7 @@ export function LinkedCard({ href, icon, title, color, ...props }) {
         {...props}
       >
         <Icon name={icon} color={color} size="12" />
-        <p fontSize="xl" fontWeight="semibold" mt="2">
+        <p fontSize="lg" fontWeight="semibold" mt="2">
           {title}
         </p>
       </a>

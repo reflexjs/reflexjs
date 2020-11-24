@@ -1,7 +1,7 @@
-import { Icon } from "reflexjs"
 import packageInfo from "reflexjs/package.json"
 import Link from "next/link"
-import { ModeToggle } from "."
+import { ModeToggle, NavbarLink } from "."
+import { site } from "@config"
 
 export function Navbar() {
   return (
@@ -18,16 +18,32 @@ export function Navbar() {
         <Link href="/" passHref>
           <a
             display="flex"
+            textDecoration="none"
+            color="text"
             alignItems="center"
-            fontSize="xl"
+            fontSize="4xl|xl"
             fontWeight="semibold"
+            mr="0|10"
+            mb="2|0"
           >
-            Reflex
+            {site.name}
           </a>
         </Link>
-        <Link href="/docs" passHref>
-          <a ml="8">Docs</a>
-        </Link>
+        <div
+          display="inline-grid"
+          col={`repeat(${site.links.length}, minmax(0,auto))`}
+          gap="8"
+        >
+          {site.links.map((link) => (
+            <NavbarLink
+              key={link.url}
+              href={link.url}
+              activePathNames={link.activePathNames}
+            >
+              {link.title}
+            </NavbarLink>
+          ))}
+        </div>
         <a
           href="https://github.com/reflexjs/reflex"
           target="_blank"

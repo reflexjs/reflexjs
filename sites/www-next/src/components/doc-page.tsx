@@ -24,12 +24,12 @@ export function DocPage({ doc, manifest }: DocPageProps) {
           gap="null|6|6|20"
         >
           <aside
-            position="sticky"
+            position="static|sticky"
             top="14"
             h={(theme) => `calc(100vh - ${theme.space[14]})`}
             overflow="scroll"
-            py="12"
-            borderRightWidth="1"
+            py="6|12"
+            borderRightWidth="0|1"
           >
             <SidebarNav items={manifest} />
           </aside>

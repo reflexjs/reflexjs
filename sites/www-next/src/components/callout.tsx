@@ -14,6 +14,7 @@ export function Callout({ type = "accent", children }: CalloutProps) {
       sx={{
         "> p": {
           m: 0,
+          fontSize: "md",
         },
       }}
     >

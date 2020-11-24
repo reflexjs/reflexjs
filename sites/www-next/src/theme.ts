@@ -31,7 +31,7 @@ export default {
         text: "#a0aec0",
         heading: "#fff",
         background: "#1a202c",
-        primary: "#fb559a",
+        primary: "#79ffe1",
         border: "#2d3748",
         gray: "#718096",
         muted: "#2d3748",
@@ -222,6 +222,9 @@ export default {
   },
   styles: {
     global: {
+      ":root": {
+        "--reach-accordion": 1,
+      },
       "*": {
         m: 0,
         p: 0,
@@ -388,7 +391,7 @@ export default {
   container: {
     px: [4, 6, 6, 4],
     mx: "auto",
-    maxWidth: 1100,
+    maxWidth: 1024,
   },
   button: {
     display: "inline-flex",

@@ -56,12 +56,11 @@ export async function getMdxPaths(source: string): Promise<MdxPath[]> {
 
   return await Promise.all(
     files.map(async (filepath) => {
-      let slug = filepath
+      const slug = filepath
         .replace(source, "")
         .replace(/^\/+/, "")
         .replace(new RegExp(path.extname(filepath) + "$"), "")
-
-      slug = slug.replace("/index", "")
+        .replace(/\/?index/, "")
 
       return {
         filepath,
