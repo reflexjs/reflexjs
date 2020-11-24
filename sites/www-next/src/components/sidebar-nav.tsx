@@ -1,7 +1,7 @@
 import * as React from "react"
 import Link from "next/link"
 import { useRouter } from "next/router"
-import { Icon } from "reflexjs"
+import { Box, Icon } from "reflexjs"
 import {
   Accordion,
   AccordionItem,
@@ -54,6 +54,7 @@ export function SidebarNavItem({ items }: SidebarNavProps) {
             <Accordion collapsible>
               <AccordionItem>
                 <AccordionButton
+                  as={Box}
                   {...headingStyles}
                   _hover={{
                     svg: {
@@ -69,7 +70,13 @@ export function SidebarNavItem({ items }: SidebarNavProps) {
                   <Icon name="chevron" size="4" mr="2" opacity="0.5" />
                   {item.title}
                 </AccordionButton>
-                <AccordionPanel pl="4" py="2" borderLeftWidth="1" ml="2">
+                <AccordionPanel
+                  as={Box}
+                  pl="4"
+                  py="2"
+                  borderLeftWidth="1"
+                  ml="2"
+                >
                   {item.items.map((_item, _index) => (
                     <Link href={_item.url} passHref key={_index}>
                       <a

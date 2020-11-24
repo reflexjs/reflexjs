@@ -34,10 +34,17 @@ export function CodeBlock({
 }: CodeBlockProps) {
   const props = preToCodeBlock(preProps)
   if (props) {
-    const { codeString, title, showLineNumbers: _, ...restProps } = props
+    const {
+      codeString,
+      title,
+      className,
+      language,
+      maxH = "none",
+      ...restProps
+    } = props
 
     return (
-      <div position="relative" my={4}>
+      <div position="relative" my={4} maxH={maxH} {...restProps}>
         {title && (
           <div
             bg="prism.background"
@@ -60,10 +67,11 @@ export function CodeBlock({
             {title}
           </div>
         )}
-        <div>
+        <div maxH={title ? maxH - 50 : maxH} overflow="scroll">
           <Prism
             showLineNumbers={showLineNumbers ? true : false}
-            {...restProps}
+            className={className}
+            language={language}
           >
             {codeString}
           </Prism>

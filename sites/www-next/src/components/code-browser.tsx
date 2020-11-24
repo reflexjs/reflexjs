@@ -1,36 +1,34 @@
 import * as React from "react"
 import createPersistedState from "use-persisted-state"
-import { CodeBlock, SourceSelector } from "."
-import { CodeBlockProps } from "./code-block"
-import { Source } from "types"
+import { CodeBlock, CodeBlockProps } from "."
+import { Block, Source } from "types"
 
 interface CodeBrowserProps extends React.HTMLAttributes<HTMLDivElement> {
-  sources: Source[]
+  block: Block
 }
 
 const useSourceId = createPersistedState("preview-source")
 
-export function CodeBrowser({ sources, ...props }: CodeBrowserProps) {
+export function CodeBrowser({ block, ...props }: CodeBrowserProps) {
+  const { sources } = block
   const [sourceId] = useSourceId("javascript")
-  const block = sources.find((source) => source.id === sourceId)
-  const example = sources.find((source) => source.id === `${sourceId}-example`)
+  const blockSource = sources.find((source) => source.id === sourceId)
+  const exampleSource = sources.find(
+    (source) => source.id === `${sourceId}-example`
+  )
 
   return (
-    <div {...props}>
-      <div variant="container">
-        <h2 variant="heading.h2">How to use this block</h2>
-        <p variant="text.paragraph">
-          1. Copy the block source code and place it in a <code>jsx</code> or{" "}
-          <code>tsx</code> file.
-        </p>
-      </div>
-      <SourceWrapper source={block} copyButtonLabel="source" />
-      <div variant="container">
-        <p variant="text.paragraph">
-          2. Copy the example code and add it to your page.
-        </p>
-      </div>
-      <SourceWrapper source={example} copyButtonLabel="example" />
+    <div variant="container" {...props}>
+      <h2 variant="heading.h2">How to use this block</h2>
+      <p variant="text.paragraph">
+        1. Copy the block source code and place it in a{" "}
+        <code>src/components/{block.id}.jsx</code> file.
+      </p>
+      <SourceWrapper source={blockSource} copyButtonLabel="source" />
+      <p variant="text.paragraph">
+        2. Copy the example code below and add it to your page.
+      </p>
+      <SourceWrapper source={exampleSource} copyButtonLabel="example" />
     </div>
   )
 }
@@ -51,7 +49,7 @@ export function SourceWrapper({ source, ...props }: SourceWrapperProps) {
         className="language-jsx"
         title={source.label}
         showLineNumbers={true}
-        maxH="450px"
+        maxH="450"
         sx={{
           pre: {
             fontSize: "sm",

@@ -12,7 +12,7 @@ export interface BlockPageProps {
 }
 
 export default function BlockPage({ block }: BlockPageProps) {
-  const { id, name, sources, slug } = block
+  const { id, name, slug } = block
   const Example = dynamic(() => import(`../../library/examples/${id}.jsx`))
 
   return (
@@ -43,7 +43,7 @@ export default function BlockPage({ block }: BlockPageProps) {
       <Preview fullScreenPath={`${slug}/full`} mb="10">
         <Example />
       </Preview>
-      <CodeBrowser sources={sources} />
+      <CodeBrowser block={block} />
     </Layout>
   )
 }

@@ -20,6 +20,12 @@
       "@config": ["src/config"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "library/examples/hero-001.jsx",
+    "library/blocks/hero-001.jsx"
+  ],
   "exclude": ["node_modules"]
 }

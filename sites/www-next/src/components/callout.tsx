@@ -1,5 +1,5 @@
 interface CalloutProps {
-  type: "primary" | "accent"
+  type?: "primary" | "accent"
   children?: React.ReactNode
 }
 

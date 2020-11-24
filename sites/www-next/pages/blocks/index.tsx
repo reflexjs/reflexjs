@@ -43,15 +43,13 @@ export default function BlocksPage({ categories, blocks }: BlocksPageProps) {
                         bg="white"
                         mb="6"
                         position="relative"
-                        size="20"
-                        sx={{
-                          img: {
-                            width: "100%",
-                            height: "auto",
-                          },
-                        }}
                       >
-                        <Image src={block.thumbnail} layout="fill" />
+                        <Image
+                          src={block.thumbnail}
+                          layout="intrinsic"
+                          width={400}
+                          height={180}
+                        />
                         <VisuallyHidden>{block.name}</VisuallyHidden>
                       </a>
                     </Link>

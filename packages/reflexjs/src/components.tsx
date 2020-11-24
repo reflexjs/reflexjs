@@ -1,3 +1,4 @@
+/** @jsx jsx */
 import * as React from "react"
 import { Global } from "@emotion/core"
 import { ComponentWithStyleProps } from "./types"

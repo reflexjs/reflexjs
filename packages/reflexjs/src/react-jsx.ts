@@ -21,6 +21,10 @@ export {
 
 export interface Theme extends ThemeUITheme {}
 
+const RESPONSIVE_SEPARATOR = "|"
+
+const regex = new RegExp(`^(${Object.keys(styleProps).join("|")})$`)
+
 // Helper to omit props.
 // See https://github.com/styled-system/styled-system/tree/master/packages/props.
 const omit = (props) => {
@@ -44,10 +48,6 @@ const pick = (props) => {
 }
 
 const split = (props) => [pick(props), omit(props)]
-
-const RESPONSIVE_SEPARATOR = "|"
-
-const regex = new RegExp(`^(${Object.keys(styleProps).join("|")})$`)
 
 const makeResponsive = (prop) => {
   if (typeof prop !== "string") {
@@ -151,5 +151,9 @@ function parseProps(props) {
 }
 
 export const jsx: typeof React.createElement = (type, props, ...children) => {
-  return themeUIJSX.apply(undefined, [type, parseProps(props), ...children])
+  return themeUIJSX.apply(undefined, [
+    type,
+    typeof type === "string" ? parseProps(props) : props,
+    ...children,
+  ])
 }

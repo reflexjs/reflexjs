@@ -9,6 +9,7 @@ export const site = {
     {
       title: "Blocks",
       url: "/blocks",
+      activePathNames: ["/blocks/[id]"],
     },
   ],
 }
