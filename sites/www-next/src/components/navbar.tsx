@@ -5,7 +5,15 @@ import { ModeToggle } from "."
 
 export function Navbar() {
   return (
-    <header borderBottomWidth="1px" position="sticky" top="0" bg="background">
+    <header
+      borderBottomWidth="1px"
+      position="static|sticky"
+      top="0"
+      bg="background"
+      opacity="0.85"
+      zIndex="1000"
+      backdropFilter="saturate(100%) blur(10px)"
+    >
       <div variant="container" display="flex" alignItems="center" h="14">
         <Link href="/" passHref>
           <a

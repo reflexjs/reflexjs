@@ -1,0 +1,94 @@
+---
+title: Next.js
+excerpt: Learn how to use Reflexjs with Next.js
+---
+
+There are two ways to get started with Reflexjs.
+
+1. [Using a starter](#using-a-starter)
+2. [Add to existing site](#add-to-existing-site)
+
+## Using a starter
+
+The easiest way to get started with Reflexjs is to use a starter. This sets up everything automatically for you.
+
+```sh
+npx create-next-app -e https://github.com/reflexjs/next-starter-base
+```
+
+## Add to existing site
+
+You can also add Reflexjs to an existing Nextjs site.
+
+### Install dependencies
+
+Add reflexjs to your site.
+
+```sh
+npm i reflexjs
+```
+
+### Create a theme
+
+Generate a theme using the Reflexjs CLI utility.
+
+```sh
+npx reflexjs --preset base
+```
+
+This will create a `theme.js` file using the _base_ preset at the root of your project.
+
+### Update \_app.js
+
+Create `src/pages/_app.js` with the following code:
+
+```jsx title=src/pages/_app.js
+import { ThemeProvider } from "reflexjs" // highlight-line
+import theme from "../src/theme" // highlight-line
+
+export default function App({ Component, pageProps }) {
+  return (
+    <ThemeProvider theme={theme}>
+      <Component {...pageProps} />
+    </ThemeProvider>
+  )
+}
+```
+
+### Update \_document.js
+
+Add `InitializeColorMode` to `src/pages/_document.js`
+
+```jsx title=src/pages/_document.js
+import Document, { Html, Main, NextScript, Head } from "next/document"
+import { InitializeColorMode } from "reflexjs" // highlight-line
+
+export default class extends Document {
+  render() {
+    return (
+      <Html lang="en">
+        <Head />
+        <body>
+          <InitializeColorMode /> // highlight-line
+          <Main />
+          <NextScript />
+        </body>
+      </Html>
+    )
+  }
+}
+```
+
+### Add the Babel preset
+
+Reflexjs includes the `reflexjs/babel` preset. This preset automatically sets the `jsx` pragma for you so that you don't need to import it in individual files.
+
+Create a `.babelrc` file at the root of your project with the following:
+
+```json
+{
+  "presets": ["next/babel", "reflexjs/babel"]
+}
+```
+
+You are now ready to start using Reflexjs to style your pages.

@@ -34,7 +34,7 @@ export function CodeBlock({
 }: CodeBlockProps) {
   const props = preToCodeBlock(preProps)
   if (props) {
-    const { codeString, title, showLineNumbers, ...restProps } = props
+    const { codeString, title, showLineNumbers: _, ...restProps } = props
 
     return (
       <div position="relative" my={4}>
@@ -44,7 +44,8 @@ export function CodeBlock({
             color="prism.file"
             borderBottomWidth="1px"
             borderBottomColor="prism.highlight"
-            fontSize="sm"
+            fontFamily="monospace"
+            fontSize="xs"
             roundedTop="md"
             py="4"
             px="6"

@@ -1,3 +1,4 @@
+import * as React from "react"
 import Link from "next/link"
 import { useRouter } from "next/router"
 import { Icon } from "reflexjs"
@@ -18,17 +19,15 @@ export interface SidebarNavProps {
   items: NavItem[]
 }
 
-export function SidebarNav({ items }: SidebarNavProps) {
+export function SidebarNavItem({ items }: SidebarNavProps) {
   const { asPath } = useRouter()
 
   const headingStyles = {
     w: "full",
     display: "flex",
     alignItems: "center",
-    justifyContent: "space-between",
-    fontSize: "lg",
+    fontSize: "md",
     fontFamily: "body",
-    fontWeight: "semibold",
     cursor: "pointer",
     color: "text",
     _hover: {
@@ -39,24 +38,23 @@ export function SidebarNav({ items }: SidebarNavProps) {
   return items.length ? (
     <div>
       {items.map((item, index) => (
-        <div key={index} mb="10">
+        <div key={index} mb="2">
           {item.url ? (
             <Link href={item.url} passHref>
               <a
                 {...headingStyles}
                 color={asPath === item.url ? "primary" : "text"}
               >
+                <Icon name="circle" size="2" ml="1" mr="3" opacity="0.5" />{" "}
                 {item.title}
               </a>
             </Link>
           ) : null}
           {item.items?.length ? (
-            <Accordion collapsible defaultIndex={0}>
+            <Accordion collapsible>
               <AccordionItem>
                 <AccordionButton
                   {...headingStyles}
-                  borderTopWidth={index !== 0 && "1px"}
-                  pt={index !== 0 && 4}
                   _hover={{
                     svg: {
                       visibility: "visible",
@@ -68,29 +66,22 @@ export function SidebarNav({ items }: SidebarNavProps) {
                     },
                   }}
                 >
+                  <Icon name="chevron" size="4" mr="2" opacity="0.5" />
                   {item.title}
-                  <Icon
-                    name="chevron"
-                    size={4}
-                    ml="auto"
-                    mr="4"
-                    opacity="0.5"
-                    visibility="hidden"
-                  />
                 </AccordionButton>
-                <AccordionPanel>
+                <AccordionPanel pl="4" py="2" borderLeftWidth="1" ml="2">
                   {item.items.map((_item, _index) => (
                     <Link href={_item.url} passHref key={_index}>
                       <a
                         display="flex"
-                        fontSize="md"
+                        fontSize="sm"
                         my="2"
                         color={asPath === _item.url ? "primary" : "text"}
                         _hover={{
                           color: "primary",
                         }}
                       >
-                        {_item.title}
+                        - {_item.title}
                       </a>
                     </Link>
                   ))}
@@ -101,5 +92,27 @@ export function SidebarNav({ items }: SidebarNavProps) {
         </div>
       ))}
     </div>
+  ) : null
+}
+
+export function SidebarNav({ items }: SidebarNavProps) {
+  return items.length ? (
+    <>
+      {items.map((item, index) => (
+        <div key={index}>
+          <h4
+            fontSize="lg"
+            fontWeight="semibold"
+            mb="4"
+            mt={index !== 0 && 6}
+            borderTopWidth={index !== 0 && 1}
+            pt={index !== 0 && 4}
+          >
+            {item.title}
+          </h4>
+          <SidebarNavItem items={item.items} />
+        </div>
+      ))}
+    </>
   ) : null
 }

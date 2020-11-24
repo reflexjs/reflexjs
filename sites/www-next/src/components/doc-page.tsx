@@ -1,33 +1,22 @@
-import Head from "next/head"
-import hydrate from "next-mdx-remote/hydrate"
-import { Layout, mdxComponents, SidebarNav } from "../../src/components"
 import Link from "next/link"
-import manifest from "../../docs/manifest.json"
+import hydrate from "next-mdx-remote/hydrate"
 import { Icon } from "reflexjs"
-import {
-  getMdxPaths,
-  getMdxContent,
-  MdxContent,
-} from "../../src/get-mdx-content"
+import { Layout, SidebarNav, mdxComponents } from "."
+import { MdxContent } from "../utils/get-mdx-content"
+import { NavItem } from "./sidebar-nav"
 
-export const DOCS_CONTENT_PATH = "./docs"
-
-export interface DocsPageProps {
+export interface DocPageProps {
   doc: MdxContent
+  manifest: NavItem[]
 }
 
-export default function DocsPage({ doc }: DocsPageProps) {
+export function DocPage({ doc, manifest }: DocPageProps) {
   const content = hydrate(doc.mdx, {
     components: mdxComponents,
   })
 
   return (
     <Layout>
-      {/* TODO: Add this back when Nextjs 10.1.0 is released */}
-      {/* <Head>
-        <meta name="description" content={doc.data.excerpt} />
-        <title>{doc.data.title} | Reflex</title>
-      </Head> */}
       <div variant="container">
         <div
           display="grid"
@@ -59,8 +48,8 @@ export default function DocsPage({ doc }: DocsPageProps) {
               justifyContent="space-between"
               py="10"
             >
-              {doc.prev ? (
-                <Link href={doc.prev.url} passHref>
+              {doc.data.prev ? (
+                <Link href={doc.data.prev.url} passHref>
                   <a variant="button.link">
                     <Icon
                       name="chevron"
@@ -68,14 +57,15 @@ export default function DocsPage({ doc }: DocsPageProps) {
                       mr="2"
                       transform="rotate(180deg)"
                     />
-                    {doc.prev.title}
+                    {doc.data.prev.title}
                   </a>
                 </Link>
               ) : null}
-              {doc.next ? (
-                <Link href={doc.next.url} passHref>
+              {doc.data.next ? (
+                <Link href={doc.data.next.url} passHref>
                   <a variant="button.link" ml="auto">
-                    {doc.next.title} <Icon name="chevron" size="5" ml="2" />
+                    {doc.data.next.title}{" "}
+                    <Icon name="chevron" size="5" ml="2" />
                   </a>
                 </Link>
               ) : null}
@@ -85,28 +75,4 @@ export default function DocsPage({ doc }: DocsPageProps) {
       </div>
     </Layout>
   )
-}
-
-export async function getStaticPaths() {
-  const mdxPaths = await getMdxPaths(DOCS_CONTENT_PATH)
-  const paths = mdxPaths.map(({ slug }) => ({
-    params: {
-      slug: slug.split("/"),
-    },
-  }))
-
-  return {
-    paths,
-    fallback: false,
-  }
-}
-
-export async function getStaticProps({ params: { slug } }) {
-  const doc = await getMdxContent(DOCS_CONTENT_PATH, slug ? slug.join("/") : "")
-
-  return {
-    props: {
-      doc,
-    },
-  }
 }

@@ -45,6 +45,7 @@ module.exports = {
       rules: {
         "@typescript-eslint/explicit-module-boundary-types": "off",
         "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/member-delimiter-style": [
           "error",
           {
