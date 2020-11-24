@@ -17,7 +17,7 @@ export function DocPage({ doc, manifest }: DocPageProps) {
 
   return (
     <Layout>
-      <div variant="container">
+      <div variant="container.md">
         <div
           display="grid"
           col="1|180px 1fr|180px 1fr|250px 1fr"
