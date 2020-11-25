@@ -37,11 +37,6 @@ export const blocks: BlockConfig = {
       display: "col",
     },
     {
-      name: "Ecommerce",
-      id: "ecommerce",
-      display: "col",
-    },
-    {
       name: "Call To Action",
       id: "call-to-action",
       display: "col",
@@ -57,16 +52,6 @@ export const blocks: BlockConfig = {
       display: "col",
     },
     {
-      name: "Team",
-      id: "team",
-      display: "col",
-    },
-    {
-      name: "Testimonials",
-      id: "testimonials",
-      display: "col",
-    },
-    {
       name: "Cards",
       id: "cards",
       display: "col",
@@ -74,11 +59,6 @@ export const blocks: BlockConfig = {
     {
       name: "Posts",
       id: "posts",
-      display: "col",
-    },
-    {
-      name: "Videos",
-      id: "videos",
       display: "col",
     },
     {

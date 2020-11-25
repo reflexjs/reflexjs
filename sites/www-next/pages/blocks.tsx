@@ -9,27 +9,39 @@ import { Block, BlockCategory } from "types"
 export interface BlocksPageProps {
   categories: BlockCategory[]
   blocks: Block[]
+  cols?: number
+  mode?: "dark" | "default"
 }
 
-export default function BlocksPage({ categories, blocks }: BlocksPageProps) {
+export default function BlocksPage({
+  categories,
+  blocks,
+  cols = 2,
+  mode = "dark",
+}: BlocksPageProps) {
+  const color = mode === "dark" ? "modes.dark." : ""
   return (
     <Layout>
-      <section py="10" bg="modes.dark.background">
+      <section py="10" bg={`${color}background`}>
         <div variant="container">
-          <h1 variant="heading.h1" color="white">
+          <h1 variant="heading.h1" color={`${color}heading`}>
             Blocks
           </h1>
+          <p variant="text.lead" color={`${color}text`}>
+            We have built {blocks.length}+ blocks that you can copy and paste
+            into your site.
+          </p>
           {categories.map((category) => {
             const _blocks = blocks.filter(
               (block) => block.category.id === category.id
             )
             return !_blocks.length ? null : (
               <section key={category.id} mt="10">
-                <h2 variant="heading.h2" color="white">
+                <h2 variant="heading.h2" color={`${color}heading`}>
                   {category.name}
                 </h2>
-                <div display="grid" col="1|2|3" gap="6||||10" mt="8">
-                  {chunk(_blocks, Math.ceil(_blocks.length / 3)).map(
+                <div display="grid" col={`1|2|${cols}`} gap="6|6|6|10" mt="8">
+                  {chunk(_blocks, Math.ceil(_blocks.length / cols)).map(
                     (blocks, index) => (
                       <div key={index}>
                         {blocks.map((block) => (
