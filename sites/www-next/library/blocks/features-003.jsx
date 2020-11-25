@@ -71,7 +71,7 @@ export function Feature({ heading, text, icon = { name: "check" }, ...props }) {
       <div flex="1" ml="4">
         <h4 variant="heading.h4">{heading}</h4>
         {text && (
-          <p variant="text.paragraph text.small" mt="1">
+          <p variant="text.paragraph text.sm" mt="1">
             {text}
           </p>
         )}

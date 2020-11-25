@@ -44,7 +44,7 @@ export function Card({ heading, text, image, link, ...props }) {
       {image && <img w="full" mb="4" rounded="md" {...image} />}
       <h4 variant="heading.h4">{heading}</h4>
       {text && (
-        <p variant="text.paragraph text.small" mt="1">
+        <p variant="text.paragraph text.sm" mt="1">
           {text}
         </p>
       )}
