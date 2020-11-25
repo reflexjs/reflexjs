@@ -14,6 +14,7 @@ export function LinkedCard({ href, icon, title, color, ...props }) {
         display="flex"
         flexDirection="column"
         alignItems="center"
+        justifyContent="center"
         borderWidth="1"
         p="8"
         rounded="md"
@@ -26,7 +27,7 @@ export function LinkedCard({ href, icon, title, color, ...props }) {
         {...props}
       >
         <Icon name={icon} color={color} size="12" />
-        <p fontSize="lg" fontWeight="semibold" mt="2">
+        <p fontSize="lg" textAlign="center" fontWeight="semibold" mt="2">
           {title}
         </p>
       </a>

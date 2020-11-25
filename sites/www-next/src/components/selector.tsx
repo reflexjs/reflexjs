@@ -5,30 +5,32 @@ export interface SelectorProps extends React.HTMLAttributes<HTMLDivElement> {
 export function Selector({ children, ...props }: SelectorProps) {
   return (
     <div
-      display="flex"
       fontSize="sm"
       borderWidth="1"
       rounded="md"
       position="relative"
-      py="2"
       sx={{
         label: {
           display: "block",
-          flex: 1,
-          lineHeight: 1.2,
-          mr: "-10ch",
-          pl: 4,
+          fontSize: "xs",
+          position: "absolute",
+          top: 2,
+          left: 3,
+          color: "gray",
         },
         select: {
+          appearance: "none",
           position: "relative",
           zIndex: 10,
           width: "auto",
           border: 0,
-          fontSize: "sm",
-          fontWeight: "semibold",
-          p: 0,
-          pl: "12ch",
-          pr: 8,
+          fontSize: "md",
+          color: "text",
+          fontWeight: "medium",
+          pt: 7,
+          pb: 2,
+          px: 3,
+          minW: 150,
           background: "none",
         },
       }}

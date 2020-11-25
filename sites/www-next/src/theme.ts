@@ -4,6 +4,7 @@ export default {
     heading: "#111",
     background: "#fff",
     primary: "#06f",
+    secondary: "#ee3465",
     accent: "#fb3640",
     gray: "#6c6c6c",
     border: "#eaeaea",
@@ -273,9 +274,10 @@ export default {
     },
   },
   text: {
+    color: "text",
     lead: {
       fontFamily: "body",
-      fontSize: "2xl",
+      fontSize: "xl|2xl",
       lineHeight: "normal",
       fontWeight: "normal",
     },
@@ -360,6 +362,11 @@ export default {
         borderColor: "prism.tag",
       },
     },
+  },
+  subheading: {
+    color: "gray",
+    textTransform: "uppercase",
+    m: 0,
   },
   heading: {
     color: "heading",
@@ -446,12 +453,12 @@ export default {
 
     primary: {
       bg: "primary",
-      color: "white",
+      color: "background",
       borderColor: "primary",
 
       "&:hover, &:focus": {
         bg: "primaryHover",
-        color: "white",
+        color: "background",
         borderColor: "primaryHover",
         transform: "translateY(-2px)",
         boxShadow: "lg",
@@ -460,12 +467,12 @@ export default {
 
     secondary: {
       bg: "secondary",
-      color: "white",
+      color: "background",
       borderColor: "secondary",
 
       "&:hover, &:focus": {
         bg: "secondaryHover",
-        color: "white",
+        color: "background",
         borderColor: "secondaryHover",
         transform: "translateY(-2px)",
         boxShadow: "lg",
@@ -474,12 +481,12 @@ export default {
 
     accent: {
       bg: "accent",
-      color: "white",
+      color: "background",
       borderColor: "accent",
 
       "&:hover, &:focus": {
         bg: "accentHover",
-        color: "white",
+        color: "background",
         borderColor: "accentHover",
         transform: "translateY(-2px)",
         boxShadow: "lg",

@@ -3,23 +3,30 @@ import { InterpolationWithTheme } from "@emotion/core"
 import styleProps from "./style-props"
 import { StyleProps, SxProps } from "./types"
 import deepmerge from "deepmerge"
-import {
-  jsx as themeUIJSX,
-  css,
-  ThemeUIStyleObject,
-  Theme as ThemeUITheme,
-} from "theme-ui"
+import { jsx as themeUIJSX, css, ThemeUIStyleObject } from "theme-ui"
 export {
   useThemeUI as useTheme,
   ThemeProvider as ThemeUIProvider,
   useColorMode,
   css,
   get,
-  merge,
   InitializeColorMode,
 } from "theme-ui"
 
-export interface Theme extends ThemeUITheme {}
+export const merge = deepmerge
+
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+// We allow for any here for expansion.
+// TODO: Figure out how or if we should keep compatibility with Theme UI spec.
+export interface Theme {
+  [key: string]: any
+}
+
+interface ReflexjsTheme extends Theme {}
+
+declare module "theme-ui" {
+  interface Theme extends ReflexjsTheme {}
+}
 
 const RESPONSIVE_SEPARATOR = "|"
 

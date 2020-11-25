@@ -20,7 +20,7 @@ export function ThemeSelector({
 }: ThemeSelectorProps) {
   return (
     <Selector {...props}>
-      <label htmlFor="theme-selector">Select theme:</label>
+      <label htmlFor="theme-selector">Select theme</label>
       <select
         id="theme-selector"
         variant="sm"

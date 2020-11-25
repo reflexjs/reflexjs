@@ -63,102 +63,106 @@ export function Preview({
   }
 
   return (
-    <div
-      rounded="xl"
-      borderWidth="3px"
-      maxW={({ container }) => container.maxWidth + 120}
-      mx="auto"
-      overflow="hidden"
-      {...props}
-    >
+    <div px={({ container }) => container.px}>
       <div
-        display="flex"
-        p="4"
-        justifyContent="space-between"
-        borderBottomWidth="1"
+        rounded="xl"
+        borderWidth="3px"
+        maxW={({ container }) => container.maxWidth + 120}
+        mx="auto"
+        overflow="hidden"
+        {...props}
       >
-        {withThemeSelector && (
-          <ThemeSelector
-            themes={themes}
-            defaultTheme={previewThemeId}
-            handleChange={setPreviewThemeId}
-            borderWidth="2px"
+        <div
+          display="flex"
+          p="4"
+          alignItems="center"
+          justifyContent="space-between"
+          borderBottomWidth="1"
+        >
+          {withThemeSelector && (
+            <ThemeSelector
+              themes={themes}
+              defaultTheme={previewThemeId}
+              handleChange={setPreviewThemeId}
+              borderWidth="2px"
+            />
+          )}
+          <ResponsiveToggles
+            handler={setWidth}
+            toggles={[
+              { text: "xl", size: "100%" },
+              { text: "lg", size: 1024 },
+              { text: "md", size: 768 },
+              { text: "sm", size: 375 },
+            ]}
+            ml="auto"
           />
-        )}
-        <ResponsiveToggles
-          handler={setWidth}
-          toggles={[
-            { text: "xl", size: "100%" },
-            { text: "lg", size: 1024 },
-            { text: "md", size: 768 },
-            { text: "sm", size: 375 },
-          ]}
-          ml="auto"
-        />
-        {fullScreenPath && (
-          <a
-            href={fullScreenPath}
-            target="_blank"
-            rel="noreferrer"
-            borderWidth="1"
-            rounded="md"
-            px="2"
-            ml="2"
-          >
-            <Icon name="maximize" size="4" />
-            <VisuallyHidden>View fullscreen</VisuallyHidden>
-          </a>
-        )}
-      </div>
-      <div bg="muted" overflow="hidden">
-        <Chrome width={width} bg="background">
-          <div
-            id="preview-wrapper"
-            sx={{
-              iframe: {
-                display: "block",
-              },
-            }}
-          >
-            <ReactIframe
-              title="Preview"
-              frameBorder={0}
-              width="100%"
-              height={height}
-              ref={iframeRef}
-              onLoad={() => handleResize(iframeRef)}
-              initialContent="<!DOCTYPE html><html><head><link
+          {fullScreenPath && (
+            <a
+              variant="button.sm"
+              href={fullScreenPath}
+              target="_blank"
+              rel="noreferrer"
+              borderWidth="1"
+              rounded="md"
+              px="2"
+              ml="2"
+            >
+              <Icon name="maximize" size="4" />
+              <VisuallyHidden>View fullscreen</VisuallyHidden>
+            </a>
+          )}
+        </div>
+        <div bg="muted" overflow="hidden">
+          <Chrome width={width} bg="background">
+            <div
+              id="preview-wrapper"
+              sx={{
+                iframe: {
+                  display: "block",
+                },
+              }}
+            >
+              <ReactIframe
+                title="Preview"
+                frameBorder={0}
+                width="100%"
+                height={height}
+                ref={iframeRef}
+                onLoad={() => handleResize(iframeRef)}
+                initialContent="<!DOCTYPE html><html><head><link
             href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;900&family=Lora&family=Merriweather:wght@300;400;700;900&display=swap'
             rel='stylesheet'
           /></head><body><div id='container'></div></body></html>"
-            >
-              <FrameContextConsumer>
-                {(frameContext) => {
-                  const cache = createCache({
-                    container: frameContext.document.head,
-                    key: "preview",
-                  })
-                  return (
-                    <CacheProvider value={cache}>
-                      <ThemeProvider theme={previewTheme}>
-                        <Global
-                          styles={(theme) => {
-                            const { root: body, global } = theme.styles
-                            return css({
-                              ...global,
-                              body,
-                            })(previewTheme)
-                          }}
-                        />
-                        {children}
-                      </ThemeProvider>
-                    </CacheProvider>
-                  )
-                }}
-              </FrameContextConsumer>
-            </ReactIframe>
-          </div>
-        </Chrome>
+              >
+                <FrameContextConsumer>
+                  {(frameContext) => {
+                    const cache = createCache({
+                      container: frameContext.document.head,
+                      key: "preview",
+                    })
+                    return (
+                      <CacheProvider value={cache}>
+                        <ThemeProvider theme={previewTheme}>
+                          <Global
+                            styles={(theme) => {
+                              const { root: body, global } = theme.styles
+                              return css({
+                                ...global,
+                                body,
+                              })(previewTheme)
+                            }}
+                          />
+                          {children}
+                        </ThemeProvider>
+                      </CacheProvider>
+                    )
+                  }}
+                </FrameContextConsumer>
+              </ReactIframe>
+            </div>
+          </Chrome>
+        </div>
       </div>
     </div>
   )

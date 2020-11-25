@@ -71,7 +71,6 @@ export function CodeBlock({
           <Prism
             showLineNumbers={showLineNumbers ? true : false}
             className={className}
-            language={language}
           >
             {codeString}
           </Prism>

@@ -11,7 +11,7 @@ export default function Block({
   ...props
 }) {
   return (
-    <section py="4|6|12|20" {...props}>
+    <section py="6|12|20" {...props}>
       <div variant="container">
         <div
           display="grid"
@@ -35,11 +35,7 @@ export default function Block({
             alignItems="center|flex-start"
             textAlign="center|left"
           >
-            {subheading && (
-              <p color="primary" textTransform="uppercase" m="0">
-                {subheading}
-              </p>
-            )}
+            {subheading && <p variant="subheading">{subheading}</p>}
             {heading && (
               <h1 variant="heading.h1" fontWeight="bolder" lineHeight="tight">
                 {heading}

@@ -54,14 +54,8 @@ export function SidebarNavItem({ items }: SidebarNavProps) {
             <Accordion collapsible>
               <AccordionItem>
                 <AccordionButton
-                  as={Box}
-                  {...headingStyles}
-                  _hover={{
-                    svg: {
-                      visibility: "visible",
-                    },
-                  }}
                   sx={{
+                    ...headingStyles,
                     "&[aria-expanded=true] > svg": {
                       transform: "rotate(90deg)",
                     },
@@ -71,11 +65,12 @@ export function SidebarNavItem({ items }: SidebarNavProps) {
                   {item.title}
                 </AccordionButton>
                 <AccordionPanel
-                  as={Box}
-                  pl="4"
-                  py="2"
-                  borderLeftWidth="1"
-                  ml="2"
+                  sx={{
+                    pl: 4,
+                    py: 2,
+                    borderLeftWidth: 1,
+                    ml: 2,
+                  }}
                 >
                   {item.items.map((_item, _index) => (
                     <Link href={_item.url} passHref key={_index}>

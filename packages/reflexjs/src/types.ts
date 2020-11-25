@@ -210,14 +210,6 @@ export type ComponentWithStyleProps<T extends React.ElementType> = Assign<
 //   }
 // }
 
-declare module "theme-ui" {
-  interface Theme {
-    icons?: {
-      [name: string]: string
-    }
-  }
-}
-
 declare module "react" {
   // tslint:disable-next-line: no-empty-interface
   interface DOMAttributes<T> extends StyleProps {
