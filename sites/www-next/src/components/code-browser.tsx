@@ -19,7 +19,9 @@ export function CodeBrowser({ block, ...props }: CodeBrowserProps) {
 
   return (
     <div variant="container" {...props}>
-      <h2 variant="heading.h2">How to use this block</h2>
+      <h2 variant="heading.h2" fontSize="3xl">
+        How to use this block
+      </h2>
       <p variant="text.paragraph">
         1. Copy the block source code and place it in a{" "}
         <code>src/components/{block.id}.jsx</code> file.

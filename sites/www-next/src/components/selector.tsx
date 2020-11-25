@@ -1,3 +1,5 @@
+import { Icon } from "reflexjs"
+
 export interface SelectorProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode
 }
@@ -37,6 +39,14 @@ export function Selector({ children, ...props }: SelectorProps) {
       {...props}
     >
       {children}
+      <Icon
+        name="chevron"
+        size="3"
+        position="absolute"
+        right="4"
+        top="40%"
+        transform="rotate(90deg)"
+      />
     </div>
   )
 }
