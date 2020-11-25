@@ -1,5 +1,4 @@
 import * as React from "react"
-import { Icon } from "reflexjs"
 
 export default function Block({ subheading, heading, text, items, ...props }) {
   return (

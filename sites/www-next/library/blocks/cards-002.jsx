@@ -27,8 +27,8 @@ export default function Block({
         </div>
         {cards && (
           <div display="grid" col={`1|2|${columns}`} gap="4|8" my="8|12">
-            {cards.map((feature, index) => (
-              <Card key={index} {...feature} />
+            {cards.map((card, index) => (
+              <Card key={index} {...card} />
             ))}
           </div>
         )}
