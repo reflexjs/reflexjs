@@ -229,10 +229,11 @@ export default {
       "*": {
         m: 0,
         p: 0,
+        boxSizing: "border-box",
       },
       html: {
         fontFamily: "body",
-        fontSize: ["14px", "16px"],
+        fontSize: [12, 14, 16],
         lineHeight: "normal",
         fontFeatureSettings: "'kern'",
         textRendering: "optimizeLegibility",
@@ -277,7 +278,7 @@ export default {
     color: "text",
     lead: {
       fontFamily: "body",
-      fontSize: "xl|2xl",
+      fontSize: "xl",
       lineHeight: "normal",
       fontWeight: "normal",
     },
@@ -376,7 +377,7 @@ export default {
     letterSpacing: "tight",
 
     h1: {
-      fontSize: "4xl|5xl|6xl",
+      fontSize: "5xl|6xl",
       fontWeight: "black",
     },
     h2: {
@@ -508,12 +509,12 @@ export default {
     },
   },
   input: {
-    bg: "background",
+    bg: "muted",
     color: "text",
     fontFamily: "body",
-    fontSize: ["sm", "md", "lg"],
+    fontSize: "md",
     lineHeight: "none",
-    border: "1px solid",
+    borderWidth: 1,
     borderColor: "border",
     borderRadius: "md",
     px: 4,
@@ -564,23 +565,16 @@ export default {
 
     sm: {
       py: 2,
-      fontSize: ["xs", "sm", "md"],
+      fontSize: "sm",
     },
 
     lg: {
       py: 4,
-      fontSize: ["md", "lg", "xl"],
+      fontSize: "xl",
     },
   },
   select: {
-    bg: "background",
-    color: "text",
-    fontFamily: "body",
-    fontSize: ["sm", "md", "lg"],
-    lineHeight: "none",
-    border: "1px solid",
-    borderColor: "border",
-    borderRadius: "md",
+    variant: "input",
     pl: 4,
     pr: 12,
     py: 3,

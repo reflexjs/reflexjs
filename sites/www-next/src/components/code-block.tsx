@@ -34,14 +34,7 @@ export function CodeBlock({
 }: CodeBlockProps) {
   const props = preToCodeBlock(preProps)
   if (props) {
-    const {
-      codeString,
-      title,
-      className,
-      language,
-      maxH = "none",
-      ...restProps
-    } = props
+    const { codeString, title, className, maxH = "none", ...restProps } = props
 
     return (
       <div position="relative" my={4} maxH={maxH} {...restProps}>
