@@ -54,16 +54,27 @@ type Doc implements Node @dontInfer {
 
 ## Usage
 
-Place your docs inside `content/docs` as follows:
+Place your docs inside `content/docs` as follows.
 
 ```sh
 site
   └── content
     └── docs
-      └── getting-started.mdx
+      └── 01-getting-started.mdx
 ```
 
-Then build add content to your doc:
+You must prefix each filename with a number followed by a hyphen (`-`). This will assign it a weight that will determine its order in the nav.
+
+Then add a nav for your docs inside `content/navs` as follows.
+
+```sh
+site
+  └── content
+    └── navs
+      └── doc.mdx
+```
+
+Then add content to your doc:
 
 ```jsx
 ---
