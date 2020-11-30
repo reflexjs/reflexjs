@@ -11,7 +11,12 @@ Add a page by creating a new `about.jsx` file under `pages`.
 export default function AboutPage() {
   return (
     <section py="12|16" mx="auto">
-      <div variant="container">
+      <div
+        variant="container"
+        sx={{
+          bg: "muted",
+        }}
+      >
         <h1 variant="heading.h1">The React Framework for Production</h1>
         <p fontSize="2xl" mt="4">
           Next.js gives you the best developer experience with all the features

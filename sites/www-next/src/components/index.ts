@@ -19,3 +19,8 @@ export * from "./sidebar-nav"
 export * from "./source-selector"
 export * from "./theme-selector"
 export * from "./visually-hidden"
+
+export * from "./home/style-props-section"
+export * from "./home/responsive-section"
+export * from "./home/theme-section"
+export * from "./home/variants-section"

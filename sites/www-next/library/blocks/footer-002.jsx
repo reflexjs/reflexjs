@@ -16,7 +16,6 @@ export default function Block({
           display="flex"
           alignItems="center"
           flexDirection="column|row"
-          alignItems="center"
           justifyContent="space-between"
         >
           <div maxW="none|300">
@@ -32,13 +31,12 @@ export default function Block({
             >
               {links.map((link, index) => (
                 <div
+                  key={index}
                   display="flex"
                   flexDirection="column"
                   alignItems="flex-start"
                 >
                   <a
-                    key={index}
-                    variant="text"
                     href={link.href}
                     textAlign="center"
                     variant="heading.h5"
@@ -48,8 +46,14 @@ export default function Block({
                   >
                     {link.title}
                   </a>
-                  {link.items.map((item) => (
-                    <a href={item.href} variant="text" display="flex" mt="2">
+                  {link.items.map((item, index) => (
+                    <a
+                      key={index}
+                      href={item.href}
+                      variant="text"
+                      display="flex"
+                      mt="2"
+                    >
                       {item.title}
                     </a>
                   ))}
