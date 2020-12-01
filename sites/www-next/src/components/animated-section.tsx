@@ -19,7 +19,7 @@ export function AnimatedSection({
   return (
     <section py="40" {...props}>
       <div variant="container.md" w="full">
-        <h2 variant="heading" fontSize="5xl">
+        <h2 variant="heading" fontWeight="800" fontSize="5xl">
           {heading}
         </h2>
         <p variant="text" fontSize="2xl" mt="3">

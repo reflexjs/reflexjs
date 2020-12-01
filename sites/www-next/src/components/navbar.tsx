@@ -14,7 +14,7 @@ export function Navbar() {
       zIndex="1000"
       backdropFilter="saturate(100%) blur(10px)"
     >
-      <div variant="container" display="flex" alignItems="center" h="14">
+      <div variant="container.md" display="flex" alignItems="center" h="14">
         <Link href="/" passHref>
           <a
             display="flex"

@@ -32,7 +32,7 @@ export default {
         text: "#a0aec0",
         heading: "#fff",
         background: "#1a202c",
-        primary: "#79ffe1",
+        primary: "#06f",
         border: "#2d3748",
         gray: "#718096",
         muted: "#2d3748",

@@ -1,132 +1,40 @@
 import { motion } from "framer-motion"
-import { AnimatedSection } from "@components"
+import { AnimatedSection, Layout } from "@components"
 import {
+  colorModesScences,
   responsiveScenes,
   stylePropsScenes,
   themeScenes,
   variantsScenes,
 } from "@scenes"
-
-const introVariants = {
-  hidden: {
-    opacity: 0,
-    y: 100,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.5,
-    },
-  },
-}
-
-function BigLead({ children, ...props }) {
-  return (
-    <motion.p
-      variants={introVariants}
-      sx={{
-        fontWeight: 600,
-        fontSize: "4xl",
-        letterSpacing: "tight",
-        lineHeight: "snug",
-        mt: 8,
-        maxW: "none|none|850",
-        ...props,
-      }}
-      {...props}
-    >
-      {children}
-    </motion.p>
-  )
-}
-
-function FeatureCard({ heading, text }) {
-  return (
-    <motion.div
-      variants={{
-        hidden: {
-          opacity: 0,
-          y: 100,
-        },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: {
-            duration: 0.5,
-          },
-        },
-      }}
-    >
-      <p variant="heading.h4" mb="2">
-        {heading}
-      </p>
-      <p>{text}</p>
-    </motion.div>
-  )
-}
+import Link from "next/link"
+import { Icon } from "reflexjs"
 
 export default function IndexPage() {
   return (
-    <div>
-      <section py="40">
+    <Layout>
+      <section py="20">
         <div variant="container.md">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={{
-              visible: {
-                transition: {
-                  ease: "easeInOut",
-                  staggerChildren: 0.15,
-                },
-              },
-            }}
+          <h1
+            fontWeight="800"
+            fontSize="8xl"
+            lineHeight="1"
+            letterSpacing="tight"
+            color="heading"
           >
-            <motion.h1
-              variants={introVariants}
-              sx={{
-                fontWeight: 800,
-                fontSize: "7xl",
-                lineHeight: "tight",
-                letterSpacing: "tight",
-              }}
-            >
-              Build something amazing.
-            </motion.h1>
-            <BigLead>
-              Reflexjs is a collection of starter kits, themes, and blocks built
-              using a best-in-class styling library.
-            </BigLead>
-            <BigLead>
-              It works with Nextjs, Gatsby and any React framework.
-            </BigLead>
-            <BigLead>
-              And has everything you care about: speed and excellent developer
-              experience.
-            </BigLead>
-          </motion.div>
-        </div>
-        <div variant="container.md">
-          <motion.div
-            sx={{
-              display: "grid",
-              gap: 14,
-              col: 3,
-              mt: 20,
-            }}
-            initial="hidden"
-            animate="visible"
-            variants={{
-              visible: {
-                transition: {
-                  delayChildren: 0.75,
-                  ease: "easeInOut",
-                  staggerChildren: 0.1,
-                },
-              },
-            }}
-          >
+            Build something amazing.
+          </h1>
+          <hr borderColor="text" borderBottomWidth="1" w="200" my="14" />
+          <BigLead>
+            Starter kits, themes, and blocks to help you build Nextjs, Gatsby
+            and React sites faster. .
+          </BigLead>
+          <BigLead>
+            Built using a best-in-class styling library that has everything you
+            care about.
+          </BigLead>
+          <BigLead>Speed and excellent developer experience.</BigLead>
+          <div display="grid" gap="14" col="3" mt="20">
             <FeatureCard
               heading="Style props"
               text="Use any CSS properties as style props to rapidly style your
@@ -152,9 +60,23 @@ export default function IndexPage() {
               heading="Blocks Library"
               text=" A library of 30+ ready-to-use blocks that you can copy and paste."
             />
-          </motion.div>
+          </div>
+          <div display="inline-grid" col="2" mt="20" gap="4">
+            <Link href="/docs" passHref>
+              <a variant="button.primary.lg">
+                Get Started <Icon name="arrow-right" size="4" ml="2" />
+              </a>
+            </Link>
+            <Link href="/blocks" passHref>
+              <a variant="button.secondary.lg">Browse blocks</a>
+            </Link>
+          </div>
         </div>
       </section>
+      <AnimatedSection
+        heading="Blocks Library"
+        lead="A library of 30+ ready-to-use blocks that you can copy and paste into your site."
+      />
       <AnimatedSection
         heading="No learning curve."
         lead="You already know how to use this. Use any CSS property as style prop to rapidly style your
@@ -194,15 +116,53 @@ export default function IndexPage() {
       <AnimatedSection
         heading="Color modes"
         lead="Add dark mode. Add light mode. Add any color mode."
-      />
-      <AnimatedSection
-        heading="Blocks Library"
-        lead="A library of 30+ ready-to-use blocks that you can copy and paste into your site."
+        scenes={colorModesScences}
       />
       <AnimatedSection
         heading="And so much more."
-        lead="A library of 30+ ready-to-use blocks that you can copy and paste into your site."
+        lead="Typescript, Intellisense, Emmet. Everything you need as a developer."
       />
-    </div>
+    </Layout>
+  )
+}
+
+function BigLead({ children, ...props }) {
+  return (
+    <p
+      fontWeight="600"
+      fontSize="3xl"
+      letterSpacing="tight"
+      lineHeight="snug"
+      mt="8"
+      maxW="none|none|850"
+      {...props}
+    >
+      {children}
+    </p>
+  )
+}
+
+function FeatureCard({ heading, text }) {
+  return (
+    <motion.div
+      variants={{
+        hidden: {
+          opacity: 0,
+          y: 100,
+        },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 0.5,
+          },
+        },
+      }}
+    >
+      <p variant="heading.h4" mb="2">
+        {heading}
+      </p>
+      <p>{text}</p>
+    </motion.div>
   )
 }
