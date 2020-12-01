@@ -1,5 +1,5 @@
 import * as React from "react"
-import { AnimateSharedLayout } from "framer-motion"
+import { AnimateSharedLayout, motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
 export interface Scene {
@@ -21,13 +21,13 @@ export function AnimatedScenes({ scenes }: AnimatedScenesProps) {
   React.useEffect(() => {
     if (inView && !done) {
       const interval = setInterval(() => {
-        if (tick < scenesCount) setTick((tick) => tick + 1)
+        setTick((tick) => (tick < scenesCount ? tick + 1 : scenesCount))
       }, 1000)
 
       setTimeout(() => {
         clearInterval(interval)
         setDone(true)
-      }, scenesCount * 1000)
+      }, (scenesCount + 1) * 1000)
 
       return () => {
         clearInterval(interval)
@@ -39,40 +39,86 @@ export function AnimatedScenes({ scenes }: AnimatedScenesProps) {
     setDone(tick === scenesCount)
   }, [tick])
 
+  const scene = scenes[tick]
+
   return (
     <AnimateSharedLayout _transition={null}>
-      <p>
-        {tick} - {done ? "yes" : "no"}
-      </p>
       <div display="grid" col="2" gap="4" my="10">
-        <div
-          fontFamily="monospace"
-          color="text"
-          borderWidth="1"
-          display="block"
-          m="0"
-          p="6"
-          fontSize="sm"
-          overflow="visible"
-          whiteSpace="pre-wrap"
-          rounded="xl"
-        >
-          {scenes[tick]?.code}
-        </div>
-        <div
-          position="relative"
-          display="flex"
-          borderWidth="1"
-          alignItems="center"
-          justifyContent="center"
-          p="6"
-          rounded="xl"
-          bg="muted"
-        >
-          {scenes[tick]?.preview}
+        {scene?.theme ? (
+          <CodeWrapper label="Theme">{scene.theme}</CodeWrapper>
+        ) : (
+          <CodeWrapper label="Code">{scene.code}</CodeWrapper>
+        )}
+        <div display="inline-grid" gap="4">
+          {scene?.theme ? (
+            <CodeWrapper label="Code">{scene?.code}</CodeWrapper>
+          ) : null}
+          <div
+            position="relative"
+            display="flex"
+            borderWidth="1"
+            alignItems="center"
+            justifyContent="center"
+            p="6"
+            pt="12"
+            rounded="xl"
+            bg="muted"
+            minH="280"
+          >
+            <PanelLabel>Preview</PanelLabel>
+            <motion.div
+              layoutId="scene.preview"
+              sx={{
+                w: "full",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              {scene?.preview}
+            </motion.div>
+          </div>
         </div>
       </div>
       <span ref={ref}></span>
     </AnimateSharedLayout>
   )
+}
+
+export function CodeWrapper({ label, children }) {
+  return (
+    <div
+      fontFamily="monospace"
+      color="text"
+      borderWidth="1"
+      display="block"
+      m="0"
+      p="6"
+      pt="12"
+      overflow="visible"
+      whiteSpace="pre-wrap"
+      rounded="xl"
+      position="relative"
+      minH="280"
+    >
+      <PanelLabel>{label}</PanelLabel>
+      {children}
+    </div>
+  )
+}
+
+export function PanelLabel({ children }) {
+  return children ? (
+    <span
+      variant="text"
+      fontSize="xs"
+      m="0"
+      color="#65727b"
+      position="absolute"
+      top="4"
+      left="6"
+    >
+      {children}
+    </span>
+  ) : null
 }

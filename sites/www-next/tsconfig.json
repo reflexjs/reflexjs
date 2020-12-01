@@ -17,7 +17,8 @@
     "paths": {
       "@components": ["src/components"],
       "@utils": ["src/utils"],
-      "@config": ["src/config"]
+      "@config": ["src/config"],
+      "@scenes": ["src/scenes"]
     }
   },
   "include": [
