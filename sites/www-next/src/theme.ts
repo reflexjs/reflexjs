@@ -44,7 +44,7 @@ export default {
     body: "Inter, sans-serif",
     heading: "Inherit",
     monospace:
-      "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+      "PT Mono, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
   },
   fontSizes: {
     xs: "0.75rem",

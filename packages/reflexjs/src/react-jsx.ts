@@ -92,9 +92,17 @@ export function transformProps(
   return result
 }
 
-function parseProps(props) {
+function parseProps(type, props) {
   if (!props) return null
   const { variant, sx = {}, ..._props } = props
+
+  if (sx && typeof type !== "string") {
+    return {
+      ..._props,
+      sx: transformProps(sx),
+    }
+  }
+
   const [styleProps, otherProps] = split(_props)
 
   if (
@@ -160,7 +168,7 @@ function parseProps(props) {
 export const jsx: typeof React.createElement = (type, props, ...children) => {
   return themeUIJSX.apply(undefined, [
     type,
-    typeof type === "string" ? parseProps(props) : props,
+    parseProps(type, props),
     ...children,
   ])
 }

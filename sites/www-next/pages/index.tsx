@@ -148,14 +148,13 @@ export default function IndexPage() {
           Use a theme for typography, colors, and spacing for a constraint-based
           style props.
         </p>
-        <ThemeSection styles={{}} />
+        <ThemeSection />
       </section>
       <section display="flex" flexDirection="column" py="10" minH="80vh">
         <h2 variant="heading.h2">First-class variant support</h2>
         <p variant="text.lead" mt="3">
           Extract styles to your theme. Re-use them. Compose them.
         </p>
-        <VariantsSection />
       </section>
       <section display="flex" flexDirection="column" py="10" minH="80vh">
         <h2 variant="heading.h2">Color modes</h2>

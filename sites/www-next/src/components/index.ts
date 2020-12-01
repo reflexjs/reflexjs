@@ -1,3 +1,5 @@
+export * from "./animated-scenes"
+export * from "./animated-token"
 export * from "./callout"
 export * from "./chrome"
 export * from "./code-block"
