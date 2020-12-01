@@ -18,7 +18,7 @@ export default function BlockPage({ block }: BlockPageProps) {
   return (
     <Layout>
       <div py="4|8">
-        <div variant="container">
+        <div variant="container.md">
           <div display="flex" justifyContent="space-between">
             <h1
               variant="heading"
@@ -29,7 +29,7 @@ export default function BlockPage({ block }: BlockPageProps) {
               alignItems="center"
             >
               <Link href="/blocks" passHref>
-                <a color="primary">Blocks</a>
+                <a color="link">Blocks</a>
               </Link>
               <Icon name="chevron" size="6" mx="1" />
               <span>{block.category.name} Block</span>

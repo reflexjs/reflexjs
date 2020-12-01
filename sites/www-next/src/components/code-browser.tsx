@@ -18,7 +18,7 @@ export function CodeBrowser({ block, ...props }: CodeBrowserProps) {
   )
 
   return (
-    <div variant="container" {...props}>
+    <div variant="container.md" {...props}>
       <h2 variant="heading.h2" fontSize="3xl">
         How to use this block
       </h2>
@@ -49,6 +49,7 @@ export function SourceWrapper({ source, ...props }: SourceWrapperProps) {
     >
       <CodeBlock
         className="language-jsx"
+        language="jsx"
         title={source.label}
         showLineNumbers={true}
         maxH="450"

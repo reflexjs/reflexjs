@@ -6,7 +6,7 @@ export const preToCodeBlock = (preProps) => {
     preProps.children.props &&
     preProps.children.props.mdxType === "code"
 
-  const { children: codeString, className = "", ...props } = isMdxPre
+  const { children: codeString, className = "", language, ...props } = isMdxPre
     ? preProps.children.props
     : preProps
 
@@ -14,8 +14,8 @@ export const preToCodeBlock = (preProps) => {
 
   return {
     codeString: codeString.trim(),
-    className,
-    language: match != null ? match[1] : "",
+    className: language ? `language-${language}` : className,
+    language: language ? language : match != null ? match[1] : "",
     ...props,
   }
 }
@@ -24,6 +24,7 @@ export interface CodeBlockProps extends React.HTMLAttributes<HTMLDivElement> {
   showLineNumbers?: boolean
   showCopyButton?: boolean
   copyButtonLabel?: string
+  language?: string
 }
 
 export function CodeBlock({
@@ -34,7 +35,14 @@ export function CodeBlock({
 }: CodeBlockProps) {
   const props = preToCodeBlock(preProps)
   if (props) {
-    const { codeString, title, className, maxH = "none", ...restProps } = props
+    const {
+      codeString,
+      title,
+      language,
+      className,
+      maxH = "none",
+      ...restProps
+    } = props
 
     return (
       <div position="relative" my={4} maxH={maxH} {...restProps}>

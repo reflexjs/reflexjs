@@ -62,7 +62,7 @@ export function AnimatedScenes({ scenes }: AnimatedScenesProps) {
             p="6"
             pt="12"
             rounded="xl"
-            bg="muted"
+            bg="background"
             minH="280"
           >
             <PanelLabel>Preview</PanelLabel>
@@ -89,6 +89,7 @@ export function CodeWrapper({ label, children }) {
   return (
     <div
       fontFamily="monospace"
+      bg="background"
       color="text"
       borderWidth="1"
       display="block"

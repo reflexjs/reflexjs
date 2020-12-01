@@ -8,6 +8,7 @@ import {
   variantsScenes,
 } from "@scenes"
 import Link from "next/link"
+import Image from "next/image"
 import { Icon } from "reflexjs"
 
 export default function IndexPage() {
@@ -17,23 +18,32 @@ export default function IndexPage() {
         <div variant="container.md">
           <h1
             fontWeight="800"
-            fontSize="8xl"
+            fontSize="8rem"
             lineHeight="1"
             letterSpacing="tight"
             color="heading"
+            py="4"
+            background="linear-gradient(90deg, rgb(220, 54, 250) -18.91%, rgb(161, 103, 239) 27.39%, rgb(96, 159, 228) 46.74%, rgb(58, 191, 222) 73.04%, rgb(4, 209, 142) 93.04%)"
+            css={{
+              "-webkit-background-clip": "text",
+              "-webkit-text-fill-color": "transparent",
+              backgroundClip: "text",
+            }}
           >
             Build something amazing.
           </h1>
           <hr borderColor="text" borderBottomWidth="1" w="200" my="14" />
           <BigLead>
-            Starter kits, themes, and blocks to help you build Nextjs, Gatsby
-            and React sites faster. .
+            <Highlight>Starter kits, themes, and blocks</Highlight> to help you
+            build Nextjs, Gatsby and React sites faster. .
           </BigLead>
           <BigLead>
-            Built using a best-in-class styling library that has everything you
-            care about.
+            Built using a <Highlight>best-in-class styling library</Highlight>{" "}
+            that has everything you care about.
           </BigLead>
-          <BigLead>Speed and excellent developer experience.</BigLead>
+          <BigLead>
+            Speed and <Highlight>excellent developer experience</Highlight>.
+          </BigLead>
           <div display="grid" gap="14" col="3" mt="20">
             <FeatureCard
               heading="Style props"
@@ -76,7 +86,52 @@ export default function IndexPage() {
       <AnimatedSection
         heading="Blocks Library"
         lead="A library of 30+ ready-to-use blocks that you can copy and paste into your site."
-      />
+      >
+        <div display="grid" col="3" gap="10" my="10">
+          <div borderWidth="1" rounded="md" py="4">
+            <div h="20px" position="relative">
+              <Image src="/images/library/header-001.jpeg" layout="fill" />
+            </div>
+            <div h="141" position="relative">
+              <Image src="/images/library/hero-001.jpeg" layout="fill" />
+            </div>
+            <div h="278" position="relative">
+              <Image src="/images/library/features-001.jpeg" layout="fill" />
+            </div>
+            <div h="60" position="relative">
+              <Image src="/images/library/footer-001.jpeg" layout="fill" />
+            </div>
+          </div>
+          <div borderWidth="1" rounded="md" py="4">
+            <div h="20px" position="relative">
+              <Image src="/images/library/header-001.jpeg" layout="fill" />
+            </div>
+            <div h="141" position="relative">
+              <Image src="/images/library/hero-002.jpeg" layout="fill" />
+            </div>
+            <div h="278" position="relative">
+              <Image src="/images/library/features-001.jpeg" layout="fill" />
+            </div>
+            <div h="60" position="relative">
+              <Image src="/images/library/footer-001.jpeg" layout="fill" />
+            </div>
+          </div>
+          <div borderWidth="1" rounded="md" py="4">
+            <div h="20px" position="relative">
+              <Image src="/images/library/header-001.jpeg" layout="fill" />
+            </div>
+            <div h="141" position="relative">
+              <Image src="/images/library/hero-003.jpeg" layout="fill" />
+            </div>
+            <div h="278" position="relative">
+              <Image src="/images/library/features-001.jpeg" layout="fill" />
+            </div>
+            <div h="60" position="relative">
+              <Image src="/images/library/footer-001.jpeg" layout="fill" />
+            </div>
+          </div>
+        </div>
+      </AnimatedSection>
       <AnimatedSection
         heading="No learning curve."
         lead="You already know how to use this. Use any CSS property as style prop to rapidly style your
@@ -129,8 +184,8 @@ export default function IndexPage() {
 function BigLead({ children, ...props }) {
   return (
     <p
-      fontWeight="600"
-      fontSize="3xl"
+      fontWeight="700"
+      fontSize="5xl"
       letterSpacing="tight"
       lineHeight="snug"
       mt="8"
@@ -139,6 +194,21 @@ function BigLead({ children, ...props }) {
     >
       {children}
     </p>
+  )
+}
+
+function Highlight({ children }) {
+  return (
+    <span
+      background="linear-gradient(90deg, rgb(255, 167, 69) -11.78%, rgb(254, 134, 159) 32.14%, rgb(239, 122, 200) 52.68%, rgb(160, 131, 237) 76.61%, rgb(67, 174, 255) 96.61%)"
+      css={{
+        "-webkit-background-clip": "text",
+        "-webkit-text-fill-color": "transparent",
+        backgroundClip: "text",
+      }}
+    >
+      {children}
+    </span>
   )
 }
 

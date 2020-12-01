@@ -17,7 +17,7 @@ export function AnimatedSection({
   ...props
 }: AnimatedSectionProps) {
   return (
-    <section py="40" {...props}>
+    <section py="40" bg="#f5f5f7" {...props}>
       <div variant="container.md" w="full">
         <h2 variant="heading" fontWeight="800" fontSize="5xl">
           {heading}
@@ -39,7 +39,7 @@ export function AnimatedSection({
               sx={{
                 code: {
                   fontSize: "md",
-                  color: "primary",
+                  color: "link",
                 },
               }}
             >

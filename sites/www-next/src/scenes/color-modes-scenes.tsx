@@ -1,6 +1,37 @@
 import { Scene, TokenLine, TokensGroup } from "@components"
 import { motion } from "framer-motion"
 
+export function Preview({ bg, color }) {
+  return (
+    <motion.div
+      layoutId="color-modes.preview"
+      initial={{
+        opacity: 0,
+      }}
+      animate={{
+        opacity: 1,
+      }}
+      transition={{
+        duration: 1,
+      }}
+      sx={{
+        bg,
+        color,
+        p: "6",
+        rounded: "lg",
+        borderWidth: "1",
+      }}
+    >
+      <h4 variant="heading.h4" color={color}>
+        Heading
+      </h4>
+      <p variant="text" mt="1" color={color}>
+        Consectetur maxime similique quae.
+      </p>
+    </motion.div>
+  )
+}
+
 export const colorModesScences: Scene[] = [
   {
     theme: (
@@ -21,14 +52,7 @@ export const colorModesScences: Scene[] = [
         <TokenLine value={`</div>`} />
       </>
     ),
-    preview: (
-      <div bg="white" color="#111" p="6" rounded="lg" borderWidth="1">
-        <h4 variant="heading.h4">Heading</h4>
-        <p variant="text" mt="1">
-          Consectetur maxime similique quae.
-        </p>
-      </div>
-    ),
+    preview: <Preview bg="#fff" color="#111" />,
   },
   {
     theme: (
@@ -59,16 +83,7 @@ export const colorModesScences: Scene[] = [
         <TokenLine value={`</div>`} />
       </>
     ),
-    preview: (
-      <div bg="#111" color="#fff" p="6" rounded="lg" borderWidth="1">
-        <h4 variant="heading.h4" color="#fff">
-          Heading
-        </h4>
-        <p variant="text" mt="1" color="#fff">
-          Consectetur maxime similique quae.
-        </p>
-      </div>
-    ),
+    preview: <Preview bg="#111" color="#fff" />,
   },
   {
     theme: (
@@ -104,15 +119,6 @@ export const colorModesScences: Scene[] = [
         <TokenLine value={`</div>`} />
       </>
     ),
-    preview: (
-      <div bg="#a8eb12" color="#051937" p="6" rounded="lg" borderWidth="1">
-        <h4 variant="heading.h4" color="#051937">
-          Heading
-        </h4>
-        <p variant="text" mt="1" color="#051937">
-          Consectetur maxime similique quae.
-        </p>
-      </div>
-    ),
+    preview: <Preview bg="#a8eb12" color="#051937" />,
   },
 ]

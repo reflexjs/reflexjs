@@ -6,6 +6,7 @@ export default {
     primary: "#06f",
     secondary: "#ee3465",
     accent: "#fb3640",
+    link: "#06f",
     gray: "#6c6c6c",
     border: "#eaeaea",
     muted: "#f7f7f8",
@@ -31,6 +32,7 @@ export default {
       dark: {
         text: "#a0aec0",
         heading: "#fff",
+        link: "#ff5874",
         background: "#1a202c",
         primary: "#06f",
         border: "#2d3748",
@@ -273,7 +275,7 @@ export default {
     },
     inlineCode: {
       variant: "text.pre",
-      color: "primary",
+      color: "link",
     },
   },
   text: {
@@ -295,15 +297,16 @@ export default {
       lineHeight: "normal",
     },
     link: {
-      color: "primary",
+      color: "link",
       textDecoration: "none",
 
       "&:hover, &:focus": {
-        color: "primaryHover",
+        color: "link",
+        textDecoration: "underline",
       },
     },
     code: {
-      color: "primary",
+      color: "link",
       fontFamily: "monospace",
       fontSize: "lg",
     },
@@ -471,12 +474,12 @@ export default {
 
     primary: {
       bg: "primary",
-      color: "background",
+      color: "white",
       borderColor: "primary",
 
       "&:hover, &:focus": {
         bg: "primaryHover",
-        color: "background",
+        color: "white",
         borderColor: "primaryHover",
         transform: "translateY(-2px)",
         boxShadow: "lg",
@@ -485,12 +488,12 @@ export default {
 
     secondary: {
       bg: "secondary",
-      color: "background",
+      color: "white",
       borderColor: "secondary",
 
       "&:hover, &:focus": {
         bg: "secondaryHover",
-        color: "background",
+        color: "white",
         borderColor: "secondaryHover",
         transform: "translateY(-2px)",
         boxShadow: "lg",
@@ -499,12 +502,12 @@ export default {
 
     accent: {
       bg: "accent",
-      color: "background",
+      color: "white",
       borderColor: "accent",
 
       "&:hover, &:focus": {
         bg: "accentHover",
-        color: "background",
+        color: "white",
         borderColor: "accentHover",
         transform: "translateY(-2px)",
         boxShadow: "lg",
@@ -513,15 +516,15 @@ export default {
 
     link: {
       bg: "transparent",
-      color: "text",
+      color: "link",
       borderColor: "transparent",
 
       "&:hover, &:focus": {
-        bg: "transparent",
-        borderColor: "transparent",
+        bg: "link",
+        borderColor: "link",
         transform: "translateY(-2px)",
         boxShadow: "none",
-        color: "primary",
+        color: "background",
       },
     },
 

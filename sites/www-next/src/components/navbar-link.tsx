@@ -19,7 +19,7 @@ export function NavbarLink({
     <Link href={href} passHref>
       <a
         textDecoration="none"
-        color={isActive ? "primary" : "text"}
+        color={isActive ? "link" : "text"}
         fontSize="lg|md"
         fontWeight={isActive ? "semibold" : "normal"}
         _hover={{
