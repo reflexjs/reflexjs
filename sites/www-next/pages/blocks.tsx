@@ -21,7 +21,10 @@ export default function BlocksPage({
 }: BlocksPageProps) {
   const color = mode === "dark" ? "modes.dark." : ""
   return (
-    <Layout>
+    <Layout
+      title="Blocks Library"
+      description="Ready to use blocks that you can copy and paste into your site."
+    >
       <section py="10" bg={`${color}background`}>
         <div variant="container.md">
           <h1 variant="heading.h1" color={`${color}heading`}>

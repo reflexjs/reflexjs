@@ -11,7 +11,10 @@ import { Icon } from "reflexjs"
 
 export default function IndexPage() {
   return (
-    <Layout>
+    <Layout
+      title="A styling library that has everything you care about."
+      description="Speed and excellent developer experience."
+    >
       <section py="4|4|4|20">
         <div variant="container.md">
           <h1

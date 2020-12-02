@@ -11,6 +11,7 @@ export default class extends Document {
             content="'width=device-width, initial-scale=1'"
           />
           <meta charSet="utf-8" />
+          <link rel="icon" type="image/png" href="/images/favicon.png" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=PT+Mono&display=swap"

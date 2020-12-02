@@ -16,7 +16,7 @@ export function DocPage({ doc, manifest }: DocPageProps) {
   })
 
   return (
-    <Layout>
+    <Layout title={doc.data.title} description={doc.data.excerpt}>
       <div variant="container.md">
         <div display="grid" col="1|||250px 1fr" gap="null|6|6|20">
           <aside

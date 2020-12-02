@@ -16,7 +16,10 @@ export default function BlockPage({ block }: BlockPageProps) {
   const Example = dynamic(() => import(`../../library/examples/${id}.jsx`))
 
   return (
-    <Layout>
+    <Layout
+      title="Blocks Library"
+      description="Ready to use blocks that you can copy and paste into your site."
+    >
       <div py="4|8">
         <div variant="container.md">
           <div display="flex" justifyContent="space-between">
