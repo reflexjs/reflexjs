@@ -2,15 +2,7 @@ import { Scene, TokenLine, TokensGroup } from "@components"
 
 export function Preview({ bg, color }) {
   return (
-    <div
-      sx={{
-        bg,
-        color,
-        p: "6",
-        rounded: "lg",
-        borderWidth: "1",
-      }}
-    >
+    <div bg={bg} color={color} p="6" rounded="lg" borderWidth="1">
       <h4 variant="heading.h4" color={color}>
         Heading
       </h4>

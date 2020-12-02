@@ -47,20 +47,20 @@ export function Preview({
 
   // Reverse the color mode for the preset theme.
   let previewTheme = theme
-  if (colorMode === "dark" && theme.colors?.modes?.dark) {
-    previewTheme = {
-      ...theme,
-      initialColorModeName: "dark",
-      colors: {
-        ...theme.colors.modes.dark,
-        modes: {
-          light: {
-            ...omit(theme.colors, ["modes"]),
-          },
-        },
-      },
-    }
-  }
+  // if (colorMode === "dark" && theme.colors?.modes?.dark) {
+  //   previewTheme = {
+  //     ...theme,
+  //     initialColorModeName: "dark",
+  //     colors: {
+  //       ...theme.colors.modes.dark,
+  //       modes: {
+  //         light: {
+  //           ...omit(theme.colors, ["modes"]),
+  //         },
+  //       },
+  //     },
+  //   }
+  // }
 
   return (
     <div px={({ container }) => container.px}>

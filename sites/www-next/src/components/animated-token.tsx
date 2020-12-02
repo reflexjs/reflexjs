@@ -30,18 +30,18 @@ export function TokenLine({
   token = null,
   tokens = [],
 }: TokenLineProps) {
-  const adjust = value.split(" ").length - 2.5
+  const adjust = value.split(" ").length === 4 ? 12 : 30
   return (
     <div position="relative">
       {value}
       {token && (
         <>
-          <AnimatedToken {...token} left={`${adjust}ch`} />
+          <AnimatedToken {...token} left={`${adjust}px`} />
           {token.adjustPosition && (
             <AnimatedToken
               {...token}
               name={`${token.name}.keep`}
-              left={`${adjust}ch`}
+              left={`${adjust}px`}
             />
           )}
         </>
