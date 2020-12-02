@@ -1,3 +1,4 @@
+import * as React from "react"
 import packageInfo from "reflexjs/package.json"
 import Link from "next/link"
 import { NavbarLink, DocSearch } from "."
