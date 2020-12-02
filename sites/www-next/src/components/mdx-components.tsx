@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Box } from "reflexjs"
+import { Box, Icon } from "reflexjs"
 import { CodeBlock, LinkedCard, LinkedHeading, Callout } from "."
 
 export const mdxComponents = {
@@ -33,4 +33,5 @@ export const mdxComponents = {
   Link,
   LinkedCard,
   Box,
+  Icon,
 }

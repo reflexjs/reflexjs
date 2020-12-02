@@ -1,5 +1,5 @@
 import * as React from "react"
-import Block from "../blocks/header-001"
+import Block from "../blocks/header-002"
 
 export default function Example() {
   return (
@@ -26,6 +26,10 @@ export default function Example() {
           href: "#",
         },
       ]}
+      buttonLink={{
+        title: "Get Started",
+        href: "#",
+      }}
     />
   )
 }

@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Icon } from "reflexjs"
 
-export default function Block({ branding, links, ...props }) {
+export default function Block({ branding, links, buttonLink, ...props }) {
   const [showMenu, setShowMenu] = React.useState(false)
 
   return (
@@ -24,6 +24,16 @@ export default function Block({ branding, links, ...props }) {
             </a>
           )}
           <NavLinks links={links} display="none|grid" />
+          {buttonLink && (
+            <a
+              href={buttonLink.href}
+              variant="button.accent.sm"
+              ml="auto"
+              display="none|flex"
+            >
+              {buttonLink.title}
+            </a>
+          )}
           <button
             display="flex|none"
             p="2"
@@ -42,7 +52,6 @@ export default function Block({ branding, links, ...props }) {
         top="24"
         left="4"
         right="4"
-        px="4"
         rounded="xl"
         overflow="scroll"
         boxShadow="3xl"
@@ -56,7 +65,19 @@ export default function Block({ branding, links, ...props }) {
         maxHeight="95vh"
         display="block|none"
       >
-        <NavLinks links={links} py="8" />
+        <NavLinks links={links} py="8" px="2" />
+        {buttonLink && (
+          <div p="4" bg="muted">
+            <a
+              href={buttonLink.href}
+              variant="button.accent"
+              ml="auto"
+              w="full"
+            >
+              {buttonLink.title}
+            </a>
+          </div>
+        )}
       </div>
     </header>
   )
@@ -68,7 +89,7 @@ export function NavLinks({ links, ...props }) {
       display="grid"
       col={`1|repeat(${links.length}, auto)`}
       gap="8|10|12"
-      ml="auto"
+      ml="0|10"
       {...props}
     >
       {links.map((link, index) => (

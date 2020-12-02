@@ -314,7 +314,7 @@ export default {
       color: "prism.text",
       backgroundColor: "prism.background",
       fontFamily: "monospace",
-      fontSize: "sm",
+      fontSize: "md",
       lineHeight: 7,
       tabSize: 2,
       hyphens: "none",
