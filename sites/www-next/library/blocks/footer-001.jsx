@@ -9,7 +9,6 @@ export default function Block({ name, copyright, links, iconLinks, ...props }) {
           display="flex"
           alignItems="center"
           flexDirection="column|row"
-          alignItems="center"
           justifyContent="space-between"
         >
           {name && <h2 variant="heading.h2">{name}</h2>}

@@ -43,7 +43,7 @@ export function AnimatedScenes({ scenes }: AnimatedScenesProps) {
 
   return (
     <AnimateSharedLayout _transition={null}>
-      <div display="grid" col="2" gap="4" my="10">
+      <div display="grid" col="1|2" gap="4" mt="10">
         {scene?.theme ? (
           <CodeWrapper label="Theme">{scene.theme}</CodeWrapper>
         ) : (
@@ -63,9 +63,10 @@ export function AnimatedScenes({ scenes }: AnimatedScenesProps) {
             pt="12"
             rounded="xl"
             bg="background"
-            minH="280"
+            minH="120|280"
           >
             <PanelLabel>Preview</PanelLabel>
+            <span ref={ref} />
             <motion.div
               layoutId="scene.preview"
               sx={{
@@ -80,7 +81,6 @@ export function AnimatedScenes({ scenes }: AnimatedScenesProps) {
           </div>
         </div>
       </div>
-      <span ref={ref}></span>
     </AnimateSharedLayout>
   )
 }
@@ -100,7 +100,7 @@ export function CodeWrapper({ label, children }) {
       whiteSpace="pre-wrap"
       rounded="xl"
       position="relative"
-      minH="280"
+      minH="120|280"
     >
       <PanelLabel>{label}</PanelLabel>
       {children}

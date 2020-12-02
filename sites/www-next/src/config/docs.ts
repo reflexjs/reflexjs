@@ -12,6 +12,14 @@ export const docs = {
           title: "Blocks Library",
           url: "/docs/blocks",
         },
+        {
+          title: "GitHub",
+          url: "https://github.com/reflexjs/reflexjs",
+        },
+        {
+          title: "Twitter",
+          url: "https://twitter.com/arshadcn",
+        },
       ],
     },
     {

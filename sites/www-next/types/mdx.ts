@@ -22,3 +22,10 @@ export interface MdxContent extends MdxPath {
 export interface BlogPost extends MdxContent {}
 
 export interface MdxPage extends MdxContent {}
+
+declare global {
+  interface Window {
+    /* eslint-disable  @typescript-eslint/no-explicit-any */
+    docsearch: any
+  }
+}

@@ -2,7 +2,8 @@ import { AnimatedScenes, Scene } from "."
 
 export interface AnimatedSectionProps {
   heading: string
-  lead: string
+  headingColor?: string
+  lead?: string
   text?: React.ReactNode
   scenes?: Scene[]
   children?: React.ReactNode
@@ -10,6 +11,7 @@ export interface AnimatedSectionProps {
 
 export function AnimatedSection({
   heading,
+  headingColor = "text",
   lead,
   text,
   scenes,
@@ -17,9 +19,14 @@ export function AnimatedSection({
   ...props
 }: AnimatedSectionProps) {
   return (
-    <section py="40" bg="#f5f5f7" {...props}>
+    <section py="12|12|12|20" {...props}>
       <div variant="container.md" w="full">
-        <h2 variant="heading" fontWeight="800" fontSize="5xl">
+        <h2
+          variant="heading"
+          color={headingColor}
+          fontWeight="800"
+          fontSize="5xl"
+        >
           {heading}
         </h2>
         <p variant="text" fontSize="2xl" mt="3">
@@ -31,7 +38,7 @@ export function AnimatedSection({
         {children}
       </div>
       {text ? (
-        <div variant="container.md" w="full">
+        <div variant="container.md" w="full" mt="10">
           <div maxW="800">
             <p
               variant="text.paragraph"

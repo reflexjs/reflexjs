@@ -114,7 +114,7 @@ function Cube({ id, children, ...props }) {
           w: "auto",
           h: 100,
           rounded: "xl",
-          bg: "accent",
+          bg: "primary",
         }}
       >
         <motion.span layoutId={`span-${id}`}>{children}</motion.span>

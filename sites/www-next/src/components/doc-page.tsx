@@ -18,12 +18,9 @@ export function DocPage({ doc, manifest }: DocPageProps) {
   return (
     <Layout>
       <div variant="container.md">
-        <div
-          display="grid"
-          col="1|180px 1fr|180px 1fr|250px 1fr"
-          gap="null|6|6|20"
-        >
+        <div display="grid" col="1|||250px 1fr" gap="null|6|6|20">
           <aside
+            display="none|none|none|block"
             position="static|sticky"
             top="14"
             h={(theme) => `calc(100vh - ${theme.space[14]})`}

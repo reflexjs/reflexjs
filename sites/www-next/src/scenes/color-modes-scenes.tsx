@@ -1,19 +1,8 @@
 import { Scene, TokenLine, TokensGroup } from "@components"
-import { motion } from "framer-motion"
 
 export function Preview({ bg, color }) {
   return (
-    <motion.div
-      layoutId="color-modes.preview"
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-      }}
-      transition={{
-        duration: 1,
-      }}
+    <div
       sx={{
         bg,
         color,
@@ -28,7 +17,7 @@ export function Preview({ bg, color }) {
       <p variant="text" mt="1" color={color}>
         Consectetur maxime similique quae.
       </p>
-    </motion.div>
+    </div>
   )
 }
 

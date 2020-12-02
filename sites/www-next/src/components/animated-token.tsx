@@ -87,8 +87,8 @@ export function TokenProp({ name, value, suffix }: TokenPropProps) {
               display: "inline-block",
               color: shades["secondary"],
             }}
-            initial={{ y: 100, opacity: 0, width: 0, scale: 4 }}
-            animate={{ y: 0, opacity: 1, width: "auto", scale: 1 }}
+            initial={{ x: 100, opacity: 0, width: 0, scale: 8 }}
+            animate={{ x: 0, opacity: 1, width: "auto", scale: 1 }}
             transition={{
               ease: "easeInOut",
               duration: 0.5,

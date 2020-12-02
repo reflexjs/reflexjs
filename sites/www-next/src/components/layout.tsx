@@ -1,5 +1,4 @@
-import Head from "next/head"
-import { Navbar } from "."
+import { Navbar, Footer } from "."
 
 interface LayoutProps {
   children?: React.ReactNode
@@ -10,6 +9,7 @@ export function Layout({ children }: LayoutProps) {
     <>
       <Navbar />
       <main>{children}</main>
+      <Footer />
     </>
   )
 }

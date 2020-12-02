@@ -26,7 +26,7 @@ export function SidebarNavItem({ items }: SidebarNavProps) {
     w: "full",
     display: "flex",
     alignItems: "center",
-    fontSize: "md",
+    fontSize: "xl|||md",
     fontFamily: "body",
     cursor: "pointer",
     color: "text",
@@ -76,7 +76,7 @@ export function SidebarNavItem({ items }: SidebarNavProps) {
                     <Link href={_item.url} passHref key={_index}>
                       <a
                         display="flex"
-                        fontSize="sm"
+                        fontSize="lg|||sm"
                         my="2"
                         color={asPath === _item.url ? "primary" : "text"}
                         _hover={{
@@ -103,7 +103,7 @@ export function SidebarNav({ items }: SidebarNavProps) {
       {items.map((item, index) => (
         <div key={index}>
           <h4
-            fontSize="lg"
+            fontSize="2xl|||lg"
             fontWeight="semibold"
             mb="4"
             mt={index !== 0 && 6}
