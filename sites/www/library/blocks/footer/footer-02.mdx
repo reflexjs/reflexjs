@@ -4,7 +4,7 @@ export const FooterBlock = () => {
   const { title } = useSiteMetadata()
   return (
     <section py={[8, 10, 12]}>
-      <Container>
+      <div variant="container">
         <Flexbox
           flexDirection={["column", "row"]}
           alignItems={["flex-start", "center"]}
@@ -50,7 +50,7 @@ export const FooterBlock = () => {
             </a>
           </Grid>
         </Flexbox>
-      </Container>
+      </div>
     </section>
   )
 }

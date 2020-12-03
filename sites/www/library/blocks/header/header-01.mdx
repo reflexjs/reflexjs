@@ -15,7 +15,7 @@ export const HeaderBlock = ({ ...props }) => {
       zIndex="1000"
       {...props}
     >
-      <Container>
+      <div variant="container">
         <Flexbox
           display={["none", "flex"]}
           justifyContent="space-between"
@@ -26,7 +26,7 @@ export const HeaderBlock = ({ ...props }) => {
           <SocialLinks ml="auto" mr="4" borderRightWidth="1px" pr="4" />
           <ModeToggle ml="0" />
         </Flexbox>
-      </Container>
+      </div>
       <Flexbox
         display={["flex", "none"]}
         flexDirection="column"

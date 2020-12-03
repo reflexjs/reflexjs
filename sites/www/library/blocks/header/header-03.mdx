@@ -15,7 +15,7 @@ export const HeaderBlock = ({ ...props }) => {
       zIndex="1000"
       {...props}
     >
-      <Container>
+      <div variant="container">
         <Flexbox
           display={["none", "flex"]}
           justifyContent="space-between"
@@ -28,7 +28,7 @@ export const HeaderBlock = ({ ...props }) => {
           </button>
           <ModeToggle ml="6" />
         </Flexbox>
-      </Container>
+      </div>
       <Flexbox
         display={["flex", "none"]}
         flexDirection="column"

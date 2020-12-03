@@ -34,7 +34,8 @@
     "typeface-lora": "^0.0.72",
     "typeface-merriweather": "^0.0.72",
     "typeface-open-sans": "^0.0.75",
-    "typeface-prata": "^0.0.72"
+    "typeface-prata": "^0.0.72",
+    "theme-ui": "^0.4.0-rc.5"
   },
   "devDependencies": {
     "babel-preset-gatsby": "^0.6.0",

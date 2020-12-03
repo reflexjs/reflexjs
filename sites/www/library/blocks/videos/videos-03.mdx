@@ -23,12 +23,12 @@ export const Preview = () => {
 
 export const Videos = ({ videos }) => {
   return videos.length ? (
-    <Container maxW="900px">
+    <div variant="container" maxW="900px">
       {videos &&
         videos.map((video, index) => (
           <VideoTeaser key={index} mb="10" video={video} />
         ))}
-    </Container>
+    </div>
   ) : null
 }
 

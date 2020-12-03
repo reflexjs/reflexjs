@@ -264,6 +264,7 @@ export const Grid = getTag(
   "div",
   {
     display: "grid",
+    gridAutoFlow: "dense",
   },
   "grid"
 )
