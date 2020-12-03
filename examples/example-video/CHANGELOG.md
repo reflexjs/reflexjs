@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflex/compare/example-video@0.2.0...example-video@0.3.0) (2020-12-03)
+
+
+### Bug Fixes
+
+* update example-video ([449fe8d](https://github.com/reflexjs/reflex/commit/449fe8da1d9b188d66ca1a07d2ec8a457593f2fc))
+
+
+### Features
+
+* update example-video to reflexjs ([2cb6c51](https://github.com/reflexjs/reflex/commit/2cb6c515739caf9444db411d6a421fc6e21b4a24))
+
+
+
+
+
 # [0.2.0](https://github.com/reflexjs/reflex/compare/example-video@0.1.12...example-video@0.2.0) (2020-11-10)
 
 

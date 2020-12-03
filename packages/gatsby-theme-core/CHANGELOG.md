@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-core@0.6.0...@reflexjs/gatsby-theme-core@0.7.0) (2020-12-03)
+
+
+### Bug Fixes
+
+* **core:** update button link with missing variant ([83f821e](https://github.com/reflexjs/reflex/commit/83f821e69e18e097a8d0dff9e408873d4b80d673))
+* **gatsby-theme-core:** remove unused Box component ([e1e5d37](https://github.com/reflexjs/reflex/commit/e1e5d370f1b4ab05c6a355a5b80ad41ea5932bf3))
+* **www:** update blocks ([20b3bb4](https://github.com/reflexjs/reflex/commit/20b3bb4d48a53df548a832d499214b7786a2e7c9))
+* **www:** update to reflexjs ([251deb5](https://github.com/reflexjs/reflex/commit/251deb5fd6df6c7155eedb401ea1eccc0f9a5ef2))
+* update example-video ([449fe8d](https://github.com/reflexjs/reflex/commit/449fe8da1d9b188d66ca1a07d2ec8a457593f2fc))
+* update mdx blocks and components ([577321f](https://github.com/reflexjs/reflex/commit/577321fcfa09b1459e2cdcb8d363b572edd55692))
+* update nav-menu and button-link ([95a2aa0](https://github.com/reflexjs/reflex/commit/95a2aa047ad494445c4e7a34a3cda840faa5fca9))
+* update packages to reflexjs ([b028d32](https://github.com/reflexjs/reflex/commit/b028d328ddbbd41e6bd023a2c6317128aa4c284e))
+* **gatsby-theme-core:** update to reflexjs ([df899d0](https://github.com/reflexjs/reflex/commit/df899d00064ef30fcbe3d28448465416161e5a89))
+
+
+### Features
+
+* **codemod:** change Container to variant container ([33563d0](https://github.com/reflexjs/reflex/commit/33563d06087a2c7762a6b26027ef9677acc579c3))
+* update example-video to reflexjs ([2cb6c51](https://github.com/reflexjs/reflex/commit/2cb6c515739caf9444db411d6a421fc6e21b4a24))
+
+
+
+
+
 # [0.6.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-core@0.5.4...@reflexjs/gatsby-theme-core@0.6.0) (2020-11-10)
 
 

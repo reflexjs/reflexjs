@@ -1,6 +1,6 @@
 {
   "name": "@reflexjs/gatsby-theme-library",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -22,13 +22,13 @@
   },
   "dependencies": {
     "@reflexjs/gatsby-helpers": "^0.6.0",
-    "@reflexjs/gatsby-plugin-image": "^0.4.0",
-    "@reflexjs/gatsby-theme-block": "^0.4.0",
-    "@reflexjs/gatsby-theme-core": "^0.6.0",
+    "@reflexjs/gatsby-plugin-image": "^0.4.1",
+    "@reflexjs/gatsby-theme-block": "^0.5.0",
+    "@reflexjs/gatsby-theme-core": "^0.7.0",
     "@reflexjs/icons-feather": "^0.2.0",
-    "@reflexjs/preset-base": "^0.3.0",
-    "@reflexjs/preset-flex": "^0.2.0",
-    "@reflexjs/preset-merry": "^0.2.0",
+    "@reflexjs/preset-base": "^0.3.1",
+    "@reflexjs/preset-flex": "^0.2.1",
+    "@reflexjs/preset-merry": "^0.2.1",
     "copy-to-clipboard": "^3.3.1",
     "gatsby": "^2.26.1",
     "gatsby-source-filesystem": "^2.3.8",
@@ -36,7 +36,7 @@
     "lodash.omit": "^4.5.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "reflexjs": "^1.0.0-alpha.7"
+    "reflexjs": "^1.0.0-alpha.8"
   },
   "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52"
 }

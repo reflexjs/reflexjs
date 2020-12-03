@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.15.0](https://github.com/reflexjs/reflex/compare/www@0.14.0...www@0.15.0) (2020-12-03)
+
+
+### Bug Fixes
+
+* **www:** update blocks ([20b3bb4](https://github.com/reflexjs/reflex/commit/20b3bb4d48a53df548a832d499214b7786a2e7c9))
+* **www:** update to reflexjs ([251deb5](https://github.com/reflexjs/reflex/commit/251deb5fd6df6c7155eedb401ea1eccc0f9a5ef2))
+* update nav-menu and button-link ([95a2aa0](https://github.com/reflexjs/reflex/commit/95a2aa047ad494445c4e7a34a3cda840faa5fca9))
+* **www:** add algolia and cloudinary keys to .env.example ([5208e1d](https://github.com/reflexjs/reflex/commit/5208e1d1fadd2b156531d624bf74412123bb97eb))
+
+
+### Features
+
+* **codemod:** change Container to variant container ([33563d0](https://github.com/reflexjs/reflex/commit/33563d06087a2c7762a6b26027ef9677acc579c3))
+
+
+
+
+
 # [0.14.0](https://github.com/reflexjs/reflex/compare/www@0.13.2...www@0.14.0) (2020-11-10)
 
 

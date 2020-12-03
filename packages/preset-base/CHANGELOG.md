@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/reflexjs/reflex/compare/@reflexjs/preset-base@0.3.0...@reflexjs/preset-base@0.3.1) (2020-12-03)
+
+
+### Bug Fixes
+
+* **preset-base:** update preset ([aed1765](https://github.com/reflexjs/reflex/commit/aed176521a13f32104895a490ed51f39fd4abb9b))
+
+
+
+
+
 # [0.3.0](https://github.com/reflexjs/reflex/compare/@reflexjs/preset-base@0.2.4...@reflexjs/preset-base@0.3.0) (2020-08-14)
 
 

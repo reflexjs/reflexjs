@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.4.1](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-image@0.4.0...@reflexjs/gatsby-plugin-image@0.4.1) (2020-12-03)
+
+
+### Bug Fixes
+
+* update example-video ([449fe8d](https://github.com/reflexjs/reflex/commit/449fe8da1d9b188d66ca1a07d2ec8a457593f2fc))
+
+
+
+
+
 # [0.4.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-image@0.3.3...@reflexjs/gatsby-plugin-image@0.4.0) (2020-11-10)
 
 

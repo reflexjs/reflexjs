@@ -1,6 +1,6 @@
 {
   "name": "nextjs-starter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -12,6 +12,6 @@
     "next": "^10.0.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "reflexjs": "^1.0.0-alpha.7"
+    "reflexjs": "^1.0.0-alpha.8"
   }
 }
