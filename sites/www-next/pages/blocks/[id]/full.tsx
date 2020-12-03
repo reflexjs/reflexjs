@@ -3,6 +3,7 @@ import { GetStaticPaths, GetStaticProps } from "next"
 import dynamic from "next/dynamic"
 import { getBlocks } from "@utils"
 import { Block } from "types"
+import { NextSeo } from "next-seo"
 
 export interface BlockFullPageProps {
   block: Block
@@ -12,7 +13,12 @@ export default function BlockFullPage({ block }: BlockFullPageProps) {
   const { id } = block
   const Example = dynamic(() => import(`../../../library/examples/${id}.jsx`))
 
-  return <Example />
+  return (
+    <>
+      <NextSeo title={block.category.name} />
+      <Example />
+    </>
+  )
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
