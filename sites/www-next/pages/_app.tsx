@@ -7,6 +7,8 @@ export default function App({ Component, pageProps }) {
     <>
       <DefaultSeo
         openGraph={{
+          title: "A styling library that has everything you care about.",
+          description: "Speed and excellent developer experience.",
           type: "website",
           url: "https://reflexjs.org",
           images: [

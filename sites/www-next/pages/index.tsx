@@ -1,4 +1,4 @@
-import { AnimatedSection, Layout } from "@components"
+import { AnimatedSection, Layout, VisuallyHidden } from "@components"
 import {
   colorModesScences,
   responsiveScenes,
@@ -12,12 +12,13 @@ import { Icon } from "reflexjs"
 export default function IndexPage() {
   return (
     <Layout
-      title="A styling library that has everything you care about."
-      description="Speed and excellent developer experience."
+      title="Build something amazing."
+      description="Reflexjs is styling library that has everything you care about. Speed and excellent developer experience."
     >
       <section py="4|4|4|20">
         <div variant="container.md">
-          <h1
+          <VisuallyHidden>Build something amazing.</VisuallyHidden>
+          <h2
             fontWeight="800"
             fontSize="3rem|4rem|4rem|6rem"
             lineHeight="1.3|1.05"
@@ -27,7 +28,7 @@ export default function IndexPage() {
           >
             A <Highlight>styling library</Highlight> that has everything you
             care about.
-          </h1>
+          </h2>
           <p
             fontWeight="700"
             fontSize="3rem|4rem|4rem|7xl"
