@@ -3,7 +3,7 @@ export default {
     branding: {
       name: "Reflexjs",
     },
-    copyright: `© ${new Date().getFullYear()} Reflexjs`,
+    copyright: `© ${new Date().getFullYear()} Reflexjs - Sample illustrations from Icons8`,
     links: [
       {
         title: "Home",
