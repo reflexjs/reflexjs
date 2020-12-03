@@ -1,7 +1,5 @@
 import { motion } from "framer-motion"
 
-export interface AnimatedTokenProps extends Token {}
-
 const shades = {
   primary: "#06f",
   secondary: "#ee3465",
@@ -36,12 +34,12 @@ export function TokenLine({
       {value}
       {token && (
         <>
-          <AnimatedToken {...token} left={`${adjust}px`} />
+          <AnimatedToken {...token} adjust={adjust} />
           {token.adjustPosition && (
             <AnimatedToken
               {...token}
               name={`${token.name}.keep`}
-              left={`${adjust}px`}
+              adjust={adjust}
             />
           )}
         </>
@@ -103,11 +101,16 @@ export function TokenProp({ name, value, suffix }: TokenPropProps) {
   )
 }
 
+export interface AnimatedTokenProps extends Token {
+  adjust?: number
+}
+
 export function AnimatedToken({
   name,
   adjustPosition = false,
   animated = true,
   shade = "text",
+  adjust,
   value,
   ...props
 }: AnimatedTokenProps) {
@@ -119,6 +122,7 @@ export function AnimatedToken({
     rounded: "md",
     opacity: animated ? 0 : 1,
     position: adjustPosition ? `absolute` : `static`,
+    left: `${adjust}px`,
     ...props,
   }
 

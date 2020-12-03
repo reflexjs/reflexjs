@@ -17,7 +17,7 @@ export const Doc = ({ title, excerpt, body, previousDoc, nextDoc }) => {
   return (
     <ThemeProvider theme={docTheme}>
       <MDXProvider components={MDXComponents}>
-        <Container pb="8">
+        <div variant="container" pb="8">
           <button
             variant="button"
             display="inline-flex|none"
@@ -99,7 +99,7 @@ export const Doc = ({ title, excerpt, body, previousDoc, nextDoc }) => {
               </Flexbox>
             </div>
           </Grid>
-        </Container>
+        </div>
       </MDXProvider>
     </ThemeProvider>
   )

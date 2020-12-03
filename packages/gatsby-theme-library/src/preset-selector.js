@@ -4,7 +4,7 @@ import * as React from "react"
 import presets from "./presets"
 
 export const PresetSelector = ({ onChange, ...props }) => (
-  <React.Fragment>
+  <>
     <VisuallyHidden>
       <label htmlFor="preset-selector">Select preset</label>
     </VisuallyHidden>
@@ -22,5 +22,5 @@ export const PresetSelector = ({ onChange, ...props }) => (
         </option>
       ))}
     </select>
-  </React.Fragment>
+  </>
 )

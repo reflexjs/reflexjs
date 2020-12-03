@@ -170,7 +170,7 @@ export const MetatagsDebugger = ({ location }) => {
   if (!metatags) return null
 
   return (
-    <React.Fragment>
+    <>
       <div
         bg="white"
         position="fixed"
@@ -215,6 +215,6 @@ export const MetatagsDebugger = ({ location }) => {
       >
         {!isOpen ? "Metatags" : "Close"}
       </button>
-    </React.Fragment>
+    </>
   )
 }

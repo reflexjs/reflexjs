@@ -14,7 +14,7 @@ export default ({ location }) => {
 
   return (
     <Layout pathname={location && location.pathname}>
-      <Container pb="8">
+      <div variant="container" pb="8">
         <button
           variant="button"
           display="inline-flex|none"
@@ -70,7 +70,7 @@ export default ({ location }) => {
             <Block src="library/header-blocks" />
             {categories.map(({ name, slug, display, blocks }, index) => {
               return !blocks ? null : (
-                <React.Fragment key={index}>
+                <div key={index}>
                   <h2
                     variant="heading.h2"
                     id={slug}
@@ -122,12 +122,12 @@ export default ({ location }) => {
                       />
                     ))
                   )}
-                </React.Fragment>
+                </div>
               )
             })}
           </div>
         </Grid>
-      </Container>
+      </div>
     </Layout>
-  )
+  );
 }

@@ -1,10 +1,10 @@
 import * as React from "react"
-import { Container, Grid, Flexbox, Icon } from "reflexjs";
+import { Grid, Flexbox, Icon } from "reflexjs";
 
 export default function Component() {
   return (
     <section py="8|12|16|24">
-      <Container>
+      <div variant="container">
         <Grid col="1|2" gap="8|12|16" alignItems="center">
           <Image
             src="placeholder.jpg"
@@ -30,7 +30,7 @@ export default function Component() {
             </a>
           </Flexbox>
         </Grid>
-      </Container>
+      </div>
     </section>
   );
 }

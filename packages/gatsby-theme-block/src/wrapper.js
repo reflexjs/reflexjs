@@ -30,6 +30,6 @@ export const Wrapper = ({ children, ...props }) => {
       React.cloneElement(_child, { ...props }),
       ...rest,
     ].map((child, index) => React.cloneElement(child, { key: index }))
-    return <React.Fragment>{children}</React.Fragment>
+    return <>{children}</>
   }
 }

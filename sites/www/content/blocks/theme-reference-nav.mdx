@@ -1,7 +1,7 @@
 export const ThemeReferenceNav = ({ categories, ...props }) => {
   const [nav] = useNav("theme-reference")
   return (
-    <React.Fragment>
+    <>
       <h3 variant="heading.h3" my="4" fontSize="xl">
         Theme reference
       </h3>
@@ -14,6 +14,6 @@ export const ThemeReferenceNav = ({ categories, ...props }) => {
           </li>
         ))}
       </ul>
-    </React.Fragment>
+    </>
   )
 }

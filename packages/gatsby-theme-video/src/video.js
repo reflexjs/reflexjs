@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container } from "reflexjs"
+import { jsx } from "reflexjs"
 import { MDXRenderer, Icon, Link } from "@reflexjs/gatsby-theme-core"
 
 export const Video = ({
@@ -12,7 +12,7 @@ export const Video = ({
   pageContext,
 }) => (
   <article py="8|12|14">
-    <Container maxW="null|null|null|900px">
+    <div variant="container" maxW="null|null|null|900px">
       <Link
         to={pageContext.themeOptions.basePath}
         variant="button.link."
@@ -56,6 +56,6 @@ export const Video = ({
       )}
 
       <MDXRenderer>{body}</MDXRenderer>
-    </Container>
+    </div>
   </article>
 )

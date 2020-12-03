@@ -58,7 +58,7 @@ export const Preview = ({
   return (
     <Layout pathname={slug}>
       <section py="2|6">
-        <Container>
+        <div variant="container">
           <Flexbox
             flexDirection={["column", "row"]}
             alignItems={["flex-start", "center"]}
@@ -135,16 +135,16 @@ export const Preview = ({
               </Flexbox>
             </Flexbox>
           </Flexbox>
-        </Container>
+        </div>
 
         {preview ? (
-          <Container
+          <div
+            variant="container"
             borderWidth="1px"
             px="0|0|0|0"
             boxShadow="null|null|null|lg"
             rounded="null|null|null|lg"
-            maxW="null|null|null|1240px"
-          >
+            maxW="null|null|null|1240px">
             <Flexbox
               bg="muted"
               h="50px"
@@ -176,9 +176,9 @@ export const Preview = ({
                 </Styled.root>
               </div>
             </ThemeProvider>
-          </Container>
+          </div>
         ) : (
-          <Container>
+          <div variant="container">
             <CodeBlock
               className="language-jsx"
               sx={{
@@ -189,10 +189,10 @@ export const Preview = ({
             >
               {code}
             </CodeBlock>
-          </Container>
+          </div>
         )}
       </section>
       {children}
     </Layout>
-  )
+  );
 }

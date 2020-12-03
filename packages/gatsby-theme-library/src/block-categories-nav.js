@@ -3,7 +3,7 @@ import { jsx } from "reflexjs"
 import * as React from "react"
 
 export const BlockCategoriesNav = ({ categories, onClick, ...props }) => (
-  <React.Fragment>
+  <>
     <h3 variant="heading.h3" my="4" fontSize="xl">
       Categories
     </h3>
@@ -23,5 +23,5 @@ export const BlockCategoriesNav = ({ categories, onClick, ...props }) => (
         </li>
       ))}
     </ul>
-  </React.Fragment>
+  </>
 )

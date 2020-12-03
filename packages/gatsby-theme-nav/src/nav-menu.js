@@ -160,7 +160,7 @@ export const NavMenuItem = ({
         {...(dropdown && !usingHover && { onClick: isOpen ? close : open })}
       />
       {expand && items?.length && (
-        <React.Fragment>
+        <>
           {dropdown && (
             <button
               variant="button.icon"
@@ -182,7 +182,7 @@ export const NavMenuItem = ({
             depth={depth}
             isOpen={isOpen || !dropdown}
           />
-        </React.Fragment>
+        </>
       )}
     </li>
   )

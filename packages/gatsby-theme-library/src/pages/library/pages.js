@@ -12,15 +12,15 @@ export default ({ location }) => {
   return (
     <Layout pathname={location && location.pathname}>
       <section pt="8|12|16">
-        <Container>
+        <div variant="container">
           <Block src="library/header-pages" />
           <Grid col="1|2|3" gap="4|6|8" mt="10" alignItems="flex-start">
             {pages.map((page, index) => (
               <Thumbnail key={index} {...page} mb="6" mode={colorMode} />
             ))}
           </Grid>
-        </Container>
+        </div>
       </section>
     </Layout>
-  )
+  );
 }

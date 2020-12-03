@@ -109,6 +109,7 @@ const MAPPING = {
   Video: "video",
   Wbr: "wbr",
   ButtonLink: "a",
+  Container: "div",
 }
 
 const PROPS_MAPPING = {
@@ -217,6 +218,20 @@ export default function transform(file: FileInfo, api: API): string {
     )
   }
 
+  // Transforms `<Container />` to `<div variant="container" />`.
+  function transformContainerVariants(node): void {
+    if (!nodeIsOfIdentifierTypes(node, ["Container"])) return
+
+    const variants = [`container`]
+
+    node.value.attributes.unshift(
+      j.jsxAttribute(
+        j.jsxIdentifier("variant"),
+        j.stringLiteral(variants.join(" "))
+      )
+    )
+  }
+
   // Transforms `<input />` to `<input variant="input" />`.
   function transformInputVariants(
     node,
@@ -304,6 +319,7 @@ export default function transform(file: FileInfo, api: API): string {
     .find(j.JSXOpeningElement)
     .forEach(transformHeadingVariants)
     .forEach(transformButtonVariants)
+    .forEach(transformContainerVariants)
     .forEach((node) => transformInputVariants(node, ["Input"], "input"))
     .forEach((node) => transformInputVariants(node, ["Textarea"], "textarea"))
     .forEach((node) => transformInputVariants(node, ["Select"], "select"))

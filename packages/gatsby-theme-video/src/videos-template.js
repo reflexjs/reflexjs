@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Container } from "reflexjs"
+import { jsx } from "reflexjs"
 import { graphql } from "gatsby"
 import { Layout, Pager } from "@reflexjs/gatsby-theme-core"
 import { Block } from "@reflexjs/gatsby-theme-block"
@@ -27,13 +27,13 @@ export default ({ data, ...props }) => {
       <Block src="videos-header" videos={data.allVideo.videos} />
       {data.allVideo ? (
         <section py="8|12|14">
-          <Container>
+          <div variant="container">
             <Videos {...data.allVideo} {...props} />
             <Pager
               previousPagePath={previousPagePath}
               nextPagePath={nextPagePath}
             />
-          </Container>
+          </div>
         </section>
       ) : null}
       <Block src="videos-footer" videos={data.allVideo.videos} />

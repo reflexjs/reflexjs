@@ -23,7 +23,7 @@ export const Metatags = ({ pathname = "/" }) => {
   const [{ title, description, og, twitter }] = metatags
 
   return (
-    <React.Fragment>
+    <>
       <Helmet {...helmetProps} title={title}>
         <link rel="canonical" href={absoluteUrl(pathname, site.siteUrl)} />
         <meta name="title" content={title} />
@@ -69,6 +69,6 @@ export const Metatags = ({ pathname = "/" }) => {
           site={site}
         />
       )}
-    </React.Fragment>
+    </>
   )
 }

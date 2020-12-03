@@ -1,18 +1,5 @@
 import { Scene, TokenLine, TokensGroup } from "@components"
 
-export function Preview({ bg, color }) {
-  return (
-    <div bg={bg} color={color} p="6" rounded="lg" borderWidth="1">
-      <h4 variant="heading.h4" color={color}>
-        Heading
-      </h4>
-      <p variant="text" mt="1" color={color}>
-        Consectetur maxime similique quae.
-      </p>
-    </div>
-  )
-}
-
 export const colorModesScences: Scene[] = [
   {
     theme: (
@@ -33,7 +20,16 @@ export const colorModesScences: Scene[] = [
         <TokenLine value={`</div>`} />
       </>
     ),
-    preview: <Preview bg="#fff" color="#111" />,
+    preview: (
+      <div bg="#fff" color="#111" p="6" rounded="lg" borderWidth="1">
+        <h4 variant="heading.h4" color="#111">
+          Heading
+        </h4>
+        <p variant="text" mt="1" color="#111">
+          Consectetur maxime similique quae.
+        </p>
+      </div>
+    ),
   },
   {
     theme: (
@@ -64,7 +60,16 @@ export const colorModesScences: Scene[] = [
         <TokenLine value={`</div>`} />
       </>
     ),
-    preview: <Preview bg="#111" color="#fff" />,
+    preview: (
+      <div bg="#111" color="#fff" p="6" rounded="lg" borderWidth="1">
+        <h4 variant="heading.h4" color="#fff">
+          Heading
+        </h4>
+        <p variant="text" mt="1" color="#fff">
+          Consectetur maxime similique quae.
+        </p>
+      </div>
+    ),
   },
   {
     theme: (
@@ -81,7 +86,7 @@ export const colorModesScences: Scene[] = [
         <TokenLine value={`      }`} />
         <TokenLine />
         <TokensGroup>
-          <TokenLine value={`      lime: {`} />
+          <TokenLine value={`      party: {`} />
           <TokenLine value={`        background: "#a8eb12",`} />
           <TokenLine value={`        color: "#051937"`} />
           <TokenLine value={`      }`} />
@@ -100,6 +105,15 @@ export const colorModesScences: Scene[] = [
         <TokenLine value={`</div>`} />
       </>
     ),
-    preview: <Preview bg="#a8eb12" color="#051937" />,
+    preview: (
+      <div bg="#a8eb12" color="#051937" p="6" rounded="lg" borderWidth="1">
+        <h4 variant="heading.h4" color="#051937">
+          Heading
+        </h4>
+        <p variant="text" mt="1" color="#051937">
+          Consectetur maxime similique quae.
+        </p>
+      </div>
+    ),
   },
 ]

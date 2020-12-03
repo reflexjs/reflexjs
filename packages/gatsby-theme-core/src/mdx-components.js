@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, Flexbox, Grid, VisuallyHidden, Container } from "reflexjs"
+import { jsx, Box, VisuallyHidden } from "reflexjs"
 import * as React from "react"
 import GithubSlugger from "github-slugger"
 import * as ReflexComponents from "@reflexjs/components"
@@ -36,16 +36,17 @@ const ReflexLegacyComponents = {}
 Object.keys(ReflexComponents).forEach((as) => {
   ReflexLegacyComponents[as] = ReflexLegacyComponents[
     as.toLowerCase()
-  ] = React.forwardRef((props, ref) => (
-    <Box ref={ref} as={as.toLowerCase()} {...props} />
-  ))
+  ] = React.forwardRef((props, ref) => {
+    const Component = as.toLowerCase()
+    return <Component ref={ref} {...props} />
+  })
 })
 
 export const MDXComponents = {
   ...ReflexLegacyComponents,
-  Flexbox: (props) => <Flexbox {...props} />,
-  Container: (props) => <Container {...props} />,
-  Grid: (props) => <Grid display="grid" {...props} />,
+  Flexbox: (props) => <ReflexComponents.Flexbox {...props} />,
+  Container: (props) => <ReflexComponents.Container {...props} />,
+  Grid: (props) => <ReflexComponents.Grid {...props} />,
   VisuallyHidden,
   pre: CodeBlock,
   h1: (props) => getHeading("h1", props),

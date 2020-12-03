@@ -14,8 +14,8 @@ export const Link = ({ to, href, activeStyle, children, ...props }) => {
       to={url}
       sx={{
         "&[aria-current=page]": activeStyle,
+        ...props,
       }}
-      {...props}
     >
       {children}
     </Box>

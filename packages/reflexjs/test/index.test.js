@@ -102,9 +102,9 @@ describe("style props", () => {
   test("renders without style props", () => {
     const json = renderJSON(
       <ThemeProvider theme={theme}>
-        <React.Fragment>
+        <>
           <div />
-        </React.Fragment>
+        </>
       </ThemeProvider>
     )
     expect(json.props.className).toBeUndefined()

@@ -27,7 +27,7 @@ export const Thumbnail = ({ screenshots, slug, mode, name, ...props }) => {
       }}
       {...props}
     >
-      {image && <Image fluid={image.fluid} w="100%" alt={name} />}
+      {image && <Image fluid={image.fluid} sx={{ w: "100%" }} alt={name} />}
       <VisuallyHidden>View {name}</VisuallyHidden>
     </Link>
   )

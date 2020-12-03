@@ -11,12 +11,12 @@ export const Layout = ({
   children,
   pathname,
 }) => (
-  <React.Fragment>
+  <>
     <Metatags pathname={pathname} />
     <MDXProvider>
       {header && <Block src={header} />}
       <main>{children}</main>
       {footer && <Block src={footer} />}
     </MDXProvider>
-  </React.Fragment>
+  </>
 )
