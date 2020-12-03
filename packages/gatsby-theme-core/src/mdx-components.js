@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, Box, VisuallyHidden } from "reflexjs"
+import { jsx, VisuallyHidden } from "reflexjs"
 import * as React from "react"
 import GithubSlugger from "github-slugger"
 import * as ReflexComponents from "@reflexjs/components"
