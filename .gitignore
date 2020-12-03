@@ -60,6 +60,7 @@ typings/
 public
 
 !sites/www-next/public
+!starters/nextjs-starter/public
 
 # Mac files
 .DS_Store

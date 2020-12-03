@@ -9,6 +9,7 @@
     "preview": "next build && next start"
   },
   "dependencies": {
+    "@babel/core": "^7.12.9",
     "next": "^10.0.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
