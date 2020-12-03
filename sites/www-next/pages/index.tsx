@@ -36,7 +36,8 @@ export default function IndexPage() {
             mt="2|2|2|8"
             maxW="none|none|850"
           >
-            Speed and <Highlight>excellent developer experience</Highlight>.
+            Speed and{" "}
+            <span color="secondary">excellent developer experience</span>.
           </p>
           <div display="grid" gap="8|||16" col="1|1|2|3" mt="10|||20">
             <FeatureCard
@@ -70,6 +71,12 @@ export default function IndexPage() {
                 Get Started <Icon name="arrow-right" size="4" ml="2" />
               </a>
             </Link>
+            <a
+              href="https://github.com/reflexjs/reflexjs"
+              variant="button.secondary.lg"
+            >
+              GitHub
+            </a>
           </div>
         </div>
       </section>

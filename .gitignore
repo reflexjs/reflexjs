@@ -59,6 +59,8 @@ typings/
 .cache/
 public
 
+!sites/www-next/public
+
 # Mac files
 .DS_Store
 

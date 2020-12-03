@@ -9,7 +9,6 @@ export default function App({ Component, pageProps }) {
         openGraph={{
           type: "website",
           url: "https://reflexjs.org",
-          site_name: "Reflexjs",
           images: [
             {
               url: "https://reflexjs.org/images/meta.jpg",
