@@ -1,6 +1,6 @@
-# Reflex - Supercharge your Gatsby and Nextjs sites
+# Reflexjs - Supercharge your Gatsby and Nextjs sites
 
-A collection of <strong>plugins</strong>, <strong>themes</strong> and pre-built <strong>blocks</strong> to help you build Gatsby and Nextjs sites faster.
+A collection of <strong>starter kits</strong>, <strong>themes</strong> and pre-built <strong>blocks</strong> to help you build Gatsby and Nextjs sites faster. Built on top of a best-in-class styling library.
 
 <p>
   <a href="https://github.com/reflexjs/reflex/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/@arshad/gatsby-theme-phoenix.svg" alt="License"></a>
@@ -12,24 +12,22 @@ A collection of <strong>plugins</strong>, <strong>themes</strong> and pre-built 
 
 ## Features
 
-- **A flexible [component](https://reflexjs.org/docs/components) library:** Building components is as easy as writing HTML.
-- **A powerful [block](https://reflexjs.org/docs/blocks) system:** Build your site using small re-usable blocks that can be placed anywhere.
-- **Responsive [navigation](https://reflexjs.org/docs/navs/) menus:** Create responsive navigation menus and fly-outs using Markdown.
-- **A best-in-class [theming](https://reflexjs.org/docs/theming) library:** Theme UI and style props for a constraint-based design.
 - **A library of [30+ ready-to-use](https://reflexjs.org/library/blocks/) blocks:** That you can copy and paste into your site.
-- **And so much more::** Landing pages, blogs, photography, SEO, light and dark modes, code highlighting.
+- **Style props:** Use any CSS property as prop to rapidly style your components.
+- **Responsive styles:** Add mobile-first responsive styles with a few keystrokes.
+- **Themes support:** Use a theme for typography, colors, and spacing.
+- **Variants:** Extract styles to your theme. Re-use them. Compose them.
+- **Color Modes:** Add dark mode. Add light mode. Add any color mode.
 
-## Getting Started
+- **And so much more::** Typescript, Intellisense, Emmet...
 
-```sh
-gatsby new site reflexjs/gatsby-starter-base
-```
+## Docs
 
-Visit [https://reflexjs.org/learn](https://reflexjs.org/learn) to get started with Gatsby and Reflex.
+Visit [https://reflexjs.org/docs](https://reflexjs.org/docs) to get started.
 
 ## Blocks
 
-Browse the blocks library at [https://reflexjs.org/library/blocks](https://reflexjs.org/library/blocks).
+Browse the blocks library at [https://reflexjs.org/blocks](https://reflexjs.org/blocks).
 
 ## License
 
