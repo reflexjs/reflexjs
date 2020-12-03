@@ -12,13 +12,12 @@ A collection of <strong>starter kits</strong>, <strong>themes</strong> and pre-b
 
 ## Features
 
-- **A library of [30+ ready-to-use](https://reflexjs.org/library/blocks/) blocks:** That you can copy and paste into your site.
+- **A library of ready-to-use blocks:** That you can copy and paste into your site
 - **Style props:** Use any CSS property as prop to rapidly style your components.
 - **Responsive styles:** Add mobile-first responsive styles with a few keystrokes.
 - **Themes support:** Use a theme for typography, colors, and spacing.
 - **Variants:** Extract styles to your theme. Re-use them. Compose them.
 - **Color Modes:** Add dark mode. Add light mode. Add any color mode.
-
 - **And so much more::** Typescript, Intellisense, Emmet...
 
 ## Docs
