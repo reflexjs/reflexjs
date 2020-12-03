@@ -7,6 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "preview": "next build && next start",
+    "postbuild": "next-on-netlify",
     "screenshot": "node ./scripts/screenshot-blocks.js"
   },
   "dependencies": {
@@ -20,6 +21,7 @@
     "lodash.omit": "^4.5.0",
     "next": "^10.0.1",
     "next-mdx-remote": "^1.0.0",
+    "next-on-netlify": "^2.6.3",
     "next-seo": "^4.17.0",
     "prism-react-renderer": "^1.1.1",
     "react": "^16.14.0",
