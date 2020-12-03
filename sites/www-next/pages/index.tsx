@@ -13,7 +13,7 @@ export default function IndexPage() {
   return (
     <Layout
       title="Build something amazing."
-      description="Reflexjs is styling library that has everything you care about. Speed and excellent developer experience."
+      description="Reflexjs is styling library that has everything you care about. Speed and excellent developer experience. It comes with starter kits, themes and pre-built blocks to help you build Gatsby and Nextjs sites faster."
     >
       <section py="4|4|4|20">
         <div variant="container.md">
