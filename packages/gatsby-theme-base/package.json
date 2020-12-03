@@ -23,19 +23,19 @@
     "directory": "packages/gatsby-theme-base"
   },
   "devDependencies": {
-    "gatsby": "^2.23.3",
+    "gatsby": "^2.26.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
   "dependencies": {
-    "@reflexjs/components": "^0.4.0",
     "@reflexjs/gatsby-plugin-image": "^0.4.0",
     "@reflexjs/gatsby-plugin-metatags": "^0.3.0",
     "@reflexjs/gatsby-theme-block": "^0.4.0",
     "@reflexjs/gatsby-theme-core": "^0.6.0",
     "@reflexjs/gatsby-theme-nav": "^0.4.0",
     "@reflexjs/icons-feather": "^0.2.0",
-    "@reflexjs/preset-base": "^0.3.0"
+    "@reflexjs/preset-base": "^0.3.0",
+    "reflexjs": "^1.0.0-alpha.7"
   },
   "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52"
 }

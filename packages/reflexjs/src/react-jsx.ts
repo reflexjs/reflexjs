@@ -3,23 +3,34 @@ import { InterpolationWithTheme } from "@emotion/core"
 import styleProps from "./style-props"
 import { StyleProps, SxProps } from "./types"
 import deepmerge from "deepmerge"
-import {
-  jsx as themeUIJSX,
-  css,
-  ThemeUIStyleObject,
-  Theme as ThemeUITheme,
-} from "theme-ui"
+import { jsx as themeUIJSX, css, ThemeUIStyleObject } from "theme-ui"
 export {
   useThemeUI as useTheme,
   ThemeProvider as ThemeUIProvider,
   useColorMode,
   css,
   get,
-  merge,
   InitializeColorMode,
 } from "theme-ui"
 
-export interface Theme extends ThemeUITheme {}
+export const merge = deepmerge
+
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+// We allow for any here for expansion.
+// TODO: Figure out how or if we should keep compatibility with Theme UI spec.
+export interface Theme {
+  [key: string]: any
+}
+
+interface ReflexjsTheme extends Theme {}
+
+declare module "theme-ui" {
+  interface Theme extends ReflexjsTheme {}
+}
+
+const RESPONSIVE_SEPARATOR = "|"
+
+const regex = new RegExp(`^(${Object.keys(styleProps).join("|")})$`)
 
 // Helper to omit props.
 // See https://github.com/styled-system/styled-system/tree/master/packages/props.
@@ -44,10 +55,6 @@ const pick = (props) => {
 }
 
 const split = (props) => [pick(props), omit(props)]
-
-const RESPONSIVE_SEPARATOR = "|"
-
-const regex = new RegExp(`^(${Object.keys(styleProps).join("|")})$`)
 
 const makeResponsive = (prop) => {
   if (typeof prop !== "string") {
@@ -85,10 +92,26 @@ export function transformProps(
   return result
 }
 
-function parseProps(props) {
+function parseProps(type, props) {
   if (!props) return null
   const { variant, sx = {}, ..._props } = props
+
+  if (sx && typeof type !== "string") {
+    return {
+      ..._props,
+      sx: transformProps(sx),
+    }
+  }
+
   const [styleProps, otherProps] = split(_props)
+
+  if (
+    !variant &&
+    Object.keys(sx).length === 0 &&
+    Object.keys(styleProps).length === 0
+  )
+    return props
+
   const sxProps = transformProps(deepmerge(styleProps, sx))
 
   const next: typeof props & {
@@ -143,5 +166,9 @@ function parseProps(props) {
 }
 
 export const jsx: typeof React.createElement = (type, props, ...children) => {
-  return themeUIJSX.apply(undefined, [type, parseProps(props), ...children])
+  return themeUIJSX.apply(undefined, [
+    type,
+    parseProps(type, props),
+    ...children,
+  ])
 }

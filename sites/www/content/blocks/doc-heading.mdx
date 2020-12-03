@@ -1,30 +1,31 @@
 export const DocHeading = ({ heading, step }) => (
-  <H3
+  <h3
+    variant="heading.h3"
     textAlign="left|left|center"
     fontSize="xl|2xl"
     bg="background"
     position="relative"
     zIndex="100"
-    d="flex"
+    display="flex"
     flexDirection="column"
     justifyContent="center"
     alignItems="center"
     mt="20px|50px|70px"
     mb="8"
   >
-    <Span
+    <span
       color="background"
       bg="primary"
       size="32px"
       rounded="full"
       fontSize="lg"
-      d="flex"
+      display="flex"
       justifyContent="center"
       alignItems="center"
       mb="4"
     >
       {step}
-    </Span>
+    </span>
     {heading}
-  </H3>
+  </h3>
 )

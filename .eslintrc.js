@@ -26,7 +26,6 @@ module.exports = {
     "react/display-name": "off",
     "react/react-in-jsx-scope": "off",
     "import/export": 0,
-    "@typescript-eslint/explicit-module-boundary-types": "off",
   },
   settings: {
     react: {
@@ -44,6 +43,9 @@ module.exports = {
       ],
       rules: {
         "@typescript-eslint/explicit-module-boundary-types": "off",
+        "@typescript-eslint/no-namespace": "off",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-empty-interface": "off",
         "@typescript-eslint/member-delimiter-style": [
           "error",
           {

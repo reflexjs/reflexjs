@@ -3,29 +3,29 @@ import { useLibraryBlock } from "@reflexjs/gatsby-theme-library"
 export const HeaderBlocks = () => {
   const blocks = useLibraryBlock()
   return (
-    <Section>
+    <section>
       <Block src="nextjs" mb="8" mode="small" />
-      <H1 m="0" fontWeight="extrabold">
+      <h1 variant="heading.h1" m="0" fontWeight="extrabold">
         Blocks Library
-      </H1>
-      <P fontSize="xl|2xl" mt="2" mb="0">
+      </h1>
+      <p fontSize="xl|2xl" mt="2" mb="0">
         We have built {Math.floor(blocks.length / 10) * 10}+ blocks that you can
         copy and paste into your site.{" "}
-        <A
+        <a
           href="https://twitter.com/arshadcn"
           target="_blank"
           fontWeight="semibold"
           rel="noreferrer"
         >
           Get notified when we add more blocks
-        </A>
+        </a>
         .
-      </P>
-      <Div mt="4|6|8">
-        <Button as="a" variant="link primary" to="/library/pages">
+      </p>
+      <div mt="4|6|8">
+        <button as="a" variant="button.link.primary" to="/library/pages">
           View page examples <Icon name="arrow-right" ml="2" />
-        </Button>
-      </Div>
-    </Section>
+        </button>
+      </div>
+    </section>
   )
 }

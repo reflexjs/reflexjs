@@ -1,12 +1,12 @@
 export const Testimonials = ({ ...props }) => (
-  <Section py="8|12|16|24" {...props}>
+  <section py="8|12|16|24" {...props}>
     <Container>
-      <H2 m="0" textAlign="center">
+      <h2 variant="heading.h2" m="0" textAlign="center">
         They place their trust in us
-      </H2>
-      <P fontSize="xl|2xl" mt="2" textAlign="center">
+      </h2>
+      <p fontSize="xl|2xl" mt="2" textAlign="center">
         Aut facilis asperiores aliquam odit aliquam optio.
-      </P>
+      </p>
       <Grid col="1|2" gap="8" mt="8">
         <Testimonial
           author="Luca Henderson"
@@ -21,17 +21,17 @@ export const Testimonials = ({ ...props }) => (
         />
       </Grid>
     </Container>
-  </Section>
+  </section>
 )
 
 export const Testimonial = ({ author, description, message, ...props }) => (
-  <Div position="relative" bg="muted" rounded="lg" p="6" {...props}>
-    <P m="0">{message}</P>
-    <P m="0" mt="4" fontSize="xl" fontWeight="semibold">
+  <div position="relative" bg="muted" rounded="lg" p="6" {...props}>
+    <p m="0">{message}</p>
+    <p m="0" mt="4" fontSize="xl" fontWeight="semibold">
       {author}
-    </P>
-    <P m="0" fontSize="md">
+    </p>
+    <p m="0" fontSize="md">
       {description}
-    </P>
-  </Div>
+    </p>
+  </div>
 )

@@ -12,10 +12,12 @@ export function LinkedCard({ href, icon, title, color, ...props }) {
     <Link href={href} passHref>
       <a
         display="flex"
+        flexDirection="column"
         alignItems="center"
+        justifyContent="center"
         borderWidth="1"
-        p="4"
-        rounded="lg"
+        p="8"
+        rounded="md"
         transition="all .15s ease-in"
         zIndex="100"
         _hover={{
@@ -24,8 +26,8 @@ export function LinkedCard({ href, icon, title, color, ...props }) {
         }}
         {...props}
       >
-        <Icon name={icon} color={color} size="10" />
-        <p fontWeight="semibold" ml="2">
+        <Icon name={icon} color={color} size="12" />
+        <p fontSize="lg" textAlign="center" fontWeight="semibold" mt="2">
           {title}
         </p>
       </a>

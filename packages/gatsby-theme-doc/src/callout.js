@@ -1,8 +1,8 @@
-import * as React from "react"
-import { Div } from "@reflexjs/components"
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 
 export const Callout = ({ level = "accent", ...props }) => (
-  <Div
+  <div
     bg="muted"
     rounded="md"
     borderTop="4"

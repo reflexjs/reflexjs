@@ -15,6 +15,7 @@ export function LinkedHeading({
   return (
     <Component
       id={id}
+      variant={`heading.${Component}`}
       fontWeight="semibold"
       _hover={{
         a: {

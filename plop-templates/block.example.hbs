@@ -1,0 +1,27 @@
+import * as React from "react"
+import { Icon } from "reflexjs"
+import Block from "../blocks/{{ name }}"
+
+export default function Example() {
+  return (
+    <Block
+      subheading="Subheading"
+      heading="Build a better web"
+      text="Reiciendis quia totam esse. Dicta minus iusto quisquam doloribus temporibus."
+      image=\{{
+        src: "/images/placeholder.jpg",
+        alt: "Hero image",
+      }}
+      buttons={
+        <div display="flex" col="2" gap="2" mt="4">
+          <a variant="button.primary.lg" href="#">
+            Get started <Icon name="arrow-right" ml="2" size="4" />
+          </a>
+          <a variant="button.secondary.lg" href="#">
+            Learn more
+          </a>
+        </div>
+      }
+    />
+  )
+}

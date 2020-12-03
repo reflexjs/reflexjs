@@ -9,8 +9,9 @@ export const ThemeReference = ({
   ...props
 }) => {
   return (
-    <Div {...props}>
-      <H2
+    <div {...props}>
+      <h2
+        variant="heading.h2"
         id={id}
         pt="8"
         mt="8|8|14|20"
@@ -19,38 +20,38 @@ export const ThemeReference = ({
         fontSize="3xl"
       >
         {heading}
-      </H2>
+      </h2>
       {children}
-      <Table w="full" rounded="md">
-        <Thead bg="muted">
-          <Tr>
-            <Th textAlign="left" p="2" fontWeight="semibold" w="40">
+      <table w="full" rounded="md">
+        <thead bg="muted">
+          <tr>
+            <th textAlign="left" p="2" fontWeight="semibold" w="40">
               Key
-            </Th>
-            <Th textAlign="left" p="2" fontWeight="semibold">
+            </th>
+            <th textAlign="left" p="2" fontWeight="semibold">
               Value
-            </Th>
-            <Th></Th>
-          </Tr>
-        </Thead>
-        <Tbody>
+            </th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
           {Object.entries(theme[reference]).map(([key, value]) => (
-            <Tr key={key}>
-              <Td textAlign="left" p="2" borderTopWidth="1px">
-                <Code fontSize="xl" bg="muted" p="1" rounded="sm">
+            <tr key={key}>
+              <td textAlign="left" p="2" borderTopWidth="1px">
+                <code fontSize="xl" bg="muted" p="1" rounded="sm">
                   {key}
-                </Code>
-              </Td>
-              <Td textAlign="left" p="2" borderTopWidth="1px" fontSize="md">
+                </code>
+              </td>
+              <td textAlign="left" p="2" borderTopWidth="1px" fontSize="md">
                 {value}
-              </Td>
-              <Td textAlign="right" p="2" borderTopWidth="1px">
+              </td>
+              <td textAlign="right" p="2" borderTopWidth="1px">
                 <CopyButton variant="icon" color="text" value={key} />
-              </Td>
-            </Tr>
+              </td>
+            </tr>
           ))}
-        </Tbody>
-      </Table>
-    </Div>
+        </tbody>
+      </table>
+    </div>
   )
 }

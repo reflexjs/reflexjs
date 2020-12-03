@@ -1,9 +1,9 @@
 ---
-doc: "videos"
+doc: videos
 ---
 
 import * as React from "react"
-import { Article, H2, P, Div, Grid, Container } from "@reflexjs/components"
+import { Grid, Container } from "reflexjs"
 import { Link } from "@reflexjs/gatsby-theme-core"
 import { Image } from "@reflexjs/gatsby-plugin-image"
 
@@ -13,9 +13,9 @@ import { useVideo } from "@reflexjs/gatsby-theme-video"
 export const Preview = () => {
   const videos = useVideo({ published: false })
   return (
-    <Div p="10">
+    <div p="10">
       <Videos videos={videos.slice(0, 2)} />
-    </Div>
+    </div>
   )
 }
 
@@ -26,17 +26,20 @@ export const Videos = ({ videos }) => {
     <Container maxW="900px">
       {videos &&
         videos.map((video, index) => (
-          <VideoTeaser key={index} mb="10" {...video} />
+          <VideoTeaser key={index} mb="10" video={video} />
         ))}
     </Container>
   ) : null
 }
 
-export const VideoTeaser = ({ title, slug, excerpt, thumbnail, ...props }) => (
-  <Article {...props}>
+export const VideoTeaser = ({
+  video: { title, slug, excerpt, thumbnail },
+  ...props
+}) => (
+  <article {...props}>
     <Grid col="350px 1fr" gap="10">
       {thumbnail && (
-        <Link href={slug} d="block">
+        <Link href={slug} display="block">
           <Image
             src={thumbnail}
             title={title}
@@ -48,16 +51,23 @@ export const VideoTeaser = ({ title, slug, excerpt, thumbnail, ...props }) => (
           />
         </Link>
       )}
-      <Div py="2">
+      <div py="2">
         {title && (
           <Link href={slug}>
-            <H2 my="0" fontSize="3xl" hoverColor="primary">
+            <h2
+              variant="heading.h2"
+              my="0"
+              fontSize="3xl"
+              _hover={{
+                color: "primary",
+              }}
+            >
               {title}
-            </H2>
+            </h2>
           </Link>
         )}
-        {excerpt && <P mt="2">{excerpt}</P>}
-      </Div>
+        {excerpt && <p mt="2">{excerpt}</p>}
+      </div>
     </Grid>
-  </Article>
+  </article>
 )

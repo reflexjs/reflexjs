@@ -12,8 +12,8 @@ import { Palette } from "@reflexjs/gatsby-theme-styleguide"
   gap="null|6|6|20"
   alignItems="flex-start"
 >
-  <Div
-    d="none|none|block"
+  <div
+    display="none|none|block"
     position="sticky"
     top="0"
     left="0"
@@ -26,28 +26,28 @@ import { Palette } from "@reflexjs/gatsby-theme-styleguide"
     pb="32"
   >
     <Block src="theme-reference-nav" />
-  </Div>
-  <Div mt="0" pt="8">
+  </div>
+  <div mt="0" pt="8">
 
-<H1 m="0" fontWeight="extrabold">
+<h1 variant="heading.h1" m="0" fontWeight="extrabold">
   Theme reference
-</H1>
+</h1>
 
-<P fontSize="xl|2xl" mt="2" mb="0">
+<p fontSize="xl|2xl" mt="2" mb="0">
   The base starter includes a set of pre-defined design tokens that you can use
   to style your components.
-</P>
+</p>
 
 Use [style props](/docs/theming#style-props) to theme your components.
 
 ```jsx
-<P fontSize="md" />
+<p fontSize="md" />
 ```
 
 For responsive styles, separate your values using a pipe: `|`.
 
 ```jsx
-<P fontSize="sm|md|lg|2xl" />
+<p fontSize="sm|md|lg|2xl" />
 ```
 
 <Block src="callout" rounded="lg">
@@ -55,24 +55,24 @@ For responsive styles, separate your values using a pipe: `|`.
 **Note:** Any props not listed below such as `textDecoration` or `transition` or `opacity`) can use default CSS values.
 
 ```jsx
-<P textShadow="underline" />
+<p textShadow="underline" />
 ```
 
 </Block>
 
 <Grid
-  d="inline-grid"
+  display="inline-grid"
   col="1|1|auto auto"
   gap="4|6"
   alignItems="center"
   mt="4|6|8"
 >
-  <ButtonLink variant="link primary" to="/docs/theming-create-theme">
+  <a variant="button.link.primary" to="/docs/theming-create-theme">
     Create a custom theme <Icon name="arrow-right" ml="2" />
-  </ButtonLink>
-  <ButtonLink variant="link secondary" to="/docs/theming-presets#extend-base">
+  </a>
+  <a variant="button.link.secondary" to="/docs/theming-presets#extend-base">
     Extend base <Icon name="arrow-right" ml="2" />
-  </ButtonLink>
+  </a>
 </Grid>
 
 <Block
@@ -84,7 +84,7 @@ For responsive styles, separate your values using a pipe: `|`.
 `color, backgroundColor (bg), borderColor, borderTopColor, borderBottomColor, borderLeftColor, borderRightColor, outlineColor, fill, stroke`
 
 ```jsx title=Example
-<P color="primary" bg="muted" />
+<p color="primary" bg="muted" />
 ```
 
 </Block>
@@ -99,7 +99,7 @@ For responsive styles, separate your values using a pipe: `|`.
 `fontFamily`
 
 ```jsx title=Example
-<P fontFamily="body" />
+<p fontFamily="body" />
 ```
 
 </Block>
@@ -114,7 +114,7 @@ For responsive styles, separate your values using a pipe: `|`.
 `fontSize`
 
 ```jsx title=Example
-<H1 fontSize="md" />
+<h1 variant="heading.h1" fontSize="md" />
 ```
 
 </Block>
@@ -129,7 +129,7 @@ For responsive styles, separate your values using a pipe: `|`.
 `fontWeight`
 
 ```jsx title=Example
-<H1 fontWeight="semibold" />
+<h1 variant="heading.h1" fontWeight="semibold" />
 ```
 
 </Block>
@@ -144,7 +144,7 @@ For responsive styles, separate your values using a pipe: `|`.
 `lineHeight`
 
 ```jsx title=Example
-<P lineHeight="relaxed" />
+<p lineHeight="relaxed" />
 ```
 
 </Block>
@@ -159,7 +159,7 @@ For responsive styles, separate your values using a pipe: `|`.
 `margin (m), marginTop (mt), marginRight (mr), marginBottom (mb), marginLeft (ml), my, mx, top, right, bottom, left, gridGap, gridColumnGap, gridRowGap, gap, columnGap, rowGap`
 
 ```jsx title=Example
-<Div mt="2" mx="auto" />
+<div mt="2" mx="auto" />
 ```
 
 </Block>
@@ -174,7 +174,7 @@ For responsive styles, separate your values using a pipe: `|`.
 `padding (p), paddingTop (pt), paddingRight (pr), paddingBottom (pb), paddingLeft (pl), py, px, top, right, bottom, left, gridGap, gridColumnGap, gridRowGap, gap, columnGap, rowGap`
 
 ```jsx title=Example
-<Div py="6" />
+<div py="6" />
 ```
 
 </Block>
@@ -189,7 +189,7 @@ For responsive styles, separate your values using a pipe: `|`.
 `borderWidth, borderTopWidth, borderRightWidth, borderBottomWidth, borderLeftWidth`
 
 ```jsx title=Example
-<Div borderBottomWidth="1px" />
+<div borderBottomWidth="1px" />
 ```
 
 </Block>
@@ -204,7 +204,7 @@ For responsive styles, separate your values using a pipe: `|`.
 `borderRadius (rounded), borderTopRightRadius, borderTopLeftRadius, borderBottomRightRadius, borderBottomLeftRadius`
 
 ```jsx title=Example
-<Div rounded="2xl" />
+<div rounded="2xl" />
 ```
 
 </Block>
@@ -219,7 +219,7 @@ For responsive styles, separate your values using a pipe: `|`.
 `boxShadow, textShadow`
 
 ```jsx title=Example
-<Div boxShadow="2xl" />
+<div boxShadow="2xl" />
 ```
 
 </Block>
@@ -239,7 +239,7 @@ For responsive styles, separate your values using a pipe: `|`.
 
 </Block>
 
-</Div>
+</div>
 
 </Grid>
 

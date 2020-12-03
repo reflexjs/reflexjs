@@ -1,12 +1,12 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx, Flexbox } from "reflexjs"
 import { connectHits, PoweredBy } from "react-instantsearch-dom"
-import { Div, Ul, Li, Flexbox, P, Span } from "@reflexjs/components"
 import { Link } from "@reflexjs/gatsby-theme-core"
 import { Highlight } from "./highlight"
 
 export const Hits = connectHits(({ hits, ...props }) => {
   return (
-    <Div
+    <div
       bg="background"
       boxShadow="none|none|xl"
       rounded="lg"
@@ -17,38 +17,42 @@ export const Hits = connectHits(({ hits, ...props }) => {
       mt="2"
     >
       {hits.length ? (
-        <Ul listStyle="none outside none" m="0" p="0" {...props}>
+        <ul listStyle="none outside none" m="0" p="0" {...props}>
           {hits.map((hit) => (
-            <Li borderBottomWidth="1px" key={hit.objectID}>
+            <li borderBottomWidth="1px" key={hit.objectID}>
               <Link
                 to={hit.slug}
                 color="text"
                 textDecoration="none"
                 px="4"
                 py="3"
-                d="block"
-                focusBg="muted"
-                hoverTextDecoration="none"
-                focusTextDecoration="none"
-                focusColor="text"
+                display="block"
+                _hover={{
+                  textDecoration: "none",
+                }}
+                _focus={{
+                  bg: "muted",
+                  textDecoration: "none",
+                  color: "text",
+                }}
               >
                 <Flexbox flexDirection="column" alignItems="flex-start">
-                  <P fontWeight="semibold" fontSize="md" m="0">
+                  <p fontWeight="semibold" fontSize="md" m="0">
                     <Highlight hit={hit} />
-                  </P>
+                  </p>
                   {hit.excerpt && (
-                    <P fontSize="sm" mt="1" mb="0">
+                    <p fontSize="sm" mt="1" mb="0">
                       <Highlight hit={hit} attribute="excerpt" />
-                    </P>
+                    </p>
                   )}
-                  <Span fontSize="sm">{hit.type}</Span>
+                  <span fontSize="sm">{hit.type}</span>
                 </Flexbox>
               </Link>
-            </Li>
+            </li>
           ))}
-        </Ul>
+        </ul>
       ) : (
-        <Div
+        <div
           px="4"
           py="3"
           borderBottomWidth="1px"
@@ -56,7 +60,7 @@ export const Hits = connectHits(({ hits, ...props }) => {
           fontSize="sm"
         >
           No results found.
-        </Div>
+        </div>
       )}
       <Flexbox
         px="4"
@@ -80,6 +84,6 @@ export const Hits = connectHits(({ hits, ...props }) => {
       >
         <PoweredBy />
       </Flexbox>
-    </Div>
+    </div>
   )
 })

@@ -1,5 +1,6 @@
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import * as React from "react"
-import { Ul, Li, Span, Div, Button } from "@reflexjs/components"
 import { Link, Icon, useBreakpointIndex } from "@reflexjs/gatsby-theme-core"
 import { Block } from "@reflexjs/gatsby-theme-block"
 import { useDropdown } from "./use-dropdown"
@@ -44,14 +45,16 @@ export const NavMenuLink = ({
       activeStyle={activeStyle}
       {...linkStyle}
       {...props}
-      hoverColor="primary"
+      _hover={{
+        color: "primary",
+      }}
     >
       {value}
     </Link>
   ) : (
-    <Span {...style} {...props} cursor="auto">
+    <span {...style} {...props} cursor="auto">
       {value}
-    </Span>
+    </span>
   )
 }
 
@@ -101,14 +104,14 @@ export const NavMenuSubNav = ({ items, dropdown, isOpen, ...props }) => {
   const item = isBlock ? (
     <Block src={block.value} {...props} />
   ) : (
-    <Ul listStyle="none" p="0" m="0">
+    <ul listStyle="none" p="0" m="0">
       {items.map((item, index) => (
         <NavMenuItem key={index} depth={1} dropdown={false} {...item} />
       ))}
-    </Ul>
+    </ul>
   )
 
-  return dropdown ? <Div sx={dropdownStyle}>{item}</Div> : item
+  return dropdown ? <div sx={dropdownStyle}>{item}</div> : item
 }
 
 export const NavMenuItem = ({
@@ -139,7 +142,7 @@ export const NavMenuItem = ({
   }
 
   return (
-    <Li
+    <li
       ref={dropdownRef}
       position="relative"
       borderBottomWidth={[depth === 0 && !vertical && dropdown ? 1 : 0, 0]}
@@ -157,12 +160,12 @@ export const NavMenuItem = ({
         {...(dropdown && !usingHover && { onClick: isOpen ? close : open })}
       />
       {expand && items?.length && (
-        <React.Fragment>
+        <>
           {dropdown && (
-            <Button
-              variant="icon"
+            <button
+              variant="button.icon"
               onClick={() => (isOpen ? close() : open())}
-              d={["block", "none"]}
+              display={["block", "none"]}
               position="absolute"
               right="2"
               top="0"
@@ -171,7 +174,7 @@ export const NavMenuItem = ({
               w="12"
             >
               <Icon name={isOpen ? "minus" : "plus"} />
-            </Button>
+            </button>
           )}
           <NavMenuSubNav
             items={items}
@@ -179,9 +182,9 @@ export const NavMenuItem = ({
             depth={depth}
             isOpen={isOpen || !dropdown}
           />
-        </React.Fragment>
+        </>
       )}
-    </Li>
+    </li>
   )
 }
 
@@ -201,7 +204,7 @@ export const NavMenu = ({
   const gridStyle = `repeat(${nav.items.length}, auto)`
 
   style = {
-    d: "grid",
+    display: "grid",
     listStyle: "none",
     p: 0,
     row: [gridStyle, vertical ? gridStyle : "none"],
@@ -213,7 +216,7 @@ export const NavMenu = ({
   }
 
   return (
-    <Ul {...style} {...props}>
+    <ul {...style} {...props}>
       {nav.items.map((item, index) => (
         <NavMenuItem
           key={index}
@@ -224,6 +227,6 @@ export const NavMenu = ({
           {...item}
         />
       ))}
-    </Ul>
+    </ul>
   )
 }

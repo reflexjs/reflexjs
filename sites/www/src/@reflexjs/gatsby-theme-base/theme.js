@@ -1,7 +1,7 @@
+import { merge } from "reflexjs"
 import base from "@reflexjs/preset-base"
 
-export default {
-  preset: base,
+export default merge(base, {
   colors: {
     primary: "#4361ee",
   },
@@ -11,10 +11,12 @@ export default {
   container: {
     maxWidth: 1100,
   },
-  h2: {
-    a: {
-      color: "primary",
-      textDecoration: "underline",
+  heading: {
+    h2: {
+      a: {
+        color: "primary",
+        textDecoration: "underline",
+      },
     },
   },
-}
+})

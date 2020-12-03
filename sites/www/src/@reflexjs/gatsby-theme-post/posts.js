@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Article, H2, P, Div, Grid } from "@reflexjs/components"
+import { Grid } from "reflexjs"
 import { Link } from "@reflexjs/gatsby-theme-core"
 import { Image } from "@reflexjs/gatsby-plugin-image"
 import { PostMeta } from "@reflexjs/gatsby-theme-post"
@@ -11,53 +11,63 @@ export const Posts = ({ posts }) => {
     <Grid col="1" gap="10|20" maxW="800px" mx="auto">
       {posts &&
         posts.map((post, index) => (
-          <Div key={index}>
-            <PostTeaser {...post} />
-          </Div>
+          <div key={index}>
+            <PostTeaser post={post} />
+          </div>
         ))}
     </Grid>
   ) : null
 }
 
-export const PostTeaser = ({
-  title,
-  excerpt,
-  slug,
-  image,
-  date,
-  datetime,
-  author,
-  timeToRead,
-  ...props
-}) => (
-  <Article {...props}>
-    {image && (
-      <Link href={slug} d="block">
-        <Image
-          src={image}
-          title={title}
-          alt={title}
-          rounded="xl"
-          overflow="hidden"
-        />
-      </Link>
-    )}
-    <Div mt="4">
-      {title && (
-        <Link href={slug}>
-          <H2 mt="0" mb="4" fontSize="2xl|2xl|3xl|4xl" hoverColor="primary">
-            {title}
-          </H2>
+export function PostTeaser({ post, ...props }) {
+  const {
+    title,
+    excerpt,
+    slug,
+    image,
+    date,
+    datetime,
+    author,
+    timeToRead,
+  } = post
+  return (
+    <article {...props}>
+      {image && (
+        <Link href={slug} display="block">
+          <Image
+            src={image}
+            title={title}
+            alt={title}
+            rounded="xl"
+            overflow="hidden"
+          />
         </Link>
       )}
-      <PostMeta
-        author={author}
-        timeToRead={timeToRead}
-        date={date}
-        datetime={datetime}
-        fontSize="md"
-      />
-      {excerpt && <P mt="4">{excerpt}</P>}
-    </Div>
-  </Article>
-)
+      <div mt="4">
+        {title && (
+          <Link href={slug}>
+            <h2
+              variant="heading.h2"
+              mt="0"
+              mb="4"
+              fontSize="2xl|2xl|3xl|4xl"
+              _hover={{
+                color: "primary",
+              }}
+            >
+              {title}
+            </h2>
+          </Link>
+        )}
+        <PostMeta
+          author={author}
+          timeToRead={timeToRead}
+          date={date}
+          datetime={datetime}
+          fontSize="md"
+        />
+        {excerpt && <p mt="4">{excerpt}</p>}
+      </div>
+    </article>
+  )
+}

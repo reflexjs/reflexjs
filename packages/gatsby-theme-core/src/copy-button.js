@@ -1,9 +1,10 @@
+/** @jsx jsx */
+import { jsx, VisuallyHidden } from "reflexjs"
 import * as React from "react"
-import { Button, Svg, VisuallyHidden } from "@reflexjs/components"
 import copy from "copy-to-clipboard"
 
 export const CopyIcon = ({ size, ...props }) => (
-  <Svg
+  <svg
     xmlns="http://www.w3.org/2000/svg"
     size={size}
     viewBox="0 0 24 24"
@@ -16,11 +17,11 @@ export const CopyIcon = ({ size, ...props }) => (
   >
     <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
     <rect x="8" y="2" width="8" height="4" rx="1" ry="1" />
-  </Svg>
+  </svg>
 )
 
 export const CopiedIcon = ({ size, ...props }) => (
-  <Svg
+  <svg
     xmlns="http://www.w3.org/2000/svg"
     size={size}
     viewBox="0 0 24 24"
@@ -32,7 +33,7 @@ export const CopiedIcon = ({ size, ...props }) => (
     {...props}
   >
     <path d="M20 6L9 17l-5-5" />
-  </Svg>
+  </svg>
 )
 
 export const CopyButton = ({ value, iconSize = 5, children, ...props }) => {
@@ -50,7 +51,8 @@ export const CopyButton = ({ value, iconSize = 5, children, ...props }) => {
   }, [hasCopied])
 
   return (
-    <Button
+    <button
+      variant="button"
       onClick={handleClicked}
       p="0"
       color="white"
@@ -66,6 +68,6 @@ export const CopyButton = ({ value, iconSize = 5, children, ...props }) => {
         <CopyIcon size={iconSize} />
       )}
       <VisuallyHidden>Copy</VisuallyHidden>
-    </Button>
+    </button>
   )
 }

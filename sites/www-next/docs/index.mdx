@@ -1,92 +1,28 @@
 ---
-title: Getting Started
-excerpt: Welcome to the Reflex documentation.
+title: Getting started
+excerpt: Welcome to the Reflexjs documentation.
+next:
+  title: Blocks library
+  url: /docs/blocks
 ---
 
-<Callout>
+Reflexjs works with any React framework. Select your framework below to get started.
 
-
-**Are you using a React framework?** See the installation instructions for [create-react-app](/docs/getting-starterd/create-react-app), [Next.js](/docs/getting-started/next) or [Gatsby](/docs/getting-started/gatsby).
-
-</Callout>
-
-
-<Box display="grid" col="1|2|3" my="8" gap="4">
-  <LinkedCard href="/docs/installation/next" icon="nextjs" title="Next.js" />
+<div display="grid" col="1|2|3" my="8" gap="4" w="full">
+  <LinkedCard href="/docs/nextjs" icon="nextjs" title="Next.js" color="#111" />
   <LinkedCard
-    href="/docs/installation/gatsby"
+    href="/docs/gatsby"
     icon="gatsby"
     title="Gatsby"
     color="#663399"
   />
-  <LinkedCard
-    href="/docs/installation/create-react-app"
-    icon="react"
-    title="Create React App"
-    color="#61DAFB"
-  />
-</Box>
+  <LinkedCard href="/docs/react" icon="react" title="React" color="#61DAFB" />
+</div>
 
-## Quick Start
+Browse the <Link href="/theming/style-props" passHref><a display="inline-flex" alignItems="center">theming docs <Icon name="arrow-right" ml="2" /></a></Link>
 
-### Step 1
+<Callout>
 
-Start by installing the `reflexjs` package into your React app.
+**Are you upgrading an existing Reflexjs + Gatsby site?** Check out the migration docs [here](/docs/gatsby/upgrading).
 
-```sh
-npm i reflexjs
-```
-
-### Step 2
-
-Create a theme with your custom colors and typography.
-
-```js title=theme.js
-export default {
-  fonts: {
-    body: "system-ui, sans-serif",
-    heading: '"Avenir Next", sans-serif',
-    monospace: "Menlo, monospace",
-  },
-  colors: {
-    text: "#000",
-    background: "#fff",
-    primary: "#33e",
-  },
-}
-```
-
-### Step 3
-
-Wrap your app with the `ThemeProvider` from reflexjs.
-
-```jsx
-import * as React from "react"
-import theme from "./theme" // highlight-line
-import { ThemeProvider } from "reflexjs" // highlight-line
-
-export default function () {
-  return (
-    <ThemeProvider theme={theme}>
-      <App />
-    </ThemeProvider>
-  )
-}
-```
-
-## Styling
-
-You are now ready to style your components using [style props](/docs/styling).
-
-```jsx
-/** @jsx jsx */
-import { jsx } from "reflexjs"
-
-export default function CustomButton({ children }) {
-  return (
-    <button bg="primary" color="text" p="10px" rounded="5">
-      {children}
-    </button>
-  )
-}
-```
+</Callout>

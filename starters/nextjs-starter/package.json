@@ -1,0 +1,17 @@
+{
+  "name": "nextjs-starter",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "next build && next start"
+  },
+  "dependencies": {
+    "next": "^10.0.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "reflexjs": "^1.0.0-alpha.7"
+  }
+}

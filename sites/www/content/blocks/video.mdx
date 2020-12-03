@@ -21,7 +21,7 @@ export const VideoBlock = ({ url, play = true, children, ...props }) => {
     }
   })
   return (
-    <Div
+    <div
       position="relative"
       w="100%"
       boxShadow="3xl"
@@ -44,27 +44,29 @@ export const VideoBlock = ({ url, play = true, children, ...props }) => {
           bottom="0"
           justifyContent="center"
         >
-          <Button
-            variant="primary"
+          <button
+            variant="button.primary"
             rounded="full"
             size="22"
             transition="transform .15s ease-in"
-            hoverTransform="scale(1.1)"
-            hoverBoxShadow="xl"
             zIndex="1000"
             aria-label="Play video"
             onClick={() => {
               setIsPlaying(true)
             }}
+            _hover={{
+              transform: "scale(1.1)",
+              boxShadow: "xl",
+            }}
           >
             <Icon name="play" size="8" ml="1" />
-          </Button>
+          </button>
         </Flexbox>
       )}
-      <Video muted playsinline ref={videoRef} w="full" loop={isPlaying}>
-        <Source src={url} type="video/mp4" />
-      </Video>
+      <video muted playsinline ref={videoRef} w="full" loop={isPlaying}>
+        <source src={url} type="video/mp4" />
+      </video>
       {!isPlaying && children}
-    </Div>
+    </div>
   )
 }

@@ -1,4 +1,5 @@
 export const NextjsBlock = ({ mode, ...props }) => {
+  return null
   if (mode === "small") {
     props.p = "0|0|0|0"
   }
@@ -9,17 +10,16 @@ export const NextjsBlock = ({ mode, ...props }) => {
         alignItems={mode === "small" ? "flex-start" : "flex-start|center"}
         bg="#00F5A0"
         color="#1E1D56"
-        py="4"
-        px="6"
+        p="6"
         rounded="lg"
       >
-        <P m="0" fontSize="lg|xl">
-          We are adding support for <Strong>Nextjs</Strong>. Get in touch on{" "}
-          <A href="https://twitter.com/arshadcn">Twitter</A> to learn more.{" "}
-        </P>
-        <ButtonLink
+        <p m="0" fontSize="lg|xl">
+          We are adding support for <strong>Nextjs</strong>. Get in touch on{" "}
+          <a href="https://twitter.com/arshadcn">Twitter</a> to learn more.{" "}
+        </p>
+        <a
+          variant="button"
           w="180px"
-          variant={mode === "small" ? "md" : "sm"}
           href="https://mdnext-reflexjs.vercel.app/"
           bg="#1E1D56"
           borderColor="#1E1D56"
@@ -29,7 +29,7 @@ export const NextjsBlock = ({ mode, ...props }) => {
           target="_blank"
         >
           See a demo
-        </ButtonLink>
+        </a>
       </Flexbox>
     </Container>
   )

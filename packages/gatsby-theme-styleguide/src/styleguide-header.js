@@ -1,6 +1,6 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import { Link, useColorMode } from "@reflexjs/gatsby-theme-core"
-import { Nav, Ul, Li, Header, Button, Svg } from "@reflexjs/components"
 import { useStyleguide } from "./use-styleguide"
 
 export const StyleguideHeader = ({ ...props }) => {
@@ -8,15 +8,15 @@ export const StyleguideHeader = ({ ...props }) => {
   const styleguides = useStyleguide()
 
   return (
-    <Header
-      d="flex"
+    <header
+      display="flex"
       alignItems="center"
       justifyContent="space-between"
       {...props}
     >
-      <Nav>
-        <Ul
-          d="inline-grid"
+      <nav>
+        <ul
+          display="inline-grid"
           col={`repeat(${styleguides.length}, auto)`}
           gap="4"
           listStyle="none outside none"
@@ -24,11 +24,11 @@ export const StyleguideHeader = ({ ...props }) => {
           p="0"
         >
           {styleguides.map(({ title, slug }, index) => (
-            <Li key={index}>
+            <li key={index}>
               <Link
                 to={slug}
                 textDecoration="none"
-                d="inline-flex"
+                display="inline-flex"
                 mb="2"
                 color="text"
                 fontWeight="semi"
@@ -38,11 +38,12 @@ export const StyleguideHeader = ({ ...props }) => {
               >
                 {title}
               </Link>
-            </Li>
+            </li>
           ))}
-        </Ul>
-      </Nav>
-      <Button
+        </ul>
+      </nav>
+      <button
+        variant="button"
         onClick={() =>
           setColorMode(colorMode === "default" ? "dark" : "default")
         }
@@ -50,14 +51,16 @@ export const StyleguideHeader = ({ ...props }) => {
         bg="transparent"
         p="0"
         color="text"
-        hoverColor="primary"
         sx={{
           ":focus": {
             outline: "none",
           },
         }}
+        _hover={{
+          color: "primary",
+        }}
       >
-        <Svg
+        <svg
           xmlns="http://www.w3.org/2000/svg"
           width="24px"
           height="24px"
@@ -70,8 +73,8 @@ export const StyleguideHeader = ({ ...props }) => {
         >
           <circle cx="12" cy="12" r="5" />
           <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-        </Svg>
-      </Button>
-    </Header>
+        </svg>
+      </button>
+    </header>
   )
 }

@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "fs-extra": "^9.0.1",
-    "gatsby": "^2.23.11",
+    "gatsby": "^2.26.1",
     "glob": "^7.1.6",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"

@@ -1,6 +1,7 @@
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import * as React from "react"
 import { useNav } from "@reflexjs/gatsby-theme-nav"
-import { Ul, Li, Nav, H4 } from "@reflexjs/components"
 import { Link } from "@reflexjs/gatsby-theme-core"
 import { useLocation } from "@reach/router"
 
@@ -64,12 +65,12 @@ export const DocSubNav = ({ items, observe, onClick, ...props }) => {
   }, [linkIds])
 
   return (
-    <Ul listStyle="none" p="0" {...props}>
+    <ul listStyle="none" p="0" {...props}>
       {items.map(({ value, url, type, items: _items }, key) => {
         const isActiveParent = url === pathname
         const isActiveItem = activeItem === url.split("#")[1]
         return (
-          <Li key={key} mb="8">
+          <li key={key} mb="8">
             {type === "link" && (
               <Link
                 href={url}
@@ -102,10 +103,10 @@ export const DocSubNav = ({ items, observe, onClick, ...props }) => {
                 }}
               />
             )}
-          </Li>
+          </li>
         )
       })}
-    </Ul>
+    </ul>
   )
 }
 
@@ -113,9 +114,9 @@ export const DocNav = ({ onClick, ...props }) => {
   const [nav] = useNav("doc")
 
   return nav ? (
-    <Nav {...props}>
-      <Ul
-        d="grid"
+    <nav {...props}>
+      <ul
+        display="grid"
         listStyle="none"
         p="0"
         row={`repeat(${nav.items.length}, auto)`}
@@ -123,12 +124,12 @@ export const DocNav = ({ onClick, ...props }) => {
         m="0"
       >
         {nav.items.map(({ value, url, items }, index) => (
-          <Li key={index}>
+          <li key={index}>
             {url ? (
               <Link
                 href={url}
                 w="100%"
-                d="flex"
+                display="flex"
                 justifyContent="center"
                 fontWeight="semibold"
                 color="text"
@@ -139,19 +140,20 @@ export const DocNav = ({ onClick, ...props }) => {
                 {value}
               </Link>
             ) : (
-              <H4
+              <h4
+                variant="heading.h4"
                 my="4"
                 fontSize="xl"
                 borderTopWidth={index !== 0 && "1px"}
                 pt={index !== 0 && 4}
               >
                 {value}
-              </H4>
+              </h4>
             )}
             {items && <DocSubNav items={items} onClick={onClick} />}
-          </Li>
+          </li>
         ))}
-      </Ul>
-    </Nav>
+      </ul>
+    </nav>
   ) : null
 }
