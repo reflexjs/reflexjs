@@ -1,11 +1,11 @@
 /** @jsx jsx */
 import { jsx, Grid, Flexbox } from "reflexjs"
-import { useThemeUI, CopyButton } from "@reflexjs/gatsby-theme-core"
+import { useTheme, CopyButton } from "@reflexjs/gatsby-theme-core"
 
 export const Palette = () => {
   const {
     theme: { colors },
-  } = useThemeUI()
+  } = useTheme()
 
   return (
     <Grid col="repeat(5, 1fr)" gap="8">
