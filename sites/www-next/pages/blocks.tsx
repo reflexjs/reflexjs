@@ -49,8 +49,7 @@ export default function BlocksPage({
                         {blocks.map((block) => (
                           <Link href={block.slug} passHref key={block.slug}>
                             <a
-                              display="flex"
-                              justifyContent="center"
+                              display="block"
                               borderWidth="1px"
                               rounded="sm"
                               fontSize="2xl"
@@ -60,7 +59,12 @@ export default function BlocksPage({
                               position="relative"
                               boxShadow="0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 2px rgba(0, 0, 0, 0.06), 0px 0px 1px rgba(0, 0, 0, 0.04)"
                             >
-                              <img src={block.thumbnail} />
+                              <img
+                                src={block.thumbnail}
+                                display="block"
+                                w="100%"
+                                h="auto"
+                              />
                               <VisuallyHidden>{block.name}</VisuallyHidden>
                             </a>
                           </Link>

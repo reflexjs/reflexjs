@@ -13,6 +13,10 @@ export const docs = {
           url: "https://legacy.reflexjs.org/docs",
         },
         {
+          title: "Demo",
+          url: "https://demo.reflexjs.org",
+        },
+        {
           title: "GitHub",
           url: "https://github.com/reflexjs/reflexjs",
         },

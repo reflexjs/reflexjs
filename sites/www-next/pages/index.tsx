@@ -72,10 +72,12 @@ export default function IndexPage() {
               </a>
             </Link>
             <a
-              href="https://github.com/reflexjs/reflexjs"
+              href="https://demo.reflexjs.org"
+              target="_blank"
+              rel="noreferrer"
               variant="button.secondary.lg"
             >
-              GitHub
+              Demo
             </a>
           </div>
         </div>
