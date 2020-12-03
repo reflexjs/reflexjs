@@ -13,25 +13,36 @@ export default function IndexPage() {
   return (
     <Layout
       title="Build something amazing."
-      description="Reflexjs is styling library that has everything you care about. Speed and excellent developer experience. It comes with starter kits, themes and pre-built blocks to help you build Gatsby and Nextjs sites faster."
+      description="Starter kits, themes and blocks to help you build Gatsby and Nextjs sites faster. Built using a styling library that has everything you care about. Speed and excellent developer experience."
     >
       <section py="4|4|4|20">
         <div variant="container.md">
           <VisuallyHidden>Build something amazing.</VisuallyHidden>
           <h2
             fontWeight="800"
-            fontSize="3rem|4rem|4rem|6rem"
-            lineHeight="1.3|1.05"
+            fontSize="3rem|4rem|4rem|5.4rem"
+            lineHeight="1.3|1.1"
             letterSpacing="tight"
             color="heading"
             py="4"
           >
-            A <Highlight>styling library</Highlight> that has everything you
-            care about.
+            <Highlight>Starter kits, themes and blocks</Highlight> to kickstart
+            your Gatsby and Nextjs sites.
           </h2>
           <p
             fontWeight="700"
-            fontSize="3rem|4rem|4rem|7xl"
+            fontSize="3rem|4rem|4rem|6xl"
+            letterSpacing="tight"
+            lineHeight="1.2"
+            mt="2|2|2|8"
+            maxW="none|none|850"
+          >
+            Built using a <span color="#fb9a6d">styling library</span> that has
+            everything you care about.
+          </p>
+          <p
+            fontWeight="700"
+            fontSize="3rem|4rem|4rem|5.2xl"
             letterSpacing="tight"
             lineHeight="1.2|1.1"
             mt="2|2|2|8"
@@ -41,6 +52,10 @@ export default function IndexPage() {
             <span color="secondary">excellent developer experience</span>.
           </p>
           <div display="grid" gap="8|||16" col="1|1|2|3" mt="10|||20">
+            <FeatureCard
+              heading="Blocks Library"
+              text="A library of ready-to-use blocks that you can copy and paste."
+            />
             <FeatureCard
               heading="Style props"
               text="Use any CSS property as prop to rapidly style your components."
@@ -60,10 +75,6 @@ export default function IndexPage() {
             <FeatureCard
               heading="Color Modes"
               text="Add dark mode. Add light mode. Add any color mode."
-            />
-            <FeatureCard
-              heading="Blocks Library"
-              text="A library of 30+ ready-to-use blocks that you can copy and paste."
             />
           </div>
           <div display="inline-grid" col="2" mt="10|||20" gap="4">

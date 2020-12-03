@@ -9,7 +9,7 @@ export default function App({ Component, pageProps }) {
         openGraph={{
           title: "Build something amazing.",
           description:
-            "Reflexjs is styling library that has everything you care about. Speed and excellent developer experience. It comes with starter kits, themes and pre-built blocks to help you build Gatsby and Nextjs sites faster.",
+            "Starter kits, themes and blocks to help you build Gatsby and Nextjs sites faster. Built using a styling library that has everything you care about. Speed and excellent developer experience.",
           type: "website",
           url: "https://reflexjs.org",
           images: [
