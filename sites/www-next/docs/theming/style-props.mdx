@@ -1,21 +1,27 @@
 ---
 title: Style props
+excerpt: Style your component by passing CSS properties as props.
+prev:
+  title: Theme Specification
+  url: /docs/theming/specs
+next:
+  title: Breakpoints
+  url: /docs/theming/breakpoints
 ---
 
 With Reflexjs, you style a component by passing props to it. These props are called style props.
 
 ## Example
 
-```jsx
-/** @jsx jsx */
-import { jsx } from "reflexjs"
+An example `Hero` component styled using style props.
 
+```jsx
 export default Hero({ title, text, url, image}) {
   return (
     <section display="grid" col="2" py="10">
       <div>
-        <h1>{title}</h1>
-        <p>{text}</p>
+        <h1 variant="heading.h1">{title}</h1>
+        <p variant="text.lead">{text}</p>
         <button bg="primary" py="2" px="4" mt="4>Learn more</button>
       </div>
       <img src={image} />

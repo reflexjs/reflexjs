@@ -1,11 +1,17 @@
 ---
 title: sx prop
 excerpt: The sx prop lets you style elements inline, using values from your theme.
+prev:
+  title: Color Modes
+  url: /docs/theming/color-mode
+next:
+  title: Hooks
+  url: /docs/theming/hooks
 ---
 
-In most cases, you should use (style props)[/docs/theming/style-props] to theme your component.
+In most cases, you should use [style props](/docs/theming/style-props) to theme your component.
 
-However in situations where style props cannot be used, such as nested or pseudo selectors, you can fallback to the `sx` props.
+However in situations where style props cannot be used, such as third-party components, nested or pseudo selectors, you can fallback to the `sx` props.
 
 The sx prop lets you add any valid CSS to an element, while using values from your theme to keep styles consistent. You can think of the style object that the sx prop accepts as a superset of CSS.
 

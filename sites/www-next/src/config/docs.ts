@@ -9,8 +9,8 @@ export const docs = {
           url: "/docs",
         },
         {
-          title: "Blocks Library",
-          url: "/docs/blocks",
+          title: "Legacy docs",
+          url: "https://legacy.reflexjs.org/docs",
         },
         {
           title: "GitHub",
@@ -25,6 +25,10 @@ export const docs = {
     {
       title: "Theming",
       items: [
+        {
+          title: "Theme Specification",
+          url: "/docs/theming/theme",
+        },
         {
           title: "Style props",
           url: "/docs/theming/style-props",
@@ -42,8 +46,8 @@ export const docs = {
           url: "/docs/theming/variants",
         },
         {
-          title: "Pseudo props",
-          url: "/docs/theming/pseudo-props",
+          title: "Pseudo selectors",
+          url: "/docs/theming/pseudo-selectors",
         },
         {
           title: "Global styles",
@@ -59,84 +63,7 @@ export const docs = {
         },
         {
           title: "Hooks",
-          items: [
-            {
-              title: "useTheme",
-              url: "/docs/theming/use-theme",
-            },
-            {
-              title: "useColorMode",
-              url: "/docs/theming/use-color-mode",
-            },
-          ],
-        },
-      ],
-    },
-    {
-      title: "Nextjs",
-      items: [
-        {
-          title: "Installation",
-          url: "/docs/nextjs",
-        },
-        {
-          title: "Add a Page",
-          url: "/docs/nextjs/pages",
-        },
-        {
-          title: "Blocks",
-          url: "/docs/nextjs/blocks",
-        },
-      ],
-    },
-    {
-      title: "Gatsby",
-      items: [
-        {
-          title: "Installation",
-          url: "/docs/gatsby",
-        },
-        {
-          title: "Add a page",
-          url: "/docs/gatsby/pages",
-        },
-        {
-          title: "Official packages",
-          items: [
-            {
-              title: "Block",
-              url: "#",
-            },
-            {
-              title: "Nav",
-              url: "#",
-            },
-            {
-              title: "Video",
-              url: "#",
-            },
-          ],
-        },
-        {
-          title: "Upgrading to v1",
-          url: "/docs/upgrading",
-        },
-        {
-          title: "Legacy docs",
-          url: "https://legacy.reflexjs.org",
-        },
-      ],
-    },
-    {
-      title: "React",
-      items: [
-        {
-          title: "Installation",
-          url: "/docs/react",
-        },
-        {
-          title: "Add a page",
-          url: "/docs/react/pages",
+          url: "/docs/theming/hooks",
         },
       ],
     },

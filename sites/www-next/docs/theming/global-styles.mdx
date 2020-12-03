@@ -1,5 +1,12 @@
 ---
 title: Global Styles
+excerpt: Add global styles from your theme.
+prev:
+  title: Pseudo Selectors
+  url: /docs/theming/pseudo-selectors
+next:
+  title: Color Modes
+  url: /docs/theming/color-modes
 ---
 
 Use the `styles.global` key in your theme to set theme-aware styles for any elements.
@@ -7,7 +14,7 @@ Use the `styles.global` key in your theme to set theme-aware styles for any elem
 By default, the `ThemeProvider` will apply styles in `styles.global` globally and `styles.root` to the `<body>` element.
 
 ```js title=theme.js
-module.exports = {
+export default {
   ...
   styles: {
     // Applies globally.

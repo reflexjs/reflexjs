@@ -19,7 +19,7 @@ export const mdxComponents = {
   ),
   div: (props) => <div {...props} />,
   h3: (props) => <LinkedHeading is="h3" mt="8" {...props} />,
-  h4: (props) => <LinkedHeading is="h4" {...props} />,
+  h4: (props) => <LinkedHeading is="h4" mt="8" {...props} />,
   h5: (props) => <LinkedHeading is="h5" {...props} />,
   h6: (props) => <LinkedHeading is="h6" {...props} />,
   p: (props) => <p variant="text.paragraph" {...props} />,
