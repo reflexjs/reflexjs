@@ -1,5 +1,5 @@
 {
-  "name": "reflexjs",
+  "name": "reflexjs-monorepo",
   "private": true,
   "workspaces": [
     "packages/*",
