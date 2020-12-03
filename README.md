@@ -10,6 +10,8 @@ A collection of <strong>starter kits</strong>, <strong>themes</strong> and pre-b
 
 <img src="https://arshad.io/uploads/reflexjs.gif" width="650" />
 
+Demo: https://demo.reflexjs.org
+
 ## Features
 
 - **A library of ready-to-use blocks:** That you can copy and paste into your site
