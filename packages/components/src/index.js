@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, useThemeUI } from "@theme-ui/core"
+import { jsx, useThemeUI } from "theme-ui"
 import isPropValid from "@emotion/is-prop-valid"
 import { forwardRef } from "react"
 import { styleProps } from "./style-props"
