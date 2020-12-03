@@ -23,6 +23,56 @@ export const docs = {
       ],
     },
     {
+      title: "Theming",
+      items: [
+        {
+          title: "Style props",
+          url: "/docs/theming/style-props",
+        },
+        {
+          title: "Breakpoints",
+          url: "/docs/theming/breakpoints",
+        },
+        {
+          title: "Responsive Styles",
+          url: "/docs/theming/responsive-styles",
+        },
+        {
+          title: "Variants",
+          url: "/docs/theming/variants",
+        },
+        {
+          title: "Pseudo props",
+          url: "/docs/theming/pseudo-props",
+        },
+        {
+          title: "Global styles",
+          url: "/docs/theming/global-styles",
+        },
+        {
+          title: "Color modes",
+          url: "/docs/theming/color-modes",
+        },
+        {
+          title: "The sx prop",
+          url: "/docs/theming/sx",
+        },
+        {
+          title: "Hooks",
+          items: [
+            {
+              title: "useTheme",
+              url: "/docs/theming/use-theme",
+            },
+            {
+              title: "useColorMode",
+              url: "/docs/theming/use-color-mode",
+            },
+          ],
+        },
+      ],
+    },
+    {
       title: "Nextjs",
       items: [
         {
@@ -87,56 +137,6 @@ export const docs = {
         {
           title: "Add a page",
           url: "/docs/react/pages",
-        },
-      ],
-    },
-    {
-      title: "Theming",
-      items: [
-        {
-          title: "Style props",
-          url: "/docs/theming/style-props",
-        },
-        {
-          title: "Breakpoints",
-          url: "/docs/theming/breakpoints",
-        },
-        {
-          title: "Responsive Styles",
-          url: "/docs/theming/responsive-styles",
-        },
-        {
-          title: "Variants",
-          url: "/docs/theming/variants",
-        },
-        {
-          title: "Pseudo props",
-          url: "/docs/theming/pseudo-props",
-        },
-        {
-          title: "Global styles",
-          url: "/docs/theming/global-styles",
-        },
-        {
-          title: "Color modes",
-          url: "/docs/theming/color-modes",
-        },
-        {
-          title: "The sx prop",
-          url: "/docs/theming/sx",
-        },
-        {
-          title: "Hooks",
-          items: [
-            {
-              title: "useTheme",
-              url: "/docs/theming/use-theme",
-            },
-            {
-              title: "useColorMode",
-              url: "/docs/theming/use-color-mode",
-            },
-          ],
         },
       ],
     },
