@@ -26,8 +26,8 @@ export default function IndexPage() {
             color="heading"
             py="4"
           >
-            <Highlight>Starter kits, themes and blocks</Highlight> to kickstart
-            your Gatsby and Nextjs sites.
+            <Highlight>Starter kits and blocks</Highlight> to kickstart your
+            Gatsby and Nextjs sites.
           </h2>
           <p
             fontWeight="700"
