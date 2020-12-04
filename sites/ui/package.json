@@ -17,6 +17,7 @@
     "babel-preset-gatsby": "^0.6.0",
     "gatsby": "^2.26.1",
     "gatsby-plugin-manifest": "^2.4.25",
+    "gatsby-plugin-netlify": "^2.7.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "typeface-inter": "^3.12.0"
