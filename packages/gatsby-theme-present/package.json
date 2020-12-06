@@ -40,6 +40,6 @@
     "@reflexjs/utils": "^0.2.1",
     "gatsby-awesome-pagination": "^0.3.6",
     "gatsby-source-filesystem": "^2.3.8",
-    "react-helmet": "^6.1.0"
+    "reveal.js": "^4.0.2"
   }
 }
