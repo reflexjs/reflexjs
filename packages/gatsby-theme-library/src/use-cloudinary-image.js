@@ -6,7 +6,11 @@ export const useCloudinaryImage = (name) => {
       allCloudinaryAsset {
         nodes {
           fluid {
-            ...CloudinaryAssetFluid
+            base64
+            aspectRatio
+            src
+            srcSet
+            sizes
           }
           parent {
             ... on File {

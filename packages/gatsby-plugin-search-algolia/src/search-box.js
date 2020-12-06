@@ -1,17 +1,18 @@
+/** @jsx jsx */
+import { jsx, VisuallyHidden } from "reflexjs"
 import * as React from "react"
 import { connectSearchBox } from "react-instantsearch-dom"
-import { Form, Input, VisuallyHidden, Label } from "@reflexjs/components"
 import { SearchContext } from "./search-context"
 
 export const SearchBox = connectSearchBox(
   ({ currentRefinement, refine, placeholder = "Type to search..." }) => {
     const [, setHasRefinement] = React.useContext(SearchContext)
     return (
-      <Form novalidate role="search">
+      <form noValidate role="search">
         <VisuallyHidden>
-          <Label htmlFor="keywords">Search</Label>
+          <label htmlFor="keywords">Search</label>
         </VisuallyHidden>
-        <Input
+        <input
           id="keywords"
           name="keywords"
           type="search"
@@ -26,7 +27,7 @@ export const SearchBox = connectSearchBox(
             setHasRefinement(event.currentTarget.value !== "")
           }
         />
-      </Form>
+      </form>
     )
   }
 )

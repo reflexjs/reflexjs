@@ -1,6 +1,6 @@
 {
   "name": "example-blog",
-  "version": "0.5.0",
+  "version": "0.6.1",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -12,13 +12,15 @@
     "preview": "gatsby build && gatsby serve"
   },
   "dependencies": {
-    "@reflexjs/gatsby-plugin-metatags": "^0.3.0",
-    "@reflexjs/gatsby-theme-base": "^0.4.0",
-    "@reflexjs/gatsby-theme-post": "^0.7.0",
-    "gatsby": "^2.22.11",
+    "@reflexjs/gatsby-plugin-metatags": "^0.4.0",
+    "@reflexjs/gatsby-theme-base": "^0.5.1",
+    "@reflexjs/gatsby-theme-post": "^0.7.2",
+    "babel-preset-gatsby": "^0.7.0",
+    "gatsby": "^2.26.1",
     "gatsby-plugin-manifest": "^2.4.17",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "reflexjs": "^1.0.0-alpha.8",
     "typeface-open-sans": "^0.0.75",
     "typeface-prata": "^0.0.72"
   }

@@ -1,5 +1,5 @@
-<Section py="8|12|16|24" position="relative">
-  <Container>
+<section py="8|12|16|24" position="relative">
+  <div variant="container">
     <Grid col="1|2" gap="8|12|16">
       <Image
         src="placeholder.jpg"
@@ -15,29 +15,35 @@
         textAlign="center|left"
         py="0|12|16"
       >
-        <H1 m="0" fontWeight="extrabold" lineHeight="tight">
+        <h1
+          variant="heading.h1"
+          m="0"
+          fontWeight="extrabold"
+          lineHeight="tight"
+        >
           Supercharge your Business.
-        </H1>
-        <P fontSize="xl|2xl" mt="4">
+        </h1>
+        <p fontSize="xl|2xl" mt="4">
           We have built a platform to help you engage with your customers,
           wherever they are in the world.
-        </P>
-        <Form d="grid" col="1|auto auto" gap="2" w="full|auto">
+        </p>
+        <form display="grid" col="1|auto auto" gap="2" w="full|auto">
           <VisuallyHidden>
-            <Label htmlFor="hero-05-email">Email</Label>
+            <label htmlFor="hero-05-email">Email</label>
           </VisuallyHidden>
-          <Input
+          <input
+            variant="input"
             type="email"
             id="hero-05-email"
             name="email"
             placeholder="Type your email"
             variant="lg"
           />
-          <Button type="submit" variant="primary lg">
+          <button type="submit" variant="button.primary.lg">
             Join now
-          </Button>
-        </Form>
+          </button>
+        </form>
       </Flexbox>
     </Grid>
-  </Container>
-</Section>
+  </div>
+</section>

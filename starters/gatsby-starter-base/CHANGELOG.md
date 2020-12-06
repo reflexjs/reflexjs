@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.2](https://github.com/reflexjs/reflexjs/compare/gatsby-starter-base@0.6.1...gatsby-starter-base@0.6.2) (2020-12-03)
+
+**Note:** Version bump only for package gatsby-starter-base
+
+
+
+
+
+## [0.6.1](https://github.com/reflexjs/reflex/compare/gatsby-starter-base@0.6.0...gatsby-starter-base@0.6.1) (2020-12-03)
+
+**Note:** Version bump only for package gatsby-starter-base
+
+
+
+
+
 # [0.6.0](https://github.com/reflexjs/reflex/compare/gatsby-starter-base@0.5.2...gatsby-starter-base@0.6.0) (2020-11-10)
 
 

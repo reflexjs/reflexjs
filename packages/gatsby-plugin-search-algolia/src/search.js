@@ -1,7 +1,8 @@
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import * as React from "react"
 import algoliasearch from "algoliasearch/lite"
 import { InstantSearch, Configure } from "react-instantsearch-dom"
-import { Div } from "@reflexjs/components"
 import { SearchContext } from "./search-context"
 import { SearchBox } from "./search-box"
 import { Hits } from "./hits"
@@ -18,10 +19,10 @@ export const Search = ({ placeholder, ...props }) => {
         searchClient={algoliasearch(appId, searchKey)}
       >
         <Configure distinct hitsPerPage={5} />
-        <Div position="relative" {...props}>
+        <div position="relative" {...props}>
           <SearchBox placeholder={placeholder} />
           {hasRefinement && <Hits />}
-        </Div>
+        </div>
       </InstantSearch>
     </SearchContext.Provider>
   )

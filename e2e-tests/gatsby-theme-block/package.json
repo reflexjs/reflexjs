@@ -1,7 +1,7 @@
 {
   "name": "e2e-tests-gatsby-theme-block",
   "private": true,
-  "version": "0.2.0",
+  "version": "0.2.2",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby clean && gatsby develop",
@@ -11,11 +11,11 @@
     "test:e2e:ci": "start-server-and-test dev http://localhost:8000 cy:run"
   },
   "dependencies": {
-    "@reflexjs/gatsby-theme-block": "^0.4.0",
-    "@reflexjs/gatsby-theme-core": "^0.6.0"
+    "@reflexjs/gatsby-theme-block": "^0.5.1",
+    "@reflexjs/gatsby-theme-core": "^0.7.1"
   },
   "devDependencies": {
-    "gatsby": "^2.23.11",
+    "gatsby": "^2.26.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   }

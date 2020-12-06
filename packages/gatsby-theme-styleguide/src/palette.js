@@ -1,19 +1,19 @@
-import * as React from "react"
-import { useThemeUI, CopyButton } from "@reflexjs/gatsby-theme-core"
-import { Grid, Div, Span, Flexbox } from "@reflexjs/components"
+/** @jsx jsx */
+import { jsx, Grid, Flexbox } from "reflexjs"
+import { useTheme, CopyButton } from "@reflexjs/gatsby-theme-core"
 
 export const Palette = () => {
   const {
     theme: { colors },
-  } = useThemeUI()
+  } = useTheme()
 
   return (
     <Grid col="repeat(5, 1fr)" gap="8">
       {Object.keys(colors).map(
         (name, index) =>
           typeof colors[name] === "string" && (
-            <Div key={index}>
-              <Div
+            <div key={index}>
+              <div
                 h="150px"
                 w="100%"
                 rounded="md"
@@ -27,12 +27,12 @@ export const Palette = () => {
                 mt="2"
                 fontSize="sm"
               >
-                <Span>
+                <span>
                   {name} ({colors[name]})
-                </Span>
+                </span>
                 <CopyButton variant="icon" color="text" value={name} />
               </Flexbox>
-            </Div>
+            </div>
           )
       )}
     </Grid>

@@ -1,7 +1,7 @@
 {
   "name": "www",
   "private": true,
-  "version": "0.14.0",
+  "version": "0.15.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -16,19 +16,21 @@
     "test:e2e:ci": "start-server-and-test dev http://localhost:8080 cy:run"
   },
   "dependencies": {
-    "@reflexjs/gatsby-plugin-metatags": "^0.3.0",
-    "@reflexjs/gatsby-theme-base": "^0.4.0",
-    "@reflexjs/gatsby-theme-doc": "^0.6.0",
-    "@reflexjs/gatsby-theme-library": "^0.5.0",
-    "@reflexjs/gatsby-theme-post": "^0.7.0",
-    "@reflexjs/gatsby-theme-styleguide": "^0.3.0",
-    "@reflexjs/gatsby-theme-tutorial": "^0.4.0",
-    "@reflexjs/gatsby-theme-video": "^0.5.0",
-    "gatsby": "^2.22.11",
+    "@reflexjs/gatsby-plugin-metatags": "^0.4.0",
+    "@reflexjs/gatsby-theme-base": "^0.5.1",
+    "@reflexjs/gatsby-theme-doc": "^0.7.1",
+    "@reflexjs/gatsby-theme-library": "^0.6.1",
+    "@reflexjs/gatsby-theme-post": "^0.7.2",
+    "@reflexjs/gatsby-theme-styleguide": "^0.3.2",
+    "@reflexjs/gatsby-theme-tutorial": "^0.4.2",
+    "@reflexjs/gatsby-theme-video": "^0.6.1",
+    "gatsby": "^2.26.1",
     "gatsby-plugin-manifest": "^2.4.11",
     "gatsby-plugin-sitemap": "^2.4.11",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
+    "reflexjs": "^1.0.0-alpha.8",
+    "theme-ui": "^0.4.0-rc.5",
     "typeface-inter": "^3.12.0",
     "typeface-lora": "^0.0.72",
     "typeface-merriweather": "^0.0.72",
@@ -36,6 +38,7 @@
     "typeface-prata": "^0.0.72"
   },
   "devDependencies": {
+    "babel-preset-gatsby": "^0.6.0",
     "glob": "^7.1.6",
     "puppeteer": "^5.2.1"
   }

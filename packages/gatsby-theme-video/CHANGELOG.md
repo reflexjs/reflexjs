@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.6.1](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-video@0.6.0...@reflexjs/gatsby-theme-video@0.6.1) (2020-12-03)
+
+**Note:** Version bump only for package @reflexjs/gatsby-theme-video
+
+
+
+
+
+# [0.6.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-video@0.5.0...@reflexjs/gatsby-theme-video@0.6.0) (2020-12-03)
+
+
+### Bug Fixes
+
+* update example-video ([449fe8d](https://github.com/reflexjs/reflex/commit/449fe8da1d9b188d66ca1a07d2ec8a457593f2fc))
+* update packages to reflexjs ([b028d32](https://github.com/reflexjs/reflex/commit/b028d328ddbbd41e6bd023a2c6317128aa4c284e))
+
+
+### Features
+
+* **codemod:** change Container to variant container ([33563d0](https://github.com/reflexjs/reflex/commit/33563d06087a2c7762a6b26027ef9677acc579c3))
+* update example-video to reflexjs ([2cb6c51](https://github.com/reflexjs/reflex/commit/2cb6c515739caf9444db411d6a421fc6e21b4a24))
+
+
+
+
+
 # [0.5.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-video@0.4.8...@reflexjs/gatsby-theme-video@0.5.0) (2020-11-10)
 
 

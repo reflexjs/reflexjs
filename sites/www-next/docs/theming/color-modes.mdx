@@ -1,14 +1,18 @@
 ---
 title: Color modes
 excerpt: Add dark mode and other color modes.
+prev:
+  title: Global Styles
+  url: /docs/theming/global-styles
+next:
+  title: The sx prop
+  url: /docs/theming/sx
 ---
-
-## Defining colors
 
 To add color modes to your app, start by defining the code modes in your `theme.js`.
 
 ```js title=theme.js
-module.exports = {
+export default {
   // highlight-start
   colors: {
     text: "#111",
@@ -50,11 +54,9 @@ Use the `useColorMode` hook in your application to access the current color mode
 
 <Callout>
 
-
 This value is stored in `localStorage` and used whenever the page is loaded.
 
 </Callout>
-
 
 ```jsx
 import React from "react"

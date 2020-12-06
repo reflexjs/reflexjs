@@ -1,18 +1,20 @@
 interface CalloutProps {
-  type: "success" | "warning" | "info" | "error"
+  type?: "primary" | "accent"
   children?: React.ReactNode
 }
 
-export function Callout({ type = "info", children }: CalloutProps) {
+export function Callout({ type = "accent", children }: CalloutProps) {
   return (
     <div
-      borderLeftWidth={4}
+      borderTopWidth="4"
+      borderTopColor={type}
       rounded="md"
       bg="muted"
       p="4"
       sx={{
         "> p": {
           m: 0,
+          fontSize: "md",
         },
       }}
     >

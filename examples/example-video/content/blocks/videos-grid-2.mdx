@@ -6,72 +6,73 @@ export const Videos = () => {
     <Container maxW="900px" my="10|10|20">
       {videos &&
         videos.map((video, index) => (
-          <VideoTeaser key={index} mb="10" {...video} />
+          <VideoTeaser key={index} video={video} mb="10" />
         ))}
     </Container>
   ) : null
 }
 
-export const VideoTeaser = ({
-  title,
-  slug,
-  excerpt,
-  thumbnail,
-  date,
-  datetime,
-  data,
-  ...props
-}) => (
-  <Article position="relative" {...props}>
-    <Grid col="1|1|350px 1fr" gap="4|4|10" alignItems="flex-start">
-      {thumbnail && (
-        <Link href={slug} d="block" position="relative">
-          {data.duration && (
-            <Span
-              color="white"
-              bg="primary"
-              rounded="md"
-              bottom="4"
-              right="4"
-              zIndex="100"
-              px="2"
-              py="1"
-              fontSize="sm"
-              position="absolute"
-            >
-              {data.duration}
-            </Span>
-          )}
-          <Image
-            src={thumbnail}
-            title={title}
-            alt={title}
-            aspectRatio={16 / 9}
-            rounded="lg"
-            overflow="hidden"
-            w="full"
-          />
-        </Link>
-      )}
-      <Div py="2">
-        {title && (
-          <Link href={slug}>
-            <H2 my="0" fontSize="3xl" hoverColor="primary">
-              {title}
-            </H2>
+export const VideoTeaser = ({ video, ...props }) => {
+  const { title, slug, excerpt, thumbnail, date, datetime, data } = video
+  return (
+    <article position="relative" {...props}>
+      <Grid col="1|1|350px 1fr" gap="4|4|10" alignItems="flex-start">
+        {thumbnail && (
+          <Link href={slug} display="block" position="relative">
+            {data.duration && (
+              <span
+                color="white"
+                bg="primary"
+                rounded="md"
+                bottom="4"
+                right="4"
+                zIndex="100"
+                px="2"
+                py="1"
+                fontSize="sm"
+                position="absolute"
+              >
+                {data.duration}
+              </span>
+            )}
+            <Image
+              src={thumbnail}
+              title={title}
+              alt={title}
+              aspectRatio={16 / 9}
+              rounded="lg"
+              overflow="hidden"
+              w="full"
+            />
           </Link>
         )}
-        {excerpt && (
-          <P mt="2" fontSize="md">
-            {excerpt}
-          </P>
-        )}
-        {date && (
-          <Time dateTime={datetime} fontSize="sm">
-            {date}
-          </Time>
-        )}
-      </Div>
-    </Grid>
-  </Article>
-)
+        <div py="2">
+          {title && (
+            <Link href={slug}>
+              <h2
+                variant="heading.h2"
+                my="0"
+                fontSize="3xl"
+                _hover={{
+                  color: "primary",
+                }}
+              >
+                {title}
+              </h2>
+            </Link>
+          )}
+          {excerpt && (
+            <p mt="2" fontSize="md">
+              {excerpt}
+            </p>
+          )}
+          {date && (
+            <time dateTime={datetime} fontSize="sm">
+              {date}
+            </time>
+          )}
+        </div>
+      </Grid>
+    </article>
+  )
+}

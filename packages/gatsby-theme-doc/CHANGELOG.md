@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-doc@0.7.0...@reflexjs/gatsby-theme-doc@0.7.1) (2020-12-03)
+
+**Note:** Version bump only for package @reflexjs/gatsby-theme-doc
+
+
+
+
+
+# [0.7.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-doc@0.6.0...@reflexjs/gatsby-theme-doc@0.7.0) (2020-12-03)
+
+
+### Bug Fixes
+
+* update packages to reflexjs ([b028d32](https://github.com/reflexjs/reflex/commit/b028d328ddbbd41e6bd023a2c6317128aa4c284e))
+
+
+### Features
+
+* **codemod:** change Container to variant container ([33563d0](https://github.com/reflexjs/reflex/commit/33563d06087a2c7762a6b26027ef9677acc579c3))
+
+
+
+
+
 # [0.6.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-doc@0.5.3...@reflexjs/gatsby-theme-doc@0.6.0) (2020-11-10)
 
 

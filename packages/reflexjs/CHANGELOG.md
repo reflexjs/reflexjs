@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.8](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0-alpha.7...reflexjs@1.0.0-alpha.8) (2020-12-03)
+
+
+### Bug Fixes
+
+* **reflexjs:** handle fragment ([7bc10cb](https://github.com/reflexjs/reflex/commit/7bc10cb4dd1b0db4cab5896b803b248f4b02282c))
+* **reflexjs:** minor code fixes ([8a8bb76](https://github.com/reflexjs/reflex/commit/8a8bb76bdcb8bcd05878186b5900e121627f1a55))
+* **www-next:** update blocks ([f5a1a01](https://github.com/reflexjs/reflex/commit/f5a1a010feb0f9284d780bfa6ad948ec2704563d))
+* **www-next:** update the blocks library ([9ac51ba](https://github.com/reflexjs/reflex/commit/9ac51ba95ad1f9626cde9e1e54e622d8ed4a32ad))
+* update packages to reflexjs ([b028d32](https://github.com/reflexjs/reflex/commit/b028d328ddbbd41e6bd023a2c6317128aa4c284e))
+
+
+### Features
+
+* **codemod:** change Container to variant container ([33563d0](https://github.com/reflexjs/reflex/commit/33563d06087a2c7762a6b26027ef9677acc579c3))
+* **reflexjs:** update base preset ([5a67ffc](https://github.com/reflexjs/reflex/commit/5a67ffc1b3c1b0500e41e3b3dfa6a45d318a84eb))
+* **www-next:** add animation scenes ([3e94f2f](https://github.com/reflexjs/reflex/commit/3e94f2f6d9f852e006c5453ce0043d59953e0f5b))
+
+
+
+
+
 # [1.0.0-alpha.7](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0-alpha.6...reflexjs@1.0.0-alpha.7) (2020-11-16)
 
 

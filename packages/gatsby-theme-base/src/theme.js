@@ -3,6 +3,4 @@
 import { merge } from "@reflexjs/gatsby-theme-core"
 import base from "@reflexjs/preset-base"
 
-export default {
-  preset: base,
-}
+export default merge(base, {})

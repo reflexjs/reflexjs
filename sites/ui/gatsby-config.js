@@ -32,5 +32,6 @@ module.exports = {
         icon: `content/images/favicon.png`,
       },
     },
+    `gatsby-plugin-netlify`,
   ],
 }

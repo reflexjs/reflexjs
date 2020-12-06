@@ -1,6 +1,6 @@
 export const Cards = ({ ...props }) => (
-  <Section py="8|12|16|24" {...props}>
-    <Container>
+  <section py="8|12|16|24" {...props}>
+    <div variant="container">
       <Grid col="1|2" gap="6|8|10">
         <Card
           image="placeholder.jpg"
@@ -17,21 +17,21 @@ export const Cards = ({ ...props }) => (
           link="#"
         />
       </Grid>
-    </Container>
-  </Section>
+    </div>
+  </section>
 )
 
 export const Card = ({ image, title, description, link, ...props }) => (
-  <Div {...props}>
+  <div {...props}>
     <Image src={image} w="full" />
-    <Div py="4|6|8">
-      <H2 m="0" fontSize="3xl">
+    <div py="4|6|8">
+      <h2 variant="heading.h2" m="0" fontSize="3xl">
         {title}
-      </H2>
-      <P fontSize="xl">{description}</P>
-      <Button as="a" href={link} variant="primary">
+      </h2>
+      <p fontSize="xl">{description}</p>
+      <button as="a" href={link} variant="button.primary">
         Learn more <Icon name="arrow-right" ml="2" />
-      </Button>
-    </Div>
-  </Div>
+      </button>
+    </div>
+  </div>
 )

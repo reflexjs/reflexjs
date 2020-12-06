@@ -165,12 +165,13 @@ exports.createPages = async ({ actions, graphql, reporter }, themeOptions) => {
 
   if (posts.length) {
     const publishedPosts = posts.filter(({ published }) => published)
+    const paginatedBasePath = basePath === `` ? `/` : `${basePath}/`
     paginate({
       createPage,
       items: publishedPosts,
       itemsPerPage: postsPerPage,
       pathPrefix: ({ pageNumber }) =>
-        pageNumber === 0 ? basePath : `${basePath}/page`,
+        pageNumber === 0 ? paginatedBasePath : `${paginatedBasePath}page`,
       component: require.resolve(`./src/posts-template.js`),
       context: {
         total: publishedPosts.length,

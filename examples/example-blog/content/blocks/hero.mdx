@@ -5,9 +5,10 @@ export const IntroBlock = () => {
   // And display the excerpt and picture in the hero.
   const [profile] = useProfile()
   return (
-    <Section pt="4|4|4|10" bg="primary" color="black">
+    <section pt="4|4|4|10" bg="primary" color="black">
       <Container>
-        <H1
+        <h1
+          variant="heading.h1"
           my="0"
           color="black"
           textAlign="center"
@@ -15,7 +16,7 @@ export const IntroBlock = () => {
           maxW="null|null|80%"
         >
           {profile.excerpt}
-        </H1>
+        </h1>
         <Image
           src={profile.picture}
           size="250px|300px|300px|400px"
@@ -25,6 +26,6 @@ export const IntroBlock = () => {
           opacity="0.5"
         />
       </Container>
-    </Section>
+    </section>
   )
 }

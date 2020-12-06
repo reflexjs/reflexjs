@@ -1,14 +1,14 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import { MDXRenderer } from "@reflexjs/gatsby-theme-core"
-import { H1, Container } from "@reflexjs/components"
 import { Image } from "@reflexjs/gatsby-plugin-image"
 
 export const Profile = ({ name, body, picture }) => {
   return (
-    <Container py="10">
+    <div variant="container" py="10">
       {picture && <Image src={picture} />}
-      <H1>{name}</H1>
+      <h1 variant="heading.h1">{name}</h1>
       <MDXRenderer>{body}</MDXRenderer>
-    </Container>
+    </div>
   )
 }

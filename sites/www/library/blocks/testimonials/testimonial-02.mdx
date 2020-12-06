@@ -1,12 +1,12 @@
 export const Testimonials = ({ ...props }) => (
-  <Section py="8|12|16|24" {...props}>
-    <Container>
-      <H2 m="0" textAlign="center">
+  <section py="8|12|16|24" {...props}>
+    <div variant="container">
+      <h2 variant="heading.h2" m="0" textAlign="center">
         They place their trust in us
-      </H2>
-      <P fontSize="xl|2xl" mt="2" textAlign="center">
+      </h2>
+      <p fontSize="xl|2xl" mt="2" textAlign="center">
         Aut facilis asperiores aliquam odit aliquam optio.
-      </P>
+      </p>
       <Grid col="1|3" gap="16|6|8" mt="8">
         <Testimonial
           avatar="placeholder.jpg"
@@ -27,8 +27,8 @@ export const Testimonials = ({ ...props }) => (
           message="Praesent sapien massa, convallis a pellentesque nec, egestas non nisi lectus."
         />
       </Grid>
-    </Container>
-  </Section>
+    </div>
+  </section>
 )
 
 export const Testimonial = ({
@@ -38,7 +38,7 @@ export const Testimonial = ({
   message,
   ...props
 }) => (
-  <Div
+  <div
     borderWidth="1px"
     rounded="lg"
     p="6"
@@ -47,12 +47,12 @@ export const Testimonial = ({
     {...props}
   >
     <Image src={avatar} size="30" rounded="full" overflow="hidden" mx="auto" />
-    <P>{message}</P>
-    <P mb="0" fontSize="xl" fontWeight="semibold">
+    <p>{message}</p>
+    <p mb="0" fontSize="xl" fontWeight="semibold">
       {author}
-    </P>
-    <P m="0" fontSize="md">
+    </p>
+    <p m="0" fontSize="md">
       {description}
-    </P>
-  </Div>
+    </p>
+  </div>
 )

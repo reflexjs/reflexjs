@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.2](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-styleguide@0.3.1...@reflexjs/gatsby-theme-styleguide@0.3.2) (2020-12-03)
+
+
+### Bug Fixes
+
+* rename useThemeUI to useTheme ([a15e5ce](https://github.com/reflexjs/reflex/commit/a15e5cee46de052f6ce7a05394624ba8f30492bc))
+
+
+
+
+
+## [0.3.1](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-styleguide@0.3.0...@reflexjs/gatsby-theme-styleguide@0.3.1) (2020-12-03)
+
+
+### Bug Fixes
+
+* update packages to reflexjs ([b028d32](https://github.com/reflexjs/reflex/commit/b028d328ddbbd41e6bd023a2c6317128aa4c284e))
+
+
+
+
+
 # [0.3.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-styleguide@0.2.7...@reflexjs/gatsby-theme-styleguide@0.3.0) (2020-11-10)
 
 

@@ -10,7 +10,9 @@ module.exports = (themeOptions) => {
 
   return {
     plugins: [
-      `gatsby-plugin-theme-ui`,
+      {
+        resolve: `gatsby-plugin-reflexjs`,
+      },
       `gatsby-plugin-catch-links`,
       `gatsby-plugin-sharp`,
       `gatsby-transformer-sharp`,

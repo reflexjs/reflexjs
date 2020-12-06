@@ -1,5 +1,5 @@
 export const BlockLink = ({ heading, text, url, links, ...props }) => (
-  <Div
+  <div
     borderWidth="1px"
     rounded="xl"
     maxW="none|none|350px"
@@ -8,13 +8,12 @@ export const BlockLink = ({ heading, text, url, links, ...props }) => (
     position="relative"
     {...props}
   >
-    <A
+    <a
       href={url}
       p="4"
-      d="flex"
+      display="flex"
       flexDirection="column"
       alignItems="flex-start"
-      hoverColor="primary"
       sx={{
         "&:hover": {
           h4: {
@@ -22,19 +21,28 @@ export const BlockLink = ({ heading, text, url, links, ...props }) => (
           },
         },
       }}
+      _hover={{
+        color: "primary",
+      }}
     >
-      <H4 my="0" d="flex" fontSize="xl|2xl" alignItems="center">
+      <h4
+        variant="heading.h4"
+        my="0"
+        display="flex"
+        fontSize="xl|2xl"
+        alignItems="center"
+      >
         {heading}
         <Icon name="arrow-right" ml="2" size="5" />
-      </H4>
-      <P mt="2" mb="0" color="text" fontSize="md">
+      </h4>
+      <p mt="2" mb="0" color="text" fontSize="md">
         {text}
-      </P>
-    </A>
+      </p>
+    </a>
     {links && (
       <Flexbox flexDirection="column" alignItems="flex-start">
         {links.map((link) => (
-          <A
+          <a
             href={link.url}
             px="4"
             py="2"
@@ -42,14 +50,16 @@ export const BlockLink = ({ heading, text, url, links, ...props }) => (
             borderTopWidth="1px"
             w="full"
             color="text"
-            hoverColor="primary"
-            hoverTransform="translateX(5px)"
             transition="transform .25s ease-in"
+            _hover={{
+              color: "primary",
+              transform: "translateX(5px)",
+            }}
           >
             {link.title}
-          </A>
+          </a>
         ))}
       </Flexbox>
     )}
-  </Div>
+  </div>
 )

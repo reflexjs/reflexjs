@@ -1,11 +1,13 @@
 export const Pricing = ({ ...props }) => (
-  <Section py="8|12|16|24" {...props}>
-    <Container>
+  <section py="8|12|16|24" {...props}>
+    <div variant="container">
       <Flexbox flexDirection="column" textAlign="center">
-        <H2 m="0">Our Pricing</H2>
-        <P fontSize="xl|2xl" mt="2" textAlign="center">
+        <h2 variant="heading.h2" m="0">
+          Our Pricing
+        </h2>
+        <p fontSize="xl|2xl" mt="2" textAlign="center">
           We have the best plan for you to start your business
-        </P>
+        </p>
       </Flexbox>
       <Grid col="1|2|3" mt="4|6|8" gap="4|6|0">
         <PricingItem
@@ -46,8 +48,8 @@ export const Pricing = ({ ...props }) => (
           borderLeft="null|null|none"
         />
       </Grid>
-    </Container>
-  </Section>
+    </div>
+  </section>
 )
 
 export const PricingItem = ({
@@ -68,32 +70,39 @@ export const PricingItem = ({
     my={isSelected ? 0 : "0|0|8"}
     {...props}
   >
-    <H3 m="0">{heading}</H3>
+    <h3 variant="heading.h3" m="0">
+      {heading}
+    </h3>
     <Flexbox alignItems="flex-end" mt="6">
-      <P fontSize="6xl" fontWeight="semibold" lineHeight="none" m="0">
+      <p fontSize="6xl" fontWeight="semibold" lineHeight="none" m="0">
         ${price}
-      </P>
-      <P m="0">/ month</P>
+      </p>
+      <p m="0">/ month</p>
     </Flexbox>
-    <P fontSize="md" textAlign="center" mt="6">
+    <p fontSize="md" textAlign="center" mt="6">
       {description}
-    </P>
-    <Ul listStyle="none" p="0" mt="4" flex="1">
+    </p>
+    <ul listStyle="none" p="0" mt="4" flex="1">
       {list.map((listItem, index) => (
-        <Li
+        <li
           key={index}
           fontWeight="semibold"
-          d="inline-flex"
+          display="inline-flex"
           alignItems="center"
           mb="2"
         >
           <Icon name="check" mr="2" color="primary" />
           {listItem}
-        </Li>
+        </li>
       ))}
-    </Ul>
-    <Button variant={isSelected ? "primary" : "outlinePrimary"} mt="8" w="full">
+    </ul>
+    <button
+      variant="button"
+      variant={isSelected ? "primary" : "outlinePrimary"}
+      mt="8"
+      w="full"
+    >
       Select Plan
-    </Button>
+    </button>
   </Flexbox>
 )

@@ -1,5 +1,5 @@
 export { MDXRenderer } from "gatsby-plugin-mdx"
-export { ThemeProvider, useColorMode, useThemeUI, merge } from "theme-ui"
+export { ThemeProvider, useColorMode, useTheme, merge } from "reflexjs"
 export { useBreakpointIndex } from "@theme-ui/match-media"
 export * from "./src/button-link"
 export * from "./src/code-block"

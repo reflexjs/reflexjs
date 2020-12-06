@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, useThemeUI } from "@theme-ui/core"
+import { jsx, useThemeUI } from "theme-ui"
 import isPropValid from "@emotion/is-prop-valid"
 import { forwardRef } from "react"
 import { styleProps } from "./style-props"
@@ -229,6 +229,24 @@ export const Container = getTag(
   "div",
   {
     mx: "auto",
+    px: [4, 6, 6, 4],
+    maxWidth: 1110,
+
+    sm: {
+      maxWidth: 640,
+    },
+
+    md: {
+      maxWidth: 768,
+    },
+
+    lg: {
+      maxWidth: 1024,
+    },
+
+    xl: {
+      maxWidth: 1280,
+    },
   },
   "container"
 )
@@ -236,7 +254,8 @@ export const Container = getTag(
 export const Flexbox = getTag(
   "div",
   {
-    d: "flex",
+    display: "flex",
+    alignItems: "center",
   },
   "flexbox"
 )
@@ -244,7 +263,8 @@ export const Flexbox = getTag(
 export const Grid = getTag(
   "div",
   {
-    d: "grid",
+    display: "grid",
+    gridAutoFlow: "dense",
   },
   "grid"
 )

@@ -4,7 +4,7 @@ export const HeaderBlock = ({ ...props }) => {
   const [showMenu, setShowMenu] = React.useState(false)
   const navName = "header"
   return (
-    <Header
+    <header
       position={["sticky", "relative"]}
       top="0"
       bg="primary"
@@ -13,7 +13,11 @@ export const HeaderBlock = ({ ...props }) => {
       {...props}
     >
       <Container>
-        <Flexbox d={["none", "flex"]} justifyContent="space-between" py="1">
+        <Flexbox
+          display={["none", "flex"]}
+          justifyContent="space-between"
+          py="1"
+        >
           <Branding />
           <NavMenu
             name={navName}
@@ -32,7 +36,7 @@ export const HeaderBlock = ({ ...props }) => {
         </Flexbox>
       </Container>
       <Flexbox
-        d={["flex", "none"]}
+        display={["flex", "none"]}
         flexDirection="column"
         justifyContent="center"
       >
@@ -45,15 +49,15 @@ export const HeaderBlock = ({ ...props }) => {
           transition="all .15s ease-in"
         >
           <Branding />
-          <Button
-            variant="link"
+          <button
+            variant="button.link"
             outline="none"
             onClick={() => setShowMenu(true)}
           >
             <Icon name="menu" size="7" color="black" />
-          </Button>
+          </button>
         </Flexbox>
-        <Div
+        <div
           position="absolute"
           zIndex="1000"
           bg="background"
@@ -75,9 +79,13 @@ export const HeaderBlock = ({ ...props }) => {
         >
           <Flexbox justifyContent="space-between" w="full" py="2" px="0">
             <Branding color="text" />
-            <Button variant="link" onClick={() => setShowMenu(false)} mr={-3}>
+            <button
+              variant="button.link"
+              onClick={() => setShowMenu(false)}
+              mr={-3}
+            >
               <Icon name="x" size="6" />
-            </Button>
+            </button>
           </Flexbox>
           <NavMenu
             name={navName}
@@ -94,42 +102,48 @@ export const HeaderBlock = ({ ...props }) => {
           <Flexbox py="4" justifyContent="space-between">
             <ModeToggle ml="auto" color="text" />
           </Flexbox>
-        </Div>
+        </div>
       </Flexbox>
-    </Header>
+    </header>
   )
 }
 
 export const Branding = ({ ...props }) => {
   const { title } = useSiteMetadata()
   return (
-    <A
+    <a
       href="/"
       fontSize="xl"
       fontFamily="heading"
       color="black"
-      hoverColor="black"
       {...props}
+      _hover={{
+        color: "black",
+      }}
     >
       {title}
-    </A>
+    </a>
   )
 }
 
 export const ModeToggle = ({ ...props }) => {
   const [colorMode, setColorMode] = useColorMode()
   return (
-    <Button
-      variant="icon"
+    <button
+      variant="button.icon"
       onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
       ml={[2, 4]}
       color="black"
-      hoverColor="black"
-      focusColor="black"
       {...props}
+      _hover={{
+        color: "black",
+      }}
+      _focus={{
+        color: "black",
+      }}
     >
       <Icon name={colorMode === "default" ? "sun" : "moon"} size="5" />
       <VisuallyHidden>Toggle mode</VisuallyHidden>
-    </Button>
+    </button>
   )
 }

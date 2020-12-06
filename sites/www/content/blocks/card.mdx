@@ -1,9 +1,11 @@
 export const Card = ({ heading, text, image = "placeholder.jpg" }) => (
-  <Div borderWidth="1px" rounded="5px">
+  <div borderWidth="1px" rounded="5px">
     <Image src={image} />
-    <Div p="6">
-      <H4 my="0">{heading}</H4>
-      <P mb="0">{text}</P>
-    </Div>
-  </Div>
+    <div p="6">
+      <h4 variant="heading.h4" my="0">
+        {heading}
+      </h4>
+      <p mb="0">{text}</p>
+    </div>
+  </div>
 )

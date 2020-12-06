@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx, Container, Grid, Flexbox } from "reflexjs"
 import * as React from "react"
 import {
   MDXRenderer,
@@ -5,16 +7,6 @@ import {
   ThemeProvider,
   Icon,
 } from "@reflexjs/gatsby-theme-core"
-import {
-  H1,
-  Container,
-  Grid,
-  Div,
-  Button,
-  P,
-  A,
-  Flexbox,
-} from "@reflexjs/components"
 import { Block } from "@reflexjs/gatsby-theme-block"
 import { MDXComponents } from "./mdx-components"
 import { DocNav } from "./doc-nav"
@@ -25,9 +17,10 @@ export const Doc = ({ title, excerpt, body, previousDoc, nextDoc }) => {
   return (
     <ThemeProvider theme={docTheme}>
       <MDXProvider components={MDXComponents}>
-        <Container pb="8">
-          <Button
-            d={["inline-flex", "none"]}
+        <div variant="container" pb="8">
+          <button
+            variant="button"
+            display="inline-flex|none"
             w="100%"
             justifyContent="space-between"
             boxShadow="lg"
@@ -50,13 +43,13 @@ export const Doc = ({ title, excerpt, body, previousDoc, nextDoc }) => {
               transition="all .15s ease-in"
               mr="2"
             />
-          </Button>
+          </button>
           <Grid
             col="1|180px 1fr|180px 1fr|250px 1fr"
             gap="null|6|6|20"
             alignItems="flex-start"
           >
-            <Div
+            <div
               position={["fixed", "sticky"]}
               top={[showMenu ? "116px" : "-100vh", 0]}
               transition="all .15s ease-in"
@@ -72,46 +65,41 @@ export const Doc = ({ title, excerpt, body, previousDoc, nextDoc }) => {
               pb="32"
             >
               <DocNav onClick={() => setShowMenu(false)} />
-            </Div>
-            <Div mt={[10, 0]} pt="8" className="DocSearch-content">
+            </div>
+            <div mt={[10, 0]} pt="8" className="DocSearch-content">
               <Block src="docs-header" my="6" />
 
               {title && (
-                <H1 mt="0" mb="2" fontWeight="extrabold">
+                <h1 variant="heading.h1" mt="0" mb="2" fontWeight="extrabold">
                   {title}
-                </H1>
+                </h1>
               )}
 
               {excerpt && (
-                <P fontSize="xl|2xl" mt="2" mb="0">
+                <p fontSize="xl|2xl" mt="2" mb="0">
                   {excerpt}
-                </P>
+                </p>
               )}
 
               {body && <MDXRenderer>{body}</MDXRenderer>}
 
               <Flexbox justifyContent="space-between" mt="10">
                 {previousDoc && (
-                  <Button as={A} variant="link" href={previousDoc.slug}>
+                  <a variant="button.link" href={previousDoc.slug}>
                     <Icon name="arrow-left" mr="2" />
                     {previousDoc.title}
-                  </Button>
+                  </a>
                 )}
                 {nextDoc && (
-                  <Button
-                    as={A}
-                    variant="primary"
-                    ml="auto"
-                    href={nextDoc.slug}
-                  >
+                  <a variant="button.primary" ml="auto" href={nextDoc.slug}>
                     {nextDoc.title}
                     <Icon name="arrow-right" ml="2" />
-                  </Button>
+                  </a>
                 )}
               </Flexbox>
-            </Div>
+            </div>
           </Grid>
-        </Container>
+        </div>
       </MDXProvider>
     </ThemeProvider>
   )

@@ -1,5 +1,5 @@
 import * as React from "react"
-import { Article, H2, P, Div, Grid, Span } from "@reflexjs/components"
+import { Grid } from "reflexjs"
 import { Link } from "@reflexjs/gatsby-theme-core"
 import { Image } from "@reflexjs/gatsby-plugin-image"
 
@@ -8,9 +8,15 @@ export const Videos = ({ videos }) => {
     <Grid col="1|1|2" gap="6|8|10|14">
       {videos &&
         videos.map((video, index) => (
-          <Div key={index} mb="8">
-            <VideoTeaser {...video} />
-          </Div>
+          <div key={index} mb="8">
+            <VideoTeaser
+              title={video.title}
+              excerpt={video.excerpt}
+              slug={video.slug}
+              thumbnail={video.thumbnail}
+              data={video.data}
+            />
+          </div>
         ))}
     </Grid>
   ) : null
@@ -24,9 +30,9 @@ export const VideoTeaser = ({
   data,
   ...props
 }) => (
-  <Article position="relative" {...props}>
+  <article position="relative" {...props}>
     {data.duration && (
-      <Span
+      <span
         color="white"
         bg="primary"
         rounded="md"
@@ -39,10 +45,10 @@ export const VideoTeaser = ({
         fontSize="sm"
       >
         {data.duration}
-      </Span>
+      </span>
     )}
     {thumbnail && (
-      <Link href={slug} d="block">
+      <Link href={slug} display="block">
         <Image
           src={thumbnail}
           title={title}
@@ -55,15 +61,23 @@ export const VideoTeaser = ({
     )}
     {title && (
       <Link href={slug}>
-        <H2 mt="4" mb="0" fontSize="2xl" hoverColor="primary">
+        <h2
+          variant="heading.h2"
+          mt="4"
+          mb="0"
+          fontSize="2xl"
+          _hover={{
+            color: "primary",
+          }}
+        >
           {title}
-        </H2>
+        </h2>
       </Link>
     )}
     {excerpt && (
-      <P mt="2" fontSize="md">
+      <p mt="2" fontSize="md">
         {excerpt}
-      </P>
+      </p>
     )}
-  </Article>
+  </article>
 )

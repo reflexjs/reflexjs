@@ -3,26 +3,26 @@ import { useSiteMetadata } from "@reflexjs/gatsby-theme-core"
 export const FooterBlock = () => {
   const { title } = useSiteMetadata()
   return (
-    <Section py={[8, 10, 12]}>
-      <Container>
+    <section py={[8, 10, 12]}>
+      <div variant="container">
         <Flexbox
           flexDirection={["column", "row"]}
           alignItems={["flex-start", "center"]}
           justifyContent="space-between"
         >
-          <Div maxW="300px">
-            <H2 m="0" fontSize="xl|2xl|3xl">
+          <div maxW="300px">
+            <h2 variant="heading.h2" m="0" fontSize="xl|2xl|3xl">
               {title}
-            </H2>
-            <P fontSize="md">
+            </h2>
+            <p fontSize="md">
               Perspiciatis doloribus dignissimos delectus exercitationem ipsum
               voluptates.
-            </P>
-            <A href="#" fontSize="md" color="text" lineHeight="none">
+            </p>
+            <a href="#" fontSize="md" color="text" lineHeight="none">
               <Icon name="mail" size="5" mr="2" />
               support@reflexjs.org
-            </A>
-          </Div>
+            </a>
+          </div>
           <NavMenu
             name="footer-example"
             dropdown={false}
@@ -36,21 +36,21 @@ export const FooterBlock = () => {
           pt={[4, 5, 6]}
           mt={[4, 5, 6]}
         >
-          <P fontSize="sm" my="0">
+          <p fontSize="sm" my="0">
             © {new Date().getFullYear()} {title}
-          </P>
+          </p>
           <Grid col="2" gap="4" mt={[4, 0]}>
-            <A href="#" color="text">
+            <a href="#" color="text">
               <Icon name="twitter" size={5} />
               <VisuallyHidden>Follow on Twitter</VisuallyHidden>
-            </A>
-            <A href="#" color="text">
+            </a>
+            <a href="#" color="text">
               <Icon name="instagram" size={5} />
               <VisuallyHidden>Follow on Instagram</VisuallyHidden>
-            </A>
+            </a>
           </Grid>
         </Flexbox>
-      </Container>
-    </Section>
+      </div>
+    </section>
   )
 }

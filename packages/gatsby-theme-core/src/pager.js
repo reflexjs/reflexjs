@@ -1,7 +1,7 @@
-import * as React from "react"
-import { Flexbox } from "@reflexjs/components"
-import { ButtonLink } from "./button-link"
+/** @jsx jsx */
+import { jsx, Flexbox } from "reflexjs"
 import { Icon } from "./icon"
+import { Link } from "./link"
 
 export const Pager = ({ previousPagePath, nextPagePath, ...props }) => (
   <Flexbox
@@ -11,19 +11,19 @@ export const Pager = ({ previousPagePath, nextPagePath, ...props }) => (
     {...props}
   >
     {previousPagePath && (
-      <ButtonLink to={previousPagePath} textDecoration="none" variant="link">
-        <Icon name="arrow-left" mr="2" /> Previous
-      </ButtonLink>
+      <Link to={previousPagePath} textDecoration="none" variant="button.link">
+        <Icon name="arrow-lef" mr="2" /> Previous
+      </Link>
     )}
     {nextPagePath && (
-      <ButtonLink
+      <Link
         to={nextPagePath}
         textDecoration="none"
         ml="auto"
-        variant="link"
+        variant="button.link"
       >
         Next <Icon name="arrow-right" ml="2" />
-      </ButtonLink>
+      </Link>
     )}
   </Flexbox>
 )

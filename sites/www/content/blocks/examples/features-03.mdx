@@ -1,14 +1,19 @@
 export const Features = ({ ...props }) => (
-  <Section py="8|12|16|24" position="relative" {...props}>
+  <section py="8|12|16|24" position="relative" {...props}>
     <Container>
       <Grid col="1|1|420px 1fr" gap="6|6|10">
-        <Div>
-          <H2 m="0" lineHeight="tight" textAlign="center|left">
+        <div>
+          <h2
+            variant="heading.h2"
+            m="0"
+            lineHeight="tight"
+            textAlign="center|left"
+          >
             Why choose us
-          </H2>
-          <P fontSize="xl|2xl" mt="2" textAlign="center|left">
+          </h2>
+          <p fontSize="xl|2xl" mt="2" textAlign="center|left">
             We provide the best solutions to help you grow your business
-          </P>
+          </p>
           <Grid gap="4|6|8" mt="8|10|12">
             <Feature
               number="01"
@@ -29,7 +34,7 @@ export const Features = ({ ...props }) => (
                   ultrices posuere."
             />
           </Grid>
-        </Div>
+        </div>
         <Image
           src="placeholder.jpg"
           position="relative|relative|absolute"
@@ -40,23 +45,23 @@ export const Features = ({ ...props }) => (
         />
       </Grid>
     </Container>
-  </Section>
+  </section>
 )
 
 export const Feature = ({ number, heading, description, ...props }) => (
   <Flexbox alignItems="flex-start" {...props}>
     <Flexbox justifyContent="center" bg="primary" size="14" rounded="full">
-      <P m="0" fontSize="xl" color="white">
+      <p m="0" fontSize="xl" color="white">
         {number}
-      </P>
+      </p>
     </Flexbox>
-    <Div flex="1" ml="6">
-      <H3 fontSize="lg|xl|2xl" m="0">
+    <div flex="1" ml="6">
+      <h3 variant="heading.h3" fontSize="lg|xl|2xl" m="0">
         {heading}
-      </H3>
-      <P fontSize="md" mt="2">
+      </h3>
+      <p fontSize="md" mt="2">
         {description}
-      </P>
-    </Div>
+      </p>
+    </div>
   </Flexbox>
 )

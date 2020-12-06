@@ -102,7 +102,9 @@ describe("style props", () => {
   test("renders without style props", () => {
     const json = renderJSON(
       <ThemeProvider theme={theme}>
-        <div />
+        <>
+          <div />
+        </>
       </ThemeProvider>
     )
     expect(json.props.className).toBeUndefined()

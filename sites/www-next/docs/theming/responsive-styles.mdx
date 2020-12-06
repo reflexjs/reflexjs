@@ -1,24 +1,34 @@
 ---
 title: Responsive Styles
+excerpt: Write mobile-first responsive styles.
+prev:
+  title: Breakpoints
+  url: /docs/theming/breakpoints
+next:
+  title: Variants
+  url: /docs/theming/variants
 ---
 
-Reflexjs includes a shorthand syntax for writing mobile-first responsive styles. All style props accept responsive styles.
+Reflexjs includes a shorthand syntax for writing mobile-first responsive styles.
 
-<Callout>
-  
-Use a `|` pipe to separate responsive values. Array values are also supported.
+Every style props accept responsive styles that can be applied conditionally at different breakpoints.
 
+To write responsive styles, use a `|` pipe.
 
-</Callout>
+```jsx
+<div p="4|6|8" />
+```
 
+This shortcut is an alternative to writing media queries out by hand.
 
-This shortcut is an alternative to writing media queries out by hand. Given the following:
+Given the following:
 
 ```jsx
 <div bg="red|blue|green" />
 
 // or
 
+// Array values are also supported.
 <div bg={["red", "blue", "green"]} />
 ```
 

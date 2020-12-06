@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-metatags@0.3.0...@reflexjs/gatsby-plugin-metatags@0.4.0) (2020-12-03)
+
+
+### Features
+
+* **codemod:** change Container to variant container ([33563d0](https://github.com/reflexjs/reflex/commit/33563d06087a2c7762a6b26027ef9677acc579c3))
+
+
+
+
+
 # [0.3.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-metatags@0.2.8...@reflexjs/gatsby-plugin-metatags@0.3.0) (2020-11-10)
 
 

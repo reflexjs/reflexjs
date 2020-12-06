@@ -1,12 +1,12 @@
 export const Features = ({ ...props }) => (
-  <Section py="8|12|16|24" {...props}>
+  <section py="8|12|16|24" {...props}>
     <Container>
-      <H2 m="0" lineHeight="tight" textAlign="center">
+      <h2 variant="heading.h2" m="0" lineHeight="tight" textAlign="center">
         Our Services
-      </H2>
-      <P fontSize="xl|2xl" mt="2" textAlign="center">
+      </h2>
+      <p fontSize="xl|2xl" mt="2" textAlign="center">
         We connect you to top artists around the world.
-      </P>
+      </p>
       <Grid col="1|2|3" mt="8|10|12" gap="4|6|8">
         <Feature
           icon="shuffle"
@@ -40,7 +40,7 @@ export const Features = ({ ...props }) => (
         />
       </Grid>
     </Container>
-  </Section>
+  </section>
 )
 
 export const Feature = ({ icon, heading, description, ...props }) => (
@@ -62,9 +62,9 @@ export const Feature = ({ icon, heading, description, ...props }) => (
     >
       <Icon name={icon} size="8" />
     </Flexbox>
-    <H3 fontSize="2xl" mt="4|6" mb="0">
+    <h3 variant="heading.h3" fontSize="2xl" mt="4|6" mb="0">
       {heading}
-    </H3>
-    <P mb="0">{description}</P>
+    </h3>
+    <p mb="0">{description}</p>
   </Flexbox>
 )

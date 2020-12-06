@@ -5,3 +5,9 @@ package-lock.json
 public
 CHANGELOG.md
 .yarn
+packages/codemod/transforms/__testfixtures__/**/*
+packages/codemod/transforms/__tests__/**/*
+packages/codemod/**/*.js
+packages/codemod/**/*.d.ts
+dist
+.next

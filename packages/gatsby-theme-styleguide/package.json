@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-styleguide",
   "description": "Adds a styleguide to your site to make building and testing themes easy.",
-  "version": "0.3.0",
+  "version": "0.3.2",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -23,18 +23,18 @@
     "directory": "packages/gatsby-theme-styleguide"
   },
   "devDependencies": {
-    "gatsby": "^2.23.3",
+    "gatsby": "^2.26.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0"
   },
   "dependencies": {
-    "@reflexjs/components": "^0.4.0",
     "@reflexjs/gatsby-helpers": "^0.6.0",
-    "@reflexjs/gatsby-theme-core": "^0.6.0",
+    "@reflexjs/gatsby-theme-core": "^0.7.1",
     "@reflexjs/utils": "^0.2.1",
     "fs-extra": "^9.0.1",
     "gatsby-image": "^2.4.5",
-    "gatsby-source-filesystem": "^2.3.8"
+    "gatsby-source-filesystem": "^2.3.8",
+    "reflexjs": "^1.0.0-alpha.8"
   },
   "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52"
 }

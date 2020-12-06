@@ -2,7 +2,11 @@ export const VideoBlock = ({ url, play = true, ...props }) => {
   const videoRef = React.useRef()
   const [isPlaying, setIsPlaying] = React.useState(play)
   React.useEffect(() => {
-    if (typeof window === `undefined` || !("IntersectionObserver" in window)) {
+    if (
+      typeof window === `undefined` ||
+      !("IntersectionObserver" in window) ||
+      !videoRef.current
+    ) {
       return
     }
     const observer = new IntersectionObserver(
@@ -46,14 +50,16 @@ export const VideoBlock = ({ url, play = true, ...props }) => {
           justifyContent="center"
         >
           <Button
-            variant="primary"
+            variant="button.primary"
             rounded="full"
             size="22"
             transition="transform .15s ease-in"
-            hoverTransform="scale(1.1)"
-            hoverBoxShadow="xl"
             zIndex="1000"
             aria-label="Play video"
+            _hover={{
+              transform: "scale(1.1)",
+              boxShadow: "xl",
+            }}
             onClick={() => {
               setIsPlaying(true)
             }}
@@ -62,7 +68,7 @@ export const VideoBlock = ({ url, play = true, ...props }) => {
           </Button>
         </Flexbox>
       )}
-      <Video muted playsinline ref={videoRef} w="full" loop={isPlaying}>
+      <Video muted playsinline ref={videoRef} loop={isPlaying} w="full">
         <Source src={url} type="video/mp4" />
       </Video>
     </Div>

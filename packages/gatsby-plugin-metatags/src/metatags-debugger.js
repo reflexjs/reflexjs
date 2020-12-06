@@ -1,5 +1,6 @@
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import * as React from "react"
-import { Div, Span, H4, Cite, H3, P, Button } from "@reflexjs/components"
 import { useMetatags } from "./use-metatags"
 import { useImage, Image } from "@reflexjs/gatsby-plugin-image"
 
@@ -8,7 +9,7 @@ export const MetatagsPreviewGoogle = ({ title, description, location }) => {
   const chunks = pathname.split("/").slice(1, -1)
 
   return (
-    <Div
+    <div
       position="relative"
       sx={{
         "*": {
@@ -16,7 +17,7 @@ export const MetatagsPreviewGoogle = ({ title, description, location }) => {
         },
       }}
     >
-      <Cite
+      <cite
         color="#202124"
         fontSize="14px"
         pt="1px"
@@ -25,10 +26,10 @@ export const MetatagsPreviewGoogle = ({ title, description, location }) => {
       >
         {host}
         {chunks.length && (
-          <Span color="#5f6368">{` › ${chunks.join(" › ")}`}</Span>
+          <span color="#5f6368">{` › ${chunks.join(" › ")}`}</span>
         )}
-      </Cite>
-      <H3
+      </cite>
+      <h3
         fontSize="20px"
         pt="4px"
         lineHeight="1.2"
@@ -38,11 +39,11 @@ export const MetatagsPreviewGoogle = ({ title, description, location }) => {
         color="#1a0dab"
       >
         {title}
-      </H3>
-      <Span d="block" fontSize="14px" color="#4d5156" lineHeight="1.4">
+      </h3>
+      <span display="block" fontSize="14px" color="#4d5156" lineHeight="1.4">
         {description}
-      </Span>
-    </Div>
+      </span>
+    </div>
   )
 }
 
@@ -55,7 +56,7 @@ export const MetatagsPreviewFacebook = ({
   const { host } = location
   const [thumbnail] = useImage(image)
   return (
-    <Div
+    <div
       fontSize="14px"
       border="1px solid #dadde1"
       sx={{
@@ -68,11 +69,11 @@ export const MetatagsPreviewFacebook = ({
       {thumbnail && (
         <Image fluid={thumbnail.childImageSharp.fluid} w="100%" h="200px" />
       )}
-      <Div borderTop="1px solid #dadde1" p="10px 12px" bg="#f2f3f5">
-        <Span fontSize="12px" color="#606770" textTransform="uppercase">
+      <div borderTop="1px solid #dadde1" p="10px 12px" bg="#f2f3f5">
+        <span fontSize="12px" color="#606770" textTransform="uppercase">
           {host}
-        </Span>
-        <H4
+        </span>
+        <h4
           fontSize="16px"
           lineHeight="20px"
           mt="5px"
@@ -81,12 +82,12 @@ export const MetatagsPreviewFacebook = ({
           fontWeight="600"
         >
           {title}
-        </H4>
-        <P color="#606770" fontSize="14px" mt="3px" mb="0" lineHeight="20px">
+        </h4>
+        <p color="#606770" fontSize="14px" mt="3px" mb="0" lineHeight="20px">
           {description}
-        </P>
-      </Div>
-    </Div>
+        </p>
+      </div>
+    </div>
   )
 }
 
@@ -99,7 +100,7 @@ export const MetatagsPreviewTwitter = ({
   const { host } = location
   const [thumbnail] = useImage(image)
   return (
-    <Div
+    <div
       fontSize="14px"
       rounded="6px"
       overflow="hidden"
@@ -114,8 +115,8 @@ export const MetatagsPreviewTwitter = ({
       {thumbnail && (
         <Image fluid={thumbnail.childImageSharp.fluid} w="100%" h="200px" />
       )}
-      <Div borderTop="1px solid #dadde1" p="10px 12px">
-        <H4
+      <div borderTop="1px solid #dadde1" p="10px 12px">
+        <h4
           fontSize="14px"
           lineHeight="18px"
           mt="0"
@@ -124,27 +125,27 @@ export const MetatagsPreviewTwitter = ({
           fontWeight="700"
         >
           {title}
-        </H4>
-        <P color="#18283E" fontSize="14px" mt="4px" mb="0" lineHeight="18px">
+        </h4>
+        <p color="#18283E" fontSize="14px" mt="4px" mb="0" lineHeight="18px">
           {description}
-        </P>
-        <Span
-          d="block"
+        </p>
+        <span
+          display="block"
           fontSize="14px"
           color="#8899A6"
           textTransform="lowercase"
           mt="3px"
         >
           {host}
-        </Span>
-      </Div>
-    </Div>
+        </span>
+      </div>
+    </div>
   )
 }
 
 export const MetatagsSection = ({ heading, children, ...props }) => (
-  <Div mb="30px" {...props}>
-    <H4
+  <div mb="30px" {...props}>
+    <h4
       fontSize="16px"
       color="black"
       fontWeight="semibold"
@@ -152,13 +153,13 @@ export const MetatagsSection = ({ heading, children, ...props }) => (
       position="relative"
       overflow="hidden"
     >
-      <Span bg="white" pr="10px">
+      <span bg="white" pr="10px">
         {heading}
-      </Span>
-      <Span h="1px" w="100%" bg="#ebece9" position="absolute" top="50%" />
-    </H4>
+      </span>
+      <span h="1px" w="100%" bg="#ebece9" position="absolute" top="50%" />
+    </h4>
     {children}
-  </Div>
+  </div>
 )
 
 export const MetatagsDebugger = ({ location }) => {
@@ -169,8 +170,8 @@ export const MetatagsDebugger = ({ location }) => {
   if (!metatags) return null
 
   return (
-    <React.Fragment>
-      <Div
+    <>
+      <div
         bg="white"
         position="fixed"
         top="20px"
@@ -189,9 +190,9 @@ export const MetatagsDebugger = ({ location }) => {
         transformOrigin="100% 100%"
         overflow="scroll"
       >
-        <H4 fontSize="14px" mt="0" color="#585757" fontWeight="normal">
+        <h4 fontSize="14px" mt="0" color="#585757" fontWeight="normal">
           Metatags preview
-        </H4>
+        </h4>
         <MetatagsSection heading="Google">
           <MetatagsPreviewGoogle {...metatags} location={location} />
         </MetatagsSection>
@@ -201,8 +202,9 @@ export const MetatagsDebugger = ({ location }) => {
         <MetatagsSection heading="Facebook">
           <MetatagsPreviewFacebook {...metatags.og} location={location} />
         </MetatagsSection>
-      </Div>
-      <Button
+      </div>
+      <button
+        variant="button"
         onClick={() => setIsOpen(!isOpen)}
         position="fixed"
         bottom="20px"
@@ -212,7 +214,7 @@ export const MetatagsDebugger = ({ location }) => {
         zIndex="10000"
       >
         {!isOpen ? "Metatags" : "Close"}
-      </Button>
-    </React.Fragment>
+      </button>
+    </>
   )
 }

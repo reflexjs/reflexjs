@@ -3,16 +3,16 @@ import { useSiteMetadata } from "@reflexjs/gatsby-theme-core"
 export const FooterBlock = () => {
   const { title } = useSiteMetadata()
   return (
-    <Section py={[8, 10, 12]}>
+    <section py={[8, 10, 12]}>
       <Container>
         <Flexbox
           flexDirection={["column", "row"]}
           alignItems={["flex-start", "center"]}
           justifyContent="space-between"
         >
-          <H2 m="0" fontSize="xl|2xl|3xl">
+          <h2 variant="heading.h2" m="0" fontSize="xl|2xl|3xl">
             {title}
-          </H2>
+          </h2>
           <NavMenu
             name="footer-example"
             dropdown={false}
@@ -21,27 +21,27 @@ export const FooterBlock = () => {
             gap="4|8"
           />
           <Grid col="2" gap="4" mt={[4, 0]}>
-            <A href="#" color="text">
+            <a href="#" color="text">
               <Icon name="twitter" size={5} />
               <VisuallyHidden>Follow on Twitter</VisuallyHidden>
-            </A>
-            <A href="#" color="text">
+            </a>
+            <a href="#" color="text">
               <Icon name="instagram" size={5} />
               <VisuallyHidden>Follow on Instagram</VisuallyHidden>
-            </A>
+            </a>
           </Grid>
         </Flexbox>
-        <Div
+        <div
           borderTopWidth={1}
           textAlign="center"
           pt={[4, 5, 6]}
           mt={[4, 5, 6]}
         >
-          <P fontSize="sm" mt="0">
+          <p fontSize="sm" mt="0">
             © {new Date().getFullYear()} {title}
-          </P>
-        </Div>
+          </p>
+        </div>
       </Container>
-    </Section>
+    </section>
   )
 }

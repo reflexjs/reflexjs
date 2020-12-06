@@ -1,13 +1,13 @@
-import * as React from "react"
-import { Container, H1 } from "@reflexjs/components"
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import { Link, Icon } from "@reflexjs/gatsby-theme-core"
 
 export default () => (
-  <Container textAlign="center">
-    <H1>404 - Page not found</H1>
+  <div variant="container" textAlign="center">
+    <h1>404 - Page not found</h1>
     <Link to="/">
       <Icon name="arrow-left" mr="2" />
       Back home
     </Link>
-  </Container>
+  </div>
 )

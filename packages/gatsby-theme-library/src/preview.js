@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx, Container, Flexbox, VisuallyHidden } from "reflexjs"
 import * as React from "react"
 import {
   ThemeProvider,
@@ -9,15 +11,6 @@ import {
   Icon,
   Link,
 } from "@reflexjs/gatsby-theme-core"
-import {
-  Button,
-  Container,
-  Div,
-  Flexbox,
-  Section,
-  Span,
-  VisuallyHidden,
-} from "@reflexjs/components"
 import presets from "./presets"
 import { PresetSelector } from "./preset-selector"
 import copy from "copy-to-clipboard"
@@ -64,8 +57,8 @@ export const Preview = ({
 
   return (
     <Layout pathname={slug}>
-      <Section py="2|6">
-        <Container>
+      <section py="2|6">
+        <div variant="container">
           <Flexbox
             flexDirection={["column", "row"]}
             alignItems={["flex-start", "center"]}
@@ -74,7 +67,7 @@ export const Preview = ({
           >
             <Link
               to={libraryUrl}
-              d="inline-flex"
+              display="inline-flex"
               alignItems="center"
               fontSize="md"
               color="text"
@@ -86,10 +79,10 @@ export const Preview = ({
             <Flexbox w={["100%", "auto"]} mt={[4, 0]} justifyContent="flex-end">
               <Flexbox
                 position="relative"
-                d={preview ? "flex" : "none"}
+                display={preview ? "flex" : "none"}
                 flex="1"
               >
-                <Span
+                <span
                   fontSize="sm"
                   position="absolute"
                   left="2"
@@ -97,60 +90,67 @@ export const Preview = ({
                   pointerEvents="none"
                 >
                   Select a preset:
-                </Span>
+                </span>
                 <PresetSelector
                   fontSize="sm"
                   fontWeight="semibold"
                   backgroundSize="18px"
                   backgroundPosition="right 3px center"
-                  hoverBg="muted"
                   py="2"
                   pl="30"
                   pr="6"
                   mr="4"
                   flex="1"
                   onChange={(value) => setPreset(value)}
+                  _hover={{
+                    bg: "muted",
+                  }}
                 />
               </Flexbox>
 
-              <Button
+              <button
+                variant="button"
                 fontSize="sm"
                 p="2"
                 bg="transparent"
-                hoverBg="muted"
                 onClick={() => togglePreview(!preview)}
+                _hover={{
+                  bg: "muted",
+                }}
               >
                 {preview ? "Source" : "Preview"}
-              </Button>
+              </button>
 
               <Flexbox borderLeftWidth="1px" ml="4" pl="3">
-                <Button
-                  variant="icon"
-                  hoverColor="primary"
+                <button
+                  variant="button.icon"
                   onClick={() => copy(code)}
+                  _hover={{
+                    color: "primary",
+                  }}
                 >
                   <Icon name="clipboard" />
                   <VisuallyHidden>Copy code</VisuallyHidden>
-                </Button>
+                </button>
               </Flexbox>
             </Flexbox>
           </Flexbox>
-        </Container>
+        </div>
 
         {preview ? (
-          <Container
+          <div
+            variant="container"
             borderWidth="1px"
             px="0|0|0|0"
             boxShadow="null|null|null|lg"
             rounded="null|null|null|lg"
-            maxW="null|null|null|1240px"
-          >
+            maxW="null|null|null|1240px">
             <Flexbox
               bg="muted"
               h="50px"
               py="4"
               px="4"
-              d="none|none|none|flex"
+              display="none|none|none|flex"
               borderBottomWidth="1px"
             >
               <Link
@@ -158,25 +158,27 @@ export const Preview = ({
                 size="4"
                 rounded="full"
                 to={libraryUrl}
-                hoverBg="red"
+                _hover={{
+                  bg: "red",
+                }}
               >
                 <VisuallyHidden>Go back</VisuallyHidden>
               </Link>
-              <Span bg="border" size="4" rounded="full" ml="2" />
-              <Span bg="border" size="4" rounded="full" ml="2" />
+              <span bg="border" size="4" rounded="full" ml="2" />
+              <span bg="border" size="4" rounded="full" ml="2" />
             </Flexbox>
             <ThemeProvider theme={previewTheme}>
-              <Div id="preview-wrapper">
+              <div id="preview-wrapper">
                 <Styled.root>
                   <MDXProvider components={blockMDXComponents}>
                     <MDXRenderer {...props}>{body}</MDXRenderer>
                   </MDXProvider>
                 </Styled.root>
-              </Div>
+              </div>
             </ThemeProvider>
-          </Container>
+          </div>
         ) : (
-          <Container>
+          <div variant="container">
             <CodeBlock
               className="language-jsx"
               sx={{
@@ -187,10 +189,10 @@ export const Preview = ({
             >
               {code}
             </CodeBlock>
-          </Container>
+          </div>
         )}
-      </Section>
+      </section>
       {children}
     </Layout>
-  )
+  );
 }

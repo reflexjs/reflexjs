@@ -1,5 +1,5 @@
 ---
-doc: "header"
+doc: header
 ---
 
 import { useSiteMetadata, useColorMode } from "@reflexjs/gatsby-theme-core"
@@ -8,23 +8,27 @@ export const HeaderBlock = ({ ...props }) => {
   const [showMenu, setShowMenu] = React.useState(false)
   const navName = "header"
   return (
-    <Header
+    <header
       position={["sticky", "relative"]}
       top="0"
       bg="background"
       zIndex="1000"
       {...props}
     >
-      <Container>
-        <Flexbox d={["none", "flex"]} justifyContent="space-between" py="1">
+      <div variant="container">
+        <Flexbox
+          display={["none", "flex"]}
+          justifyContent="space-between"
+          py="1"
+        >
           <Branding />
           <NavMenu name={navName} gap={[0, 8, 14]} ml={["auto", "auto"]} />
           <SocialLinks ml="auto" mr="4" borderRightWidth="1px" pr="4" />
           <ModeToggle ml="0" />
         </Flexbox>
-      </Container>
+      </div>
       <Flexbox
-        d={["flex", "none"]}
+        display={["flex", "none"]}
         flexDirection="column"
         justifyContent="center"
       >
@@ -37,15 +41,15 @@ export const HeaderBlock = ({ ...props }) => {
           transition="all .15s ease-in"
         >
           <Branding />
-          <Button
-            variant="link"
+          <button
+            variant="button.link"
             outline="none"
             onClick={() => setShowMenu(true)}
           >
             <Icon name="menu" size="7" />
-          </Button>
+          </button>
         </Flexbox>
-        <Div
+        <div
           position="absolute"
           zIndex="1000"
           bg="background"
@@ -67,62 +71,72 @@ export const HeaderBlock = ({ ...props }) => {
         >
           <Flexbox justifyContent="space-between" w="full" py="2" px="0">
             <Branding />
-            <Button variant="link" onClick={() => setShowMenu(false)} mr={-3}>
+            <button
+              variant="button.link"
+              onClick={() => setShowMenu(false)}
+              mr={-3}
+            >
               <Icon name="x" size="6" />
-            </Button>
+            </button>
           </Flexbox>
           <NavMenu name={navName} gap={[0, 8]} borderTopWidth="1px" />
           <Flexbox py="4" justifyContent="space-between">
             <SocialLinks />
             <ModeToggle ml="auto" />
           </Flexbox>
-        </Div>
+        </div>
       </Flexbox>
-    </Header>
+    </header>
   )
 }
 
 export const Branding = () => {
   const { title } = useSiteMetadata()
   return (
-    <A href="/" fontSize="3xl" fontWeight="semibold" color="text">
+    <a href="/" fontSize="3xl" fontWeight="semibold" color="text">
       {title}
-    </A>
+    </a>
   )
 }
 
 export const ModeToggle = ({ ...props }) => {
   const [colorMode, setColorMode] = useColorMode()
   return (
-    <Button
-      variant="icon"
+    <button
+      variant="button.icon"
       onClick={() => setColorMode(colorMode === "default" ? "dark" : "default")}
       ml={[2, 4]}
-      hoverColor="primary"
-      focusColor="text"
       {...props}
+      _hover={{
+        color: "primary",
+      }}
+      _focus={{
+        color: "text",
+      }}
     >
       <Icon name={colorMode === "default" ? "sun" : "moon"} size="5" />
       <VisuallyHidden>Toggle mode</VisuallyHidden>
-    </Button>
+    </button>
   )
 }
 
 export const SocialLinks = ({ ...props }) => (
   <Grid col="repeat(2, auto)" gap="5" {...props}>
-    <A href="https://twitter.com/arshadcn" target="_blank" rel="noreferrer">
+    <a href="https://twitter.com/arshadcn" target="_blank" rel="noreferrer">
       <Icon name="twitter" size="5" />
       <VisuallyHidden>Follow on Twitter</VisuallyHidden>
-    </A>
-    <A
+    </a>
+    <a
       href="https://github.com/reflexjs/reflex"
       target="_blank"
       color="text"
-      hoverColor="primary"
       rel="noreferrer"
+      _hover={{
+        color: "primary",
+      }}
     >
       <Icon name="instagram" size="5" />
       <VisuallyHidden>Follow on Instagram</VisuallyHidden>
-    </A>
+    </a>
   </Grid>
 )

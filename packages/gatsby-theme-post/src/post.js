@@ -1,6 +1,6 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx, Flexbox } from "reflexjs"
 import { MDXRenderer, Link } from "@reflexjs/gatsby-theme-core"
-import { Article, Container, H1, Div, P, Flexbox } from "@reflexjs/components"
 import { Image } from "@reflexjs/gatsby-plugin-image"
 import { PostMeta } from "./post-meta"
 
@@ -16,23 +16,23 @@ export const Post = ({
   timeToRead,
   tags,
 }) => (
-  <Article py="8|12|14">
-    <Container maxW="null|null|null|900px">
-      <Div textAlign="center">
+  <article py="8|12|14">
+    <div variant="container" maxW="null|null|null|900px">
+      <div textAlign="center">
         {tags && (
           <Link to={tags[0].slug} textDecoration="none" color="text">
             {tags[0].name}
           </Link>
         )}
         {title && (
-          <H1 my="0" fontWeight="extrabold">
+          <h1 variant="heading.h1" my="0" fontWeight="extrabold">
             {title}
-          </H1>
+          </h1>
         )}
         {excerpt && (
-          <P fontSize="2xl" maxW="700px" mx="auto">
+          <p fontSize="2xl" maxW="700px" mx="auto">
             {excerpt}
-          </P>
+          </p>
         )}
 
         <PostMeta
@@ -44,11 +44,11 @@ export const Post = ({
           justifyContent="center"
           my="8"
         />
-      </Div>
-    </Container>
+      </div>
+    </div>
 
     {image && (
-      <Container variant="lg">
+      <div variant="container.lg">
         <Image
           src={image}
           title={title}
@@ -63,10 +63,10 @@ export const Post = ({
             },
           }}
         />
-      </Container>
+      </div>
     )}
 
-    <Container maxW="null|null|null|900px">
+    <div variant="container" maxW="null|null|null|900px">
       <MDXRenderer>{body}</MDXRenderer>
 
       {tags && (
@@ -84,14 +84,16 @@ export const Post = ({
               textDecoration="none"
               fontSize="sm"
               ml={index !== 0 && 2}
-              hoverBg="secondary"
-              hoverColor="white"
+              _hover={{
+                bg: "secondary",
+                color: "white",
+              }}
             >
               {name}
             </Link>
           ))}
         </Flexbox>
       )}
-    </Container>
-  </Article>
+    </div>
+  </article>
 )

@@ -25,21 +25,19 @@ excerpt: It combines the flexibility of Theme UI with style props and supports I
         flexibility of Theme UI with the comfort of style props.
       </P>
       <Flexbox>
-        <Button
-          as="a"
+        <A
           href="https://github.com/reflexjs/reflex/tree/master/packages/ui#reflexjsui"
-          variant="primary lg"
+          variant="button.primary.lg"
         >
           Documentation
-        </Button>
-        <Button
-          as="a"
+        </A>
+        <A
           href="https://github.com/reflexjs/reflex/tree/master/packages/ui"
-          variant="secondary lg"
+          variant="button.secondary.lg"
           ml="2"
         >
           GitHub
-        </Button>
+        </A>
       </Flexbox>
       <Block
         src="video"
@@ -77,6 +75,7 @@ excerpt: It combines the flexibility of Theme UI with style props and supports I
         heading="React"
         url="https://github.com/reflexjs/reflex/tree/master/packages/ui#create-react-app"
         iconColor="#61DAFB"
+        color="text"
       />
       <Block
         src="framework"
@@ -103,7 +102,6 @@ excerpt: It combines the flexibility of Theme UI with style props and supports I
         color="#ffffff"
       />
     </Grid>
-    <Block src="react" mt="20" pt="20" />
   </Container>
 </Section>
 
@@ -137,9 +135,11 @@ excerpt: It combines the flexibility of Theme UI with style props and supports I
         rel="noreferrer"
         fontWeight="semibold"
         mt="6"
+        display="inline-flex"
+        alignItems="center"
         target="_blank"
       >
-        <Icon name="twitter" mr="2" />
+        <Icon name="twitter" size="6" mr="2" />
         Get notified when we add more features
       </Link>
     </Div>

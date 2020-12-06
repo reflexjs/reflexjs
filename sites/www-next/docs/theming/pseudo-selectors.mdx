@@ -1,0 +1,52 @@
+---
+title: Pseudo Selectors
+excerpt: Hover, focus and other pseudo selectors.
+prev:
+  title: Variants
+  url: /docs/theming/variants
+next:
+  title: Global Styles
+  url: /docs/theming/global-styles
+---
+
+Out of the box, Reflexjs provides two props for _hover_ and _focus_ styles.
+
+## Hover
+
+To add hover styles, use the `_hover` style prop.
+
+```jsx
+<button
+  bg="primary"
+  _hover={{
+    bg: "secondary",
+    boxShadow: "xl",
+  }}
+/>
+```
+
+## Focus
+
+To add focus styles, use the `_focus` style prop.
+
+```jsx
+<button
+  bg="primary"
+  _focus={{
+    borderColor: "accent",
+  }}
+/>
+```
+
+## Other Pseudo props
+
+You can the the `sx` props for other pseudo selectors such as `:before`, `:nth-child` or `:active`.
+
+```jsx
+<button sx={{
+  ":before": {
+    content: '""',
+  }
+}}>
+</button
+```

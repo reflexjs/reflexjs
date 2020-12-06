@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/reflexjs/reflex/compare/@reflexjs/components@0.4.0...@reflexjs/components@0.5.0) (2020-12-03)
+
+
+### Bug Fixes
+
+* **components:** add theme-ui ([7901e6c](https://github.com/reflexjs/reflex/commit/7901e6cc1dc92f2cd396f61d7ce1b508e1aac218))
+* **www:** update blocks ([20b3bb4](https://github.com/reflexjs/reflex/commit/20b3bb4d48a53df548a832d499214b7786a2e7c9))
+
+
+### Features
+
+* **codemod:** change Container to variant container ([33563d0](https://github.com/reflexjs/reflex/commit/33563d06087a2c7762a6b26027ef9677acc579c3))
+
+
+
+
+
 # [0.4.0](https://github.com/reflexjs/reflex/compare/@reflexjs/components@0.3.2...@reflexjs/components@0.4.0) (2020-11-10)
 
 
