@@ -22,7 +22,8 @@ export async function getBlocks(): Promise<Block[]> {
         category: blocks.categories.find(
           (category) => category.id === categoryId
         ),
-        thumbnail: `${blocks.imagePath}/${name}.jpeg`,
+        image: `${blocks.imagePath}/${name}.jpeg`,
+        thumbnail: `${blocks.imagePath}/${name}-thumbnail.jpeg`,
         sources,
       }
     })

@@ -3,6 +3,7 @@ export interface Block {
   name: string
   slug: string
   category: BlockCategory
+  image: string
   thumbnail: string
   sources: Source[]
 }

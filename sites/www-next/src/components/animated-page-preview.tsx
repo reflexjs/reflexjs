@@ -17,11 +17,9 @@ export function AnimatedPagePreview({
         <motion.div
           key={index}
           initial={{
-            opacity: 0.5,
             y: 100,
           }}
           animate={{
-            opacity: 1,
             y: 0,
           }}
           transition={{
@@ -37,7 +35,7 @@ export function AnimatedPagePreview({
             borderWidth="1"
           >
             <img
-              src={`/images/library/${block}.jpeg`}
+              src={`/images/library/${block}-thumbnail.jpeg`}
               alt={`${block} screenshot`}
               display="block"
             />

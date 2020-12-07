@@ -8,7 +8,8 @@
     "build": "next build",
     "preview": "next build && next start",
     "postbuild": "next-on-netlify",
-    "screenshot": "node ./scripts/screenshot-blocks.js"
+    "screenshot": "node ./scripts/screenshot-blocks.js",
+    "thumbnail": "node ./scripts/create-thumbnails.js"
   },
   "dependencies": {
     "@reach/accordion": "^0.11.2",
