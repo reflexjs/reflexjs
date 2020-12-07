@@ -1,4 +1,9 @@
-import { AnimatedSection, Layout, VisuallyHidden } from "@components"
+import {
+  AnimatedPagePreview,
+  AnimatedSection,
+  Layout,
+  VisuallyHidden,
+} from "@components"
 import {
   colorModesScences,
   responsiveScenes,
@@ -15,7 +20,7 @@ export default function IndexPage() {
       title="Build something amazing."
       description="Starter kits, themes and blocks to help you build Gatsby and Nextjs sites faster. Built using a styling library that has everything you care about. Speed and excellent developer experience."
     >
-      <section py="4|4|4|20">
+      <section pt="4|4|4|20">
         <div variant="container.md">
           <VisuallyHidden>Build something amazing.</VisuallyHidden>
           <h2
@@ -25,11 +30,50 @@ export default function IndexPage() {
             letterSpacing="tight"
             color="heading"
             py="4"
+            textAlign="center"
           >
             <Highlight>Starter kits</Highlight> and{" "}
-            <span color="#a083ed">blocks</span> to kickstart your Gatsby and
-            Nextjs sites.
+            <span color="#a083ed">blocks</span> to build Gatsby and Nextjs sites{" "}
+            <em>faster</em>.
           </h2>
+        </div>
+        <div variant="container" maxW="1400" pt="10|20">
+          <div display="grid" col="1|2|2|3" gap="10">
+            <AnimatedPagePreview
+              blocks={[
+                "header-001",
+                "hero-002",
+                "features-001",
+                "form-002",
+                "footer-001",
+              ]}
+              display="none|block"
+            />
+            <AnimatedPagePreview
+              blocks={[
+                "header-002",
+                "hero-003",
+                "pricing-001",
+                "call-to-action-001",
+                "footer-002",
+              ]}
+            />
+            <AnimatedPagePreview
+              blocks={[
+                "header-001",
+                "hero-001",
+                "call-to-action-003",
+                "features-002",
+                "form-001",
+                "footer-001",
+              ]}
+              display="none|none|none|block"
+            />
+          </div>
+        </div>
+      </section>
+      <section py="4|4|4|20">
+        <div variant="container.md">
           <p
             fontWeight="700"
             fontSize="3rem|4rem|4rem|6xl"
@@ -54,10 +98,6 @@ export default function IndexPage() {
           </p>
           <div display="grid" gap="8|||16" col="1|1|2|3" mt="10|||20">
             <FeatureCard
-              heading="Blocks Library"
-              text="A library of ready-to-use blocks that you can copy and paste."
-            />
-            <FeatureCard
               heading="Style props"
               text="Use any CSS property as prop to rapidly style your components."
             />
@@ -76,6 +116,10 @@ export default function IndexPage() {
             <FeatureCard
               heading="Color Modes"
               text="Add dark mode. Add light mode. Add any color mode."
+            />
+            <FeatureCard
+              heading="Typescript"
+              text="Typescript out of the box with Intellisense and Emmet support."
             />
           </div>
           <div display="inline-grid" col="2" mt="10|||20" gap="4">

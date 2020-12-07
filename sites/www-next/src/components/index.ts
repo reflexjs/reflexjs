@@ -1,3 +1,4 @@
+export * from "./animated-page-preview"
 export * from "./animated-scenes"
 export * from "./animated-section"
 export * from "./animated-token"

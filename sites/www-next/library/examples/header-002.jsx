@@ -4,7 +4,7 @@ import Block from "../blocks/header-002"
 export default function Example() {
   return (
     <Block
-      minH="500"
+      minH="500|0"
       branding={{
         name: "Reflex",
       }}
