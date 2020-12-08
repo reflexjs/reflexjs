@@ -72,7 +72,7 @@ export default function IndexPage() {
           </div>
         </div>
       </section>
-      <section py="4|4|4|20">
+      <section py="4|4|4|20" bg="muted">
         <div variant="container.md">
           <p
             fontWeight="700"

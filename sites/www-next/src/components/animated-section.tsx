@@ -25,7 +25,7 @@ export function AnimatedSection({
           variant="heading"
           color={headingColor}
           fontWeight="800"
-          fontSize="5xl"
+          fontSize="5xl|6xl"
         >
           {heading}
         </h2>

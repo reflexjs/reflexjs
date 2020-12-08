@@ -12,7 +12,7 @@ export interface AnimatedScenesProps {
   scenes: Scene[]
 }
 
-export function AnimatedScenes({ scenes }: AnimatedScenesProps) {
+export function AnimatedScenes({ scenes, ...props }: AnimatedScenesProps) {
   const scenesCount = scenes.length - 1
   const [tick, setTick] = React.useState(0)
   const [done, setDone] = React.useState(false)
@@ -43,7 +43,7 @@ export function AnimatedScenes({ scenes }: AnimatedScenesProps) {
 
   return (
     <AnimateSharedLayout _transition={null}>
-      <div display="grid" col="1|2" gap="4" mt="10">
+      <div display="grid" col="1|2" gap="4" mt="10" {...props}>
         {scene?.theme ? (
           <CodeWrapper label="Theme">{scene.theme}</CodeWrapper>
         ) : (
@@ -56,7 +56,8 @@ export function AnimatedScenes({ scenes }: AnimatedScenesProps) {
           <div
             position="relative"
             display="flex"
-            borderWidth="1"
+            borderWidth="3"
+            borderColor="#1f2d43"
             alignItems="center"
             justifyContent="center"
             p="6"
@@ -89,9 +90,10 @@ export function CodeWrapper({ label, children }) {
   return (
     <div
       fontFamily="monospace"
-      bg="background"
-      color="text"
+      bg="#0c162d"
+      color="white"
       borderWidth="1"
+      borderColor="#1f2d43"
       display="block"
       m="0"
       p="6"

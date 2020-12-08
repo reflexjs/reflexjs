@@ -75,7 +75,7 @@ export function TokenProp({ name, value, suffix }: TokenPropProps) {
       {`  ${name}="`}
       <motion.span
         sx={{
-          color: shades["primary"],
+          color: "#a8eb12",
         }}
       >
         {value}
