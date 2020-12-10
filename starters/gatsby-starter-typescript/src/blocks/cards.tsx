@@ -1,7 +1,3 @@
-/** @jsx jsx */
-import { jsx } from "reflexjs"
-import * as React from "react"
-
 interface CardsBlockProps extends React.HTMLAttributes<HTMLElement> {
   subheading?: string
   heading?: string
