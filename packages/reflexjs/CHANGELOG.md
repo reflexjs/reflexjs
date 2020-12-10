@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0-alpha.8...reflexjs@1.0.0) (2020-12-10)
+
+
+### Bug Fixes
+
+* **reflexjs:** handle React.Fragment ([16ae1cd](https://github.com/reflexjs/reflex/commit/16ae1cdee53df54b1b6bb929186530d6d8768391))
+
+
+
+
+
 # [1.0.0-alpha.8](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0-alpha.7...reflexjs@1.0.0-alpha.8) (2020-12-03)
 
 

@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 0.2.0 (2020-12-10)
+
+
+### Bug Fixes
+
+* update gatsby starters ([db8a67d](https://github.com/reflexjs/reflexjs/commit/db8a67d103cc6a3dfb94991d1e01fe7b46119dd6))
+
+
+### Features
+
+* add gatsby-starter-typescript and nextjs-starter-typescript ([24a1b3d](https://github.com/reflexjs/reflexjs/commit/24a1b3df0945968f3a313729e566bf19288bb826))
+
+
+
+
+
 # 0.1.0 (2020-12-03)
 
 

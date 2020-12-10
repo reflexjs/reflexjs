@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-search-algolia@0.4.0...@reflexjs/gatsby-plugin-search-algolia@0.5.0) (2020-12-10)
+
+**Note:** Version bump only for package @reflexjs/gatsby-plugin-search-algolia
+
+
+
+
+
 # [0.4.0](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-search-algolia@0.3.0...@reflexjs/gatsby-plugin-search-algolia@0.4.0) (2020-12-03)
 
 

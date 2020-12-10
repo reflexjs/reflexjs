@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/reflexjs/reflexjs/compare/ui@0.3.2...ui@0.4.0) (2020-12-10)
+
+
+### Bug Fixes
+
+* **ui:** add redirects ([ff0a9ee](https://github.com/reflexjs/reflexjs/commit/ff0a9eec0cabccc193ccf7155af69ae23f2e79c5))
+
+
+
+
+
 ## [0.3.2](https://github.com/reflexjs/reflexjs/compare/ui@0.3.1...ui@0.3.2) (2020-12-03)
 
 **Note:** Version bump only for package ui

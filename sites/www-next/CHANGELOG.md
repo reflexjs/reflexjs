@@ -3,6 +3,32 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/reflexjs/reflexjs/compare/www-next@0.5.0...www-next@0.6.0) (2020-12-10)
+
+
+### Bug Fixes
+
+* update home page copy ([6c384f5](https://github.com/reflexjs/reflexjs/commit/6c384f507c5f7531898a4874587a4d65882f3ce9))
+* **www-next:** add demo ([f48e253](https://github.com/reflexjs/reflexjs/commit/f48e253c159132b80985f0476e1da3d7f2a86dab))
+* **www-next:** add next-on-netlify ([d49ebd7](https://github.com/reflexjs/reflexjs/commit/d49ebd7082cf95c8333ada64847d7c0371b61a5f))
+* **www-next:** update metatags ([bc29475](https://github.com/reflexjs/reflexjs/commit/bc294750dad0f62d9dad9d6e45710a834d50ae93))
+
+
+### Features
+
+* add gatsby-starter-typescript and nextjs-starter-typescript ([24a1b3d](https://github.com/reflexjs/reflexjs/commit/24a1b3df0945968f3a313729e566bf19288bb826))
+* **www-next:** add missing public directory ([f7ec3d1](https://github.com/reflexjs/reflexjs/commit/f7ec3d15ebee549f7c1b78071259f4a487aea990))
+* **www-next:** add thumbnails ([ab7d481](https://github.com/reflexjs/reflexjs/commit/ab7d481d1b120112fb36764f8b7eecca16be2066))
+* **www-next:** update animated scene code wrapper style ([a0c3727](https://github.com/reflexjs/reflexjs/commit/a0c372752d5165f61fb620d46335e95303d548e0))
+* **www-next:** update home page ([2d1a2fd](https://github.com/reflexjs/reflexjs/commit/2d1a2fd5bf9dd06e511a8db02c5bb2160c2e1078))
+* **www-next:** update home page copy ([9bbb3e9](https://github.com/reflexjs/reflexjs/commit/9bbb3e9b1be1c9d0f4796b96f47f4aef8bded104))
+* **www-next:** update home page copy ([cfcd9b1](https://github.com/reflexjs/reflexjs/commit/cfcd9b15d9b88ddf9687367bed8a5b6e24bef483))
+* **www-next:** update metatags ([2cb1536](https://github.com/reflexjs/reflexjs/commit/2cb1536786123deedc76526e2c3fe0d125d1d215))
+
+
+
+
+
 # [0.5.0](https://github.com/reflexjs/reflex/compare/www-next@0.4.0...www-next@0.5.0) (2020-12-03)
 
 
