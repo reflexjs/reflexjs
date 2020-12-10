@@ -1,4 +1,4 @@
-module.exports = {
+export default {
   colors: {
     text: "#111",
     heading: "#111",
