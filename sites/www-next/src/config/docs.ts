@@ -71,5 +71,26 @@ export const docs = {
         },
       ],
     },
+    {
+      title: "Starter kits",
+      items: [
+        {
+          title: "Next.js",
+          url: "https://github.com/reflexjs/nextjs-starter",
+        },
+        {
+          title: "Next.js (Typescript)",
+          url: "https://github.com/reflexjs/nextjs-starter-typescript",
+        },
+        {
+          title: "Gatsby",
+          url: "https://github.com/reflexjs/gatsby-starter",
+        },
+        {
+          title: "Gatsby (Typescript)",
+          url: "https://github.com/reflexjs/gatsby-starter-typescript",
+        },
+      ],
+    },
   ],
 }
