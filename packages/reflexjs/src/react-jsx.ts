@@ -96,6 +96,11 @@ function parseProps(type, props) {
   if (!props) return null
   const { variant, sx = {}, ..._props } = props
 
+  // Fix for React.Fragment.
+  if (typeof type === "symbol") {
+    return null
+  }
+
   if (sx && typeof type !== "string") {
     return {
       ..._props,
