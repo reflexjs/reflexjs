@@ -1,6 +1,6 @@
 # Reflexjs - Supercharge your Gatsby and Nextjs sites
 
-A collection of <strong>starter kits</strong>, <strong>themes</strong> and pre-built <strong>blocks</strong> to help you build Gatsby and Nextjs sites faster. Built on top of a best-in-class styling library.
+<strong>Starter kits</strong>, <strong>themes</strong> and <strong>blocks</strong> to help you build Gatsby and Nextjs sites faster. Built on top of a best-in-class styling library.
 
 <p>
   <a href="https://github.com/reflexjs/reflex/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/@arshad/gatsby-theme-phoenix.svg" alt="License"></a>
@@ -21,6 +21,13 @@ Demo: https://demo.reflexjs.org
 - **Variants:** Extract styles to your theme. Re-use them. Compose them.
 - **Color Modes:** Add dark mode. Add light mode. Add any color mode.
 - **And so much more::** Typescript, Intellisense, Emmet...
+
+## Starter kits
+
+- [Nextjs](https://github.com/reflexjs/nextjs-starter)
+- [Nextjs (Typescript)](https://github.com/reflexjs/nextjs-starter-typescript)
+- [Gatsby](https://github.com/reflexjs/gatsby-starter)
+- [Gatsby (Typescript)](https://github.com/reflexjs/gatsby-starter-typescript)
 
 ## Docs
 
