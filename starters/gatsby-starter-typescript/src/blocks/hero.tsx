@@ -1,3 +1,7 @@
+/** @jsx jsx */
+import { jsx } from "reflexjs"
+import * as React from "react"
+
 interface HeroBlockProps extends React.HTMLAttributes<HTMLElement> {
   subheading?: React.ReactNode
   heading?: React.ReactNode

@@ -1,3 +1,5 @@
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import * as React from "react"
 import { Link } from "gatsby"
 import { Icon } from "reflexjs"
