@@ -1,4 +1,5 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 import { Layout } from "../components"
 import Hero from "../blocks/hero"
 import Cards from "../blocks/cards"

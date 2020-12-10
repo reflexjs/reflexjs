@@ -1,4 +1,5 @@
-import * as React from "react"
+/** @jsx jsx */
+import { jsx } from "reflexjs"
 
 export function Footer({ copyright, ...props }) {
   return (
