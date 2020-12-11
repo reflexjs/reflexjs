@@ -1,6 +1,6 @@
 import * as React from "react"
 import { MDXRenderer } from "@reflexjs/gatsby-theme-core"
-import { Div } from "@reflexjs/components"
+import { Div, Section, Textarea } from "@reflexjs/components"
 import Reveal from 'reveal.js'
 import Markdown from 'reveal.js/plugin/markdown/markdown.esm.js'
 import Zoom from 'reveal.js/plugin/zoom/zoom.esm.js'
