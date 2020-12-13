@@ -1,6 +1,4 @@
-# Reflexjs - Supercharge your Gatsby and Nextjs sites
-
-<strong>Starter kits</strong>, <strong>themes</strong> and <strong>blocks</strong> to help you build Gatsby and Next.js sites faster. Built on top of a best-in-class styling library.
+# Reflexjs - <strong>Starter kits</strong>, <strong>themes</strong> and <strong>blocks</strong> to help you build Gatsby and Next.js sites faster.
 
 <p>
   <a href="https://github.com/reflexjs/reflex/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/@arshad/gatsby-theme-phoenix.svg" alt="License"></a>
