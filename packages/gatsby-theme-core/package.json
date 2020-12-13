@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-core",
   "description": "The core theme for Reflex. This adds a Page type.",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -47,7 +47,7 @@
     "gatsby-transformer-remark": "^2.8.13",
     "gatsby-transformer-sharp": "^2.5.3",
     "github-slugger": "^1.3.0",
-    "reflexjs": "^1.0.0"
+    "reflexjs": "^1.0.1"
   },
   "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52"
 }

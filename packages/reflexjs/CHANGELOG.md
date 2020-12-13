@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.1](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0...reflexjs@1.0.1) (2020-12-13)
+
+
+### Bug Fixes
+
+* **babel:** react fragment error on compile ([00759a8](https://github.com/reflexjs/reflex/commit/00759a816c2784c211e0d47e150f7ccedd66b2ea))
+
+
+
+
+
 # [1.0.0](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0-alpha.8...reflexjs@1.0.0) (2020-12-10)
 
 

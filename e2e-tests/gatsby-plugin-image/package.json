@@ -1,7 +1,7 @@
 {
   "name": "e2e-tests-gatsby-plugin-image",
   "private": true,
-  "version": "0.4.0",
+  "version": "0.4.1",
   "license": "MIT",
   "scripts": {
     "dev": "gatsby clean && gatsby develop",
@@ -11,7 +11,7 @@
     "test:e2e:ci": "start-server-and-test dev http://localhost:8000 cy:run"
   },
   "dependencies": {
-    "@reflexjs/gatsby-plugin-image": "^0.5.0"
+    "@reflexjs/gatsby-plugin-image": "^0.5.1"
   },
   "devDependencies": {
     "gatsby": "^2.26.1",

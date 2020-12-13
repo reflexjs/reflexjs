@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-plugin-image",
   "description": "Handles image for Reflex.",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -34,6 +34,6 @@
     "gatsby-plugin-sharp": "^2.6.16",
     "gatsby-source-filesystem": "^2.3.8",
     "gatsby-transformer-sharp": "^2.5.9",
-    "reflexjs": "^1.0.0"
+    "reflexjs": "^1.0.1"
   }
 }

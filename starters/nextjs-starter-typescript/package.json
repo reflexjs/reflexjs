@@ -1,6 +1,6 @@
 {
   "name": "nextjs-starter-typescript",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -12,7 +12,7 @@
     "next": "^10.0.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "reflexjs": "^1.0.0"
+    "reflexjs": "^1.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

@@ -1,6 +1,6 @@
 {
   "name": "ui",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -12,8 +12,8 @@
     "preview": "gatsby build && gatsby serve"
   },
   "dependencies": {
-    "@reflexjs/gatsby-plugin-metatags": "^0.5.0",
-    "@reflexjs/gatsby-theme-base": "^0.6.0",
+    "@reflexjs/gatsby-plugin-metatags": "^0.5.1",
+    "@reflexjs/gatsby-theme-base": "^0.6.1",
     "babel-preset-gatsby": "^0.6.0",
     "gatsby": "^2.26.1",
     "gatsby-plugin-manifest": "^2.4.25",
