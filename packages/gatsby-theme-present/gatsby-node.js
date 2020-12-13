@@ -1,6 +1,5 @@
 const { paginate } = require("gatsby-awesome-pagination")
 const withDefaults = require("./theme-options")
-const defaultProviders = require("./providers")
 
 const {
   ensureContentPath,
@@ -46,7 +45,6 @@ exports.createSchemaCustomization = async ({ actions }) => {
       thumbnail: String
       featured: Boolean
       published: Boolean
-      provider: String
       data: JSON
     }
   `)
@@ -66,24 +64,24 @@ exports.onCreateNode = async (
   )
 
   if (presentNode) {
-    const { providers } = withDefaults(themeOptions)
-    const presentProviders = [...defaultProviders, ...providers].filter(
-      ({ name }) => name === presentNode.provider
-    )
+    // const { providers } = withDefaults(themeOptions)
+    // const presentProviders = [...defaultProviders, ...providers].filter(
+    //   ({ name }) => name === presentNode.provider
+    // )
 
     // Set presentId and embedUrl
-    if (presentProviders.length) {
-      const [provider] = presentProviders
-      presentNode.presentId = provider.presentId(presentNode)
-      presentNode.embedUrl = provider.embedUrl(presentNode)
+    // if (presentProviders.length) {
+    //   const [provider] = presentProviders
+    //   presentNode.presentId = provider.presentId(presentNode)
+    //   presentNode.embedUrl = provider.embedUrl(presentNode)
 
-      if (!presentNode.thumbnail && typeof provider.thumbnail === "function") {
-        presentNode.thumbnail = provider.thumbnail(presentNode)
-      }
-    }
+    //   if (!presentNode.thumbnail && typeof provider.thumbnail === "function") {
+    //     presentNode.thumbnail = provider.thumbnail(presentNode)
+    //   }
+    // }
 
-    // Set publish to true by default.
-    if (presentNode.published !== false) presentNode.published = true
+    // // Set publish to true by default.
+    // if (presentNode.published !== false) presentNode.published = true
 
     actions.createNode({
       ...presentNode,
