@@ -14,7 +14,7 @@ export default (_, { ...options } = {}) => {
           import: pragmaName,
         },
       ],
-      [jsx, { pragma: pragmaName, pragmaFrag: "", ...options }],
+      [jsx, { pragma: pragmaName, pragmaFrag: "React.Fragment", ...options }],
     ],
   }
 }
