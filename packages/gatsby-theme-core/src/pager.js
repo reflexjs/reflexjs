@@ -12,7 +12,7 @@ export const Pager = ({ previousPagePath, nextPagePath, ...props }) => (
   >
     {previousPagePath && (
       <Link to={previousPagePath} textDecoration="none" variant="button.link">
-        <Icon name="arrow-lef" mr="2" /> Previous
+        <Icon name="arrow-left" mr="2" /> Previous
       </Link>
     )}
     {nextPagePath && (
