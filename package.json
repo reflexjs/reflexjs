@@ -4,7 +4,6 @@
   "workspaces": [
     "packages/*",
     "starters/*",
-    "sites/*",
     "e2e-tests/*",
     "examples/*"
   ],
@@ -17,11 +16,9 @@
     "prepare": "lerna run prepare",
     "lint": "eslint --cache --ext .js,.jsx .",
     "release": "lerna publish && npm run sync:all",
-    "block:add": "plop",
-    "sync:all": "npm run sync:starters && npm run sync:sites && npm run sync:examples",
+    "sync:all": "npm run sync:starters && npm run sync:examples",
     "sync:starters": "./scripts/sync.sh \"starters/*\"",
-    "sync:examples": "./scripts/sync.sh \"examples/*\"",
-    "sync:sites": "./scripts/sync.sh \"sites/*\""
+    "sync:examples": "./scripts/sync.sh \"examples/*\""
   },
   "husky": {
     "hooks": {
