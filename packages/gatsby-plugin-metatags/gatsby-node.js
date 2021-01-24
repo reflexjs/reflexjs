@@ -1,6 +1,7 @@
 const merge = require("deepmerge")
 const { generateMetatags } = require("./generate-metatags")
 const withDefaults = require("./options")
+const cloneDeep = require("lodash.clonedeep")
 
 exports.createSchemaCustomization = async ({ actions }) => {
   actions.createTypes(`
@@ -92,7 +93,10 @@ exports.onCreateNode = async (
 
   // Apply defaults from options.
   if (typeOptions && typeOptions.defaults) {
-    defaults = merge(defaults, applyDefaults(node, typeOptions.defaults))
+    defaults = merge(
+      defaults,
+      applyDefaults(node, cloneDeep(typeOptions.defaults))
+    )
   }
 
   // Find metatags from the node MDX parent to use as overrides.
