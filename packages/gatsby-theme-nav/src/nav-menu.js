@@ -127,7 +127,7 @@ export const NavMenuItem = ({
   ...props
 }) => {
   const [dropdownRef, isOpen, open, close] = useDropdown()
-  const isMobile = useBreakpointIndex() <= 2
+  const isMobile = useBreakpointIndex() < 1
   if (!value) return null
 
   const usingHover = trigger === "hover"
