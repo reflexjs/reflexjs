@@ -38,6 +38,7 @@
     "@reflexjs/gatsby-plugin-image": "^0.5.1",
     "@reflexjs/utils": "^0.2.1",
     "gatsby-plugin-react-helmet": "^3.3.6",
+    "lodash.clonedeep": "^4.5.0",
     "react-helmet": "^6.1.0",
     "reflexjs": "^1.0.1"
   }
