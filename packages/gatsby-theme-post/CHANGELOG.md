@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.8.3](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-post@0.8.2...@reflexjs/gatsby-theme-post@0.8.3) (2021-02-09)
+
+**Note:** Version bump only for package @reflexjs/gatsby-theme-post
+
+
+
+
+
 ## [0.8.2](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-theme-post@0.8.1...@reflexjs/gatsby-theme-post@0.8.2) (2021-02-09)
 
 **Note:** Version bump only for package @reflexjs/gatsby-theme-post

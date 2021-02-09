@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-profile",
   "description": "Adds user profiles to Gatsby sites",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -30,12 +30,12 @@
   },
   "dependencies": {
     "@reflexjs/gatsby-helpers": "^0.6.0",
-    "@reflexjs/gatsby-plugin-image": "^0.5.2",
-    "@reflexjs/gatsby-theme-core": "^0.8.2",
+    "@reflexjs/gatsby-plugin-image": "^0.5.3",
+    "@reflexjs/gatsby-theme-core": "^0.8.3",
     "@reflexjs/utils": "^0.2.1",
     "gatsby-image": "^2.4.5",
     "gatsby-source-filesystem": "^2.3.8",
-    "reflexjs": "^1.0.2"
+    "reflexjs": "^1.0.3"
   },
   "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52"
 }

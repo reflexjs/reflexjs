@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3](https://github.com/reflexjs/reflexjs/compare/reflexjs@1.0.2...reflexjs@1.0.3) (2021-02-09)
+
+
+### Bug Fixes
+
+* **reflexjs:** add a do not parse tag list ([567be19](https://github.com/reflexjs/reflexjs/commit/567be195d759679c646abf106eb4bbe2ee98ad07))
+
+
+
+
+
 ## [1.0.2](https://github.com/reflexjs/reflexjs/compare/reflexjs@1.0.1...reflexjs@1.0.2) (2021-02-09)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "example-video",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -13,14 +13,14 @@
   },
   "dependencies": {
     "@reflexjs/codemod": "^0.1.0",
-    "@reflexjs/gatsby-plugin-metatags": "^0.5.2",
-    "@reflexjs/gatsby-theme-base": "^0.6.2",
-    "@reflexjs/gatsby-theme-video": "^0.7.2",
+    "@reflexjs/gatsby-plugin-metatags": "^0.5.3",
+    "@reflexjs/gatsby-theme-base": "^0.6.3",
+    "@reflexjs/gatsby-theme-video": "^0.7.3",
     "gatsby": "^2.26.1",
     "gatsby-plugin-manifest": "^2.4.21",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "reflexjs": "^1.0.2"
+    "reflexjs": "^1.0.3"
   },
   "devDependencies": {
     "babel-preset-gatsby": "^0.7.0"
