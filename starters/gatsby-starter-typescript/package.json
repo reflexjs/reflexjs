@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter-typescript",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -14,7 +14,7 @@
     "gatsby-plugin-reflexjs": "^0.1.1",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
-    "reflexjs": "^1.0.1",
+    "reflexjs": "^1.0.2",
     "typeface-inter": "^1.1.13"
   },
   "devDependencies": {

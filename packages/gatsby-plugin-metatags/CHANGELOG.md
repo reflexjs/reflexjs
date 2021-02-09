@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.5.2](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-metatags@0.5.1...@reflexjs/gatsby-plugin-metatags@0.5.2) (2021-02-09)
+
+
+### Bug Fixes
+
+* add missing dependency ([d88b8a4](https://github.com/reflexjs/reflex/commit/d88b8a492fc76075197ddd80339c36e607946210))
+* clone per-type defaults before generating metatags for a node ([9dca756](https://github.com/reflexjs/reflex/commit/9dca75657593e1893bb5667a0fc775577906f7e4))
+
+
+
+
+
 ## [0.5.1](https://github.com/reflexjs/reflex/compare/@reflexjs/gatsby-plugin-metatags@0.5.0...@reflexjs/gatsby-plugin-metatags@0.5.1) (2020-12-13)
 
 **Note:** Version bump only for package @reflexjs/gatsby-plugin-metatags

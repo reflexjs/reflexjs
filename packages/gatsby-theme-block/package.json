@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-theme-block",
   "description": "Blocks are re-usable pieces of content that can be embedded on pages.",
-  "version": "0.6.1",
+  "version": "0.6.2",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -30,10 +30,10 @@
   },
   "dependencies": {
     "@reflexjs/gatsby-helpers": "^0.6.0",
-    "@reflexjs/gatsby-theme-core": "^0.8.1",
+    "@reflexjs/gatsby-theme-core": "^0.8.2",
     "@reflexjs/utils": "^0.2.1",
     "gatsby-source-filesystem": "^2.3.8",
-    "reflexjs": "^1.0.1"
+    "reflexjs": "^1.0.2"
   },
   "gitHead": "55a253fcd34ac7acac5fcdd4893d1c1f77f9fc52"
 }

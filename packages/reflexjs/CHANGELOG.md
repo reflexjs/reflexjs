@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.2](https://github.com/reflexjs/reflexjs/compare/reflexjs@1.0.1...reflexjs@1.0.2) (2021-02-09)
+
+
+### Bug Fixes
+
+* **reflexjs:** update reflexjs dependencies ([f962c18](https://github.com/reflexjs/reflexjs/commit/f962c184607dca6e92d32f1430266e699e297ec5))
+
+
+
+
+
 ## [1.0.1](https://github.com/reflexjs/reflex/compare/reflexjs@1.0.0...reflexjs@1.0.1) (2020-12-13)
 
 
