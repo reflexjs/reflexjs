@@ -22,21 +22,21 @@
     "reflexjs": "dist/cli.js"
   },
   "bugs": {
-    "url": "https://github.com/reflexjs/reflex/issues"
+    "url": "https://github.com/reflexjs/reflexjs/issues"
   },
-  "homepage": "https://github.com/reflexjs/reflex",
+  "homepage": "https://github.com/reflexjs/reflexjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/reflexjs/reflex.git",
+    "url": "https://github.com/reflexjs/reflexjs.git",
     "directory": "packages/reflexjs"
   },
   "dependencies": {
     "@babel/plugin-transform-react-jsx": "^7.12.5",
     "@emotion/core": "^10.0.0",
     "babel-plugin-jsx-pragmatic": "^1.0.2",
-    "csstype": "^3.0.2",
+    "csstype": "^3.0.6",
     "deepmerge": "^4.2.2",
-    "theme-ui": "^0.4.0-rc.5"
+    "theme-ui": "^0.4.0-rc.14"
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0",
