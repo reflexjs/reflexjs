@@ -337,3 +337,12 @@ describe("transformProps", () => {
     ).toMatchSnapshot()
   })
 })
+
+describe("meta tag", () => {
+  test("content attribute should not be transformed", () => {
+    const value = "width=device-width, initial-scale=1, shrink-to-fit=no"
+    expect(() => renderer.create(<meta content={value} />)).not.toThrowError(
+      `You seem to be using a value for 'content' without quotes, try replacing it with \`content: '"${value}"'\``
+    )
+  })
+})

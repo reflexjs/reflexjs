@@ -92,8 +92,21 @@ export function transformProps(
   return result
 }
 
+type doNotParseType = keyof JSX.IntrinsicElements
+
+const doNotParseTypes: doNotParseType[] = ["meta"]
+
+function isDoNotParseType(name: any): name is doNotParseType {
+  return doNotParseTypes.includes(name)
+}
+
 function parseProps(type, props) {
   if (!props) return null
+
+  if (isDoNotParseType(type)) {
+    return props
+  }
+
   const { variant, sx = {}, ..._props } = props
 
   // Fix for React.Fragment.
