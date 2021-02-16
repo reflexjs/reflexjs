@@ -1,6 +1,6 @@
 # @reflexjs/components
 
-DEPRECATED: Use [@reflexjs/ui](https://github.com/reflexjs/reflex/tree/master/packages/ui)
+DEPRECATED: See https://reflexjs.org/docs/migrate
 
 React components that can be styled using `style props` and [Theme UI](https://theme-ui.com).
 
