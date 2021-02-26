@@ -3288,6 +3288,20 @@
     prop-types "^15.6.1"
     react-lifecycles-compat "^3.0.4"
 
+"@reflexjs/preset-flex@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@reflexjs/preset-flex/-/preset-flex-0.2.1.tgz#a1d55a0f851f5a19e1af4ef5a9db9ecfec426528"
+  integrity sha512-xBDN/vv17uXXmAqYyN5qwnDFSzet6E0VH8F18B+k7tHW+XnlaNFyV/jRs8rSc36UDSUzNBHPQlSOqQtlvjj8Eg==
+  dependencies:
+    "@reflexjs/preset-base" "^0.3.1"
+
+"@reflexjs/preset-merry@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@reflexjs/preset-merry/-/preset-merry-0.2.1.tgz#b621de79e4b834b64fe94d240abe30e24bb2ec51"
+  integrity sha512-YFSEN1cZBKsWMyVsYcjoCwrKWjqcV6qwTNHWkFGbxfimvX0wgnHe9u5LQO20xU6E95yrTMmFcIn9dAfbs/jogQ==
+  dependencies:
+    "@reflexjs/preset-base" "^0.3.1"
+
 "@rollup/plugin-alias@^3.1.1":
   version "3.1.1"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-alias/-/plugin-alias-3.1.1.tgz#bb96cf37fefeb0a953a6566c284855c7d1cd290c"

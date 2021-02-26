@@ -2,7 +2,15 @@ import * as React from "react"
 import Link from "next/link"
 import { Icon } from "reflexjs"
 
-export function Navbar({ branding, links, ...props }) {
+export interface NavbarProps {
+  branding?: string
+  links?: {
+    title: string
+    href: string
+  }[]
+}
+
+export function Navbar({ branding, links, ...props }: NavbarProps) {
   const [showMenu, setShowMenu] = React.useState(false)
 
   return (

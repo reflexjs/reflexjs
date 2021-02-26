@@ -8,7 +8,7 @@ interface HeroBlockProps extends React.HTMLAttributes<HTMLElement> {
   children?: React.ReactNode
 }
 
-export default function Block({
+export function Hero({
   subheading,
   heading,
   text,

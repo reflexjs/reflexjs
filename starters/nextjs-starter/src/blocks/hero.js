@@ -1,4 +1,4 @@
-export default function Block({
+export function Hero({
   subheading,
   heading,
   text,

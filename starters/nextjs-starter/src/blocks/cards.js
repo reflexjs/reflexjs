@@ -1,4 +1,4 @@
-export default function Block({
+export function Cards({
   subheading,
   heading,
   text,

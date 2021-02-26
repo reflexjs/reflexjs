@@ -7,7 +7,7 @@ interface CardsBlockProps extends React.HTMLAttributes<HTMLElement> {
   columns?: number
 }
 
-export default function Block({
+export function Cards({
   subheading,
   heading,
   text,

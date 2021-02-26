@@ -1,6 +1,6 @@
-import { Layout } from "@/components"
-import Hero from "@/blocks/hero"
-import Cards from "@/blocks/cards"
+import { Layout } from "@/components/layout"
+import { Hero } from "@/blocks/hero"
+import { Cards } from "@/blocks/cards"
 import { Icon } from "reflexjs"
 
 export default function IndexPage() {

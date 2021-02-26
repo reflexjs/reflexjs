@@ -1,5 +1,6 @@
-import { Navbar, Footer } from "."
 import config from "@/config"
+import { Navbar } from "@/components/navbar"
+import { Footer } from "@/components/footer"
 
 export function Layout({ children }) {
   const { site } = config
