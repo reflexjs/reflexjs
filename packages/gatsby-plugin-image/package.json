@@ -14,12 +14,12 @@
     "reflex"
   ],
   "bugs": {
-    "url": "https://github.com/reflexjs/reflex/issues"
+    "url": "https://github.com/reflexjs/reflexjs/issues"
   },
-  "homepage": "https://github.com/reflexjs/reflex",
+  "homepage": "https://github.com/reflexjs/reflexjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/reflexjs/reflex.git",
+    "url": "https://github.com/reflexjs/reflexjs.git",
     "directory": "packages/gatsby-plugin-image"
   },
   "devDependencies": {
