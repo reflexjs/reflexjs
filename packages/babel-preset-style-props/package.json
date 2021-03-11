@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/babel-preset-style-props",
   "description": "A babel preset to automatically enable reflejx style props",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "sideEffects": false,
   "source": "src/index.ts",
   "main": "dist/index.js",

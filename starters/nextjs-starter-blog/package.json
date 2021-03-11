@@ -1,6 +1,6 @@
 {
   "name": "nextjs-starter-blog",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -9,7 +9,7 @@
     "preview": "next build && next start"
   },
   "dependencies": {
-    "@reflexjs/mdx": "^0.0.1",
+    "@reflexjs/mdx": "^0.1.0",
     "fuse.js": "^6.4.6",
     "next": "^10.0.1",
     "next-mdx": "^0.2.4",

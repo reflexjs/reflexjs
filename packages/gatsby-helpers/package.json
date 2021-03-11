@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-helpers",
   "description": "Utility helpers for Gatsby used by other packages.",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {

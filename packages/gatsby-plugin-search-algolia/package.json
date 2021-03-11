@@ -1,7 +1,7 @@
 {
   "name": "@reflexjs/gatsby-plugin-search-algolia",
   "description": "Algolia search integration for Reflex sites",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -29,8 +29,8 @@
     "react-dom": "^16.14.0"
   },
   "dependencies": {
-    "@reflexjs/gatsby-helpers": "^0.6.0",
-    "@reflexjs/utils": "^0.2.1",
+    "@reflexjs/gatsby-helpers": "^0.6.1",
+    "@reflexjs/utils": "^0.2.2",
     "algoliasearch": "^4.4.0",
     "gatsby-plugin-algolia": "^0.11.2",
     "github-slugger": "^1.3.0",
@@ -39,6 +39,6 @@
     "remark": "^12.0.1",
     "remark-frontmatter": "^2.0.0",
     "remark-mdx": "^1.6.16",
-    "remark-mdx-searchable": "^0.1.0"
+    "remark-mdx-searchable": "^0.1.1"
   }
 }

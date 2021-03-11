@@ -1,6 +1,6 @@
 {
   "name": "@reflexjs/gatsby-theme-library",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
@@ -21,12 +21,12 @@
     "directory": "packages/gatsby-theme-library"
   },
   "dependencies": {
-    "@reflexjs/gatsby-helpers": "^0.6.0",
-    "@reflexjs/gatsby-plugin-image": "^0.5.3",
-    "@reflexjs/gatsby-theme-block": "^0.6.3",
-    "@reflexjs/gatsby-theme-core": "^0.8.3",
-    "@reflexjs/icons-feather": "^0.2.0",
-    "@reflexjs/preset-base": "^0.3.1",
+    "@reflexjs/gatsby-helpers": "^0.6.1",
+    "@reflexjs/gatsby-plugin-image": "^0.5.4",
+    "@reflexjs/gatsby-theme-block": "^0.6.4",
+    "@reflexjs/gatsby-theme-core": "^0.8.4",
+    "@reflexjs/icons-feather": "^0.2.1",
+    "@reflexjs/preset-base": "^0.3.2",
     "@reflexjs/preset-flex": "^0.2.1",
     "@reflexjs/preset-merry": "^0.2.1",
     "copy-to-clipboard": "^3.3.1",

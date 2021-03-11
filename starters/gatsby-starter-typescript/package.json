@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter-typescript",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -11,7 +11,7 @@
   "dependencies": {
     "babel-preset-gatsby": "^0.8.0",
     "gatsby": "^2.26.1",
-    "gatsby-plugin-reflexjs": "^0.1.1",
+    "gatsby-plugin-reflexjs": "^0.1.2",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "reflexjs": "^1.0.3",

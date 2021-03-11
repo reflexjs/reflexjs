@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflexjs/compare/nextjs-starter@0.2.3...nextjs-starter@0.3.0) (2021-03-11)
+
+
+### Bug Fixes
+
+* **starters:** update nextjs starters ([84a73bc](https://github.com/reflexjs/reflexjs/commit/84a73bc32f6d83d7edb793fc5af21fb0e4ff9fde))
+
+
+### Features
+
+* **starters:** add nextjs-starter-tutorial ([b6101f9](https://github.com/reflexjs/reflexjs/commit/b6101f9d0425f1dc328a5000c351efa553b23b31))
+
+
+
+
+
 ## [0.2.3](https://github.com/reflexjs/reflexjs/compare/nextjs-starter@0.2.2...nextjs-starter@0.2.3) (2021-02-09)
 
 **Note:** Version bump only for package nextjs-starter
