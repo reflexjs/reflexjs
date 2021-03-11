@@ -1,0 +1,12 @@
+{
+  "post": {
+    "contentPath": "content/posts",
+    "basePath": "/blog",
+    "sortBy": "date",
+    "sortOrder": "desc"
+  },
+  "author": {
+    "contentPath": "content/authors",
+    "basePath": "/authors"
+  }
+}
