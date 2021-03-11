@@ -16,7 +16,8 @@
     "lint": "eslint --cache --ext .js,.jsx .",
     "release": "lerna publish && npm run sync:all",
     "sync:all": "npm run sync:starters",
-    "sync:starters": "./scripts/sync.sh \"starters/*\""
+    "sync:starters": "./scripts/sync.sh \"starters/*\"",
+    "sync:demo": "./scripts/sync-demo.sh \"starters/*\""
   },
   "husky": {
     "hooks": {
