@@ -1,0 +1,29 @@
+---
+title: Stable Incremental Static Regeneration
+excerpt: "Next.js introduced Static Site Generation methods in 9.3 with a clear goal in mind: we should get the benefits of static but with excellent support for dynamic data."
+date: "2021-03-08"
+published: true
+image: /images/placeholder.jpg
+caption: "A placeholder image shown at the top."
+author:
+  - emilia-garcia
+category:
+  - writing
+---
+
+Deleniti consectetur molestiae aliquam. Magnam vel vitae ab reprehenderit optio ea provident. Expedita laboriosam odit temporibus placeat.
+
+Ut eaque quam facere dolor numquam perferendis. Sapiente quod iste ex eveniet impedit sequi. Molestias veritatis magni incidunt velit enim optio illum.
+
+Quae ipsa illo corrupti consectetur inventore illo. Vel et quisquam dolorem. Nostrum iure dolorem nisi accusantium consequatur.
+
+```js
+export async function getStaticPaths() {
+  return {
+    paths: await getMdxPaths("post"),
+    fallback: false,
+  }
+}
+```
+
+Beatae amet incidunt voluptas. Itaque est ex facere. Blanditiis dolore officiis deserunt facilis.

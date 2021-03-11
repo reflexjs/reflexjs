@@ -1,0 +1,287 @@
+---
+title: Markdown Styleguide
+excerpt: "Write your content in Markdown and add interactivity with our library of built-in components."
+date: "2020-11-10"
+published: true
+image: "/images/placeholder.jpg"
+caption: "A placeholder image shown at the top."
+author:
+  - emilia-garcia
+category:
+  - uncategorized
+---
+
+**Smart** uses [MDX](https://mdxjs.com) for content editing. MDX lets you write content in Markdown and seamlessly embed interactive components.
+
+Smart ships with a library of components such as image galleries, video embed, callouts and much more.
+
+---
+
+## Typography
+
+Riche que puisque protéger arbre rayon ami. Parce Que bureau mort couleur pourquoi. Conscience santé début devoir sien grâce désert peu.
+
+# Heading One
+
+Occur hour especially concern business. Piece movie indeed so wait week. Under stop trade personal. [Unde harum natus](https://reflexjs.org) nisi est. Quibusdam explicabo quibusdam vel. Mollitia nostrum laborum fuga facere minus quod.
+
+Poste quinze subir agiter causer. Delà échapper réunir fête intelligence membre. Notre `réserver vaste jardin` premier remplir leur retourner.
+
+## Heading Two
+
+Inspired by [stale-while-revalidate](https://tools.ietf.org/html/rfc5861), background regeneration ensures traffic is served uninterruptedly, always from static storage, and the newly built page is pushed only after _it's done generating_.
+
+Choix effacer parvenir _grave entretenir_. Peau soir attendre fortune long. Champ double falloir prévenir froid.
+
+### Heading Three
+
+Jouer saint moyen poche commencer traîner. Visage essuyer drôle tandis que affirmer. Choix **_comme chaleur travailler_** larme prévoir.
+
+Maintain laugh again me TV something prepare front. Young design low some book. Point artist result letter up.
+
+#### Heading Four
+
+Onto key job sense power pressure. Sign size education administration how. Success threat identify it strong any own.
+
+##### Heading Five
+
+Not us receive task language end wonder a. Hair hair at. Into hear that court security myself head.
+
+Dream opportunity claim artist. Enough `different allow` reflect statement. Onto she performance prove war modern heart detail.
+
+###### Heading Six
+
+Maintain laugh again me TV something prepare front. Young design low some book. Point artist result letter up.
+
+---
+
+## Lists
+
+Unlike traditional SSR, Incremental Static Regeneration ensures you retain the benefits of static:
+
+### Unordered List
+
+- No spikes in latency. Pages are served consistently fast.
+- Pages never go offline. If the background page re-generation fails, the old page remains unaltered.
+- Low database and backend load. Pages are re-computed at most once concurrently.
+
+Both incremental features (adding pages and lazily updating them), as well as preview mode, are now stable and already fully supported by both next start and the Vercel edge platform out of the box.
+
+### Ordered List
+
+1. No spikes in latency. Pages are served consistently fast.
+2. Pages never go offline. If the background page re-generation fails, the old page remains unaltered.
+3. Low database and backend load. Pages are re-computed at most once concurrently.
+
+### Nested List
+
+1. No spikes in latency. Pages are served consistently fast.
+
+   - Debra Oliver
+   - Gabriel Cortes Blazquez
+
+2. Low database and backend load. Pages are re-computed at most once concurrently.
+
+   - Inga Weiß-Förster
+   - Ruben Camacho Expósito
+
+3. Pages never go offline.
+
+---
+
+## Blockquote
+
+Cinquante satisfaire fait lui malgré. Certain essayer ensemble famille flot rocher. Frère exprimer personne pleurer considérer précis puisque action.
+
+> Eaque amet consequuntur voluptas rem commodi. Incidunt quod iusto nemo libero laudantium earum perferendis. Accusamus ducimus voluptates enim.
+
+Saepe officiis vel quo expedita. Impedit recusandae cum molestiae consequatur cupiditate eaque suscipit. Rem et delectus maxime illo inventore iusto.
+
+#### With citation
+
+> Voluptatum non non excepturi. Libero pariatur debitis animi aspernatur molestias. Odit doloremque expedita laboriosam voluptatibus ipsum dicta.
+>
+> <cite>&mdash; Laura Moore</cite>
+
+---
+
+## Tables
+
+Expedita perspiciatis repellat eligendi hic voluptates architecto temporibus. Quam hic reiciendis dolores. Harum delectus laudantium vitae.
+
+| First Header                | Second Header                |
+| --------------------------- | ---------------------------- |
+| Content from cell 1         | Content from cell 2          |
+| Content in the first column | Content in the second column |
+
+Culpa at omnis velit rem. Cupiditate quidem consequatur autem. Atque aliquid ipsam.
+
+---
+
+## Code
+
+Smart has support for code blocks with syntax highlighting, file names, line numbers and line highlighting.
+
+### Inline Code
+
+For inline code blocks, wrap your code in backticks: \`const name = "reflexjs"\`. This will be rendered as follows: `const name = "reflexjs"`.
+
+### Code blocks
+
+For code blocks that allows multiple lines, syntax highlighting, line numbers and line highlighting, use triple backticks for code fencing: ` ``` `.
+
+````
+```jsx
+export function Footer({ copyright, ...props }: FooterProps) {
+  return (
+    <section {...props}>
+      <p variant="text.sm" textAlign="center" my="0">
+        {copyright}
+      </p>
+    </section>
+  )
+}
+```
+````
+
+```jsx
+export function Footer({ copyright, ...props }: FooterProps) {
+  return (
+    <section {...props}>
+      <p variant="text.sm" textAlign="center" my="0">
+        {copyright}
+      </p>
+    </section>
+  )
+}
+```
+
+### Line Numbers
+
+Use `showLineNumbers` to add line numbers.
+
+````
+```js showLineNumbers
+export async function getStaticProps() {
+  return {
+    props: await getDataFromCMS(),
+    // we will attempt to re-generate the page:
+    // - when a request comes in
+    // - at most once every second
+    revalidate: 1,
+  }
+}
+```
+````
+
+```js showLineNumbers
+export async function getStaticProps() {
+  return {
+    props: await getDataFromCMS(),
+    // we will attempt to re-generate the page:
+    // - when a request comes in
+    // - at most once every second
+    revalidate: 1,
+  }
+}
+```
+
+### Title
+
+Use `title=` to add a title to the code block. This is useful for displaying relevant file name or path.
+
+````
+```js title=path/to/next.config.js
+module.exports = {
+  basePath: "/docs",
+}
+```
+````
+
+```js title=path/to/next.config.js
+module.exports = {
+  basePath: "/docs",
+}
+```
+
+### Line Highlighting
+
+Use `// highlight-start` and `// highlight-end` to highlight multiple lines. For single line highlighting use `// highlight-line`.
+
+````
+```tsx title=pages/[...slug].tsx showLineNumbers=true
+export async function getStaticProps() {
+  // highlight-start
+  // Fetch all MDX posts.
+  const posts = await getAllMdxNodes("post")
+  // highlight-end
+
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 1, //highlight-line
+  }
+}
+```
+````
+
+```tsx title=pages/[...slug].tsx showLineNumbers=true
+export async function getStaticProps() {
+  // highlight-start
+  // Fetch all MDX posts.
+  const posts = await getAllMdxNodes("post")
+  // highlight-end
+
+  return {
+    props: {
+      posts,
+    },
+    revalidate: 1, // highlight-line
+  }
+}
+```
+
+### Diff
+
+You can also show diff using the `+` for line additions and `-` for deletions.
+
+````
+```diff
++ this line was added
+- this line was deleted
+```
+````
+
+```diff
++ this line was added
+- this line was deleted
+```
+
+---
+
+## Images
+
+To add images to your content, place them in the `public/images` directory and then use them in Markdown:
+
+```md
+![Alt text](/images/placeholder.jpg)
+```
+
+![Alt text](/images/placeholder.jpg)
+
+### With Caption
+
+If you need to add a caption to your images, use the following code:
+
+```html
+<figure>
+  <img src="/images/placeholder.jpg" alt="Alt text" />
+  <figcaption>Caption for the image</figcaption>
+</figure>
+```
+
+<figure>
+  <img src="/images/placeholder.jpg" alt="Alt text" />
+  <figcaption>Caption for the image</figcaption>
+</figure>

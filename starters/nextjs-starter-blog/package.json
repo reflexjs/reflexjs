@@ -1,0 +1,27 @@
+{
+  "name": "nextjs-starter-blog",
+  "version": "0.0.1",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "next build && next start"
+  },
+  "dependencies": {
+    "@reflexjs/mdx": "^0.0.1",
+    "fuse.js": "^6.4.6",
+    "next": "^10.0.1",
+    "next-mdx": "^0.2.4",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
+    "reflexjs": "^1.0.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@types/node": "^14.14.12",
+    "@types/react": "^17.0.0",
+    "reading-time": "^1.3.0",
+    "typescript": "^4.1.2"
+  }
+}
