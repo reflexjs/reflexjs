@@ -1,6 +1,6 @@
-# reflexjs/nextjs-blog
+# reflexjs/nextjs-starter-blog
 
-A Nextjs blog powered by [MDX](https://mdxjs.com).
+A Next.js blog powered by [MDX](https://mdxjs.com).
 
 ## Getting Started
 
