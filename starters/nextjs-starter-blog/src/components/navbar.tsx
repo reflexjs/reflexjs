@@ -18,8 +18,17 @@ export function Navbar({ branding, links, ...props }: NavbarProps) {
   const [showMenu, setShowMenu] = React.useState(false)
 
   return (
-    <header py="6" {...props}>
-      <div variant="container.md">
+    <header
+      position="static|sticky"
+      top="0"
+      bg="background"
+      opacity="0.85"
+      py="8"
+      zIndex="1000"
+      backdropFilter="saturate(100%) blur(10px)"
+      {...props}
+    >
+      <div variant="container.lg">
         <div display="flex" alignItems="center">
           {branding && (
             <Link href="/" passHref>
@@ -30,7 +39,7 @@ export function Navbar({ branding, links, ...props }: NavbarProps) {
                   color: "primary",
                 }}
               >
-                {branding.icon && <Icon name={branding.icon} size="5" mr="2" />}
+                {branding.icon && <Icon name={branding.icon} size="8" mr="2" />}
                 <span fontWeight="semibold" fontSize="3xl|2xl">
                   {branding.name}
                 </span>
@@ -38,7 +47,7 @@ export function Navbar({ branding, links, ...props }: NavbarProps) {
             </Link>
           )}
           <NavLinks links={links} display="none|grid" />
-          <ModeToggle ml="4" />
+          <ModeToggle ml="8" />
           <button
             display="flex|none"
             p="2"
@@ -82,7 +91,7 @@ export function NavLinks({ links, ...props }) {
     <div
       display="grid"
       col={`1|repeat(${links.length}, auto)`}
-      gap="8|10|12"
+      gap="8"
       ml="auto"
       {...props}
     >
