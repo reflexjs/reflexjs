@@ -5,7 +5,7 @@ A Next.js blog powered by [MDX](https://mdxjs.com).
 ## Getting Started
 
 ```sh
-npx create-next-app -e https://github.com/reflexjs/nextjs-blog
+npx create-next-app -e https://github.com/reflexjs/nextjs-starter-blog
 ```
 
 ## Running your site
