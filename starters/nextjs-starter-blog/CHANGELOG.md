@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.2.1](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-blog@0.2.0...nextjs-starter-blog@0.2.1) (2021-03-16)
+
+
+### Bug Fixes
+
+* **nextjs-starter-blog:** update component ([0f8d8d9](https://github.com/reflexjs/reflexjs/commit/0f8d8d97a114de305e8e94cc5a95467bacbd6f01))
+
+
+
+
+
 # [0.2.0](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-blog@0.1.0...nextjs-starter-blog@0.2.0) (2021-03-16)
 
 
