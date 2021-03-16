@@ -36,7 +36,7 @@ export function Navbar({ branding, links, ...props }: NavbarProps) {
                 display="flex"
                 alignItems="center"
                 _hover={{
-                  color: "primary",
+                  color: "link",
                 }}
               >
                 {branding.icon && <Icon name={branding.icon} size="8" mr="2" />}
@@ -101,9 +101,10 @@ export function NavLinks({ links, ...props }) {
             variant="text"
             textAlign="left|center"
             fontSize="xl|md"
+            fontWeight="semibold"
             px="4|0"
             _hover={{
-              color: "primary",
+              color: "link",
             }}
           >
             {link.title}

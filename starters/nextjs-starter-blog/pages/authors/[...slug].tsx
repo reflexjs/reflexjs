@@ -6,6 +6,7 @@ import { components } from "@reflexjs/mdx"
 import { Author, Post } from "types"
 import { Layout } from "@/components/layout"
 import Link from "next/link"
+import { LayoutGrid } from "@/components/layout-grid"
 
 export interface AuthorPageProps {
   author: Author
@@ -19,51 +20,54 @@ export default function AuthorPage({ author, posts }: AuthorPageProps) {
 
   return (
     <Layout>
-      <article>
-        <div variant="container.md">
-          <div display="grid" col="250px 1fr" gap="10">
-            <aside>
-              {author.frontMatter.picture && (
-                <picture overflow="hidden" borderRadius="lg" display="block">
-                  <Image
-                    src={author.frontMatter.picture}
-                    layout="responsive"
-                    width={250}
-                    height={250}
-                  />
-                </picture>
-              )}
-            </aside>
-            <div>
-              <h1 variant="heading.h1">{author.frontMatter.name}</h1>
-              {author.frontMatter.bio ? (
-                <p variant="text.lead" my="6">
-                  {author.frontMatter.bio}
-                </p>
-              ) : null}
-              {content}
-            </div>
+      <LayoutGrid>
+        <div
+          display="grid"
+          col="250px 1fr"
+          gap="10"
+          gridColumn="wide-start/wide-end"
+        >
+          <aside>
+            {author.frontMatter.picture && (
+              <figure overflow="hidden" borderRadius="lg" display="block">
+                <Image
+                  src={author.frontMatter.picture}
+                  layout="responsive"
+                  width={250}
+                  height={250}
+                />
+              </figure>
+            )}
+          </aside>
+          <div>
+            <h1 variant="heading.h1">{author.frontMatter.name}</h1>
+            {author.frontMatter.bio ? (
+              <p variant="text.lead" my="6">
+                {author.frontMatter.bio}
+              </p>
+            ) : null}
+            {content}
           </div>
-          {posts.length ? (
-            <div pt="10">
-              <h3 variant="heading.h6" pb="4" borderBottomWidth="1" mb="4">
-                Posts by {author.frontMatter.name}
-              </h3>
-              <ul>
-                {posts.map((post) => (
-                  <li key={post.slug} mb="2">
-                    <Link href={post.url} passHref>
-                      <a variant="heading.h4 text.link">
-                        {post.frontMatter.title}
-                      </a>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ) : null}
         </div>
-      </article>
+        {posts.length ? (
+          <div pt="12" gridColumn="wide-start/wide-end">
+            <h3 variant="heading.h6" pb="4" borderBottomWidth="1" mb="4">
+              Posts by {author.frontMatter.name}
+            </h3>
+            <ul>
+              {posts.map((post) => (
+                <li key={post.slug} mb="2">
+                  <Link href={post.url} passHref>
+                    <a variant="heading.h4 text.link">
+                      {post.frontMatter.title}
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
+      </LayoutGrid>
     </Layout>
   )
 }

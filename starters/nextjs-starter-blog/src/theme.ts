@@ -1,63 +1,7 @@
-const prism = {
-  ".plain": {
-    minHeight: "1ch",
-    display: "inline-block",
-  },
-  ".attr-name": {
-    fontStyle: "italic",
-  },
-  ".comment": {
-    color: "prism.comment",
-    fontStyle: "italic",
-  },
-  ".attr-name, .string, .url": {
-    color: "prism.string",
-  },
-  ".variable": {
-    color: "prism.var",
-  },
-  ".number": {
-    color: "prism.number",
-  },
-  ".builtin, .char, .constant": {
-    color: "prism.constant",
-  },
-  ".function": {
-    color: "prism.function",
-  },
-  ".punctuation, .selector, .doctype": {
-    color: "prism.punctuation",
-  },
-  ".class-name": {
-    color: "prism.className",
-  },
-  ".operator, .keyword": {
-    color: "prism.keyword",
-  },
-  ".boolean": {
-    color: "prism.boolean",
-  },
-  ".property": {
-    color: "prism.property",
-  },
-  ".namespace": {
-    color: "prism.namespace",
-  },
-  ".highlight": {
-    bg: "prism.highlight",
-  },
-  ".deleted": {
-    color: "prism.deleted",
-  },
-  ".inserted": {
-    color: "prism.inserted",
-  },
-}
-
 export default {
   colors: {
     text: "#191924",
-    textLighter: "#777",
+    textLighter: "#60696f",
     link: "#06f",
     background: "#fff",
     heading: "#07070a",
@@ -73,31 +17,32 @@ export default {
     border: "#ebece9",
     borderHover: "#b9bdb3",
     prism: {
-      text: "#403f53",
-      lineNumber: "rgb(152, 159, 177)",
-      background: "#FBFBFB",
-      comment: "rgb(152, 159, 177)",
-      string: "rgb(72, 118, 214)",
-      var: "rgb(201, 103, 101)",
-      number: "rgb(170, 9, 130)",
-      constant: "rgb(12, 150, 155)",
-      keyword: "rgb(72, 118, 214)",
-      function: "rgb(153, 76, 195)",
-      punctuation: "rgb(153, 76, 195)",
-      className: "rgb(17, 17, 17)",
-      tag: "rgb(153, 76, 195)",
-      boolean: "rgb(188, 84, 84)",
-      property: "rgb(12, 150, 155)",
-      namespace: "rgb(12, 150, 155)",
-      highlight: "hsl(281, 50%, 93%)",
-      file: "rgb(152, 159, 177)",
-      deleted: "rgba(239, 83, 80, 0.56)",
-      inserted: "rgb(72, 118, 214)",
+      text: "#000000",
+      background: "#fefefe",
+      comment: "#095a02",
+      string: "#a62815",
+      var: "#095a02",
+      number: "#095a02",
+      constant: "#007faa",
+      keyword: "#2f00ff",
+      function: "#000000",
+      punctuation: "#000000",
+      className: "#d91e18",
+      tag: "#000000",
+      boolean: "#2f00ff",
+      property: "#7d0b00",
+      namespace: "#2f00ff",
+      deleted: "#a62815",
+      inserted: "#095a02",
+      highlight: "#e5ebf1",
+      file: "#2e7795",
+      lineNumber: "#2e7795",
     },
     modes: {
       dark: {
         text: "#ededee",
-        link: "#06f",
+        textLighter: "#d6deeb",
+        link: "#ffeb3b",
         background: "#1a202c",
         heading: "#fff",
         primary: "#06f",
@@ -112,9 +57,8 @@ export default {
         borderHover: "#434360",
         prism: {
           text: "#d6deeb",
-          lineNumber: "rgb(99, 119, 119)",
           background: "#011627",
-          comment: "rgb(99, 119, 119)",
+          comment: "#88ac89",
           string: "rgb(173, 219, 103)",
           var: "rgb(214, 222, 235)",
           number: "rgb(247, 140, 108)",
@@ -127,10 +71,11 @@ export default {
           boolean: "rgb(255, 88, 116)",
           property: "rgb(128, 203, 196)",
           namespace: "rgb(178, 204, 214)",
-          highlight: "hsl(207, 94%, 12%)",
-          file: "rgb(99, 119, 119)",
-          deleted: "rgba(239, 83, 80, 0.56)",
+          deleted: "#f88484",
           inserted: "rgb(173, 219, 103)",
+          highlight: "hsl(207, 94%, 12%)",
+          file: "#89a8a8",
+          lineNumber: "#89a8a8",
         },
       },
     },
@@ -337,6 +282,7 @@ export default {
         lineHeight: "normal",
         fontFeatureSettings: "'kern'",
         textRendering: "optimizeLegibility",
+        WebkitFontSmoothing: "antialiased",
       },
       a: {
         color: "inherit",
@@ -427,7 +373,7 @@ export default {
     },
     code: {
       fontFamily: "monospace",
-      color: "primary",
+      color: "link",
       backgroundColor: "prism.background",
       fontSize: "md",
       p: "0 .2em",
@@ -439,26 +385,81 @@ export default {
       textAlign: "center",
       mt: 4,
       fontSize: "sm",
+      color: "textLighter",
     },
     pre: {
       color: "prism.text",
       backgroundColor: "prism.background",
       fontFamily: "monospace",
       fontSize: "md",
-      lineHeight: 8,
+      lineHeight: 7,
       tabSize: 2,
       hyphens: "none",
       my: 8,
       py: 4,
       overflow: "auto",
       borderRadius: "md",
-      whiteSpace: "pre-wrap",
-      ...prism,
+      whiteSpace: "pre",
+      ".plain": {
+        minHeight: "1ch",
+        display: "inline-block",
+      },
+      ".tag": {
+        color: "prism.tag",
+      },
+      ".attr-name": {
+        fontStyle: "italic",
+      },
+      ".comment": {
+        color: "prism.comment",
+        fontStyle: "italic",
+      },
+      ".attr-name, .string, .url": {
+        color: "prism.string",
+      },
+      ".variable": {
+        color: "prism.var",
+      },
+      ".number": {
+        color: "prism.number",
+      },
+      ".builtin, .char, .constant": {
+        color: "prism.constant",
+      },
+      ".function": {
+        color: "prism.function",
+      },
+      ".punctuation, .selector, .doctype": {
+        color: "prism.punctuation",
+      },
+      ".class-name": {
+        color: "prism.className",
+      },
+      ".operator, .keyword": {
+        color: "prism.keyword",
+      },
+      ".boolean": {
+        color: "prism.boolean",
+      },
+      ".property": {
+        color: "prism.property",
+      },
+      ".namespace": {
+        color: "prism.namespace",
+      },
+      ".highlight": {
+        bg: "prism.highlight",
+      },
+      ".deleted": {
+        color: "prism.deleted",
+      },
+      ".inserted": {
+        color: "prism.inserted",
+      },
     },
   },
-
   subheading: {
-    color: "gray",
+    color: "textLighter",
     textTransform: "uppercase",
     m: 0,
   },
@@ -527,6 +528,7 @@ export default {
     bg: "muted",
     fontFamily: "body",
     fontSize: "md",
+    fontWeight: "medium",
     lineHeight: "none",
     textDecoration: "none",
     border: "1px solid",
@@ -644,7 +646,7 @@ export default {
         borderColor: "muted",
         transform: "none",
         boxShadow: "none",
-        color: "primary",
+        color: "link",
       },
 
       svg: {

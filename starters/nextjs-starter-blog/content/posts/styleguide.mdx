@@ -1,7 +1,7 @@
 ---
 title: Markdown Styleguide
 excerpt: "Write your content in Markdown and add interactivity with our library of built-in components."
-date: "2020-11-10"
+date: "2021-03-12"
 published: true
 image: "/images/placeholder.jpg"
 caption: "A placeholder image shown at the top."
@@ -11,9 +11,9 @@ category:
   - uncategorized
 ---
 
-**Smart** uses [MDX](https://mdxjs.com) for content editing. MDX lets you write content in Markdown and seamlessly embed interactive components.
+We use [MDX](https://mdxjs.com) for content editing. MDX lets you write content in Markdown and seamlessly embed interactive components.
 
-Smart ships with a library of components such as image galleries, video embed, callouts and much more.
+The `@reflexjs/mdx` package ships with a library of components such as image galleries, video embed, callouts and much more.
 
 ---
 
@@ -97,7 +97,7 @@ Cinquante satisfaire fait lui malgré. Certain essayer ensemble famille flot roc
 
 Saepe officiis vel quo expedita. Impedit recusandae cum molestiae consequatur cupiditate eaque suscipit. Rem et delectus maxime illo inventore iusto.
 
-#### With citation
+### With citation
 
 > Voluptatum non non excepturi. Libero pariatur debitis animi aspernatur molestias. Odit doloremque expedita laboriosam voluptatibus ipsum dicta.
 >
@@ -145,6 +145,9 @@ export function Footer({ copyright, ...props }: FooterProps) {
 ````
 
 ```jsx
+/** @jsx jsx */
+import { jsx } from "reflexjs"
+
 export function Footer({ copyright, ...props }: FooterProps) {
   return (
     <section {...props}>

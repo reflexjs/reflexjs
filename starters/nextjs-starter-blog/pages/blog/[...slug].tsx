@@ -7,6 +7,7 @@ import readingTime from "reading-time"
 import { Post } from "types"
 import { Layout } from "@/components/layout"
 import { PostMeta } from "@/components/post-meta"
+import { LayoutGrid } from "@/components/layout-grid"
 
 export interface PostPageProps {
   post: Post
@@ -19,39 +20,34 @@ export default function PostPage({ post }: PostPageProps) {
 
   return (
     <Layout>
-      <div variant="container.sm" py="4|10|12">
-        <div>
-          <h1 variant="heading.h1">{post.frontMatter.title}</h1>
-          {post.frontMatter.excerpt && (
-            <p variant="text.lead" my="6">
-              {post.frontMatter.excerpt}
-            </p>
-          )}
-          <PostMeta post={post} />
-        </div>
-      </div>
-      {post.frontMatter.image && (
-        <div mb="10" maxW="800" mx="auto">
-          <figure
-            position="relative"
-            height="250px|350px|450px"
-            rounded="sm"
-            overflow="hidden"
-          >
-            <Image
-              src={post.frontMatter.image}
-              alt={post.frontMatter.caption || post.frontMatter.title}
-              layout="fill"
-            />
-          </figure>
-          {post.frontMatter.caption && (
-            <figcaption variant="text.caption">
-              {post.frontMatter.caption}
-            </figcaption>
-          )}
-        </div>
-      )}
-      <div variant="container.sm">{content}</div>
+      <LayoutGrid>
+        <h1 variant="heading.h1">{post.frontMatter.title}</h1>
+        {post.frontMatter.excerpt && (
+          <p variant="text.lead" my="4">
+            {post.frontMatter.excerpt}
+          </p>
+        )}
+        <PostMeta post={post} />
+        {post.frontMatter.image && (
+          <div py="10" gridColumn="full-start/full-end|wide-start/wide-end">
+            <figure position="relative" rounded="sm" overflow="hidden">
+              <Image
+                src={post.frontMatter.image}
+                alt={post.frontMatter.caption || post.frontMatter.title}
+                layout="intrinsic"
+                width={1650}
+                height={1000}
+              />
+            </figure>
+            {post.frontMatter.caption && (
+              <figcaption variant="text.caption">
+                {post.frontMatter.caption}
+              </figcaption>
+            )}
+          </div>
+        )}
+        {content}
+      </LayoutGrid>
     </Layout>
   )
 }

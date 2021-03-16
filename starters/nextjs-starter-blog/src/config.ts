@@ -18,6 +18,10 @@ export default {
         title: "Styleguide",
         href: "/blog/styleguide",
       },
+      {
+        title: "Contact",
+        href: "/contact",
+      },
     ],
   },
 }

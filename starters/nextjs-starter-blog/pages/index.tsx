@@ -1,8 +1,9 @@
 import { getAllMdxNodes } from "next-mdx/server"
 import readingTime from "reading-time"
-import { Layout } from "@/components/layout"
 import { Post } from "types"
+import { Layout } from "@/components/layout"
 import { PostTeaser } from "@/components/post-teaser"
+import { LayoutGrid } from "@/components/layout-grid"
 
 export interface IndexPageProps {
   posts: Post[]
@@ -11,16 +12,18 @@ export interface IndexPageProps {
 export default function IndexPage({ posts }: IndexPageProps) {
   return (
     <Layout>
-      <div variant="container.md" py="10|12">
-        <h1 variant="heading.h1">All Posts.</h1>
-        {posts.length ? (
-          posts.map((post) => <PostTeaser key={post.slug} post={post} />)
-        ) : (
-          <p my="10" textAlign="center">
-            No posts found.
-          </p>
-        )}
-      </div>
+      <LayoutGrid>
+        <div gridColumn="wide-start/wide-end">
+          <h1 variant="heading.h1">All Posts.</h1>
+          {posts.length ? (
+            posts.map((post) => <PostTeaser key={post.slug} post={post} />)
+          ) : (
+            <p my="10" textAlign="center">
+              No posts found.
+            </p>
+          )}
+        </div>
+      </LayoutGrid>
     </Layout>
   )
 }
