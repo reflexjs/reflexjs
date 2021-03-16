@@ -4,7 +4,7 @@ import { components } from "@reflexjs/mdx"
 
 import { Page } from "types"
 import { Layout } from "@/components/layout"
-import { ContentGrid } from "@/components/content-grid"
+import { LayoutGrid } from "@/components/layout-grid"
 
 export interface PageProps {
   page: Page
@@ -17,7 +17,7 @@ export default function PagePage({ page }: PageProps) {
 
   return (
     <Layout>
-      <ContentGrid py="4|10|12">
+      <LayoutGrid>
         <h1 variant="heading.h1">{page.frontMatter.title}</h1>
         {page.frontMatter.excerpt && (
           <p variant="text.lead" my="4">
@@ -25,7 +25,7 @@ export default function PagePage({ page }: PageProps) {
           </p>
         )}
         {content}
-      </ContentGrid>
+      </LayoutGrid>
     </Layout>
   )
 }
