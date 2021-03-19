@@ -2,7 +2,7 @@ import { Icon, VisuallyHidden } from "reflexjs"
 
 export function ContactForm() {
   return (
-    <form display="grid" col="1|repeat(2, auto)" gap="4" mt="4" w="full|auto">
+    <form display="grid" col="1|2" gap="4" mt="4" w="full|auto">
       <div>
         <VisuallyHidden>
           <label htmlFor="name">Name</label>
@@ -61,7 +61,7 @@ export function ContactForm() {
           rows={10}
         />
       </div>
-      <div display="grid" col="2" gap="4">
+      <div display="grid" col="1|2" gap="4" colStart="span 2">
         <button type="submit" variant="button.primary">
           Send message <Icon name="arrow-right" ml="2" />
         </button>

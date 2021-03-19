@@ -10,7 +10,9 @@ export default function ContactPage() {
         <p variant="text.lead" mt="4" mb="8">
           Say hello at hello@example.com or use the contact form below!
         </p>
-        <ContactForm />
+        <div>
+          <ContactForm />
+        </div>
       </LayoutGrid>
     </Layout>
   )
