@@ -24,6 +24,7 @@ export function Navbar({ branding, links, ...props }: NavbarProps) {
     <header
       position="relative|sticky"
       top="0"
+      width="full"
       bg="background"
       py="2|4|6|8"
       zIndex="1000"

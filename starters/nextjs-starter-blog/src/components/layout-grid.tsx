@@ -1,15 +1,15 @@
-export interface ContentGridProps {
+export interface LayoutGridProps {
   children: React.ReactNode
 }
 
-export function LayoutGrid({ children, ...props }: ContentGridProps) {
+export function LayoutGrid({ children, ...props }: LayoutGridProps) {
   if (!children) return null
 
   return (
     <div
       display="grid"
       gridTemplateColumns="[full-start] minmax(5vw,auto) [wide-start] minmax(auto,80px) [main-start] min(638px,calc(100% - 10vw)) [main-end] minmax(auto,80px) [wide-end] minmax(5vw,auto) [full-end]"
-      py="10|12"
+      py="6|10|12"
       sx={{
         "> *": {
           gridColumn: "main-start/main-end",

@@ -472,7 +472,7 @@ export default {
     h1: {
       fontSize: "5xl|6xl",
       fontWeight: "bold",
-      lineHeight: "1",
+      lineHeight: "1.1",
     },
     h2: {
       fontSize: "3xl|4xl",
