@@ -32,7 +32,12 @@ export const CopyButton = ({
   }, [hasCopied])
 
   return (
-    <button onClick={handleClicked} variant="button.icon.sm" {...props}>
+    <button
+      onClick={handleClicked}
+      variant="button.icon.sm"
+      bg="muted"
+      {...props}
+    >
       {children ? (
         children
       ) : hasCopied ? (
