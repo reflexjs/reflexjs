@@ -22,16 +22,28 @@ export function Navbar({ branding, links, ...props }: NavbarProps) {
 
   return (
     <header
-      position="static|sticky"
+      position="relative|sticky"
       top="0"
       bg="background"
-      opacity="0.85"
-      py="8"
+      py="2|4|6|8"
       zIndex="1000"
-      backdropFilter="saturate(100%) blur(10px)"
+      sx={{
+        ":after": {
+          content: '""',
+          position: "absolute",
+          top: 0,
+          left: 0,
+          w: "full",
+          h: "100%",
+          zIndex: 10,
+          bg: "background",
+          opacity: "0.85",
+          backdropFilter: "saturate(100%) blur(10px)",
+        },
+      }}
       {...props}
     >
-      <div variant="container.lg">
+      <div variant="container.lg" position="relative" zIndex="1000">
         <div display="flex" alignItems="center">
           {branding && (
             <Link href="/" passHref>
@@ -43,22 +55,21 @@ export function Navbar({ branding, links, ...props }: NavbarProps) {
                 }}
               >
                 {branding.icon && <Icon name={branding.icon} size="8" mr="2" />}
-                <span fontWeight="semibold" fontSize="3xl|2xl">
+                <span fontWeight="semibold" fontSize="2xl">
                   {branding.name}
                 </span>
               </a>
             </Link>
           )}
           <NavLinks links={links} display="none|grid" />
-          <ModeToggle ml="8" />
+          <ModeToggle ml="6" display="none|flex" />
           <button
+            variant="button.icon"
             display="flex|none"
-            p="2"
-            size="14"
             ml="auto"
             onClick={() => setShowMenu(!showMenu)}
           >
-            <Icon name="menu-alt" size="10" />
+            <Icon name={showMenu ? "close" : "menu"} />
           </button>
         </div>
       </div>
@@ -66,7 +77,7 @@ export function Navbar({ branding, links, ...props }: NavbarProps) {
         position="absolute"
         zIndex="1000"
         bg="background"
-        top="24"
+        top="20"
         left="4"
         right="4"
         px="4"
@@ -83,7 +94,8 @@ export function Navbar({ branding, links, ...props }: NavbarProps) {
         maxHeight="95vh"
         display="block|none"
       >
-        <NavLinks links={links} py="8" />
+        <NavLinks links={links} py="6" />
+        <ModeToggle ml="6" position="absolute" top="4" right="4" />
       </div>
     </header>
   )
@@ -110,7 +122,7 @@ export function NavLinks({ links, ...props }: { links: NavbarProps["links"] }) {
               variant="text"
               textAlign="left|center"
               fontSize="xl|md"
-              px="4|0"
+              px="2|0"
               fontWeight={isActive ? "semibold" : "normal"}
               _hover={{
                 color: "link",

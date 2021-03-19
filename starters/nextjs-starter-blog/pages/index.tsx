@@ -24,7 +24,10 @@ export default function IndexPage({ posts }: IndexPageProps) {
       <LayoutGrid>
         <div gridColumn="wide-start/wide-end">
           <div
-            display="flex"
+            display="grid"
+            col="1|2"
+            row="2|1"
+            gap="6"
             justifyContent="space-between"
             alignItems="center"
           >

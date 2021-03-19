@@ -7,8 +7,8 @@ export default {
     heading: "#07070a",
     primary: "#06f",
     primaryHover: "#005ae0",
-    secondary: "#07070a",
-    secondaryHover: "#191924",
+    secondary: "#D81159",
+    secondaryHover: "#D81159",
     accent: "#fb3640",
     accentHover: "#fa0f1b",
     selection: "#ff70a0",
@@ -42,15 +42,16 @@ export default {
       dark: {
         text: "#ededee",
         textLighter: "#d6deeb",
-        link: "#ffeb3b",
+        link: "#ff94bc",
         background: "#1a202c",
         heading: "#fff",
         primary: "#06f",
-        primaryHover: "#FF3355",
-        secondary: "#07070a",
-        secondaryHover: "#191924",
+        primaryHover: "#005ae0",
+        secondary: "#9e0c41",
+        secondaryHover: "#850a37",
         accent: "#fb3640",
         accentHover: "#fa0f1b",
+        selection: "#ff70a0",
         muted: "#2a2a3c",
         mutedHover: "#212130",
         border: "#2a2a3c",
@@ -269,12 +270,6 @@ export default {
       "*": {
         m: 0,
         p: 0,
-        listStyle: "none",
-        border: "0 solid",
-
-        "::selection": {
-          bg: "selection",
-        },
       },
       html: {
         fontFamily: "body",
@@ -316,6 +311,10 @@ export default {
         listStyle: "none",
         border: "0 solid",
         borderColor: "border",
+
+        "::selection": {
+          bg: "selection",
+        },
       },
     },
     code: {
@@ -812,7 +811,8 @@ export default {
   icons: {
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
     "arrow-right": `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>`,
-    "menu-alt": `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>`,
+    menu: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>`,
+    close: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>`,
     clipboard: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>`,
     check: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>`,
     moon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>`,

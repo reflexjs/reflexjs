@@ -17,7 +17,7 @@ export default function AuthorPage({ author, posts }: AuthorPageProps) {
       <LayoutGrid>
         <div
           display="grid"
-          col="250px 1fr"
+          col="1|250px 1fr"
           gap="10"
           gridColumn="wide-start/wide-end"
         >

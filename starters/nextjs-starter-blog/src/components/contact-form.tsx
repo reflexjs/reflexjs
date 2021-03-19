@@ -61,9 +61,12 @@ export function ContactForm() {
           rows={10}
         />
       </div>
-      <button type="submit" variant="button.primary" colStart="span 2">
-        Send message <Icon name="arrow-right" ml="2" />
-      </button>
+      <div display="grid" col="2" gap="4">
+        <button type="submit" variant="button.primary">
+          Send message <Icon name="arrow-right" ml="2" />
+        </button>
+        <button variant="button.secondary">Button</button>
+      </div>
     </form>
   )
 }
