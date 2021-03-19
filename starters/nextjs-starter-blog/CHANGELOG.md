@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-blog@0.2.1...nextjs-starter-blog@0.3.0) (2021-03-19)
+
+
+### Bug Fixes
+
+* **nextjs-starter-blog:** fix reponsive styles and dark mode colors ([cfc5ee9](https://github.com/reflexjs/reflexjs/commit/cfc5ee9a0d3f93860a018c4d7b38fd37a4e269d6))
+
+
+### Features
+
+* **nextjs-starter-blog:** implement search ([0538ca2](https://github.com/reflexjs/reflexjs/commit/0538ca224d44f471395c222f25dd3e4ed7164e12))
+
+
+
+
+
 ## [0.2.1](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-blog@0.2.0...nextjs-starter-blog@0.2.1) (2021-03-16)
 
 
