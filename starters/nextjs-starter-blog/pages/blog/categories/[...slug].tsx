@@ -1,7 +1,5 @@
-import { getAllMdxNodes, getMdxNode, getMdxPaths } from "next-mdx/server"
-import { useHydrate } from "next-mdx/client"
-import { components } from "@reflexjs/mdx"
 import Link from "next/link"
+import { getAllNodes, getMdxPaths, getNode } from "next-mdx/server"
 
 import { Category, Post } from "types"
 import { Layout } from "@/components/layout"
@@ -13,15 +11,15 @@ export interface CategoryPageProps {
 }
 
 export default function AuthorPage({ category, posts }: CategoryPageProps) {
-  const content = useHydrate(category, {
-    components,
-  })
-
   return (
     <Layout>
       <LayoutGrid>
         <h1 variant="heading.h1">{category.frontMatter.name}</h1>
-        {content}
+        {category.frontMatter.excerpt && (
+          <p variant="text.lead" my="4">
+            {category.frontMatter.excerpt}
+          </p>
+        )}
         {posts.length ? (
           <div pt="10">
             <h3 variant="heading.h6" pb="4" borderBottomWidth="1" mb="4">
@@ -53,9 +51,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const category = await getMdxNode<Category>("category", context, {
-    components,
-  })
+  const category = await getNode<Category>("category", context)
 
   if (!category) {
     return {
@@ -63,7 +59,7 @@ export async function getStaticProps(context) {
     }
   }
 
-  const posts = await getAllMdxNodes<Post>("post")
+  const posts = await getAllNodes<Post>("post")
 
   return {
     props: {

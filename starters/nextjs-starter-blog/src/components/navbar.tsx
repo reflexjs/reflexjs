@@ -1,6 +1,8 @@
 import * as React from "react"
 import Link from "next/link"
+import { useRouter } from "next/router"
 import { Icon } from "reflexjs"
+
 import { ModeToggle } from "@/components/mode-toggle"
 
 export interface NavbarProps {
@@ -11,6 +13,7 @@ export interface NavbarProps {
   links?: {
     title: string
     href: string
+    activePathNames?: string[]
   }[]
 }
 
@@ -86,7 +89,8 @@ export function Navbar({ branding, links, ...props }: NavbarProps) {
   )
 }
 
-export function NavLinks({ links, ...props }) {
+export function NavLinks({ links, ...props }: { links: NavbarProps["links"] }) {
+  const { pathname, asPath } = useRouter()
   return links.length ? (
     <div
       display="grid"
@@ -95,22 +99,28 @@ export function NavLinks({ links, ...props }) {
       ml="auto"
       {...props}
     >
-      {links.map((link, index) => (
-        <Link key={index} href={link.href} passHref>
-          <a
-            variant="text"
-            textAlign="left|center"
-            fontSize="xl|md"
-            fontWeight="semibold"
-            px="4|0"
-            _hover={{
-              color: "link",
-            }}
-          >
-            {link.title}
-          </a>
-        </Link>
-      ))}
+      {links.map((link, index) => {
+        const isActive =
+          pathname === link.href ||
+          asPath === link.href ||
+          link.activePathNames?.includes(pathname)
+        return (
+          <Link key={index} href={link.href} passHref>
+            <a
+              variant="text"
+              textAlign="left|center"
+              fontSize="xl|md"
+              px="4|0"
+              fontWeight={isActive ? "semibold" : "normal"}
+              _hover={{
+                color: "link",
+              }}
+            >
+              {link.title}
+            </a>
+          </Link>
+        )
+      })}
     </div>
   ) : null
 }

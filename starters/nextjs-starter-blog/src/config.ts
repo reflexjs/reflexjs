@@ -4,7 +4,7 @@ export default {
       name: "Blog.",
       icon: "logo",
     },
-    copyright: `© ${new Date().getFullYear()} Blog. Built with Next.js.`,
+    copyright: `© ${new Date().getFullYear()} Blog. Built with Next.js and Reflexjs.`,
     links: [
       {
         title: "Home",

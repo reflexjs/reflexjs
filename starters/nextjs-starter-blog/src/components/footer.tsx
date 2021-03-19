@@ -4,7 +4,7 @@ export interface FooterProps {
 
 export function Footer({ copyright, ...props }: FooterProps) {
   return (
-    <section py="8|10|12" {...props}>
+    <footer py="8|10|12" {...props}>
       <div variant="container.md">
         {copyright && (
           <p variant="text.sm" textAlign="center" my="0">
@@ -12,6 +12,6 @@ export function Footer({ copyright, ...props }: FooterProps) {
           </p>
         )}
       </div>
-    </section>
+    </footer>
   )
 }

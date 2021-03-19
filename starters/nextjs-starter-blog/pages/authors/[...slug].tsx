@@ -1,11 +1,9 @@
 import Image from "next/image"
-import { getAllMdxNodes, getMdxNode, getMdxPaths } from "next-mdx/server"
-import { useHydrate } from "next-mdx/client"
-import { components } from "@reflexjs/mdx"
+import Link from "next/link"
+import { getAllNodes, getMdxPaths, getNode } from "next-mdx/server"
 
 import { Author, Post } from "types"
 import { Layout } from "@/components/layout"
-import Link from "next/link"
 import { LayoutGrid } from "@/components/layout-grid"
 
 export interface AuthorPageProps {
@@ -14,10 +12,6 @@ export interface AuthorPageProps {
 }
 
 export default function AuthorPage({ author, posts }: AuthorPageProps) {
-  const content = useHydrate(author, {
-    components,
-  })
-
   return (
     <Layout>
       <LayoutGrid>
@@ -46,7 +40,6 @@ export default function AuthorPage({ author, posts }: AuthorPageProps) {
                 {author.frontMatter.bio}
               </p>
             ) : null}
-            {content}
           </div>
         </div>
         {posts.length ? (
@@ -80,9 +73,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context) {
-  const author = await getMdxNode<Author>("author", context, {
-    components,
-  })
+  const author = await getNode<Author>("author", context)
 
   if (!author) {
     return {
@@ -90,7 +81,7 @@ export async function getStaticProps(context) {
     }
   }
 
-  const posts = await getAllMdxNodes<Post>("post")
+  const posts = await getAllNodes<Post>("post")
 
   return {
     props: {

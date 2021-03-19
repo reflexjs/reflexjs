@@ -37,4 +37,5 @@ interface Author
 interface Category
   extends MdxNode<{
     name: string
+    excerpt?: string
   }> {}
