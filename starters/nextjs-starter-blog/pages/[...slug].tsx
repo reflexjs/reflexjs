@@ -16,7 +16,13 @@ export default function PagePage({ page }: PageProps) {
   })
 
   return (
-    <Layout>
+    <Layout
+      meta={{
+        title: page.frontMatter.title,
+        description: page.frontMatter.excerpt,
+        path: page.url,
+      }}
+    >
       <LayoutGrid>
         <h1 variant="heading.h1">{page.frontMatter.title}</h1>
         {page.frontMatter.excerpt && (

@@ -19,7 +19,16 @@ export default function PostPage({ post }: PostPageProps) {
   })
 
   return (
-    <Layout>
+    <Layout
+      meta={{
+        title: post.frontMatter.title,
+        description: post.frontMatter.excerpt,
+        image: post.frontMatter.image,
+        date: new Date(post.frontMatter.date).toISOString(),
+        path: post.url,
+        type: "article",
+      }}
+    >
       <LayoutGrid>
         <h1 variant="heading.h1">{post.frontMatter.title}</h1>
         {post.frontMatter.excerpt && (
