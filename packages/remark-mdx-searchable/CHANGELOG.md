@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.2](https://github.com/reflexjs/reflexjs/compare/remark-mdx-searchable@0.1.1...remark-mdx-searchable@0.1.2) (2021-03-30)
+
+
+### Bug Fixes
+
+* **remark-mdx-searchable:** update tests fixtures ([70d5f0c](https://github.com/reflexjs/reflexjs/commit/70d5f0c0a15bc6e5bcb9675e09aa2da1e751757f))
+
+
+
+
+
 ## [0.1.1](https://github.com/reflexjs/reflexjs/compare/remark-mdx-searchable@0.1.0...remark-mdx-searchable@0.1.1) (2021-03-11)
 
 

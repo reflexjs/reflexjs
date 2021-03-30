@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-typescript@0.3.0...nextjs-starter-typescript@0.3.1) (2021-03-30)
+
+
+### Bug Fixes
+
+* **nextjs-starter-typescript:** update type for branding ([e7d3d85](https://github.com/reflexjs/reflexjs/commit/e7d3d8515cb450c31b9a03fc49952adc72c9423f))
+
+
+
+
+
 # [0.3.0](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-typescript@0.2.3...nextjs-starter-typescript@0.3.0) (2021-03-11)
 
 

@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-blog@0.3.0...nextjs-starter-blog@0.4.0) (2021-03-30)
+
+
+### Bug Fixes
+
+* **nextjs-starter-blog:** fix responsive styles ([25f78e8](https://github.com/reflexjs/reflexjs/commit/25f78e8f85bf23828bef17d29ff2e6228a387188))
+* **nextjs-starter-blog:** update responsive display for form ([3f3694f](https://github.com/reflexjs/reflexjs/commit/3f3694f66fe82080c3c1eaf5fdefa5af4840f7c2))
+
+
+### Features
+
+* add seo ([6c70c38](https://github.com/reflexjs/reflexjs/commit/6c70c389c8212f5f90f0fcd3b83f07704e1dce42))
+
+
+
+
+
 # [0.3.0](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-blog@0.2.1...nextjs-starter-blog@0.3.0) (2021-03-19)
 
 
