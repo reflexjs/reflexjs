@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/reflexjs/reflexjs/compare/@reflexjs/mdx@0.1.2...@reflexjs/mdx@0.1.3) (2021-03-30)
+
+
+### Bug Fixes
+
+* **@reflexjs/mdx:** add reflexjs as dependency ([726a513](https://github.com/reflexjs/reflexjs/commit/726a5132e49bf4f4eae808922a81398ed7d95d3f))
+
+
+
+
+
 ## [0.1.2](https://github.com/reflexjs/reflexjs/compare/@reflexjs/mdx@0.1.1...@reflexjs/mdx@0.1.2) (2021-03-19)
 
 
