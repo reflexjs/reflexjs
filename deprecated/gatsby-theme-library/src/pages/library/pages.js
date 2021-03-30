@@ -22,5 +22,5 @@ export default ({ location }) => {
         </div>
       </section>
     </Layout>
-  );
+  )
 }

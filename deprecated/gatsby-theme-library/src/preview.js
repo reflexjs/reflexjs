@@ -144,7 +144,8 @@ export const Preview = ({
             px="0|0|0|0"
             boxShadow="null|null|null|lg"
             rounded="null|null|null|lg"
-            maxW="null|null|null|1240px">
+            maxW="null|null|null|1240px"
+          >
             <Flexbox
               bg="muted"
               h="50px"
@@ -194,5 +195,5 @@ export const Preview = ({
       </section>
       {children}
     </Layout>
-  );
+  )
 }

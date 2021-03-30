@@ -129,5 +129,5 @@ export default ({ location }) => {
         </Grid>
       </div>
     </Layout>
-  );
+  )
 }
