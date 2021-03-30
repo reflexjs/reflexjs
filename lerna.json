@@ -1,6 +1,6 @@
 {
   "version": "independent",
-  "packages": ["packages/*", "starters/*", "e2e-tests/*"],
+  "packages": ["packages/*", "starters/*"],
   "npmClient": "yarn",
   "useWorkspaces": true,
   "loglevel": "success",
@@ -14,7 +14,6 @@
       "loglevel": "verbose"
     },
     "publish": {
-      "allowBranch": "master",
       "conventionalCommits": true,
       "message": "chore(release): publish"
     }
