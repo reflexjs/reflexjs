@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.1.3](https://github.com/reflexjs/reflexjs/compare/remark-mdx-searchable@0.1.2...remark-mdx-searchable@0.1.3) (2021-03-30)
+
+
+### Bug Fixes
+
+* **remark-mdx-searchable:** remove yarn.lock file ([4531c9a](https://github.com/reflexjs/reflexjs/commit/4531c9aaf487c5cfd17ad309dd9f629d59458d31))
+
+
+
+
+
 ## [0.1.2](https://github.com/reflexjs/reflexjs/compare/remark-mdx-searchable@0.1.1...remark-mdx-searchable@0.1.2) (2021-03-30)
 
 
