@@ -3,7 +3,10 @@ import Link from "next/link"
 import { Icon } from "reflexjs"
 
 export interface NavbarProps {
-  branding?: string
+  branding?: {
+    name: string
+    icon?: string
+  }
   links?: {
     title: string
     href: string
