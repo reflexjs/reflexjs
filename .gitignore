@@ -57,10 +57,7 @@ typings/
 
 # gatsby files
 .cache/
-public
-
-!sites/www-next/public
-!starters/nextjs-starter/public
+gatsby-*/public
 
 # Mac files
 .DS_Store
