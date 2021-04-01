@@ -260,6 +260,27 @@ describe("variant", () => {
     expect(json).toHaveStyleRule("color", "#930")
     expect(json).toHaveStyleRule("padding-left", "10px")
   })
+
+  test("allow functional components to use variants", () => {
+    const Foo = ({ ...props }) => {
+      return <div {...props} />
+    }
+
+    const FooBar = ({ ...props }) => {
+      return <Foo variant="buttons.secondary.lg" {...props} />
+    }
+
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <FooBar sx={{ color: "#456" }} />
+      </ThemeProvider>
+    )
+    expect(json).toHaveStyleRule(
+      "background-color",
+      "var(--theme-ui-colors-secondary,#2f3)"
+    )
+    expect(json).toHaveStyleRule("color", "#456")
+  })
 })
 
 describe("pseudo props", () => {
