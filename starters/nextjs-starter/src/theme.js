@@ -1,5 +1,6 @@
 export default {
   useRootStyles: true,
+  initialColorModeName: "default",
   colors: {
     text: "#191924",
     textLighter: "#60696f",
