@@ -28,6 +28,7 @@
     "jest": "^26.2.2"
   },
   "dependencies": {
+    "remark": "^13.0.0",
     "unist-util-visit": "^2.0.3"
   }
 }
