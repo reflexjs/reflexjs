@@ -208,18 +208,21 @@ export interface Theme {
   [key: string]: any
 }
 
+interface ReflexjsTheme extends Theme {}
+
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+declare module "@theme-ui/css" {
+  interface Theme extends ReflexjsTheme {}
+}
+
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+declare module "theme-ui" {
+  interface Theme extends ReflexjsTheme {}
+}
+
 declare module "react" {
   // tslint:disable-next-line: no-empty-interface
   interface DOMAttributes<T> extends StyleProps {
     sx?: SxProps
   }
 }
-
-// declare global {
-//   namespace JSX {
-//     // tslint:disable-next-line: no-empty-interface
-//     interface IntrinsicAttributes extends StyleProps {
-//       sx?: SxProps
-//     }
-//   }
-// }
