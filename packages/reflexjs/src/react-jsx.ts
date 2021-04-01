@@ -158,7 +158,9 @@ export function parseProps(type, props) {
       let styles = theme[__themeKey]
       nestedVariants.forEach((v) => {
         if (theme[__themeKey][v]) {
-          const vStyles = theme[__themeKey][v]
+          const _vStyles = theme[__themeKey][v]
+          const vStyles =
+            typeof _vStyles === "function" ? _vStyles(theme, styles) : _vStyles
           styles = deepmerge(styles, vStyles)
         }
       })

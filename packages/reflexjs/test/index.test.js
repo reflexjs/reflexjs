@@ -84,6 +84,13 @@ const theme = {
     sm: {
       fontSize: "12px",
     },
+
+    outline: (theme, props) => {
+      return {
+        bg: "background",
+        color: props?.bg,
+      }
+    },
   },
 }
 
@@ -296,6 +303,20 @@ describe("variant", () => {
     )
     expect(json).toHaveStyleRule("font-size", "16px")
     expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-background)")
+  })
+
+  test("variant can be callable", () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <button variant="buttons.secondary.outline.lg">Button</button>
+      </ThemeProvider>
+    )
+
+    expect(json).toHaveStyleRule(
+      "background-color",
+      "var(--theme-ui-colors-background)"
+    )
+    expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-secondary)")
   })
 })
 
