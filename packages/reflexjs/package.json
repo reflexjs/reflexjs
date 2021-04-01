@@ -14,8 +14,8 @@
   "scripts": {
     "prepare": "yarn prepare:index && yarn prepare:jsx-runtime && yarn prepare:jsx-dev-runtime && yarn prepare:cli",
     "prepare:index": "microbundle --no-compress --jsx React.createElement",
-    "prepare:jsx-runtime": "microbundle --no-compress --tsconfig tsconfig.json --cwd jsx-runtime",
-    "prepare:jsx-dev-runtime": "microbundle --no-compress --tsconfig tsconfig.json --cwd jsx-dev-runtime",
+    "prepare:jsx-runtime": "microbundle --no-compress -i src/jsx-runtime.ts -o dist/jsx-runtime.js -f cjs",
+    "prepare:jsx-dev-runtime": "microbundle --no-compress -i src/jsx-dev-runtime.ts -o dist/jsx-dev-runtime.js -f cjs",
     "prepare:cli": "tsc src/cli.ts --outDir dist --module commonjs --skipLibCheck",
     "watch": "microbundle watch --no-compress --jsx React.createElement",
     "test": "jest"
@@ -34,6 +34,8 @@
   },
   "dependencies": {
     "@emotion/react": "^11.1.5",
+    "@theme-ui/core": "^0.6.1",
+    "@theme-ui/parse-props": "^0.6.1",
     "csstype": "^3.0.7",
     "deepmerge": "^4.2.2",
     "theme-ui": "^0.6.1"
