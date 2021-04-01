@@ -26,8 +26,8 @@
     "directory": "packages/mdx"
   },
   "peerDependencies": {
-    "react": "^16.14.0",
-    "react-dom": "^16.14.0"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "dependencies": {
     "copy-to-clipboard": "^3.3.1",
