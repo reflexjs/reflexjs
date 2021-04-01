@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.1](https://github.com/reflexjs/reflexjs/compare/nextjs-starter@1.0.0-alpha.0...nextjs-starter@1.0.0-alpha.1) (2021-04-01)
+
+
+### Features
+
+* update starters ([1fef6cb](https://github.com/reflexjs/reflexjs/commit/1fef6cb77440ca01cadef5e9b881ed46a0abac53))
+
+
+
+
+
 # [1.0.0-alpha.0](https://github.com/reflexjs/reflexjs/compare/nextjs-starter@0.3.0...nextjs-starter@1.0.0-alpha.0) (2021-04-01)
 
 
