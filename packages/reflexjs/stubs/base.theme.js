@@ -1,13 +1,14 @@
 module.exports = {
   colors: {
     text: "#191924",
-    textLighter: "#777",
+    textLighter: "#60696f",
+    link: "#06f",
     background: "#fff",
     heading: "#07070a",
     primary: "#06f",
     primaryHover: "#005ae0",
-    secondary: "#07070a",
-    secondaryHover: "#191924",
+    secondary: "#D81159",
+    secondaryHover: "#D81159",
     accent: "#fb3640",
     accentHover: "#fa0f1b",
     selection: "#ff70a0",
@@ -16,47 +17,77 @@ module.exports = {
     border: "#ebece9",
     borderHover: "#b9bdb3",
     prism: {
-      text: "#d6deeb",
-      lineNumber: "#88a0d6",
-      background: "#031528",
-      comment: "#93b4b4",
-      string: "#addb67",
-      var: "#d6deeb",
-      number: "#f78c6c",
-      constant: "#82aaff",
-      punctuation: "#c792ea",
-      className: "#ffcb8b",
-      tag: "#7fdbca",
-      boolean: "#ff5874",
-      property: "#80cbc4",
-      namespace: "#b2ccd6",
-      highlight: "#243E73",
-      file: "#92B5B2",
+      text: "#000000",
+      background: "#fefefe",
+      comment: "#095a02",
+      string: "#a62815",
+      var: "#095a02",
+      number: "#095a02",
+      constant: "#007faa",
+      keyword: "#2f00ff",
+      function: "#000000",
+      punctuation: "#000000",
+      className: "#d91e18",
+      tag: "#000000",
+      boolean: "#2f00ff",
+      property: "#7d0b00",
+      namespace: "#2f00ff",
+      deleted: "#a62815",
+      inserted: "#095a02",
+      highlight: "#e5ebf1",
+      file: "#1c495c",
+      lineNumber: "#1c495c",
     },
     modes: {
       dark: {
         text: "#ededee",
+        textLighter: "#d6deeb",
+        link: "#ff94bc",
         background: "#1a202c",
         heading: "#fff",
         primary: "#06f",
-        primaryHover: "#FF3355",
-        secondary: "#07070a",
-        secondaryHover: "#191924",
+        primaryHover: "#005ae0",
+        secondary: "#9e0c41",
+        secondaryHover: "#850a37",
         accent: "#fb3640",
         accentHover: "#fa0f1b",
+        selection: "#ff70a0",
         muted: "#2a2a3c",
         mutedHover: "#212130",
         border: "#2a2a3c",
         borderHover: "#434360",
+        prism: {
+          text: "#d6deeb",
+          background: "#011627",
+          comment: "#88ac89",
+          string: "rgb(173, 219, 103)",
+          var: "rgb(214, 222, 235)",
+          number: "rgb(247, 140, 108)",
+          constant: "rgb(130, 170, 255)",
+          keyword: "rgb(127, 219, 202)",
+          function: "rgb(130, 170, 255)",
+          punctuation: "rgb(199, 146, 234)",
+          className: "rgb(255, 203, 139)",
+          tag: "rgb(127, 219, 202)",
+          boolean: "rgb(255, 88, 116)",
+          property: "rgb(128, 203, 196)",
+          namespace: "rgb(178, 204, 214)",
+          deleted: "#f88484",
+          inserted: "rgb(173, 219, 103)",
+          highlight: "hsl(207, 94%, 12%)",
+          file: "#89a8a8",
+          lineNumber: "#89a8a8",
+        },
       },
     },
   },
   breakpoints: ["640px", "768px", "1024px", "1280px"],
   fonts: {
-    body: "Inter, sans-serif",
-    heading: "Inherit",
+    body:
+      "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+    heading: "inherit",
     monospace:
-      "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+      "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace",
   },
   fontSizes: {
     xs: "0.75rem",
@@ -239,13 +270,14 @@ module.exports = {
       "*": {
         m: 0,
         p: 0,
-        listStyle: "none",
-        border: "0 solid",
-        borderColor: "border",
-
-        "::selection": {
-          bg: "selection",
-        },
+      },
+      html: {
+        fontFamily: "body",
+        fontSize: 16,
+        lineHeight: "normal",
+        fontFeatureSettings: "'kern'",
+        textRendering: "optimizeLegibility",
+        WebkitFontSmoothing: "antialiased",
       },
       a: {
         color: "inherit",
@@ -264,6 +296,7 @@ module.exports = {
       },
       "pre, code, kbd, samp": {
         fontFamily: "monospace",
+        m: 0,
       },
     },
     root: {
@@ -273,9 +306,16 @@ module.exports = {
       fontSize: "md",
       lineHeight: "relaxed",
       letterSpacing: "normal",
-    },
-    pre: {
-      variant: "text.pre",
+
+      "*": {
+        listStyle: "none",
+        border: "0 solid",
+        borderColor: "border",
+
+        "::selection": {
+          bg: "selection",
+        },
+      },
     },
     code: {
       variant: "text.code",
@@ -286,17 +326,71 @@ module.exports = {
     },
   },
   text: {
+    color: "text",
+    fontFamily: "body",
     lead: {
-      fontSize: "xl",
+      fontSize: "2xl",
+      lineHeight: "normal",
+      fontWeight: "normal",
+    },
+    paragraph: {
+      fontSize: "lg",
+      my: 8,
+      lineHeight: 8,
+    },
+    sm: {
+      fontSize: "sm",
+      my: 4,
+      lineHeight: "normal",
+    },
+    link: {
+      color: "link",
+      textDecoration: "none",
+
+      "&:hover, &:focus": {
+        color: "link",
+        textDecoration: "underline",
+      },
+    },
+    blockquote: {
+      borderLeftWidth: 5,
+      pl: 8,
+      py: 1,
+      my: 8,
+
+      p: {
+        m: 0,
+        fontWeight: "semibold",
+        fontStyle: "italic",
+      },
+
+      cite: {
+        fontWeight: "normal",
+        mt: 4,
+        display: "inline-block",
+      },
     },
     code: {
       fontFamily: "monospace",
+      color: "link",
+      backgroundColor: "prism.background",
+      fontSize: "md",
+      p: "0 .2em",
+      borderRadius: "md",
+      borderWidth: "1px",
+      borderColor: "border",
+    },
+    caption: {
+      textAlign: "center",
+      mt: 4,
+      fontSize: "sm",
+      color: "textLighter",
     },
     pre: {
       color: "prism.text",
       backgroundColor: "prism.background",
       fontFamily: "monospace",
-      fontSize: "sm",
+      fontSize: "md",
       lineHeight: 7,
       tabSize: 2,
       hyphens: "none",
@@ -304,16 +398,20 @@ module.exports = {
       py: 4,
       overflow: "auto",
       borderRadius: "md",
-      whiteSpace: "pre-wrap",
+      whiteSpace: "pre",
       ".plain": {
         minHeight: "1ch",
         display: "inline-block",
+      },
+      ".tag": {
+        color: "prism.tag",
       },
       ".attr-name": {
         fontStyle: "italic",
       },
       ".comment": {
         color: "prism.comment",
+        fontStyle: "italic",
       },
       ".attr-name, .string, .url": {
         color: "prism.string",
@@ -324,8 +422,11 @@ module.exports = {
       ".number": {
         color: "prism.number",
       },
-      ".builtin, .char, .constant, .function": {
+      ".builtin, .char, .constant": {
         color: "prism.constant",
+      },
+      ".function": {
+        color: "prism.function",
       },
       ".punctuation, .selector, .doctype": {
         color: "prism.punctuation",
@@ -334,7 +435,7 @@ module.exports = {
         color: "prism.className",
       },
       ".operator, .keyword": {
-        color: "prism.tag",
+        color: "prism.keyword",
       },
       ".boolean": {
         color: "prism.boolean",
@@ -348,9 +449,19 @@ module.exports = {
       ".highlight": {
         bg: "prism.highlight",
       },
+      ".deleted": {
+        color: "prism.deleted",
+      },
+      ".inserted": {
+        color: "prism.inserted",
+      },
     },
   },
-
+  subheading: {
+    color: "textLighter",
+    textTransform: "uppercase",
+    m: 0,
+  },
   heading: {
     color: "heading",
     fontFamily: "heading",
@@ -358,40 +469,41 @@ module.exports = {
     lineHeight: "tight",
     letterSpacing: "tight",
 
-    a: {
-      color: "text",
-
-      ":hover": {
-        color: "primary",
-      },
-    },
     h1: {
-      fontSize: ["4xl", "5xl", "6xl"],
+      fontSize: "5xl|6xl",
+      fontWeight: "bold",
+      lineHeight: "1.1",
     },
     h2: {
-      fontSize: ["3xl", "4xl", "5xl"],
+      fontSize: "3xl|4xl",
     },
     h3: {
-      fontSize: ["2xl", "3xl", "4xl"],
+      fontSize: "2xl",
     },
     h4: {
-      fontSize: ["xl", "2xl", "3xl"],
+      fontSize: "xl",
+      letterSpacing: "normal",
     },
     h5: {
-      fontSize: ["lg", "xl", "2xl"],
+      fontSize: "lg",
+      fontFamily: "body",
+      letterSpacing: "normal",
     },
     h6: {
-      fontSize: ["md", "lg", "xl"],
+      fontSize: "sm",
+      fontFamily: "body",
+      textTransform: "uppercase",
+      letterSpacing: "normal",
     },
   },
 
   container: {
-    px: [4, 6, 6, 4],
+    px: "6|6|6|4",
     mx: "auto",
     maxWidth: 1280,
 
     sm: {
-      maxWidth: 640,
+      maxWidth: 670,
     },
 
     md: {
@@ -414,7 +526,8 @@ module.exports = {
     color: "text",
     bg: "muted",
     fontFamily: "body",
-    fontSize: ["sm", "md", "lg"],
+    fontSize: "md",
+    fontWeight: "medium",
     lineHeight: "none",
     textDecoration: "none",
     border: "1px solid",
@@ -424,17 +537,45 @@ module.exports = {
     py: 3,
     cursor: "pointer",
     transition: "all .15s ease-in",
+    h: 12,
+
+    ":hover, :focus": {
+      transform: "translateY(-2px)",
+      boxShadow: "lg",
+    },
 
     sm: {
       px: 3,
       py: 2,
-      fontSize: ["xs", "sm", "md"],
+      fontSize: "sm",
+      h: 8,
+
+      svg: {
+        size: 4,
+      },
     },
 
     lg: {
       px: 5,
       py: 4,
-      fontSize: ["md", "lg", "xl"],
+      fontSize: "xl",
+      h: 14,
+
+      svg: {
+        size: 8,
+      },
+    },
+
+    muted: {
+      bg: "muted",
+      color: "text",
+      borderColor: "muted",
+
+      "&:hover, &:focus": {
+        bg: "mutedHover",
+        color: "text",
+        borderColor: "mutedHover",
+      },
     },
 
     primary: {
@@ -446,18 +587,8 @@ module.exports = {
         bg: "primaryHover",
         color: "white",
         borderColor: "primaryHover",
-      },
-    },
-
-    outlinePrimary: {
-      bg: "transparent",
-      color: "primary",
-      borderColor: "primary",
-
-      "&:hover, &:focus": {
-        bg: "primaryHover",
-        color: "white",
-        borderColor: "primaryHover",
+        transform: "translateY(-2px)",
+        boxShadow: "lg",
       },
     },
 
@@ -470,76 +601,83 @@ module.exports = {
         bg: "secondaryHover",
         color: "white",
         borderColor: "secondaryHover",
-      },
-    },
-
-    outlineSecondary: {
-      bg: "transparent",
-      color: "secondary",
-      borderColor: "secondary",
-
-      "&:hover, &:focus": {
-        bg: "secondaryHover",
-        color: "white",
-        borderColor: "secondaryHover",
+        transform: "translateY(-2px)",
+        boxShadow: "lg",
       },
     },
 
     accent: {
       bg: "accent",
-      color: "text",
-      borderColor: "accent",
-
-      "&:hover, &:focus": {
-        bg: "accentHover",
-        color: "text",
-        borderColor: "accentHover",
-      },
-    },
-
-    outlineAccent: {
-      bg: "transparent",
-      color: "accent",
+      color: "white",
       borderColor: "accent",
 
       "&:hover, &:focus": {
         bg: "accentHover",
         color: "white",
         borderColor: "accentHover",
+        transform: "translateY(-2px)",
+        boxShadow: "lg",
       },
     },
 
     link: {
       bg: "transparent",
-      color: "text",
+      color: "link",
       borderColor: "transparent",
 
       "&:hover, &:focus": {
-        bg: "muted",
-        color: "text",
+        bg: "transparent",
         borderColor: "transparent",
+        transform: "none",
+        boxShadow: "none",
+        textDecoration: "underline",
       },
     },
 
     icon: {
       bg: "transparent",
+      color: "text",
       borderColor: "transparent",
-      p: 0,
+      p: 2,
+
+      "&:hover, &:focus": {
+        bg: "muted",
+        borderColor: "muted",
+        transform: "none",
+        boxShadow: "none",
+        color: "link",
+      },
+
+      svg: {
+        size: 6,
+      },
     },
   },
-
   input: {
-    bg: "background",
+    bg: "muted",
     color: "text",
     fontFamily: "body",
-    fontSize: ["sm", "md", "lg"],
+    fontSize: "md",
     lineHeight: "none",
-    border: "1px solid",
+    borderWidth: 1,
     borderColor: "border",
     borderRadius: "md",
     px: 4,
     py: 3,
     width: "100%",
+    h: 12,
+
+    sm: {
+      py: 2,
+      fontSize: "sm",
+      h: 8,
+    },
+
+    lg: {
+      py: 4,
+      fontSize: "xl",
+      h: 14,
+    },
 
     "&:focus": {
       borderColor: "primary",
@@ -582,15 +720,95 @@ module.exports = {
         },
       },
     },
+  },
+  select: {
+    variant: "input",
+    pl: 4,
+    pr: 12,
+    py: 3,
+    h: 12,
+    appearance: "none",
+    cursor: "pointer",
+    width: "100%",
+    backgroundImage:
+      'url("data:image/svg+xml;base64,PHN2ZyBhcmlhLWhpZGRlbj0idHJ1ZSIgZm9jdXNhYmxlPSJmYWxzZSIgZGF0YS1wcmVmaXg9ImZhcyIgZGF0YS1pY29uPSJjYXJldC1kb3duIiBjbGFzcz0ic3ZnLWlubGluZS0tZmEgZmEtY2FyZXQtZG93biBmYS13LTEwIiByb2xlPSJpbWciIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDMyMCA1MTIiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTMxLjMgMTkyaDI1Ny4zYzE3LjggMCAyNi43IDIxLjUgMTQuMSAzNC4xTDE3NC4xIDM1NC44Yy03LjggNy44LTIwLjUgNy44LTI4LjMgMEwxNy4yIDIyNi4xQzQuNiAyMTMuNSAxMy41IDE5MiAzMS4zIDE5MnoiPjwvcGF0aD48L3N2Zz4=")',
+    backgroundPosition: "right 16px center",
+    backgroundRepeat: "no-repeat",
+    backgroundSize: 8,
 
     sm: {
       py: 2,
-      fontSize: ["xs", "sm", "md"],
+      fontSize: "sm",
+      h: 8,
     },
 
     lg: {
       py: 4,
-      fontSize: ["md", "lg", "xl"],
+      fontSize: "xl",
+      h: 14,
     },
+  },
+
+  textarea: {
+    variant: "input",
+  },
+
+  fieldset: {
+    border: "1px solid",
+    borderColor: "border",
+    borderRadius: "md",
+  },
+
+  table: {
+    mt: 6,
+    w: "full",
+    borderCollapse: "collapse",
+
+    "tr:hover": {
+      bg: "muted",
+    },
+    "td, th": {
+      borderBottomWidth: 1,
+      p: 2,
+
+      code: {
+        fontSize: "md",
+      },
+    },
+    th: {
+      textAlign: "left",
+      fontWeight: "semibold",
+      bg: "muted",
+    },
+  },
+
+  list: {
+    variant: "text.paragraph",
+    my: 6,
+    ml: 10,
+
+    li: {
+      mb: 2,
+
+      p: {
+        m: 0,
+      },
+    },
+
+    unordered: {
+      "> li": {
+        listStyle: "disc",
+      },
+    },
+
+    ordered: {
+      "> li": {
+        listStyle: "decimal",
+      },
+    },
+  },
+
+  icons: {
+    logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
   },
 }
