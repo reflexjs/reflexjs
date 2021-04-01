@@ -10,11 +10,11 @@ export default function IndexPage() {
         heading="Build something amazing"
         text="Reiciendis quia totam esse. Dicta minus iusto quisquam doloribus temporibus."
         image={{
-          src: "/images/crayon-982.png",
+          src: "/images/placeholder.jpg",
           alt: "Hero image",
         }}
         buttons={
-          <a variant="button.secondary.lg" href="#" mt="4">
+          <a variant="button.primary.lg" href="#" mt="4">
             Get started <Icon name="arrow-right" size="6" ml="2" />
           </a>
         }
@@ -29,7 +29,7 @@ export default function IndexPage() {
             text:
               "Vestibulum ante ipsum primis in faucibus orci luctus et primis in faucibus ultrices.",
             image: {
-              src: "/images/crayon-welcome.png",
+              src: "/images/placeholder.jpg",
               alt: "Image",
             },
             link: (
@@ -48,7 +48,7 @@ export default function IndexPage() {
             text:
               "Vestibulum ante ipsum primis in faucibus orci luctus et primis in faucibus ultrices.",
             image: {
-              src: "/images/crayon-list-is-empty.png",
+              src: "/images/placeholder.jpg",
               alt: "Image",
             },
             link: (
@@ -67,7 +67,7 @@ export default function IndexPage() {
             text:
               "Vestibulum ante ipsum primis in faucibus orci luctus et primis in faucibus ultrices.",
             image: {
-              src: "/images/crayon-come-back-later.png",
+              src: "/images/placeholder.jpg",
               alt: "Image",
             },
             link: (

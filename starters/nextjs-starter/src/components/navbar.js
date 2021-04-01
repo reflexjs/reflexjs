@@ -27,13 +27,12 @@ export function Navbar({ branding, links, ...props }) {
           )}
           <NavLinks links={links} display="none|grid" />
           <button
+            variant="button.icon"
             display="flex|none"
-            p="2"
-            size="14"
             ml="auto"
             onClick={() => setShowMenu(!showMenu)}
           >
-            <Icon name="menu-alt" size="10" />
+            <Icon name={showMenu ? "close" : "menu"} />
           </button>
         </div>
       </div>

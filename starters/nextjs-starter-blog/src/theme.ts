@@ -1,4 +1,5 @@
 export default {
+  useRootStyles: true,
   colors: {
     text: "#191924",
     textLighter: "#60696f",
@@ -265,19 +266,31 @@ export default {
     6: "repeat(6, minmax(0, 1fr))",
   },
   styles: {
-    // Global styles.
-    global: {
+    root: {
+      fontFamily: "body",
+      fontSize: 16,
+      lineHeight: "normal",
+      fontFeatureSettings: "'kern'",
+      textRendering: "optimizeLegibility",
+      WebkitFontSmoothing: "antialiased",
       "*": {
+        listStyle: "none",
+        border: "0 solid",
+        borderColor: "border",
         m: 0,
         p: 0,
+
+        "::selection": {
+          bg: "selection",
+        },
       },
-      html: {
+      body: {
+        color: "text",
         fontFamily: "body",
-        fontSize: 16,
-        lineHeight: "normal",
-        fontFeatureSettings: "'kern'",
-        textRendering: "optimizeLegibility",
-        WebkitFontSmoothing: "antialiased",
+        fontWeight: "normal",
+        fontSize: "md",
+        lineHeight: "relaxed",
+        letterSpacing: "normal",
       },
       a: {
         color: "inherit",
@@ -297,24 +310,6 @@ export default {
       "pre, code, kbd, samp": {
         fontFamily: "monospace",
         m: 0,
-      },
-    },
-    root: {
-      color: "text",
-      fontFamily: "body",
-      fontWeight: "normal",
-      fontSize: "md",
-      lineHeight: "relaxed",
-      letterSpacing: "normal",
-
-      "*": {
-        listStyle: "none",
-        border: "0 solid",
-        borderColor: "border",
-
-        "::selection": {
-          bg: "selection",
-        },
       },
     },
     code: {

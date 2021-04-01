@@ -102,7 +102,11 @@ export function Navbar({ branding, links, ...props }: NavbarProps) {
   )
 }
 
-export function NavLinks({ links, ...props }: { links: NavbarProps["links"] }) {
+interface NavLinksProps extends React.HTMLAttributes<HTMLDivElement> {
+  links: NavbarProps["links"]
+}
+
+export function NavLinks({ links, ...props }: NavLinksProps) {
   const { pathname, asPath } = useRouter()
   return links.length ? (
     <div

@@ -1,52 +1,94 @@
 export default {
+  useRootStyles: true,
   colors: {
-    text: "#111",
-    heading: "#111",
+    text: "#191924",
+    textLighter: "#60696f",
+    link: "#06f",
     background: "#fff",
+    heading: "#07070a",
     primary: "#06f",
-    secondary: "#f66640",
+    primaryHover: "#005ae0",
+    secondary: "#D81159",
+    secondaryHover: "#D81159",
     accent: "#fb3640",
-    link: "#f66640",
-    gray: "#6c6c6c",
-    border: "#eaeaea",
-    muted: "#fff7ea",
+    accentHover: "#fa0f1b",
+    selection: "#ff70a0",
+    muted: "#fafafa",
+    mutedHover: "#f1f1f1",
+    border: "#ebece9",
+    borderHover: "#b9bdb3",
     prism: {
-      text: "#d6deeb",
-      lineNumber: "#88a0d6",
-      background: "#031528",
-      comment: "#93b4b4",
-      string: "#addb67",
-      var: "#d6deeb",
-      number: "#f78c6c",
-      constant: "#82aaff",
-      punctuation: "#c792ea",
-      className: "#ffcb8b",
-      tag: "#7fdbca",
-      boolean: "#ff5874",
-      property: "#80cbc4",
-      namespace: "#b2ccd6",
-      highlight: "#243E73",
-      file: "#92B5B2",
+      text: "#000000",
+      background: "#fefefe",
+      comment: "#095a02",
+      string: "#a62815",
+      var: "#095a02",
+      number: "#095a02",
+      constant: "#007faa",
+      keyword: "#2f00ff",
+      function: "#000000",
+      punctuation: "#000000",
+      className: "#d91e18",
+      tag: "#000000",
+      boolean: "#2f00ff",
+      property: "#7d0b00",
+      namespace: "#2f00ff",
+      deleted: "#a62815",
+      inserted: "#095a02",
+      highlight: "#e5ebf1",
+      file: "#1c495c",
+      lineNumber: "#1c495c",
     },
     modes: {
       dark: {
-        text: "#a0aec0",
-        heading: "#fff",
-        link: "#ff5874",
+        text: "#ededee",
+        textLighter: "#d6deeb",
+        link: "#ff94bc",
         background: "#1a202c",
+        heading: "#fff",
         primary: "#06f",
-        border: "#2d3748",
-        gray: "#718096",
-        muted: "#2d3748",
+        primaryHover: "#005ae0",
+        secondary: "#9e0c41",
+        secondaryHover: "#850a37",
+        accent: "#fb3640",
+        accentHover: "#fa0f1b",
+        selection: "#ff70a0",
+        muted: "#2a2a3c",
+        mutedHover: "#212130",
+        border: "#2a2a3c",
+        borderHover: "#434360",
+        prism: {
+          text: "#d6deeb",
+          background: "#011627",
+          comment: "#88ac89",
+          string: "rgb(173, 219, 103)",
+          var: "rgb(214, 222, 235)",
+          number: "rgb(247, 140, 108)",
+          constant: "rgb(130, 170, 255)",
+          keyword: "rgb(127, 219, 202)",
+          function: "rgb(130, 170, 255)",
+          punctuation: "rgb(199, 146, 234)",
+          className: "rgb(255, 203, 139)",
+          tag: "rgb(127, 219, 202)",
+          boolean: "rgb(255, 88, 116)",
+          property: "rgb(128, 203, 196)",
+          namespace: "rgb(178, 204, 214)",
+          deleted: "#f88484",
+          inserted: "rgb(173, 219, 103)",
+          highlight: "hsl(207, 94%, 12%)",
+          file: "#89a8a8",
+          lineNumber: "#89a8a8",
+        },
       },
     },
   },
   breakpoints: ["640px", "768px", "1024px", "1280px"],
   fonts: {
-    body: "Inter, sans-serif",
-    heading: "Inherit",
+    body:
+      "-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji",
+    heading: "inherit",
     monospace:
-      "PT Mono, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
+      "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace",
   },
   fontSizes: {
     xs: "0.75rem",
@@ -59,8 +101,6 @@ export default {
     "4xl": "2.25rem",
     "5xl": "3rem",
     "6xl": "4rem",
-    "7xl": "5rem",
-    "8xl": "6rem",
   },
   fontWeights: {
     hairline: "100",
@@ -226,25 +266,31 @@ export default {
     6: "repeat(6, minmax(0, 1fr))",
   },
   styles: {
-    global: {
-      ":root": {
-        "--reach-accordion": 1,
-      },
+    root: {
+      fontFamily: "body",
+      fontSize: 16,
+      lineHeight: "normal",
+      fontFeatureSettings: "'kern'",
+      textRendering: "optimizeLegibility",
+      WebkitFontSmoothing: "antialiased",
       "*": {
+        listStyle: "none",
+        border: "0 solid",
+        borderColor: "border",
         m: 0,
         p: 0,
-        boxSizing: "border-box",
+
+        "::selection": {
+          bg: "selection",
+        },
       },
-      html: {
+      body: {
+        color: "text",
         fontFamily: "body",
-        fontSize: [12, 14, 16],
-        lineHeight: "normal",
-        fontFeatureSettings: "'kern'",
-        textRendering: "optimizeLegibility",
-      },
-      hr: {
-        borderBottomWidth: 1,
-        my: 6,
+        fontWeight: "normal",
+        fontSize: "md",
+        lineHeight: "relaxed",
+        letterSpacing: "normal",
       },
       a: {
         color: "inherit",
@@ -258,16 +304,12 @@ export default {
         maxWidth: "100%",
         height: "auto",
       },
+      hr: {
+        borderTopWidth: 1,
+      },
       "pre, code, kbd, samp": {
         fontFamily: "monospace",
         m: 0,
-      },
-    },
-    root: {
-      "*": {
-        listStyle: "none",
-        border: "0 solid",
-        borderColor: "border",
       },
     },
     code: {
@@ -275,7 +317,7 @@ export default {
     },
     inlineCode: {
       variant: "text.pre",
-      color: "link",
+      color: "primary",
     },
   },
   text: {
@@ -305,10 +347,39 @@ export default {
         textDecoration: "underline",
       },
     },
+    blockquote: {
+      borderLeftWidth: 5,
+      pl: 8,
+      py: 1,
+      my: 8,
+
+      p: {
+        m: 0,
+        fontWeight: "semibold",
+        fontStyle: "italic",
+      },
+
+      cite: {
+        fontWeight: "normal",
+        mt: 4,
+        display: "inline-block",
+      },
+    },
     code: {
-      color: "link",
       fontFamily: "monospace",
-      fontSize: "lg",
+      color: "link",
+      backgroundColor: "prism.background",
+      fontSize: "md",
+      p: "0 .2em",
+      borderRadius: "md",
+      borderWidth: "1px",
+      borderColor: "border",
+    },
+    caption: {
+      textAlign: "center",
+      mt: 4,
+      fontSize: "sm",
+      color: "textLighter",
     },
     pre: {
       color: "prism.text",
@@ -319,23 +390,23 @@ export default {
       tabSize: 2,
       hyphens: "none",
       my: 8,
-      py: 6,
+      py: 4,
       overflow: "auto",
       borderRadius: "md",
-      whiteSpace: "pre-wrap",
-      ".token-line": {
-        borderLeftWidth: "3",
-        borderColor: "prism.background",
-      },
+      whiteSpace: "pre",
       ".plain": {
         minHeight: "1ch",
         display: "inline-block",
+      },
+      ".tag": {
+        color: "prism.tag",
       },
       ".attr-name": {
         fontStyle: "italic",
       },
       ".comment": {
         color: "prism.comment",
+        fontStyle: "italic",
       },
       ".attr-name, .string, .url": {
         color: "prism.string",
@@ -346,8 +417,11 @@ export default {
       ".number": {
         color: "prism.number",
       },
-      ".builtin, .char, .constant, .function": {
+      ".builtin, .char, .constant": {
         color: "prism.constant",
+      },
+      ".function": {
+        color: "prism.function",
       },
       ".punctuation, .selector, .doctype": {
         color: "prism.punctuation",
@@ -356,7 +430,7 @@ export default {
         color: "prism.className",
       },
       ".operator, .keyword": {
-        color: "prism.tag",
+        color: "prism.keyword",
       },
       ".boolean": {
         color: "prism.boolean",
@@ -369,12 +443,17 @@ export default {
       },
       ".highlight": {
         bg: "prism.highlight",
-        borderColor: "prism.tag",
+      },
+      ".deleted": {
+        color: "prism.deleted",
+      },
+      ".inserted": {
+        color: "prism.inserted",
       },
     },
   },
   subheading: {
-    color: "gray",
+    color: "textLighter",
     textTransform: "uppercase",
     m: 0,
   },
@@ -387,7 +466,8 @@ export default {
 
     h1: {
       fontSize: "5xl|6xl",
-      fontWeight: "black",
+      fontWeight: "bold",
+      lineHeight: "1.1",
     },
     h2: {
       fontSize: "3xl|4xl",
@@ -397,23 +477,43 @@ export default {
     },
     h4: {
       fontSize: "xl",
+      letterSpacing: "normal",
     },
     h5: {
       fontSize: "lg",
+      fontFamily: "body",
+      letterSpacing: "normal",
     },
     h6: {
-      fontSize: "md",
+      fontSize: "sm",
+      fontFamily: "body",
+      textTransform: "uppercase",
+      letterSpacing: "normal",
     },
   },
+
   container: {
     px: "6|6|6|4",
     mx: "auto",
-    maxWidth: 1200,
+    maxWidth: 1280,
+
+    sm: {
+      maxWidth: 670,
+    },
 
     md: {
+      maxWidth: 768,
+    },
+
+    lg: {
       maxWidth: 1024,
     },
+
+    xl: {
+      maxWidth: 1280,
+    },
   },
+
   button: {
     display: "inline-flex",
     alignItems: "center",
@@ -422,6 +522,7 @@ export default {
     bg: "muted",
     fontFamily: "body",
     fontSize: "md",
+    fontWeight: "medium",
     lineHeight: "none",
     textDecoration: "none",
     border: "1px solid",
@@ -443,6 +544,10 @@ export default {
       py: 2,
       fontSize: "sm",
       h: 8,
+
+      svg: {
+        size: 4,
+      },
     },
 
     lg: {
@@ -450,6 +555,10 @@ export default {
       py: 4,
       fontSize: "xl",
       h: 14,
+
+      svg: {
+        size: 8,
+      },
     },
 
     muted: {
@@ -512,11 +621,11 @@ export default {
       borderColor: "transparent",
 
       "&:hover, &:focus": {
-        bg: "link",
-        borderColor: "link",
-        transform: "translateY(-2px)",
+        bg: "transparent",
+        borderColor: "transparent",
+        transform: "none",
         boxShadow: "none",
-        color: "background",
+        textDecoration: "underline",
       },
     },
 
@@ -527,11 +636,11 @@ export default {
       p: 2,
 
       "&:hover, &:focus": {
-        bg: "transparent",
-        borderColor: "transparent",
+        bg: "muted",
+        borderColor: "muted",
         transform: "none",
         boxShadow: "none",
-        color: "primary",
+        color: "link",
       },
 
       svg: {
@@ -612,6 +721,7 @@ export default {
     pl: 4,
     pr: 12,
     py: 3,
+    h: 12,
     appearance: "none",
     cursor: "pointer",
     width: "100%",
@@ -623,12 +733,14 @@ export default {
 
     sm: {
       py: 2,
-      fontSize: ["xs", "sm", "md"],
+      fontSize: "sm",
+      h: 8,
     },
 
     lg: {
       py: 4,
-      fontSize: ["md", "lg", "xl"],
+      fontSize: "xl",
+      h: 14,
     },
   },
 
@@ -668,27 +780,38 @@ export default {
   list: {
     variant: "text.paragraph",
     my: 6,
-    ml: 6,
+    ml: 10,
 
     li: {
       mb: 2,
+
+      p: {
+        m: 0,
+      },
     },
 
     unordered: {
-      li: {
+      "> li": {
         listStyle: "disc",
       },
     },
 
     ordered: {
-      li: {
+      "> li": {
         listStyle: "decimal",
       },
     },
   },
 
   icons: {
+    logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
     "arrow-right": `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>`,
-    "menu-alt": `<svg fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h7"></path></svg>`,
+    menu: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>`,
+    close: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>`,
+    clipboard: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>`,
+    check: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>`,
+    moon: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>`,
+    sun: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>`,
+    search: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>`,
   },
 }

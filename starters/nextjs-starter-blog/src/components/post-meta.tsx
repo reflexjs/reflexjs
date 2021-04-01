@@ -2,7 +2,7 @@ import Link from "next/link"
 import { formatDate } from "src/utils/format-date"
 import { Post } from "types"
 
-export interface PostMetaProps {
+export interface PostMetaProps extends React.HTMLAttributes<HTMLDivElement> {
   post: Post
 }
 
