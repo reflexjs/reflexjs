@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.2](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-typescript@1.0.0-alpha.1...nextjs-starter-typescript@1.0.0-alpha.2) (2021-04-01)
+
+
+### Bug Fixes
+
+* **reflexjs:** update initialColorModeName ([5559136](https://github.com/reflexjs/reflexjs/commit/55591365b37996dbb862a1d2a6a87241e628765d))
+
+
+### Features
+
+* **reflexjs:** set initialColorModeName to light in base theme ([0dbd53e](https://github.com/reflexjs/reflexjs/commit/0dbd53e790194dba9b36235aa262e6f386ac9d0d))
+
+
+
+
+
 # [1.0.0-alpha.1](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-typescript@1.0.0-alpha.0...nextjs-starter-typescript@1.0.0-alpha.1) (2021-04-01)
 
 

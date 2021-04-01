@@ -3,6 +3,25 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.2](https://github.com/reflexjs/reflexjs/compare/reflexjs@2.0.0-alpha.1...reflexjs@2.0.0-alpha.2) (2021-04-01)
+
+
+### Bug Fixes
+
+* **reflexjs:** update initialColorModeName ([5559136](https://github.com/reflexjs/reflexjs/commit/55591365b37996dbb862a1d2a6a87241e628765d))
+* **reflexjs:** update the base theme ([ed28b6a](https://github.com/reflexjs/reflexjs/commit/ed28b6ac56eaf9220e2330690f5e5679652947f4))
+
+
+### Features
+
+* **gatsby:** allow callable variants ([20d80d7](https://github.com/reflexjs/reflexjs/commit/20d80d7213ff224dca65cf6c4af3d6f352401429))
+* **reflexjs:** cherry pick fixes from 1.0 ([d0b7cfd](https://github.com/reflexjs/reflexjs/commit/d0b7cfd205f03368005496642692cf3fb3d82df1))
+* **reflexjs:** set initialColorModeName to light in base theme ([0dbd53e](https://github.com/reflexjs/reflexjs/commit/0dbd53e790194dba9b36235aa262e6f386ac9d0d))
+
+
+
+
+
 # [2.0.0-alpha.1](https://github.com/reflexjs/reflexjs/compare/reflexjs@2.0.0-alpha.0...reflexjs@2.0.0-alpha.1) (2021-04-01)
 
 
