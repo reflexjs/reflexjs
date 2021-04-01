@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.1.0](https://github.com/reflexjs/reflexjs/compare/reflexjs@1.0.4...reflexjs@1.1.0) (2021-04-01)
+
+
+### Features
+
+* **reflexjs:** allow sx props to accept composed variants ([10afb5f](https://github.com/reflexjs/reflexjs/commit/10afb5f00a4be07792d158f7e69fc60814b12a6f))
+
+
+
+
+
 ## [1.0.4](https://github.com/reflexjs/reflexjs/compare/reflexjs@1.0.3...reflexjs@1.0.4) (2021-04-01)
 
 
