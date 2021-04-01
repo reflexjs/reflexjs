@@ -100,18 +100,23 @@ export function parseProps(type, props) {
     return props
   }
 
-  const { variant, sx = {}, ..._props } = props
-
   // Fix for React.Fragment.
   if (typeof type === "symbol") {
     return props
   }
 
-  if (sx && typeof type !== "string") {
+  if (props.sx && typeof type !== "string") {
     return {
-      ..._props,
-      sx: transformProps(sx),
+      ...props,
+      sx: transformProps(props.sx),
     }
+  }
+
+  const { sx: _sx = {}, ...__props } = props
+  let { variant, ..._props } = __props
+  const { variant: sxVariant, ...sx } = _sx
+  if (sxVariant) {
+    variant = sxVariant
   }
 
   const [styleProps, otherProps] = split(_props)

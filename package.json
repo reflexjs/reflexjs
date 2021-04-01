@@ -12,6 +12,7 @@
     "format": "prettier --write \"**/*.js{,on}\"  \"**/*.mdx\"",
     "start": "lerna run start --parallel",
     "prepare": "lerna run prepare",
+    "clean": "lerna clean && rimraf packages/*/{dist,rts2_cache*}",
     "lint": "eslint --cache --ext .js,.jsx .",
     "release": "lerna publish && npm run sync:all",
     "sync:all": "npm run sync:starters",
@@ -39,7 +40,9 @@
       "/.cache/",
       "/dist/"
     ],
-    "snapshotSerializers": ["@emotion/jest/serializer"]
+    "snapshotSerializers": [
+      "@emotion/jest/serializer"
+    ]
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
@@ -72,6 +75,7 @@
     "prettier": "^2.0.4",
     "pretty-quick": "^2.0.1",
     "react-test-renderer": "^17.0.2",
+    "rimraf": "^3.0.2",
     "sharp": "^0.26.3",
     "start-server-and-test": "^1.11.0",
     "typescript": "^4.0.5"
