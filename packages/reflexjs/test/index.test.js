@@ -1,9 +1,11 @@
 /** @jsx jsx */
+import { jsx } from "../src"
 // eslint-disable-next-line no-unused-vars
 import * as React from "react"
 import renderer from "react-test-renderer"
-import { matchers } from "jest-emotion"
-import { jsx, transformProps, ThemeProvider } from "../dist"
+import { matchers } from "@emotion/jest"
+import { transformProps } from "../src"
+import { ThemeProvider } from "theme-ui"
 
 expect.extend(matchers)
 
@@ -94,9 +96,9 @@ describe("style props", () => {
     )
     expect(json).toHaveStyleRule(
       "background-color",
-      "var(--theme-ui-colors-primary,#03f)"
+      "var(--theme-ui-colors-primary)"
     )
-    expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-text,#000)")
+    expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-text)")
   })
 
   test("renders without style props", () => {
@@ -120,7 +122,7 @@ describe("style props", () => {
     )
     expect(json).toHaveStyleRule(
       "background-color",
-      "var(--theme-ui-colors-primary,#03f)"
+      "var(--theme-ui-colors-primary)"
     )
   })
 
@@ -183,11 +185,11 @@ describe("variant", () => {
         <h1 variant="heading.h1">Button</h1>
       </ThemeProvider>
     )
-    expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-primary,#03f)")
+    expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-primary)")
     expect(json).toHaveStyleRule("font-size", "42px")
     expect(json).toHaveStyleRule(
       "background-color",
-      "var(--theme-ui-colors-secondary,#2f3)"
+      "var(--theme-ui-colors-secondary)"
     )
   })
 
@@ -197,12 +199,12 @@ describe("variant", () => {
         <h1 variant="heading.h1 text.caps">Button</h1>
       </ThemeProvider>
     )
-    expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-text,#000)")
+    expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-text)")
     expect(json).toHaveStyleRule("text-transform", "uppercase")
     expect(json).toHaveStyleRule("font-size", "42px")
     expect(json).toHaveStyleRule(
       "background-color",
-      "var(--theme-ui-colors-primary,#03f)"
+      "var(--theme-ui-colors-primary)"
     )
   })
 
@@ -214,13 +216,10 @@ describe("variant", () => {
     )
     expect(json).toHaveStyleRule(
       "background-color",
-      "var(--theme-ui-colors-secondary,#2f3)"
+      "var(--theme-ui-colors-secondary)"
     )
     expect(json).toHaveStyleRule("font-size", "20px")
-    expect(json).toHaveStyleRule(
-      "color",
-      "var(--theme-ui-colors-background,#fff)"
-    )
+    expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-background)")
   })
 
   describe("renders with nested styles inside variants", () => {
@@ -233,15 +232,11 @@ describe("variant", () => {
     )
     expect(json).toHaveStyleRule(
       "background-color",
-      "var(--theme-ui-colors-secondary,#2f3)"
+      "var(--theme-ui-colors-secondary)"
     )
-    expect(json).toHaveStyleRule(
-      "color",
-      "var(--theme-ui-colors-secondary,#2f3)",
-      {
-        target: ":hover",
-      }
-    )
+    expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-secondary)", {
+      target: ":hover",
+    })
   })
 
   test("variants style can be overridden", () => {
@@ -254,7 +249,7 @@ describe("variant", () => {
     )
     expect(json).toHaveStyleRule(
       "background-color",
-      "var(--theme-ui-colors-secondary,#2f3)"
+      "var(--theme-ui-colors-secondary)"
     )
     expect(json).toHaveStyleRule("font-size", "20px")
     expect(json).toHaveStyleRule("color", "#930")
@@ -283,15 +278,13 @@ describe("pseudo props", () => {
         </a>
       </ThemeProvider>
     )
-    expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-primary,#03f)")
-    expect(json).toHaveStyleRule(
-      "color",
-      "var(--theme-ui-colors-secondary,#2f3)",
-      { target: ":hover" }
-    )
+    expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-primary)")
+    expect(json).toHaveStyleRule("color", "var(--theme-ui-colors-secondary)", {
+      target: ":hover",
+    })
     expect(json).toHaveStyleRule(
       "background-color",
-      "var(--theme-ui-colors-primary,#03f)",
+      "var(--theme-ui-colors-primary)",
       { target: ":hover div" }
     )
     expect(json).toHaveStyleRule("box-shadow", "0 0 1px black", {

@@ -201,14 +201,12 @@ export type ComponentWithStyleProps<T extends React.ElementType> = Assign<
   StyleProps
 >
 
-// declare module "@theme-ui/css" {
-//   interface Theme {
-//     [name: string]: {}
-//     icons?: {
-//       [name: string]: string
-//     }
-//   }
-// }
+/* eslint-disable  @typescript-eslint/no-explicit-any */
+// We allow for any here for expansion such as variants.
+// TODO: Figure out how or if we should keep compatibility with Theme UI spec.
+export interface Theme {
+  [key: string]: any
+}
 
 declare module "react" {
   // tslint:disable-next-line: no-empty-interface
@@ -217,11 +215,11 @@ declare module "react" {
   }
 }
 
-declare global {
-  namespace JSX {
-    // tslint:disable-next-line: no-empty-interface
-    interface IntrinsicAttributes extends StyleProps {
-      sx?: SxProps
-    }
-  }
-}
+// declare global {
+//   namespace JSX {
+//     // tslint:disable-next-line: no-empty-interface
+//     interface IntrinsicAttributes extends StyleProps {
+//       sx?: SxProps
+//     }
+//   }
+// }

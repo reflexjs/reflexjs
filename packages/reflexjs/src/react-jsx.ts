@@ -1,39 +1,33 @@
 import * as React from "react"
-import { InterpolationWithTheme } from "@emotion/core"
 import styleProps from "./style-props"
-import { StyleProps, SxProps } from "./types"
+import { StyleProps, SxProps, Theme } from "./types"
 import deepmerge from "deepmerge"
-import { jsx as themeUIJSX, css, ThemeUIStyleObject } from "theme-ui"
+import {
+  jsx as themeUIJSX,
+  css,
+  ThemeUIStyleObject,
+  useThemeUI,
+  ThemeUIContextValue,
+} from "theme-ui"
 export {
-  useThemeUI as useTheme,
-  ThemeProvider as ThemeUIProvider,
+  ThemeProvider,
   useColorMode,
   css,
   get,
   InitializeColorMode,
 } from "theme-ui"
 
+interface ExactContextValue extends Omit<ThemeUIContextValue, "theme"> {
+  theme: Theme
+}
+export const useTheme = (useThemeUI as unknown) as () => ExactContextValue
+
 export const merge = deepmerge
-
-/* eslint-disable  @typescript-eslint/no-explicit-any */
-// We allow for any here for expansion.
-// TODO: Figure out how or if we should keep compatibility with Theme UI spec.
-export interface Theme {
-  [key: string]: any
-}
-
-interface ReflexjsTheme extends Theme {}
-
-declare module "theme-ui" {
-  interface Theme extends ReflexjsTheme {}
-}
 
 const RESPONSIVE_SEPARATOR = "|"
 
 const regex = new RegExp(`^(${Object.keys(styleProps).join("|")})$`)
 
-// Helper to omit props.
-// See https://github.com/styled-system/styled-system/tree/master/packages/props.
 const omit = (props) => {
   const next = {}
   for (const key in props) {
@@ -43,8 +37,6 @@ const omit = (props) => {
   return next
 }
 
-// Helper to pick props.
-// See https://github.com/styled-system/styled-system/tree/master/packages/props.
 const pick = (props) => {
   const next = {}
   for (const key in props) {
@@ -96,12 +88,13 @@ type doNotParseType = keyof JSX.IntrinsicElements
 
 const doNotParseTypes: doNotParseType[] = ["meta"]
 
+/* eslint-disable  @typescript-eslint/no-explicit-any */
 function isDoNotParseType(name: any): name is doNotParseType {
   return doNotParseTypes.includes(name)
 }
 
-function parseProps(type, props) {
-  if (!props) return null
+export function parseProps(type, props) {
+  if (!props) return props
 
   if (isDoNotParseType(type)) {
     return props
@@ -111,7 +104,7 @@ function parseProps(type, props) {
 
   // Fix for React.Fragment.
   if (typeof type === "symbol") {
-    return null
+    return props
   }
 
   if (sx && typeof type !== "string") {
@@ -134,7 +127,7 @@ function parseProps(type, props) {
 
   const next: typeof props & {
     /* eslint-disable  @typescript-eslint/no-explicit-any */
-    css?: InterpolationWithTheme<any>
+    css?: any
     sx: SxProps
   } = {
     ...otherProps,

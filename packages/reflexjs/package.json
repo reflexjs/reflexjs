@@ -12,10 +12,13 @@
     "access": "public"
   },
   "scripts": {
-    "prepare": "microbundle --no-compress --jsx React.createElement && yarn prepare:babel && yarn prepare:cli",
-    "watch": "microbundle watch --no-compress --jsx React.createElement",
+    "prepare": "yarn prepare:index && yarn prepare:jsx-runtime && yarn prepare:jsx-dev-runtime && yarn prepare:babel && yarn prepare:cli",
+    "prepare:index": "microbundle --no-compress --jsx React.createElement",
+    "prepare:jsx-runtime": "microbundle --no-compress --tsconfig tsconfig.json --cwd jsx-runtime",
+    "prepare:jsx-dev-runtime": "microbundle --no-compress --tsconfig tsconfig.json --cwd jsx-dev-runtime",
     "prepare:cli": "tsc src/cli.ts --outDir dist --module commonjs --skipLibCheck",
     "prepare:babel": "microbundle --no-compress -i src/babel.ts -o dist/babel.js -f cjs",
+    "watch": "microbundle watch --no-compress --jsx React.createElement",
     "test": "jest"
   },
   "bin": {
@@ -31,16 +34,14 @@
     "directory": "packages/reflexjs"
   },
   "dependencies": {
-    "@babel/plugin-transform-react-jsx": "^7.12.5",
-    "@emotion/core": "^10.0.0",
-    "babel-plugin-jsx-pragmatic": "^1.0.2",
-    "csstype": "^3.0.6",
+    "@emotion/react": "^11.1.5",
+    "csstype": "^3.0.7",
     "deepmerge": "^4.2.2",
-    "theme-ui": "^0.4.0-rc.14"
+    "theme-ui": "^0.6.1"
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0",
-    "react": "^16.14.0"
+    "react": "^17.0.2"
   },
   "devDependencies": {
     "@types/node": "^14.14.7",

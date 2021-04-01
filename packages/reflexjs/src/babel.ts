@@ -1,20 +1,16 @@
-import jsx from "@babel/plugin-transform-react-jsx"
-import pragmatic from "babel-plugin-jsx-pragmatic"
-
-const pragmaName = "jsx"
+import babelReact from "@babel/preset-react"
 
 export default (_, { ...options } = {}) => {
   return {
-    plugins: [
+    presets: [
       [
-        pragmatic,
+        babelReact,
         {
-          export: "jsx",
-          module: "reflexjs",
-          import: pragmaName,
+          runtime: "automatic",
+          importSource: "reflexjs",
+          ...options,
         },
       ],
-      [jsx, { pragma: pragmaName, pragmaFrag: "React.Fragment", ...options }],
     ],
   }
 }
