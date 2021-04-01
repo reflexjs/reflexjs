@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.0](https://github.com/reflexjs/reflexjs/compare/reflexjs@1.0.3...reflexjs@2.0.0-alpha.0) (2021-04-01)
+
+
+### Features
+
+* **reflexjs:** remove custom babel implementation ([04d1d4b](https://github.com/reflexjs/reflexjs/commit/04d1d4b55ca721c5c1e6cdae9b4d66ed7b1a3ed5))
+* **reflexjs:** upgrade to theme-ui 0.6 ([ce0fe87](https://github.com/reflexjs/reflexjs/commit/ce0fe872c554d0b918c278f66a95b4e28b024cb5))
+
+
+
+
+
 ## [1.0.3](https://github.com/reflexjs/reflexjs/compare/reflexjs@1.0.2...reflexjs@1.0.3) (2021-02-09)
 
 

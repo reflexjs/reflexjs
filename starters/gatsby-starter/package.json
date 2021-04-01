@@ -1,6 +1,6 @@
 {
   "name": "gatsby-starter",
-  "version": "0.2.4",
+  "version": "1.0.0-alpha.0",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -14,7 +14,7 @@
     "gatsby-plugin-reflexjs": "^0.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "reflexjs": "^1.0.3",
+    "reflexjs": "^2.0.0-alpha.0",
     "typeface-inter": "^1.1.13"
   }
 }

@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.0](https://github.com/reflexjs/reflexjs/compare/gatsby-starter-typescript@0.2.4...gatsby-starter-typescript@1.0.0-alpha.0) (2021-04-01)
+
+
+### Features
+
+* update to react 17 ([cb08ae7](https://github.com/reflexjs/reflexjs/commit/cb08ae73f19d70ce8c90b86139fb9dc6e01cf812))
+
+
+
+
+
 ## [0.2.4](https://github.com/reflexjs/reflexjs/compare/gatsby-starter-typescript@0.2.3...gatsby-starter-typescript@0.2.4) (2021-03-11)
 
 **Note:** Version bump only for package gatsby-starter-typescript
