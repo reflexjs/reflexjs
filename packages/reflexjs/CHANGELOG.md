@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.4](https://github.com/reflexjs/reflexjs/compare/reflexjs@1.0.3...reflexjs@1.0.4) (2021-04-01)
+
+
+### Bug Fixes
+
+* **reflexjs:** allow functional component to pass variant props ([4ac5c9b](https://github.com/reflexjs/reflexjs/commit/4ac5c9b08719b676a127327366634e79fda6566c))
+
+
+
+
+
 ## [1.0.3](https://github.com/reflexjs/reflexjs/compare/reflexjs@1.0.2...reflexjs@1.0.3) (2021-02-09)
 
 
