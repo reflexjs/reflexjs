@@ -4,6 +4,7 @@ import * as React from "react"
 import renderer from "react-test-renderer"
 import { matchers } from "jest-emotion"
 import { jsx, transformProps, ThemeProvider } from "../dist"
+import { text } from "../stubs/base.theme"
 
 expect.extend(matchers)
 
@@ -280,6 +281,30 @@ describe("variant", () => {
       "var(--theme-ui-colors-secondary,#2f3)"
     )
     expect(json).toHaveStyleRule("color", "#456")
+  })
+
+  test("sx variants can override variant props", () => {
+    const json = renderJSON(
+      <ThemeProvider theme={theme}>
+        <button
+          variant="buttons.secondary.lg"
+          sx={{
+            variant: "buttons.primary",
+          }}
+        >
+          Button
+        </button>
+      </ThemeProvider>
+    )
+    expect(json).toHaveStyleRule(
+      "background-color",
+      "var(--theme-ui-colors-primary,#03f)"
+    )
+    expect(json).toHaveStyleRule("font-size", "16px")
+    expect(json).toHaveStyleRule(
+      "color",
+      "var(--theme-ui-colors-background,#fff)"
+    )
   })
 })
 

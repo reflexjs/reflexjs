@@ -119,7 +119,12 @@ function parseProps(type, props) {
     }
   }
 
-  const { variant, sx = {}, ..._props } = props
+  const { sx: _sx = {}, ...__props } = props
+  let { variant, ..._props } = __props
+  const { variant: sxVariant, ...sx } = _sx
+  if (sxVariant) {
+    variant = sxVariant
+  }
 
   const [styleProps, otherProps] = split(_props)
 
