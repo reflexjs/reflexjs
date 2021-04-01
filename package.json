@@ -12,7 +12,7 @@
     "format": "prettier --write \"**/*.js{,on}\"  \"**/*.mdx\"",
     "start": "lerna run start --parallel",
     "prepare": "lerna run prepare",
-    "clean": "lerna clean && rimraf packages/*/{dist,rts2_cache*}",
+    "clean": "lerna clean && rimraf packages/*/{dist,rts2_cache*,.next}",
     "lint": "eslint --cache --ext .js,.jsx .",
     "release": "lerna publish && npm run sync:all",
     "sync:all": "npm run sync:starters",
