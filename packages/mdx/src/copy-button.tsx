@@ -14,7 +14,7 @@ interface CopyButtonProps
 
 export const CopyButton = ({
   value,
-  iconSize = 5,
+  iconSize = 4,
   children,
   ...props
 }: CopyButtonProps) => {
@@ -35,18 +35,21 @@ export const CopyButton = ({
     <button
       onClick={handleClicked}
       variant="button.icon.sm"
-      bg="muted"
+      bg="prism.background"
+      color="prism.text"
       {...props}
     >
       {children ? (
         children
       ) : hasCopied ? (
         <React.Fragment>
-          <Icon name="check" size={iconSize} /> <span ml="2">Copied</span>
+          <Icon name="check" size={iconSize} />{" "}
+          <VisuallyHidden>Copied</VisuallyHidden>
         </React.Fragment>
       ) : (
         <React.Fragment>
-          <Icon name="clipboard" size={iconSize} /> <span ml="2">Copy</span>
+          <Icon name="clipboard" size={iconSize} />{" "}
+          <VisuallyHidden>Copy</VisuallyHidden>
         </React.Fragment>
       )}
       <VisuallyHidden>Copy</VisuallyHidden>

@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Icon } from "reflexjs"
-import { CodeBlock } from "."
+import { CodeBlock } from "./code-block"
 
 const headingStyles = {
   display: "inline-flex",
