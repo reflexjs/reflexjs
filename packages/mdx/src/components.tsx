@@ -1,14 +1,34 @@
 /** @jsx jsx */
-import { jsx } from "reflexjs"
-import { CodeBlock } from "./code-block"
+import { jsx, Icon } from "reflexjs"
+import { CodeBlock } from "."
 
 const headingStyles = {
+  display: "inline-flex",
+  flexDirection: "row-reverse",
+  alignItems: "center",
+  justifyContent: "flex-end",
+  scrollMarginTop: (theme) => theme.space[26],
+  width: "100%",
   "&::before": {
     display: "block",
     height: "6rem",
     marginTop: "-6rem",
     visibility: "hidden",
     content: "''",
+  },
+  "> a": {
+    display: "none",
+    position: "relative",
+    ml: 2,
+    "&::before": {
+      content: "'#'",
+      fontSize: "inherit",
+    },
+  },
+  _hover: {
+    "> a": {
+      display: "inline-block",
+    },
   },
 }
 
@@ -31,6 +51,7 @@ export const components = {
   h6: (props) => (
     <h6 variant="heading.h6" sx={headingStyles} mt="6" mb="2" {...props} />
   ),
+  div: (props) => <div {...props} />,
   hr: (props) => <hr my="4" {...props} />,
   strong: (props) => <strong fontWeight="semibold" {...props} />,
   p: (props) => <p variant="text.paragraph" my="4" {...props} />,
@@ -43,4 +64,5 @@ export const components = {
   figure: (props) => <figure mt="6" {...props} />,
   figcaption: (props) => <figcaption variant="text.caption" {...props} />,
   table: (props) => <table variant="table" my="6" {...props} />,
+  Icon,
 }
