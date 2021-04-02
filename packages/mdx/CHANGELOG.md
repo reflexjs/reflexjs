@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.4](https://github.com/reflexjs/reflexjs/compare/@reflexjs/mdx@1.0.0-alpha.3...@reflexjs/mdx@1.0.0-alpha.4) (2021-04-02)
+
+
+### Bug Fixes
+
+* **@reflexjs/mdx:** update copy button colors ([3104e3c](https://github.com/reflexjs/reflexjs/commit/3104e3cc6231cf0d2fe201f0bc3bbf80e4b87d27))
+
+
+
+
+
 # [1.0.0-alpha.3](https://github.com/reflexjs/reflexjs/compare/@reflexjs/mdx@1.0.0-alpha.2...@reflexjs/mdx@1.0.0-alpha.3) (2021-04-02)
 
 
