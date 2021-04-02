@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.3](https://github.com/reflexjs/reflexjs/compare/reflexjs@2.0.0-alpha.2...reflexjs@2.0.0-alpha.3) (2021-04-02)
+
+
+### Features
+
+* **reflexjs:** update base preset pre styles ([08b05cc](https://github.com/reflexjs/reflexjs/commit/08b05cc894d6cb40605e77018e07af1af1261012))
+
+
+
+
+
 # [2.0.0-alpha.2](https://github.com/reflexjs/reflexjs/compare/reflexjs@2.0.0-alpha.1...reflexjs@2.0.0-alpha.2) (2021-04-01)
 
 

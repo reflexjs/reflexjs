@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.3](https://github.com/reflexjs/reflexjs/compare/@reflexjs/mdx@1.0.0-alpha.2...@reflexjs/mdx@1.0.0-alpha.3) (2021-04-02)
+
+
+### Features
+
+* **@reflexjs/mdx:** update components ([afffd0b](https://github.com/reflexjs/reflexjs/commit/afffd0b038b3d137eefa9484d83190318313cedf))
+
+
+
+
+
 # [1.0.0-alpha.2](https://github.com/reflexjs/reflexjs/compare/@reflexjs/mdx@1.0.0-alpha.1...@reflexjs/mdx@1.0.0-alpha.2) (2021-04-01)
 
 **Note:** Version bump only for package @reflexjs/mdx
