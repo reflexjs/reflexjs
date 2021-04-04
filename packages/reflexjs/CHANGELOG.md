@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.4](https://github.com/reflexjs/reflexjs/compare/reflexjs@2.0.0-alpha.3...reflexjs@2.0.0-alpha.4) (2021-04-04)
+
+
+### Bug Fixes
+
+* **reflexjs:** fix issue for functional component when sx prop is not set ([f97f0eb](https://github.com/reflexjs/reflexjs/commit/f97f0eb642558da60cc9fa66c6ad8c72eaa007af))
+
+
+
+
+
 # [2.0.0-alpha.3](https://github.com/reflexjs/reflexjs/compare/reflexjs@2.0.0-alpha.2...reflexjs@2.0.0-alpha.3) (2021-04-02)
 
 
