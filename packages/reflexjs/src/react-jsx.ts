@@ -105,11 +105,13 @@ export function parseProps(type, props) {
     return props
   }
 
-  if (props.sx && typeof type !== "string") {
-    return {
-      ...props,
-      sx: transformProps(props.sx),
-    }
+  if (typeof type !== "string") {
+    return props.sx
+      ? {
+          ...props,
+          sx: transformProps(props.sx),
+        }
+      : props
   }
 
   const { sx: _sx = {}, ...__props } = props
