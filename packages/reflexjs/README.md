@@ -54,8 +54,7 @@ export default function () {
 You are now ready to style your components using [style props](/docs/styling).
 
 ```jsx
-/** @jsx jsx */
-import { jsx } from "reflexjs"
+/** @jsxImportSource "reflexjs" */
 
 export default function CustomButton({ children }) {
   return (

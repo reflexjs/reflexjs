@@ -1,4 +1,4 @@
-export default {
+const theme = {
   useRootStyles: true,
   initialColorModeName: "light",
   colors: {
@@ -104,15 +104,15 @@ export default {
     "6xl": "4rem",
   },
   fontWeights: {
-    hairline: "100",
-    thin: "200",
-    light: "300",
-    normal: "400",
-    medium: "500",
-    semibold: "600",
-    bold: "700",
-    extrabold: "800",
-    black: "900",
+    hairline: 100,
+    thin: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    black: 900,
   },
   letterSpacings: {
     tighter: "-0.05em",
@@ -811,3 +811,5 @@ export default {
     logo: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>`,
   },
 }
+
+export default theme
