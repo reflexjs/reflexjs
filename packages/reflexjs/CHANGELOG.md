@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.5](https://github.com/reflexjs/reflexjs/compare/reflexjs@2.0.0-alpha.4...reflexjs@2.0.0-alpha.5) (2021-04-05)
+
+
+### Features
+
+* **reflexjs:** update base theme ([9c915ed](https://github.com/reflexjs/reflexjs/commit/9c915ed8686173b2ea709252189375bdfea08090))
+
+
+
+
+
 # [2.0.0-alpha.4](https://github.com/reflexjs/reflexjs/compare/reflexjs@2.0.0-alpha.3...reflexjs@2.0.0-alpha.4) (2021-04-04)
 
 
