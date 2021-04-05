@@ -9,20 +9,13 @@ import {
   useThemeUI,
   ThemeUIContextValue,
 } from "theme-ui"
-export {
-  ThemeProvider,
-  useColorMode,
-  css,
-  get,
-  InitializeColorMode,
-} from "theme-ui"
+export { useColorMode, css, get, InitializeColorMode } from "theme-ui"
 
 interface ExactContextValue extends Omit<ThemeUIContextValue, "theme"> {
   theme: Theme
 }
-export const useTheme = (useThemeUI as unknown) as () => ExactContextValue
 
-export const merge = deepmerge
+export const useTheme = (useThemeUI as unknown) as () => ExactContextValue
 
 const RESPONSIVE_SEPARATOR = "|"
 
@@ -48,7 +41,7 @@ const pick = (props) => {
 
 const split = (props) => [pick(props), omit(props)]
 
-const makeResponsive = (prop) => {
+export const makeResponsive = (prop) => {
   if (typeof prop !== "string") {
     return prop
   }

@@ -5,16 +5,19 @@ import {
   Property,
   Pseudos,
 } from "csstype"
+import {
+  ColorModesScale,
+  Scale,
+  ThemeStyles,
+  ThemeUICSSProperties,
+  TLengthStyledSystem,
+} from "@theme-ui/core"
 
 export interface CssProps
   extends StandardLonghandProperties,
     StandardShorthandProperties {}
 
 export interface AliasProps {
-  /**
-   * **`d`** is a shorthand property for the **`display`** CSS property.
-   */
-  d?: Property.Display
   /**
    * **`bg`** is a shorthand property for the **`backgroundColor`** CSS property.
    */
@@ -205,6 +208,43 @@ export type ComponentWithStyleProps<T extends React.ElementType> = Assign<
 // We allow for any here for expansion such as variants.
 // TODO: Figure out how or if we should keep compatibility with Theme UI spec.
 export interface Theme {
+  useCustomProperties?: boolean
+  initialColorModeName?: string
+  printColorModeName?: string
+  useRootStyles?: boolean
+  useColorSchemeMediaQuery?: boolean
+  useBorderBox?: boolean
+  useLocalStorage?: boolean
+
+  breakpoints?: Array<string>
+
+  colors?: ColorModesScale
+  rawColors?: ColorModesScale
+  mediaQueries?: { [size: string]: string }
+  space?: Scale<Property.Margin<number | string>>
+  fontSizes?: Scale<Property.FontSize<number>>
+  fonts?: Scale<Property.FontFamily>
+  fontWeights?: Scale<Property.FontWeight>
+  lineHeights?: Scale<Property.LineHeight<TLengthStyledSystem>>
+  letterSpacings?: Scale<Property.LetterSpacing<TLengthStyledSystem>>
+  sizes?: Scale<Property.Height<{}> | Property.Width<{}>>
+  borders?: Scale<Property.Border<{}>>
+  borderStyles?: Scale<Property.Border<{}>>
+  borderWidths?: Scale<Property.BorderWidth<TLengthStyledSystem>>
+  radii?: Scale<Property.BorderRadius<TLengthStyledSystem>>
+  shadows?: Scale<Property.BoxShadow>
+  zIndices?: Scale<Property.ZIndex>
+  colorStyles?: Scale<ThemeUICSSProperties>
+  textStyles?: Scale<ThemeUICSSProperties>
+  opacities?: Scale<Property.Opacity>
+  transitions?: Scale<Property.Transition>
+
+  styles?: ThemeStyles
+
+  icons?: {
+    [key: string]: string
+  }
+
   [key: string]: any
 }
 
@@ -213,6 +253,7 @@ interface ReflexjsTheme extends Theme {}
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 declare module "@theme-ui/css" {
   interface Theme extends ReflexjsTheme {}
+  interface ThemeUICSSObject extends StyleProps {}
 }
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
