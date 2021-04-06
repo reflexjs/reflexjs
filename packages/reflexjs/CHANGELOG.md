@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0-alpha.6](https://github.com/reflexjs/reflexjs/compare/reflexjs@2.0.0-alpha.5...reflexjs@2.0.0-alpha.6) (2021-04-06)
+
+
+### Bug Fixes
+
+* **reflexjs:** add merge export ([a404e05](https://github.com/reflexjs/reflexjs/commit/a404e052cc8bee3911447ddca904a1af4f1c8ad2))
+
+
+
+
+
 # [2.0.0-alpha.5](https://github.com/reflexjs/reflexjs/compare/reflexjs@2.0.0-alpha.4...reflexjs@2.0.0-alpha.5) (2021-04-05)
 
 
