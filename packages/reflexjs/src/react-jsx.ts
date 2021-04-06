@@ -15,6 +15,8 @@ interface ExactContextValue extends Omit<ThemeUIContextValue, "theme"> {
   theme: Theme
 }
 
+export const merge = deepmerge
+
 export const useTheme = (useThemeUI as unknown) as () => ExactContextValue
 
 const RESPONSIVE_SEPARATOR = "|"
