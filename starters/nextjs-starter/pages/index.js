@@ -5,8 +5,7 @@ export default function IndexPage() {
         Welcome to <span color="primary">Reflexjs</span>
       </h1>
       <p fontSize="xl" my="4">
-        Get started by editing{" "}
-        <code variant="text.code">src/pages/index.js</code>
+        Get started by editing <code variant="text.code">pages/index.js</code>
       </p>
       <a href="https://reflexjs.org/docs" variant="button.primary">
         Read the docs
