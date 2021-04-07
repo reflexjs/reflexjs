@@ -180,7 +180,7 @@ export type ResponsiveCssProps<T> = {
 export type ResponsiveBoxProps = ResponsiveCssProps<CssProps & AliasProps>
 
 export type SxProps =
-  | ResponsiveBoxProps
+  | Omit<StyleProps, "sx">
   | { [key: string]: SxProps }
   | { [K in Pseudos | keyof JSX.IntrinsicElements]: SxProps }
 
