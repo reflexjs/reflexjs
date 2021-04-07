@@ -64,3 +64,7 @@ export default function CustomButton({ children }) {
   )
 }
 ```
+
+## Docs
+
+Read the docs at https://reflexjs.org/docs.
