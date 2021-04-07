@@ -63,6 +63,10 @@ export const components = {
   inlineCode: (props) => <code {...props} />,
   figure: (props) => <figure mt="6" {...props} />,
   figcaption: (props) => <figcaption variant="text.caption" {...props} />,
-  table: (props) => <table variant="table" my="6" {...props} />,
+  table: (props) => (
+    <div maxW="100%" overflow="scroll">
+      <table variant="table" my="6" {...props} />
+    </div>
+  ),
   Icon,
 }
