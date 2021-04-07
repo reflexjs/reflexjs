@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.8](https://github.com/reflexjs/reflexjs/compare/@reflexjs/mdx@1.0.0-alpha.7...@reflexjs/mdx@1.0.0-alpha.8) (2021-04-07)
+
+
+### Bug Fixes
+
+* **@reflexjs/mdx:** make table responsive ([8bb29cd](https://github.com/reflexjs/reflexjs/commit/8bb29cd02b7ba4c1b4ee0ee3fe6826f96364e222))
+
+
+
+
+
 # [1.0.0-alpha.7](https://github.com/reflexjs/reflexjs/compare/@reflexjs/mdx@1.0.0-alpha.6...@reflexjs/mdx@1.0.0-alpha.7) (2021-04-06)
 
 **Note:** Version bump only for package @reflexjs/mdx
