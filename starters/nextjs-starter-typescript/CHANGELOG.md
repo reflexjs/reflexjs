@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0-alpha.7](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-typescript@1.0.0-alpha.6...nextjs-starter-typescript@1.0.0-alpha.7) (2021-04-07)
+
+
+### Features
+
+* update nextjs starters ([6fed57b](https://github.com/reflexjs/reflexjs/commit/6fed57bb7b0a9c430c93b89cf35fe3a097832c2c))
+
+
+
+
+
 # [1.0.0-alpha.6](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-typescript@1.0.0-alpha.5...nextjs-starter-typescript@1.0.0-alpha.6) (2021-04-06)
 
 **Note:** Version bump only for package nextjs-starter-typescript
