@@ -1,2 +1,2 @@
-// Support legacy gatsby-plugin-theme-ui theme.
+// Shadow this file to add your theme.
 export default {}
