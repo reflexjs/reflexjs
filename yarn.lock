@@ -6609,10 +6609,10 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
-cypress-axe@^0.8.1:
-  version "0.8.2"
-  resolved "https://registry.yarnpkg.com/cypress-axe/-/cypress-axe-0.8.2.tgz#6f18084dd1399d6334aa0ca97315bc96829eb625"
-  integrity sha512-Gz7UUHfENfTUfgtv9cu4xctg5JsSpdZ6eTWIyoBQI42DdebJO6lZUEXX/paVDPVeSU0YVl6WWmTzQduUzaWuAw==
+cypress-axe@^0.12.2:
+  version "0.12.2"
+  resolved "https://registry.yarnpkg.com/cypress-axe/-/cypress-axe-0.12.2.tgz#4bc2f23ed4930eb6020ea802ba2a201b349b14d8"
+  integrity sha512-gn+rVJ2JnvUWhBshbZ/8dkJdANaEB96zgtAEClJ7vNvDgmqAYb+HhQpW0GM04EqtIiPhenqUeKNQDoqrquY5+w==
 
 cypress@^4.9.0:
   version "4.12.1"
