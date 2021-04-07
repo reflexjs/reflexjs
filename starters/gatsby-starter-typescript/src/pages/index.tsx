@@ -8,7 +8,7 @@ export default function IndexPage() {
       </h1>
       <p fontSize="xl" my="4">
         Get started by editing{" "}
-        <code variant="text.code">src/pages/index.js</code>
+        <code variant="text.code">src/pages/index.tsx</code>
       </p>
       <a href="https://reflexjs.org/docs" variant="button.primary">
         Read the docs
