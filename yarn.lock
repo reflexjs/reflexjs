@@ -13168,10 +13168,10 @@ next-mdx-remote@^2.1.3:
     "@mdx-js/mdx" "^1.6.22"
     "@mdx-js/react" "^1.6.22"
 
-next-mdx@^0.4.0:
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/next-mdx/-/next-mdx-0.4.0.tgz#f13cc0acd3b2584100ab13180c216598716b61f4"
-  integrity sha512-PgXUsNYUTJ+qVZlNhTFT2wxvBaEj2HE0D7UwPu97gOKQAAQt1Hxs9uVvFnk4Jaq3javl7fkf1NC+Ca07OFmgig==
+next-mdx@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/next-mdx/-/next-mdx-0.6.0.tgz#a2714b16cf67077a4bf07f6d11b1430e3ae75849"
+  integrity sha512-FmakNVsLMvTH981DexIu+Fg8hyppx5BHh0iD1fmTzZg15oQEuoI/T/5ZBP93aIj7HC3UA02x0EIO+OmAcE3k8g==
   dependencies:
     "@mdx-js/react" "^1.6.22"
     fast-glob "^3.2.5"
