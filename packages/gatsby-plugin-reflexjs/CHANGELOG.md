@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/reflexjs/reflexjs/compare/gatsby-plugin-reflexjs@0.1.2...gatsby-plugin-reflexjs@0.2.0) (2021-04-07)
+
+
+### Bug Fixes
+
+* remove gatsby-plugin-reflexjs from deprecated ([c074c2a](https://github.com/reflexjs/reflexjs/commit/c074c2aa6a74e7f04bbb3fd8c0af48cb0bdf9bdc))
+
+
+### Features
+
+* **gatsby-plugin-reflexjs:** update gatsby version ([fef09ad](https://github.com/reflexjs/reflexjs/commit/fef09ad6ef06fa2e6afb09d79883faf4dd4e4af5))
+* deprecate gatsby packages ([ae87e87](https://github.com/reflexjs/reflexjs/commit/ae87e8796e20eea2675e8b08aaa8a9775db7da15))
+
+
+
+
+
 ## [0.1.2](https://github.com/reflexjs/reflexjs/compare/gatsby-plugin-reflexjs@0.1.1...gatsby-plugin-reflexjs@0.1.2) (2021-03-11)
 
 

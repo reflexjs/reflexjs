@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/reflexjs/reflexjs/compare/gatsby-starter-typescript@1.0.0-alpha.0...gatsby-starter-typescript@0.3.0) (2021-04-07)
+
+
+### Features
+
+* remove gatsby starters ([375b1c2](https://github.com/reflexjs/reflexjs/commit/375b1c2e498c0d20c1ae48078b8017d405c3c025))
+* update gatsby starters ([ffe09a2](https://github.com/reflexjs/reflexjs/commit/ffe09a2951de85a2a1538f478635f41ce8556514))
+
+
+
+
+
 ## [0.2.6](https://github.com/reflexjs/reflexjs/compare/gatsby-starter-typescript@0.2.5...gatsby-starter-typescript@0.2.6) (2021-04-01)
 
 **Note:** Version bump only for package gatsby-starter-typescript

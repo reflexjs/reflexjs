@@ -1,7 +1,7 @@
 {
   "name": "gatsby-plugin-reflexjs",
   "description": "A Gatsby plugin for adding Reflexjs context.",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "main": "index.js",
   "license": "MIT",
   "publishConfig": {
