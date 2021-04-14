@@ -2,7 +2,7 @@
   <img src="https://user-images.githubusercontent.com/124599/114730531-031c5680-9d52-11eb-8255-7fcfcc0c9828.jpg" alt="A library for rapid UI development with style props, color modes, themes and variants." />
 </div>
 
-<p>
+<p align="center">
   <a href="https://github.com/reflexjs/reflex/blob/master/LICENSE"><img src="https://img.shields.io/npm/l/@arshad/gatsby-theme-phoenix.svg" alt="License"></a>
   <a href="https://github.com/reflexjs/reflex/pulls"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg" alt="PRs welcome!" /></a>
   <a href="https://twitter.com/arshadcn"><img src="https://img.shields.io/badge/Follow-%40arshadcn-1da1f2" alt="Follow @arshadcn" /></a>
