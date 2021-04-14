@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.0.0](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-blog@1.0.0-rc.1...nextjs-starter-blog@1.0.0) (2021-04-14)
+
+**Note:** Version bump only for package nextjs-starter-blog
+
+
+
+
+
 # [1.0.0-rc.1](https://github.com/reflexjs/reflexjs/compare/nextjs-starter-blog@1.0.0-rc.0...nextjs-starter-blog@1.0.0-rc.1) (2021-04-07)
 
 **Note:** Version bump only for package nextjs-starter-blog

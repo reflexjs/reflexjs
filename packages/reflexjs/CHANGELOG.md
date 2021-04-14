@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/reflexjs/reflexjs/compare/reflexjs@2.0.0-rc.1...reflexjs@2.0.0) (2021-04-14)
+
+**Note:** Version bump only for package reflexjs
+
+
+
+
+
 # [2.0.0-rc.1](https://github.com/reflexjs/reflexjs/compare/reflexjs@2.0.0-rc.0...reflexjs@2.0.0-rc.1) (2021-04-07)
 
 
