@@ -6,7 +6,7 @@
   <a href="https://twitter.com/arshadcn"><img src="https://img.shields.io/badge/Follow-%40arshadcn-1da1f2" alt="Follow @arshadcn" /></a>
 </p>
 
-<img src="https://arshad.io/uploads/reflexjs-demo-720.gif" width="1280" />
+<img src="/assets/reflexjs-demo-1080.gif" width="1280" />
 
 ## Features
 
