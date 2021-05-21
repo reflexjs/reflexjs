@@ -1,10 +1,10 @@
 import { getMdxNode, getMdxPaths } from "next-mdx/server"
 import { useHydrate } from "next-mdx/client"
-import { components } from "@reflexjs/mdx"
 
 import { Page } from "types"
 import { Layout } from "@/components/layout"
 import { LayoutGrid } from "@/components/layout-grid"
+import { mdxComponents } from "@/components/mdx-components"
 
 export interface PageProps {
   page: Page
@@ -12,7 +12,7 @@ export interface PageProps {
 
 export default function PagePage({ page }: PageProps) {
   const content = useHydrate(page, {
-    components,
+    components: mdxComponents,
   })
 
   return (
@@ -45,7 +45,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const page = await getMdxNode("page", context, {
-    components,
+    components: mdxComponents,
   })
 
   return {

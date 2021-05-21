@@ -1,13 +1,13 @@
 import Image from "next/image"
 import { getMdxNode, getMdxPaths } from "next-mdx/server"
 import { useHydrate } from "next-mdx/client"
-import { components } from "@reflexjs/mdx"
 import readingTime from "reading-time"
 
 import { Post } from "types"
 import { Layout } from "@/components/layout"
 import { PostMeta } from "@/components/post-meta"
 import { LayoutGrid } from "@/components/layout-grid"
+import { mdxComponents } from "@/components/mdx-components"
 
 export interface PostPageProps {
   post: Post
@@ -15,7 +15,7 @@ export interface PostPageProps {
 
 export default function PostPage({ post }: PostPageProps) {
   const content = useHydrate(post, {
-    components,
+    components: mdxComponents,
   })
 
   return (
@@ -70,7 +70,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps(context) {
   const post = await getMdxNode<Post>("post", context, {
-    components,
+    components: mdxComponents,
   })
 
   if (!post) {
