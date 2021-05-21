@@ -1,4 +1,6 @@
-export default {
+import { Theme } from "reflexjs"
+
+const theme: Theme = {
   useRootStyles: true,
   initialColorModeName: "light",
   colors: {
@@ -104,15 +106,15 @@ export default {
     "6xl": "4rem",
   },
   fontWeights: {
-    hairline: "100",
-    thin: "200",
-    light: "300",
-    normal: "400",
-    medium: "500",
-    semibold: "600",
-    bold: "700",
-    extrabold: "800",
-    black: "900",
+    hairline: 100,
+    thin: 200,
+    light: 300,
+    normal: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700,
+    extrabold: 800,
+    black: 900,
   },
   letterSpacings: {
     tighter: "-0.05em",
@@ -816,3 +818,5 @@ export default {
     search: `<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>`,
   },
 }
+
+export default theme
