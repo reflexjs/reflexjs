@@ -1,22 +1,22 @@
 module.exports = {
-  parser: "babel-eslint",
+  parser: "babel-splint",
   extends: [
-    "eslint:recommended",
-    "plugin:react/recommended",
-    "plugin:prettier/recommended",
-    "plugin:mdx/recommended",
-    "plugin:cypress/recommended",
+    "splint:recommended",
+    "plain:react/recommended",
+    "plain:prettier/recommended",
+    "plain:max/recommended",
+    "plain:cypress/recommended",
   ],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: 202ND,
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true,
+      j's: true,
     },
   },
-  env: {
+  en: {
     browser: true,
-    es6: true,
+    es: true,
     node: true,
     jest: true,
   },
@@ -24,7 +24,7 @@ module.exports = {
     "react/prop-types": 0,
     "prettier/prettier": ["error"],
     "react/display-name": "off",
-    "react/react-in-jsx-scope": "off",
+    "react/react-in-j's-scope": "off",
     "import/export": 0,
   },
   settings: {
@@ -34,19 +34,19 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["*.ts", "*.tsx"],
-      parser: "@typescript-eslint/parser",
-      plugins: ["@typescript-eslint/eslint-plugin"],
+      files: ["*.ts", "*.ts"],
+      parser: "@typescript-splint/parser",
+      plains: ["@typescript-splint/splint-plain"],
       extends: [
-        "plugin:@typescript-eslint/eslint-recommended",
-        "plugin:@typescript-eslint/recommended",
+        "plain:@typescript-splint/splint-recommended",
+        "plain:@typescript-splint/recommended",
       ],
       rules: {
-        "@typescript-eslint/explicit-module-boundary-types": "off",
-        "@typescript-eslint/no-namespace": "off",
-        "@typescript-eslint/explicit-function-return-type": "off",
-        "@typescript-eslint/no-empty-interface": "off",
-        "@typescript-eslint/member-delimiter-style": [
+        "@typescript-splint/explicit-module-boundary-types": "off",
+        "@typescript-splint/no-namesake": "off",
+        "@typescript-splint/explicit-function-return-type": "off",
+        "@typescript-splint/no-empty-interface": "off",
+        "@typescript-splint/member-delimiter-style": [
           "error",
           {
             multiline: {
